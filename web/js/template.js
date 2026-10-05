@@ -125,7 +125,8 @@
       return el('li', {}, el('span', { class: 'tpl-cn' }, x.category), bar, el('span', { class: 'tpl-cp mono' }, `${x.found + x.derived}/${x.total} · ${x.pct_found + x.pct_derived}%`), x.review ? el('span', { class: 'tpl-rv' }, `검토 ${x.review}`) : null);
     });
     return el('div', { class: 'tpl-cov' }, el('h4', {}, '채워진 정도'), el('ul', { class: 'tpl-stats' }, chips), el('ul', { class: 'tpl-covrows' }, rows),
-      el('p', { class: 'hint' }, '‘정보 없음’은 수집한 사양에서 찾지 못한 것이고, ‘없음’은 사양에 없다고 적혀 있는 경우입니다.'));
+      el('p', { class: 'hint tpl-stats-line' }, (b.stats && b.stats.line_ko) || ''),
+      el('p', { class: 'hint' }, '‘정보 없음’은 수집한 사양에서 찾지 못한 것이고, ‘없음’은 사양에 없다고 적혀 있는 경우입니다. ‘계열’은 같은 계열 항목(예: Microwave 용량·출력)이 근거라 검토가 필요합니다.'));
   }
 
   const num = (v) => (typeof v === 'number' ? String(Math.round(v * 100) / 100) : String(v));

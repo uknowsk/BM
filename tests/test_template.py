@@ -342,8 +342,10 @@ def test_embedding_binding_and_llm_grey_zone_cached_on_disk():
     asked = []
 
     def llm(prompt):
-        asked.append(prompt)
-        return {"same": True}
+        if "SAME specification" in prompt:  # the old yes/no grey-zone question (the chooser question gets no usable answer here)
+            asked.append(prompt)
+            return {"same": True}
+        return None
     b = T.bind(tpl, [ge, ka], canonicalizer=cz(), embed_fn=fake_embed, llm_fn=llm, cache_path=cache)
     air, probe = b.sheets[0].rows
     assert air.method == "embed" and air.canon_id == "air-fry" and air.score >= 0.84 and all(c.status == "found" for c in air.cells)
@@ -351,11 +353,110 @@ def test_embedding_binding_and_llm_grey_zone_cached_on_disk():
     assert len(asked) == 1 and "급속 탐침 센서" in asked[0] and "temperature probe" in asked[0].lower()
     saved = json.loads(cache.read_text(encoding="utf-8"))
     assert len(saved["verdicts"]) == 1 and not list(cache.parent.glob("*.tmp"))  # atomic write left no temp file
-    again = T.bind(tpl, [ge, ka], canonicalizer=cz(), embed_fn=fake_embed, llm_fn=lambda p: (_ for _ in ()).throw(AssertionError("cached")),
-                   cache_path=cache)
+    again = T.bind(tpl, [ge, ka], canonicalizer=cz(), embed_fn=fake_embed,
+                   llm_fn=lambda p: None if "SAME specification" not in p else (_ for _ in ()).throw(AssertionError("cached")), cache_path=cache)
     assert again.sheets[0].rows[1].method == "llm" and len(asked) == 1  # the verdict came from the disk cache
-    no = T.bind(tpl, [ge, ka], canonicalizer=cz(), embed_fn=fake_embed, llm_fn=lambda p: {"same": False}, cache_path=Path(tempfile.mkdtemp()) / "c.json")
+    assert again.stats["llm_cache_hits"] == 1
+    no = T.bind(tpl, [ge, ka], canonicalizer=cz(), embed_fn=fake_embed, llm_fn=lambda p: {"same": False} if "SAME specification" in p else None,
+                cache_path=Path(tempfile.mkdtemp()) / "c.json")
     assert no.sheets[0].rows[1].method == "none" and no.sheets[0].rows[1].cells[0].status == "unknown"
+
+
+def chooser_llm(log, wrong_energy=False):
+    """Deterministic stand-in for the local model: answers the structured 'which candidate row answers this item' question."""
+    import re
+
+    def llm(prompt):
+        log.append(prompt)
+        if "Pick the single best category" in prompt:  # category suggestion for the uncovered rows
+            return {lab: "기능" for lab in json.loads(re.search(r"Labels: (\[.*\])", prompt).group(1))}
+        if "Which ONE of these competitor spec rows" not in prompt:
+            return None
+        cands = [(int(m.group(1)), m.group(2).lower()) for m in re.finditer(r'^(\d+): "(.*?)" /', prompt, re.M)]
+        pick = lambda *words: next((n for n, lab in cands if all(w in lab for w in words)), None)  # noqa: E731
+        if "마이크로웨이브" in prompt:
+            return {"index": pick("microwave", "power"), "reason": "output power proves a microwave function"}
+        if "Connected app" in prompt:
+            return {"index": pick("wi-fi"), "reason": "Wi-Fi / smart is the connected service"}
+        if "ENERGY STAR" in prompt:
+            if wrong_energy:  # a model mistake: 'Kosher certification' is not ENERGY STAR
+                return {"index": pick("certif"), "reason": "certification"}
+            return {"index": None, "reason": "no ENERGY STAR row"}
+        if "Depth state" in prompt:
+            return {"index": 0, "reason": "first"}
+        return {"index": None, "reason": "?"}
+    return llm
+
+
+def three_item_form():
+    return T.parse_form(book(lambda wb: rows_ws(wb.active, [
+        ["구분", "항목", "Item", "유형"], ["기능", "마이크로웨이브", "Microwave", "예/아니오"], ["연결", "연동 앱/서비스", "Connected app / service", "텍스트"],
+        ["인증", "에너지스타 인증", "ENERGY STAR certified", "예/아니오"]])))
+
+
+def test_llm_chooser_family_aggregation_and_cache():
+    ge, ka = ovens()
+    tpl, cache, log = three_item_form(), Path(tempfile.mkdtemp()) / "_cache.json", []
+    b = T.bind(tpl, [ge, ka], canonicalizer=cz(), embed_fn=fake_embed, llm_fn=chooser_llm(log), cache_path=cache)
+    mw, app, es = b.sheets[0].rows
+    # (a) yes/no item answered by a family of rows: KitchenAid found (evidence listed, review), GE has no supporting row -> unknown, never absent
+    assert mw.method == "family" and mw.cells[0].status == "unknown" and mw.cells[1].status == "found" and mw.cells[1].value is True
+    k = mw.cells[1]
+    assert k.method == "family" and k.needs_review and len(k.sources) >= 2 and any("900" in s["value"] for s in k.sources)
+    assert all("icrowave" in s["label"] for s in k.sources) and "관련 항목" in k.note
+    # (b) a text item: the LLM picks the Wi-Fi / smart row although the embedding score alone would not
+    assert app.method == "llm" and app.needs_review and [c.status for c in app.cells] == ["found", "found"] and app.canon_id == "wifi"
+    # (c) the LLM says nothing answers ENERGY STAR -> unknown, no invented binding
+    assert es.method == "none" and [c.status for c in es.cells] == ["unknown", "unknown"]
+    st = b.stats
+    assert sum("Which ONE" in p for p in log) == 3 and st["llm_calls"] == 4 and st["llm_failures"] == 0 and st["llm_cache_hits"] == 0 and st["embeddings"] == "ok" and st["llm"] == "ok"
+    assert st["methods"] == {"family": 1, "llm": 1, "none": 1} and "family" in json.dumps(st) and "계열 1" in st["line_ko"] and "LLM 사용됨" in st["line_ko"]
+    assert b.to_dict()["stats"]["line_ko"] == st["line_ko"]
+    # second run: the three verdicts come from the disk cache, the model is never called
+    def boom(prompt):
+        raise AssertionError("cached")
+    again = T.bind(tpl, [ge, ka], canonicalizer=cz(), embed_fn=fake_embed, llm_fn=boom, cache_path=cache)
+    assert [r.method for r in again.sheets[0].rows] == ["family", "llm", "none"] and again.stats["llm_calls"] == 0 and again.stats["llm_cache_hits"] >= 3
+    assert [c.status for c in again.sheets[0].rows[0].cells] == ["unknown", "found"]
+
+
+def test_llm_pick_is_checked_by_the_guards_and_budget_is_respected():
+    ge, ka = ovens()
+    wrong = T.bind(three_item_form(), [ge, ka], canonicalizer=cz(), embed_fn=fake_embed, llm_fn=chooser_llm([], wrong_energy=True), cache_path=Path(tempfile.mkdtemp()) / "c.json")
+    assert wrong.sheets[0].rows[2].method == "none" and all(c.status == "unknown" for c in wrong.sheets[0].rows[2].cells)  # family evidence needs a shared word
+    tpl = T.parse_form(book(lambda wb: rows_ws(wb.active, [["구분", "항목", "Item", "단위", "유형"], ["a", "용량 무게", "Depth state capacity", "kg", "숫자"]])))
+    log = []
+    b = T.bind(tpl, [ge, ka], canonicalizer=cz(), embed_fn=fake_embed, llm_fn=chooser_llm(log), cache_path=Path(tempfile.mkdtemp()) / "c.json")
+    assert len(log) == 1 and b.sheets[0].rows[0].method == "none" and all(c.status == "unknown" for c in b.sheets[0].rows[0].cells)  # a volume row never answers a kg item
+    orig = T.LLM_BUDGET
+    T.LLM_BUDGET = 1
+    try:
+        log2 = []
+        c = T.bind(three_item_form(), [ge, ka], canonicalizer=cz(), embed_fn=fake_embed, llm_fn=chooser_llm(log2), cache_path=Path(tempfile.mkdtemp()) / "c.json")
+    finally:
+        T.LLM_BUDGET = orig
+    assert len(log2) == 1 and c.stats["llm_calls"] == 1  # capped; the other items degrade to thresholds instead of calling again
+
+
+def test_llm_unavailable_or_unusable_degrades_to_thresholds():
+    ge, ka = ovens()
+    tpl = T.parse_form(book(lambda wb: rows_ws(wb.active, [["구분", "항목", "유형"], ["기능", "공기 튀김 기능", "예/아니오"]])))
+    for name, fn, state in (("none", None, "off"), ("raises", lambda p: (_ for _ in ()).throw(RuntimeError("down")), "unavailable"),
+                            ("garbage", lambda p: {"foo": 1}, "unavailable"), ("bad index", lambda p: {"index": 99}, "unavailable")):
+        b = T.bind(tpl, [ge, ka], canonicalizer=cz(), embed_fn=fake_embed, llm_fn=fn, cache_path=Path(tempfile.mkdtemp()) / "c.json")
+        r = b.sheets[0].rows[0]
+        assert r.method == "embed" and r.canon_id == "air-fry" and b.stats["llm"] == state, (name, r.method, b.stats)
+    off = T.bind(three_item_form(), [ge, ka], canonicalizer=cz(), embed_fn=None, llm_fn=None, cache_path=Path(tempfile.mkdtemp()) / "c.json")
+    assert off.stats["embeddings"] == "off" and off.stats["llm"] == "off" and "꺼짐" in off.stats["line_ko"]
+
+
+def test_bind_pads_pod_items_and_missing_lists():
+    ge, ka = ovens()
+    tpl = T.parse_form(make_template_sample.build("cooking"))
+    base = T.bind(tpl, [ge, ka], canonicalizer=cz(), cache_path=Path(tempfile.mkdtemp()) / "c.json").counts()
+    for pod in (None, [], [[]], [[], [], []]):  # none / too short / too long
+        got = T.bind(tpl, [ge, ka], None, None, pod, canonicalizer=cz(), cache_path=Path(tempfile.mkdtemp()) / "c.json").counts()
+        assert got == base, pod
 
 
 def test_uncovered_items_get_a_suggested_form_category():
@@ -413,9 +514,10 @@ def test_writer_preserves_form_and_appends_product_columns():
     assert sum(1 for row in ws.iter_rows() for c in row if c.comment) > 40
     # audit + uncovered sheets
     au = wb["매칭 결과"]
-    heads = [c.value for c in au[1]]
+    assert "매칭 방식" in au["A1"].value and "LLM" in au["A1"].value  # the stats line: a silent no-op is visible
+    heads = [c.value for c in au[2]]
     assert heads[:9] == ["시트", "구분", "항목", "단위", "유형", "canonical id", "매칭 방식", "점수", "매칭된 항목명"] and heads.count("원문 항목명") == 2
-    rows = [[c.value for c in r] for r in au.iter_rows(min_row=2)]
+    rows = [[c.value for c in r] for r in au.iter_rows(min_row=3)]
     assert any(r[2] == "폭" and r[5] == "width" and r[6] == "synonym" and "Weights & Dimensions > Overall Width" in str(r[9]) for r in rows)
     ov = wb["양식 외 항목"]
     assert [c.value for c in ov[1]][:3] == ["시트", "제안 구분", "제안 방식"] and ov.max_row > 20
@@ -572,6 +674,7 @@ def test_api_apply_and_download_on_a_finished_collect_job():
     res = client.post(f"/api/template/{tid}/apply", json={"job_id": jid})
     assert res.status_code == 200, res.text
     body = res.json()
+    assert "매칭 방식" in body["stats"]["line_ko"] and set(body["stats"]) >= {"methods", "embeddings", "llm", "llm_calls", "llm_cache_hits"}
     c = body["counts"]
     assert c["total"] == 80 and c["found"] + c["absent"] + c["unknown"] + c["derived"] == 80 and c["found"] > 20 and body["download_url"].endswith(f"job_id={jid}")
     sh = body["sheets"][0]

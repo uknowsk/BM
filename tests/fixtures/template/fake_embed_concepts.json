@@ -1,13 +1,47 @@
 {
   "_comment": "Concept table of the deterministic fake embedder used by tests/test_template.py: a text that contains any keyword of a concept gets weight 1.0 on that concept's dimension (the cross-lingual 'meaning'); everything else is a few hashed trigrams. 'special' texts get explicit tail coordinates (cosine 0.78 between the item and the row label = the LLM grey zone).",
   "concepts": {
-    "airfry": ["에어프라이", "공기 튀김", "air fry", "airfry"],
-    "steambake": ["steam bake", "스팀 베이크"],
-    "capacity": ["capacity", "용량"]
+    "airfry": [
+      "에어프라이",
+      "공기 튀김",
+      "air fry",
+      "airfry"
+    ],
+    "steambake": [
+      "steam bake",
+      "스팀 베이크"
+    ],
+    "capacity": [
+      "capacity",
+      "용량"
+    ],
+    "microwave": [
+      "microwave",
+      "마이크로웨이브"
+    ],
+    "connected": [
+      "connected",
+      "wifi",
+      "smart",
+      "연동"
+    ],
+    "certification": [
+      "certif",
+      "인증"
+    ]
   },
   "special": {
-    "급속 탐침 센서": [1.0, 0.0],
-    "temperature probe": [0.78, 0.626],
-    "온도 프로브": [0.78, 0.626]
+    "급속 탐침 센서": [
+      1.0,
+      0.0
+    ],
+    "temperature probe": [
+      0.78,
+      0.626
+    ],
+    "온도 프로브": [
+      0.78,
+      0.626
+    ]
   }
 }

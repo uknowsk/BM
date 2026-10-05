@@ -295,9 +295,10 @@ def _audit_sheet(wb, bound: BoundTemplate) -> None:
     fixed = ["시트", "구분", "항목", "단위", "유형", "canonical id", "매칭 방식", "점수", "매칭된 항목명"]
     per = ["원문 항목명", "원문 값", "상태", "방식", "점수"]
     maxp = max((len(bs.products) for bs in bound.sheets), default=0)
-    _head(ws, 1, fixed + [f"{p}" for _ in range(maxp) for p in per] + ["검토 필요"])
-    ws.cell(1, 1).comment = Comment("방식: synonym(사용자 동의어) > exact > canon > embed > llm. 검토 = 임베딩/LLM으로 맞춘 항목 또는 단위 불일치.", "Gauge")
-    r = 2
+    _put(ws, 1, 1, bound.stats.get("line_ko") or "매칭 통계 없음", font=FONT_BOLD)
+    _head(ws, 2, fixed + [f"{p}" for _ in range(maxp) for p in per] + ["검토 필요"])
+    ws.cell(2, 1).comment = Comment("방식: synonym(사용자 동의어) > exact > canon > embed > llm(LLM이 후보 중 선택) > family(같은 계열 행이 근거). 검토 = 임베딩/LLM으로 맞춘 항목 또는 단위 불일치.", "Gauge")
+    r = 3
     for bs in bound.sheets:
         _band(ws, r, f"{bs.sheet.name}  →  " + " | ".join(f"{p.brand} {p.model_number}" for p in bs.products), len(fixed) + 5 * maxp + 1)
         r += 1
@@ -317,8 +318,8 @@ def _audit_sheet(wb, bound: BoundTemplate) -> None:
             r += 1
     for c, w in enumerate([14, 14, 24, 8, 8, 24, 10, 7, 24] + [30, 28, 9, 9, 7] * maxp + [9], 1):
         ws.column_dimensions[get_column_letter(c)].width = w
-    ws.freeze_panes = "D2"
-    ws.auto_filter.ref = f"A1:{get_column_letter(len(fixed) + 5 * maxp + 1)}{max(r - 1, 2)}"
+    ws.freeze_panes = "D3"
+    ws.auto_filter.ref = f"A2:{get_column_letter(len(fixed) + 5 * maxp + 1)}{max(r - 1, 3)}"
 
 
 def _uncovered_sheet(wb, bound: BoundTemplate) -> None:
