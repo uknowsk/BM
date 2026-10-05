@@ -1,0 +1,383 @@
+{
+"count": 21,
+"products": [
+{
+"mdlCode": "NZ63DB657CFH",
+"goodsId": "G000384483",
+"goodsNm": "Bespoke AI 인덕션 (플렉스존)",
+"goodsDetailUrl": "electric-range/cooktop-nz63db657cf-d2c/NZ63DB657CFH/",
+"salePrice": 1040000,
+"priceStr": "1096452|10|1640000|1640000|1040000",
+"saleStatCd": "12",
+"goodsTpCd": "10",
+"uspDescList": [
+"어느 곳에 두어도 어울리는 완벽한 연출 프레임리스",
+"자동 화력 조절로 간편식 조리까지 편리하게 AI 끓음 감지",
+"어디에 올려도 균일하고 강력한 화력 콰트로 플렉스존"
+],
+"goodsOptStr": "1|1001|5647|5647|색상|글램 화이트|#ebece7|Y|NZ63DB657CFH|G000384483,G000385538|color|Glam White|\n1|1001|5644|5644|색상|글램 베이지|#dbd5cf|Y|NZ63DB657CFE|G000384485,G000385548|color|GlamBeige|\n2|5102|10135|10135|화구 유형|3구||N|NZ63DB607CFH|G000385538,G000385548|Induction type|3 induction|\n2|5102|10136|10136|화구 유형|플렉스존+1구||N|NZ63DB657CFH|G000384483,G000384485|Induction type|flex zone induction + 1 induction|",
+"imgPath1": "//images.samsung.com/kdp/goods/2024/04/23/0a5b7097-b5b6-4a5c-a14d-62902fc48aee.png",
+"dispClsfNo": "100044023"
+},
+{
+"mdlCode": "NZ63DG403CFK",
+"goodsId": "G000383557",
+"goodsNm": "인덕션",
+"goodsDetailUrl": "electric-range/cooktop-nz63dg403cfk-d2c/NZ63DG403CFK/",
+"salePrice": 690000,
+"priceStr": "1096450|10|1090000|1090000|690000",
+"saleStatCd": "12",
+"goodsTpCd": "10",
+"uspDescList": [
+"전체 화구 사용으로 많은 요리도 한번에 3,400W 초고화력",
+"8분 초고화력의 빠른 조리 ALL MAX 부스트",
+"어느곳에 두어도 어울리는 완벽한 연출 프레임리스&슬림핏"
+],
+"goodsOptStr": "1|1001|1001|1001|색상|블랙|#000000|Y|NZ63DG403CFK|G000383557|color|BLACK|",
+"imgPath1": "//images.samsung.com/kdp/goods/2024/03/26/501d5056-60ca-4852-aa4d-8c0ba257d662.png",
+"dispClsfNo": "100044023"
+},
+{
+"mdlCode": "CC99F63G1DS",
+"goodsId": "G000446152",
+"goodsNm": "Infinite AI 인덕션 (플렉스존)",
+"goodsDetailUrl": "electric-range/cooktop-cc99f63g1ds-d2c/CC99F63G1DS/",
+"salePrice": 1990000,
+"priceStr": "1096442|10|2140000|2140000|1990000",
+"saleStatCd": "12",
+"goodsTpCd": "10",
+"uspDescList": [
+"매트한 무광 디자인에 긁힘 걱정 없는 견고함까지 Infinite Glass",
+"전원 OFF 가능한 스마트 컨트롤 기능으로 외출 시에도 안심",
+"많은 요리도 한 번에 3,400W 초고화력 빠른 조리 All MAX 부스트"
+],
+"goodsOptStr": "1|1001|1001|1001|색상|블랙|#000000|Y|CC99F63G1DS|G000446152,G000446153|color|BLACK|\n2|5102|10135|10135|화구 유형|3구||N|CC99F63U1DS|G000446153|Induction type|3 induction|\n2|5102|10136|10136|화구 유형|플렉스존+1구||N|CC99F63G1DS|G000446152|Induction type|flex zone induction + 1 induction|",
+"imgPath1": "//images.samsung.com/kdp/goods/2025/06/13/0d6ceac8-3f9d-454b-8a10-1201cfdac822.png",
+"dispClsfNo": "100044023"
+},
+{
+"mdlCode": "MC32B7388CC",
+"goodsId": "G000264407",
+"goodsNm": "Bespoke 큐커 오븐 32L",
+"goodsDetailUrl": "qooker-multi-ovens/microwave-oven-convection-mc32b7388ce-d2c/MC32B7388CC/",
+"salePrice": 399000,
+"priceStr": "1096467|10|459000|459000|399000",
+"saleStatCd": "12",
+"goodsTpCd": "10",
+"uspDescList": [
+"나에게 맞춘 키친테리어 Bespoke 디자인",
+"오븐 하나로 다양한 요리 All-in-1 다재다능쿡",
+"더 쉽고, 입맛에 딱 맞게 스마트쿡"
+],
+"goodsOptStr": "1|1001|5129|5129|색상|글램 차콜|#4b4f54|Y|MC32B7388CC|G000264407|color|Gray|\n1|1001|5644|5644|색상|글램 베이지|#dbd5cf|Y|MC32B7388CF|G000264409|color|GlamBeige|\n1|1001|5647|5647|색상|글램 화이트|#ebece7|Y|MC32B7388CE|G000264408|color|Glam White|",
+"imgPath1": "//images.samsung.com/kdp/goods/2022/07/06/12350b33-c394-4c4b-9c91-6bddd67dbd82.png",
+"dispClsfNo": "100010848"
+},
+{
+"mdlCode": "MC32B7388LE",
+"goodsId": "G000264412",
+"goodsNm": "Bespoke 큐커 오븐 32L (스팀쿠커)",
+"goodsDetailUrl": "qooker-multi-ovens/microwave-oven-convection-mc32b7388lp-d2c/MC32B7388LE/",
+"salePrice": 499000,
+"priceStr": "1096470|10|559000|559000|499000",
+"saleStatCd": "12",
+"goodsTpCd": "10",
+"uspDescList": [
+"나에게 맞춘 키친테리어 Bespoke 디자인",
+"오븐 하나로 다양한 요리 All-in-1 다재다능쿡",
+"더 쉽고, 입맛에 딱 맞게 스마트쿡"
+],
+"goodsOptStr": "1|1001|5129|5129|색상|글램 차콜|#4b4f54|Y|MC32B7388LC|G000264411|color|Gray|\n1|1001|5647|5647|색상|글램 화이트|#ebece7|Y|MC32B7388LE|G000264412|color|Glam White|\n1|1001|5644|5644|색상|글램 베이지|#dbd5cf|Y|MC32B7388LF|G000264413|color|GlamBeige|",
+"imgPath1": "//images.samsung.com/kdp/goods/2022/07/06/51cb44a3-2335-439b-b3eb-622dc0503316.png",
+"dispClsfNo": "100010848"
+},
+{
+"mdlCode": "NZ63DB503CFT",
+"goodsId": "G000380944",
+"goodsNm": "Bespoke 인덕션",
+"goodsDetailUrl": "electric-range/cooktop-nz63db503cft-d2c/NZ63DB503CFT/",
+"salePrice": 1490000,
+"priceStr": "1096445|10|1640000|1640000|1490000",
+"saleStatCd": "12",
+"goodsTpCd": "10",
+"uspDescList": [
+"매트한 디자인에 긁힘 걱정 없는 견고함 Infinite Glass",
+"어느 곳에 두어도 어울리는 완벽한 연출 프레임리스",
+"전체 화구 사용으로 많은 요리도 한번에 3,400W 초고화력"
+],
+"goodsOptStr": "1|1001|1001|1001|색상|새틴 블랙|#000000|Y|NZ63DB503CFT|G000380944,G000396410|color|BLACK|\n2|5102|10135|10135|화구 유형|3구||N|NZ63DB503CFT|G000380944|Induction type|3 induction|\n2|5102|10136|10136|화구 유형|플렉스존+1구||N|NZ63DB553CFT|G000396410|Induction type|flex zone induction + 1 induction|",
+"imgPath1": "//images.samsung.com/kdp/goods/2024/02/15/b02418f5-ccd0-4a92-87df-1886ccf0fb25.png",
+"dispClsfNo": "100044023"
+},
+{
+"mdlCode": "NK90B8770AG",
+"goodsId": "G000277077",
+"goodsNm": "Bespoke 후드 Air",
+"goodsDetailUrl": "hood/hood-nk90B8770ap-d2c/NK90B8770AG/",
+"salePrice": 1190000,
+"priceStr": "1096464|00|1190000|1190000",
+"saleStatCd": "12",
+"goodsTpCd": "10",
+"uspDescList": [
+"24시간 자동 공기질 관리, 에어센서",
+"요리 매연 퍼지기 전에 알아서 싹, 고풍량 & 저소음",
+"요리 종류에 따라 자동 작동하는 스마트 후드"
+],
+"goodsOptStr": "1|1001|6871|6871|색상|글램 그레이|#818080|Y|NK90B8770AG|G000277077|color|Glamgray|",
+"imgPath1": "//images.samsung.com/kdp/goods/2022/09/13/2bf32206-bc8c-4564-93d6-e98b0c640a8e.png",
+"dispClsfNo": "100044025"
+},
+{
+"mdlCode": "NZ62DG300CFW",
+"goodsId": "G000385061",
+"goodsNm": "더 플레이트 인덕션 2구",
+"goodsDetailUrl": "electric-range/cooktop-nz62dg300cf-d2c/NZ62DG300CFW/",
+"salePrice": 279000,
+"priceStr": "1096461|10|350000|350000|279000",
+"saleStatCd": "12",
+"goodsTpCd": "10",
+"uspDescList": [
+"설치 걱정 없이 어디서든 강력하게",
+"공간에 최적화된 46mm 슬림 디자인",
+"다양한 조합의 2가지 요리도 동시에"
+],
+"goodsOptStr": "1|1001|7235|7235|색상|화이트  + 로즈골드|@000343|Y|NZ62DG300CFW|G000385061,G000385077|color|white+rosegold|/goods/opt/colorchip/b2c/1/white+rosegold.png\n1|1001|7236|7236|색상|블랙 + 로즈골드|@000344|Y|NZ62DG300CFK|G000385068,G000385078|color|black+rosegold|/goods/opt/colorchip/b2c/1/black+rosegold.png\n2|5102|10138|10138|화구 유형|1구||N|NZ31DG200CFH|G000385077,G000385078|Induction type|1 induction|\n2|5102|10137|10137|화구 유형|2구||N|NZ62DG300CFW|G000385061,G000385068|Induction type|2 induction|",
+"imgPath1": "//images.samsung.com/kdp/goods/2024/05/14/d0b73b72-828a-4adc-8a04-63c009086f97.png",
+"dispClsfNo": "100044023"
+},
+{
+"mdlCode": "NZ63B4026AK",
+"goodsId": "G000254671",
+"goodsNm": "인덕션",
+"goodsDetailUrl": "electric-range/cooktop-nz63b4026ak-d2c/NZ63B4026AK/",
+"salePrice": 790000,
+"priceStr": "1096459|10|1090000|1090000|790000",
+"saleStatCd": "12",
+"goodsTpCd": "10",
+"uspDescList": [
+"28 cm 대형 용기도 걱정없이 듀얼링 대화구",
+"10분 집중 초고화력의 ALL MAX 부스트",
+"많은 요리도 한꺼번에 3,400 W 최고 출력"
+],
+"goodsOptStr": "1|1001|1001|1001|색상|블랙|#000000|Y|NZ63B5056AK|G000254670,G000254671|color|BLACK|\n2|5102|10135|10135|화구 유형|3구||N|NZ63B4026AK|G000254671|Induction type|3 induction|\n2|5102|10136|10136|화구 유형|플렉스존+1구||N|NZ63B5056AK|G000254670|Induction type|flex zone induction + 1 induction|",
+"imgPath1": "//images.samsung.com/kdp/goods/2022/03/14/5f0e8e8e-73e8-49f6-a310-836a1c32fbf0.png",
+"dispClsfNo": "100044023"
+},
+{
+"mdlCode": "NQ50T8539BK",
+"goodsId": "G000400065",
+"goodsNm": "Bespoke 콤팩트 오븐 50L",
+"goodsDetailUrl": "qooker-multi-ovens/microwave-oven-convection-nq50t8539bk-d2c/NQ50T8539BK/",
+"salePrice": 0,
+"priceStr": "0|00|0|0",
+"saleStatCd": "17",
+"goodsTpCd": "10",
+"uspDescList": [
+"더 빠르고 고르게 조리되는 듀얼 팬",
+"기름 없이도 바삭하게 에어프라이",
+"편리하고 세련된 디자인 대화면 LCD와 다이얼"
+],
+"goodsOptStr": "1|1001|7226|7226|색상|블랙|#000003|Y|NQ50T8539BK|G000400065|color|black|\n1|1001|5647|5647|색상|글램 화이트|#ebece7|Y|NQ50T8539BW|G000400064|color|Glam White|",
+"imgPath1": "//images.samsung.com/kdp/goods/2024/11/13/ae2547b5-b30f-43d4-b146-5c7cd476b423.png",
+"dispClsfNo": "36030100"
+},
+{
+"mdlCode": "MO22A7797CV2",
+"goodsId": "G000405069",
+"goodsNm": "Bespoke 큐커 멀티 22L",
+"goodsDetailUrl": "qooker-multi-ovens/qooker-mo22a7797cv2-d2c/MO22A7797CV2/",
+"salePrice": 529000,
+"priceStr": "1096466|10|609000|609000|529000",
+"saleStatCd": "17",
+"goodsTpCd": "10",
+"uspDescList": [
+"나에게 맞춘 키친테리어 Bespoke 디자인",
+"4가지 재료를 동시에 멀티쿡",
+"큐커 하나로 4-in-1 다재다능쿡"
+],
+"goodsOptStr": "1|1001|5644|5644|색상|글램 베이지|#dbd5cf|Y|MO22A7797CF2|G000405070|color|GlamBeige|\n1|1001|5111|5111|색상|글램 썬 옐로우|#f4d389|Y|MO22A7797CV2|G000405069|color|CottaSunYellow|\n1|1001|5647|5647|색상|글램 화이트|#ebece7|Y|MO22A7797CW2|G000405068|color|Glam White|",
+"imgPath1": "//images.samsung.com/kdp/goods/2024/12/30/2308ad7c-84f1-4fef-8007-27bb6d930167.png",
+"dispClsfNo": "100034621"
+},
+{
+"mdlCode": "MG23A5378CE",
+"goodsId": "G000213288",
+"goodsNm": "Bespoke 전자레인지 23L (스마트 쿡)",
+"goodsDetailUrl": "micro-wave-ovens/MG23A5378CU-d2c/MG23A5378CE/",
+"salePrice": 219000,
+"priceStr": "318017|10|250000|243000|219000",
+"saleStatCd": "15",
+"goodsTpCd": "10",
+"uspDescList": [
+"나에게 맞춘 키친테리어 Bespoke 디자인",
+"그릴로 바삭하게 전자레인지로 빠르게 복합조리",
+"모바일∙ 음성 제어로 간편해진 스마트쿠킹"
+],
+"goodsOptStr": "1|1001|5647|5647|색상|글램 화이트|#ebece7|Y|MG23A5378CE|G000213288|color|Glam White|\n1|1001|5644|5644|색상|글램 베이지|#dbd5cf|Y|MG23A5378CF|G000213287|color|GlamBeige|\n1|1001|5129|5129|색상|글램 차콜|#4b4f54|Y|MG23A5378CC|G000211991|color|Gray|",
+"imgPath1": "//images.samsung.com/kdp/goods/2021/02/09/51423764-e021-4ba9-83ff-d12c2a002ac5.png",
+"dispClsfNo": "100044024"
+},
+{
+"mdlCode": "NV75T9879CD",
+"goodsId": "G000254692",
+"goodsNm": "Infinite Line 빌트인 전기오븐 75L",
+"goodsDetailUrl": "qooker-multi-ovens/microwave-oven-convection-nv75t9879ce-d2c/NV75T9879CD/",
+"salePrice": 0,
+"priceStr": "0|00|0|0",
+"saleStatCd": "15",
+"goodsTpCd": "10",
+"uspDescList": [
+"상/하단 동시 조리 가능한 듀얼 쿡",
+"기름 없이도 바삭하게 에어프라이",
+"겉은 바삭, 속은 촉촉 고메 베이퍼"
+],
+"goodsOptStr": "1|1001|5508|5508|색상|새틴 차콜|#494D53|Y|NV75T9879CD|G000254692|color|Graphite|",
+"imgPath1": "//images.samsung.com/kdp/goods/2022/02/09/0bd62bf2-6e77-4a47-affb-47fa0d8843cf.png",
+"dispClsfNo": "100024129"
+},
+{
+"mdlCode": "NQ50T9539BD",
+"goodsId": "G000254694",
+"goodsNm": "Infinite Line 콤팩트 오븐 50L",
+"goodsDetailUrl": "qooker-multi-ovens/microwave-oven-convection-nq50t9539be-d2c/NQ50T9539BD/",
+"salePrice": 0,
+"priceStr": "0|00|0|0",
+"saleStatCd": "15",
+"goodsTpCd": "10",
+"uspDescList": [
+"두개의 회전팬으로 빠르게 듀얼 팬",
+"기름 없이도 바삭하게 에어프라이",
+"겉은 바삭, 속은 촉촉 고메 베이퍼"
+],
+"goodsOptStr": "1|1001|7170|7170|색상|새틴 차콜|@000320|Y|NQ50T9539BD|G000254694|color|satin char-coal|/goods/opt/colorchip/b2c/1/satinchar-coal.jpg",
+"imgPath1": "//images.samsung.com/kdp/goods/2022/02/17/b4519274-1a35-489c-b448-79ee25e7d384.png",
+"dispClsfNo": "100024129"
+},
+{
+"mdlCode": "MG23T5018CC",
+"goodsId": "G000213253",
+"goodsNm": "Bespoke 전자레인지 23L (그릴 프라이)",
+"goodsDetailUrl": "micro-wave-ovens/microwave-oven-grill-MG23T5018CC-d2c/MG23T5018CC/",
+"salePrice": 243000,
+"priceStr": "318031|10|250000|243000|243000",
+"saleStatCd": "15",
+"goodsTpCd": "10",
+"uspDescList": [
+"그릴로 바삭하게 전자레인지로 빠르게 복합조리",
+"빵 해동과 홈디저트도 간편하게 노오븐 베이킹",
+"다양한 컬러 세련된 글라스 감성디자인"
+],
+"goodsOptStr": "1|1001|5129|5129|색상|글램 차콜|#4b4f54|Y|MG23T5018CC|G000213253|color|Gray|\n1|1001|5646|5646|색상|글램 핑크|#e9cdd1|Y|MG23T5018CP|G000309065|color|Glam Pink|",
+"imgPath1": "//images.samsung.com/kdp/goods/2026/01/21/18f14bbc-4d64-4abf-be40-2d234e4d4547.png",
+"dispClsfNo": "100044024"
+},
+{
+"mdlCode": "MS23C3513AW",
+"goodsId": "G000296876",
+"goodsNm": "세라믹 전자레인지 23L",
+"goodsDetailUrl": "micro-wave-ovens/MS23C3513AW-d2c/MS23C3513AW/",
+"salePrice": 0,
+"priceStr": "0|00|0|0",
+"saleStatCd": "15",
+"goodsTpCd": "10",
+"uspDescList": [
+"더 빠르고 편리한 쾌속해동 Plus",
+"99.9 % 항균 인증 마크 획득한 세라믹 조리실",
+"골고루 빠르게 가열하는 3면 입체 가열"
+],
+"goodsOptStr": "1|1001|6875|6875|색상|화이트|#FFFFFF|Y|MS23C3513AW|G000296876|color|white|\n1|1001|1001|1001|색상|블랙|#000000|Y|MS23C3513AK|G000296813|color|BLACK|",
+"imgPath1": "//images.samsung.com/kdp/goods/2023/07/18/08ad0bc6-6698-41c2-bfc2-c8772534f2b8.png",
+"dispClsfNo": "100044024"
+},
+{
+"mdlCode": "MS23C3535AW",
+"goodsId": "G000296879",
+"goodsNm": "세라믹 전자레인지 23L",
+"goodsDetailUrl": "micro-wave-ovens/MS23C3535AW-d2c/MS23C3535AW/",
+"salePrice": 0,
+"priceStr": "0|00|0|0",
+"saleStatCd": "15",
+"goodsTpCd": "10",
+"uspDescList": [
+"더 빠르고 편리한 쾌속해동 Plus",
+"99.9 % 항균 인증 마크 획득한 세라믹 조리실",
+"골고루 빠르게 가열하는 3면 입체 가열"
+],
+"goodsOptStr": "1|1001|6875|6875|색상|화이트|#FFFFFF|Y|MS23C3535AW|G000296879|color|white|\n1|1001|1001|1001|색상|블랙|#000000|Y|MS23C3535AK|G000296877|color|BLACK|",
+"imgPath1": "//images.samsung.com/kdp/goods/2023/07/18/1e91a9a9-aade-47e5-be19-462ef23e0a47.png",
+"dispClsfNo": "100044024"
+},
+{
+"mdlCode": "MS23T5018AC",
+"goodsId": "G000213252",
+"goodsNm": "Bespoke 전자레인지 23L",
+"goodsDetailUrl": "micro-wave-ovens/microwave-oven-solo-MS23T5018AC-d2c/MS23T5018AC/",
+"salePrice": 194000,
+"priceStr": "318029|10|200000|194000|194000",
+"saleStatCd": "15",
+"goodsTpCd": "10",
+"uspDescList": [
+"간편하게 즐기는 홈디저트",
+"세련된 글라스 감성디자인",
+"더 빨라진 쾌속해동 Plus"
+],
+"goodsOptStr": "1|1001|5129|5129|색상|글램 차콜|#4b4f54|Y|MS23T5018AC|G000213252|color|Gray|",
+"imgPath1": "//images.samsung.com/is/image/samsung/sec-microwave-oven-solo-ms23t5018ac-ms23t5018ac-frontcosmicgray-208660654",
+"dispClsfNo": "100044024"
+},
+{
+"mdlCode": "NZ64B9899RB",
+"goodsId": "G000264723",
+"goodsNm": "Infinite Line 인덕션 (올플렉스존)",
+"goodsDetailUrl": "electric-range/cooktop-nz64b9899rb-d2c2/NZ64B9899RB/",
+"salePrice": 1922000,
+"priceStr": "667497|10|2290000|2221000|1922000",
+"saleStatCd": "15",
+"goodsTpCd": "10",
+"uspDescList": [
+"요리에 더해진 여유 스마트 쿡",
+"더 넓게 빈틈없이 가열하는 올 플렉스 플러스 존",
+"전체 화구 동시 최대 7.4kW 풀파워 고화력"
+],
+"goodsOptStr": "1|1001|1563|1563|색상|그레이지|#d4b895|Y|NZ64B9899RB|G000264723|color|BEIGEWOOD|",
+"imgPath1": "//images.samsung.com/kdp/goods/2022/04/20/d4350325-64d7-4fe8-acb9-8c127b3c09af.png",
+"dispClsfNo": "100044023"
+},
+{
+"mdlCode": "MS23T5018AK",
+"goodsId": "G000279684",
+"goodsNm": "전자레인지 23L",
+"goodsDetailUrl": "micro-wave-ovens/MS23T5018AW-d2c/MS23T5018AK/",
+"salePrice": 0,
+"priceStr": "0|00|0|0",
+"saleStatCd": "15",
+"goodsTpCd": "10",
+"uspDescList": [
+"간편하게 즐기는 홈디저트",
+"세련된 글라스 감성디자인",
+"더 빨라진 쾌속해동 Plus"
+],
+"goodsOptStr": "1|1001|1001|1001|색상|퓨어 블랙|#000000|Y|MS23T5018AK|G000279684|color|BLACK|",
+"imgPath1": "//images.samsung.com/is/image/samsung/sec-microwave-oven-solo-ms23t5018ak-ms23t5018ak-frontblack-208660671",
+"dispClsfNo": "100044024"
+},
+{
+"mdlCode": "MC35A8599LE",
+"goodsId": "G000213281",
+"goodsNm": "Bespoke 큐커 오븐 35L (직화오븐)",
+"goodsDetailUrl": "qooker-multi-ovens/microwave-oven-convection-MC35A8599LU-d2c/MC35A8599LE/",
+"salePrice": 760000,
+"priceStr": "318003|10|790000|766000|760000",
+"saleStatCd": "15",
+"goodsTpCd": "10",
+"uspDescList": [
+"나에게 맞춘 키친테리어 Bespoke 디자인",
+"겉은 바삭하고, 속은 촉촉하게 직화열풍",
+"더 쉽고, 입맛에 닥 맞게 조리 가능한 맞춤요리"
+],
+"goodsOptStr": "1|1001|5647|5647|색상|글램 화이트|#ebece7|Y|MC35A8599LE|G000213281|color|Glam White|\n1|1001|5129|5129|색상|글램 차콜|#4b4f54|Y|MC35A8599LC|G000213250|color|Gray|\n1|1001|5644|5644|색상|글램 베이지|#dbd5cf|Y|MC35A8599LF|G000213279|color|GlamBeige|",
+"imgPath1": "//images.samsung.com/kdp/goods/2021/04/22/850c5fd7-fa41-4db0-b231-f19781d011e4.png",
+"dispClsfNo": "100010848"
+}
+]
+}

@@ -1,0 +1,321 @@
+<script>
+		$('button.spec-title').on("click", function(e){
+			e.preventDefault();
+			$('div[name="specLayer"] > .layer-header > h2').text(this.innerText);
+			$('div[name="specLayer"] > .layer-content > p').text(this.value);
+
+			let newId = $(this).data('popup-target');
+			$('div[name="specLayer"]').attr('id', newId);
+			$('div[name="specLayer"] > .pop-close').attr('data-focus-next', newId);
+			$('div[name="specLayer"]').attr('data-popup-layer', newId);
+			$('div[name="specLayer"]').attr('data-focus', newId);
+		});
+	</script>
+	<h3 class="spec-itm-title" id="cstrt-nm" ></h3>
+	<div class="spec-table">
+		<dl>
+						<dt>기본 사양</dt>
+						<dd>
+							<ol>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer11" value="제품의 외관 색상을 의미합니다." aria-haspopup="true">
+													색상</button>
+												<p class="spec-desc">다크스틸&nbsp;</p>
+											</li>
+								<li>
+										<strong class="spec-title">전원</strong>
+													<p class="spec-desc">220 V/60 Hz&nbsp;</p>
+												</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer13" value="한 번에 세탁할 수 있는 최대 빨래 양입니다. 용량이 클수록 더 많은 양의 빨래를 빠르게 세탁할 수 있습니다." aria-haspopup="true">
+													세탁 용량</button>
+												<p class="spec-desc">25&nbsp;kg</p>
+											</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer14" value="한 번에 세탁할 수 있는 최대 빨래 양입니다. 용량이 클수록 더 많은 양의 빨래를 빠르게 세탁할 수 있습니다." aria-haspopup="true">
+													건조 용량</button>
+												<p class="spec-desc">22&nbsp;kg</p>
+											</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer15" value="제품이 사용하는 에너지의 효율성을 나타냅니다. 등급이 높을수록 에너지 효율이 좋습니다." aria-haspopup="true">
+													에너지 소비효율</button>
+												<p class="spec-desc">세탁 1등급/건조 3&nbsp;등급</p>
+											</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer16" value="순간적으로 낼 수 있는 전력의 최대 입력을 의미합니다." aria-haspopup="true">
+													소비전력</button>
+												<p class="spec-desc">가열세탁 시 2100 W/건조 2300 W&nbsp;</p>
+											</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer17" value="제품의 총 중량을 나타냅니다." aria-haspopup="true">
+													무게</button>
+												<p class="spec-desc">176&nbsp;kg</p>
+											</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer18" value="제품의 가로 세로 높이를 나타내며, 설치 공간을 결정하는 데 중요한 요소입니다." aria-haspopup="true">
+													크기(폭 × 높이 × 깊이)</button>
+												<p class="spec-desc">686 x 1,890 x 875&nbsp;mm</p>
+											</li>
+								<li>
+										<strong class="spec-title">건조 방식</strong>
+													<p class="spec-desc">인버터 히트펌프 + 히터&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>외관 사양</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">도어 타입</strong>
+													<p class="spec-desc">강화유리&nbsp;</p>
+												</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer22" value="동작 중인 코스와 시간이 표시됩니다." aria-haspopup="true">
+													디스플레이</button>
+												<p class="spec-desc">Color LCD (177.8mm)&nbsp;</p>
+											</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer23" value="제습 키트는 건조기로 주변 공간을 제습 할 수 있도록 별도로 제공하는 키트로, 건조기의 공간제습+ 코스 사용 시 반드시 필요합니다." aria-haspopup="true">
+													제습키트</button>
+												<p class="spec-desc">없음&nbsp;</p>
+											</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer24" value="건조시 발생한 물을 저장하는 통을 의미하며, 물통의 크기에 따라 사용할 수 있는 횟수가 달라집니다. 물통이 가득 차면 비워주어야 합니다." aria-haspopup="true">
+													물통</button>
+												<p class="spec-desc">없음&nbsp;</p>
+											</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>세탁 주요기능</dt>
+						<dd>
+							<ol>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer31" value="세제를 미리 녹인 풍부한 거품을 만들고, 거품이 세탁물에 빠르게 침투하여 오염물질을 제거합니다." aria-haspopup="true">
+													버블</button>
+												<p class="spec-desc">있음&nbsp;</p>
+											</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer32" value="강력한 물줄기로 세탁력을 높여 찌든 때나 얼룩을 효과적으로 제거합니다." aria-haspopup="true">
+													초강력 워터샷</button>
+												<p class="spec-desc">있음&nbsp;</p>
+											</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer33" value="세탁물의 양과 오염도에 따라 세제와 유연제를 자동으로 투입해 주는 기능입니다. 매번 세제를 넣을 필요 없이 편리하게 세탁할 수 있습니다." aria-haspopup="true">
+													세제자동투입</button>
+												<p class="spec-desc">있음&nbsp;</p>
+											</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer34" value="세탁/건조 후 자동으로 문을 열어주는 기능으로, 내부 습기와 냄새 걱정을 덜어줍니다." aria-haspopup="true">
+													오토 오픈 도어</button>
+												<p class="spec-desc">없음&nbsp;</p>
+											</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer35" value="스마트폰을 이용하여 원격으로 기기를 제어하거나 설정할 수 있는 기능입니다." aria-haspopup="true">
+													스마트컨트롤</button>
+												<p class="spec-desc">있음&nbsp;</p>
+											</li>
+								<li>
+										<strong class="spec-title">무세제통세척+</strong>
+													<p class="spec-desc">있음&nbsp;</p>
+												</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer37" value="세탁기 내부에 장착된 조명으로, 어두운 곳에서도 드럼 내부를 쉽게 확인할 수 있습니다." aria-haspopup="true">
+													드럼라이트</button>
+												<p class="spec-desc">있음&nbsp;</p>
+											</li>
+								<li>
+										<strong class="spec-title">AI 진동소음 저감 시스템</strong>
+													<p class="spec-desc">있음&nbsp;</p>
+												</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer39" value="다양한 세탁 코스를 지원하여, 의류 소재별, 색상별, 오염도별로 맞춤형 세탁이 가능합니다." aria-haspopup="true">
+													세탁코스</button>
+												<p class="spec-desc">표준세탁, AI 맞춤세탁+, 펫케어, 울, 블라우스, 섬세의류, 피트니스, 이불, 타월, 쾌속세탁, 셔츠, 살균세탁, 무세제통세척+, 아웃도어, 아기옷, 면의류, 헹굼+탈수, 탈수단독, 데님, 미세플라스틱 저감, 퍼실 딥 클린, 손빨래&nbsp;</p>
+											</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>건조 주요기능</dt>
+						<dd>
+							<ol>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer41" value="별도의 공간 제습 키트를 장착하여, 건조기의 공간 제습+ 코스를 이용하면 주변 공간의 습기를 제거할 수 있습니다. 이로써, 쾌적한 공간을 유지하는 데에 도움이 됩니다." aria-haspopup="true">
+													공간 제습</button>
+												<p class="spec-desc">없음&nbsp;</p>
+											</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer42" value="세탁/건조 후 자동으로 문을 열어주는 기능으로, 내부 습기와 냄새 걱정을 덜어줍니다." aria-haspopup="true">
+													오토 오픈 도어</button>
+												<p class="spec-desc">없음&nbsp;</p>
+											</li>
+								<li>
+										<strong class="spec-title">직수 파워 오토 클린</strong>
+													<p class="spec-desc">있음&nbsp;</p>
+												</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer44" value="스마트폰을 이용하여 원격으로 기기를 제어하거나 설정할 수 있는 기능입니다." aria-haspopup="true">
+													스마트컨트롤</button>
+												<p class="spec-desc">있음&nbsp;</p>
+											</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer45" value="건조 정도를 사용자가 원하는 대로 설정할 수 있는 기능입니다." aria-haspopup="true">
+													건조 정도 설정</button>
+												<p class="spec-desc">있음&nbsp;</p>
+											</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer46" value="건조 시 발생하는 먼지를 꼼꼼하게 걸러내는 필터입니다." aria-haspopup="true">
+													마이크로 안심필터</button>
+												<p class="spec-desc">없음&nbsp;</p>
+											</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer47" value="건조기 내부에 장착된 조명으로, 어두운 곳에서도 드럼 내부를 쉽게 확인할 수 있습니다." aria-haspopup="true">
+													드럼라이트</button>
+												<p class="spec-desc">있음&nbsp;</p>
+											</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer48" value=" 다양한 건조 코스를 지원하여, 세탁물의 종류와 양에 따라 맞춤형 건조가 가능합니다." aria-haspopup="true">
+													건조코스</button>
+												<p class="spec-desc">표준건조, AI 맞춤건조+, 쾌속건조, 펫케어, 셔츠, 이불, 타월, 섬세의류, 블라우스, 울, 피트니스, 데님, 살균건조, 다림질건조, 시간건조, 선반건조, 송풍건조, 이불/먼지털기, 패딩케어, 아웃도어발수케어, 열풍내부살균&nbsp;</p>
+											</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>스마트</dt>
+						<dd>
+							<ol>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer51" value="제품이 인터넷에 연결될 수 있도록 WiFi가 내장되어 있는 것을 의미합니다." aria-haspopup="true">
+													WiFi 내장</button>
+												<p class="spec-desc">지원&nbsp;</p>
+											</li>
+								<li>
+										<strong class="spec-title">SmartThings Hub</strong>
+													<p class="spec-desc">지원&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>앱 연결</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">SmartThings 모바일 앱 지원</strong>
+													<p class="spec-desc">지원&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>안전인증정보</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">인증구분</strong>
+													<p class="spec-desc">KC 안전인증&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">인증기관</strong>
+													<p class="spec-desc">한국기계전기전자 시험연구원&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">인증번호</strong>
+													<p class="spec-desc">HU072172-25024, HE07020-25168&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>EMC/RF모듈</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">인증기관</strong>
+													<p class="spec-desc">국립전파연구원&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">인증번호</strong>
+													<p class="spec-desc">R-R-SEC-WF90F27KO, R-R-SEC-DV90F27KO7, R-C-SEC-WCP730M, R-C-SEC-CDAU210E&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>기본정보</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">모델명 (세탁기)</strong>
+													<p class="spec-desc">WF90F25BBS&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">모델명 (건조기)</strong>
+													<p class="spec-desc">DV90F22BBS&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">제조자/수입자</strong>
+													<p class="spec-desc">삼성전자(주)&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">제조국</strong>
+													<p class="spec-desc">세탁기: 베트남/건조기: 한국&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">동일모델의 출시년월</strong>
+													<p class="spec-desc">2025년 7월&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+				<dt>상품 기본정보</dt>
+				<dd>
+					<ol>
+						<li>
+								<strong class="spec-title">제품명</strong>
+								<p class="spec-desc">전기 세탁기/건조기</p>
+							</li>
+						<li>
+								<strong class="spec-title">제조자/수입자</strong>
+								<p class="spec-desc">삼성전자(주)</p>
+							</li>
+						<li>
+								<strong class="spec-title">제조국가</strong>
+								<p class="spec-desc">세탁기: 베트남/건조기: 한국</p>
+							</li>
+						<li>
+								<strong class="spec-title">KC 인증 필 유무</strong>
+								<p class="spec-desc"><img src='//images.samsung.com/is/image/samsung/p5/sec/common/icon-kc.png?$ORIGIN_PNG$' alt='KC 인증 로고'>HU072172-25024, HE07020-25168, R-R-SEC-WF90F27KO, R-R-SEC-DV90F27KO7, R-C-SEC-WCP730M, R-C-SEC-CDAU210E</p>
+							</li>
+						<li>
+								<strong class="spec-title">동일모델의 출시년월</strong>
+								<p class="spec-desc">2025년 7월</p>
+							</li>
+						<li>
+								<strong class="spec-title">A/S 책임자와 전화번호</strong>
+								<p class="spec-desc">삼성전자서비스센터 / 1588-3366</p>
+							</li>
+						<li>
+								<strong class="spec-title">품질보증기준</strong>
+								<p class="spec-desc">결함.하자 등에 따른 소비자피해에 대해서는 소비자분쟁해결기준(소비자기본법 제16조)에 따라 보상 가능</p>
+							</li>
+						</ol>
+				</dd>
+			</dl>
+		</div>
+	<div class="layer-pop layer-normal layer-default specLayer active" name="specLayer" id="specLayer" tabindex="0" data-popup-layer="specLayer" data-focus="specLayer" aria-hidden="false" data-zindex="300" style="z-index: 300; display: none">
+		<div class="layer-header">
+			<h2></h2>
+		</div>
+		<div class="layer-content">
+			<p></p>
+		</div>
+		<button type="button" class="pop-close" data-focus-next="">팝업닫기</button>
+	</div>
+

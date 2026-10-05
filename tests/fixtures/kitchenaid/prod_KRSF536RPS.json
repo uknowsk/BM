@@ -1,0 +1,126 @@
+{
+ "code": "KRSF536RPS",
+ "name": "28.7 Cu. Ft. 36-Inch Side-by-Side Refrigerator with Exterior Ice and Water Dispenser in PrintShield\u00ae Stainless Steel",
+ "url": "/major-appliances/refrigeration/freestanding-refrigerators/freestanding-side-by-side/p.28.7-cu.-ft.-36-inch-side-by-side-refrigerator-with-exterior-ice-and-water-dispenser-in-printshield-stainless-steel.krsf536rps.html",
+ "price": {
+  "currencyIso": "USD",
+  "formattedValue": "$2,679.00",
+  "priceType": "BUY",
+  "value": 2679.0
+ },
+ "color": {
+  "code": "EZ",
+  "name": "Fingerprint Resistant Stainless Steel"
+ },
+ "productFeature": [
+  {
+   "code": "SPACIOUSCAPACITYAT28CUFT_KRSF536R_KRSF336R",
+   "description": "the largest capacity side-by-side refrigerator from KitchenAid brand* makes room for every grocery run and farmers market haul with 28.7 cu. ft. of capacity and specialized spaces for your special ingredients. *Applies to models KRSF336R and KRSF536R.",
+   "imagePath": "230351KRD01-005_KRSF536RPS_Infographic.tif",
+   "priority": 1,
+   "title": "Spacious Capacity at 28.7 cu. ft."
+  },
+  {
+   "code": "PANORAMICLEDLIGHTING_KRSF536R_KRSC536R",
+   "description": "illuminates the back of the refrigerator to keep ingredients in sight and easy to find. The rear lighting tower, combined with additional LED light strips throughout the refrigerator and freezer, brighten up the view throughout.",
+   "imagePath": "230351KRP01-014_KRSC536RPS_Feature_sRGB.tif",
+   "priority": 2,
+   "title": "Panoramic LED Lighting"
+  },
+  {
+   "code": "CUSTOMIZABLESPACESFORITEMSBIGANDSMALL_KRSF536R_KRSC536R",
+   "description": "featuring nine removable glass shelves and eight adjustable door bins keep all of your ingredients easily accessible. Rearrange to fit tall wine bottles, stash small items within reach and organize frozen favorites.",
+   "imagePath": "230351KRP01-010_KRSC536RPS_Feature_sRGB.tif",
+   "priority": 3,
+   "title": "Customizable Spaces for Items Big and Small"
+  },
+  {
+   "code": "INDOORICESYSTEMWITHREMOVABLEBIN_KRSF536R_KRSC536R_KRSF336R_KRSC336R",
+   "description": "maximizes ice storage while maximizing space on freezer shelves by moving the ice bin to the door. The bin holds up to 4.3 lbs of ice, is clear so you can quickly see ice levels and can be removed to easily fill pitchers or coolers.",
+   "imagePath": "230351KRP01-005_KRSC536RPS_Feature_sRGB.tif",
+   "priority": 4,
+   "title": "In-Door-Ice\u00ae System with Removable Bin"
+  },
+  {
+   "code": "SIGNATUREPLATINUMINTERIOR_KRSF536R_KRSC536R_KRSF336R_KRSC336R",
+   "description": "wows from the inside out with premium craftsmanship and design. Wood-look trim, metallic touchpoints and ultra-bright LED lighting pop against the stunning silver-colored finish.",
+   "imagePath": "230351KRP01-013_KRSC336RPS_Feature_sRGB.tif",
+   "priority": 5,
+   "title": "Signature Platinum Interior"
+  },
+  {
+   "code": "PRESERVACOOLINGSYSTEM_KBSD736S_KBSN742S_KBSD742S_KBSN748S_KBSD748S",
+   "description": "helps keep ingredients fresh and flavorful. This single evaporator system uses sensors to continually monitor temperature levels in both the refrigerator and freezer and adapts the flow of cold air between them to maintain optimal temperatures throughout.",
+   "imagePath": "240933KRD01-008_KBSN742SPS_Infographic.tif",
+   "priority": 6,
+   "title": "Preserva\u00ae Food Care System."
+  },
+  {
+   "code": "EXTERIORICEANDWATERDISPENSERWITHMEASUREDFILL_KRSF536R_KRSC536R_KRSF336R_KRSC336R",
+   "description": "conveniently dispenses filtered ice and water without opening the door. Measured Fill allows you to select and dispense the exact amount you need in ounces, cups or liters.",
+   "priority": 7,
+   "title": "Exterior Ice and Water Dispenser with Measured Fill"
+  },
+  {
+   "code": "HUMIDITYCONTROLLEDCRISPER_KRSF536R_KRSC536R_KRSF336R_KRSC336R",
+   "description": "provides dedicated space for produce with the ability to adjust humidity levels to match. Choose high humidity to help vegetables stay crisp, low humidity to help fruit stay fresh or a setting in between to balance the needs of both.",
+   "priority": 8,
+   "title": "Humidity-Controlled Crisper"
+  },
+  {
+   "code": "WOODLOOKSLIDINGSTORAGETRAY_KRSF536R_KRSC536R_KRSF336R_KRSC336R",
+   "description": "keeps serving platters and ingredients easily accessible. The tray removes fully for easy cleaning.",
+   "priority": 9,
+   "title": "Wood-Look Sliding Storage Tray"
+  },
+  {
+   "code": "EDW_KAMA_REFERSKUS",
+   "description": "are precision-engineered with Triple Filtration Technology and certified to reduce up to 75 contaminants\u2014including 99% of microplastics\u2014delivering crisp, clean, refreshing water with every pour.",
+   "priority": 10,
+   "title": "Everydrop\u00ae Water Filters"
+  },
+  {
+   "code": "PRINTSHIELDFINISH_KRSF536R_KRSC536R_KRSF336R_KRSC336R",
+   "description": "resists smudges and fingerprints. The specialized coating for stainless steel is easy to clean with just water and a soft cloth, so you can spend more time cooking and less time cleaning up.",
+   "priority": 11,
+   "title": "PrintShield\u00ae Finish"
+  },
+  {
+   "code": "MAXCOOL_KRSF536R_KRSC536R_KRSF336R_KRSC336R",
+   "description": "helps quickly chill recently loaded groceries by setting the refrigerator compartment to the lowest temperature level for up to 6 hours.",
+   "priority": 12,
+   "title": "Max Cool"
+  },
+  {
+   "code": "MAXFREEZE_KRSF536R_KRSC536R_KRSF336R_KRSC336R",
+   "description": "helps frozen items quickly reach optimal storage temperatures by setting the freezer compartment to the lowest temperature level for up to 48 hours.",
+   "priority": 13,
+   "title": "Max Freeze"
+  },
+  {
+   "code": "FRESHFLOWAIRFILTER_KRSF536R_KRSC536R_KRSF336R_KRSC336R",
+   "description": "deodorizes 15x better than baking soda. The replaceable carbon-based filter neutralizes common food odors for up to 6 months.",
+   "priority": 14,
+   "title": "FreshFlow\u2122 Air Filter"
+  },
+  {
+   "code": "TOUCHSCREENCONTROLS_KRSF536R_KRSC536R_KRSF336R_KRSC336R",
+   "description": "on the front of the refrigerator make it easy to choose temperature settings, control the icemaker and check the status of the water filter, all without opening the door.",
+   "priority": 15,
+   "title": "Touchscreen Controls"
+  },
+  {
+   "code": "ENERGYSTARCERTIFIED_KRSF536R_KRSC536R_KRSF336R_KRSC336R",
+   "description": "to exceed government standards for energy efficiency, supporting sustainability and helping to save money on utility bills.",
+   "priority": 16,
+   "title": "Energy Star\u00ae Certified"
+  },
+  {
+   "code": "SABBATHMODE_KRSF536R_KRSC536R_KRSF336R_KRSC336R",
+   "description": "meets kosher requirements for use on the Jewish Sabbath and other holidays. Turning on Sabbath Mode disables the refrigerator's automatic lights and alarm tones while maintaining cold temperatures for freshness.",
+   "priority": 17,
+   "title": "Sabbath Mode"
+  }
+ ],
+ "summary": ""
+}

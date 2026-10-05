@@ -1,0 +1,161 @@
+{
+ "pagination": {
+  "currentPage": 0,
+  "pageSize": 24,
+  "sort": "Best Seller",
+  "totalPages": 1,
+  "totalResults": 17
+ },
+ "products": [
+  {
+   "code": "WMH78519LZ",
+   "baseProduct": "WMH78519L",
+   "name": "1.9 Cu. Ft. Microwave with Air Fry Mode",
+   "url": "/kitchen/cooking/microwaves/over-the-range/p.1.9-cu.-ft.-microwave-with-air-fry-mode.wmh78519lz.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$789.00",
+    "priceType": "BUY",
+    "value": 789.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$789.00",
+    "priceType": "BUY",
+    "value": 789.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Over-the-Range",
+    "pipedCategory": "Kitchen|Cooking|Microwaves|Over-the-Range",
+    "url": "/Kitchen/Cooking/Microwaves/Over-the-Range"
+   },
+   "color": {
+    "code": "EZ",
+    "name": "Fingerprint Resistant Stainless Steel"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WML55011HS",
+   "baseProduct": "WML55011H",
+   "name": "1.1 cu. ft. Low Profile Microwave Hood Combination",
+   "url": "/kitchen/cooking/microwaves/over-the-range/p.1.1-cu.-ft.-low-profile-microwave-hood-combination.wml55011hs.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$409.00",
+    "priceType": "BUY",
+    "value": 409.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$409.00",
+    "priceType": "BUY",
+    "value": 409.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Over-the-Range",
+    "pipedCategory": "Kitchen|Cooking|Microwaves|Over-the-Range",
+    "url": "/Kitchen/Cooking/Microwaves/Over-the-Range"
+   },
+   "color": {
+    "code": "BS",
+    "name": "Black-on-Stainless"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WMH31017HZ",
+   "baseProduct": "WMH31017H",
+   "name": "1.7 cu. ft. Microwave Hood Combination with Electronic Touch Controls",
+   "url": "/kitchen/cooking/microwaves/over-the-range/p.1.7-cu.-ft.-microwave-hood-combination-with-electronic-touch-controls.wmh31017hz.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$377.00",
+    "priceType": "BUY",
+    "value": 377.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$377.00",
+    "priceType": "BUY",
+    "value": 377.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Over-the-Range",
+    "pipedCategory": "Kitchen|Cooking|Microwaves|Over-the-Range",
+    "url": "/Kitchen/Cooking/Microwaves/Over-the-Range"
+   },
+   "color": {
+    "code": "EZ",
+    "name": "Fingerprint Resistant Stainless Steel"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WMMS3130RB",
+   "baseProduct": "WMMS3130R",
+   "name": "30-inch Wide Over the Range Microwave - 1.7 cu. ft.",
+   "url": "/kitchen/cooking/microwaves/over-the-range/p.30-inch-wide-over-the-range-microwave-1.7-cu.-ft.wmms3130rb.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$249.00",
+    "priceType": "BUY",
+    "value": 249.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$249.00",
+    "priceType": "BUY",
+    "value": 249.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Over-the-Range",
+    "pipedCategory": "Kitchen|Cooking|Microwaves|Over-the-Range",
+    "url": "/Kitchen/Cooking/Microwaves/Over-the-Range"
+   },
+   "color": {
+    "code": "BL",
+    "name": "Black"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WMMF7530RZ",
+   "baseProduct": "WMMF7530R",
+   "name": "Air Fry Over-the-Range Microwave with Advanced Sensing Technology",
+   "url": "/kitchen/cooking/microwaves/over-the-range/p.air-fry-over-the-range-microwave-with-advanced-sensing-technology.wmmf7530rz.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$989.00",
+    "priceType": "BUY",
+    "value": 989.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$989.00",
+    "priceType": "BUY",
+    "value": 989.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Over-the-Range",
+    "pipedCategory": "Kitchen|Cooking|Microwaves|Over-the-Range",
+    "url": "/Kitchen/Cooking/Microwaves/Over-the-Range"
+   },
+   "color": {
+    "code": "EZ",
+    "name": "Fingerprint Resistant Stainless Steel"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  }
+ ]
+}

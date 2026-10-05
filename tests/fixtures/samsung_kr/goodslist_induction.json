@@ -1,0 +1,293 @@
+{
+"count": 16,
+"products": [
+{
+"mdlCode": "NZ63DB657CFH",
+"goodsId": "G000384483",
+"goodsNm": "Bespoke AI 인덕션 (플렉스존)",
+"goodsDetailUrl": "electric-range/cooktop-nz63db657cf-d2c/NZ63DB657CFH/",
+"salePrice": 1040000,
+"priceStr": "1096452|10|1640000|1640000|1040000",
+"saleStatCd": "12",
+"goodsTpCd": "10",
+"uspDescList": [
+"어느 곳에 두어도 어울리는 완벽한 연출 프레임리스",
+"자동 화력 조절로 간편식 조리까지 편리하게 AI 끓음 감지",
+"어디에 올려도 균일하고 강력한 화력 콰트로 플렉스존"
+],
+"goodsOptStr": "1|1001|5647|5647|색상|글램 화이트|#ebece7|Y|NZ63DB657CFH|G000384483,G000385538|color|Glam White|\n1|1001|5644|5644|색상|글램 베이지|#dbd5cf|Y|NZ63DB657CFE|G000384485,G000385548|color|GlamBeige|\n2|5102|10135|10135|화구 유형|3구||N|NZ63DB607CFH|G000385538,G000385548|Induction type|3 induction|\n2|5102|10136|10136|화구 유형|플렉스존+1구||N|NZ63DB657CFH|G000384483,G000384485|Induction type|flex zone induction + 1 induction|",
+"imgPath1": "//images.samsung.com/kdp/goods/2024/04/23/0a5b7097-b5b6-4a5c-a14d-62902fc48aee.png",
+"dispClsfNo": "100010835"
+},
+{
+"mdlCode": "CC99F63G1DS",
+"goodsId": "G000446152",
+"goodsNm": "Infinite AI 인덕션 (플렉스존)",
+"goodsDetailUrl": "electric-range/cooktop-cc99f63g1ds-d2c/CC99F63G1DS/",
+"salePrice": 1990000,
+"priceStr": "1096442|10|2140000|2140000|1990000",
+"saleStatCd": "12",
+"goodsTpCd": "10",
+"uspDescList": [
+"매트한 무광 디자인에 긁힘 걱정 없는 견고함까지 Infinite Glass",
+"전원 OFF 가능한 스마트 컨트롤 기능으로 외출 시에도 안심",
+"많은 요리도 한 번에 3,400W 초고화력 빠른 조리 All MAX 부스트"
+],
+"goodsOptStr": "1|1001|1001|1001|색상|블랙|#000000|Y|CC99F63G1DS|G000446152,G000446153|color|BLACK|\n2|5102|10135|10135|화구 유형|3구||N|CC99F63U1DS|G000446153|Induction type|3 induction|\n2|5102|10136|10136|화구 유형|플렉스존+1구||N|CC99F63G1DS|G000446152|Induction type|flex zone induction + 1 induction|",
+"imgPath1": "//images.samsung.com/kdp/goods/2025/06/13/0d6ceac8-3f9d-454b-8a10-1201cfdac822.png",
+"dispClsfNo": "100024333"
+},
+{
+"mdlCode": "NZ63DG403CFK",
+"goodsId": "G000383557",
+"goodsNm": "인덕션",
+"goodsDetailUrl": "electric-range/cooktop-nz63dg403cfk-d2c/NZ63DG403CFK/",
+"salePrice": 690000,
+"priceStr": "1096450|10|1090000|1090000|690000",
+"saleStatCd": "12",
+"goodsTpCd": "10",
+"uspDescList": [
+"전체 화구 사용으로 많은 요리도 한번에 3,400W 초고화력",
+"8분 초고화력의 빠른 조리 ALL MAX 부스트",
+"어느곳에 두어도 어울리는 완벽한 연출 프레임리스&슬림핏"
+],
+"goodsOptStr": "1|1001|1001|1001|색상|블랙|#000000|Y|NZ63DG403CFK|G000383557|color|BLACK|",
+"imgPath1": "//images.samsung.com/kdp/goods/2024/03/26/501d5056-60ca-4852-aa4d-8c0ba257d662.png",
+"dispClsfNo": "36070200"
+},
+{
+"mdlCode": "CC80F63X1Z",
+"goodsId": "G002908375",
+"goodsNm": "Bespoke 인덕션",
+"goodsDetailUrl": "electric-range/cooktop-cc80f63x1z-d2c/CC80F63X1Z/",
+"salePrice": 799000,
+"priceStr": "1096457|10|1090000|1090000|799000",
+"saleStatCd": "12",
+"goodsTpCd": "10",
+"uspDescList": [
+"어느 곳에 두어도 어울리는 완벽한 연출 프레임리스",
+"밀키트, 간편식도 바코드 스캔 한 번으로 알아서 스캔쿡",
+"LCD 대화형 알림창과 더 넒어진 패널로 간편하게"
+],
+"goodsOptStr": "1|1001|5647|5647|색상|글램 화이트|#ebece7|Y|CC80F63X1Z|G002908375|color|Glam White|",
+"imgPath1": "//images.samsung.com/kdp/goods/2025/07/25/70288b66-468d-4468-bd9a-d296586e1d0c.png",
+"dispClsfNo": "100010835"
+},
+{
+"mdlCode": "CC80H63E1HS",
+"goodsId": "G002962289",
+"goodsNm": "Bespoke AI 인덕션 (플렉스존)",
+"goodsDetailUrl": "electric-range/cooktop-cc80h63e1hs-d2c/CC80H63E1HS/",
+"salePrice": 1890000,
+"priceStr": "1096448|00|1890000|1890000",
+"saleStatCd": "12",
+"goodsTpCd": "10",
+"uspDescList": [
+"키친 인테리어를 완성하는 Seamless 디자인",
+"자동 화력 조절로 간편식 조리까지 편리하게 AI 끓음 감지",
+"전체 화구 사용으로 많은 요리도 한번에 3,300W 초고화력"
+],
+"goodsOptStr": "1|1001|6875|6875|색상|화이트|#FFFFFF|Y|CC80H63E1HS|G002962289|color|white|\n2|5102|10136|10136|화구 유형|플렉스존+1구||N|CC80H63E1HS|G002962289|Induction type|flex zone induction + 1 induction|",
+"imgPath1": "//images.samsung.com/kdp/goods/2026/03/19/a4c26ae5-675d-4db3-a23b-84d688e4add4.png",
+"dispClsfNo": "100040322"
+},
+{
+"mdlCode": "CC80H63G1HS",
+"goodsId": "G002962287",
+"goodsNm": "Bespoke AI 인덕션 (플렉스존)",
+"goodsDetailUrl": "electric-range/cooktop-cc80h63g1hs-d2c/CC80H63G1HS/",
+"salePrice": 1690000,
+"priceStr": "1096446|10|1890000|1890000|1690000",
+"saleStatCd": "12",
+"goodsTpCd": "10",
+"uspDescList": [
+"키친 인테리어를 완성하는 Seamless 디자인",
+"자동 화력 조절로 간편식 조리까지 편리하게 AI 끓음 감지",
+"전체 화구 사용으로 많은 요리도 한번에 3,400W 초고화력"
+],
+"goodsOptStr": "1|1001|6875|6875|색상|화이트|#FFFFFF|Y|CC80H63G1HS|G002962287,G002962288|color|white|\n2|5102|10135|10135|화구 유형|3구||N|CC80H63U1HS|G002962288|Induction type|3 induction|\n2|5102|10136|10136|화구 유형|플렉스존+1구||N|CC80H63G1HS|G002962287|Induction type|flex zone induction + 1 induction|",
+"imgPath1": "//images.samsung.com/kdp/goods/2026/03/19/d199314e-c736-4acc-a9b3-7fb510c62af3.png",
+"dispClsfNo": "100010835"
+},
+{
+"mdlCode": "CC80H63URHS",
+"goodsId": "G002962563",
+"goodsNm": "Bespoke AI 인덕션",
+"goodsDetailUrl": "electric-range/cooktop-cc80h63urhs-d2c/CC80H63URHS/",
+"salePrice": 1540000,
+"priceStr": "1096449|00|1540000|1540000",
+"saleStatCd": "12",
+"goodsTpCd": "10",
+"uspDescList": [
+"키친 인테리어를 완성하는 Seamless 디자인",
+"자동 화력 조절로 간편식 조리까지 편리하게 AI 끓음 감지",
+"전체 화구 사용으로 많은 요리도 한번에 3,400W 초고화력"
+],
+"goodsOptStr": "1|1001|6875|6875|색상|화이트|#FFFFFF|Y|CC80H63URHS|G002962563|color|white|",
+"imgPath1": "//images.samsung.com/kdp/goods/2026/03/26/6463ca55-ccdc-447a-b201-87695c7ca46b.png",
+"dispClsfNo": "100010835"
+},
+{
+"mdlCode": "NZ63DG403RFK",
+"goodsId": "G002962564",
+"goodsNm": "인덕션",
+"goodsDetailUrl": "electric-range/cooktop-nz63dg403rfk-d2c/NZ63DG403RFK/",
+"salePrice": 1090000,
+"priceStr": "1096451|00|1090000|1090000",
+"saleStatCd": "12",
+"goodsTpCd": "10",
+"uspDescList": [
+"많은 요리도 한번에 3,400W 초고화력 빠른 조리 All MAX 부스트",
+"슬림핏 디자인으로 간편하고 깔끔한 설치",
+"어느 곳에 두어도 어울리는 완벽한 연출 프레임리스"
+],
+"goodsOptStr": "1|1001|1001|1001|색상|블랙|#000000|Y|NZ63DG403RFK|G002962564|color|BLACK|",
+"imgPath1": "//images.samsung.com/kdp/goods/2026/03/26/c4288ea3-69ed-436b-949c-3bb4e8718b77.png",
+"dispClsfNo": "36070200"
+},
+{
+"mdlCode": "CC80H63S1HS",
+"goodsId": "G002962290",
+"goodsNm": "Bespoke AI 인덕션",
+"goodsDetailUrl": "electric-range/cooktop-cc80h63e1hs-d2c/CC80H63S1HS/",
+"salePrice": 1440000,
+"priceStr": "1096447|10|1590000|1590000|1440000",
+"saleStatCd": "12",
+"goodsTpCd": "10",
+"uspDescList": [
+"키친 인테리어를 완성하는 Seamless 디자인",
+"자동 화력 조절로 간편식 조리까지 편리하게 AI 끓음 감지",
+"전체 화구 사용으로 많은 요리도 한번에 3,300W 초고화력"
+],
+"goodsOptStr": "1|1001|6875|6875|색상|화이트|#FFFFFF|Y|CC80H63S1HS|G002962290|color|white|\n2|5102|10135|10135|화구 유형|3구||N|CC80H63S1HS|G002962290|Induction type|3 induction|",
+"imgPath1": "//images.samsung.com/kdp/goods/2026/03/19/3a2025f0-d521-4533-a533-61f4b8870af0.png",
+"dispClsfNo": "100010835"
+},
+{
+"mdlCode": "CC99H84JADS",
+"goodsId": "G002965251",
+"goodsNm": "Infinite Line 후드일체형 인덕션+덕트 키트",
+"goodsDetailUrl": "electric-range/package-cc99h84jads-d2c/CC99H84JADS/",
+"salePrice": 4989000,
+"priceStr": "1096439|00|4989000|4989000",
+"saleStatCd": "12",
+"goodsTpCd": "20",
+"uspDescList": [
+"후드일체형으로 더 자유롭게",
+"최대 7,400W의 강력한 화력으로  더 빠르고 완성도 있는 조리",
+"숨겨진 덕트 키트로 주방을 더 깔끔하게"
+],
+"goodsOptStr": "1|1001|1001|1001|색상|블랙|#000000|Y|CC99H84JAD|G002961852,G002965251|color|BLACK|\n2|6303|14537|14537|액세서리 옵션|전면 배기||N|CC99H84JADS|G002965251|electric range accessory|duct kit|\n2|6303|14538|14538|액세서리 옵션|플러그 & 플레이||N|CC99H84JAD|G002961852|electric range accessory|plug and play|",
+"imgPath1": "//images.samsung.com/kdp/goods/2026/09/03/8c8c1bd7-4a6a-4a38-bfc7-b802fa455f95.png",
+"dispClsfNo": "100024333"
+},
+{
+"mdlCode": "CC99H63I1D",
+"goodsId": "G002970459",
+"goodsNm": "Infinite AI 인덕션 (플렉스존)",
+"goodsDetailUrl": "electric-range/cooktop-cc99h63i1d-d2c/CC99H63I1D/",
+"salePrice": 2290000,
+"priceStr": "1096437|00|2290000|2290000",
+"saleStatCd": "12",
+"goodsTpCd": "10",
+"uspDescList": [
+"매트한 무광 디자인에 긁힘 걱정 없는 견고함까지 Infinite Glass",
+"최대 6,600W 초고화력으로 더 빠르고 편리하게",
+"용기를 따라 자동 이동하는 화력으로 끊김 걱정 없이 조리"
+],
+"goodsOptStr": "1|1001|1001|1001|색상|블랙|#000000|Y|CC99H63I1D|G002970459|color|BLACK|",
+"imgPath1": "//images.samsung.com/kdp/goods/2026/05/04/a9713e5a-b7cc-4528-9f6f-2f28e292fa1b.png",
+"dispClsfNo": "100024333"
+},
+{
+"mdlCode": "NZ63DB503CFT",
+"goodsId": "G000380944",
+"goodsNm": "Bespoke 인덕션",
+"goodsDetailUrl": "electric-range/cooktop-nz63db503cft-d2c/NZ63DB503CFT/",
+"salePrice": 1490000,
+"priceStr": "1096445|10|1640000|1640000|1490000",
+"saleStatCd": "12",
+"goodsTpCd": "10",
+"uspDescList": [
+"매트한 디자인에 긁힘 걱정 없는 견고함 Infinite Glass",
+"어느 곳에 두어도 어울리는 완벽한 연출 프레임리스",
+"전체 화구 사용으로 많은 요리도 한번에 3,400W 초고화력"
+],
+"goodsOptStr": "1|1001|1001|1001|색상|새틴 블랙|#000000|Y|NZ63DB503CFT|G000380944,G000396410|color|BLACK|\n2|5102|10135|10135|화구 유형|3구||N|NZ63DB503CFT|G000380944|Induction type|3 induction|\n2|5102|10136|10136|화구 유형|플렉스존+1구||N|NZ63DB553CFT|G000396410|Induction type|flex zone induction + 1 induction|",
+"imgPath1": "//images.samsung.com/kdp/goods/2024/02/15/b02418f5-ccd0-4a92-87df-1886ccf0fb25.png",
+"dispClsfNo": "100010835"
+},
+{
+"mdlCode": "NZ62DG300CFW",
+"goodsId": "G000385061",
+"goodsNm": "더 플레이트 인덕션 2구",
+"goodsDetailUrl": "electric-range/cooktop-nz62dg300cf-d2c/NZ62DG300CFW/",
+"salePrice": 279000,
+"priceStr": "1096461|10|350000|350000|279000",
+"saleStatCd": "12",
+"goodsTpCd": "10",
+"uspDescList": [
+"설치 걱정 없이 어디서든 강력하게",
+"공간에 최적화된 46mm 슬림 디자인",
+"다양한 조합의 2가지 요리도 동시에"
+],
+"goodsOptStr": "1|1001|7235|7235|색상|화이트  + 로즈골드|@000343|Y|NZ62DG300CFW|G000385061,G000385077|color|white+rosegold|/goods/opt/colorchip/b2c/1/white+rosegold.png\n1|1001|7236|7236|색상|블랙 + 로즈골드|@000344|Y|NZ62DG300CFK|G000385068,G000385078|color|black+rosegold|/goods/opt/colorchip/b2c/1/black+rosegold.png\n2|5102|10138|10138|화구 유형|1구||N|NZ31DG200CFH|G000385077,G000385078|Induction type|1 induction|\n2|5102|10137|10137|화구 유형|2구||N|NZ62DG300CFW|G000385061,G000385068|Induction type|2 induction|",
+"imgPath1": "//images.samsung.com/kdp/goods/2024/05/14/d0b73b72-828a-4adc-8a04-63c009086f97.png",
+"dispClsfNo": "36070600"
+},
+{
+"mdlCode": "NZ63B4026AK",
+"goodsId": "G000254671",
+"goodsNm": "인덕션",
+"goodsDetailUrl": "electric-range/cooktop-nz63b4026ak-d2c/NZ63B4026AK/",
+"salePrice": 790000,
+"priceStr": "1096459|10|1090000|1090000|790000",
+"saleStatCd": "12",
+"goodsTpCd": "10",
+"uspDescList": [
+"28 cm 대형 용기도 걱정없이 듀얼링 대화구",
+"10분 집중 초고화력의 ALL MAX 부스트",
+"많은 요리도 한꺼번에 3,400 W 최고 출력"
+],
+"goodsOptStr": "1|1001|1001|1001|색상|블랙|#000000|Y|NZ63B5056AK|G000254670,G000254671|color|BLACK|\n2|5102|10135|10135|화구 유형|3구||N|NZ63B4026AK|G000254671|Induction type|3 induction|\n2|5102|10136|10136|화구 유형|플렉스존+1구||N|NZ63B5056AK|G000254670|Induction type|flex zone induction + 1 induction|",
+"imgPath1": "//images.samsung.com/kdp/goods/2022/03/14/5f0e8e8e-73e8-49f6-a310-836a1c32fbf0.png",
+"dispClsfNo": "36070200"
+},
+{
+"mdlCode": "CC80F63W1Z",
+"goodsId": "G002908374",
+"goodsNm": "Bespoke 인덕션",
+"goodsDetailUrl": "electric-range/cook-top-cc80f63w1z-d2c/CC80F63W1Z/",
+"salePrice": 1090000,
+"priceStr": "1096456|00|1090000|1090000",
+"saleStatCd": "17",
+"goodsTpCd": "10",
+"uspDescList": [
+"어느 곳에 두어도 어울리는 완벽한 연출 프레임리스",
+"밀키트, 간편식도 바코드 스캔 한 번으로 알아서 스캔쿡",
+"많은 요리도 한번에 3,400W 초고화력 빠른 조리 All MAX 부스트"
+],
+"goodsOptStr": "1|1001|5647|5647|색상|글램 화이트|#ebece7|Y|CC80F63W1Z|G002908374|color|Glam White|",
+"imgPath1": "//images.samsung.com/kdp/goods/2025/07/25/d2a19ee5-b614-4fbe-946e-b093832e297d.png",
+"dispClsfNo": "100010835"
+},
+{
+"mdlCode": "NZ64B9899RB",
+"goodsId": "G000264723",
+"goodsNm": "Infinite Line 인덕션 (올플렉스존)",
+"goodsDetailUrl": "electric-range/cooktop-nz64b9899rb-d2c2/NZ64B9899RB/",
+"salePrice": 1922000,
+"priceStr": "667497|10|2290000|2221000|1922000",
+"saleStatCd": "15",
+"goodsTpCd": "10",
+"uspDescList": [
+"요리에 더해진 여유 스마트 쿡",
+"더 넓게 빈틈없이 가열하는 올 플렉스 플러스 존",
+"전체 화구 동시 최대 7.4kW 풀파워 고화력"
+],
+"goodsOptStr": "1|1001|1563|1563|색상|그레이지|#d4b895|Y|NZ64B9899RB|G000264723|color|BEIGEWOOD|",
+"imgPath1": "//images.samsung.com/kdp/goods/2022/04/20/d4350325-64d7-4fe8-acb9-8c127b3c09af.png",
+"dispClsfNo": "100024333"
+}
+]
+}

@@ -1,0 +1,386 @@
+<script>
+		$('button.spec-title').on("click", function(e){
+			e.preventDefault();
+			$('div[name="specLayer"] > .layer-header > h2').text(this.innerText);
+			$('div[name="specLayer"] > .layer-content > p').text(this.value);
+
+			let newId = $(this).data('popup-target');
+			$('div[name="specLayer"]').attr('id', newId);
+			$('div[name="specLayer"] > .pop-close').attr('data-focus-next', newId);
+			$('div[name="specLayer"]').attr('data-popup-layer', newId);
+			$('div[name="specLayer"]').attr('data-focus', newId);
+		});
+	</script>
+	<h3 class="spec-itm-title" id="cstrt-nm" ></h3>
+	<div class="spec-table">
+		<dl>
+						<dt>상판</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">색상</strong>
+													<p class="spec-desc">화이트&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">조작부 색상</strong>
+													<p class="spec-desc">글램화이트&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">글라스 재질</strong>
+													<p class="spec-desc">Ceramic Glass&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">제조사</strong>
+													<p class="spec-desc">NEG&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">프레임</strong>
+													<p class="spec-desc">프레임리스&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>디스플레이</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">조작 방식</strong>
+													<p class="spec-desc">터치&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">디스플레이 종류</strong>
+													<p class="spec-desc">LCD&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>크기(가로 × 세로 × 높이)</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">외부 치수</strong>
+													<p class="spec-desc">600 x 520 x 48&nbsp;mm</p>
+												</li>
+								<li>
+										<strong class="spec-title">타공 사이즈</strong>
+													<p class="spec-desc">560 x 480&nbsp;mm</p>
+												</li>
+								<li>
+										<strong class="spec-title">포장</strong>
+													<p class="spec-desc">697 x 590 x 120&nbsp;mm</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>화구</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">화구 수</strong>
+													<p class="spec-desc">3 (1 싱글, 2 플렉스)&nbsp;EA</p>
+												</li>
+								<li>
+										<strong class="spec-title">플렉스존 사이즈</strong>
+													<p class="spec-desc">210 X 365&nbsp;mm</p>
+												</li>
+								<li>
+										<strong class="spec-title">DNC (간섭소음절감)</strong>
+													<p class="spec-desc">있음&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>출력</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">플렉스 존(앞)</strong>
+													<p class="spec-desc">2.0 / 2.6 (Max)&nbsp;kW</p>
+												</li>
+								<li>
+										<strong class="spec-title">플렉스 존(뒤)</strong>
+													<p class="spec-desc">2.0 / 2.6 (Max)&nbsp;kW</p>
+												</li>
+								<li>
+										<strong class="spec-title">플렉스 존 전체</strong>
+													<p class="spec-desc">3.0 / 3.3 (Max)&nbsp;kW</p>
+												</li>
+								<li>
+										<strong class="spec-title">전체 출력</strong>
+													<p class="spec-desc">3.4&nbsp;kW</p>
+												</li>
+								<li>
+										<strong class="spec-title">부스터 수</strong>
+													<p class="spec-desc">3&nbsp;EA</p>
+												</li>
+								<li>
+										<strong class="spec-title">좌측 (앞)</strong>
+													<p class="spec-desc">해당 없음&nbsp;kW</p>
+												</li>
+								<li>
+										<strong class="spec-title">좌측 (뒤)</strong>
+													<p class="spec-desc">해당 없음&nbsp;kW</p>
+												</li>
+								<li>
+										<strong class="spec-title">우측</strong>
+													<p class="spec-desc">인덕션 210 mm - 2.2 / 3.4 (Max)&nbsp;kW</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>안전기능</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">잠금 기능</strong>
+													<p class="spec-desc">있음&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">전원 자동꺼짐</strong>
+													<p class="spec-desc">있음&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">화구 자동꺼짐</strong>
+													<p class="spec-desc">있음&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">일시정지/재생</strong>
+													<p class="spec-desc">있음&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">시간 제어</strong>
+													<p class="spec-desc">있음&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">출력 제어</strong>
+													<p class="spec-desc">있음&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">내열 코일</strong>
+													<p class="spec-desc">있음&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">과열 방지</strong>
+													<p class="spec-desc">있음&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">비용기 미인지</strong>
+													<p class="spec-desc">있음&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">잔열 표기</strong>
+													<p class="spec-desc">2단계&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">소프트웨어 안전성인증</strong>
+													<p class="spec-desc">있음&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">타이머</strong>
+													<p class="spec-desc">있음&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">빠른 정지</strong>
+													<p class="spec-desc">있음&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>편의기능</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">사운드 온/오프</strong>
+													<p class="spec-desc">있음&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">출력 레벨</strong>
+													<p class="spec-desc">9 + 맥스 부스트&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">물 끓음 감지</strong>
+													<p class="spec-desc">있음&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">간편식 자동조리</strong>
+													<p class="spec-desc">있음&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>에너지소비효율</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">에너지소비효율등급</strong>
+													<p class="spec-desc">1등급&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>전선</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">파워케이블 타입</strong>
+													<p class="spec-desc">플러그&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>무게</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">제품/전체 무게</strong>
+													<p class="spec-desc">12.2 / 13.5&nbsp;kg</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>스마트</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">WiFi 내장</strong>
+													<p class="spec-desc">있음&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>앱 연결</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">SmartThings 모바일 앱 지원</strong>
+													<p class="spec-desc">지원&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>안전인증정보</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">인증구분</strong>
+													<p class="spec-desc">KC 안전인증&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">인증기관</strong>
+													<p class="spec-desc">한국기계전기전자 시험연구원&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">인증번호</strong>
+													<p class="spec-desc">HU07310-23074&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>전자파적합성(EMC)</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">인증기관</strong>
+													<p class="spec-desc">국립전파연구원&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">인증번호</strong>
+													<p class="spec-desc">R-R-SEC-NZ9000D-F&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>고지정보</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">정격전압</strong>
+													<p class="spec-desc">220V ~ 60Hz&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">소비전력</strong>
+													<p class="spec-desc">3,400&nbsp;W</p>
+												</li>
+								<li>
+										<strong class="spec-title">제조사/수입자</strong>
+													<p class="spec-desc">삼성전자(주)&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">제조국</strong>
+													<p class="spec-desc">태국&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">출시년월</strong>
+													<p class="spec-desc">2024년 4월&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">A/S책임자와 전화번호</strong>
+													<p class="spec-desc">삼성전자서비스센터 / 1588-3366&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">품질보증기준</strong>
+													<p class="spec-desc">결함·하자 등에 따른 소비자피해에 대해서는 소비자분쟁해결기준(소비자기본법 제16조)에 따라 보상가능&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+				<dt>상품 기본정보</dt>
+				<dd>
+					<ol>
+						<li>
+								<strong class="spec-title">제품명</strong>
+								<p class="spec-desc">전기 호브</p>
+							</li>
+						<li>
+								<strong class="spec-title">제조자/수입자</strong>
+								<p class="spec-desc">삼성전자(주)</p>
+							</li>
+						<li>
+								<strong class="spec-title">제조국가</strong>
+								<p class="spec-desc">태국</p>
+							</li>
+						<li>
+								<strong class="spec-title">KC 인증 필 유무</strong>
+								<p class="spec-desc"><img src='//images.samsung.com/is/image/samsung/p5/sec/common/icon-kc.png?$ORIGIN_PNG$' alt='KC 인증 로고'>KC 안전인증 번호 HU07310-23074 / 전자파적합성(EMC)  번호 R-R-SEC-NZ9000D-F</p>
+							</li>
+						<li>
+								<strong class="spec-title">동일모델의 출시년월</strong>
+								<p class="spec-desc">2024년 4월</p>
+							</li>
+						<li>
+								<strong class="spec-title">A/S 책임자와 전화번호</strong>
+								<p class="spec-desc">삼성전자서비스센터 / 1588-3366</p>
+							</li>
+						<li>
+								<strong class="spec-title">품질보증기준</strong>
+								<p class="spec-desc">결함·하자 등에 따른 소비자피해에 대해서는 소비자분쟁해결기준(소비자기본법 제16조)에 따라 보상가능</p>
+							</li>
+						</ol>
+				</dd>
+			</dl>
+		</div>
+	<div class="layer-pop layer-normal layer-default specLayer active" name="specLayer" id="specLayer" tabindex="0" data-popup-layer="specLayer" data-focus="specLayer" aria-hidden="false" data-zindex="300" style="z-index: 300; display: none">
+		<div class="layer-header">
+			<h2></h2>
+		</div>
+		<div class="layer-content">
+			<p></p>
+		</div>
+		<button type="button" class="pop-close" data-focus-next="">팝업닫기</button>
+	</div>
+

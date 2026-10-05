@@ -1,0 +1,383 @@
+<script>
+		$('button.spec-title').on("click", function(e){
+			e.preventDefault();
+			$('div[name="specLayer"] > .layer-header > h2').text(this.innerText);
+			$('div[name="specLayer"] > .layer-content > p').text(this.value);
+
+			let newId = $(this).data('popup-target');
+			$('div[name="specLayer"]').attr('id', newId);
+			$('div[name="specLayer"] > .pop-close').attr('data-focus-next', newId);
+			$('div[name="specLayer"]').attr('data-popup-layer', newId);
+			$('div[name="specLayer"]').attr('data-focus', newId);
+		});
+	</script>
+	<h3 class="spec-itm-title" id="cstrt-nm" ></h3>
+	<div class="spec-table">
+		<dl>
+						<dt>구분</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">구분</strong>
+													<p class="spec-desc">빌트인 복합오븐&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">설치방식</strong>
+													<p class="spec-desc">빌트인&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">정격전압</strong>
+													<p class="spec-desc">220 V ~ 60 Hz&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>소비전력</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">콤비</strong>
+													<p class="spec-desc">2,700&nbsp;W</p>
+												</li>
+								<li>
+										<strong class="spec-title">오븐</strong>
+													<p class="spec-desc">2,300&nbsp;W</p>
+												</li>
+								<li>
+										<strong class="spec-title">그릴</strong>
+													<p class="spec-desc">2,350&nbsp;W</p>
+												</li>
+								<li>
+										<strong class="spec-title">전자레인지</strong>
+													<p class="spec-desc">1,350&nbsp;W</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>용량</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">용량</strong>
+													<p class="spec-desc">50&nbsp;L</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>도어</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">디스플레이</strong>
+													<p class="spec-desc">LCD (화이트)&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">조작 방식</strong>
+													<p class="spec-desc">터치 + 다이얼&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">색상</strong>
+													<p class="spec-desc">새틴 차콜&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">도어개폐방식</strong>
+													<p class="spec-desc">Drop Down (핸들)&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>조리실</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">턴테이블</strong>
+													<p class="spec-desc">없음&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">항균 조리실</strong>
+													<p class="spec-desc">세라믹&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>열원</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">히터</strong>
+													<p class="spec-desc">Sheath Heater (상 / 하단)&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">컨벡션</strong>
+													<p class="spec-desc">Fan + Heater&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">오븐온도</strong>
+													<p class="spec-desc">40 ~ 250&nbsp;℃</p>
+												</li>
+								<li>
+										<strong class="spec-title">그릴</strong>
+													<p class="spec-desc">와이드 듀얼 그릴&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">스팀어시스트</strong>
+													<p class="spec-desc">없음&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">MWO출력</strong>
+													<p class="spec-desc">700&nbsp;W</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>조리모드</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">오븐</strong>
+													<p class="spec-desc">있음&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">전자레인지</strong>
+													<p class="spec-desc">있음&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">찜</strong>
+													<p class="spec-desc">없음&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">발효</strong>
+													<p class="spec-desc">있음&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">건조</strong>
+													<p class="spec-desc">있음&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">에어프라이</strong>
+													<p class="spec-desc">있음&nbsp;</p>
+												</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer77" value="전문 셰프처럼 로스팅 시 겉은 바삭하고 속은 촉촉하게 조리될 수 있도록 자동으로 온도를 조절하는 모드입니다. " aria-haspopup="true">
+													프로 로스팅</button>
+												<p class="spec-desc">있음&nbsp;</p>
+											</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer78" value="냉동된 식품을 빠르게 녹일때 사용하는 모드입니다. " aria-haspopup="true">
+													쾌속해동</button>
+												<p class="spec-desc">있음&nbsp;</p>
+											</li>
+								<li>
+										<strong class="spec-title">보온</strong>
+													<p class="spec-desc">있음&nbsp;</p>
+												</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer710" value="스테이크, 그라탕, 브라우니 등 다양한 음식을 쉽고 간편하게 즐길 수 있는 모드입니다. 메뉴만 선택하면 자동으로 조리온도 및 시간이 설정됩니다. " aria-haspopup="true">
+													자동조리</button>
+												<p class="spec-desc">50 개&nbsp;</p>
+											</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>치수 (가로 × 높이 × 깊이)</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">외관</strong>
+													<p class="spec-desc">595 x 456 x 570&nbsp;mm</p>
+												</li>
+								<li>
+										<strong class="spec-title">조리실</strong>
+													<p class="spec-desc">445 x 252.5 x 442&nbsp;mm</p>
+												</li>
+								<li>
+										<strong class="spec-title">타공</strong>
+													<p class="spec-desc">564 X 446 X 550&nbsp;mm</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>무게</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">제품 무게</strong>
+													<p class="spec-desc">39.2&nbsp;kg</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>스마트</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">WiFi 내장</strong>
+													<p class="spec-desc">있음&nbsp;</p>
+												</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer102" value="레시피 검색/추천부터 간편식 구매까지 가능한 삼성만의 차별화된 서비스입니다. " aria-haspopup="true">
+													SmartThings Cooking 서비스</button>
+												<p class="spec-desc">있음&nbsp;</p>
+											</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer103" value="간편식 바코드를 스캔하면 최적의 레시피가 전자레인지로 전송됩니다. 모드, 온도, 시간 세팅없이 스캔만으로 맛있는 요리가 가능합니다. " aria-haspopup="true">
+													Scan Cook</button>
+												<p class="spec-desc">없음&nbsp;</p>
+											</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>청소기능</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">스팀청소</strong>
+													<p class="spec-desc">있음&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">탈취</strong>
+													<p class="spec-desc">있음&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>액세서리</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">발열팬</strong>
+													<p class="spec-desc">없음&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">쿡북</strong>
+													<p class="spec-desc">App 지원&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">석쇠</strong>
+													<p class="spec-desc">없음&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">트레이</strong>
+													<p class="spec-desc">2 종&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">랙</strong>
+													<p class="spec-desc">2 종&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">에어프라이 랙</strong>
+													<p class="spec-desc">있음&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">로스팅 온도센서</strong>
+													<p class="spec-desc">없음&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>안전인증정보</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">인증구분</strong>
+													<p class="spec-desc">KC 안전인증&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">인증기관</strong>
+													<p class="spec-desc">한국기계전기전자 시험연구원&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">인증번호</strong>
+													<p class="spec-desc">HU07445-14015&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>전자파적합성(EMC)</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">인증기관</strong>
+													<p class="spec-desc">국립전파연구원&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">인증번호</strong>
+													<p class="spec-desc">R-R-SEC-NQ8300T&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>고지정보</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">상호명/제조자</strong>
+													<p class="spec-desc">삼성전자㈜&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">제조국</strong>
+													<p class="spec-desc">말레이시아&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+				<dt>상품 기본정보</dt>
+				<dd>
+					<ol>
+						<li>
+								<strong class="spec-title">제품명</strong>
+								<p class="spec-desc">빌트인 복합오븐</p>
+							</li>
+						<li>
+								<strong class="spec-title">제조자/수입자</strong>
+								<p class="spec-desc">삼성전자㈜</p>
+							</li>
+						<li>
+								<strong class="spec-title">제조국가</strong>
+								<p class="spec-desc">말레이시아</p>
+							</li>
+						<li>
+								<strong class="spec-title">KC 인증 필 유무</strong>
+								<p class="spec-desc"><img src='//images.samsung.com/is/image/samsung/p5/sec/common/icon-kc.png?$ORIGIN_PNG$' alt='KC 인증 로고'> HU07445-14015, R-R-SEC-NQ8300T</p>
+							</li>
+						<li>
+								<strong class="spec-title">동일모델의 출시년월</strong>
+								<p class="spec-desc">2022년 2월</p>
+							</li>
+						<li>
+								<strong class="spec-title">A/S 책임자와 전화번호</strong>
+								<p class="spec-desc">삼성전자서비스센터 / 1588-3366</p>
+							</li>
+						<li>
+								<strong class="spec-title">품질보증기준</strong>
+								<p class="spec-desc">결함.하자등에따른소비자피해에대해서는소비자분쟁해결기준(소비자기본법제16조)에따라보상가능</p>
+							</li>
+						</ol>
+				</dd>
+			</dl>
+		</div>
+	<div class="layer-pop layer-normal layer-default specLayer active" name="specLayer" id="specLayer" tabindex="0" data-popup-layer="specLayer" data-focus="specLayer" aria-hidden="false" data-zindex="300" style="z-index: 300; display: none">
+		<div class="layer-header">
+			<h2></h2>
+		</div>
+		<div class="layer-content">
+			<p></p>
+		</div>
+		<button type="button" class="pop-close" data-focus-next="">팝업닫기</button>
+	</div>
+

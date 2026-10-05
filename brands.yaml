@@ -1,0 +1,31 @@
+# Brands shown in the app. To add a brand: add an entry here and write <module>.py
+# exposing discover(subcategory, limit) and scrape(url) (see catalog.py).
+brands:
+  - name: Samsung
+    module: samsung_us
+  - name: LG
+    module: lg_us
+  - name: KitchenAid
+    module: kitchenaid_us
+  - name: GE
+    module: ge_us
+  - name: Whirlpool
+    module: whirlpool_us
+  - name: Bosch
+    module: bosch_us
+
+# Legacy flat list (used by the Streamlit app.py only). The API's two-level tree lives in catalog.CATEGORY_TREE.
+# Product groups. Only enabled ones can be searched; others show as "coming soon".
+categories:
+  - key: refrigerator
+    label: 냉장고 (Refrigerator)
+    enabled: true
+  - key: washing_machine
+    label: 세탁기 (Washing machine)
+    enabled: false
+  - key: vacuum
+    label: 청소기 (Vacuum)
+    enabled: false
+  - key: cooking
+    label: 조리기기 (Cooking)
+    enabled: false

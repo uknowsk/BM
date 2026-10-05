@@ -1,0 +1,641 @@
+{
+ "pagination": {
+  "currentPage": 0,
+  "pageSize": 24,
+  "sort": "Best Seller",
+  "totalPages": 1,
+  "totalResults": 21
+ },
+ "products": [
+  {
+   "code": "WCGK7030PS",
+   "baseProduct": "WCGK7030P",
+   "name": "30-inch Gas Cooktop with 5 Burners and EZ-2-Lift\u2122 Hinged Cast-Iron Grates",
+   "url": "/kitchen/cooking/cooktops/gas/p.30-inch-gas-cooktop-with-5-burners-and-ez-2-lift-hinged-cast-iron-grates.wcgk7030ps.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$749.00",
+    "priceType": "BUY",
+    "value": 749.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$749.00",
+    "priceType": "BUY",
+    "value": 749.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Gas",
+    "pipedCategory": "Kitchen|Cooking|Cooktops|Gas",
+    "url": "/Kitchen/Cooking/Cooktops/Gas"
+   },
+   "color": {
+    "code": "SS",
+    "name": "Stainless Steel"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WCGK5036PS",
+   "baseProduct": "WCGK5036P",
+   "name": "36-inch Gas Cooktop with 5 Burners and EZ-2-Lift\u2122 Hinged Cast-Iron Grates",
+   "url": "/kitchen/cooking/cooktops/gas/p.36-inch-gas-cooktop-with-5-burners-and-ez-2-lift-hinged-cast-iron-grates.wcgk5036ps.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$699.00",
+    "priceType": "BUY",
+    "value": 699.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$699.00",
+    "priceType": "BUY",
+    "value": 699.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Gas",
+    "pipedCategory": "Kitchen|Cooking|Cooktops|Gas",
+    "url": "/Kitchen/Cooking/Cooktops/Gas"
+   },
+   "color": {
+    "code": "SS",
+    "name": "Stainless Steel"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WCGK7036PS",
+   "baseProduct": "WCGK7036P",
+   "name": "36-inch Gas Cooktop with 5 Burners and EZ-2-Lift\u2122 Hinged Cast-Iron Grates",
+   "url": "/kitchen/cooking/cooktops/gas/p.36-inch-gas-cooktop-with-5-burners-and-ez-2-lift-hinged-cast-iron-grates.wcgk7036ps.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$899.00",
+    "priceType": "BUY",
+    "value": 899.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$899.00",
+    "priceType": "BUY",
+    "value": 899.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Gas",
+    "pipedCategory": "Kitchen|Cooking|Cooktops|Gas",
+    "url": "/Kitchen/Cooking/Cooktops/Gas"
+   },
+   "color": {
+    "code": "SS",
+    "name": "Stainless Steel"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WCE77US0HB",
+   "baseProduct": "WCE77US0H",
+   "name": "30-inch Electric Ceramic Glass Cooktop with Two Dual Radiant Elements",
+   "url": "/kitchen/cooking/cooktops/4-burner-elements/p.30-inch-electric-ceramic-glass-cooktop-with-two-dual-radiant-elements.wce77us0hb.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$779.00",
+    "priceType": "BUY",
+    "value": 779.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$779.00",
+    "priceType": "BUY",
+    "value": 779.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "4-Burner-Elements",
+    "pipedCategory": "Kitchen|Cooking|Cooktops|4-Burner-Elements",
+    "url": "/Kitchen/Cooking/Cooktops/4-Burner-Elements"
+   },
+   "color": {
+    "code": "BL",
+    "name": "Black"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WCI55US0JB",
+   "baseProduct": "WCI55US0J",
+   "name": "30-Inch Induction Cooktop",
+   "url": "/kitchen/cooking/cooktops/induction-cooktops/p.30-inch-induction-cooktop.wci55us0jb.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$849.00",
+    "priceType": "BUY",
+    "value": 849.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$849.00",
+    "priceType": "BUY",
+    "value": 849.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Induction-Cooktops",
+    "pipedCategory": "Kitchen|Cooking|Cooktops|Induction-Cooktops",
+    "url": "/Kitchen/Cooking/Cooktops/Induction-Cooktops"
+   },
+   "color": {
+    "code": "BL",
+    "name": "Black"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WCE97US6KS",
+   "baseProduct": "WCE97US6K",
+   "name": "36-inch Electric Ceramic Glass Cooktop with Triple Radiant Element",
+   "url": "/kitchen/cooking/cooktops/5-burner-elements/p.36-inch-electric-ceramic-glass-cooktop-with-triple-radiant-element.wce97us6ks.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$1,149.00",
+    "priceType": "BUY",
+    "value": 1149.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$1,149.00",
+    "priceType": "BUY",
+    "value": 1149.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "5-Burner-Elements",
+    "pipedCategory": "Kitchen|Cooking|Cooktops|5-Burner-Elements",
+    "url": "/Kitchen/Cooking/Cooktops/5-Burner-Elements"
+   },
+   "color": {
+    "code": "SS",
+    "name": "Stainless Steel"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WCGK5030PS",
+   "baseProduct": "WCGK5030P",
+   "name": "30-inch Gas Cooktop with EZ-2-Lift\u2122 Hinged Cast-Iron Grates",
+   "url": "/kitchen/cooking/cooktops/4-burner-elements/p.30-inch-gas-cooktop-with-ez-2-lift-hinged-cast-iron-grates.wcgk5030ps.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$579.00",
+    "priceType": "BUY",
+    "value": 579.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$579.00",
+    "priceType": "BUY",
+    "value": 579.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "4-Burner-Elements",
+    "pipedCategory": "Kitchen|Cooking|Cooktops|4-Burner-Elements",
+    "url": "/Kitchen/Cooking/Cooktops/4-Burner-Elements"
+   },
+   "color": {
+    "code": "SS",
+    "name": "Stainless Steel"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WCE55US6HB",
+   "baseProduct": "WCE55US6H",
+   "name": "36-inch Electric Ceramic Glass Cooktop with Dual Radiant Element",
+   "url": "/kitchen/cooking/cooktops/5-burner-elements/p.36-inch-electric-ceramic-glass-cooktop-with-dual-radiant-element.wce55us6hb.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$749.00",
+    "priceType": "BUY",
+    "value": 749.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$749.00",
+    "priceType": "BUY",
+    "value": 749.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "5-Burner-Elements",
+    "pipedCategory": "Kitchen|Cooking|Cooktops|5-Burner-Elements",
+    "url": "/Kitchen/Cooking/Cooktops/5-Burner-Elements"
+   },
+   "color": {
+    "code": "BL",
+    "name": "Black"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WCE97US0KS",
+   "baseProduct": "WCE97US0K",
+   "name": "30-inch Electric Ceramic Glass Cooktop with Two Dual Radiant Elements",
+   "url": "/kitchen/cooking/cooktops/electric/p.30-inch-electric-ceramic-glass-cooktop-with-two-dual-radiant-elements.wce97us0ks.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$949.00",
+    "priceType": "BUY",
+    "value": 949.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$949.00",
+    "priceType": "BUY",
+    "value": 949.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Electric",
+    "pipedCategory": "Kitchen|Cooking|Cooktops|Electric",
+    "url": "/Kitchen/Cooking/Cooktops/Electric"
+   },
+   "color": {
+    "code": "SS",
+    "name": "Stainless Steel"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WCE55US0HB",
+   "baseProduct": "WCE55US0H",
+   "name": "30-inch Electric Ceramic Glass Cooktop with Dual Radiant Element",
+   "url": "/kitchen/cooking/cooktops/4-burner-elements/p.30-inch-electric-ceramic-glass-cooktop-with-dual-radiant-element.wce55us0hb.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$579.00",
+    "priceType": "BUY",
+    "value": 579.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$579.00",
+    "priceType": "BUY",
+    "value": 579.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "4-Burner-Elements",
+    "pipedCategory": "Kitchen|Cooking|Cooktops|4-Burner-Elements",
+    "url": "/Kitchen/Cooking/Cooktops/4-Burner-Elements"
+   },
+   "color": {
+    "code": "BL",
+    "name": "Black"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WCE77US6HB",
+   "baseProduct": "WCE77US6H",
+   "name": "36-inch Electric Ceramic Glass Cooktop with Two Dual Radiant Elements",
+   "url": "/kitchen/cooking/cooktops/5-burner-elements/p.36-inch-electric-ceramic-glass-cooktop-with-two-dual-radiant-elements.wce77us6hb.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$999.00",
+    "priceType": "BUY",
+    "value": 999.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$999.00",
+    "priceType": "BUY",
+    "value": 999.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "5-Burner-Elements",
+    "pipedCategory": "Kitchen|Cooking|Cooktops|5-Burner-Elements",
+    "url": "/Kitchen/Cooking/Cooktops/5-Burner-Elements"
+   },
+   "color": {
+    "code": "BL",
+    "name": "Black"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WCGK3030PB",
+   "baseProduct": "WCGK3030P",
+   "name": "30-inch Gas Cooktop with SpeedHeat\u2122 Burners",
+   "url": "/kitchen/cooking/cooktops/gas/p.30-inch-gas-cooktop-with-speedheat-burners.wcgk3030pb.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$449.00",
+    "priceType": "BUY",
+    "value": 449.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$449.00",
+    "priceType": "BUY",
+    "value": 449.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Gas",
+    "pipedCategory": "Kitchen|Cooking|Cooktops|Gas",
+    "url": "/Kitchen/Cooking/Cooktops/Gas"
+   },
+   "color": {
+    "code": "BL",
+    "name": "Black"
+   },
+   "productIsOutlet": true,
+   "salesStatus": "50"
+  },
+  {
+   "code": "WCC31430AW",
+   "baseProduct": "WCC31430A",
+   "name": "Whirlpool\u00ae 30\" Electric Cooktop",
+   "url": "/kitchen/cooking/cooktops/4-burner-elements/p.whirlpool-30-electric-cooktop.wcc31430aw.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$649.00",
+    "priceType": "BUY",
+    "value": 649.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$649.00",
+    "priceType": "BUY",
+    "value": 649.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "4-Burner-Elements",
+    "pipedCategory": "Kitchen|Cooking|Cooktops|4-Burner-Elements",
+    "url": "/Kitchen/Cooking/Cooktops/4-Burner-Elements"
+   },
+   "color": {
+    "code": "WH",
+    "name": "White"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WCIT7530SB",
+   "baseProduct": "WCIT7530S",
+   "name": "30\" Intelligent Induction Cooktop with Temp Cook\u2122 Technology and WipeClean\u2122 Coating",
+   "url": "/kitchen/cooking/cooktops/induction-cooktops/p.30-intelligent-induction-cooktop-with-temp-cook-technology-and-wipeclean-coating.wcit7530sb.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$1,099.00",
+    "priceType": "BUY",
+    "value": 1099.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$1,099.00",
+    "priceType": "BUY",
+    "value": 1099.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Induction-Cooktops",
+    "pipedCategory": "Kitchen|Cooking|Cooktops|Induction-Cooktops",
+    "url": "/Kitchen/Cooking/Cooktops/Induction-Cooktops"
+   },
+   "color": {
+    "code": "BL",
+    "name": "Black"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "W5CE1522FB",
+   "baseProduct": "W5CE1522F",
+   "name": "15-inch Electric Cooktop with Easy Wipe Ceramic Glass",
+   "url": "/kitchen/cooking/cooktops/electric/p.15-inch-electric-cooktop-with-easy-wipe-ceramic-glass.w5ce1522fb.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$799.00",
+    "priceType": "BUY",
+    "value": 799.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$799.00",
+    "priceType": "BUY",
+    "value": 799.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Electric",
+    "pipedCategory": "Kitchen|Cooking|Cooktops|Electric",
+    "url": "/Kitchen/Cooking/Cooktops/Electric"
+   },
+   "color": {
+    "code": "BL",
+    "name": "Black"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WCIT7536SS",
+   "baseProduct": "WCIT7536S",
+   "name": "36\" Intelligent Induction Cooktop with Temp Cook\u2122 Technology and WipeClean\u2122 Coating",
+   "url": "/kitchen/cooking/cooktops/induction-cooktops/p.36-intelligent-induction-cooktop-with-temp-cook-technology-and-wipeclean-coating.wcit7536ss.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$1,399.00",
+    "priceType": "BUY",
+    "value": 1399.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$1,399.00",
+    "priceType": "BUY",
+    "value": 1399.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Induction-Cooktops",
+    "pipedCategory": "Kitchen|Cooking|Cooktops|Induction-Cooktops",
+    "url": "/Kitchen/Cooking/Cooktops/Induction-Cooktops"
+   },
+   "color": {
+    "code": "1Y",
+    "name": "Stainless Steel Trim"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WCIT6030SB",
+   "baseProduct": "WCIT6030S",
+   "name": "30\" Induction Cooktop with WipeClean\u2122 Coating - 4 Elements",
+   "url": "/kitchen/cooking/cooktops/electric/p.30-induction-cooktop-with-wipeclean-coating-4-elements.wcit6030sb.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$849.00",
+    "priceType": "BUY",
+    "value": 849.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$849.00",
+    "priceType": "BUY",
+    "value": 849.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Electric",
+    "pipedCategory": "Kitchen|Cooking|Cooktops|Electric",
+    "url": "/Kitchen/Cooking/Cooktops/Electric"
+   },
+   "color": {
+    "code": "BL",
+    "name": "Black"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WCE55US4HB",
+   "baseProduct": "WCE55US4H",
+   "name": "24-inch Compact Electric Ceramic Glass Cooktop",
+   "url": "/kitchen/cooking/cooktops/electric/p.24-inch-compact-electric-ceramic-glass-cooktop.wce55us4hb.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$949.00",
+    "priceType": "BUY",
+    "value": 949.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$949.00",
+    "priceType": "BUY",
+    "value": 949.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Electric",
+    "pipedCategory": "Kitchen|Cooking|Cooktops|Electric",
+    "url": "/Kitchen/Cooking/Cooktops/Electric"
+   },
+   "color": {
+    "code": "BL",
+    "name": "Black"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "RCS2012RS",
+   "baseProduct": "RCS2012R",
+   "name": "21-inch Electric Cooktop with Stainless Steel Surface",
+   "url": "/kitchen/cooking/cooktops/electric/p.21-inch-electric-cooktop-with-stainless-steel-surface.rcs2012rs.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$649.00",
+    "priceType": "BUY",
+    "value": 649.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$649.00",
+    "priceType": "BUY",
+    "value": 649.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Electric",
+    "pipedCategory": "Kitchen|Cooking|Cooktops|Electric",
+    "url": "/Kitchen/Cooking/Cooktops/Electric"
+   },
+   "color": {
+    "code": "BS",
+    "name": "Black-on-Stainless"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WCI55US4JB",
+   "baseProduct": "WCI55US4J",
+   "name": "24-Inch Small Space Induction Cooktop",
+   "url": "/kitchen/compact-and-small-spaces/p.24-inch-small-space-induction-cooktop.wci55us4jb.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$1,149.00",
+    "priceType": "BUY",
+    "value": 1149.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$1,149.00",
+    "priceType": "BUY",
+    "value": 1149.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Compact-&-Small-Spaces",
+    "pipedCategory": "Kitchen|Compact-&-Small-Spaces",
+    "url": "/Kitchen/Compact-&-Small-Spaces"
+   },
+   "color": {
+    "code": "BL",
+    "name": "Black"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WCIT7030SS",
+   "baseProduct": "WCIT7030S",
+   "name": "30\" Intelligent Induction Cooktop with Temp Cook\u2122 Technology",
+   "url": "/kitchen/cooking/cooktops/induction-cooktops/p.30-intelligent-induction-cooktop-with-temp-cook-technology.wcit7030ss.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$1,849.00",
+    "priceType": "BUY",
+    "value": 1849.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$1,849.00",
+    "priceType": "BUY",
+    "value": 1849.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Induction-Cooktops",
+    "pipedCategory": "Kitchen|Cooking|Cooktops|Induction-Cooktops",
+    "url": "/Kitchen/Cooking/Cooktops/Induction-Cooktops"
+   },
+   "color": {
+    "code": "4B",
+    "name": "Blk Glass Touch Ctrl w SS side"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  }
+ ]
+}

@@ -1,0 +1,154 @@
+<script>
+		// 매뉴얼 탭 클릭 이벤트
+		$('a[id^="manualCont-"]').off().on("click", function(){
+			$('a[id^="manualCont-"]').attr('aria-selected', false);
+			$(this).attr('aria-selected', true);
+			$('div[id^="manualCont-"]').css('display', 'none');
+			let id = $(this).attr('id');
+			$('div[id="'+ id +'"]').css('display', 'block');
+		});
+
+		$(document).ready(function() {
+			// 매뉴얼 탭 초기화
+			if($('.customer-center-wrap').length > 0){
+				$('a[id^="manualCont-"]').attr('aria-selected', false);
+				$('div[id^="manualCont-"]').css('display', 'none');
+				$('a[id="manualCont-0"]').attr('aria-selected', true);
+				$('div[id="manualCont-0"]').css('display', 'block');
+			}
+			
+			const lowerUserAgent = navigator.userAgent.toLowerCase();
+
+			$('.box-btn .btn-download').on('click', function() {
+				// AOS/IOS PD에서 html 매뉴얼 선택 시 웹뷰가 아닌 외부 브라우저로 링크를 실행
+				if($(this).attr("class").indexOf('btn-html') > -1) {
+					if (lowerUserAgent.indexOf('secapp') > -1) { //AOS
+						window.secapp.startWebBrowser(this.dataset['url']);
+					} else if (lowerUserAgent.indexOf('secios') > -1) { // IOS
+						var url = this.dataset['url'];
+						window.webkit.messageHandlers.callNative.postMessage(JSON.stringify({fun:"startWebBrowser", p1: url}));
+					} else {
+						window.open(this.dataset['url']);
+						//goodsGA4.fnGA4fileDownload(this.closest('li'));	
+					}
+				} else {
+					goodsGA4.fnGA4fileDownload(this.closest('li'));	
+				}
+			});
+		})
+	</script>
+	<div class="customer-center-wrap">
+		<div class="product-purchase-wrap">
+			<ul class="product-purchase-caus_tab manual-tab tab-style-btn target" role="tablist">
+				<li id="manual-0">
+						<a href="javascript:void(0);" role="tab" id="manualCont-0" aria-controls="manualCont-0" aria-selected="true">매뉴얼</a>
+					</li>
+
+				</ul>
+
+			<div class="manual-sec tab-content" id="manualCont-0" role="tabpanel" aria-selected="false">
+					<h3 class="sub-tit sub-tit-manual">매뉴얼</h3>
+					<p class="info-prd"><strong>Bespoke AI 원바디 세탁기</strong>WF90F25BBS</p>
+						<ul class="list-type-download">
+						<li class="item" data-omni= "11506318">
+										<input type="hidden" name="cdlang" value="AA" />
+										<input type="hidden" name="cdctttype" value="UM" />
+										<strong class="name">
+											사용자 매뉴얼</strong>
+										<p class="desc">
+											<span class="desc-item">ver.1.0</span>
+											<span class="desc-item">
+											한국어</span>
+											<span class="desc-item">12.64MB</span>
+											<span class="desc-item">2026-06-16</span>
+										</p>
+										</p>
+										<p class="box-btn" align-items: center;">
+											<a href="https://downloadcenter.samsung.com/content/UM/202606/20260616080451094/OID96909_IB_WF90F-DV90F-AD_7LCD_KO_260610.pdf" class="btn-download" data-nmfile="OID96909_IB_WF90F-DV90F-AD_7LCD_KO_260610.pdf">다운로드</a>
+												</p>
+									</li>
+								</ul>
+					<p class="info-prd"><strong>Bespoke AI 원바디 건조기</strong>DV90F22BBS</p>
+						<ul class="list-type-download">
+						<li class="item" data-omni= "11639630">
+										<input type="hidden" name="cdlang" value="AA" />
+										<input type="hidden" name="cdctttype" value="PM" />
+										<strong class="name">
+											사용설명서(HTML)</strong>
+										<p class="desc">
+											<span class="desc-item">ver.1.0</span>
+											<span class="desc-item">
+											한국어</span>
+											<span class="desc-item">0.02MB</span>
+											<span class="desc-item">2026-08-11</span>
+										</p>
+										</p>
+										<p class="box-btn" align-items: center;">
+											<button data-url="https://downloadcenter.samsung.com/content/PM/202608/20260811165141903/KO/OID96909_IB_WF90F-DV90F-AD_7LCD_KO_260811/start_here.html" class="btn-download btn-html" data-nmfile="start_here.html" title="새 창">자세히 보기</button>
+												</p>
+									</li>
+								<li class="item" data-omni= "11349172">
+										<input type="hidden" name="cdlang" value="AA" />
+										<input type="hidden" name="cdctttype" value="UM" />
+										<strong class="name">
+											사용자 매뉴얼</strong>
+										<p class="desc">
+											<span class="desc-item">ver.1.0</span>
+											<span class="desc-item">
+											한국어</span>
+											<span class="desc-item">12.54MB</span>
+											<span class="desc-item">2026-03-30</span>
+										</p>
+										</p>
+										<p class="box-btn" align-items: center;">
+											<a href="https://downloadcenter.samsung.com/content/UM/202603/20260330085435597/OID96909_IB_WF90F-DV90F-AD_7LCD_KO_260203.pdf" class="btn-download" data-nmfile="OID96909_IB_WF90F-DV90F-AD_7LCD_KO_260203.pdf">다운로드</a>
+												</p>
+									</li>
+								<li class="item" data-omni= "11205825">
+										<input type="hidden" name="cdlang" value="AA" />
+										<input type="hidden" name="cdctttype" value="PM" />
+										<strong class="name">
+											모두를 위한 사용법</strong>
+										<p class="desc">
+											<span class="desc-item">ver.1.0</span>
+											<span class="desc-item">
+											한국어</span>
+											<span class="desc-item">0.11MB</span>
+											<span class="desc-item">2025-12-12</span>
+										</p>
+										</p>
+										<p class="box-btn" align-items: center;">
+											<button data-url="https://downloadcenter.samsung.com/content/PM/202512/20251212090033837/KO/WH90F_ko-KR_251211/start_here.html" class="btn-download btn-html" data-nmfile="start_here.html" title="새 창">자세히 보기</button>
+												</p>
+									</li>
+								<li class="item" data-omni= "10789152">
+										<input type="hidden" name="cdlang" value="AA" />
+										<input type="hidden" name="cdctttype" value="EU" />
+										<strong class="name">
+											Repair Guide</strong>
+										<p class="desc">
+											<span class="desc-item">ver.1.0</span>
+											<span class="desc-item">
+											한국어</span>
+											<span class="desc-item">0.67MB</span>
+											<span class="desc-item">2025-08-11</span>
+										</p>
+										</p>
+										<p class="box-btn" align-items: center;">
+											<a href="https://downloadcenter.samsung.com/content/EU/202508/20250811174756676/Dryer_RepairGuide_Ver.3_DV90F_DV80F_250811.pdf" class="btn-download" data-nmfile="Dryer_RepairGuide_Ver.3_DV90F_DV80F_250811.pdf">다운로드</a>
+												</p>
+									</li>
+								</ul>
+					</div>
+			</div>
+	</div>
+<div class="waranty-box" >
+		<dl>
+			<dt class="ico-waranty" data-omni="warranty">워런티 정보</dt>
+			<dd>
+				<p>제품 등록 후 제공되는 서비스를 확인하세요</p>
+				<a href="/sec/support/warranty/" class="btn btn-d btn-type1"
+				   title="워런티 정보 자세히 보기">자세히 보기</a>
+			</dd>
+		</dl>
+		</div>

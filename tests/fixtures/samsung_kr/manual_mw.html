@@ -1,0 +1,134 @@
+<script>
+		// 매뉴얼 탭 클릭 이벤트
+		$('a[id^="manualCont-"]').off().on("click", function(){
+			$('a[id^="manualCont-"]').attr('aria-selected', false);
+			$(this).attr('aria-selected', true);
+			$('div[id^="manualCont-"]').css('display', 'none');
+			let id = $(this).attr('id');
+			$('div[id="'+ id +'"]').css('display', 'block');
+		});
+
+		$(document).ready(function() {
+			// 매뉴얼 탭 초기화
+			if($('.customer-center-wrap').length > 0){
+				$('a[id^="manualCont-"]').attr('aria-selected', false);
+				$('div[id^="manualCont-"]').css('display', 'none');
+				$('a[id="manualCont-0"]').attr('aria-selected', true);
+				$('div[id="manualCont-0"]').css('display', 'block');
+			}
+			
+			const lowerUserAgent = navigator.userAgent.toLowerCase();
+
+			$('.box-btn .btn-download').on('click', function() {
+				// AOS/IOS PD에서 html 매뉴얼 선택 시 웹뷰가 아닌 외부 브라우저로 링크를 실행
+				if($(this).attr("class").indexOf('btn-html') > -1) {
+					if (lowerUserAgent.indexOf('secapp') > -1) { //AOS
+						window.secapp.startWebBrowser(this.dataset['url']);
+					} else if (lowerUserAgent.indexOf('secios') > -1) { // IOS
+						var url = this.dataset['url'];
+						window.webkit.messageHandlers.callNative.postMessage(JSON.stringify({fun:"startWebBrowser", p1: url}));
+					} else {
+						window.open(this.dataset['url']);
+						//goodsGA4.fnGA4fileDownload(this.closest('li'));	
+					}
+				} else {
+					goodsGA4.fnGA4fileDownload(this.closest('li'));	
+				}
+			});
+		})
+	</script>
+	<div class="customer-center-wrap">
+		<div class="product-purchase-wrap">
+			<ul class="product-purchase-caus_tab manual-tab tab-style-btn target" role="tablist">
+				<li id="manual-0">
+						<a href="javascript:void(0);" role="tab" id="manualCont-0" aria-controls="manualCont-0" aria-selected="true">매뉴얼</a>
+					</li>
+
+				</ul>
+
+			<div class="manual-sec tab-content" id="manualCont-0" role="tabpanel" aria-selected="false">
+					<h3 class="sub-tit sub-tit-manual">매뉴얼</h3>
+					<p class="info-prd"><strong>Bespoke 전자레인지 23L</strong>MS23T5018AW</p>
+						<ul class="list-type-download">
+						<li class="item" data-omni= "10044815">
+										<input type="hidden" name="cdlang" value="AA" />
+										<input type="hidden" name="cdctttype" value="UM" />
+										<strong class="name">
+											사용자 매뉴얼 (PDF)</strong>
+										<p class="desc">
+											<span class="desc-item">ver.6.0</span>
+											<span class="desc-item">
+											한국어</span>
+											<span class="desc-item">7.71MB</span>
+											<span class="desc-item">2025-01-22</span>
+										</p>
+										</p>
+										<p class="box-btn" align-items: center;">
+											<a href="https://downloadcenter.samsung.com/content/UM/202501/20250122145606562/IB_FULL_MW5000T_MS23T5018AW_KO_250117.pdf" class="btn-download" data-nmfile="IB_FULL_MW5000T_MS23T5018AW_KO_250117.pdf">다운로드</a>
+												</p>
+									</li>
+								<li class="item" data-omni= "9151740">
+										<input type="hidden" name="cdlang" value="AA" />
+										<input type="hidden" name="cdctttype" value="PM" />
+										<strong class="name">
+											사용자 매뉴얼(HTML)</strong>
+										<p class="desc">
+											<span class="desc-item">ver.2.0</span>
+											<span class="desc-item">
+											한국어</span>
+											<span class="desc-item">0MB</span>
+											<span class="desc-item">2023-04-21</span>
+										</p>
+										</p>
+										<p class="box-btn" align-items: center;">
+											<button data-url="https://downloadcenter.samsung.com/content/PM/202304/20230421165150419/KO/WEB_MS23T5018AC_KO_230403/start_here.html" class="btn-download btn-html" data-nmfile="start_here.html" title="새 창">자세히 보기</button>
+												</p>
+									</li>
+								<li class="item" data-omni= "7702573">
+										<input type="hidden" name="cdlang" value="AA" />
+										<input type="hidden" name="cdctttype" value="PM" />
+										<strong class="name">
+											COOK BOOK</strong>
+										<p class="desc">
+											<span class="desc-item">ver.1.0</span>
+											<span class="desc-item">
+											한국어</span>
+											<span class="desc-item">4.25MB</span>
+											<span class="desc-item">2020-05-11</span>
+										</p>
+										</p>
+										<p class="box-btn" align-items: center;">
+											<a href="https://downloadcenter.samsung.com/content/PM/202005/20200511175841792/KO/Cook_Book_MW5000T_Solo_200416.pdf" class="btn-download" data-nmfile="Cook_Book_MW5000T_Solo_200416.pdf">다운로드</a>
+												</p>
+									</li>
+								<li class="item" data-omni= "10023504">
+										<input type="hidden" name="cdlang" value="EN" />
+										<input type="hidden" name="cdctttype" value="UM" />
+										<strong class="name">
+											사용자 매뉴얼 (Manual User (PDF))</strong>
+										<p class="desc">
+											<span class="desc-item">ver.0.3</span>
+											<span class="desc-item">
+											영어</span>
+											<span class="desc-item">4.45MB</span>
+											<span class="desc-item">2024-12-18</span>
+										</p>
+										</p>
+										<p class="box-btn" align-items: center;">
+											<a href="https://downloadcenter.samsung.com/content/UM/202412/20241218150017931/O_03._DE68-04595R-03_IB_FULL_MS23T5018A_LI_EN.pdf" class="btn-download" data-nmfile="O_03._DE68-04595R-03_IB_FULL_MS23T5018A_LI_EN.pdf">다운로드</a>
+												</p>
+									</li>
+								</ul>
+					</div>
+			</div>
+	</div>
+<div class="waranty-box" >
+		<dl>
+			<dt class="ico-waranty" data-omni="warranty">워런티 정보</dt>
+			<dd>
+				<p>제품 등록 후 제공되는 서비스를 확인하세요</p>
+				<a href="/sec/support/warranty/" class="btn btn-d btn-type1"
+				   title="워런티 정보 자세히 보기">자세히 보기</a>
+			</dd>
+		</dl>
+		</div>

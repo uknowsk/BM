@@ -1,0 +1,1205 @@
+{
+ "status": 200,
+ "data": {
+  "totalModelCnt": 19,
+  "modelList": [
+   {
+    "salesModelCode": "S834MEE111",
+    "modelId": "MD10635830",
+    "modelDisplayName": "LG 디오스 AI 오브제컬렉션 냉장고 (양문형, 매직스페이스)",
+    "subCategoryName": "양문형",
+    "modelUrlPath": "/refrigerators/s834mee111",
+    "keywds": "832L^1등급",
+    "productAttrKeywds": [
+     {
+      "attrId": "AT0000000124",
+      "attrNm": "색상",
+      "keywds": "베이지/베이지"
+     },
+     {
+      "attrId": "AT0000000106",
+      "attrNm": "도어재질",
+      "keywds": "네이처(메탈)"
+     },
+     {
+      "attrId": "AT0000001251",
+      "attrNm": "주요 기능",
+      "keywds": "도어쿨링+^인버터 리니어 컴프레서"
+     },
+     {
+      "attrId": "AT0000001271",
+      "attrNm": "소비전력",
+      "keywds": "40.2kWh/월 "
+     },
+     {
+      "attrId": "AT0000001272",
+      "attrNm": "냉동",
+      "keywds": "308L"
+     },
+     {
+      "attrId": "AT0000001273",
+      "attrNm": "냉장",
+      "keywds": "524L"
+     }
+    ],
+    "smallImageAddr": "/kr/images/refrigerators/md10635830/md10635830-280x280.jpg",
+    "thinqFlag": "N",
+    "priceInfo": {
+     "obsOriginalPrice": 2350000,
+     "obsSellingPrice": 1890000,
+     "obsMemberPrice": 460000,
+     "couponPrice": 100000,
+     "lastBenefitPrc": 1664700
+    },
+    "priceArea": {
+     "normal": {
+      "price": 1890000,
+      "originPrice": 2350000,
+      "originPriceShowFlag": "Y",
+      "dicountRate": 19,
+      "discountRateShowFlag": "Y",
+      "visitText": null,
+      "visitTextShowFlag": "N"
+     },
+     "maxReward": {
+      "price": 1664700
+     }
+    },
+    "benefitInfo": {
+     "cardNm": "신한",
+     "dcRate": "7",
+     "cashReward": 0,
+     "payDcAmt": 125300,
+     "pointReward": 0
+    }
+   },
+   {
+    "salesModelCode": "M876GBB231",
+    "modelId": "MD10604870",
+    "modelDisplayName": "LG 디오스 AI 오브제컬렉션 냉장고 (더블매직스페이스)",
+    "subCategoryName": "상냉장/하냉동",
+    "modelUrlPath": "/refrigerators/m876gbb231",
+    "keywds": "871L^1등급",
+    "productAttrKeywds": [
+     {
+      "attrId": "AT0000000124",
+      "attrNm": "색상",
+      "keywds": "베이지/베이지"
+     },
+     {
+      "attrId": "AT0000000106",
+      "attrNm": "도어재질",
+      "keywds": "미스트(글라스)"
+     },
+     {
+      "attrId": "AT0000001251",
+      "attrNm": "주요 기능",
+      "keywds": "퓨어 프레시 필터^UV청정탈취필터+^도어쿨링+"
+     },
+     {
+      "attrId": "AT0000001271",
+      "attrNm": "소비전력",
+      "keywds": "43kWh/월"
+     },
+     {
+      "attrId": "AT0000001272",
+      "attrNm": "냉동",
+      "keywds": "367L"
+     },
+     {
+      "attrId": "AT0000001273",
+      "attrNm": "냉장",
+      "keywds": "504L"
+     }
+    ],
+    "smallImageAddr": "/kr/images/refrigerators/md10604870/md10604870-280x280.jpg",
+    "thinqFlag": "N",
+    "priceInfo": {
+     "obsOriginalPrice": 5051000,
+     "obsSellingPrice": 4550000,
+     "obsMemberPrice": 501000,
+     "couponPrice": 180000,
+     "lastBenefitPrc": 4064100
+    },
+    "priceArea": {
+     "normal": {
+      "price": 4550000,
+      "originPrice": 5051000,
+      "originPriceShowFlag": "Y",
+      "dicountRate": 9,
+      "discountRateShowFlag": "Y",
+      "visitText": null,
+      "visitTextShowFlag": "N"
+     },
+     "maxReward": {
+      "price": 4064100
+     }
+    },
+    "benefitInfo": {
+     "cardNm": "신한",
+     "dcRate": "7",
+     "cashReward": 0,
+     "payDcAmt": 305900,
+     "pointReward": 0
+    }
+   },
+   {
+    "salesModelCode": "G646GBB031",
+    "modelId": "MD10780848",
+    "modelDisplayName": "LG 디오스 AI 오브제컬렉션 냉장고 Fit & Max",
+    "subCategoryName": "상냉장/하냉동",
+    "modelUrlPath": "/refrigerators/g646gbb031",
+    "keywds": "650L^1등급",
+    "productAttrKeywds": [
+     {
+      "attrId": "AT0000000124",
+      "attrNm": "색상",
+      "keywds": "베이지"
+     },
+     {
+      "attrId": "AT0000000106",
+      "attrNm": "도어재질",
+      "keywds": "미스트(글라스)"
+     },
+     {
+      "attrId": "AT0000001251",
+      "attrNm": "주요 기능",
+      "keywds": "UV청정탈취필터+^도어쿨링+^신선맞춤실^퓨어 프레시 필터^인버터 리니어 컴프레서"
+     },
+     {
+      "attrId": "AT0000001271",
+      "attrNm": "소비전력",
+      "keywds": "32.4kWh/월"
+     },
+     {
+      "attrId": "AT0000001272",
+      "attrNm": "냉동",
+      "keywds": "259L"
+     },
+     {
+      "attrId": "AT0000001273",
+      "attrNm": "냉장",
+      "keywds": "391L"
+     }
+    ],
+    "smallImageAddr": "/kr/images/refrigerators/md10780848/md10780848-280x280.jpg",
+    "thinqFlag": "N",
+    "priceInfo": {
+     "obsOriginalPrice": 4607000,
+     "obsSellingPrice": 4150000,
+     "obsMemberPrice": 457000,
+     "couponPrice": 180000,
+     "lastBenefitPrc": 3692100
+    },
+    "priceArea": {
+     "normal": {
+      "price": 4150000,
+      "originPrice": 4607000,
+      "originPriceShowFlag": "Y",
+      "dicountRate": 9,
+      "discountRateShowFlag": "Y",
+      "visitText": null,
+      "visitTextShowFlag": "N"
+     },
+     "maxReward": {
+      "price": 3692100
+     }
+    },
+    "benefitInfo": {
+     "cardNm": "신한",
+     "dcRate": "7",
+     "cashReward": 0,
+     "payDcAmt": 277900,
+     "pointReward": 0
+    }
+   },
+   {
+    "salesModelCode": "D502MEE33",
+    "modelId": "MD09811829",
+    "modelDisplayName": "LG 일반냉장고 오브제컬렉션",
+    "subCategoryName": "일반형",
+    "modelUrlPath": "/refrigerators/d502mee33",
+    "keywds": "507L^3등급",
+    "productAttrKeywds": [
+     {
+      "attrId": "AT0000000124",
+      "attrNm": "색상",
+      "keywds": "네이처 베이지"
+     },
+     {
+      "attrId": "AT0000000106",
+      "attrNm": "도어재질",
+      "keywds": "네이처(메탈)"
+     },
+     {
+      "attrId": "AT0000001251",
+      "attrNm": "주요 기능",
+      "keywds": "도어쿨링+"
+     },
+     {
+      "attrId": "AT0000001271",
+      "attrNm": "소비전력",
+      "keywds": "37.3kWh/월"
+     },
+     {
+      "attrId": "AT0000001272",
+      "attrNm": "냉동",
+      "keywds": "121L"
+     },
+     {
+      "attrId": "AT0000001273",
+      "attrNm": "냉장",
+      "keywds": "376L"
+     }
+    ],
+    "smallImageAddr": "/kr/images/refrigerators/md09811829/md09811829-280x280.jpg",
+    "thinqFlag": "N",
+    "priceInfo": {
+     "obsOriginalPrice": 980000,
+     "obsSellingPrice": 860000,
+     "obsMemberPrice": 120000,
+     "couponPrice": 30000,
+     "lastBenefitPrc": 771900
+    },
+    "priceArea": {
+     "normal": {
+      "price": 860000,
+      "originPrice": 980000,
+      "originPriceShowFlag": "Y",
+      "dicountRate": 12,
+      "discountRateShowFlag": "Y",
+      "visitText": null,
+      "visitTextShowFlag": "N"
+     },
+     "maxReward": {
+      "price": 771900
+     }
+    },
+    "benefitInfo": {
+     "cardNm": "신한",
+     "dcRate": "7",
+     "cashReward": 0,
+     "payDcAmt": 58100,
+     "pointReward": 0
+    }
+   },
+   {
+    "salesModelCode": "B103S14",
+    "modelId": "MD09845826",
+    "modelDisplayName": "LG 일반냉장고",
+    "subCategoryName": "일반형",
+    "modelUrlPath": "/refrigerators/b103s14",
+    "keywds": "90L^4등급",
+    "productAttrKeywds": [
+     {
+      "attrId": "AT0000000124",
+      "attrNm": "색상",
+      "keywds": "퓨어"
+     },
+     {
+      "attrId": "AT0000001271",
+      "attrNm": "소비전력",
+      "keywds": "19.4kWh/월"
+     },
+     {
+      "attrId": "AT0000001273",
+      "attrNm": "냉장",
+      "keywds": "90L"
+     }
+    ],
+    "smallImageAddr": "/kr/images/refrigerators/md09845826/md09845826-280x280.jpg",
+    "thinqFlag": "N",
+    "priceInfo": {
+     "obsOriginalPrice": 320000,
+     "obsSellingPrice": 310000,
+     "obsMemberPrice": 10000,
+     "couponPrice": 20000,
+     "lastBenefitPrc": 290000
+    },
+    "priceArea": {
+     "normal": {
+      "price": 310000,
+      "originPrice": 320000,
+      "originPriceShowFlag": "Y",
+      "dicountRate": 0,
+      "discountRateShowFlag": "N",
+      "visitText": null,
+      "visitTextShowFlag": "N"
+     },
+     "maxReward": {
+      "price": 290000
+     }
+    },
+    "benefitInfo": {
+     "cardNm": "신한",
+     "dcRate": "0",
+     "cashReward": 0,
+     "payDcAmt": 0,
+     "pointReward": 0
+    }
+   },
+   {
+    "salesModelCode": "B124S14",
+    "modelId": "MD10318830",
+    "modelDisplayName": "LG 일반냉장고",
+    "subCategoryName": "일반형",
+    "modelUrlPath": "/refrigerators/b124s14",
+    "keywds": "121L^4등급",
+    "productAttrKeywds": [
+     {
+      "attrId": "AT0000000124",
+      "attrNm": "색상",
+      "keywds": "퓨어"
+     },
+     {
+      "attrId": "AT0000000106",
+      "attrNm": "도어재질",
+      "keywds": "네이처(메탈)"
+     },
+     {
+      "attrId": "AT0000001271",
+      "attrNm": "소비전력",
+      "keywds": "36.1kWh/월"
+     },
+     {
+      "attrId": "AT0000001272",
+      "attrNm": "냉동",
+      "keywds": "27L"
+     },
+     {
+      "attrId": "AT0000001273",
+      "attrNm": "냉장",
+      "keywds": "94L"
+     }
+    ],
+    "smallImageAddr": "/kr/images/refrigerators/md10318830/md10318830-280x280.jpg",
+    "thinqFlag": "N",
+    "priceInfo": {
+     "obsOriginalPrice": 400000,
+     "obsSellingPrice": 380000,
+     "obsMemberPrice": 20000,
+     "couponPrice": 20000,
+     "lastBenefitPrc": 360000
+    },
+    "priceArea": {
+     "normal": {
+      "price": 380000,
+      "originPrice": 400000,
+      "originPriceShowFlag": "Y",
+      "dicountRate": 5,
+      "discountRateShowFlag": "Y",
+      "visitText": null,
+      "visitTextShowFlag": "N"
+     },
+     "maxReward": {
+      "price": 360000
+     }
+    },
+    "benefitInfo": {
+     "cardNm": "신한",
+     "dcRate": "0",
+     "cashReward": 0,
+     "payDcAmt": 0,
+     "pointReward": 0
+    }
+   },
+   {
+    "salesModelCode": "Q342GBB153",
+    "modelId": "MD09164830",
+    "modelDisplayName": "LG 모던엣지 냉장고 오브제컬렉션",
+    "subCategoryName": "일반형",
+    "modelUrlPath": "/refrigerators/q342gbb153",
+    "keywds": "344L^3등급",
+    "productAttrKeywds": [
+     {
+      "attrId": "AT0000000124",
+      "attrNm": "색상",
+      "keywds": "베이지"
+     },
+     {
+      "attrId": "AT0000000106",
+      "attrNm": "도어재질",
+      "keywds": "미스트(글라스)"
+     },
+     {
+      "attrId": "AT0000001251",
+      "attrNm": "주요 기능",
+      "keywds": "도어쿨링+"
+     },
+     {
+      "attrId": "AT0000001271",
+      "attrNm": "소비전력",
+      "keywds": "25.5kWh/월"
+     },
+     {
+      "attrId": "AT0000001272",
+      "attrNm": "냉동",
+      "keywds": "110L"
+     },
+     {
+      "attrId": "AT0000001273",
+      "attrNm": "냉장",
+      "keywds": "234L"
+     }
+    ],
+    "smallImageAddr": "/kr/images/refrigerators/md09164830/md09164830-280x280.jpg",
+    "thinqFlag": "N",
+    "priceInfo": {
+     "obsOriginalPrice": 1832000,
+     "obsSellingPrice": 1650000,
+     "obsMemberPrice": 182000,
+     "couponPrice": 100000,
+     "lastBenefitPrc": 1441500
+    },
+    "priceArea": {
+     "normal": {
+      "price": 1650000,
+      "originPrice": 1832000,
+      "originPriceShowFlag": "Y",
+      "dicountRate": 9,
+      "discountRateShowFlag": "Y",
+      "visitText": null,
+      "visitTextShowFlag": "N"
+     },
+     "maxReward": {
+      "price": 1441500
+     }
+    },
+    "benefitInfo": {
+     "cardNm": "신한",
+     "dcRate": "7",
+     "cashReward": 0,
+     "payDcAmt": 108500,
+     "pointReward": 0
+    }
+   },
+   {
+    "salesModelCode": "M622GCB352S",
+    "modelId": "MD09053846",
+    "modelDisplayName": "LG 디오스 오브제컬렉션 빌트인 타입 냉장고",
+    "subCategoryName": "상냉장/하냉동",
+    "modelUrlPath": "/refrigerators/m622gcb352s",
+    "keywds": "613L^2등급",
+    "productAttrKeywds": [
+     {
+      "attrId": "AT0000000124",
+      "attrNm": "색상",
+      "keywds": "클레이 브라운/베이지"
+     },
+     {
+      "attrId": "AT0000000106",
+      "attrNm": "도어재질",
+      "keywds": "미스트(글라스)"
+     },
+     {
+      "attrId": "AT0000001251",
+      "attrNm": "주요 기능",
+      "keywds": "UV청정탈취필터+^노크온"
+     },
+     {
+      "attrId": "AT0000001271",
+      "attrNm": "소비전력",
+      "keywds": "39kWh/월"
+     },
+     {
+      "attrId": "AT0000001272",
+      "attrNm": "냉동",
+      "keywds": "229L"
+     },
+     {
+      "attrId": "AT0000001273",
+      "attrNm": "냉장",
+      "keywds": "384L"
+     }
+    ],
+    "smallImageAddr": "/kr/images/refrigerators/md09053846/md09053846-280x280.jpg",
+    "thinqFlag": "N",
+    "priceInfo": {
+     "obsOriginalPrice": 3996000,
+     "obsSellingPrice": 3600000,
+     "obsMemberPrice": 396000,
+     "couponPrice": 180000,
+     "lastBenefitPrc": 3180600
+    },
+    "priceArea": {
+     "normal": null,
+     "maxReward": null
+    },
+    "benefitInfo": {
+     "cardNm": "신한",
+     "dcRate": "7",
+     "cashReward": 0,
+     "payDcAmt": 239400,
+     "pointReward": 0
+    }
+   },
+   {
+    "salesModelCode": "OC-KIT8",
+    "modelId": "MD10540853",
+    "modelDisplayName": "[컨버터블 2대 페어용] 오브제컬렉션 Fit & Max 냉장고 설치키트",
+    "subCategoryName": "페어설치키트",
+    "modelUrlPath": "/convertible-refrigerators/oc-kit8",
+    "keywds": null,
+    "productAttrKeywds": [
+     {
+      "attrId": "AT0000000124",
+      "attrNm": "색상",
+      "keywds": null
+     }
+    ],
+    "smallImageAddr": "/kr/images/refrigerators/md10540853/md10540853-280x280.jpg",
+    "thinqFlag": "N",
+    "priceInfo": {
+     "obsOriginalPrice": 100000,
+     "obsSellingPrice": 100000,
+     "obsMemberPrice": 0,
+     "couponPrice": 0,
+     "lastBenefitPrc": 100000
+    },
+    "priceArea": {
+     "normal": {
+      "price": 100000,
+      "originPrice": 0,
+      "originPriceShowFlag": "N",
+      "dicountRate": 0,
+      "discountRateShowFlag": "N",
+      "visitText": null,
+      "visitTextShowFlag": "N"
+     },
+     "maxReward": null
+    },
+    "benefitInfo": {
+     "cardNm": "신한",
+     "dcRate": "0",
+     "cashReward": 0,
+     "payDcAmt": 0,
+     "pointReward": 0
+    }
+   },
+   {
+    "salesModelCode": "R984GBB012",
+    "modelId": "MD10574846",
+    "modelDisplayName": "LG 디오스 오브제컬렉션 냉장고 Fit & Max + LG 디오스 오브제컬렉션 김치톡톡 Fit & Max",
+    "subCategoryName": "냉장고 세트",
+    "modelUrlPath": "/refrigerators/r984gbb012",
+    "keywds": null,
+    "productAttrKeywds": [
+     {
+      "attrId": "AT0000000124",
+      "attrNm": "색상",
+      "keywds": null
+     },
+     {
+      "attrId": "AT0000000301",
+      "attrNm": "냉장고 용량",
+      "keywds": "504L"
+     },
+     {
+      "attrId": "AT0000000308",
+      "attrNm": "김치냉장고 용량",
+      "keywds": "480L"
+     }
+    ],
+    "smallImageAddr": "/kr/images/refrigerators/md10574846/md10574846-280x280.jpg",
+    "thinqFlag": "N",
+    "priceInfo": {
+     "obsOriginalPrice": 7180000,
+     "obsSellingPrice": 6530000,
+     "obsMemberPrice": 650000,
+     "couponPrice": 180000,
+     "lastBenefitPrc": 5905500
+    },
+    "priceArea": {
+     "normal": null,
+     "maxReward": null
+    },
+    "benefitInfo": {
+     "cardNm": "신한",
+     "dcRate": "7",
+     "cashReward": 0,
+     "payDcAmt": 444500,
+     "pointReward": 0
+    }
+   },
+   {
+    "salesModelCode": "DF165ME",
+    "modelId": "MD10662830",
+    "modelDisplayName": "LG 냉동고",
+    "subCategoryName": "일반형",
+    "modelUrlPath": "/refrigerators/df165me",
+    "keywds": "148L",
+    "productAttrKeywds": [
+     {
+      "attrId": "AT0000000124",
+      "attrNm": "색상",
+      "keywds": "베이지"
+     },
+     {
+      "attrId": "AT0000000106",
+      "attrNm": "도어재질",
+      "keywds": "네이처(메탈)"
+     },
+     {
+      "attrId": "AT0000001272",
+      "attrNm": "냉동",
+      "keywds": "148L"
+     }
+    ],
+    "smallImageAddr": "/kr/images/refrigerators/md10662830/md10662830-280x280.jpg",
+    "thinqFlag": "N",
+    "priceInfo": {
+     "obsOriginalPrice": 495000,
+     "obsSellingPrice": 365000,
+     "obsMemberPrice": 130000,
+     "couponPrice": 20000,
+     "lastBenefitPrc": 345000
+    },
+    "priceArea": {
+     "normal": {
+      "price": 365000,
+      "originPrice": 495000,
+      "originPriceShowFlag": "Y",
+      "dicountRate": 26,
+      "discountRateShowFlag": "Y",
+      "visitText": null,
+      "visitTextShowFlag": "N"
+     },
+     "maxReward": {
+      "price": 345000
+     }
+    },
+    "benefitInfo": {
+     "cardNm": "신한",
+     "dcRate": "0",
+     "cashReward": 0,
+     "payDcAmt": 0,
+     "pointReward": 0
+    }
+   },
+   {
+    "salesModelCode": "J816MEE06-B",
+    "modelId": "MD10670828",
+    "modelDisplayName": "LG 디오스 AI 오브제컬렉션 STEM 얼음정수 냉장고 (양문형)",
+    "subCategoryName": "STEM",
+    "modelUrlPath": "/refrigerators/j816mee062__",
+    "keywds": "810L^2등급",
+    "productAttrKeywds": [
+     {
+      "attrId": "AT0000000124",
+      "attrNm": "색상",
+      "keywds": "베이지/베이지"
+     },
+     {
+      "attrId": "AT0000000106",
+      "attrNm": "도어재질",
+      "keywds": "네이처(메탈)"
+     },
+     {
+      "attrId": "AT0000001251",
+      "attrNm": "주요 기능",
+      "keywds": "도어쿨링+^퓨어 프레시 필터"
+     },
+     {
+      "attrId": "AT0000001271",
+      "attrNm": "소비전력",
+      "keywds": "50.0kWh/월"
+     },
+     {
+      "attrId": "AT0000001272",
+      "attrNm": "냉동",
+      "keywds": "286L"
+     },
+     {
+      "attrId": "AT0000001273",
+      "attrNm": "냉장",
+      "keywds": "524L"
+     }
+    ],
+    "smallImageAddr": "/kr/images/refrigerators/md10559843/md10559843-280x280.jpg",
+    "thinqFlag": "N",
+    "priceInfo": {
+     "obsOriginalPrice": 2500000,
+     "obsSellingPrice": 2280000,
+     "obsMemberPrice": 220000,
+     "couponPrice": 120000,
+     "lastBenefitPrc": 2008800
+    },
+    "priceArea": {
+     "normal": null,
+     "maxReward": null
+    },
+    "benefitInfo": {
+     "cardNm": "신한",
+     "dcRate": "7",
+     "cashReward": 0,
+     "payDcAmt": 151200,
+     "pointReward": 0
+    }
+   },
+   {
+    "salesModelCode": "M876GBB181",
+    "modelId": "MD10604864",
+    "modelDisplayName": "LG 디오스 AI 오브제컬렉션 STEM 베이직 냉장고 (매직스페이스)",
+    "subCategoryName": "STEM",
+    "modelUrlPath": "/refrigerators/m876gbb181",
+    "keywds": "854L^1등급",
+    "productAttrKeywds": [
+     {
+      "attrId": "AT0000000124",
+      "attrNm": "색상",
+      "keywds": "베이지/베이지"
+     },
+     {
+      "attrId": "AT0000000106",
+      "attrNm": "도어재질",
+      "keywds": "미스트(글라스)"
+     },
+     {
+      "attrId": "AT0000001251",
+      "attrNm": "주요 기능",
+      "keywds": "퓨어 프레시 필터^UV청정탈취필터+^도어쿨링+^신선맞춤실^인버터 리니어 컴프레서"
+     },
+     {
+      "attrId": "AT0000001271",
+      "attrNm": "소비전력",
+      "keywds": "43.1kWh/월"
+     },
+     {
+      "attrId": "AT0000001272",
+      "attrNm": "냉동",
+      "keywds": "360L"
+     },
+     {
+      "attrId": "AT0000001273",
+      "attrNm": "냉장",
+      "keywds": "494L"
+     }
+    ],
+    "smallImageAddr": "/kr/images/refrigerators/md10604864/md10604864-280x280.jpg",
+    "thinqFlag": "N",
+    "priceInfo": {
+     "obsOriginalPrice": 5384000,
+     "obsSellingPrice": 4850000,
+     "obsMemberPrice": 534000,
+     "couponPrice": 180000,
+     "lastBenefitPrc": 4343100
+    },
+    "priceArea": {
+     "normal": {
+      "price": 4850000,
+      "originPrice": 5384000,
+      "originPriceShowFlag": "Y",
+      "dicountRate": 9,
+      "discountRateShowFlag": "Y",
+      "visitText": null,
+      "visitTextShowFlag": "N"
+     },
+     "maxReward": {
+      "price": 4343100
+     }
+    },
+    "benefitInfo": {
+     "cardNm": "신한",
+     "dcRate": "7",
+     "cashReward": 0,
+     "payDcAmt": 326900,
+     "pointReward": 0
+    }
+   },
+   {
+    "salesModelCode": "F756SI014",
+    "modelId": "MD10705832",
+    "modelDisplayName": "LG 프렌치 디오스",
+    "subCategoryName": "상냉장/하냉동",
+    "modelUrlPath": "/refrigerators/f756si014",
+    "keywds": "742L^4등급",
+    "productAttrKeywds": [
+     {
+      "attrId": "AT0000000124",
+      "attrNm": "색상",
+      "keywds": "스테인리스"
+     },
+     {
+      "attrId": "AT0000000106",
+      "attrNm": "도어재질",
+      "keywds": "스테인리스"
+     },
+     {
+      "attrId": "AT0000001251",
+      "attrNm": "주요 기능",
+      "keywds": "도어쿨링+"
+     },
+     {
+      "attrId": "AT0000001271",
+      "attrNm": "소비전력",
+      "keywds": "70kWh/월"
+     },
+     {
+      "attrId": "AT0000000301",
+      "attrNm": "냉장고 용량",
+      "keywds": "504L"
+     },
+     {
+      "attrId": "AT0000001272",
+      "attrNm": "냉동",
+      "keywds": "238L"
+     },
+     {
+      "attrId": "AT0000001273",
+      "attrNm": "냉장",
+      "keywds": "504L"
+     }
+    ],
+    "smallImageAddr": "/kr/images/refrigerators/md10705832/md10705832-280x280.jpg",
+    "thinqFlag": "N",
+    "priceInfo": {
+     "obsOriginalPrice": 2650000,
+     "obsSellingPrice": 2410000,
+     "obsMemberPrice": 240000,
+     "couponPrice": 120000,
+     "lastBenefitPrc": 2129700
+    },
+    "priceArea": {
+     "normal": null,
+     "maxReward": null
+    },
+    "benefitInfo": {
+     "cardNm": "신한",
+     "dcRate": "7",
+     "cashReward": 0,
+     "payDcAmt": 160300,
+     "pointReward": 0
+    }
+   },
+   {
+    "salesModelCode": "DL195ME",
+    "modelId": "MD10662828",
+    "modelDisplayName": "LG 오브제컬렉션 일반냉장고",
+    "subCategoryName": "일반형",
+    "modelUrlPath": "/refrigerators/dl195me",
+    "keywds": "195L^3등급",
+    "productAttrKeywds": [
+     {
+      "attrId": "AT0000000124",
+      "attrNm": "색상",
+      "keywds": "베이지"
+     },
+     {
+      "attrId": "AT0000000106",
+      "attrNm": "도어재질",
+      "keywds": "네이처(메탈)"
+     },
+     {
+      "attrId": "AT0000001271",
+      "attrNm": "소비전력",
+      "keywds": "19.2kWh/월"
+     },
+     {
+      "attrId": "AT0000001272",
+      "attrNm": "냉동",
+      "keywds": "26L"
+     },
+     {
+      "attrId": "AT0000001273",
+      "attrNm": "냉장",
+      "keywds": "195L"
+     }
+    ],
+    "smallImageAddr": "/kr/images/refrigerators/md10662828/md10662828-280x280.jpg",
+    "thinqFlag": "N",
+    "priceInfo": {
+     "obsOriginalPrice": 435000,
+     "obsSellingPrice": 365000,
+     "obsMemberPrice": 70000,
+     "couponPrice": 20000,
+     "lastBenefitPrc": 345000
+    },
+    "priceArea": {
+     "normal": {
+      "price": 365000,
+      "originPrice": 435000,
+      "originPriceShowFlag": "Y",
+      "dicountRate": 16,
+      "discountRateShowFlag": "Y",
+      "visitText": null,
+      "visitTextShowFlag": "N"
+     },
+     "maxReward": {
+      "price": 345000
+     }
+    },
+    "benefitInfo": {
+     "cardNm": "신한",
+     "dcRate": "0",
+     "cashReward": 0,
+     "payDcAmt": 0,
+     "pointReward": 0
+    }
+   },
+   {
+    "salesModelCode": "Q405MEE133",
+    "modelId": "MD10715832",
+    "modelDisplayName": "LG 모던엣지 AI 오브제컬렉션 Fit & Max",
+    "subCategoryName": "일반형",
+    "modelUrlPath": "/refrigerators/q405mee133",
+    "keywds": "412L^3등급",
+    "productAttrKeywds": [
+     {
+      "attrId": "AT0000000124",
+      "attrNm": "색상",
+      "keywds": "베이지"
+     },
+     {
+      "attrId": "AT0000000106",
+      "attrNm": "도어재질",
+      "keywds": "네이처(메탈)"
+     },
+     {
+      "attrId": "AT0000001251",
+      "attrNm": "주요 기능",
+      "keywds": "도어쿨링+"
+     },
+     {
+      "attrId": "AT0000001271",
+      "attrNm": "소비전력",
+      "keywds": "27.9kWh/월"
+     },
+     {
+      "attrId": "AT0000001272",
+      "attrNm": "냉동",
+      "keywds": "139L"
+     },
+     {
+      "attrId": "AT0000001273",
+      "attrNm": "냉장",
+      "keywds": "273L"
+     }
+    ],
+    "smallImageAddr": "/kr/images/refrigerators/md10715832/md10715832-280x280.jpg",
+    "thinqFlag": "N",
+    "priceInfo": {
+     "obsOriginalPrice": 1350000,
+     "obsSellingPrice": 980000,
+     "obsMemberPrice": 370000,
+     "couponPrice": 30000,
+     "lastBenefitPrc": 883500
+    },
+    "priceArea": {
+     "normal": {
+      "price": 980000,
+      "originPrice": 1350000,
+      "originPriceShowFlag": "Y",
+      "dicountRate": 27,
+      "discountRateShowFlag": "Y",
+      "visitText": null,
+      "visitTextShowFlag": "N"
+     },
+     "maxReward": {
+      "price": 883500
+     }
+    },
+    "benefitInfo": {
+     "cardNm": "신한",
+     "dcRate": "7",
+     "cashReward": 0,
+     "payDcAmt": 66500,
+     "pointReward": 0
+    }
+   },
+   {
+    "salesModelCode": "S834MEE111",
+    "modelId": "MD10635830",
+    "modelDisplayName": "LG 디오스 AI 오브제컬렉션 냉장고 (양문형, 매직스페이스)",
+    "subCategoryName": "양문형",
+    "modelUrlPath": "/refrigerators/s834mee111",
+    "keywds": "832L^1등급",
+    "productAttrKeywds": [
+     {
+      "attrId": "AT0000000124",
+      "attrNm": "색상",
+      "keywds": "베이지/베이지"
+     },
+     {
+      "attrId": "AT0000000106",
+      "attrNm": "도어재질",
+      "keywds": "네이처(메탈)"
+     },
+     {
+      "attrId": "AT0000001251",
+      "attrNm": "주요 기능",
+      "keywds": "도어쿨링+^인버터 리니어 컴프레서"
+     },
+     {
+      "attrId": "AT0000001271",
+      "attrNm": "소비전력",
+      "keywds": "40.2kWh/월 "
+     },
+     {
+      "attrId": "AT0000001272",
+      "attrNm": "냉동",
+      "keywds": "308L"
+     },
+     {
+      "attrId": "AT0000001273",
+      "attrNm": "냉장",
+      "keywds": "524L"
+     }
+    ],
+    "smallImageAddr": "/kr/images/refrigerators/md10635830/md10635830-280x280.jpg",
+    "thinqFlag": "N",
+    "priceInfo": {
+     "obsOriginalPrice": 2350000,
+     "obsSellingPrice": 1890000,
+     "obsMemberPrice": 460000,
+     "couponPrice": 100000,
+     "lastBenefitPrc": 1664700
+    },
+    "priceArea": {
+     "normal": {
+      "price": 1890000,
+      "originPrice": 2350000,
+      "originPriceShowFlag": "Y",
+      "dicountRate": 19,
+      "discountRateShowFlag": "Y",
+      "visitText": null,
+      "visitTextShowFlag": "N"
+     },
+     "maxReward": {
+      "price": 1664700
+     }
+    },
+    "benefitInfo": {
+     "cardNm": "신한",
+     "dcRate": "7",
+     "cashReward": 0,
+     "payDcAmt": 125300,
+     "pointReward": 0
+    }
+   },
+   {
+    "salesModelCode": "EVIL1",
+    "modelId": "MD10604870",
+    "modelDisplayName": "LG 디오스 AI 오브제컬렉션 냉장고 (더블매직스페이스)",
+    "subCategoryName": "상냉장/하냉동",
+    "modelUrlPath": "https://evil.example.com/refrigerators/evil1",
+    "keywds": "871L^1등급",
+    "productAttrKeywds": [
+     {
+      "attrId": "AT0000000124",
+      "attrNm": "색상",
+      "keywds": "베이지/베이지"
+     },
+     {
+      "attrId": "AT0000000106",
+      "attrNm": "도어재질",
+      "keywds": "미스트(글라스)"
+     },
+     {
+      "attrId": "AT0000001251",
+      "attrNm": "주요 기능",
+      "keywds": "퓨어 프레시 필터^UV청정탈취필터+^도어쿨링+"
+     },
+     {
+      "attrId": "AT0000001271",
+      "attrNm": "소비전력",
+      "keywds": "43kWh/월"
+     },
+     {
+      "attrId": "AT0000001272",
+      "attrNm": "냉동",
+      "keywds": "367L"
+     },
+     {
+      "attrId": "AT0000001273",
+      "attrNm": "냉장",
+      "keywds": "504L"
+     }
+    ],
+    "smallImageAddr": "/kr/images/refrigerators/md10604870/md10604870-280x280.jpg",
+    "thinqFlag": "N",
+    "priceInfo": {
+     "obsOriginalPrice": 5051000,
+     "obsSellingPrice": 4550000,
+     "obsMemberPrice": 501000,
+     "couponPrice": 180000,
+     "lastBenefitPrc": 4064100
+    },
+    "priceArea": {
+     "normal": {
+      "price": 4550000,
+      "originPrice": 5051000,
+      "originPriceShowFlag": "Y",
+      "dicountRate": 9,
+      "discountRateShowFlag": "Y",
+      "visitText": null,
+      "visitTextShowFlag": "N"
+     },
+     "maxReward": {
+      "price": 4064100
+     }
+    },
+    "benefitInfo": {
+     "cardNm": "신한",
+     "dcRate": "7",
+     "cashReward": 0,
+     "payDcAmt": 305900,
+     "pointReward": 0
+    }
+   },
+   {
+    "salesModelCode": "NOPRICE1",
+    "modelId": "MD09811829",
+    "modelDisplayName": "LG 일반냉장고 오브제컬렉션",
+    "subCategoryName": "일반형",
+    "modelUrlPath": "/refrigerators/noprice1",
+    "keywds": "507L^3등급",
+    "productAttrKeywds": [
+     {
+      "attrId": "AT0000000124",
+      "attrNm": "색상",
+      "keywds": "네이처 베이지"
+     },
+     {
+      "attrId": "AT0000000106",
+      "attrNm": "도어재질",
+      "keywds": "네이처(메탈)"
+     },
+     {
+      "attrId": "AT0000001251",
+      "attrNm": "주요 기능",
+      "keywds": "도어쿨링+"
+     },
+     {
+      "attrId": "AT0000001271",
+      "attrNm": "소비전력",
+      "keywds": "37.3kWh/월"
+     },
+     {
+      "attrId": "AT0000001272",
+      "attrNm": "냉동",
+      "keywds": "121L"
+     },
+     {
+      "attrId": "AT0000001273",
+      "attrNm": "냉장",
+      "keywds": "376L"
+     }
+    ],
+    "smallImageAddr": "/kr/images/refrigerators/md09811829/md09811829-280x280.jpg",
+    "thinqFlag": "N",
+    "priceInfo": {
+     "obsOriginalPrice": 0,
+     "obsSellingPrice": 0
+    },
+    "priceArea": {},
+    "benefitInfo": {
+     "cardNm": "신한",
+     "dcRate": "7",
+     "cashReward": 0,
+     "payDcAmt": 58100,
+     "pointReward": 0
+    }
+   }
+  ]
+ }
+}

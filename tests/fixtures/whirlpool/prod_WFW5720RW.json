@@ -1,0 +1,196 @@
+{
+ "code": "WFW5720RW",
+ "name": "4.5 cu. ft. Smart Front Load ENERGY STAR\u00ae Washer with FreshFlow\u2122 Vent System",
+ "price": {
+  "currencyIso": "USD",
+  "formattedValue": "$829.00",
+  "priceType": "BUY",
+  "value": 829.0
+ },
+ "url": "/laundry/washers/front-load/p.4.5-cu.-ft.-smart-front-load-energy-star-washer-with-freshflow-vent-system.wfw5720rw.html",
+ "color": {
+  "code": "WH",
+  "name": "White"
+ },
+ "brand": "Whirlpool",
+ "categories": [
+  {
+   "code": "LaundryWashersFrontLoad",
+   "pipedCategory": "Laundry|Washers|Front-Load",
+   "url": "/Laundry/Washers/Front-Load/c/LaundryWashersFrontLoad"
+  },
+  {
+   "code": "HomeInnovationsConnectedAppliancesSmartAppliancesLaundry",
+   "pipedCategory": "Home-Innovations|Connected-Appliances|Smart-Appliances|Laundry",
+   "url": "/Home-Innovations/Connected-Appliances/Smart-Appliances/Laundry/c/HomeInnovationsConnectedAppliancesSmartAppliancesLaundry"
+  },
+  {
+   "code": "SmartAppliancesLaundry",
+   "pipedCategory": "Smart-Appliances|Laundry",
+   "url": "/Smart-Appliances/Laundry/c/SmartAppliancesLaundry"
+  },
+  {
+   "code": "SeasonalSales",
+   "pipedCategory": "Seasonal-Sales",
+   "url": "/Seasonal-Sales/c/SeasonalSales"
+  },
+  {
+   "code": "LaundryCommercialLaundryWashersFrontLoad",
+   "pipedCategory": "Laundry|Commercial-Laundry|Washers|Front-Load",
+   "url": "/Laundry/Commercial-Laundry/Washers/Front-Load/c/LaundryCommercialLaundryWashersFrontLoad"
+  }
+ ],
+ "primaryCategory": {
+  "code": "Front-Load",
+  "pipedCategory": "Laundry|Washers|Front-Load",
+  "url": "/Laundry/Washers/Front-Load"
+ },
+ "productFeature": [
+  {
+   "code": "FRESHFLOWVENTSYS_5",
+   "title": "FreshFlow\u2122 Vent System",
+   "description": "The FreshFlow\u2122 Vent System is a trio of freshness features that helps keep your clothes and washer fresh. It's the first"
+  },
+  {
+   "code": "DRYDRUMCYCLE",
+   "title": "Dry Drum Cycle",
+   "description": "After you take the clothes out, close your washer door and select the Dry Drum Cycle. A powerful fan reduces excess mois"
+  },
+  {
+   "code": "FANFRESH_QUICKSILVER",
+   "title": "FanFresh\u00ae Option",
+   "description": "Keep your clothes fresh in the washer after a cycle. The FanFresh\u00ae Option uses a built-in fan and periodic tumbling to k"
+  },
+  {
+   "code": "ANTIMICROBIALPROTECTION",
+   "title": "Antimicrobial Protection",
+   "description": "Antimicrobial protection on the rubber seal helps keep your washer fresh by preventing the growth of odor-causing bacter"
+  },
+  {
+   "code": "AIINTELLIGENTWASH",
+   "title": "Intelligent Wash",
+   "description": "Simplify your laundry routine with intelligent wash technology. It uses sensors to detect load size and fabric type, the"
+  },
+  {
+   "code": "QUICKWASHDRY",
+   "title": "Quick Wash & Dry",
+   "description": "Finish laundry in less than 1 hour by pairing the 25 minute Quick Wash cycle with the 30 minute timed dry.* Experience t"
+  },
+  {
+   "code": "QUICKWASHCYC_QUICKSILVER",
+   "title": "Quick Wash Cycle",
+   "description": "Save time in the laundry room and wash a full-sized load fast with the 25 minute Quick Wash Cycle.*<br /><br />*Based on"
+  },
+  {
+   "code": "45CAPACITY",
+   "title": "4.5 cu. ft. Capacity",
+   "description": "Get enough space to handle larger loads with 4.5 Cu. Ft. Capacity."
+  },
+  {
+   "code": "52CUFTCAPACITY",
+   "title": null,
+   "description": ""
+  },
+  {
+   "code": "SMART_QUICK",
+   "title": "Smart Features with Whirlpool\u00ae App",
+   "description": "Be in control and stay connected from anywhere. The Whirlpool\u00ae App lets you start, pause, track progress and receive not"
+  },
+  {
+   "code": "CYCLENOTIFICATION",
+   "title": "Cycle Notification",
+   "description": "Stay on top of your laundry with cycle notifications to ensure finished loads aren\u2019t left behind.*<br /><br />*WiFi &amp"
+  },
+  {
+   "code": "STAINGUIDE_QUICK",
+   "title": "Stain Guide",
+   "description": "Get step-by-step instructions based on your fabric type in the Stain Guide to take on everyday stains like coffee, grass"
+  },
+  {
+   "code": "VOICECONTROL",
+   "title": "Voice Control",
+   "description": "Control your smart washer or dryer hands-free with simple voice commands using a voice-enabled device.*<br /><br /><br /"
+  },
+  {
+   "code": "FAMILYSHARE",
+   "title": "Family Share",
+   "description": "Easily add family members to your Household in the Whirlpool\u00ae App, allowing shared access to all the connected Whirlpool"
+  },
+  {
+   "code": "SPECIALTY_QUICK",
+   "title": "Specialty Cycles",
+   "description": "Use the Whirlpool\u00ae app to get access to additional cycles not available directly on your appliance, including cycles des"
+  },
+  {
+   "code": "FAVORITECYCLE",
+   "title": "Favorite Cycles",
+   "description": "Pin and save up to 10 favorite cycles in the app for easy access right from the home screen.*<br /><br />*WiFi &amp; App"
+  },
+  {
+   "code": "CUSTOMCYCLE_QUICK",
+   "title": "Custom Cycles",
+   "description": "Design a custom cycle that fits your needs and save it directly to your machine.*<br /><br />*WiFi &amp; App Required. D"
+  },
+  {
+   "code": "ENERGYSTAR",
+   "title": "ENERGY STAR\u00ae Certified",
+   "description": "ENERGY STAR\u00ae certified models exceed government standards to help conserve natural resources and save money on your util"
+  },
+  {
+   "code": "SANITIZE_QUICK",
+   "title": "Sanitize Cycle",
+   "description": "The Sanitize cycle uses increased water temperature to eliminate 99.9% of common household bacteria.*<br /><br />*Bacter"
+  },
+  {
+   "code": "COLDWASH_QUICK",
+   "title": "Cold Wash Cycle",
+   "description": "The Cold Wash Cycle adjusts wash actions and time to help protect fabrics, while using cold water to save up to 90% of e"
+  },
+  {
+   "code": "PUMPACCESS",
+   "title": "Pump Access",
+   "description": "Easily access the drain pump for more convenient cleaning and maintenance."
+  },
+  {
+   "code": "PEDS_QUICK",
+   "title": "Pedestals",
+   "description": "Raise your washer for easier loading and unloading. Optional laundry pedestals also provide space-saving storage for det"
+  },
+  {
+   "code": "STACKABLE_QUICK",
+   "title": "Stackable",
+   "description": "Make the most of your space with the option to stack your appliances vertically, using the available stacking kit."
+  },
+  {
+   "code": "CLEANWASHERWITHAFFRESHCYCLE1",
+   "title": "Clean Washer with affresh\u00ae Cycle",
+   "description": "Run the Clean Washer with affresh\u00ae Cycle every 30 washes with an affresh\u00ae washing machine cleaner tablet or liquid chlor"
+  },
+  {
+   "code": "ADDGARMENT_QUICK",
+   "title": "Add Garment",
+   "description": "Last minute items? Pause the washer, open the door and add any items early in the wash cycle."
+  },
+  {
+   "code": "33CLOSETDEPTH",
+   "title": "33\" Closet-Depth Fit",
+   "description": "Get a space-saving design with closet-depth fit that allows for more flexible installation in your laundry space.*<br />"
+  },
+  {
+   "code": "PRESOAK_QUICK",
+   "title": "Presoak Option",
+   "description": "The Presoak option lets you skip soaking outside of the washer. Extra time is automatically added in the washer before t"
+  },
+  {
+   "code": "STEAMCLEAN_QUICK",
+   "title": "Steam Clean",
+   "description": "Get help removing everyday stains with the Steam Clean Option, which gets deep into fabrics with increased wash action a"
+  },
+  {
+   "code": "ANAMERICANCOMPANYFOROVER100YEARS",
+   "title": "An American Company for Over 100 Years",
+   "description": "Whirlpool Corporation started in 1911 as a small company in Benton Harbor, Michigan. Today we are a global home applianc"
+  }
+ ],
+ "baseProduct": "WFW5720R"
+}

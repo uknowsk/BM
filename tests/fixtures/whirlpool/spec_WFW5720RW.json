@@ -1,0 +1,307 @@
+{
+ "specSections": [
+  {
+   "name": "Certifications",
+   "count": 2,
+   "specs": [
+    {
+     "name": "ADA Compliant",
+     "value": "Yes",
+     "description": null
+    },
+    {
+     "name": "Energy Star Qualified",
+     "value": "ENERGY STAR\u00ae Qualified",
+     "description": null
+    }
+   ],
+   "code": "Laundry@Certifications",
+   "showdimensionimage": false
+  },
+  {
+   "name": "Dimensions",
+   "count": 11,
+   "specs": [
+    {
+     "name": "Capacity",
+     "value": "4.5 cu. ft.",
+     "description": null
+    },
+    {
+     "name": "Capacity (DOE) US",
+     "value": "4.5 cu. ft.",
+     "description": null
+    },
+    {
+     "name": "Capacity IEC Canada",
+     "value": "5.2 cu. ft.",
+     "description": null
+    },
+    {
+     "name": "Depth",
+     "value": "31.5625 in",
+     "description": null
+    },
+    {
+     "name": "Depth With Door Open 90 Degree",
+     "value": "54.875 in",
+     "description": null
+    },
+    {
+     "name": "Gross Weight",
+     "value": "232 lbs",
+     "description": null
+    },
+    {
+     "name": "Height",
+     "value": "39 in",
+     "description": null
+    },
+    {
+     "name": "Maximum Height",
+     "value": "42.75 in",
+     "description": null
+    },
+    {
+     "name": "Minimum Height",
+     "value": "38.625 in",
+     "description": null
+    },
+    {
+     "name": "Net Weight",
+     "value": "222 lbs",
+     "description": null
+    },
+    {
+     "name": "Width",
+     "value": "27 in",
+     "description": null
+    }
+   ],
+   "code": "Laundry@Dimensions",
+   "showdimensionimage": true
+  },
+  {
+   "name": "Interior Details",
+   "count": 6,
+   "specs": [
+    {
+     "name": "Automated Dispenser",
+     "value": "No",
+     "description": null
+    },
+    {
+     "name": "Dispense System",
+     "value": "Detergent, Fabric Softener & Bleach",
+     "description": null
+    },
+    {
+     "name": "Fan Type",
+     "value": "Fan Fresh\u00ae",
+     "description": null
+    },
+    {
+     "name": "Motor Drive Type",
+     "value": "Direct Drive",
+     "description": null
+    },
+    {
+     "name": "Out of Balance Sensing",
+     "value": "Yes",
+     "description": null
+    },
+    {
+     "name": "Suspension System",
+     "value": "2 Springs 4 Dampers",
+     "description": null
+    }
+   ],
+   "code": "Laundry@Interior Details",
+   "showdimensionimage": false
+  },
+  {
+   "name": "Cycles",
+   "count": 2,
+   "specs": [
+    {
+     "name": "Number of Wash Cycles",
+     "value": "12",
+     "description": null
+    },
+    {
+     "name": "Washer Cycle Selections",
+     "value": "Bedding, Clean Washer with affresh, Cold Wash, Custom Cycle, Delicates, Drain & Spin, Dry Drum, Heavy Duty, Normal / Regular, Quick Wash, Sanitize, Whites",
+     "description": null
+    }
+   ],
+   "code": "Laundry@Cycles",
+   "showdimensionimage": false
+  },
+  {
+   "name": "Exterior Details",
+   "count": 1,
+   "specs": [
+    {
+     "name": "Adjustable Feet",
+     "value": "Yes",
+     "description": null
+    }
+   ],
+   "code": "Laundry@Exterior Details",
+   "showdimensionimage": false
+  },
+  {
+   "name": "Smart Compatibility",
+   "count": 3,
+   "specs": [
+    {
+     "name": "Connectivity",
+     "value": "Amazon Alexa, Android, Google Assistant, iOS",
+     "description": null
+    },
+    {
+     "name": "Smart Appliance",
+     "value": "Yes",
+     "description": null
+    },
+    {
+     "name": "Works With",
+     "value": "App, Remote Access, Voice Controlled, WiFi",
+     "description": null
+    }
+   ],
+   "code": "Laundry@Smart Compatibility",
+   "showdimensionimage": false
+  },
+  {
+   "name": "Details",
+   "count": 3,
+   "specs": [
+    {
+     "name": "Motor Horsepower",
+     "value": "Inverter Driven Variable Speed Direct Drive Motor",
+     "description": null
+    },
+    {
+     "name": "Pedestal Options",
+     "value": "WFP2715HW, XHP1000XW",
+     "description": null
+    },
+    {
+     "name": "Stackable",
+     "value": "Yes",
+     "description": null
+    }
+   ],
+   "code": "Laundry@Details",
+   "showdimensionimage": false
+  },
+  {
+   "name": "Modifiers",
+   "count": 8,
+   "specs": [
+    {
+     "name": "Delay Start",
+     "value": "Yes",
+     "description": null
+    },
+    {
+     "name": "Number of Soil Levels",
+     "value": "4",
+     "description": null
+    },
+    {
+     "name": "Number of Spin Speeds",
+     "value": "4",
+     "description": null
+    },
+    {
+     "name": "Number of Temperatures",
+     "value": "5",
+     "description": null
+    },
+    {
+     "name": "Number of Wash/Rinse Temperatures",
+     "value": "5",
+     "description": null
+    },
+    {
+     "name": "Number of Washer Options",
+     "value": "9",
+     "description": null
+    },
+    {
+     "name": "Pre Soak",
+     "value": "Yes",
+     "description": null
+    },
+    {
+     "name": "Spin Speed Selections",
+     "value": "Fast, Medium, Off, Slow",
+     "description": null
+    }
+   ],
+   "code": "Laundry@Modifiers",
+   "showdimensionimage": false
+  },
+  {
+   "name": "Controls",
+   "count": 3,
+   "specs": [
+    {
+     "name": "Control Location",
+     "value": "Front Panel",
+     "description": null
+    },
+    {
+     "name": "Electronic Display Type",
+     "value": "Cycle Indicator Lights with Digital Time Remaining",
+     "description": null
+    },
+    {
+     "name": "End of Cycle Signal",
+     "value": "Yes",
+     "description": null
+    }
+   ],
+   "code": "Laundry@Controls",
+   "showdimensionimage": false
+  },
+  {
+   "name": "Options",
+   "count": 1,
+   "specs": [
+    {
+     "name": "Washer Option Selections",
+     "value": "Delay Wash, Extra Rinse, Fan Fresh\u00ae, Presoak, Remote Enable, Steam Clean",
+     "description": null
+    }
+   ],
+   "code": "Laundry@Options",
+   "showdimensionimage": false
+  },
+  {
+   "name": "Electrical",
+   "count": 3,
+   "specs": [
+    {
+     "name": "Amps",
+     "value": "15",
+     "description": null
+    },
+    {
+     "name": "Hz",
+     "value": "60",
+     "description": null
+    },
+    {
+     "name": "Volts",
+     "value": "120",
+     "description": null
+    }
+   ],
+   "code": "Laundry@Electrical",
+   "showdimensionimage": false
+  }
+ ]
+}

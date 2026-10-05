@@ -1,0 +1,611 @@
+{
+ "pagination": {
+  "currentPage": 0,
+  "pageSize": 24,
+  "sort": "Best Seller",
+  "totalPages": 1,
+  "totalResults": 20
+ },
+ "products": [
+  {
+   "code": "WDPS5118PW",
+   "baseProduct": "WDPS5118P",
+   "name": "Small-Space Compact Dishwasher with Stainless Steel Tub",
+   "url": "/kitchen/dishwasher-and-cleaning/dishwashers/built-in-visible-front-console/p.small-space-compact-dishwasher-with-stainless-steel-tub.wdps5118pw.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$399.00",
+    "priceType": "BUY",
+    "value": 399.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$399.00",
+    "priceType": "BUY",
+    "value": 399.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Built-In-(Visible-Front-Console)",
+    "pipedCategory": "Kitchen|Dishwasher-&-Cleaning|Dishwashers|Built-In-(Visible-Front-Console)",
+    "url": "/Kitchen/Dishwasher-&-Cleaning/Dishwashers/Built-In-(Visible-Front-Console)"
+   },
+   "color": {
+    "code": "WH",
+    "name": "White"
+   },
+   "productIsOutlet": true,
+   "salesStatus": "50"
+  },
+  {
+   "code": "WUI75X15HZ",
+   "baseProduct": "WUI75X15H",
+   "name": "15-inch Icemaker with Clear Ice Technology",
+   "url": "/kitchen/refrigeration/refrigerators/undercounter/p.15-inch-icemaker-with-clear-ice-technology.wui75x15hz.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$2,149.00",
+    "priceType": "BUY",
+    "value": 2149.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$2,149.00",
+    "priceType": "BUY",
+    "value": 2149.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Undercounter",
+    "pipedCategory": "Kitchen|Refrigeration|Refrigerators|Undercounter",
+    "url": "/Kitchen/Refrigeration/Refrigerators/Undercounter"
+   },
+   "color": {
+    "code": "EZ",
+    "name": "Fingerprint Resistant Stainless Steel"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "W5CE1522FB",
+   "baseProduct": "W5CE1522F",
+   "name": "15-inch Electric Cooktop with Easy Wipe Ceramic Glass",
+   "url": "/kitchen/cooking/cooktops/electric/p.15-inch-electric-cooktop-with-easy-wipe-ceramic-glass.w5ce1522fb.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$799.00",
+    "priceType": "BUY",
+    "value": 799.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$799.00",
+    "priceType": "BUY",
+    "value": 799.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Electric",
+    "pipedCategory": "Kitchen|Cooking|Cooktops|Electric",
+    "url": "/Kitchen/Cooking/Cooktops/Electric"
+   },
+   "color": {
+    "code": "BL",
+    "name": "Black"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WRT312CZJZ",
+   "baseProduct": "WRT312CZ",
+   "name": "24-inch Wide Top-Freezer Refrigerator - 11.6 cu. ft.",
+   "url": "/kitchen/refrigeration/refrigerators/top-freezer/p.24-inch-wide-top-freezer-refrigerator-11.6-cu.-ft.wrt312czjz.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$750.00",
+    "priceType": "BUY",
+    "value": 750.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$750.00",
+    "priceType": "BUY",
+    "value": 750.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Top-Freezer",
+    "pipedCategory": "Kitchen|Refrigeration|Refrigerators|Top-Freezer",
+    "url": "/Kitchen/Refrigeration/Refrigerators/Top-Freezer"
+   },
+   "color": {
+    "code": "JZ",
+    "name": "Fingerprint-Resistant Stainless Finish"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WRT313CZLW",
+   "baseProduct": "WRT313CZL",
+   "name": "24-inch Wide Small Space Top-Freezer Refrigerator - 12.9 cu. ft.",
+   "url": "/kitchen/refrigeration/refrigerators/top-freezer/p.24-inch-wide-small-space-top-freezer-refrigerator-12.9-cu.-ft.wrt313czlw.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$719.00",
+    "priceType": "BUY",
+    "value": 719.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$719.00",
+    "priceType": "BUY",
+    "value": 719.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Top-Freezer",
+    "pipedCategory": "Kitchen|Refrigeration|Refrigerators|Top-Freezer",
+    "url": "/Kitchen/Refrigeration/Refrigerators/Top-Freezer"
+   },
+   "color": {
+    "code": "WH",
+    "name": "White"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WUW35X15DS",
+   "baseProduct": "WUW35X15D",
+   "name": "15\" Undercounter Wine Center with Towel Handle Bar",
+   "url": "/kitchen/refrigeration/refrigerators/beverage-and-wine-center/p.15-undercounter-wine-center-with-towel-handle-bar.wuw35x15ds.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$1,499.00",
+    "priceType": "BUY",
+    "value": 1499.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$1,499.00",
+    "priceType": "BUY",
+    "value": 1499.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Beverage-&-Wine-Center",
+    "pipedCategory": "Kitchen|Refrigeration|Refrigerators|Beverage-&-Wine-Center",
+    "url": "/Kitchen/Refrigeration/Refrigerators/Beverage-&-Wine-Center"
+   },
+   "color": {
+    "code": "SS",
+    "name": "Stainless Steel"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WFG500M4HS",
+   "baseProduct": "WFG500M4H",
+   "name": "24-inch Freestanding Gas Range with Sealed Burners",
+   "url": "/kitchen/cooking/ranges/single-oven-freestanding/p.24-inch-freestanding-gas-range-with-sealed-burners.wfg500m4hs.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$1,849.00",
+    "priceType": "BUY",
+    "value": 1849.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$1,849.00",
+    "priceType": "BUY",
+    "value": 1849.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Single-Oven-Freestanding",
+    "pipedCategory": "Kitchen|Cooking|Ranges|Single-Oven-Freestanding",
+    "url": "/Kitchen/Cooking/Ranges/Single-Oven-Freestanding"
+   },
+   "color": {
+    "code": "SS",
+    "name": "Stainless Steel"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WUW35X24DS",
+   "baseProduct": "WUW35X24D",
+   "name": "24\" Undercounter Wine Center with Custom Temperature Control",
+   "url": "/kitchen/refrigeration/refrigerators/beverage-and-wine-center/p.24-undercounter-wine-center-with-custom-temperature-control.wuw35x24ds.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$1,599.00",
+    "priceType": "BUY",
+    "value": 1599.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$1,599.00",
+    "priceType": "BUY",
+    "value": 1599.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Beverage-&-Wine-Center",
+    "pipedCategory": "Kitchen|Refrigeration|Refrigerators|Beverage-&-Wine-Center",
+    "url": "/Kitchen/Refrigeration/Refrigerators/Beverage-&-Wine-Center"
+   },
+   "color": {
+    "code": "SS",
+    "name": "Stainless Steel"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WUB50X24HZ",
+   "baseProduct": "WUB50X24H",
+   "name": "24-inch Wide Undercounter Beverage Center - 5.2 cu. ft.",
+   "url": "/kitchen/refrigeration/refrigerators/beverage-centers/p.24-inch-wide-undercounter-beverage-center-5.2-cu.-ft.wub50x24hz.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$1,899.00",
+    "priceType": "BUY",
+    "value": 1899.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$1,899.00",
+    "priceType": "BUY",
+    "value": 1899.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Beverage-Centers",
+    "pipedCategory": "Kitchen|Refrigeration|Refrigerators|Beverage-Centers",
+    "url": "/Kitchen/Refrigeration/Refrigerators/Beverage-Centers"
+   },
+   "color": {
+    "code": "EZ",
+    "name": "Fingerprint Resistant Stainless Steel"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WUR50X24HZ",
+   "baseProduct": "WUR50X24H",
+   "name": "24-inch Wide Undercounter Refrigerator - 5.1 cu. ft.",
+   "url": "/kitchen/refrigeration/refrigerators/undercounter/p.24-inch-wide-undercounter-refrigerator-5.1-cu.-ft.wur50x24hz.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$1,699.00",
+    "priceType": "BUY",
+    "value": 1699.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$1,699.00",
+    "priceType": "BUY",
+    "value": 1699.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Undercounter",
+    "pipedCategory": "Kitchen|Refrigeration|Refrigerators|Undercounter",
+    "url": "/Kitchen/Refrigeration/Refrigerators/Undercounter"
+   },
+   "color": {
+    "code": "EZ",
+    "name": "Fingerprint Resistant Stainless Steel"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WRB543CMJZ",
+   "baseProduct": "WRB543CMJ",
+   "name": "24-inch Wide Garage-Ready Bottom-Freezer Refrigerator - 12.9 cu. ft.",
+   "url": "/kitchen/refrigeration/refrigerators/bottom-freezer/p.24-inch-wide-garage-ready-bottom-freezer-refrigerator-12.9-cu.-ft.wrb543cmjz.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$1,243.00",
+    "priceType": "BUY",
+    "value": 1243.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$1,243.00",
+    "priceType": "BUY",
+    "value": 1243.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Bottom-Freezer",
+    "pipedCategory": "Kitchen|Refrigeration|Refrigerators|Bottom-Freezer",
+    "url": "/Kitchen/Refrigeration/Refrigerators/Bottom-Freezer"
+   },
+   "color": {
+    "code": "JZ",
+    "name": "Fingerprint-Resistant Stainless Finish"
+   },
+   "productIsOutlet": true,
+   "salesStatus": "40"
+  },
+  {
+   "code": "WUR35X24HZ",
+   "baseProduct": "WUR35X24H",
+   "name": "24-inch Wide Undercounter Refrigerator with Towel Bar Handle - 5.1 cu. ft.",
+   "url": "/kitchen/refrigeration/refrigerators/undercounter/p.24-inch-wide-undercounter-refrigerator-with-towel-bar-handle-5.1-cu.-ft.wur35x24hz.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$1,619.00",
+    "priceType": "BUY",
+    "value": 1619.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$1,619.00",
+    "priceType": "BUY",
+    "value": 1619.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Undercounter",
+    "pipedCategory": "Kitchen|Refrigeration|Refrigerators|Undercounter",
+    "url": "/Kitchen/Refrigeration/Refrigerators/Undercounter"
+   },
+   "color": {
+    "code": "EZ",
+    "name": "Fingerprint Resistant Stainless Steel"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WFE500M4HS",
+   "baseProduct": "WFE500M4",
+   "name": "24-inch Freestanding Electric Range with Upswept SpillGuard\u2122 Cooktop",
+   "url": "/kitchen/cooking/ranges/electric/p.24-inch-freestanding-electric-range-with-upswept-spillguard-cooktop.wfe500m4hs.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$1,729.00",
+    "priceType": "BUY",
+    "value": 1729.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$1,729.00",
+    "priceType": "BUY",
+    "value": 1729.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Electric",
+    "pipedCategory": "Kitchen|Cooking|Ranges|Electric",
+    "url": "/Kitchen/Cooking/Ranges/Electric"
+   },
+   "color": {
+    "code": "SS",
+    "name": "Stainless Steel"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WCE55US4HB",
+   "baseProduct": "WCE55US4H",
+   "name": "24-inch Compact Electric Ceramic Glass Cooktop",
+   "url": "/kitchen/cooking/cooktops/electric/p.24-inch-compact-electric-ceramic-glass-cooktop.wce55us4hb.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$949.00",
+    "priceType": "BUY",
+    "value": 949.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$949.00",
+    "priceType": "BUY",
+    "value": 949.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Electric",
+    "pipedCategory": "Kitchen|Cooking|Cooktops|Electric",
+    "url": "/Kitchen/Cooking/Cooktops/Electric"
+   },
+   "color": {
+    "code": "BL",
+    "name": "Black"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "RCS2012RS",
+   "baseProduct": "RCS2012R",
+   "name": "21-inch Electric Cooktop with Stainless Steel Surface",
+   "url": "/kitchen/cooking/cooktops/electric/p.21-inch-electric-cooktop-with-stainless-steel-surface.rcs2012rs.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$649.00",
+    "priceType": "BUY",
+    "value": 649.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$649.00",
+    "priceType": "BUY",
+    "value": 649.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Electric",
+    "pipedCategory": "Kitchen|Cooking|Cooktops|Electric",
+    "url": "/Kitchen/Cooking/Cooktops/Electric"
+   },
+   "color": {
+    "code": "BS",
+    "name": "Black-on-Stainless"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WUB35X24HZ",
+   "baseProduct": "WUB35X24H",
+   "name": "24-inch Wide Undercounter Beverage Center with Towel Bar Handle- 5.2 cu. ft.",
+   "url": "/kitchen/refrigeration/refrigerators/undercounter/p.24-inch-wide-undercounter-beverage-center-with-towel-bar-handle-5.2-cu.-ft.wub35x24hz.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$1,850.00",
+    "priceType": "BUY",
+    "value": 1850.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$1,850.00",
+    "priceType": "BUY",
+    "value": 1850.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Undercounter",
+    "pipedCategory": "Kitchen|Refrigeration|Refrigerators|Undercounter",
+    "url": "/Kitchen/Refrigeration/Refrigerators/Undercounter"
+   },
+   "color": {
+    "code": "EZ",
+    "name": "Fingerprint Resistant Stainless Steel"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "UXW7324BSS",
+   "baseProduct": "UXW7324B",
+   "name": "24\" Wall-Mount Canopy",
+   "url": "/kitchen/cooking/hoods/canopy/p.24-wall-mount-canopy.uxw7324bss.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$872.00",
+    "priceType": "BUY",
+    "value": 872.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$872.00",
+    "priceType": "BUY",
+    "value": 872.0
+   },
+   "brand": "Unbranded",
+   "primaryCategory": {
+    "code": "Canopy",
+    "pipedCategory": "Kitchen|Cooking|Hoods|Canopy",
+    "url": "/Kitchen/Cooking/Hoods/Canopy"
+   },
+   "color": {
+    "code": "SS",
+    "name": "Stainless Steel"
+   },
+   "productIsOutlet": true,
+   "salesStatus": "50"
+  },
+  {
+   "code": "WUW55X24HS",
+   "baseProduct": "WUW55X24H",
+   "name": "24-inch Wide Undercounter Wine Center with 46-Bottle Wine Storage",
+   "url": "/kitchen/refrigeration/refrigerators/beverage-and-wine-center/p.24-inch-wide-undercounter-wine-center-with-46-bottle-wine-storage.wuw55x24hs.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$1,849.99",
+    "priceType": "BUY",
+    "value": 1849.99
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$1,849.99",
+    "priceType": "BUY",
+    "value": 1849.99
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Beverage-&-Wine-Center",
+    "pipedCategory": "Kitchen|Refrigeration|Refrigerators|Beverage-&-Wine-Center",
+    "url": "/Kitchen/Refrigeration/Refrigerators/Beverage-&-Wine-Center"
+   },
+   "color": {
+    "code": "SS",
+    "name": "Stainless Steel"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WCI55US4JB",
+   "baseProduct": "WCI55US4J",
+   "name": "24-Inch Small Space Induction Cooktop",
+   "url": "/kitchen/compact-and-small-spaces/p.24-inch-small-space-induction-cooktop.wci55us4jb.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$1,149.00",
+    "priceType": "BUY",
+    "value": 1149.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$1,149.00",
+    "priceType": "BUY",
+    "value": 1149.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Compact-&-Small-Spaces",
+    "pipedCategory": "Kitchen|Compact-&-Small-Spaces",
+    "url": "/Kitchen/Compact-&-Small-Spaces"
+   },
+   "color": {
+    "code": "BL",
+    "name": "Black"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WVU37UC4FS",
+   "baseProduct": "WVU37UC4F",
+   "name": "24\" Range Hood with Full-Width Grease Filters",
+   "url": "/kitchen/compact-and-small-spaces/p.24-range-hood-with-full-width-grease-filters.wvu37uc4fs.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$458.00",
+    "priceType": "BUY",
+    "value": 458.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$458.00",
+    "priceType": "BUY",
+    "value": 458.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Compact-&-Small-Spaces",
+    "pipedCategory": "Kitchen|Compact-&-Small-Spaces",
+    "url": "/Kitchen/Compact-&-Small-Spaces"
+   },
+   "color": {
+    "code": "SS",
+    "name": "Stainless Steel"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  }
+ ]
+}

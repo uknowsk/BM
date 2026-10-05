@@ -1,0 +1,134 @@
+<script>
+		// 매뉴얼 탭 클릭 이벤트
+		$('a[id^="manualCont-"]').off().on("click", function(){
+			$('a[id^="manualCont-"]').attr('aria-selected', false);
+			$(this).attr('aria-selected', true);
+			$('div[id^="manualCont-"]').css('display', 'none');
+			let id = $(this).attr('id');
+			$('div[id="'+ id +'"]').css('display', 'block');
+		});
+
+		$(document).ready(function() {
+			// 매뉴얼 탭 초기화
+			if($('.customer-center-wrap').length > 0){
+				$('a[id^="manualCont-"]').attr('aria-selected', false);
+				$('div[id^="manualCont-"]').css('display', 'none');
+				$('a[id="manualCont-0"]').attr('aria-selected', true);
+				$('div[id="manualCont-0"]').css('display', 'block');
+			}
+			
+			const lowerUserAgent = navigator.userAgent.toLowerCase();
+
+			$('.box-btn .btn-download').on('click', function() {
+				// AOS/IOS PD에서 html 매뉴얼 선택 시 웹뷰가 아닌 외부 브라우저로 링크를 실행
+				if($(this).attr("class").indexOf('btn-html') > -1) {
+					if (lowerUserAgent.indexOf('secapp') > -1) { //AOS
+						window.secapp.startWebBrowser(this.dataset['url']);
+					} else if (lowerUserAgent.indexOf('secios') > -1) { // IOS
+						var url = this.dataset['url'];
+						window.webkit.messageHandlers.callNative.postMessage(JSON.stringify({fun:"startWebBrowser", p1: url}));
+					} else {
+						window.open(this.dataset['url']);
+						//goodsGA4.fnGA4fileDownload(this.closest('li'));	
+					}
+				} else {
+					goodsGA4.fnGA4fileDownload(this.closest('li'));	
+				}
+			});
+		})
+	</script>
+	<div class="customer-center-wrap">
+		<div class="product-purchase-wrap">
+			<ul class="product-purchase-caus_tab manual-tab tab-style-btn target" role="tablist">
+				<li id="manual-0">
+						<a href="javascript:void(0);" role="tab" id="manualCont-0" aria-controls="manualCont-0" aria-selected="true">매뉴얼</a>
+					</li>
+
+				</ul>
+
+			<div class="manual-sec tab-content" id="manualCont-0" role="tabpanel" aria-selected="false">
+					<h3 class="sub-tit sub-tit-manual">매뉴얼</h3>
+					<p class="info-prd"><strong>Bespoke AI 인덕션 (플렉스존)</strong>NZ63DB607CFH</p>
+						<ul class="list-type-download">
+						<li class="item" data-omni= "11671665">
+										<input type="hidden" name="cdlang" value="AA" />
+										<input type="hidden" name="cdctttype" value="UM" />
+										<strong class="name">
+											사용자 매뉴얼 (User Manual(PDF))</strong>
+										<p class="desc">
+											<span class="desc-item">ver.4.0</span>
+											<span class="desc-item">
+											한국어</span>
+											<span class="desc-item">18.53MB</span>
+											<span class="desc-item">2026-09-03</span>
+										</p>
+										</p>
+										<p class="box-btn" align-items: center;">
+											<a href="https://downloadcenter.samsung.com/content/UM/202609/20260903185003440/O_IB_FULL_NZ9000D_NZ63DB857_657_607_CC99F63_CC80F63_KO_260831b.pdf" class="btn-download" data-nmfile="O_IB_FULL_NZ9000D_NZ63DB857_657_607_CC99F63_CC80F63_KO_260831b.pdf">다운로드</a>
+												</p>
+									</li>
+								<li class="item" data-omni= "10744041">
+										<input type="hidden" name="cdlang" value="AA" />
+										<input type="hidden" name="cdctttype" value="PM" />
+										<strong class="name">
+											사용설명서 (HTML)</strong>
+										<p class="desc">
+											<span class="desc-item">ver.2.0</span>
+											<span class="desc-item">
+											한국어</span>
+											<span class="desc-item">0MB</span>
+											<span class="desc-item">2025-08-04</span>
+										</p>
+										</p>
+										<p class="box-btn" align-items: center;">
+											<button data-url="https://downloadcenter.samsung.com/content/PM/202508/20250804165132946/KO/WEB_IB_FULL_NZ9000D_NZ63DB857_657_607_CC99F63_KO_250804/start_here.html" class="btn-download btn-html" data-nmfile="start_here.html" title="새 창">자세히 보기</button>
+												</p>
+									</li>
+								<li class="item" data-omni= "10627717">
+										<input type="hidden" name="cdlang" value="AA" />
+										<input type="hidden" name="cdctttype" value="EM" />
+										<strong class="name">
+											Quick Guide (Quick Guide)</strong>
+										<p class="desc">
+											<span class="desc-item">ver.1.0</span>
+											<span class="desc-item">
+											한국어</span>
+											<span class="desc-item">2.51MB</span>
+											<span class="desc-item">2025-07-03</span>
+										</p>
+										</p>
+										<p class="box-btn" align-items: center;">
+											<a href="https://downloadcenter.samsung.com/content/EM/202507/20250703102730403/DG68-01622A-04_MI_NZ63DB857CAV_KO_250618.pdf" class="btn-download" data-nmfile="DG68-01622A-04_MI_NZ63DB857CAV_KO_250618.pdf">다운로드</a>
+												</p>
+									</li>
+								<li class="item" data-omni= "9901170">
+										<input type="hidden" name="cdlang" value="AA" />
+										<input type="hidden" name="cdctttype" value="EM" />
+										<strong class="name">
+											Quick Guide</strong>
+										<p class="desc">
+											<span class="desc-item">ver.1.0</span>
+											<span class="desc-item">
+											한국어</span>
+											<span class="desc-item">2.67MB</span>
+											<span class="desc-item">2024-10-04</span>
+										</p>
+										</p>
+										<p class="box-btn" align-items: center;">
+											<a href="https://downloadcenter.samsung.com/content/EM/202410/20241004155058665/DG68-01622A-02_MI_NZ63DB857CAV_KO_240927.pdf" class="btn-download" data-nmfile="DG68-01622A-02_MI_NZ63DB857CAV_KO_240927.pdf">다운로드</a>
+												</p>
+									</li>
+								</ul>
+					</div>
+			</div>
+	</div>
+<div class="waranty-box" >
+		<dl>
+			<dt class="ico-waranty" data-omni="warranty">워런티 정보</dt>
+			<dd>
+				<p>제품 등록 후 제공되는 서비스를 확인하세요</p>
+				<a href="/sec/support/warranty/" class="btn btn-d btn-type1"
+				   title="워런티 정보 자세히 보기">자세히 보기</a>
+			</dd>
+		</dl>
+		</div>

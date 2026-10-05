@@ -1,0 +1,164 @@
+{
+ "type": "productCategorySearchPageWsDTO",
+ "categoryCode": "MajorAppliancesRefrigeration",
+ "currentQuery": {
+  "query": {
+   "value": ":Best Seller:category:MajorAppliancesRefrigeration:showMajorProductsOnly:true:inStock:true"
+  },
+  "url": "/Major-Appliances/Refrigeration/c/MajorAppliancesRefrigeration?q=%3ABest+Seller%3Acategory%3AMajorAppliancesRefrigeration%3AshowMajorProductsOnly%3Atrue%3AproductIsBuyable%3Atrue%3AinStockOutlet%3Atrue%3AinStockOutlet%3Atrue_not_deployed%3AinStock%3Atrue"
+ },
+ "freeTextSearch": "",
+ "pagination": {
+  "currentPage": 0,
+  "pageSize": 24,
+  "sort": "Best Seller",
+  "totalPages": 2,
+  "totalResults": 44
+ },
+ "products": [
+  {
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$2,699.00",
+    "priceType": "BUY",
+    "value": 2699.0
+   },
+   "code": "KRFC236SJP",
+   "hidden": false,
+   "name": "24 Cu. Ft. 36-Inch Counter-Depth French Door Refrigerator with Internal Water Dispenser in Juniper",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$2,699.00",
+    "priceType": "BUY",
+    "value": 2699.0
+   },
+   "url": "/major-appliances/refrigeration/freestanding-refrigerators/freestanding-french-door/p.24-cu.-ft.-36-inch-counter-depth-french-door-refrigerator-with-internal-water-dispenser-in-juniper.krfc236sjp.html"
+  },
+  {
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$1,499.00",
+    "priceType": "BUY",
+    "value": 1499.0
+   },
+   "code": "KRFF305ESS",
+   "hidden": false,
+   "name": "25 Cu. Ft. 36-Width French Door Refrigerator with Interior Dispense in Stainless Steel",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$1,499.00",
+    "priceType": "BUY",
+    "value": 1499.0
+   },
+   "url": "/major-appliances/refrigeration/refrigerators/french-door-refrigerators/p.25-cu.-ft.-36-width-french-door-refrigerator-with-interior-dispense-in-stainless-steel.krff305ess.html"
+  },
+  {
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$2,499.00",
+    "priceType": "BUY",
+    "value": 2499.0
+   },
+   "code": "KRMF706EBS",
+   "hidden": false,
+   "name": "25.8 Cu. Ft. 36-Inch Multi-Door Refrigerator with Signature Platinum Interior in PrintShield\u00ae Stainless Steel",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$2,499.00",
+    "priceType": "BUY",
+    "value": 2499.0
+   },
+   "url": "/major-appliances/refrigeration/refrigerators/french-door-refrigerators/p.25.8-cu.-ft.-36-inch-multi-door-refrigerator-with-signature-platinum-interior-in-printshield-stainless-steel.krmf706ebs.html"
+  },
+  {
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$2,499.00",
+    "priceType": "BUY",
+    "value": 2499.0
+   },
+   "code": "KRFF436SBE",
+   "hidden": false,
+   "name": "30 Cu. Ft. 36-Inch French Door Refrigerator with Exterior Water and Ice Dispenser and Wood-Look Sliding Tray in Black Ore",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$2,499.00",
+    "priceType": "BUY",
+    "value": 2499.0
+   },
+   "url": "/major-appliances/refrigeration/refrigerators/french-door-refrigerators/p.30-cu.-ft.-36-inch-french-door-refrigerator-with-exterior-water-and-ice-dispenser-and-wood-look-sliding-tray-in-black-ore.krff436sbe.html"
+  },
+  {
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$3,299.00",
+    "priceType": "BUY",
+    "value": 3299.0
+   },
+   "code": "KRFC536SBE",
+   "hidden": false,
+   "name": "23 Cu. Ft. 36-Inch Counter-Depth French Door Refrigerator with Intelligent Auto Fill in Black Ore",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$3,299.00",
+    "priceType": "BUY",
+    "value": 3299.0
+   },
+   "url": "/major-appliances/refrigeration/refrigerators/french-door-refrigerators/p.23-cu.-ft.-36-inch-counter-depth-french-door-refrigerator-with-intelligent-auto-fill-in-black-ore.krfc536sbe.html"
+  },
+  {
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$2,599.00",
+    "priceType": "BUY",
+    "value": 2599.0
+   },
+   "code": "KUIX315SPS",
+   "hidden": false,
+   "name": "15-Inch Automatic Ice Maker with Clear Ice Technology in PrintShield\u00ae Stainless Steel",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$2,599.00",
+    "priceType": "BUY",
+    "value": 2599.0
+   },
+   "url": "/major-appliances/refrigeration/undercounter/ice-makers/p.15-inch-automatic-ice-maker-with-clear-ice-technology-in-printshield-stainless-steel.kuix315sps.html"
+  },
+  {
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$2,499.00",
+    "priceType": "BUY",
+    "value": 2499.0
+   },
+   "code": "KRSC536RPS",
+   "hidden": false,
+   "name": "20.8 Cu. Ft. 36-Inch Counter-Depth Side-by-Side Refrigerator with Exterior Ice and Water Dispenser in PrintShield\u00ae Stainless Steel",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$2,499.00",
+    "priceType": "BUY",
+    "value": 2499.0
+   },
+   "url": "/major-appliances/refrigeration/freestanding-refrigerators/freestanding-side-by-side/p.20.8-cu.-ft.-36-inch-counter-depth-side-by-side-refrigerator-with-exterior-ice-and-water-dispenser-in-printshield-stainless-steel.krsc536rps.html"
+  },
+  {
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$2,900.00",
+    "priceType": "BUY",
+    "value": 2900.0
+   },
+   "code": "KUIX515SPA",
+   "hidden": false,
+   "name": "15-Inch 25 lb. Panel-Ready Automatic Ice Maker with Clear Ice Technology",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$2,900.00",
+    "priceType": "BUY",
+    "value": 2900.0
+   },
+   "url": "/major-appliances/refrigeration/undercounter/ice-makers/p.15-inch-25-lb.-panel-ready-automatic-ice-maker-with-clear-ice-technology.kuix515spa.html"
+  }
+ ]
+}

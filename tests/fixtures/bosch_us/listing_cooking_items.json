@@ -1,0 +1,271 @@
+[
+{
+"productCode": "HGS8657UC",
+"urlPath": "/product/cooking-baking/ranges/gas-ranges/HGS8657UC",
+"productName": [
+"800 Series",
+"Gas Freestanding Range",
+"36''",
+"Stainless Steel",
+""
+],
+"price": {
+"kind": "SHOP_PRICE",
+"vatIncluded": false,
+"amount": 6449,
+"currency": "USD"
+}
+},
+{
+"productCode": "HIS5057U",
+"urlPath": "/product/cooking-baking/ranges/induction-ranges/HIS5057U",
+"productName": [
+"500 Series",
+"Induction freestanding range",
+"30''",
+"Stainless Steel",
+""
+],
+"price": {
+"kind": "SHOP_PRICE",
+"vatIncluded": false,
+"amount": 5299,
+"currency": "USD"
+}
+},
+{
+"productCode": "HDS5057U",
+"urlPath": "/product/cooking-baking/ranges/dual-fuel-ranges/HDS5057U",
+"productName": [
+"500 Series",
+"Dual Fuel Freestanding Range",
+"30''",
+"Stainless Steel",
+""
+],
+"price": {
+"kind": "SHOP_PRICE",
+"vatIncluded": false,
+"amount": 4199,
+"currency": "USD"
+}
+},
+{
+"productCode": "HEF3050MU",
+"urlPath": "/product/cooking-baking/ranges/electric-slide-in-ranges/HEF3050MU",
+"productName": [
+"300 Series",
+"Electric Slide-in Range",
+"30''",
+""
+],
+"price": {
+"kind": "SHOP_PRICE",
+"vatIncluded": false,
+"amount": 1949,
+"currency": "USD"
+}
+},
+{
+"productCode": "HEI8056U",
+"urlPath": "/product/cooking-baking/ranges/electric-slide-in-ranges/HEI8056U",
+"productName": [
+"800 Series",
+"30''",
+""
+],
+"price": {
+"kind": "SHOP_PRICE",
+"vatIncluded": false,
+"amount": 2699,
+"currency": "USD"
+}
+},
+{
+"productCode": "HGI8056UC",
+"urlPath": "/product/cooking-baking/ranges/gas-ranges/HGI8056UC",
+"productName": [
+"800 Series",
+"Gas Slide-in Range",
+"30''",
+"Stainless Steel",
+""
+],
+"price": {
+"kind": "SHOP_PRICE",
+"vatIncluded": false,
+"amount": 2999,
+"currency": "USD"
+}
+},
+{
+"productCode": "HBLP752UC",
+"urlPath": "/product/cooking-baking/wall-ovens/doubleovens/HBLP752UC",
+"productName": [
+"Benchmark™",
+"Combination Oven",
+"30''",
+"Stainless Steel",
+""
+],
+"price": {
+"kind": "SHOP_PRICE",
+"vatIncluded": false,
+"amount": 6499,
+"currency": "USD"
+}
+},
+{
+"productCode": "HBL8753UC",
+"urlPath": "/product/cooking-baking/wall-ovens/doubleovens/HBL8753UC",
+"productName": [
+"800 Series",
+"Combination Oven",
+"30''",
+"Stainless Steel",
+""
+],
+"price": {
+"kind": "SHOP_PRICE",
+"vatIncluded": false,
+"amount": 6049,
+"currency": "USD"
+}
+},
+{
+"productCode": "HBLP651UC",
+"urlPath": "/product/cooking-baking/wall-ovens/doubleovens/HBLP651UC",
+"productName": [
+"Benchmark™",
+"Double Wall Oven",
+"30''",
+"Stainless Steel",
+""
+],
+"price": {
+"kind": "SHOP_PRICE",
+"vatIncluded": false,
+"amount": 5349,
+"currency": "USD"
+}
+},
+{
+"productCode": "HBL8454UC",
+"urlPath": "/product/cooking-baking/wall-ovens/single-ovens/HBL8454UC",
+"productName": [
+"800 Series",
+"Single Wall Oven",
+"30''",
+"Stainless Steel",
+""
+],
+"price": {
+"kind": "SHOP_PRICE",
+"vatIncluded": false,
+"amount": 3549,
+"currency": "USD"
+}
+},
+{
+"productCode": "HMC80252UC",
+"urlPath": "/product/cooking-baking/wall-ovens/single-ovens/HMC80252UC",
+"productName": [
+"800 Series",
+"Speed Oven",
+"30''",
+"Stainless steel",
+""
+],
+"price": {
+"kind": "SHOP_PRICE",
+"vatIncluded": false,
+"amount": 2649,
+"currency": "USD"
+}
+},
+{
+"productCode": "HMC54151UC",
+"urlPath": "/product/cooking-baking/wall-ovens/speed-ovens/HMC54151UC",
+"productName": [
+"500 Series",
+"Speed Oven",
+"24''",
+"Stainless steel",
+""
+],
+"price": {
+"kind": "SHOP_PRICE",
+"vatIncluded": false,
+"amount": 2149,
+"currency": "USD"
+}
+},
+{
+"productCode": "HMB50152UC",
+"urlPath": "/product/cooking-baking/microwaves/built-in-microwaves/HMB50152UC",
+"productName": [
+"500 Series",
+"Built-In Microwave Oven",
+"30''",
+"Stainless steel",
+""
+],
+"price": {
+"kind": "SHOP_PRICE",
+"vatIncluded": false,
+"amount": 1599,
+"currency": "USD"
+}
+},
+{
+"productCode": "HMD8054UC",
+"urlPath": "/product/cooking-baking/microwaves/drawer-microwaves/HMD8054UC",
+"productName": [
+"800 Series",
+"Drawer Microwave",
+"30''",
+"Stainless Steel",
+""
+],
+"price": {
+"kind": "SHOP_PRICE",
+"vatIncluded": false,
+"amount": 2249,
+"currency": "USD"
+}
+},
+{
+"productCode": "NET8062UC",
+"urlPath": "/product/cooking-baking/induction-electric-cooktops/electric-cooktops/NET8062UC",
+"productName": [
+"800 Series",
+"Electric Cooktop",
+"30",
+"Without Frame",
+""
+],
+"price": {
+"kind": "SHOP_PRICE",
+"vatIncluded": false,
+"amount": 1749,
+"currency": "USD"
+}
+},
+{
+"productCode": "NEM5066UC",
+"urlPath": "/product/cooking-baking/induction-electric-cooktops/electric-cooktops/NEM5066UC",
+"productName": [
+"500 Series",
+"Electric Cooktop",
+"30",
+"Without Frame",
+""
+],
+"price": {
+"kind": "SHOP_PRICE",
+"vatIncluded": false,
+"amount": 1249,
+"currency": "USD"
+}
+}
+]

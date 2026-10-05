@@ -1,0 +1,322 @@
+<script>
+		$('button.spec-title').on("click", function(e){
+			e.preventDefault();
+			$('div[name="specLayer"] > .layer-header > h2').text(this.innerText);
+			$('div[name="specLayer"] > .layer-content > p').text(this.value);
+
+			let newId = $(this).data('popup-target');
+			$('div[name="specLayer"]').attr('id', newId);
+			$('div[name="specLayer"] > .pop-close').attr('data-focus-next', newId);
+			$('div[name="specLayer"]').attr('data-popup-layer', newId);
+			$('div[name="specLayer"]').attr('data-focus', newId);
+		});
+	</script>
+	<h3 class="spec-itm-title" id="cstrt-nm" ></h3>
+	<div class="spec-table">
+		<dl>
+						<dt>기본 사양</dt>
+						<dd>
+							<ol>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer11" value="한 번에 세탁할 수 있는 최대 빨래 양입니다. 용량이 클수록 더 많은 양의 빨래를 빠르게 세탁할 수 있습니다." aria-haspopup="true">
+													세탁 용량</button>
+												<p class="spec-desc">23&nbsp;kg</p>
+											</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer12" value="제품의 외관 색상을 의미합니다." aria-haspopup="true">
+													색상</button>
+												<p class="spec-desc">블랙캐비어&nbsp;</p>
+											</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer13" value="제품의 가로 세로 높이를 나타내며, 설치 공간을 결정하는 데 중요한 요소입니다." aria-haspopup="true">
+													크기(폭 × 높이 × 깊이)</button>
+												<p class="spec-desc">700 × 1131 × 748&nbsp;mm</p>
+											</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer14" value="제품의 총 중량을 나타냅니다." aria-haspopup="true">
+													무게</button>
+												<p class="spec-desc">61&nbsp;kg</p>
+											</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer15" value="제품이 사용하는 에너지의 효율성을 나타냅니다. 등급이 높을수록 에너지 효율이 좋습니다." aria-haspopup="true">
+													에너지 소비효율</button>
+												<p class="spec-desc">2&nbsp;등급</p>
+											</li>
+								<li>
+										<strong class="spec-title">전원</strong>
+													<p class="spec-desc">220 V/60 Hz&nbsp;</p>
+												</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer17" value="순간적으로 낼 수 있는 전력의 최대 입력을 의미합니다." aria-haspopup="true">
+													소비전력</button>
+												<p class="spec-desc">800 W&nbsp;</p>
+											</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer18" value="제품의 회전력을 제공하는 부품입니다." aria-haspopup="true">
+													모터</button>
+												<p class="spec-desc">인버터 모터&nbsp;</p>
+											</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer19" value="모터가 움직임을 나타내는 방식으로, AC 또는 DC 구동방식이 있습니다. AC 모터 : 전기가 주기적으로 방향을 바꾸는 것 DC 모터 : 전기가 항상 한 방향으로 흐르는 것" aria-haspopup="true">
+													모터 구동 방식</button>
+												<p class="spec-desc">듀얼DD&nbsp;</p>
+											</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>외관 사양</dt>
+						<dd>
+							<ol>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer21" value="동작 중인 코스와 시간이 표시됩니다." aria-haspopup="true">
+													디스플레이</button>
+												<p class="spec-desc">LED&nbsp;</p>
+											</li>
+								<li>
+										<strong class="spec-title">도어 타입</strong>
+													<p class="spec-desc">강화유리&nbsp;</p>
+												</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer23" value="세탁조의 내부에 적용된 패턴입니다." aria-haspopup="true">
+													세탁조 패턴</button>
+												<p class="spec-desc">스월 세탁조&nbsp;</p>
+											</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>주요기능</dt>
+						<dd>
+							<ol>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer31" value="세제를 미리 녹인 풍부한 거품을 만들고, 거품이 세탁물에 빠르게 침투하여 오염물질을 제거합니다." aria-haspopup="true">
+													버블</button>
+												<p class="spec-desc">있음&nbsp;</p>
+											</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer32" value="강력한 분사로 세탁 시간을 단축시켜주는 기능으로, 바쁜 일상에서 빠른 세탁이 필요할 때 유용합니다." aria-haspopup="true">
+													제트샷</button>
+												<p class="spec-desc">있음&nbsp;</p>
+											</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer33" value="스마트폰을 이용하여 원격으로 기기를 제어하거나 설정할 수 있는 기능입니다." aria-haspopup="true">
+													스마트컨트롤</button>
+												<p class="spec-desc">있음&nbsp;</p>
+											</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer34" value="기계의 상태를 확인하고 문제를 진단하는 기능으로, 빠르고 효율적인 서비스를 제공합니다." aria-haspopup="true">
+													스마트체크</button>
+												<p class="spec-desc">있음&nbsp;</p>
+											</li>
+								<li>
+										<strong class="spec-title">물높이 조절</strong>
+													<p class="spec-desc">있음&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">세탁 온도 조절</strong>
+													<p class="spec-desc">있음&nbsp;</p>
+												</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer37" value="세탁 후 헹굼 횟수를 조절하는 기능으로, 세탁물의 상태나 개인의 취향에 따라 헹굼 횟수를 선택할 수 있습니다." aria-haspopup="true">
+													헹굼 횟수 조절</button>
+												<p class="spec-desc">있음&nbsp;</p>
+											</li>
+								<li>
+										<strong class="spec-title">탈수 세기 조절</strong>
+													<p class="spec-desc">있음&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">예약 기능</strong>
+													<p class="spec-desc">있음&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">어린이 보호</strong>
+													<p class="spec-desc">있음&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">알림음 끔</strong>
+													<p class="spec-desc">있음&nbsp;</p>
+												</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer312" value="전용 세제 없이도 가열된 세탁수를 회전시켜 세탁조 내부를 살균해주는 코스입니다.<br>* 살균 효과는 세균의 종류, 사용환경 등에 따라 차이가 있을 수 있습니다." aria-haspopup="true">
+													무세제통세척</button>
+												<p class="spec-desc">있음&nbsp;</p>
+											</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer313" value="가열된 세탁수를 회전시켜 세탁조 내부를 살균해 주는 코스입니다.<br>* 살균 효과는 세균의 종류나 사용환경 등에 따라 차이가 있을 수 있습니다." aria-haspopup="true">
+													강력 통세척</button>
+												<p class="spec-desc">있음&nbsp;</p>
+											</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer314" value="일정 횟수의 세탁을 마친 뒤 세탁조 통세척이 필요하다는 알림을 보내주는 기능으로, 사용자가 잊지 않고 세탁조를 정기적으로 청소할 수 있게 도와줍니다." aria-haspopup="true">
+													통세척 알람</button>
+												<p class="spec-desc">있음&nbsp;</p>
+											</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer315" value="진동을 효과적으로 줄여주어, 안심하고 조용하게 사용 할 수 있습니다." aria-haspopup="true">
+													진동 저감 시스템</button>
+												<p class="spec-desc">있음&nbsp;</p>
+											</li>
+								<li>
+										<strong class="spec-title">액체 전용 세제함</strong>
+													<p class="spec-desc">있음&nbsp;</p>
+												</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer317" value="도어를 열고 닫을 때 부드럽게 닫힐 수 있도록 설계된 도어입니다." aria-haspopup="true">
+													소프트 도어</button>
+												<p class="spec-desc">있음&nbsp;</p>
+											</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer318" value="스테인리스 스틸 재질의 세탁판으로, 긁힘을 방지하고 오랜 시간동안 깨끗하게 사용할 수 있습니다." aria-haspopup="true">
+													스테인리스 세탁판</button>
+												<p class="spec-desc">있음&nbsp;</p>
+											</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer319" value="스테인리스 재질로 만들어진 필터로, 이물질을 효과적으로 걸러내어 세탁 성능을 유지합니다." aria-haspopup="true">
+													스테인리스 필터</button>
+												<p class="spec-desc">있음&nbsp;</p>
+											</li>
+								<li>
+										<strong class="spec-title">불림</strong>
+													<p class="spec-desc">있음&nbsp;</p>
+												</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer321" value="어린이나 반려동물의 오작동으로 인한 사고를 방지하는 기능입니다." aria-haspopup="true">
+													안전도어락 시스템</button>
+												<p class="spec-desc">있음&nbsp;</p>
+											</li>
+								<li>
+										<strong class="spec-title">정전보상기능</strong>
+													<p class="spec-desc">있음&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">세탁코스</strong>
+													<p class="spec-desc">표준세탁, 강력세탁+, 청정세탁, 이불, 아기옷, 소량/쾌속, 울/란제리, 타월, 헹굼+탈수, 무세제통세척&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>스마트</dt>
+						<dd>
+							<ol>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer41" value="제품이 인터넷에 연결될 수 있도록 WiFi가 내장되어 있는 것을 의미합니다." aria-haspopup="true">
+													WiFi 내장</button>
+												<p class="spec-desc">지원&nbsp;</p>
+											</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>앱 연결</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">SmartThings 모바일 앱 지원</strong>
+													<p class="spec-desc">지원&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>안전인증정보</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">인증구분</strong>
+													<p class="spec-desc">KC 안전인증&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">인증기관</strong>
+													<p class="spec-desc">한국기계전기전자시험연구원&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">인증번호</strong>
+													<p class="spec-desc">HU07310-22069&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>EMC</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">인증기관</strong>
+													<p class="spec-desc">국립전파연구원&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">인증번호</strong>
+													<p class="spec-desc">R-R-SEC-WA8000ARN&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>기본정보</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">제조자/수입자</strong>
+													<p class="spec-desc">삼성전자(주)&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">제조국</strong>
+													<p class="spec-desc">태국&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">동일모델의 출시년월</strong>
+													<p class="spec-desc">2022년 12월&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+				<dt>상품 기본정보</dt>
+				<dd>
+					<ol>
+						<li>
+								<strong class="spec-title">제품명</strong>
+								<p class="spec-desc">전기 세탁기</p>
+							</li>
+						<li>
+								<strong class="spec-title">제조자/수입자</strong>
+								<p class="spec-desc">삼성전자㈜</p>
+							</li>
+						<li>
+								<strong class="spec-title">제조국가</strong>
+								<p class="spec-desc">태국</p>
+							</li>
+						<li>
+								<strong class="spec-title">KC 인증 필 유무</strong>
+								<p class="spec-desc"><img src='//images.samsung.com/is/image/samsung/p5/sec/common/icon-kc.png?$ORIGIN_PNG$' alt='KC 인증 로고'> R-R-SEC-WA8000ARN, HU07310-22069</p>
+							</li>
+						<li>
+								<strong class="spec-title">동일모델의 출시년월</strong>
+								<p class="spec-desc">2022년 12월</p>
+							</li>
+						<li>
+								<strong class="spec-title">A/S 책임자와 전화번호</strong>
+								<p class="spec-desc">삼성전자서비스센터 / 1588-3366 </p>
+							</li>
+						<li>
+								<strong class="spec-title">품질보증기준</strong>
+								<p class="spec-desc">결함.하자 등에 따른 소비자피해에 대해서는 소비자분쟁해결기준(소비자기본법 제16조)에 따라 보상 가능 
+</p>
+							</li>
+						</ol>
+				</dd>
+			</dl>
+		</div>
+	<div class="layer-pop layer-normal layer-default specLayer active" name="specLayer" id="specLayer" tabindex="0" data-popup-layer="specLayer" data-focus="specLayer" aria-hidden="false" data-zindex="300" style="z-index: 300; display: none">
+		<div class="layer-header">
+			<h2></h2>
+		</div>
+		<div class="layer-content">
+			<p></p>
+		</div>
+		<button type="button" class="pop-close" data-focus-next="">팝업닫기</button>
+	</div>
+

@@ -1,0 +1,251 @@
+{
+ "pagination": {
+  "currentPage": 0,
+  "pageSize": 24,
+  "sort": "Best Seller",
+  "totalPages": 1,
+  "totalResults": 23
+ },
+ "products": [
+  {
+   "code": "WRFC5236RZ",
+   "baseProduct": "WRFC5236R",
+   "name": "36-inch Wide French Door Refrigerator with Dual Ice Makers - 23 cu. ft.",
+   "url": "/kitchen/refrigeration/refrigerators/french-door/p.36-inch-wide-french-door-refrigerator-with-dual-ice-makers-23-cu.-ft.wrfc5236rz.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$2,599.00",
+    "priceType": "BUY",
+    "value": 2599.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$2,599.00",
+    "priceType": "BUY",
+    "value": 2599.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "French-Door",
+    "pipedCategory": "Kitchen|Refrigeration|Refrigerators|French-Door",
+    "url": "/Kitchen/Refrigeration/Refrigerators/French-Door"
+   },
+   "color": {
+    "code": "JZ",
+    "name": "Fingerprint-Resistant Stainless Finish"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WRFC5036RW",
+   "baseProduct": "WRFC5036R",
+   "name": "36-inch Wide True Counter-Depth 3-Door French Door Refrigerator - 23.4 cu. ft.",
+   "url": "/kitchen/refrigeration/refrigerators/french-door/p.36-inch-wide-true-counter-depth-3-door-french-door-refrigerator-23.4-cu.-ft.wrfc5036rw.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$2,299.00",
+    "priceType": "BUY",
+    "value": 2299.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$2,299.00",
+    "priceType": "BUY",
+    "value": 2299.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "French-Door",
+    "pipedCategory": "Kitchen|Refrigeration|Refrigerators|French-Door",
+    "url": "/Kitchen/Refrigeration/Refrigerators/French-Door"
+   },
+   "color": {
+    "code": "WH",
+    "name": "White"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WRFC3036RV",
+   "baseProduct": "WRFC3036R",
+   "name": "36-inch Wide True Counter Depth 3-Door French Door Refrigerator - 24 cu. ft.",
+   "url": "/kitchen/refrigeration/refrigerators/french-door/p.36-inch-wide-true-counter-depth-3-door-french-door-refrigerator-24-cu.-ft.wrfc3036rv.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$2,299.00",
+    "priceType": "BUY",
+    "value": 2299.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$2,299.00",
+    "priceType": "BUY",
+    "value": 2299.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "French-Door",
+    "pipedCategory": "Kitchen|Refrigeration|Refrigerators|French-Door",
+    "url": "/Kitchen/Refrigeration/Refrigerators/French-Door"
+   },
+   "color": {
+    "code": "1F",
+    "name": "Black Stainless Finish"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WRF560SEHZ",
+   "baseProduct": "WRF560SEH",
+   "name": "30-inch Wide French Door Refrigerator - 20 cu. ft.",
+   "url": "/kitchen/refrigeration/refrigerators/french-door/p.30-inch-wide-french-door-refrigerator-20-cu.-ft.wrf560sehz.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$1,899.00",
+    "priceType": "BUY",
+    "value": 1899.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$1,899.00",
+    "priceType": "BUY",
+    "value": 1899.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "French-Door",
+    "pipedCategory": "Kitchen|Refrigeration|Refrigerators|French-Door",
+    "url": "/Kitchen/Refrigeration/Refrigerators/French-Door"
+   },
+   "color": {
+    "code": "EZ",
+    "name": "Fingerprint Resistant Stainless Steel"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WRQA59CNKZ",
+   "baseProduct": "WRQA59CNK",
+   "name": "36-inch Wide Counter Depth 4 Door Refrigerator - 19.4 cu. ft.",
+   "url": "/kitchen/refrigeration/refrigerators/french-door/p.36-inch-wide-counter-depth-4-door-refrigerator-19.4-cu.-ft.wrqa59cnkz.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$1,865.60",
+    "priceType": "BUY",
+    "value": 1865.6
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$1,865.60",
+    "priceType": "BUY",
+    "value": 1865.6
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "French-Door",
+    "pipedCategory": "Kitchen|Refrigeration|Refrigerators|French-Door",
+    "url": "/Kitchen/Refrigeration/Refrigerators/French-Door"
+   },
+   "color": {
+    "code": "JZ",
+    "name": "Fingerprint-Resistant Stainless Finish"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WRQC7836RZ",
+   "baseProduct": "WRQC7836R",
+   "name": "36-Inch Counter Depth 4 Door Refrigerator with Ice Maker in Door",
+   "url": "/kitchen/refrigeration/refrigerators/french-door/p.36-inch-counter-depth-4-door-refrigerator-with-ice-maker-in-door.wrqc7836rz.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$2,049.00",
+    "priceType": "BUY",
+    "value": 2049.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$2,049.00",
+    "priceType": "BUY",
+    "value": 2049.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "French-Door",
+    "pipedCategory": "Kitchen|Refrigeration|Refrigerators|French-Door",
+    "url": "/Kitchen/Refrigeration/Refrigerators/French-Door"
+   },
+   "color": {
+    "code": "EZ",
+    "name": "Fingerprint Resistant Stainless Steel"
+   },
+   "productIsOutlet": true,
+   "salesStatus": "40"
+  },
+  {
+   "code": "WRF560SMHV",
+   "baseProduct": "WRF560SMH",
+   "name": "30-inch Wide French Door Refrigerator - 20 cu. ft.",
+   "url": "/kitchen/refrigeration/refrigerators/french-door/p.30-inch-wide-french-door-refrigerator-20-cu.-ft.wrf560smhv.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$1,899.00",
+    "priceType": "BUY",
+    "value": 1899.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$1,899.00",
+    "priceType": "BUY",
+    "value": 1899.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "French-Door",
+    "pipedCategory": "Kitchen|Refrigeration|Refrigerators|French-Door",
+    "url": "/Kitchen/Refrigeration/Refrigerators/French-Door"
+   },
+   "color": {
+    "code": "A3",
+    "name": "Black Stainless"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WRFC2036RB",
+   "baseProduct": "WRFC2036R",
+   "name": "36-Inch Wide Counter-Depth French Door Bottom Mount Refrigerator - 20 cu. ft.",
+   "url": "/kitchen/refrigeration/refrigerators/french-door/p.36-inch-wide-counter-depth-french-door-bottom-mount-refrigerator-20-cu.-ft.wrfc2036rb.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$2,088.00",
+    "priceType": "BUY",
+    "value": 2088.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$2,088.00",
+    "priceType": "BUY",
+    "value": 2088.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "French-Door",
+    "pipedCategory": "Kitchen|Refrigeration|Refrigerators|French-Door",
+    "url": "/Kitchen/Refrigeration/Refrigerators/French-Door"
+   },
+   "color": {
+    "code": "BL",
+    "name": "Black"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  }
+ ]
+}

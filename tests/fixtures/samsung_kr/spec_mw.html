@@ -1,0 +1,331 @@
+<script>
+		$('button.spec-title').on("click", function(e){
+			e.preventDefault();
+			$('div[name="specLayer"] > .layer-header > h2').text(this.innerText);
+			$('div[name="specLayer"] > .layer-content > p').text(this.value);
+
+			let newId = $(this).data('popup-target');
+			$('div[name="specLayer"]').attr('id', newId);
+			$('div[name="specLayer"] > .pop-close').attr('data-focus-next', newId);
+			$('div[name="specLayer"]').attr('data-popup-layer', newId);
+			$('div[name="specLayer"]').attr('data-focus', newId);
+		});
+	</script>
+	<h3 class="spec-itm-title" id="cstrt-nm" ></h3>
+	<div class="spec-table">
+		<dl>
+						<dt>구분</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">구분</strong>
+													<p class="spec-desc">비스포크 전자레인지&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">설치 방식</strong>
+													<p class="spec-desc">프리스탠딩&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">정격 전압</strong>
+													<p class="spec-desc">220 V ~ 60 Hz&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>용량</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">용량</strong>
+													<p class="spec-desc">23&nbsp;L</p>
+												</li>
+								<li>
+										<strong class="spec-title">가용 용량</strong>
+													<p class="spec-desc">14&nbsp;L</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>도어</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">색상</strong>
+													<p class="spec-desc">글램 차콜&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">조작 방식</strong>
+													<p class="spec-desc">터치&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">디스플레이</strong>
+													<p class="spec-desc">LED (화이트)&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">도어 개폐 방식</strong>
+													<p class="spec-desc">Side swing (핸들)&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>제품 사양</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">조리실 크기(가로 × 높이 × 깊이)</strong>
+													<p class="spec-desc">330 x 211 x 324&nbsp;mm</p>
+												</li>
+								<li>
+										<strong class="spec-title">외관 크기(가로 × 높이 × 깊이)</strong>
+													<p class="spec-desc">489 x 275 x 363&nbsp;mm</p>
+												</li>
+								<li>
+										<strong class="spec-title">제품 중량</strong>
+													<p class="spec-desc">12.0&nbsp;kg</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>조리모드</dt>
+						<dd>
+							<ol>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer51" value="냉동된 식품을 빠르게 녹일때 사용하는 모드입니다. " aria-haspopup="true">
+													쾌속 해동</button>
+												<p class="spec-desc">2종 (육류, 생선류)&nbsp;</p>
+											</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer52" value="하고자 하는 요리에 맞게 자동으로 최적의 온도와 시간을 설정해주어 쉽고 빠르게 요리할 수 있는 모드입니다.  제품별로 적용되는 자동요리 메뉴가 다를 수 있습니다." aria-haspopup="true">
+													자동 조리</button>
+												<p class="spec-desc">16 개&nbsp;</p>
+											</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer53" value="버섯, 과일, 오징어, 호박, 무 등을 건조하거나 육포 조리 시 사용하는 모드입니다. " aria-haspopup="true">
+													건조</button>
+												<p class="spec-desc">없음&nbsp;</p>
+											</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer54" value="그릴로 바삭하게 전자레인지로 빠르게 조리하여 튀김요리를 빠르고 간편하게 할 수 있습니다. " aria-haspopup="true">
+													그릴 프라이</button>
+												<p class="spec-desc">없음&nbsp;</p>
+											</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer55" value="요구르트 제조 및 빵 반죽(식빵, 크루아상 등)을 발효할 때 사용하는 모드입니다. " aria-haspopup="true">
+													발효</button>
+												<p class="spec-desc">없음&nbsp;</p>
+											</li>
+								<li>
+										<strong class="spec-title">베이킹</strong>
+													<p class="spec-desc">없음&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">로스팅</strong>
+													<p class="spec-desc">없음&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">전자레인지</strong>
+													<p class="spec-desc">있음&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">찜</strong>
+													<p class="spec-desc">없음&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">오븐</strong>
+													<p class="spec-desc">없음&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">에어프라이</strong>
+													<p class="spec-desc">없음&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>액세서리</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">스팀 쿠커</strong>
+													<p class="spec-desc">없음&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">발열팬</strong>
+													<p class="spec-desc">없음&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">석쇠</strong>
+													<p class="spec-desc">없음&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">멀티팬</strong>
+													<p class="spec-desc">없음&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>스마트</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">WiFi 내장</strong>
+													<p class="spec-desc">없음&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">SmartThings 지원</strong>
+													<p class="spec-desc">미지원&nbsp;</p>
+												</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer73" value="간편식 바코드를 스캔하면 최적의 레시피가 전자레인지로 전송됩니다. 모드, 온도, 시간 세팅없이 스캔만으로 맛있는 요리가 가능합니다. " aria-haspopup="true">
+													Scan Cook</button>
+												<p class="spec-desc">없음&nbsp;</p>
+											</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer74" value="레시피 검색/추천부터 간편식 구매까지 가능한 삼성만의 차별화된 서비스입니다. " aria-haspopup="true">
+													SmartThings Cooking 서비스</button>
+												<p class="spec-desc">없음&nbsp;</p>
+											</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>인증정보</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">인증기관(전기용품안전)</strong>
+													<p class="spec-desc">한국기계전기전자시험연구원&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">인증번호(전기용품안전)</strong>
+													<p class="spec-desc">HU07445-11007&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">인증기관(전자파적합성)</strong>
+													<p class="spec-desc">국립전파연구원&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">인증번호(전자파적합성)</strong>
+													<p class="spec-desc">MSIP-REI-SEC-ECOSOLO&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>기본정보</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">상호명/제조자</strong>
+													<p class="spec-desc">삼성전자㈜&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">제조국</strong>
+													<p class="spec-desc">말레이시아&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>소비전력</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">전자레인지</strong>
+													<p class="spec-desc">1100&nbsp;W</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>조리실</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">턴테이블</strong>
+													<p class="spec-desc">있음&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">항균 조리실</strong>
+													<p class="spec-desc">세라믹&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>열원</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">MWO 출력</strong>
+													<p class="spec-desc">700&nbsp;W</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>청소기능</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">스팀 청소</strong>
+													<p class="spec-desc">없음&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">탈취</strong>
+													<p class="spec-desc">있음&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+				<dt>상품 기본정보</dt>
+				<dd>
+					<ol>
+						<li>
+								<strong class="spec-title">제품명</strong>
+								<p class="spec-desc">전자레인지</p>
+							</li>
+						<li>
+								<strong class="spec-title">제조자/수입자</strong>
+								<p class="spec-desc">삼성전자㈜</p>
+							</li>
+						<li>
+								<strong class="spec-title">제조국가</strong>
+								<p class="spec-desc">말레이시아</p>
+							</li>
+						<li>
+								<strong class="spec-title">KC 인증 필 유무</strong>
+								<p class="spec-desc"><img src='//images.samsung.com/is/image/samsung/p5/sec/common/icon-kc.png?$ORIGIN_PNG$' alt='KC 인증 로고'>HU07445-11007, MSIP-REI-SEC-ECOSOLO</p>
+							</li>
+						<li>
+								<strong class="spec-title">동일모델의 출시년월</strong>
+								<p class="spec-desc">2020년 2월</p>
+							</li>
+						<li>
+								<strong class="spec-title">A/S 책임자와 전화번호</strong>
+								<p class="spec-desc">삼성전자서비스센터 / 1588-3366</p>
+							</li>
+						<li>
+								<strong class="spec-title">품질보증기준</strong>
+								<p class="spec-desc">결함·하자 등에 따른 소비자피해에 대해서는 소비자분쟁해결기준(소비자기본법 제16조)에 따라 보상가능</p>
+							</li>
+						</ol>
+				</dd>
+			</dl>
+		</div>
+	<div class="layer-pop layer-normal layer-default specLayer active" name="specLayer" id="specLayer" tabindex="0" data-popup-layer="specLayer" data-focus="specLayer" aria-hidden="false" data-zindex="300" style="z-index: 300; display: none">
+		<div class="layer-header">
+			<h2></h2>
+		</div>
+		<div class="layer-content">
+			<p></p>
+		</div>
+		<button type="button" class="pop-close" data-focus-next="">팝업닫기</button>
+	</div>
+

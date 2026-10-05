@@ -1,0 +1,478 @@
+{
+ "specSections": [
+  {
+   "name": "Certifications",
+   "count": 5,
+   "specs": [
+    {
+     "name": "ADA Compliant",
+     "value": "ADA Height and Side and Front Reach Compliant",
+     "description": null
+    },
+    {
+     "name": "CEE Tier Rating",
+     "value": "Not Rated",
+     "description": null
+    },
+    {
+     "name": "Energy Star\u00ae Qualified",
+     "value": "No",
+     "description": null
+    },
+    {
+     "name": "Prop 65",
+     "value": "<span class=\"warning-box\"><img src=\"/etc.clientlibs/kitchenaid/clientlibs/global/resources/images/warning.svg\" alt=\"Warning\" class=\"warning-img\" /><span class=\"warning-message\">CALIFORNIA RESIDENTS ONLY - WARNING:</span>\n</span><span class=\"second-line\"><span class=\"warning-effect\">Cancer and Reproductive Harm-</span><a class=\"warning-link\"href=\"https://www.P65Warnings.ca.gov/\" target=\"_blank\">www.P65Warnings.ca.gov</a>\n</span>",
+     "description": null
+    },
+    {
+     "name": "UL",
+     "value": "Yes",
+     "description": null
+    }
+   ],
+   "code": "Refrigeration@Certifications",
+   "showdimensionimage": false
+  },
+  {
+   "name": "Exterior Details",
+   "count": 11,
+   "specs": [
+    {
+     "name": "Base Grille Color",
+     "value": "Grey",
+     "description": null
+    },
+    {
+     "name": "Cabinet Color",
+     "value": "Grey",
+     "description": null
+    },
+    {
+     "name": "Cabinet Finish",
+     "value": "Textured",
+     "description": null
+    },
+    {
+     "name": "Counter Depth",
+     "value": "No",
+     "description": null
+    },
+    {
+     "name": "Door Color",
+     "value": "Fingerprint Resistant Stainless Finish",
+     "description": null
+    },
+    {
+     "name": "Door Finish",
+     "value": "Smooth",
+     "description": null
+    },
+    {
+     "name": "Door Style",
+     "value": "Contour",
+     "description": null
+    },
+    {
+     "name": "Handle Color",
+     "value": "Stainless Steel",
+     "description": null
+    },
+    {
+     "name": "Handle Material",
+     "value": "Stainless Steel",
+     "description": null
+    },
+    {
+     "name": "Handle Type",
+     "value": "Reach Through Handle",
+     "description": null
+    },
+    {
+     "name": "Hidden Hinge",
+     "value": "Yes",
+     "description": null
+    }
+   ],
+   "code": "Refrigeration@Exterior Details",
+   "showdimensionimage": false
+  },
+  {
+   "name": "Details",
+   "count": 4,
+   "specs": [
+    {
+     "name": "Door Style Configuration",
+     "value": "Side-by-Side",
+     "description": null
+    },
+    {
+     "name": "Installation Configuration",
+     "value": "Freestanding",
+     "description": null
+    },
+    {
+     "name": "Refrigeration Configuration",
+     "value": "Refrigerator",
+     "description": null
+    },
+    {
+     "name": "Refrigerator Type",
+     "value": "Side-by-Side",
+     "description": null
+    }
+   ],
+   "code": "Refrigeration@Details",
+   "showdimensionimage": false
+  },
+  {
+   "name": "Dimensions",
+   "count": 16,
+   "specs": [
+    {
+     "name": "Cabinet Width",
+     "value": "35.5 in",
+     "description": null
+    },
+    {
+     "name": "Capacity",
+     "value": "24.55 cu. ft.",
+     "description": null
+    },
+    {
+     "name": "Depth",
+     "value": "33.625 in",
+     "description": null
+    },
+    {
+     "name": "Depth Closed Excluding Handles",
+     "value": "31.625 in",
+     "description": null
+    },
+    {
+     "name": "Depth Closed Including Handles",
+     "value": "33.625 in",
+     "description": null
+    },
+    {
+     "name": "Depth Excluding Doors",
+     "value": "28 in",
+     "description": null
+    },
+    {
+     "name": "Depth With Door Open 90 Degree",
+     "value": "49.313 in",
+     "description": null
+    },
+    {
+     "name": "Freezer Capacity Volume",
+     "value": "9.11 cu. ft.",
+     "description": null
+    },
+    {
+     "name": "Gross Weight",
+     "value": "238 lbs",
+     "description": null
+    },
+    {
+     "name": "Height",
+     "value": "69.625 in",
+     "description": null
+    },
+    {
+     "name": "Height To Top Of Cabinet",
+     "value": "68.625 in",
+     "description": null
+    },
+    {
+     "name": "Height To Top Of Door Hinge",
+     "value": "69.25 in",
+     "description": null
+    },
+    {
+     "name": "Net Weight",
+     "value": "223 lbs",
+     "description": null
+    },
+    {
+     "name": "Refrigerator Capacity Volume",
+     "value": "15.44, 15.44",
+     "description": null
+    },
+    {
+     "name": "Total Refrigerator Capacity Volume",
+     "value": "24.5 cu. ft.",
+     "description": null
+    },
+    {
+     "name": "Width",
+     "value": "35.875 in",
+     "description": null
+    }
+   ],
+   "code": "Refrigeration@Dimensions",
+   "showdimensionimage": true
+  },
+  {
+   "name": "Icemaker Details",
+   "count": 3,
+   "specs": [
+    {
+     "name": "Icemaker",
+     "value": "Factory Installed",
+     "description": null
+    },
+    {
+     "name": "Icemaker Location",
+     "value": "Freezer",
+     "description": null
+    },
+    {
+     "name": "Types of Ice",
+     "value": "Crushed/Cubed",
+     "description": null
+    }
+   ],
+   "code": "Refrigeration@Icemaker Details",
+   "showdimensionimage": false
+  },
+  {
+   "name": "Filter Details",
+   "count": 6,
+   "specs": [
+    {
+     "name": "Air Filter Indicator/Reset",
+     "value": "No",
+     "description": null
+    },
+    {
+     "name": "Fresh Flow Air Filter Included",
+     "value": "No",
+     "description": null
+    },
+    {
+     "name": "Produce Preserver",
+     "value": "No",
+     "description": null
+    },
+    {
+     "name": "Water Filter Indicator/Reset",
+     "value": "Yes",
+     "description": null
+    },
+    {
+     "name": "Water Filter Location",
+     "value": "Exterior",
+     "description": null
+    },
+    {
+     "name": "Water Filter Part Number",
+     "value": "EDR1RXD1",
+     "description": null
+    }
+   ],
+   "code": "Refrigeration@Filter Details",
+   "showdimensionimage": false
+  },
+  {
+   "name": "Controls",
+   "count": 7,
+   "specs": [
+    {
+     "name": "Automatic Defrost",
+     "value": "Yes",
+     "description": null
+    },
+    {
+     "name": "Control Location",
+     "value": "Exterior Dispenser",
+     "description": null
+    },
+    {
+     "name": "Control Lockout",
+     "value": "No",
+     "description": null
+    },
+    {
+     "name": "Cooling Type",
+     "value": "Single Evaporator",
+     "description": null
+    },
+    {
+     "name": "Door Ajar/Open Alarm",
+     "value": "No",
+     "description": null
+    },
+    {
+     "name": "LCD Touch Screen",
+     "value": "No",
+     "description": null
+    },
+    {
+     "name": "Max Cool/Fast Cool",
+     "value": "No",
+     "description": null
+    }
+   ],
+   "code": "Refrigeration@Controls",
+   "showdimensionimage": false
+  },
+  {
+   "name": "Freezer Details",
+   "count": 6,
+   "specs": [
+    {
+     "name": "Freezer Door Bins",
+     "value": "1 Fixed Partial, 3 Fixed Full-Width",
+     "description": null
+    },
+    {
+     "name": "Freezer Door Type",
+     "value": "Swing",
+     "description": null
+    },
+    {
+     "name": "Freezer Drawer/Basket",
+     "value": "1 Full Width Lower Plastic",
+     "description": null
+    },
+    {
+     "name": "Freezer Lighting",
+     "value": "LED",
+     "description": null
+    },
+    {
+     "name": "Freezer Number of Shelves",
+     "value": "3",
+     "description": null
+    },
+    {
+     "name": "Freezer Shelves",
+     "value": "3 Fixed Full Width Glass",
+     "description": null
+    }
+   ],
+   "code": "Refrigeration@Freezer Details",
+   "showdimensionimage": false
+  },
+  {
+   "name": "Refrigerator Details",
+   "count": 10,
+   "specs": [
+    {
+     "name": "Conventional Shelves",
+     "value": "1 Fixed Full-Width Glass, 3 Adjustable Full-Width Glass",
+     "description": null
+    },
+    {
+     "name": "Humidity-Controlled Crispers",
+     "value": "1 Full-Width",
+     "description": null
+    },
+    {
+     "name": "Non Climate Control Drawers",
+     "value": "1 Full Width",
+     "description": null
+    },
+    {
+     "name": "Number of Doors",
+     "value": "2",
+     "description": null
+    },
+    {
+     "name": "Number of Interior Shelves",
+     "value": "4",
+     "description": null
+    },
+    {
+     "name": "Pantry Drawer",
+     "value": "No",
+     "description": null
+    },
+    {
+     "name": "Refrigerator Door Bins",
+     "value": "1 Dairy, 1 Fixed Full-Width, 3 Adjustable Gallon",
+     "description": null
+    },
+    {
+     "name": "Refrigerator Lighting",
+     "value": "LED",
+     "description": null
+    },
+    {
+     "name": "Supplementary Containers",
+     "value": "Utility Compartment, Utility Compartment",
+     "description": null
+    },
+    {
+     "name": "Temperature-Controlled Drawers",
+     "value": "No",
+     "description": null
+    }
+   ],
+   "code": "Refrigeration@Refrigerator Details",
+   "showdimensionimage": false
+  },
+  {
+   "name": "Smart Compatibility",
+   "count": 2,
+   "specs": [
+    {
+     "name": "Connectivity",
+     "value": "No",
+     "description": null
+    },
+    {
+     "name": "Works With",
+     "value": "No",
+     "description": null
+    }
+   ],
+   "code": "Refrigeration@Smart Compatibility",
+   "showdimensionimage": false
+  },
+  {
+   "name": "Dispenser Details",
+   "count": 2,
+   "specs": [
+    {
+     "name": "Dispenser Options",
+     "value": "Filtered Water, Ice Dispenser Lock, Night Light",
+     "description": null
+    },
+    {
+     "name": "Dispenser Type",
+     "value": "Exterior Ice and Water",
+     "description": null
+    }
+   ],
+   "code": "Refrigeration@Dispenser Details",
+   "showdimensionimage": false
+  },
+  {
+   "name": "Electrical",
+   "count": 1,
+   "specs": [
+    {
+     "name": "Hz",
+     "value": "60",
+     "description": null
+    }
+   ],
+   "code": "Refrigeration@Electrical",
+   "showdimensionimage": false
+  },
+  {
+   "name": "Features",
+   "count": 1,
+   "specs": [
+    {
+     "name": "Refrigerator Features",
+     "value": "ADA Compliant, Adjustable Gallon Door Bins, Can Caddy, Exterior Ice and Water Dispenser, Humidity-Controlled Crispers, LED Lighting, Whirlpool Handle",
+     "description": null
+    }
+   ],
+   "code": "Refrigeration@Features",
+   "showdimensionimage": false
+  }
+ ]
+}

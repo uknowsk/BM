@@ -1,0 +1,12 @@
+# Gauge - competitor appliance benchmarking (versions intentionally not pinned; developed on Python 3.14)
+fastapi
+uvicorn
+playwright
+pymupdf
+pydantic
+requests
+openpyxl
+pillow
+pyyaml
+# legacy Streamlit front-end (app.py), optional
+streamlit

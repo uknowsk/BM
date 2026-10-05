@@ -1,0 +1,350 @@
+<script>
+		$('button.spec-title').on("click", function(e){
+			e.preventDefault();
+			$('div[name="specLayer"] > .layer-header > h2').text(this.innerText);
+			$('div[name="specLayer"] > .layer-content > p').text(this.value);
+
+			let newId = $(this).data('popup-target');
+			$('div[name="specLayer"]').attr('id', newId);
+			$('div[name="specLayer"] > .pop-close').attr('data-focus-next', newId);
+			$('div[name="specLayer"]').attr('data-popup-layer', newId);
+			$('div[name="specLayer"]').attr('data-focus', newId);
+		});
+	</script>
+	<h3 class="spec-itm-title" id="cstrt-nm" >x</h3>
+	<div class="spec-table">
+		<dl>
+						<dt>규격</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">제품 타입</strong>
+													<p class="spec-desc">Bespoke AI 하이브리드&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">설치 타입</strong>
+													<p class="spec-desc">키친핏 Max&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">크기(가로 × 높이 × 깊이)</strong>
+													<p class="spec-desc">912 × 1,853 × 683&nbsp;mm</p>
+												</li>
+								<li>
+										<strong class="spec-title">무게</strong>
+													<p class="spec-desc">142&nbsp;kg</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>용량</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">전체 용량</strong>
+													<p class="spec-desc">602&nbsp;ℓ</p>
+												</li>
+								<li>
+										<strong class="spec-title">냉장실 용량</strong>
+													<p class="spec-desc">367&nbsp;ℓ</p>
+												</li>
+								<li>
+										<strong class="spec-title">냉동실 용량</strong>
+													<p class="spec-desc">235&nbsp;ℓ</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>성능</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">에너지소비효율등급</strong>
+													<p class="spec-desc">2등급&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">소비 전력(kWh/월)</strong>
+													<p class="spec-desc">38.3&nbsp;kWh/월</p>
+												</li>
+								<li>
+										<strong class="spec-title">정격 전압</strong>
+													<p class="spec-desc">220V / 60Hz&nbsp;</p>
+												</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer34" value="컴프레서는 '냉장고의 심장' 또는 '냉장고의 엔진'으로 불리며, 신선도를 유지하기 위해 냉매를 압축하고 순환시켜 냉장에 필요한 냉기를 만들어내는 역할을 합니다." aria-haspopup="true">
+													컴프레서</button>
+												<p class="spec-desc">AI 인버터 컴프레서&nbsp;</p>
+											</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer35" value="냉매는 냉장고 내 냉각 사이클을 순환하며, 온도가 낮은 곳에서는 기화하여 주위에서 열을 흡수하고 온도가 높은 곳에서는 응축하여 열을 방출하는 역할을 합니다." aria-haspopup="true">
+													냉매</button>
+												<p class="spec-desc">R600a&nbsp;</p>
+											</li>
+								<li>
+										<strong class="spec-title">냉각방식</strong>
+													<p class="spec-desc">하이브리드 쿨링(컴프레서+펠티어 소자)&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>주요 기능</dt>
+						<dd>
+							<ol>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer41" value="도어를 열지 않아도 가까이 다가가면 은은한 조명이 켜져 냉장고 안을 볼 수 있는 기능입니다." aria-haspopup="true">
+													투명 도어</button>
+												<p class="spec-desc">없음&nbsp;</p>
+											</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer42" value="손등, 손가락 등으로 냉장고 도어의 센서를 가볍게 터치하여, 양 손 가득 식재료를 들고 있어도 손쉽게 냉장실 문을 열 수 있는 기능입니다." aria-haspopup="true">
+													자동 문열림</button>
+												<p class="spec-desc">오토도어&nbsp;</p>
+											</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer43" value="투명 도어 전체를 열지 않고 원하는 식재료를 꺼내 도어를 활짝 열고 꺼낼 때보다 냉장고 냉기 손실은 줄이고 사용의 편리함은 높인 기능입니다." aria-haspopup="true">
+													투명 쇼케이스</button>
+												<p class="spec-desc">없음&nbsp;</p>
+											</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer44" value="베버리지 센터 위쪽 공간으로, 2가지 모드로 온도 조절이 가능해 와인/디저트를 최적의 온도로 보관할 수 있습니다." aria-haspopup="true">
+													베버리지존</button>
+												<p class="spec-desc">없음&nbsp;</p>
+											</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer45" value="냉장고 도어 전체를 열지 않고 원하는 식재료를 꺼내 도어를 활짝 열고 꺼낼 때보다 냉장고 냉기 손실은 줄이고 사용의 편리함은 높인 기능입니다." aria-haspopup="true">
+													푸드 쇼케이스</button>
+												<p class="spec-desc">없음&nbsp;</p>
+											</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer46" value="냉장실 벽면에 적용된 메탈쿨링 사양으로, 구석구석까지 차가운 냉기를 유지해 냉장고 내를 일정한 온도로 유지시켜 줍니다." aria-haspopup="true">
+													쿨링커버</button>
+												<p class="spec-desc">메탈 쿨링커버&nbsp;</p>
+											</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer47" value="보관하는 식재료에 맞게 냉장고 내 특정 공간을 세팅할 수 있어 최적의 상태로 보관할 수 있습니다." aria-haspopup="true">
+													멀티 팬트리</button>
+												<p class="spec-desc">있음&nbsp;</p>
+											</li>
+								<li>
+										<strong class="spec-title">탈취기</strong>
+													<p class="spec-desc">UV청정탈취기&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">디스플레이 타입</strong>
+													<p class="spec-desc">22.5cm 패밀리허브&nbsp;</p>
+												</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer410" value="냉장고 내부 선반에 넣고 빼는 식재료를 내부 탑재 카메라로 촬영하고 종류를 인식해 푸드 리스트를 자동으로 만들어주는 기능입니다." aria-haspopup="true">
+													AI 푸드매니저</button>
+												<p class="spec-desc">있음&nbsp;</p>
+											</li>
+								<li>
+										<strong class="spec-title">제빙기</strong>
+													<p class="spec-desc">빅 아이스메이커&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">얼음 종류</strong>
+													<p class="spec-desc">큐브&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>디자인</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">제품 디자인</strong>
+													<p class="spec-desc">비스포크&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">패널 교체</strong>
+													<p class="spec-desc">불가능&nbsp;</p>
+												</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer53" value="냉장고에 가까이 다가가면 은은한 조명이 켜져 안을 볼 수 있게 해주는 기능입니다." aria-haspopup="true">
+													웰컴 라이팅</button>
+												<p class="spec-desc">없음&nbsp;</p>
+											</li>
+								<li>
+										<strong class="spec-title">도어 색상</strong>
+													<p class="spec-desc">클린화이트&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">도어 핸들</strong>
+													<p class="spec-desc">가로 핸들&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>냉장실 사양</dt>
+						<dd>
+							<ol>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer61" value="냉장고 내부를 밝게 비춰주는 LED 조명으로, 기존 조명보다 냉장고 내부를 고르게 비춰 어두운 곳에서도 쉽게 물건을 찾을 수 있습니다." aria-haspopup="true">
+													LED 라이팅</button>
+												<p class="spec-desc">Wide TOP 라이팅&nbsp;</p>
+											</li>
+								<li>
+										<strong class="spec-title">선반 개수(전체)</strong>
+													<p class="spec-desc">4&nbsp;개</p>
+												</li>
+								<li>
+										<strong class="spec-title">선반 개수(일반 선반)</strong>
+													<p class="spec-desc">3&nbsp;개</p>
+												</li>
+								<li>
+										<strong class="spec-title">선반 개수(접이선반)</strong>
+													<p class="spec-desc">1개&nbsp;</p>
+												</li>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer65" value="보관하는 식재료에 맞게 냉장고 내 특정 공간을 세팅할 수 있어 최적의 상태로 보관할 수 있습니다." aria-haspopup="true">
+													멀티 팬트리</button>
+												<p class="spec-desc">1개&nbsp;</p>
+											</li>
+								<li>
+										<strong class="spec-title">박스 개수(전체)</strong>
+													<p class="spec-desc">2&nbsp;개</p>
+												</li>
+								<li>
+										<strong class="spec-title">긴채소 보관실</strong>
+													<p class="spec-desc">없음&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">도어빈 개수(전체)</strong>
+													<p class="spec-desc">6&nbsp;개</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>냉동실 사양</dt>
+						<dd>
+							<ol>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer71" value="냉장고 내부를 밝게 비춰주는 LED 조명으로, 기존 조명보다 냉장고 내부를 고르게 비춰 어두운 곳에서도 쉽게 물건을 찾을 수 있습니다." aria-haspopup="true">
+													LED 라이팅</button>
+												<p class="spec-desc">TOP 라이팅&nbsp;</p>
+											</li>
+								<li>
+										<strong class="spec-title">선반 개수(전체)</strong>
+													<p class="spec-desc">4개&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">박스 개수(전체)</strong>
+													<p class="spec-desc">2개&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">도어빈 개수(전체)</strong>
+													<p class="spec-desc">0개&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>스마트</dt>
+						<dd>
+							<ol>
+								<li>
+										<button type="button" class="spec-title" data-popup-target="specLayer81" value="당사 음성 인식 서비스로 인공지능을 통한 대화가 가능하게끔 설계된 프로그램이며, 음성으로 제품을 제어할 수 있는 역할을 합니다" aria-haspopup="true">
+													Bixby</button>
+												<p class="spec-desc">지원&nbsp;</p>
+											</li>
+								<li>
+										<strong class="spec-title">WiFi</strong>
+													<p class="spec-desc">지원&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>앱 연결</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">SmartThings 모바일 앱 지원</strong>
+													<p class="spec-desc">지원&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+						<dt>안전인증정보</dt>
+						<dd>
+							<ol>
+								<li>
+										<strong class="spec-title">전기용품안전인증</strong>
+													<p class="spec-desc">전기용품안전인증&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">인증기관(전기용품안전)</strong>
+													<p class="spec-desc">한국산업기술시험원&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">인증번호(전기용품안전)</strong>
+													<p class="spec-desc">SE07003-24002&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">전자파적합성등록</strong>
+													<p class="spec-desc">전자파적합성등록&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">인증기관(전자파적합성)</strong>
+													<p class="spec-desc">국립전파연구원&nbsp;</p>
+												</li>
+								<li>
+										<strong class="spec-title">인증번호(전자파적합성)</strong>
+													<p class="spec-desc">R-R-SEC-RM90F64E, R-C-SEC-WCP730M, R-C-SEC-CDAU210E&nbsp;</p>
+												</li>
+								</ol>
+						</dd>
+					</dl>
+				<dl>
+				<dt>상품 기본정보</dt>
+				<dd>
+					<ol>
+						<li>
+								<strong class="spec-title">제품명</strong>
+								<p class="spec-desc">전기냉장 · 냉동기기</p>
+							</li>
+						<li>
+								<strong class="spec-title">제조자/수입자</strong>
+								<p class="spec-desc">삼성전자㈜</p>
+							</li>
+						<li>
+								<strong class="spec-title">제조국가</strong>
+								<p class="spec-desc">대한민국</p>
+							</li>
+						<li>
+								<strong class="spec-title">KC 인증 필 유무</strong>
+								<p class="spec-desc"><img src='//images.samsung.com/is/image/samsung/p5/sec/common/icon-kc.png?$ORIGIN_PNG$' alt='KC 인증 로고'>SE07003-24002, R-R-SEC-RM90F64E, R-C-SEC-WCP730M, R-C-SEC-CDAU210E</p>
+							</li>
+						<li>
+								<strong class="spec-title">동일모델의 출시년월</strong>
+								<p class="spec-desc">2026년 3월</p>
+							</li>
+						<li>
+								<strong class="spec-title">A/S 책임자와 전화번호</strong>
+								<p class="spec-desc">삼성전자서비스센터 / 1588-3366</p>
+							</li>
+						<li>
+								<strong class="spec-title">품질보증기준</strong>
+								<p class="spec-desc">결함·하자 등에 따른 소비자피해에 대해서는 소비자분쟁해결기준(소비자기본법 제16조)에 따라 보상가능</p>
+							</li>
+						</ol>
+				</dd>
+			</dl>
+		</div>
+	<div class="layer-pop layer-normal layer-default specLayer active" name="specLayer" id="specLayer" tabindex="0" data-popup-layer="specLayer" data-focus="specLayer" aria-hidden="false" data-zindex="300" style="z-index: 300; display: none">
+		<div class="layer-header">
+			<h2></h2>
+		</div>
+		<div class="layer-content">
+			<p></p>
+		</div>
+		<button type="button" class="pop-close" data-focus-next="">팝업닫기</button>
+	</div>
+

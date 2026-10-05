@@ -1,0 +1,191 @@
+{
+ "pagination": {
+  "currentPage": 0,
+  "pageSize": 24,
+  "sort": "Best Seller",
+  "totalPages": 2,
+  "totalResults": 37
+ },
+ "products": [
+  {
+   "code": "WED6150PB",
+   "baseProduct": "WED6150P",
+   "name": "7.0 Cu. Ft. Whirlpool\u00ae Top Load Electric Dryer with Moisture Sensor",
+   "url": "/laundry/dryers/electric/p.7.0-cu.-ft.-whirlpool-top-load-electric-dryer-with-moisture-sensor.wed6150pb.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$799.00",
+    "priceType": "BUY",
+    "value": 799.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$799.00",
+    "priceType": "BUY",
+    "value": 799.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Electric",
+    "pipedCategory": "Laundry|Dryers|Electric",
+    "url": "/Laundry/Dryers/Electric"
+   },
+   "color": {
+    "code": "VA",
+    "name": "Volcano Black"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WED4950HW",
+   "baseProduct": "WED4950H",
+   "name": "7.0 cu. ft. Top Load Electric Dryer with AutoDry\u2122 Drying System",
+   "url": "/laundry/dryers/electric/p.7.0-cu.-ft.-top-load-electric-dryer-with-autodry-drying-system.wed4950hw.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$499.99",
+    "priceType": "BUY",
+    "value": 499.99
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$499.99",
+    "priceType": "BUY",
+    "value": 499.99
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Electric",
+    "pipedCategory": "Laundry|Dryers|Electric",
+    "url": "/Laundry/Dryers/Electric"
+   },
+   "color": {
+    "code": "WH",
+    "name": "White"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WED5010LW",
+   "baseProduct": "WED5010L",
+   "name": "7.0 Cu. Ft. Top Load Electric Moisture Sensing Dryer",
+   "url": "/laundry/dryers/electric/p.7.0-cu.-ft.-top-load-electric-moisture-sensing-dryer.wed5010lw.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$649.00",
+    "priceType": "BUY",
+    "value": 649.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$649.00",
+    "priceType": "BUY",
+    "value": 649.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Electric",
+    "pipedCategory": "Laundry|Dryers|Electric",
+    "url": "/Laundry/Dryers/Electric"
+   },
+   "color": {
+    "code": "WH",
+    "name": "White"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WGD5010LW",
+   "baseProduct": "WGD5010L",
+   "name": "7.0 Cu. Ft. Top Load Gas Moisture Sensing Dryer",
+   "url": "/laundry/dryers/gas/p.7.0-cu.-ft.-top-load-gas-moisture-sensing-dryer.wgd5010lw.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$749.00",
+    "priceType": "BUY",
+    "value": 749.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$749.00",
+    "priceType": "BUY",
+    "value": 749.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Gas",
+    "pipedCategory": "Laundry|Dryers|Gas",
+    "url": "/Laundry/Dryers/Gas"
+   },
+   "color": {
+    "code": "WH",
+    "name": "White"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WED4720RW",
+   "baseProduct": "WED4720R",
+   "name": "7.4 cu. ft. ENERGY STAR\u00ae Front Load Electric Dryer with Wrinkle Shield\u2122 Option",
+   "url": "/laundry/dryers/electric/p.7.4-cu.-ft.-energy-star-front-load-electric-dryer-with-wrinkle-shield-option.wed4720rw.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$729.00",
+    "priceType": "BUY",
+    "value": 729.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$729.00",
+    "priceType": "BUY",
+    "value": 729.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Electric",
+    "pipedCategory": "Laundry|Dryers|Electric",
+    "url": "/Laundry/Dryers/Electric"
+   },
+   "color": {
+    "code": "WH",
+    "name": "White"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WED8620HC",
+   "baseProduct": "WED8620H",
+   "name": "7.4 cu. ft. Front Load Electric Dryer with Steam Cycles",
+   "url": "/laundry/laundry-sets/high-efficiency-front-load/p.7.4-cu.-ft.-front-load-electric-dryer-with-steam-cycles.wed8620hc.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$999.00",
+    "priceType": "BUY",
+    "value": 999.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$999.00",
+    "priceType": "BUY",
+    "value": 999.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "High-Efficiency-Front-Load",
+    "pipedCategory": "Laundry|Laundry-Sets|High-Efficiency-Front-Load",
+    "url": "/Laundry/Laundry-Sets/High-Efficiency-Front-Load"
+   },
+   "color": {
+    "code": "C6",
+    "name": "Chrome Shadow"
+   },
+   "productIsOutlet": true,
+   "salesStatus": "40"
+  }
+ ]
+}

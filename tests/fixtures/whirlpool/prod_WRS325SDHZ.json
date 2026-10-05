@@ -1,0 +1,106 @@
+{
+ "code": "WRS325SDHZ",
+ "name": "36-inch Wide Side-by-Side Refrigerator - 25 cu. ft.",
+ "price": {
+  "currencyIso": "USD",
+  "formattedValue": "$1,399.00",
+  "priceType": "BUY",
+  "value": 1399.0
+ },
+ "url": "/kitchen/refrigeration/refrigerators/side-by-side/p.36-inch-wide-side-by-side-refrigerator-25-cu.-ft.wrs325sdhz.html",
+ "color": {
+  "code": "JZ",
+  "name": "Fingerprint-Resistant Stainless Finish"
+ },
+ "brand": "Whirlpool",
+ "categories": [
+  {
+   "code": "KitchenRefrigerationRefrigeratorsSide-by-Side",
+   "pipedCategory": "Kitchen|Refrigeration|Refrigerators|Side-by-Side",
+   "url": "/Kitchen/Refrigeration/Refrigerators/Side-by-Side/c/KitchenRefrigerationRefrigeratorsSide-by-Side"
+  },
+  {
+   "code": "KitchenKitchenCollectionsFingerprintResistantStainlessSteel",
+   "pipedCategory": "Kitchen|Kitchen-Collections|Fingerprint-Resistant-Stainless-Steel",
+   "url": "/Kitchen/Kitchen-Collections/Fingerprint-Resistant-Stainless-Steel/c/KitchenKitchenCollectionsFingerprintResistantStainlessSteel"
+  },
+  {
+   "code": "SeasonalSales",
+   "pipedCategory": "Seasonal-Sales",
+   "url": "/Seasonal-Sales/c/SeasonalSales"
+  }
+ ],
+ "primaryCategory": {
+  "code": "Side-by-Side",
+  "pipedCategory": "Kitchen|Refrigeration|Refrigerators|Side-by-Side",
+  "url": "/Kitchen/Refrigeration/Refrigerators/Side-by-Side"
+ },
+ "productFeature": [
+  {
+   "code": "FRAMELESSGLASSSHELVES7",
+   "title": "Frameless Glass Shelves",
+   "description": "Store more items on each shelf with wall-to-wall frameless glass shelves, which offer greater storage flexibility."
+  },
+  {
+   "code": "ADJUSTABLEGALLONDOORBINS3",
+   "title": "Adjustable Gallon Door Bins",
+   "description": "Move these adjustable bins anywhere in the door for increased loading flexibility when and where you need it."
+  },
+  {
+   "code": "DELIDRAWER5",
+   "title": "Deli Drawer",
+   "description": "Store plenty of meat and cheese with a deli drawer."
+  },
+  {
+   "code": "EXTERIORICEANDWATERDISPENSERWITHEVERYDROPWATERFILTRATION",
+   "title": "Exterior Ice and Water Dispenser with EveryDrop\u2122 Water Filtration",
+   "description": "Access fresh filtered water and ice without ever opening the refrigerator door using dual pad dispensers."
+  },
+  {
+   "code": "LEDINTERIORLIGHTING24",
+   "title": "LED Interior Lighting",
+   "description": "Keep food looking as good as it tastes. Light is cast inside the refrigerator so food looks like it's supposed to."
+  },
+  {
+   "code": "TAPTOUCHCONTROLS15",
+   "title": "Tap Touch Controls",
+   "description": "Clean these controls as easily as you use them."
+  },
+  {
+   "code": "HIDDENHINGES4",
+   "title": "Hidden Hinges",
+   "description": "Get a seamless look with door hinges that stay out of sight."
+  },
+  {
+   "code": "ELECTRONICTEMPERATURECONTROLS8",
+   "title": "Electronic Temperature Controls",
+   "description": "Choose the ideal temperature for whatever foods you're storing with convenient, up-front controls."
+  },
+  {
+   "code": "FINGERPRINT_RESISTANT_STAINLESS_FINISH_ACM8.11",
+   "title": "Fingerprint Resistant",
+   "description": "Resists fingerprints and smudges with steel that easily wipes clean. Available in Black Stainless Finish and Stainless F"
+  },
+  {
+   "code": "FACTORYINSTALLEDICEMAKER2",
+   "title": "Factory-installed ice maker",
+   "description": "A factory-installed ice maker churns out all the ice cubes you need, all year round."
+  },
+  {
+   "code": "ADAPTIVEDEFROST6",
+   "title": "Adaptive Defrost",
+   "description": "Adaptive defrost automatically monitors the freezer environment and runs the cycle only when necessary."
+  },
+  {
+   "code": "LEDDISPENSERNIGHTLIGHT2",
+   "title": "LED Dispenser Night-Light",
+   "description": "Easily find water and ice at night when you turn on the dispenser night-light."
+  },
+  {
+   "code": "HUMIDITYCONTROLLEDCRISPERS4",
+   "title": "Humidity-Controlled Crispers",
+   "description": "Store fruits and vegetables in their ideal environment."
+  }
+ ],
+ "baseProduct": "WRS325SDH"
+}

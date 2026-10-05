@@ -1,0 +1,85 @@
+{
+ "status": 200,
+ "data": {
+  "categoryKind": "GENERAL",
+  "products": [
+   {
+    "modelId": "MD10736835",
+    "prodModelCd": "MLJ39KR.AKOR",
+    "manuals": [
+     {
+      "type": "OWNER_MANUAL_LIVE",
+      "languageCode": "kr",
+      "files": [
+       {
+        "kind": "DOWNLOAD",
+        "url": "https://gscs-b2c.lge.com/downloadFile?fileId=LIVEZIP1",
+        "type": "ZIP"
+       },
+       {
+        "kind": "VIEW",
+        "url": "http://gscs-manual.lge.com/CVZ/MFL69641709/ko-kr/main.html",
+        "type": "html"
+       }
+      ]
+     },
+     {
+      "type": "OWNER_MANUAL",
+      "languageCode": "kr",
+      "files": [
+       {
+        "kind": "DOWNLOAD",
+        "url": "https://gscs-b2c.lge.com/open/downloadFile?fileId=MANUAL1",
+        "type": "PDF"
+       }
+      ]
+     },
+     {
+      "type": "UNKNOWN",
+      "languageCode": "kr",
+      "files": [
+       {
+        "kind": "DOWNLOAD",
+        "url": "https://gscs-b2c.lge.com/open/downloadFile?fileId=CATALOG1",
+        "type": "PDF"
+       }
+      ]
+     },
+     {
+      "type": "OWNER_MANUAL",
+      "languageCode": "kr",
+      "files": [
+       {
+        "kind": "DOWNLOAD",
+        "url": "https://gscs-b2c.lge.com/open/downloadFile?fileId=MANUAL1",
+        "type": "PDF"
+       }
+      ]
+     },
+     {
+      "type": "OWNER_MANUAL",
+      "languageCode": "kr",
+      "files": [
+       {
+        "kind": "DOWNLOAD",
+        "url": "https://gscs-b2c.lge.com/open/downloadFile?fileId=MANUAL2",
+        "type": "PDF"
+       }
+      ]
+     },
+     {
+      "type": "OWNER_MANUAL",
+      "languageCode": "kr",
+      "files": [
+       {
+        "kind": "DOWNLOAD",
+        "url": "https://evil.example.com/open/downloadFile?fileId=EVIL",
+        "type": "PDF"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

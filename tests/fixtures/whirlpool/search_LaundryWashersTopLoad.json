@@ -1,0 +1,491 @@
+{
+ "pagination": {
+  "currentPage": 0,
+  "pageSize": 24,
+  "sort": "Best Seller",
+  "totalPages": 1,
+  "totalResults": 16
+ },
+ "products": [
+  {
+   "code": "WTW6157PB",
+   "baseProduct": "WTW6157P",
+   "name": "5.2-5.3 Cu. Ft. Whirlpool\u00ae Top Load Washer with Removable Agitator",
+   "url": "/laundry/washers/he-top-load-washer/p.5.2-5.3-cu.-ft.-whirlpool-top-load-washer-with-removable-agitator.wtw6157pb.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$799.00",
+    "priceType": "BUY",
+    "value": 799.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$799.00",
+    "priceType": "BUY",
+    "value": 799.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "HE-Top-Load-Washer",
+    "pipedCategory": "Laundry|Washers|HE-Top-Load-Washer",
+    "url": "/Laundry/Washers/HE-Top-Load-Washer"
+   },
+   "color": {
+    "code": "VA",
+    "name": "Volcano Black"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WTW8127LW",
+   "baseProduct": "WTW8127L",
+   "name": "5.2 - 5.3 cu. ft. Top Load Washer with 2 in 1 Removable Agitator",
+   "url": "/laundry/washers/top-load/p.5.2-5.3-cu.-ft.-top-load-washer-with-2-in-1-removable-agitator.wtw8127lw.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$949.00",
+    "priceType": "BUY",
+    "value": 949.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$949.00",
+    "priceType": "BUY",
+    "value": 949.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Top-Load",
+    "pipedCategory": "Laundry|Washers|Top-Load",
+    "url": "/Laundry/Washers/Top-Load"
+   },
+   "color": {
+    "code": "WH",
+    "name": "White"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WGT4027HW",
+   "baseProduct": "WGT4027H",
+   "name": "3.5 cu.ft Gas Stacked Laundry Center 9 Wash cycles and AutoDry\u2122",
+   "url": "/laundry/laundry-sets/washer-dryer-combination/p.3.5-cu.ft-gas-stacked-laundry-center-9-wash-cycles-and-autodry.wgt4027hw.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$1,699.00",
+    "priceType": "BUY",
+    "value": 1699.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$1,699.00",
+    "priceType": "BUY",
+    "value": 1699.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Washer-Dryer-Combination",
+    "pipedCategory": "Laundry|Laundry-Sets|Washer-Dryer-Combination",
+    "url": "/Laundry/Laundry-Sets/Washer-Dryer-Combination"
+   },
+   "color": {
+    "code": "WH",
+    "name": "White"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WTW4107SW",
+   "baseProduct": "WTW4107S",
+   "name": "4.2 - 4.3 Cu. Ft. Whirlpool\u00ae Top Load Washer with 2-in-1 Removable Agitator",
+   "url": "/laundry/washers/top-load/p.4.2-4.3-cu.-ft.-whirlpool-top-load-washer-with-2-in-1-removable-agitator.wtw4107sw.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$559.00",
+    "priceType": "BUY",
+    "value": 559.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$559.00",
+    "priceType": "BUY",
+    "value": 559.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Top-Load",
+    "pipedCategory": "Laundry|Washers|Top-Load",
+    "url": "/Laundry/Washers/Top-Load"
+   },
+   "color": {
+    "code": "WH",
+    "name": "White"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WTW5057LW",
+   "baseProduct": "WTW5057L",
+   "name": "4.7-4.8 Cu. Ft. Top Load Washer with 2 in 1 Removable Agitator",
+   "url": "/laundry/washers/top-load/p.4.7-4.8-cu.-ft.-top-load-washer-with-2-in-1-removable-agitator.wtw5057lw.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$699.00",
+    "priceType": "BUY",
+    "value": 699.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$699.00",
+    "priceType": "BUY",
+    "value": 699.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Top-Load",
+    "pipedCategory": "Laundry|Washers|Top-Load",
+    "url": "/Laundry/Washers/Top-Load"
+   },
+   "color": {
+    "code": "WH",
+    "name": "White"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WTW5025SW",
+   "baseProduct": "WTW5025S",
+   "name": "4.5 Cu. Ft. Top Load Agitator Washer with Built-In Faucet",
+   "url": "/laundry/washers/top-load/p.4.5-cu.-ft.-top-load-agitator-washer-with-built-in-faucet.wtw5025sw.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$576.80",
+    "priceType": "BUY",
+    "value": 576.8
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$576.80",
+    "priceType": "BUY",
+    "value": 576.8
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Top-Load",
+    "pipedCategory": "Laundry|Washers|Top-Load",
+    "url": "/Laundry/Washers/Top-Load"
+   },
+   "color": {
+    "code": "WH",
+    "name": "White"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "RWTW4957PW",
+   "baseProduct": "RWTW4957P",
+   "name": "Refurbished 3.8\u20133.9 Cu. Ft. Whirlpool\u00ae Top Load Washer with Removable Agitator.",
+   "url": "/laundry/washers/top-load/p.refurbished-3.8-3.9-cu.-ft.-whirlpool-top-load-washer-with-removable-agitator.rwtw4957pw.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$399.00",
+    "priceType": "BUY",
+    "value": 399.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$399.00",
+    "priceType": "BUY",
+    "value": 399.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Top-Load",
+    "pipedCategory": "Laundry|Washers|Top-Load",
+    "url": "/Laundry/Washers/Top-Load"
+   },
+   "color": {
+    "code": "WH",
+    "name": "White"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WTW4300SW",
+   "baseProduct": "WTW4300S",
+   "name": "4.3 Cu. Ft. Whirlpool\u00ae Top Load Impeller Washer with Quick Wash Cycle and Soft Close Glass Lid",
+   "url": "/laundry/washers/top-load/p.4.3-cu.-ft.-whirlpool-top-load-impeller-washer-with-quick-wash-cycle-and-soft-close-glass-lid.wtw4300sw.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$589.00",
+    "priceType": "BUY",
+    "value": 589.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$589.00",
+    "priceType": "BUY",
+    "value": 589.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Top-Load",
+    "pipedCategory": "Laundry|Washers|Top-Load",
+    "url": "/Laundry/Washers/Top-Load"
+   },
+   "color": {
+    "code": "WH",
+    "name": "White"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WTW5020SW",
+   "baseProduct": "WTW5020S",
+   "name": "4.6 Cu. Ft. Top Load Impeller Washer with Built-in Faucet",
+   "url": "/laundry/washers/top-load/p.4.6-cu.-ft.-top-load-impeller-washer-with-built-in-faucet.wtw5020sw.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$649.00",
+    "priceType": "BUY",
+    "value": 649.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$649.00",
+    "priceType": "BUY",
+    "value": 649.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Top-Load",
+    "pipedCategory": "Laundry|Washers|Top-Load",
+    "url": "/Laundry/Washers/Top-Load"
+   },
+   "color": {
+    "code": "WH",
+    "name": "White"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "RWTW5010LW",
+   "baseProduct": "RWTW5010L",
+   "name": "Refurbished 4.6 Cu. Ft. Top Load Impeller Washer with Built-in Faucet.",
+   "url": "/laundry/washers/top-load/p.refurbished-4.6-cu.-ft.-top-load-impeller-washer-with-built-in-faucet.rwtw5010lw.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$449.00",
+    "priceType": "BUY",
+    "value": 449.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$449.00",
+    "priceType": "BUY",
+    "value": 449.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Top-Load",
+    "pipedCategory": "Laundry|Washers|Top-Load",
+    "url": "/Laundry/Washers/Top-Load"
+   },
+   "color": {
+    "code": "WH",
+    "name": "White"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WTW2000HW",
+   "baseProduct": "WTW2000H",
+   "name": "1.6 cu. ft. Compact Top Load Washer with Flexible Installation",
+   "url": "/laundry/washers/top-load/p.1.6-cu.-ft.-compact-top-load-washer-with-flexible-installation.wtw2000hw.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$1,049.00",
+    "priceType": "BUY",
+    "value": 1049.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$1,049.00",
+    "priceType": "BUY",
+    "value": 1049.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Top-Load",
+    "pipedCategory": "Laundry|Washers|Top-Load",
+    "url": "/Laundry/Washers/Top-Load"
+   },
+   "color": {
+    "code": "WH",
+    "name": "White"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WTW4307SW",
+   "baseProduct": "WTW4307S",
+   "name": "4.2\u20134.3 Cu. Ft. Whirlpool\u00ae Top Load Washer with 2-in-1 Removable Agitator and Soft Close Glass Lid",
+   "url": "/laundry/washers/top-load/p.4.2-4.3-cu.-ft.-whirlpool-top-load-washer-with-2-in-1-removable-agitator-and-soft-close-glass-lid.wtw4307sw.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$589.00",
+    "priceType": "BUY",
+    "value": 589.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$589.00",
+    "priceType": "BUY",
+    "value": 589.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Top-Load",
+    "pipedCategory": "Laundry|Washers|Top-Load",
+    "url": "/Laundry/Washers/Top-Load"
+   },
+   "color": {
+    "code": "WH",
+    "name": "White"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WTW4100SW",
+   "baseProduct": "WTW4100S",
+   "name": "4.1 Cu. Ft. Whirlpool\u00ae Top Load Impeller Washer with Quick Wash",
+   "url": "/laundry/washers/top-load/p.4.1-cu.-ft.-whirlpool-top-load-impeller-washer-with-quick-wash.wtw4100sw.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$674.00",
+    "priceType": "BUY",
+    "value": 674.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$674.00",
+    "priceType": "BUY",
+    "value": 674.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Top-Load",
+    "pipedCategory": "Laundry|Washers|Top-Load",
+    "url": "/Laundry/Washers/Top-Load"
+   },
+   "color": {
+    "code": "WH",
+    "name": "White"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WTW4105SW",
+   "baseProduct": "WTW4105S",
+   "name": "4.0 Cu. Ft. Whirlpool\u00ae Top Load Agitator Washer with Quick Wash",
+   "url": "/laundry/washers/top-load/p.4.0-cu.-ft.-whirlpool-top-load-agitator-washer-with-quick-wash.wtw4105sw.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$674.00",
+    "priceType": "BUY",
+    "value": 674.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$674.00",
+    "priceType": "BUY",
+    "value": 674.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "Top-Load",
+    "pipedCategory": "Laundry|Washers|Top-Load",
+    "url": "/Laundry/Washers/Top-Load"
+   },
+   "color": {
+    "code": "WH",
+    "name": "White"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  },
+  {
+   "code": "WTW4850HW",
+   "baseProduct": "WTW4850H",
+   "name": "3.9 cu. ft. Top Load Washer with Soaking Cycles, 12 Cycles",
+   "url": "/laundry/washers/he-top-load-washer/p.3.9-cu.-ft.-top-load-washer-with-soaking-cycles,-12-cycles.wtw4850hw.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$583.00",
+    "priceType": "BUY",
+    "value": 583.0
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$583.00",
+    "priceType": "BUY",
+    "value": 583.0
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "HE-Top-Load-Washer",
+    "pipedCategory": "Laundry|Washers|HE-Top-Load-Washer",
+    "url": "/Laundry/Washers/HE-Top-Load-Washer"
+   },
+   "color": {
+    "code": "WH",
+    "name": "White"
+   },
+   "productIsOutlet": true,
+   "salesStatus": "50"
+  },
+  {
+   "code": "WTW4955HW",
+   "baseProduct": "WTW4955H",
+   "name": "3.8 cu. ft. Top Load Washer with Soaking Cycles, 12 Cycles",
+   "url": "/laundry/washers/he-top-load-washer/p.3.8-cu.-ft.-top-load-washer-with-soaking-cycles,-12-cycles.wtw4955hw.html",
+   "price": {
+    "currencyIso": "USD",
+    "formattedValue": "$719.20",
+    "priceType": "BUY",
+    "value": 719.2
+   },
+   "baseDisplayPrice": {
+    "currencyIso": "USD",
+    "formattedValue": "$719.20",
+    "priceType": "BUY",
+    "value": 719.2
+   },
+   "brand": "Whirlpool",
+   "primaryCategory": {
+    "code": "HE-Top-Load-Washer",
+    "pipedCategory": "Laundry|Washers|HE-Top-Load-Washer",
+    "url": "/Laundry/Washers/HE-Top-Load-Washer"
+   },
+   "color": {
+    "code": "WH",
+    "name": "White"
+   },
+   "productIsOutlet": false,
+   "salesStatus": "30"
+  }
+ ]
+}

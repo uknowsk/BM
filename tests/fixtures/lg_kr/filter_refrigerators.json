@@ -1,0 +1,121 @@
+{
+ "status": 200,
+ "data": {
+  "productsFilterList": [
+   {
+    "attrId": "AT0000000242",
+    "attrNm": "설치타입",
+    "moFilterUseFlag": "N",
+    "inputModeCode": "01",
+    "attrKeywdList": [
+     {
+      "attrId": "AT0000000242",
+      "attrNm": "설치타입",
+      "keywdId": "KY0000003546",
+      "keywdNm": "빌트인 타입",
+      "inputModeCode": "01",
+      "parentAttrKeywdMngId": null,
+      "fromValue": null,
+      "toValue": null,
+      "buySumQtPercent": 0,
+      "rtSumQtPercent": 0,
+      "buySumQtRank": 1,
+      "rtSumQtRank": 1
+     },
+     {
+      "attrId": "AT0000000242",
+      "attrNm": "설치타입",
+      "keywdId": "KY0000003474",
+      "keywdNm": "Fit & Max",
+      "inputModeCode": "01",
+      "parentAttrKeywdMngId": null,
+      "fromValue": null,
+      "toValue": null,
+      "buySumQtPercent": 0,
+      "rtSumQtPercent": 0,
+      "buySumQtRank": 1,
+      "rtSumQtRank": 1
+     },
+     {
+      "attrId": "AT0000000242",
+      "attrNm": "설치타입",
+      "keywdId": "KY0000001248",
+      "keywdNm": "프리스탠딩",
+      "inputModeCode": "01",
+      "parentAttrKeywdMngId": null,
+      "fromValue": null,
+      "toValue": null,
+      "buySumQtPercent": 0,
+      "rtSumQtPercent": 0,
+      "buySumQtRank": 1,
+      "rtSumQtRank": 1
+     }
+    ]
+   },
+   {
+    "attrId": "AT0000000471",
+    "attrNm": "도어 개수",
+    "moFilterUseFlag": "N",
+    "inputModeCode": "01",
+    "attrKeywdList": [
+     {
+      "attrId": "AT0000000471",
+      "attrNm": "도어 개수",
+      "keywdId": "KY0000002242",
+      "keywdNm": "4도어",
+      "inputModeCode": "01",
+      "parentAttrKeywdMngId": null,
+      "fromValue": null,
+      "toValue": null,
+      "buySumQtPercent": 0,
+      "rtSumQtPercent": 0,
+      "buySumQtRank": 1,
+      "rtSumQtRank": 1
+     },
+     {
+      "attrId": "AT0000000471",
+      "attrNm": "도어 개수",
+      "keywdId": "KY0000002243",
+      "keywdNm": "3도어",
+      "inputModeCode": "01",
+      "parentAttrKeywdMngId": null,
+      "fromValue": null,
+      "toValue": null,
+      "buySumQtPercent": 0,
+      "rtSumQtPercent": 0,
+      "buySumQtRank": 1,
+      "rtSumQtRank": 1
+     },
+     {
+      "attrId": "AT0000000471",
+      "attrNm": "도어 개수",
+      "keywdId": "KY0000002244",
+      "keywdNm": "2도어",
+      "inputModeCode": "01",
+      "parentAttrKeywdMngId": null,
+      "fromValue": null,
+      "toValue": null,
+      "buySumQtPercent": 0,
+      "rtSumQtPercent": 0,
+      "buySumQtRank": 1,
+      "rtSumQtRank": 1
+     },
+     {
+      "attrId": "AT0000000471",
+      "attrNm": "도어 개수",
+      "keywdId": "KY0000002245",
+      "keywdNm": "1도어",
+      "inputModeCode": "01",
+      "parentAttrKeywdMngId": null,
+      "fromValue": null,
+      "toValue": null,
+      "buySumQtPercent": 0,
+      "rtSumQtPercent": 0,
+      "buySumQtRank": 1,
+      "rtSumQtRank": 1
+     }
+    ]
+   }
+  ]
+ }
+}

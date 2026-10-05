@@ -1,0 +1,577 @@
+{
+ "Specs": [
+  {
+   "modelCode": "RT70F18LASRAA",
+   "fullSpecs": [
+    {
+     "groupName": "Capacity",
+     "specList": [
+      {
+       "name": "Total Capacity (cu. ft.)",
+       "value": "17.5 cu. ft.",
+       "schm_att_key": "AK0000-00000000-00000000-00083000"
+      },
+      {
+       "name": "Refrigerator Capacity (cu. ft.)",
+       "value": "12.9 cu. ft.",
+       "schm_att_key": "AK0000-00000000-00000000-00083003"
+      },
+      {
+       "name": "Freezer Capacity (cu. ft.)",
+       "value": "4.6 cu. ft.",
+       "schm_att_key": "AK0000-00000000-00000000-00083004"
+      },
+      {
+       "name": "Ice making capacity",
+       "value": "3.3 lbs",
+       "schm_att_key": "AK0000-00000000-00000000-00084055"
+      }
+     ]
+    },
+    {
+     "groupName": "Refrigerator Features",
+     "specList": [
+      {
+       "name": "Interior Light",
+       "value": "LED",
+       "schm_att_key": "PSP-0AE990BC-ADCB-45F3-B62E-B2ED7CC9068A"
+      },
+      {
+       "name": "Gallon Door Bins",
+       "value": "2",
+       "schm_att_key": "AK0000-00000000-00000000-00082972"
+      },
+      {
+       "name": "Total Bins",
+       "value": "3",
+       "schm_att_key": "AK0000-00000000-00000000-00082974"
+      },
+      {
+       "name": "Drawers",
+       "value": "1",
+       "schm_att_key": "AK0000-00000000-00000000-00082976"
+      },
+      {
+       "name": "Fixed Shelves",
+       "value": "3",
+       "schm_att_key": "AK0000-00000000-00000000-00082978"
+      },
+      {
+       "name": "Internal Digital Display",
+       "value": "Yes",
+       "schm_att_key": "AK0000-00000000-00000000-00082980"
+      },
+      {
+       "name": "Shelves",
+       "value": "3",
+       "schm_att_key": "AK0000-00000000-00000000-00082981"
+      },
+      {
+       "name": "Temperature Sensors",
+       "value": "Yes",
+       "schm_att_key": "AK0000-00000000-00000000-00082985"
+      },
+      {
+       "name": "Gallon Bins",
+       "value": "Yes",
+       "schm_att_key": "AK0000-00000000-00000000-00084003"
+      },
+      {
+       "name": "Deli Drawer",
+       "value": "0",
+       "schm_att_key": "AK0000-00000000-00000000-00084005"
+      },
+      {
+       "name": "Slide-In Shelf",
+       "value": "0",
+       "schm_att_key": "AK0000-00000000-00000000-00084007"
+      },
+      {
+       "name": "Automatic Ice Maker",
+       "value": "Yes",
+       "schm_att_key": "AK0000-00000000-00000000-00084010"
+      },
+      {
+       "name": "Fingerprint Resistant Finish",
+       "value": "Yes",
+       "schm_att_key": "AK0000-00000000-00000000-00084025"
+      }
+     ]
+    },
+    {
+     "groupName": "Freezer Features",
+     "specList": [
+      {
+       "name": "Icemaker",
+       "value": "RA-T00R63AA/AA",
+       "schm_att_key": "F0746EB5-2137-1024-E043-CBFEDFDD17C1"
+      },
+      {
+       "name": "Built-In Automatic Icemaker",
+       "value": "Yes",
+       "schm_att_key": "AK0000-00000000-00000000-00082987"
+      },
+      {
+       "name": "Interior Light",
+       "value": "LED",
+       "schm_att_key": "AK0000-00000000-00000000-00082989"
+      },
+      {
+       "name": "Shelves",
+       "value": "1",
+       "schm_att_key": "AK0000-00000000-00000000-00082991"
+      },
+      {
+       "name": "Bins",
+       "value": "2",
+       "schm_att_key": "AK0000-00000000-00000000-00082994"
+      },
+      {
+       "name": "Door Bins",
+       "value": "2",
+       "schm_att_key": "AK0000-00000000-00000000-00082995"
+      },
+      {
+       "name": "Total Ice Capacity",
+       "value": "3.3 lbs",
+       "schm_att_key": "AK0000-00000000-00000000-00084029"
+      },
+      {
+       "name": "Cubed and Crushed Ice",
+       "value": "Cubed Ice Only",
+       "schm_att_key": "AK0000-00000000-00000000-00084031"
+      }
+     ]
+    },
+    {
+     "groupName": "General Feature",
+     "specList": [
+      {
+       "name": "Refrigerant",
+       "value": "R600a",
+       "schm_att_key": "F0746EB5-21A0-1024-E043-CBFEDFDD17C1"
+      }
+     ]
+    },
+    {
+     "groupName": "Performance",
+     "specList": [
+      {
+       "name": "Energy Consumption",
+       "value": "446 kWh/yr",
+       "schm_att_key": "F0746EB5-21A5-1024-E043-CBFEDFDD17C1"
+      }
+     ]
+    },
+    {
+     "groupName": "Energy",
+     "specList": [
+      {
+       "name": "Energy Star Certification",
+       "value": "Yes",
+       "schm_att_key": "PSP-C711E1BB-58EA-49F5-AF0F-E748C5F1AE55"
+      }
+     ]
+    },
+    {
+     "groupName": "Key Features",
+     "specList": [
+      {
+       "name": "Ice Maker",
+       "value": "Yes",
+       "schm_att_key": "AK0000-00000000-00000000-00082713"
+      },
+      {
+       "name": "Wi-Fi Connectivity",
+       "value": "Yes",
+       "schm_att_key": "AK0000-00000000-00000000-00082740"
+      },
+      {
+       "name": "All-Around Cooling",
+       "value": "Yes",
+       "schm_att_key": "AK0000-00000000-00000000-00082744"
+      },
+      {
+       "name": "ENERGY STAR® Certified",
+       "value": "Yes",
+       "schm_att_key": "AK0000-00000000-00000000-00082745"
+      },
+      {
+       "name": "SmartThings",
+       "value": "Yes",
+       "schm_att_key": "AK0000-00000000-00000000-00083979"
+      },
+      {
+       "name": "Freezer Ice Maker",
+       "value": "Yes",
+       "schm_att_key": "AK0000-00000000-00000000-00083980"
+      },
+      {
+       "name": "Cubed Ice",
+       "value": "Yes",
+       "schm_att_key": "AK0000-00000000-00000000-00083982"
+      },
+      {
+       "name": "ADA Compliant",
+       "value": "Yes",
+       "schm_att_key": "AK0000-00000000-00000000-00083985"
+      },
+      {
+       "name": "Sabbath Mode",
+       "value": "Yes",
+       "schm_att_key": "AK0000-00000000-00000000-00084416"
+      }
+     ]
+    },
+    {
+     "groupName": "Standard Features",
+     "specList": [
+      {
+       "name": "High-Efficiency LED Lighting",
+       "value": "Yes",
+       "schm_att_key": "AK0000-00000000-00000000-00082747"
+      },
+      {
+       "name": "AI Home",
+       "value": "All Around Cooling",
+       "schm_att_key": "AK0000-00000000-00000000-00082749"
+      },
+      {
+       "name": "Surround Air Flow",
+       "value": "Yes",
+       "schm_att_key": "AK0000-00000000-00000000-00082751"
+      },
+      {
+       "name": "Shelves",
+       "value": "3",
+       "schm_att_key": "AK0000-00000000-00000000-00082753"
+      },
+      {
+       "name": "Gallon Bins",
+       "value": "2",
+       "schm_att_key": "AK0000-00000000-00000000-00082755"
+      },
+      {
+       "name": "Display Color",
+       "value": "White",
+       "schm_att_key": "AK0000-00000000-00000000-00082757"
+      },
+      {
+       "name": "Handles",
+       "value": "Recessed",
+       "schm_att_key": "AK0000-00000000-00000000-00082759"
+      },
+      {
+       "name": "Wi-Fi Connectivity",
+       "value": "Yes",
+       "schm_att_key": "AK0000-00000000-00000000-00082762"
+      },
+      {
+       "name": "Sabbath Mode",
+       "value": "Yes",
+       "schm_att_key": "AK0000-00000000-00000000-00082765"
+      },
+      {
+       "name": "Reversible Door",
+       "value": "Yes",
+       "schm_att_key": "AK0000-00000000-00000000-00082767"
+      },
+      {
+       "name": "Modern Look Design",
+       "value": "Yes",
+       "schm_att_key": "AK0000-00000000-00000000-00082768"
+      },
+      {
+       "name": "Power Freeze and Power Cool Options",
+       "value": "Yes",
+       "schm_att_key": "AK0000-00000000-00000000-00083987"
+      },
+      {
+       "name": "Multi Air Flow",
+       "value": "Yes",
+       "schm_att_key": "AK0000-00000000-00000000-00083989"
+      },
+      {
+       "name": "Deli Bin",
+       "value": "0",
+       "schm_att_key": "AK0000-00000000-00000000-00083991"
+      },
+      {
+       "name": "Slide-n-Go Shelves",
+       "value": "0",
+       "schm_att_key": "AK0000-00000000-00000000-00083992"
+      },
+      {
+       "name": "Adjustable Shelves",
+       "value": "3",
+       "schm_att_key": "AK0000-00000000-00000000-00083994"
+      },
+      {
+       "name": "Modern Design Non-Dispense",
+       "value": "Yes",
+       "schm_att_key": "AK0000-00000000-00000000-00083996"
+      },
+      {
+       "name": "Flat Doors w/ Smooth Finish",
+       "value": "Yes",
+       "schm_att_key": "AK0000-00000000-00000000-00083997"
+      },
+      {
+       "name": "Big Pantry",
+       "value": "0",
+       "schm_att_key": "AK0000-00000000-00000000-00083999"
+      },
+      {
+       "name": "Temperature Range",
+       "value": "Fridge : 34℉ ~ 44℉ Freezer : -8℉ ~ 5℉",
+       "schm_att_key": "AK0000-00000000-00000000-00084001"
+      }
+     ]
+    },
+    {
+     "groupName": "Refrigerator Design",
+     "specList": [
+      {
+       "name": "General Feature",
+       "value": "Top freezer",
+       "schm_att_key": "AK0000-00000000-00000000-00082773"
+      },
+      {
+       "name": "Color",
+       "value": "Stainless Steel",
+       "tooltip": "Color of the stand and casing that frames a television's screen.",
+       "schm_att_key": "AK0000-00000000-00000000-00082774"
+      },
+      {
+       "name": "Number of Doors",
+       "value": "2",
+       "schm_att_key": "AK0000-00000000-00000000-00082968"
+      },
+      {
+       "name": "Counter Depth",
+       "value": "31 7/8\"",
+       "schm_att_key": "AK0000-00000000-00000000-00082969"
+      },
+      {
+       "name": "Free Standing",
+       "value": "Yes",
+       "schm_att_key": "AK0000-00000000-00000000-00084417"
+      }
+     ]
+    },
+    {
+     "groupName": "Power",
+     "specList": [
+      {
+       "name": "Volt/Amps",
+       "value": "115Volt / 2.5Amps",
+       "schm_att_key": "AK0000-00000000-00000000-00082998"
+      }
+     ]
+    },
+    {
+     "groupName": "Dimensions",
+     "specList": [
+      {
+       "name": "Product Dimensions with Hinges, Handles and Door",
+       "value": "27 5/8\" W x 66 7/8\" H x 31 7/8\" D",
+       "schm_att_key": "AK0000-00000000-00000000-00083044"
+      },
+      {
+       "name": "Product Dimensions without Hinges and Door",
+       "value": "27 5/8\" W x 66 7/8\" H x 28 5/8\" D",
+       "schm_att_key": "AK0000-00000000-00000000-00083046"
+      },
+      {
+       "name": "Product Dimensions with Door with Handles",
+       "value": "27 5/8\" W x 66 7/8\" H x 31 7/8\" D",
+       "schm_att_key": "AK0000-00000000-00000000-00083049"
+      },
+      {
+       "name": "Product Dimensions with Door without Handles",
+       "value": "27 5/8\" W x 66 7/8\" H x 31 7/8\" D",
+       "schm_att_key": "AK0000-00000000-00000000-00083050"
+      },
+      {
+       "name": "Product Dimensions with Doors Open",
+       "value": "27 5/8\" W x 66 7/8\" H x 57 1/8\" D",
+       "schm_att_key": "AK0000-00000000-00000000-00083053"
+      },
+      {
+       "name": "Product Dimensions without Hinges or Handles",
+       "value": "27 5/8\" W x 66 7/8\" H x 31 7/8\" D",
+       "schm_att_key": "AK0000-00000000-00000000-00083054"
+      },
+      {
+       "name": "Product Dimensions without Door without Handles",
+       "value": "27 5/8\" W x 66 7/8\" H x 28 5/8\" D",
+       "schm_att_key": "AK0000-00000000-00000000-00083056"
+      },
+      {
+       "name": "Shipping Dimensions",
+       "value": "W: 28 3/4\" H: 70 1/4\" D: 32 3/4\"",
+       "schm_att_key": "AK0000-00000000-00000000-00083058"
+      },
+      {
+       "name": "Net Depth with Door Handle",
+       "value": "31 7/8\"",
+       "schm_att_key": "AK0000-00000000-00000000-00083060"
+      },
+      {
+       "name": "Net Height with Hinge",
+       "value": "66 7/8\"",
+       "schm_att_key": "AK0000-00000000-00000000-00083061"
+      },
+      {
+       "name": "Net Height without Hinge",
+       "value": "66 7/8\"",
+       "schm_att_key": "AK0000-00000000-00000000-00083063"
+      },
+      {
+       "name": "Net Depth w/o Door Handle",
+       "value": "31.875",
+       "schm_att_key": "AK0000-00000000-00000000-00083065"
+      },
+      {
+       "name": "Width",
+       "value": "27 5/8\"",
+       "schm_att_key": "AK0000-00000000-00000000-00083067"
+      },
+      {
+       "name": "Height",
+       "value": "66 7/8\"",
+       "schm_att_key": "AK0000-00000000-00000000-00083138"
+      },
+      {
+       "name": "Fridge-Side Convertible Compartment Capacity",
+       "value": "17.5 cu. ft.",
+       "schm_att_key": "AK0000-00000000-00000000-00084032"
+      },
+      {
+       "name": "Depth without Door (in)",
+       "value": "28 5/8",
+       "schm_att_key": "AK0000-00000000-00000000-00084033"
+      },
+      {
+       "name": "Height (decimal)",
+       "value": "66.875",
+       "schm_att_key": "AK0000-00000000-00000000-00084034"
+      },
+      {
+       "name": "Width (decimal)",
+       "value": "27.625",
+       "schm_att_key": "AK0000-00000000-00000000-00084036"
+      },
+      {
+       "name": "Depth (decimal)",
+       "value": "31.875",
+       "schm_att_key": "AK0000-00000000-00000000-00084038"
+      },
+      {
+       "name": "Height (extra)",
+       "value": "+ 2 inches for ventillation",
+       "schm_att_key": "AK0000-00000000-00000000-00084300"
+      },
+      {
+       "name": "Width (extra)",
+       "value": "+ 3 inches for open door",
+       "schm_att_key": "AK0000-00000000-00000000-00084301"
+      }
+     ]
+    },
+    {
+     "groupName": "Warranty",
+     "specList": [
+      {
+       "name": "1 Year",
+       "value": "1 Year Parts/Labor",
+       "schm_att_key": "AK0000-00000000-00000000-00083069"
+      },
+      {
+       "name": "5 Years",
+       "value": "Five (5) Years Parts and Labor on Sealed Refrigeration System Only* *Compressor, evaporator, condenser, drier and connecting tubing.",
+       "schm_att_key": "AK0000-00000000-00000000-00084045"
+      },
+      {
+       "name": "10 Years",
+       "value": "Ten (10) Years Parts and Five (5) Years Labor on Digital Inverter Compressor",
+       "schm_att_key": "AK0000-00000000-00000000-00084047"
+      }
+     ]
+    },
+    {
+     "groupName": "Awards and Certificates",
+     "specList": [
+      {
+       "name": "J.D. Power Awards",
+       "value": "Yes",
+       "schm_att_key": "AK0000-00000000-00000000-00083073"
+      }
+     ]
+    },
+    {
+     "groupName": "Weight",
+     "specList": [
+      {
+       "name": "Product Weight (lbs.)",
+       "value": "162 lbs.",
+       "schm_att_key": "AK0000-00000000-00000000-00084041"
+      },
+      {
+       "name": "Shipping Weight",
+       "value": "165 lbs",
+       "tooltip": "Weight of the television, with shipping container, as measured in pounds (lbs.).",
+       "schm_att_key": "AK0000-00000000-00000000-00084043"
+      }
+     ]
+    }
+   ],
+   "download": {
+    "downloadText": "Download spec sheet",
+    "url": "https://images.samsung.com/is/content/samsung/p6pim/us/rt70f18lasraa/specsheet/us-specsheet-rt70f18lasraa-553324220.pdf"
+   }
+  }
+ ],
+ "Support": [
+  {
+   "modelCode": "RT70F18LASRAA",
+   "answers": [
+    {
+     "name": "Cooling Off mode (Demo mode) on your Samsung refrigerator",
+     "url": "/us/support/answer/ANS00048861"
+    },
+    {
+     "name": "Samsung refrigerator shelf/drawer removal and cleaning guide",
+     "url": "/us/support/answer/ANS00063107"
+    }
+   ],
+   "supports": [
+    {
+     "desc": "ENGLISH",
+     "name": "User Manual",
+     "type": "PDF",
+     "url": "http://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=US&CttFileID=10114453&CDCttType=UM&ModelType=C&ModelName=RT70F18LASRAA&VPath=UM/202503/20250325063654532/TMF_RT6300F_DA68-04817B_EN-MES-CFR.pdf",
+     "imageUrl": "https://www.samsung.com/us/smg/etc.clientlibs/samsung/clientlibs/us/common/clientlib-dependencies/resources/images/icons/download.svg",
+     "ctaTitle": "DOWNLOAD"
+    },
+    {
+     "name": "Energy Guide",
+     "type": "PDF",
+     "url": "https://images.samsung.com/is/content/samsung/p6pim/us/rt70f18lasraa/energyguide/us-energyguide-rt70f18lasraa-550287661.pdf",
+     "imageUrl": "https://image-us.samsung.com/SamsungUS/place-holder-images/icon-energy-guide.png?$default-png$",
+     "ctaTitle": "DOWNLOAD"
+    },
+    {
+     "name": "Warranty",
+     "url": "https://www.samsung.com/us/support/legal/LGL10000309/?modelCode=RT70F18LASRAA#standard-limited-warranty",
+     "imageUrl": "https://www.samsung.com/us/smg/etc.clientlibs/samsung/clientlibs/us/common/clientlib-dependencies/resources/images/icons/download.svg",
+     "ctaTitle": "VIEW DETAILS"
+    }
+   ],
+   "seeAllSupportTitle": "SEE ALL SUPPORT",
+   "seeTheAnswer": "SEE THE ANSWER",
+   "seeAllSupportUrl": "https://www.samsung.com/us/support/home-appliances/refrigerators/?modelCode=RT70F18LASRAA",
+   "taxonomyPrimaryId": "N0002918"
+  }
+ ]
+}

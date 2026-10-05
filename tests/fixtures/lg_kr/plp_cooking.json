@@ -1,0 +1,286 @@
+{
+ "status": 200,
+ "data": {
+  "totalModelCnt": 5,
+  "modelList": [
+   {
+    "salesModelCode": "BEI3AMBLOE",
+    "modelId": "MD10630839",
+    "modelDisplayName": "LG 디오스 인덕션",
+    "subCategoryName": "인덕션",
+    "modelUrlPath": "/electric-ranges/bei3ambloe",
+    "keywds": "1등급^미라듀어",
+    "productAttrKeywds": [
+     {
+      "attrId": "AT0000001261",
+      "attrNm": "인버터",
+      "keywds": "쿼드인버터"
+     },
+     {
+      "attrId": "AT0000000164",
+      "attrNm": "화구",
+      "keywds": "인덕션3구"
+     },
+     {
+      "attrId": "AT0000000124",
+      "attrNm": "색상",
+      "keywds": "블랙"
+     },
+     {
+      "attrId": "AT0000001251",
+      "attrNm": "주요 기능",
+      "keywds": "끓음알림"
+     }
+    ],
+    "smallImageAddr": "/kr/images/electric-ranges/md10372843/md10372843-280x280.jpg",
+    "thinqFlag": "N",
+    "priceInfo": {
+     "obsOriginalPrice": 1690000,
+     "obsSellingPrice": 1259000,
+     "obsMemberPrice": 431000,
+     "couponPrice": 70000,
+     "lastBenefitPrc": 1105800
+    },
+    "priceArea": {
+     "normal": {
+      "price": 1259000,
+      "originPrice": 1690000,
+      "originPriceShowFlag": "Y",
+      "dicountRate": 25,
+      "discountRateShowFlag": "Y",
+      "visitText": null,
+      "visitTextShowFlag": "N"
+     },
+     "maxReward": {
+      "price": 1105800
+     }
+    },
+    "benefitInfo": {
+     "cardNm": "신한",
+     "dcRate": "7",
+     "cashReward": 0,
+     "payDcAmt": 83200,
+     "pointReward": 0
+    }
+   },
+   {
+    "salesModelCode": "BEY3SRBLE",
+    "modelId": "MD10630858",
+    "modelDisplayName": "LG 디오스 하이브리드",
+    "subCategoryName": "하이브리드",
+    "modelUrlPath": "/electric-ranges/bey3srble",
+    "keywds": "블랙 세라믹",
+    "productAttrKeywds": [
+     {
+      "attrId": "AT0000001261",
+      "attrNm": "인버터",
+      "keywds": "듀얼인버터"
+     },
+     {
+      "attrId": "AT0000000164",
+      "attrNm": "화구",
+      "keywds": "인덕션2구+라디언트1구"
+     },
+     {
+      "attrId": "AT0000000124",
+      "attrNm": "색상",
+      "keywds": "블랙"
+     }
+    ],
+    "smallImageAddr": "/kr/images/electric-ranges/md10428829/md10428829-280x280.jpg",
+    "thinqFlag": "N",
+    "priceInfo": {
+     "obsOriginalPrice": 890000,
+     "obsSellingPrice": 710000,
+     "obsMemberPrice": 180000,
+     "couponPrice": 30000,
+     "lastBenefitPrc": 632400
+    },
+    "priceArea": {
+     "normal": {
+      "price": 710000,
+      "originPrice": 890000,
+      "originPriceShowFlag": "Y",
+      "dicountRate": 20,
+      "discountRateShowFlag": "Y",
+      "visitText": null,
+      "visitTextShowFlag": "N"
+     },
+     "maxReward": {
+      "price": 632400
+     }
+    },
+    "benefitInfo": {
+     "cardNm": "신한",
+     "dcRate": "7",
+     "cashReward": 0,
+     "payDcAmt": 47600,
+     "pointReward": 0
+    }
+   },
+   {
+    "salesModelCode": "MW20GDN",
+    "modelId": "MD10101826",
+    "modelDisplayName": "LG 전자레인지",
+    "subCategoryName": "전자레인지",
+    "modelUrlPath": "/microwaves-and-ovens/mw20gdn",
+    "keywds": "20L",
+    "productAttrKeywds": [
+     {
+      "attrId": "AT0000000124",
+      "attrNm": "색상",
+      "keywds": "화이트"
+     },
+     {
+      "attrId": "AT0000000163",
+      "attrNm": "형태",
+      "keywds": "슬림형"
+     },
+     {
+      "attrId": "AT0000001251",
+      "attrNm": "주요 기능",
+      "keywds": "Auto Cool 기능^이지클린(항균처리)^절전 기능"
+     }
+    ],
+    "smallImageAddr": "/kr/images/microwaves-and-ovens/md10101826/md10101826-280x280.jpg",
+    "thinqFlag": "N",
+    "priceInfo": {
+     "obsOriginalPrice": 179000,
+     "obsSellingPrice": 134000,
+     "obsMemberPrice": 45000,
+     "couponPrice": 0,
+     "lastBenefitPrc": 134000
+    },
+    "priceArea": {
+     "normal": {
+      "price": 134000,
+      "originPrice": 179000,
+      "originPriceShowFlag": "Y",
+      "dicountRate": 25,
+      "discountRateShowFlag": "Y",
+      "visitText": null,
+      "visitTextShowFlag": "N"
+     },
+     "maxReward": null
+    },
+    "benefitInfo": {
+     "cardNm": "신한",
+     "dcRate": "0",
+     "cashReward": 0,
+     "payDcAmt": 0,
+     "pointReward": 0
+    }
+   },
+   {
+    "salesModelCode": "MLJ39KR",
+    "modelId": "MD10736835",
+    "modelDisplayName": "LG 디오스 오브제컬렉션 광파오븐",
+    "subCategoryName": "광파오븐",
+    "modelUrlPath": "/microwaves-and-ovens/mlj39kr",
+    "keywds": "39L",
+    "productAttrKeywds": [
+     {
+      "attrId": "AT0000000124",
+      "attrNm": "색상",
+      "keywds": "블랙"
+     },
+     {
+      "attrId": "AT0000000094",
+      "attrNm": "가열방식",
+      "keywds": "멀티광파 가열시스템"
+     },
+     {
+      "attrId": "AT0000000163",
+      "attrNm": "형태",
+      "keywds": "슬림형"
+     },
+     {
+      "attrId": "AT0000001251",
+      "attrNm": "주요 기능",
+      "keywds": "Auto Cool 기능^이지클린(항균처리)^절전 기능"
+     }
+    ],
+    "smallImageAddr": "/kr/images/microwaves-and-ovens/md10736835/md10736835-280x280.jpg",
+    "thinqFlag": "N",
+    "priceInfo": {
+     "obsOriginalPrice": 790000,
+     "obsSellingPrice": 489000,
+     "obsMemberPrice": 301000,
+     "couponPrice": 20000,
+     "lastBenefitPrc": 469000
+    },
+    "priceArea": {
+     "normal": {
+      "price": 489000,
+      "originPrice": 790000,
+      "originPriceShowFlag": "Y",
+      "dicountRate": 38,
+      "discountRateShowFlag": "Y",
+      "visitText": null,
+      "visitTextShowFlag": "N"
+     },
+     "maxReward": {
+      "price": 469000
+     }
+    },
+    "benefitInfo": {
+     "cardNm": "신한",
+     "dcRate": "0",
+     "cashReward": 0,
+     "payDcAmt": 0,
+     "pointReward": 0
+    }
+   },
+   {
+    "salesModelCode": "6EW2E-QKBOE",
+    "modelId": "MD10677828",
+    "modelDisplayName": "LG 디오스 AI 오브제컬렉션 식기세척기 + LG 디오스 오브제컬렉션 인덕션",
+    "subCategoryName": "전기레인지 세트",
+    "modelUrlPath": "/electric-ranges/6ew2e-qkboe",
+    "keywds": null,
+    "productAttrKeywds": [
+     {
+      "attrId": "AT0000000124",
+      "attrNm": "색상",
+      "keywds": null
+     },
+     {
+      "attrId": "AT0000000292",
+      "attrNm": "식기세척기 용량",
+      "keywds": "14인용"
+     }
+    ],
+    "smallImageAddr": "/kr/images/dishwashers/md10677828/md10677828-280x280.jpg",
+    "thinqFlag": "N",
+    "priceInfo": {
+     "obsOriginalPrice": 3270000,
+     "obsSellingPrice": 2474000,
+     "obsMemberPrice": 796000,
+     "couponPrice": 120000,
+     "lastBenefitPrc": 2189300
+    },
+    "priceArea": {
+     "normal": {
+      "price": 2474000,
+      "originPrice": 3270000,
+      "originPriceShowFlag": "Y",
+      "dicountRate": 24,
+      "discountRateShowFlag": "Y",
+      "visitText": null,
+      "visitTextShowFlag": "N"
+     },
+     "maxReward": {
+      "price": 2189300
+     }
+    },
+    "benefitInfo": {
+     "cardNm": "신한",
+     "dcRate": "7",
+     "cashReward": 0,
+     "payDcAmt": 164700,
+     "pointReward": 0
+    }
+   }
+  ]
+ }
+}

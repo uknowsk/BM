@@ -1,0 +1,1095 @@
+{
+"_doc": "Equivalence cases for canon.py. Each case: category, space ('attr' = spec label, 'item' = list item), same (true: every label must map to ONE canonical id; false: all labels must map to DIFFERENT ids), labels, optional values aligned with labels. Labels are real wording from the Samsung / LG / GE / KitchenAid / Whirlpool / Bosch fixtures and the KR spec tables (Korean).",
+"cases": [
+{
+"category": "cooking",
+"space": "attr",
+"same": true,
+"labels": [
+"Size",
+"Dimensions",
+"Overall dimensions",
+"Product Dimensions",
+"Overall Appliance Dimensions (HxWxD) (in)",
+"크기",
+"크기(가로 × 높이 × 깊이)"
+]
+},
+{
+"category": "cooking",
+"space": "attr",
+"same": true,
+"labels": [
+"Overall Width",
+"Width",
+"Cabinet Width",
+"Weights & Dimensions > Width (decimal)",
+"폭",
+"Width (mm)"
+]
+},
+{
+"category": "cooking",
+"space": "attr",
+"same": true,
+"labels": [
+"Overall Height",
+"Height",
+"Weights & Dimensions > Overall Height",
+"Height (decimal)",
+"높이"
+]
+},
+{
+"category": "cooking",
+"space": "attr",
+"same": true,
+"labels": [
+"Overall Depth",
+"Depth",
+"Depth (decimal)",
+"Dimensions > Depth",
+"깊이"
+]
+},
+{
+"category": "refrigerator",
+"space": "attr",
+"same": true,
+"labels": [
+"Net Weight",
+"Product Weight",
+"Weight",
+"Product Weight (lbs.)",
+"제품 무게",
+"Net weight(lb)"
+]
+},
+{
+"category": "refrigerator",
+"space": "attr",
+"same": true,
+"labels": [
+"Gross Weight",
+"Shipping Weight",
+"Approximate Shipping Weight",
+"Packing Weight(lb)",
+"포장 무게"
+]
+},
+{
+"category": "refrigerator",
+"space": "attr",
+"same": true,
+"labels": [
+"Total capacity",
+"Capacity",
+"Total Capacity (cubic feet)",
+"Net total(cu.ft)",
+"총 용량",
+"Total Refrigerator Capacity Volume",
+"Total capacity (L)"
+]
+},
+{
+"category": "refrigerator",
+"space": "attr",
+"same": true,
+"labels": [
+"Refrigerator capacity",
+"Fresh food capacity",
+"Fridge capacity",
+"냉장실 용량",
+"Net for fridge(cu.ft)",
+"Refrigerator Capacity Volume"
+]
+},
+{
+"category": "refrigerator",
+"space": "attr",
+"same": true,
+"labels": [
+"Freezer capacity",
+"Freezer Capacity Volume",
+"냉동실 용량",
+"Net for Freezer(cu.ft)",
+"Freezer Gross Capacity"
+]
+},
+{
+"category": "cooking",
+"space": "attr",
+"same": true,
+"labels": [
+"Oven Capacity",
+"Capacity",
+"Total Capacity",
+"Cavity Capacity",
+"오븐 용량",
+"Oven capacity (cu ft)"
+]
+},
+{
+"category": "washer",
+"space": "attr",
+"same": true,
+"labels": [
+"Drum capacity (cu ft)",
+"Washer capacity",
+"Capacity",
+"Washing Capacity(cu.ft)",
+"Washer Total Capacity (cu. ft.)",
+"드럼 용량"
+],
+"values": [
+"5",
+"4.5 cu ft",
+"4.5 cu. ft.",
+"5.3",
+"4.6 cu. ft.",
+"5.5 cu ft"
+]
+},
+{
+"category": "refrigerator",
+"space": "attr",
+"same": true,
+"labels": [
+"Power Consumption",
+"Annual Energy Use",
+"Estimated Yearly Electricity Use",
+"Energy consumption (kWh/year)",
+"Energy Rating (kWh/year)",
+"연간 소비전력량",
+"Annual energy consumption (kWh/year)"
+],
+"values": [
+"446 kWh/yr",
+"440 kWh/yr",
+"450 kWh/yr",
+"451",
+"356 kWh/year",
+"459.6 kWh/년",
+"460"
+]
+},
+{
+"category": "refrigerator",
+"space": "attr",
+"same": true,
+"labels": [
+"Monthly energy consumption (kWh/month)",
+"소비 전력(kWh/월)"
+],
+"values": [
+"38.3",
+"38.3 kWh/월"
+]
+},
+{
+"category": "cooking",
+"space": "attr",
+"same": true,
+"labels": [
+"Voltage",
+"Volts",
+"Rated voltage",
+"정격 전압",
+"Electrical > Volts"
+]
+},
+{
+"category": "cooking",
+"space": "attr",
+"same": true,
+"labels": [
+"Amps",
+"Amp Rating at 240V",
+"Max. Amp Load",
+"Electrical > Amps",
+"Fuse protection"
+]
+},
+{
+"category": "cooking",
+"space": "attr",
+"same": true,
+"labels": [
+"Frequency",
+"Hertz",
+"Hz",
+"주파수",
+"Power / Ratings > Hertz"
+]
+},
+{
+"category": "cooking",
+"space": "attr",
+"same": true,
+"labels": [
+"Bake Wattage",
+"Bake Element Power",
+"Bake Element (W)",
+"Oven Cavity Details > Bake Element Power",
+"Bake Element"
+]
+},
+{
+"category": "cooking",
+"space": "attr",
+"same": true,
+"labels": [
+"Broiler Wattage",
+"Broil Element",
+"Broiler Element Power",
+"Broil Element (W)"
+]
+},
+{
+"category": "cooking",
+"space": "attr",
+"same": true,
+"labels": [
+"Convection Wattage",
+"Convection Element (Watt)",
+"Convection Power",
+"Convection Element Power"
+]
+},
+{
+"category": "refrigerator",
+"space": "attr",
+"same": true,
+"labels": [
+"Energy Star",
+"Energy Star Certified",
+"Energy Star Qualified",
+"ENERGY STAR® Qualified",
+"Energy Star Certification"
+]
+},
+{
+"category": "refrigerator",
+"space": "attr",
+"same": true,
+"labels": [
+"Energy efficiency class",
+"CEE Tier Rating",
+"에너지소비효율등급",
+"KR energy grade",
+"Energy Efficiency Grade (KR)"
+]
+},
+{
+"category": "washer",
+"space": "attr",
+"same": true,
+"labels": [
+"Noise level",
+"소음",
+"Sound level"
+]
+},
+{
+"category": "washer",
+"space": "attr",
+"same": true,
+"labels": [
+"Max spin speed (rpm)",
+"Maximum Spin Speed",
+"Spin Speed",
+"최대 탈수 회전수",
+"탈수 rpm"
+]
+},
+{
+"category": "washer",
+"space": "attr",
+"same": true,
+"labels": [
+"Number of wash cycles",
+"Washer Programs",
+"Cycles",
+"Preset Wash Cycles",
+"세척 코스 수",
+"Number of Cycles"
+]
+},
+{
+"category": "washer",
+"space": "attr",
+"same": true,
+"labels": [
+"Wi-Fi",
+"WiFi Connect",
+"Wi-Fi Connectivity",
+"Smart Appliance",
+"ThinQ",
+"SmartThings",
+"와이파이",
+"WiFi 내장"
+]
+},
+{
+"category": "refrigerator",
+"space": "attr",
+"same": true,
+"labels": [
+"Ice maker",
+"Icemaker",
+"Automatic Ice Maker",
+"제빙기",
+"Built-in Automatic Icemaker"
+]
+},
+{
+"category": "refrigerator",
+"space": "attr",
+"same": true,
+"labels": [
+"Water dispenser",
+"Dispenser",
+"Internal Filtered Water Dispenser",
+"디스펜서",
+"Water and Ice Dispenser"
+]
+},
+{
+"category": "refrigerator",
+"space": "attr",
+"same": true,
+"labels": [
+"Door type",
+"Door Style",
+"도어 타입",
+"Door Style Configuration"
+]
+},
+{
+"category": "refrigerator",
+"space": "attr",
+"same": true,
+"labels": [
+"Finish",
+"Color",
+"Color Appearance",
+"Cabinet Color",
+"색상",
+"Exterior Color"
+]
+},
+{
+"category": "cooking",
+"space": "attr",
+"same": true,
+"labels": [
+"Control type",
+"Oven Control Type",
+"Controls for Oven",
+"조작 방식",
+"Controls > Control Type"
+]
+},
+{
+"category": "cooking",
+"space": "attr",
+"same": true,
+"labels": [
+"Number of Oven Racks",
+"Oven Racks",
+"Total Racks",
+"Total Number of Racks",
+"Wire Rack (qty)"
+]
+},
+{
+"category": "cooking",
+"space": "attr",
+"same": true,
+"labels": [
+"Self Clean",
+"Self Cleaning",
+"Self-Clean",
+"자가 세척",
+"Selfcleaning pyrolitic"
+],
+"values": [
+"Yes",
+"Yes",
+"Yes (Self-Clean)",
+"있음",
+"Yes"
+]
+},
+{
+"category": "cooking",
+"space": "attr",
+"same": true,
+"labels": [
+"Sabbath Mode",
+"Sabbath",
+"안식일 모드",
+"Features > Sabbath Mode"
+]
+},
+{
+"category": "cooking",
+"space": "attr",
+"same": true,
+"labels": [
+"Temperature Probe",
+"Temp Probe",
+"Meat Probe",
+"Food Probe",
+"온도 프로브",
+"Details: Temperature Probe"
+]
+},
+{
+"category": "cooking",
+"space": "attr",
+"same": true,
+"labels": [
+"Warranty",
+"Parts & Labor",
+"1 Year Parts and Labor",
+"품질보증기준",
+"Warranty > Warranty"
+]
+},
+{
+"category": "cooking",
+"space": "attr",
+"same": true,
+"labels": [
+"Cutout Dimensions",
+"Required Cutout Size (HxWxD) (in)",
+"Cut-Out Dimensions",
+"Cutout Dimensions (W x H x D) (in.)",
+"타공 사이즈"
+]
+},
+{
+"category": "cooking",
+"space": "attr",
+"same": true,
+"labels": [
+"Cutout Width",
+"Cutout Width (in)",
+"Weights & Dimensions > Cutout Width (in)"
+]
+},
+{
+"category": "refrigerator",
+"space": "attr",
+"same": true,
+"labels": [
+"Number of doors",
+"Doors",
+"도어 개수",
+"Door count"
+]
+},
+{
+"category": "refrigerator",
+"space": "attr",
+"same": true,
+"labels": [
+"Compressor",
+"Compressor Type",
+"컴프레서",
+"Smart Inverter Compressor"
+],
+"values": [
+"Smart Inverter",
+"Smart Inverter",
+"AI 인버터 컴프레서",
+"Linear"
+]
+},
+{
+"category": "refrigerator",
+"space": "attr",
+"same": true,
+"labels": [
+"Refrigerant",
+"Refrigerant Type",
+"냉매"
+]
+},
+{
+"category": "refrigerator",
+"space": "attr",
+"same": true,
+"labels": [
+"Defrost type",
+"Defrost",
+"Automatic Defrost",
+"제상 방식"
+]
+},
+{
+"category": "refrigerator",
+"space": "attr",
+"same": true,
+"labels": [
+"Counter depth",
+"Built In Look w/Counter Depth",
+"카운터 뎁스"
+]
+},
+{
+"category": "refrigerator",
+"space": "attr",
+"same": true,
+"labels": [
+"Air filter",
+"Fresh Air Filter",
+"Air Filter Indicator/Reset",
+"공기 청정 필터"
+]
+},
+{
+"category": "refrigerator",
+"space": "attr",
+"same": true,
+"labels": [
+"Fingerprint resistant",
+"Fingerprint Resistant Finish",
+"지문 방지",
+"Smudge Proof"
+]
+},
+{
+"category": "refrigerator",
+"space": "attr",
+"same": true,
+"labels": [
+"Interior light",
+"Refrigerator Lighting",
+"Interior LED Light",
+"내부조명"
+]
+},
+{
+"category": "refrigerator",
+"space": "attr",
+"same": true,
+"labels": [
+"Sabbath mode",
+"Sabbath"
+]
+},
+{
+"category": "cooking",
+"space": "attr",
+"same": true,
+"labels": [
+"Door lock",
+"Self-Clean Oven Door Lock",
+"도어 잠금"
+]
+},
+{
+"category": "washer",
+"space": "attr",
+"same": true,
+"labels": [
+"Steam",
+"Power Steam",
+"스팀"
+]
+},
+{
+"category": "washer",
+"space": "attr",
+"same": true,
+"labels": [
+"Auto dispense",
+"Automated Dispenser",
+"SmartDispense Technology",
+"세제자동투입"
+]
+},
+{
+"category": "washer",
+"space": "attr",
+"same": true,
+"labels": [
+"Vibration reduction technology",
+"Vibration Reduction Technology Plus",
+"Vibration Control",
+"AI 진동소음 저감 시스템"
+]
+},
+{
+"category": "washer",
+"space": "attr",
+"same": true,
+"labels": [
+"Dryer capacity",
+"Dryer Total Capacity (cu. ft.)",
+"건조 용량",
+"Dryer capacity (cu ft)"
+]
+},
+{
+"category": "washer",
+"space": "attr",
+"same": true,
+"labels": [
+"Sensor dry",
+"Sensor Drying",
+"Moisture Sensor",
+"센서 건조"
+]
+},
+{
+"category": "cooking",
+"space": "item",
+"same": true,
+"labels": [
+"Convection Bake",
+"Convect Bake",
+"Conv. Bake",
+"Convection Bake Multi-Rack",
+"컨벡션 베이크",
+"True Convection Bake"
+]
+},
+{
+"category": "cooking",
+"space": "item",
+"same": true,
+"labels": [
+"Convection Roast",
+"Convect Roast",
+"Conv. Roast",
+"Air Roast",
+"컨벡션 로스트"
+]
+},
+{
+"category": "cooking",
+"space": "item",
+"same": true,
+"labels": [
+"Air Fry",
+"No Preheat Air Fry",
+"Air Fryer",
+"에어프라이",
+"Air Fry Capable"
+]
+},
+{
+"category": "cooking",
+"space": "item",
+"same": true,
+"labels": [
+"Bake",
+"Thermal Bake",
+"Standard Bake",
+"베이크"
+]
+},
+{
+"category": "cooking",
+"space": "item",
+"same": true,
+"labels": [
+"Broil",
+"Thermal Broil Hi/Lo",
+"Variable Broil",
+"브로일"
+]
+},
+{
+"category": "cooking",
+"space": "item",
+"same": true,
+"labels": [
+"Keep Warm",
+"Warm",
+"Warm Setting",
+"보온",
+"Keep Warm Mode"
+]
+},
+{
+"category": "cooking",
+"space": "item",
+"same": true,
+"labels": [
+"Proof",
+"Proof Mode",
+"Proofing",
+"발효"
+]
+},
+{
+"category": "cooking",
+"space": "item",
+"same": true,
+"labels": [
+"Delay Start",
+"Delay Time",
+"Delayed Start",
+"예약"
+]
+},
+{
+"category": "cooking",
+"space": "item",
+"same": true,
+"labels": [
+"Control Lock",
+"Child Lock",
+"Child Safety Lock",
+"버튼 잠금",
+"Control Lockout"
+]
+},
+{
+"category": "cooking",
+"space": "item",
+"same": true,
+"labels": [
+"Steam Clean",
+"Steam Cleaning",
+"스팀 세척",
+"Steam Clean Option"
+]
+},
+{
+"category": "cooking",
+"space": "item",
+"same": true,
+"labels": [
+"Gliding Rack",
+"Gliding Roll-out Rack",
+"Telescopic Rails",
+"Extension Rack"
+]
+},
+{
+"category": "cooking",
+"space": "item",
+"same": true,
+"labels": [
+"Auto Cook",
+"Gourmet Cook",
+"CookSmart Auto Programs",
+"자동요리"
+]
+},
+{
+"category": "cooking",
+"space": "item",
+"same": true,
+"labels": [
+"Sous Vide",
+"Air Sous Vide",
+"수비드"
+]
+},
+{
+"category": "cooking",
+"space": "item",
+"same": true,
+"labels": [
+"Slow Cook",
+"Slow Cooker",
+"슬로우쿡"
+]
+},
+{
+"category": "cooking",
+"space": "item",
+"same": true,
+"labels": [
+"Self Clean",
+"Self Cleaning",
+"Pyrolytic",
+"자가 세척"
+]
+},
+{
+"category": "cooking",
+"space": "item",
+"same": true,
+"labels": [
+"Amazon Alexa",
+"Alexa"
+]
+},
+{
+"category": "cooking",
+"space": "attr",
+"same": false,
+"labels": [
+"Width",
+"Height",
+"Depth"
+]
+},
+{
+"category": "refrigerator",
+"space": "attr",
+"same": false,
+"labels": [
+"Freezer capacity",
+"Refrigerator capacity",
+"Total capacity"
+]
+},
+{
+"category": "cooking",
+"space": "attr",
+"same": false,
+"labels": [
+"Bake Wattage",
+"Broiler Wattage",
+"Convection Wattage"
+]
+},
+{
+"category": "refrigerator",
+"space": "attr",
+"same": false,
+"labels": [
+"Net Weight",
+"Gross Weight"
+]
+},
+{
+"category": "refrigerator",
+"space": "attr",
+"same": false,
+"labels": [
+"Door alarm",
+"Door lock"
+]
+},
+{
+"category": "cooking",
+"space": "item",
+"same": false,
+"labels": [
+"Convection Bake",
+"Convection Roast",
+"Convection Broil"
+]
+},
+{
+"category": "cooking",
+"space": "item",
+"same": false,
+"labels": [
+"Bake",
+"Broil",
+"Roast"
+]
+},
+{
+"category": "cooking",
+"space": "attr",
+"same": false,
+"labels": [
+"Upper Oven Capacity",
+"Lower Oven Capacity",
+"Oven Capacity"
+]
+},
+{
+"category": "cooking",
+"space": "attr",
+"same": false,
+"labels": [
+"Cutout Width",
+"Width",
+"Oven Interior Width"
+]
+},
+{
+"category": "refrigerator",
+"space": "attr",
+"same": false,
+"labels": [
+"Depth Closed Excluding Handles",
+"Depth Closed Including Handles",
+"Depth with Door Open 90 Degree"
+]
+},
+{
+"category": "washer",
+"space": "attr",
+"same": false,
+"labels": [
+"Washer capacity",
+"Dryer capacity"
+]
+},
+{
+"category": "washer",
+"space": "attr",
+"same": false,
+"labels": [
+"Max spin speed (rpm)",
+"Number of spin speeds"
+]
+},
+{
+"category": "washer",
+"space": "attr",
+"same": false,
+"labels": [
+"Noise level washing",
+"Noise level spinning"
+]
+},
+{
+"category": "cooking",
+"space": "item",
+"same": false,
+"labels": [
+"Self Clean",
+"Steam Clean"
+]
+},
+{
+"category": "cooking",
+"space": "attr",
+"same": false,
+"labels": [
+"Oven Capacity",
+"Microwave Capacity"
+]
+},
+{
+"category": "cooking",
+"space": "attr",
+"same": false,
+"labels": [
+"Voltage",
+"Amps",
+"Frequency"
+]
+},
+{
+"category": "refrigerator",
+"space": "attr",
+"same": false,
+"labels": [
+"Ice storage capacity",
+"Ice making capacity per day"
+]
+},
+{
+"category": "refrigerator",
+"space": "attr",
+"same": false,
+"labels": [
+"Minimum Height",
+"Maximum Height",
+"Height"
+]
+},
+{
+"category": "refrigerator",
+"space": "attr",
+"same": false,
+"labels": [
+"Water filter",
+"Air filter"
+]
+},
+{
+"category": "refrigerator",
+"space": "attr",
+"same": false,
+"labels": [
+"Fridge temperature range",
+"Freezer temperature range"
+]
+},
+{
+"category": "refrigerator",
+"space": "attr",
+"same": false,
+"labels": [
+"Gross Weight",
+"Net Weight",
+"Total capacity"
+]
+},
+{
+"category": "cooking",
+"space": "attr",
+"same": true,
+"labels": [
+"Overall Width",
+"Overall Appliance Width",
+"Overall Widths"
+]
+},
+{
+"category": "cooking",
+"space": "item",
+"same": true,
+"labels": [
+"Convection Bake",
+"Convection Baking",
+"Convect Bake Mode"
+]
+},
+{
+"category": "refrigerator",
+"space": "attr",
+"same": true,
+"labels": [
+"Freezer capacity",
+"Freezer Capacities",
+"Freezer Capacity Total"
+]
+},
+{
+"category": "cooking",
+"space": "item",
+"same": true,
+"labels": [
+"Keep Warm",
+"Keep Warm Function",
+"Keep-Warm"
+]
+},
+{
+"category": "cooking",
+"space": "attr",
+"same": true,
+"labels": [
+"Number of Oven Racks",
+"Number of Oven Rack",
+"No. of Oven Racks"
+]
+},
+{
+"category": "washer",
+"space": "attr",
+"same": true,
+"labels": [
+"Max spin speed (rpm)",
+"Maximum Spin Speeds",
+"Max. Spin Speed"
+]
+},
+{
+"category": "cooking",
+"space": "attr",
+"same": false,
+"labels": [
+"Overall Width",
+"Overall Height Index"
+]
+}
+]
+}

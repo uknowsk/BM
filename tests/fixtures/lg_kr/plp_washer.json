@@ -1,0 +1,418 @@
+{
+ "status": 200,
+ "data": {
+  "totalModelCnt": 5,
+  "modelList": [
+   {
+    "salesModelCode": "TR15WV5",
+    "modelId": "MD10481829",
+    "modelDisplayName": "LG 통돌이 세탁기",
+    "subCategoryName": "통돌이",
+    "modelUrlPath": "/washing-machines/tr15wv5",
+    "keywds": "15kg^2등급",
+    "productAttrKeywds": [
+     {
+      "attrId": "AT0000000124",
+      "attrNm": "색상",
+      "keywds": "화이트"
+     },
+     {
+      "attrId": "AT0000000150",
+      "attrNm": "조작방식",
+      "keywds": "버튼"
+     },
+     {
+      "attrId": "AT0000000108",
+      "attrNm": "디스플레이",
+      "keywds": "LED"
+     }
+    ],
+    "smallImageAddr": "/kr/images/washing-machines/md10481829/md10481829-280x280.jpg",
+    "thinqFlag": "N",
+    "priceInfo": {
+     "obsOriginalPrice": 550000,
+     "obsSellingPrice": 450000,
+     "obsMemberPrice": 100000,
+     "couponPrice": 20000,
+     "lastBenefitPrc": 430000
+    },
+    "priceArea": {
+     "normal": {
+      "price": 450000,
+      "originPrice": 550000,
+      "originPriceShowFlag": "Y",
+      "dicountRate": 18,
+      "discountRateShowFlag": "Y",
+      "visitText": null,
+      "visitTextShowFlag": "N"
+     },
+     "maxReward": {
+      "price": 430000
+     }
+    },
+    "benefitInfo": {
+     "cardNm": "신한",
+     "dcRate": "0",
+     "cashReward": 0,
+     "payDcAmt": 0,
+     "pointReward": 0
+    }
+   },
+   {
+    "salesModelCode": "FX24KNTR",
+    "modelId": "MD10732835",
+    "modelDisplayName": "LG 트롬 오브제컬렉션 세탁기",
+    "subCategoryName": "드럼세탁기",
+    "modelUrlPath": "/washing-machines/fx24kntr",
+    "keywds": "24kg^1등급",
+    "productAttrKeywds": [
+     {
+      "attrId": "AT0000001251",
+      "attrNm": "주요 기능",
+      "keywds": "6모션"
+     },
+     {
+      "attrId": "AT0000000124",
+      "attrNm": "색상",
+      "keywds": "스페이스 블랙"
+     },
+     {
+      "attrId": "AT0000000150",
+      "attrNm": "조작방식",
+      "keywds": "다이얼+풀터치"
+     },
+     {
+      "attrId": "AT0000000108",
+      "attrNm": "디스플레이",
+      "keywds": "LCD+LED"
+     }
+    ],
+    "smallImageAddr": "/kr/images/washing-machines/md10596838/md10596838-280x280.jpg",
+    "thinqFlag": "N",
+    "priceInfo": {
+     "obsOriginalPrice": 1850000,
+     "obsSellingPrice": 1330000,
+     "obsMemberPrice": 520000,
+     "couponPrice": 70000,
+     "lastBenefitPrc": 1171800
+    },
+    "priceArea": {
+     "normal": {
+      "price": 1330000,
+      "originPrice": 1850000,
+      "originPriceShowFlag": "Y",
+      "dicountRate": 28,
+      "discountRateShowFlag": "Y",
+      "visitText": null,
+      "visitTextShowFlag": "N"
+     },
+     "maxReward": {
+      "price": 1171800
+     }
+    },
+    "benefitInfo": {
+     "cardNm": "신한",
+     "dcRate": "7",
+     "cashReward": 0,
+     "payDcAmt": 88200,
+     "pointReward": 0
+    }
+   },
+   {
+    "salesModelCode": "RD21ESE",
+    "modelId": "MD09843832",
+    "modelDisplayName": "LG 트롬 오브제컬렉션 건조기",
+    "subCategoryName": "건조기",
+    "modelUrlPath": "/dryers/rd21ese",
+    "keywds": "21kg^1등급",
+    "productAttrKeywds": [
+     {
+      "attrId": "AT0000000124",
+      "attrNm": "색상",
+      "keywds": "네이처 베이지"
+     },
+     {
+      "attrId": "AT0000001142",
+      "attrNm": "도어 테두리",
+      "keywds": "네이처 베이지"
+     },
+     {
+      "attrId": "AT0000000108",
+      "attrNm": "디스플레이",
+      "keywds": "LCD+LED"
+     },
+     {
+      "attrId": "AT0000000150",
+      "attrNm": "조작방식",
+      "keywds": "다이얼+풀터치"
+     },
+     {
+      "attrId": "AT0000001251",
+      "attrNm": "주요 기능",
+      "keywds": "트루스팀"
+     }
+    ],
+    "smallImageAddr": "/kr/images/dryers/md09843832/md09843832-280x280.jpg",
+    "thinqFlag": "N",
+    "priceInfo": {
+     "obsOriginalPrice": 2140000,
+     "obsSellingPrice": 1690000,
+     "obsMemberPrice": 450000,
+     "couponPrice": 100000,
+     "lastBenefitPrc": 1478700
+    },
+    "priceArea": {
+     "normal": {
+      "price": 1690000,
+      "originPrice": 2140000,
+      "originPriceShowFlag": "Y",
+      "dicountRate": 21,
+      "discountRateShowFlag": "Y",
+      "visitText": null,
+      "visitTextShowFlag": "N"
+     },
+     "maxReward": {
+      "price": 1478700
+     }
+    },
+    "benefitInfo": {
+     "cardNm": "신한",
+     "dcRate": "7",
+     "cashReward": 0,
+     "payDcAmt": 111300,
+     "pointReward": 0
+    }
+   },
+   {
+    "salesModelCode": "WA2525SSP6G",
+    "modelId": "MD10793832",
+    "modelDisplayName": "LG 트롬 AI 오브제컬렉션 워시타워",
+    "subCategoryName": "워시타워",
+    "modelUrlPath": "/wash-tower/wa2525ssp6g",
+    "keywds": "25/25kg^1등급",
+    "productAttrKeywds": [
+     {
+      "attrId": "AT0000000124",
+      "attrNm": "색상",
+      "keywds": "스틸 블랙/스틸 블랙"
+     },
+     {
+      "attrId": "AT0000001251",
+      "attrNm": "주요 기능",
+      "keywds": "트루스팀(듀얼)^자동세제 플러스^AI 세탁^AI 건조"
+     }
+    ],
+    "smallImageAddr": "/kr/images/wash-tower/md10793832/md10793832-280x280.jpg",
+    "thinqFlag": "N",
+    "priceInfo": {
+     "obsOriginalPrice": 5190000,
+     "obsSellingPrice": 5190000,
+     "obsMemberPrice": 0,
+     "couponPrice": 180000,
+     "lastBenefitPrc": 4659300
+    },
+    "priceArea": {
+     "normal": {
+      "price": 5190000,
+      "originPrice": 0,
+      "originPriceShowFlag": "N",
+      "dicountRate": 0,
+      "discountRateShowFlag": "N",
+      "visitText": null,
+      "visitTextShowFlag": "N"
+     },
+     "maxReward": {
+      "price": 4659300
+     }
+    },
+    "benefitInfo": {
+     "cardNm": "신한",
+     "dcRate": "7",
+     "cashReward": 0,
+     "payDcAmt": 350700,
+     "pointReward": 0
+    }
+   },
+   {
+    "salesModelCode": "FC2521KX6CX",
+    "modelId": "MD10868827",
+    "modelDisplayName": "LG 트롬 AI 오브제컬렉션 워시콤보 + 미니워시",
+    "subCategoryName": "워시콤보",
+    "modelUrlPath": "/wash-combo/fc2521kx6cx",
+    "keywds": "25/21/4kg^1등급",
+    "productAttrKeywds": [
+     {
+      "attrId": "AT0000000124",
+      "attrNm": "색상",
+      "keywds": "스페이스 블랙"
+     },
+     {
+      "attrId": "AT0000000108",
+      "attrNm": "디스플레이",
+      "keywds": "LCD"
+     },
+     {
+      "attrId": "AT0000001251",
+      "attrNm": "주요 기능",
+      "keywds": "트루스팀^자동세제 플러스"
+     },
+     {
+      "attrId": "AT0000000713",
+      "attrNm": "워시콤보 용량(세탁/건조)",
+      "keywds": "25/21kg"
+     }
+    ],
+    "smallImageAddr": "/kr/images/wash-combo/md10868827/md10868827-280x280.jpg",
+    "thinqFlag": "N",
+    "priceInfo": {
+     "obsOriginalPrice": 5840000,
+     "obsSellingPrice": 5840000,
+     "obsMemberPrice": 0,
+     "couponPrice": 180000,
+     "lastBenefitPrc": 4963800
+    },
+    "priceArea": {
+     "normal": {
+      "price": 5840000,
+      "originPrice": 0,
+      "originPriceShowFlag": "N",
+      "dicountRate": 0,
+      "discountRateShowFlag": "N",
+      "visitText": null,
+      "visitTextShowFlag": "N"
+     },
+     "maxReward": {
+      "price": 4963800
+     }
+    },
+    "benefitInfo": {
+     "cardNm": "신한",
+     "dcRate": "7",
+     "cashReward": 300000,
+     "payDcAmt": 396200,
+     "pointReward": 0
+    }
+   },
+   {
+    "salesModelCode": "F8WVR",
+    "modelId": "MD10732867",
+    "modelDisplayName": "LG 꼬망스 플러스",
+    "subCategoryName": "미니세탁기",
+    "modelUrlPath": "/washing-machines/f8wvr",
+    "keywds": "8kg^1등급",
+    "productAttrKeywds": [
+     {
+      "attrId": "AT0000001251",
+      "attrNm": "주요 기능",
+      "keywds": "6모션"
+     },
+     {
+      "attrId": "AT0000000124",
+      "attrNm": "색상",
+      "keywds": "화이트"
+     },
+     {
+      "attrId": "AT0000000150",
+      "attrNm": "조작방식",
+      "keywds": "다이얼+터치"
+     },
+     {
+      "attrId": "AT0000000108",
+      "attrNm": "디스플레이",
+      "keywds": "LED"
+     }
+    ],
+    "smallImageAddr": "/kr/images/washing-machines/md09268826/md09268826-280x280.jpg",
+    "thinqFlag": "N",
+    "priceInfo": {
+     "obsOriginalPrice": 850000,
+     "obsSellingPrice": 660000,
+     "obsMemberPrice": 190000,
+     "couponPrice": 30000,
+     "lastBenefitPrc": 585900
+    },
+    "priceArea": {
+     "normal": {
+      "price": 660000,
+      "originPrice": 850000,
+      "originPriceShowFlag": "Y",
+      "dicountRate": 22,
+      "discountRateShowFlag": "Y",
+      "visitText": null,
+      "visitTextShowFlag": "N"
+     },
+     "maxReward": {
+      "price": 585900
+     }
+    },
+    "benefitInfo": {
+     "cardNm": "신한",
+     "dcRate": "7",
+     "cashReward": 0,
+     "payDcAmt": 44100,
+     "pointReward": 0
+    }
+   },
+   {
+    "salesModelCode": "F8VVR",
+    "modelId": "MD10732868",
+    "modelDisplayName": "LG 꼬망스 플러스",
+    "subCategoryName": "미니세탁기",
+    "modelUrlPath": "/washing-machines/f8vvr",
+    "keywds": "8kg^1등급",
+    "productAttrKeywds": [
+     {
+      "attrId": "AT0000001251",
+      "attrNm": "주요 기능",
+      "keywds": "6모션"
+     },
+     {
+      "attrId": "AT0000000124",
+      "attrNm": "색상",
+      "keywds": "모던 스테인레스"
+     },
+     {
+      "attrId": "AT0000000150",
+      "attrNm": "조작방식",
+      "keywds": "다이얼+터치"
+     },
+     {
+      "attrId": "AT0000000108",
+      "attrNm": "디스플레이",
+      "keywds": "LED"
+     }
+    ],
+    "smallImageAddr": "/kr/images/washing-machines/md09229826/md09229826-280x280.jpg",
+    "thinqFlag": "N",
+    "priceInfo": {
+     "obsOriginalPrice": 900000,
+     "obsSellingPrice": 860000,
+     "obsMemberPrice": 40000,
+     "couponPrice": 30000,
+     "lastBenefitPrc": 771900
+    },
+    "priceArea": {
+     "normal": {
+      "price": 860000,
+      "originPrice": 900000,
+      "originPriceShowFlag": "Y",
+      "dicountRate": 0,
+      "discountRateShowFlag": "N",
+      "visitText": null,
+      "visitTextShowFlag": "N"
+     },
+     "maxReward": {
+      "price": 771900
+     }
+    },
+    "benefitInfo": {
+     "cardNm": "신한",
+     "dcRate": "7",
+     "cashReward": 0,
+     "payDcAmt": 58100,
+     "pointReward": 0
+    }
+   }
+  ]
+ }
+}

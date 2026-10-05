@@ -1,0 +1,134 @@
+<script>
+		// 매뉴얼 탭 클릭 이벤트
+		$('a[id^="manualCont-"]').off().on("click", function(){
+			$('a[id^="manualCont-"]').attr('aria-selected', false);
+			$(this).attr('aria-selected', true);
+			$('div[id^="manualCont-"]').css('display', 'none');
+			let id = $(this).attr('id');
+			$('div[id="'+ id +'"]').css('display', 'block');
+		});
+
+		$(document).ready(function() {
+			// 매뉴얼 탭 초기화
+			if($('.customer-center-wrap').length > 0){
+				$('a[id^="manualCont-"]').attr('aria-selected', false);
+				$('div[id^="manualCont-"]').css('display', 'none');
+				$('a[id="manualCont-0"]').attr('aria-selected', true);
+				$('div[id="manualCont-0"]').css('display', 'block');
+			}
+			
+			const lowerUserAgent = navigator.userAgent.toLowerCase();
+
+			$('.box-btn .btn-download').on('click', function() {
+				// AOS/IOS PD에서 html 매뉴얼 선택 시 웹뷰가 아닌 외부 브라우저로 링크를 실행
+				if($(this).attr("class").indexOf('btn-html') > -1) {
+					if (lowerUserAgent.indexOf('secapp') > -1) { //AOS
+						window.secapp.startWebBrowser(this.dataset['url']);
+					} else if (lowerUserAgent.indexOf('secios') > -1) { // IOS
+						var url = this.dataset['url'];
+						window.webkit.messageHandlers.callNative.postMessage(JSON.stringify({fun:"startWebBrowser", p1: url}));
+					} else {
+						window.open(this.dataset['url']);
+						//goodsGA4.fnGA4fileDownload(this.closest('li'));	
+					}
+				} else {
+					goodsGA4.fnGA4fileDownload(this.closest('li'));	
+				}
+			});
+		})
+	</script>
+	<div class="customer-center-wrap">
+		<div class="product-purchase-wrap">
+			<ul class="product-purchase-caus_tab manual-tab tab-style-btn target" role="tablist">
+				<li id="manual-0">
+						<a href="javascript:void(0);" role="tab" id="manualCont-0" aria-controls="manualCont-0" aria-selected="true">매뉴얼</a>
+					</li>
+
+				</ul>
+
+			<div class="manual-sec tab-content" id="manualCont-0" role="tabpanel" aria-selected="false">
+					<h3 class="sub-tit sub-tit-manual">매뉴얼</h3>
+					<p class="info-prd"><strong>Bespoke AI 패밀리허브 4도어 키친핏 Max 602L (AI 푸드매니저, 오토도어)</strong>RM90H64P2W</p>
+						<ul class="list-type-download">
+						<li class="item" data-omni= "11728778">
+										<input type="hidden" name="cdlang" value="AA" />
+										<input type="hidden" name="cdctttype" value="PM" />
+										<strong class="name">
+											사용설명서(HTML)</strong>
+										<p class="desc">
+											<span class="desc-item">ver.2.0</span>
+											<span class="desc-item">
+											한국어</span>
+											<span class="desc-item">0.02MB</span>
+											<span class="desc-item">2026-09-15</span>
+										</p>
+										</p>
+										<p class="box-btn" align-items: center;">
+											<button data-url="https://downloadcenter.samsung.com/content/PM/202609/20260915082129898/KO/start_here.html" class="btn-download btn-html" data-nmfile="start_here.html" title="새 창">자세히 보기</button>
+												</p>
+									</li>
+								<li class="item" data-omni= "11728751">
+										<input type="hidden" name="cdlang" value="AA" />
+										<input type="hidden" name="cdctttype" value="UM" />
+										<strong class="name">
+											사용자 매뉴얼</strong>
+										<p class="desc">
+											<span class="desc-item">ver.2.0</span>
+											<span class="desc-item">
+											한국어</span>
+											<span class="desc-item">12.52MB</span>
+											<span class="desc-item">2026-09-15</span>
+										</p>
+										</p>
+										<p class="box-btn" align-items: center;">
+											<a href="https://downloadcenter.samsung.com/content/UM/202609/20260915081919439/OID147154-00_RM90H_2026_KO_260911.pdf" class="btn-download" data-nmfile="OID147154-00_RM90H_2026_KO_260911.pdf">다운로드</a>
+												</p>
+									</li>
+								<li class="item" data-omni= "11352242">
+										<input type="hidden" name="cdlang" value="AA" />
+										<input type="hidden" name="cdctttype" value="EM" />
+										<strong class="name">
+											Quick Guide</strong>
+										<p class="desc">
+											<span class="desc-item">ver.1.0</span>
+											<span class="desc-item">
+											한국어</span>
+											<span class="desc-item">0.83MB</span>
+											<span class="desc-item">2026-04-01</span>
+										</p>
+										</p>
+										<p class="box-btn" align-items: center;">
+											<a href="https://downloadcenter.samsung.com/content/EM/202604/20260401071252508/DA68-04370A-05_IB_REF_KO_KO_260304.pdf" class="btn-download" data-nmfile="DA68-04370A-05_IB_REF_KO_KO_260304.pdf">다운로드</a>
+												</p>
+									</li>
+								<li class="item" data-omni= "8867607">
+										<input type="hidden" name="cdlang" value="AA" />
+										<input type="hidden" name="cdctttype" value="EM" />
+										<strong class="name">
+											Quick Guide</strong>
+										<p class="desc">
+											<span class="desc-item">ver.1.0</span>
+											<span class="desc-item">
+											한국어</span>
+											<span class="desc-item">1.05MB</span>
+											<span class="desc-item">2022-11-25</span>
+										</p>
+										</p>
+										<p class="box-btn" align-items: center;">
+											<a href="https://downloadcenter.samsung.com/content/EM/202211/20221125151638571/DA68-02624H-02_MANUAL_INSTRUCTION_TTYPE_KO_220725.pdf" class="btn-download" data-nmfile="DA68-02624H-02_MANUAL_INSTRUCTION_TTYPE_KO_220725.pdf">다운로드</a>
+												</p>
+									</li>
+								</ul>
+					</div>
+			</div>
+	</div>
+<div class="waranty-box" >
+		<dl>
+			<dt class="ico-waranty" data-omni="warranty">워런티 정보</dt>
+			<dd>
+				<p>제품 등록 후 제공되는 서비스를 확인하세요</p>
+				<a href="/sec/support/warranty/" class="btn btn-d btn-type1"
+				   title="워런티 정보 자세히 보기">자세히 보기</a>
+			</dd>
+		</dl>
+		</div>
