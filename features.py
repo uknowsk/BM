@@ -52,6 +52,33 @@ FEATURES: dict[str, list[tuple[str, re.Pattern]]] = {
         ("Fingerprint resistant", _p(r"fingerprint[- ]resistant|smudge[- ]proof")),
     ],
 }
+ACCESSORY_NOTE = "옵션(액세서리)"  # evidence label of a feature that only an optional accessory provides (never 'built-in')
+_PART_TOKEN = r"[A-Z]{2,}[A-Z0-9]{3,}"
+_PART_LEAD = re.compile(rf"^\s*{_PART_TOKEN}\s+[-–—]\s+\S")      # 'UXWORXR30 - 30" Never Scrub Roller Rack'
+_PART_ONLY = re.compile(r"^\s*[A-Z]{2,}\d[A-Z0-9]{2,}\s*$")      # 'JXAFTRAY1VSS'
+_PART_ANY = re.compile(rf"\b(?=[A-Z0-9]*\d){_PART_TOKEN}\b")      # a part number anywhere (needs a digit)
+_ACC_STRONG = re.compile(r"^\s*optional\b|\boptional (?:accessor|kit)|\baccessor(?:y|ies)\b|\bkit\b|\$\s?\d|\b(?:sold|purchased) separately\b", re.I)
+_ACC_WEAK = re.compile(r"\b(?:cleaner|filter|cover|bracket|trim)\b", re.I)  # only with a part number: 'Water Filter' alone is a feature
+_ACC_CONTEXT = re.compile(r"accessor|optional", re.I)
+
+
+def is_accessory_item(text) -> bool:
+    """A list item / value that names an optional accessory or consumable rather than a feature of the appliance: a part number
+    ('UXWORXR30 - 30" Never Scrub Roller Rack', 'JXAFTRAY1VSS'), 'Optional ...', accessory / kit / price wording; cleaner / filter /
+    cover / bracket / trim only next to a part number."""
+    t = str(text or "").strip()
+    if not t:
+        return False
+    if _PART_LEAD.match(t) or _PART_ONLY.match(t) or _ACC_STRONG.search(t):
+        return True
+    return bool(_ACC_WEAK.search(t) and _PART_ANY.search(t))
+
+
+def is_accessory_spec(section, label, value) -> bool:
+    """A spec row that describes an accessory: its section / label says 'Accessories' / 'Optional ...', or its value is accessory-like."""
+    return bool(_ACC_CONTEXT.search(f"{section or ''} {label or ''}")) or is_accessory_item(value)
+
+
 _NEGATIVE = re.compile(r"^\s*(?:no|none|n/?a|false|not (?:available|included|applicable)|without|0|[-–—])\s*$", re.IGNORECASE)
 _POSITIVE_KEPT = re.compile(r"^\s*yes\b", re.IGNORECASE)
 
@@ -70,19 +97,28 @@ def derive_flags(category: Optional[str], extra_specs: dict, raw_specs: Iterable
     rows = _rows(extra_specs, raw_specs)
     out: dict[str, str] = {}
     for label, pat in defs:
-        yes, no = None, False
+        yes, no, acc = None, False, None
         for key, value in rows:
-            name = key.rsplit(" > ", 1)[-1].strip()
+            head, _sep, name = key.rpartition(" > ")
+            name = name.strip()
             m_val, m_key = pat.search(value), pat.search(name)
+            accessory = is_accessory_spec(head, name, value)
             if m_val:
-                yes = yes or m_val.group(0)
+                if accessory:
+                    acc = acc or (name if m_key else m_val.group(0))
+                else:
+                    yes = yes or m_val.group(0)
             elif m_key and value.strip():
                 if _NEGATIVE.match(value):
-                    no = True
+                    no = no or not accessory
+                elif accessory:
+                    acc = acc or name
                 else:
                     yes = yes or m_key.group(0)
         if yes:
             out[label] = f"Yes ({' '.join(yes.split())})"
+        elif acc:  # only an optional accessory (e.g. an air-fry basket): never claimed as built-in
+            out[label] = f"Yes ({ACCESSORY_NOTE}: {' '.join(acc.split())})"
         elif no:
             out[label] = "No"
     return out

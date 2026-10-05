@@ -3,7 +3,8 @@ embeddings (+ the local LLM for the grey zone) in a throw-away registry and prin
 
     python canon_check.py              # embeddings + LLM (needs LM Studio on :1234 with text-embedding-bge-m3)
     python canon_check.py --offline    # deterministic fallback only (no LM Studio)
-    python canon_check.py --no-seed-hits   # (diagnostic) also report how many labels were resolved by each method
+
+Both modes end with the per-method tally and the '임베딩 단계: 사용됨 / 사용 불가' line (the same one the Mapping sheet shows).
 """
 import collections
 import json
@@ -26,6 +27,7 @@ def main() -> int:
     with tempfile.TemporaryDirectory() as d:
         shutil.copy(ROOT / "data" / "canon_seed.json", d)
         cz = canon.Canonicalizer(d, offline=offline, persist=False)
+        cz.begin()
         methods = collections.Counter()
         tp = fp = fn = 0
         bad = []
@@ -50,6 +52,7 @@ def main() -> int:
         print(f"cases {len(cases)}  pair precision {tp / max(tp + fp, 1):.3f}  recall {tp / max(tp + fn, 1):.3f}  "
               f"(tp {tp} fp {fp} fn {fn})  {time.time() - t0:.1f}s")
         print("resolved by:", dict(methods), "| embed calls", cz.stats["embed_calls"], "llm calls", cz.stats["llm_calls"])
+        print(cz.run_stats()["line_ko"])  # embedding stage visibility: used / unavailable (deterministic fallback) / offline
     return 0
 
 

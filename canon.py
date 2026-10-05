@@ -11,8 +11,11 @@ items (cooking modes, features) in their own item space. Resolution pipeline (fi
   3 exact      registry hit (data/canon_registry.json) - decisions of earlier runs stay stable
   4 embed      cosine on LM Studio embeddings (llm.embed, vectors cached on disk) >= EMBED_AUTO merges into the nearest
                compatible attribute; EMBED_ASK..EMBED_AUTO asks the local LLM (verdict cached); below -> new attribute
-  5 fallback   no embeddings reachable: token-set + difflib ratio with a stricter threshold (never blocks)
+  5 fallback   no embeddings reachable: token-set + difflib ratio with a stricter threshold (never blocks); method 'fallback'
   6 new        a new canonical id (kebab of the label) is added to the registry, long-tail (core=False)
+
+run_stats() reports, per build (begin() resets it), how many distinct labels each stage resolved and whether the embedding
+stage was used / unavailable / offline / not needed, so a silent degrade to the deterministic fallback is visible.
 
 Merges are guarded: numeric/flag/text value kinds and unit families must be compatible and a label pair that differs
 by a discriminating word (width/height, fridge/freezer, bake/broil, net/gross, lock/alarm ...) never auto-merges.
@@ -40,12 +43,26 @@ EMBED_AUTO, EMBED_ASK = 0.84, 0.72   # cosine thresholds (auto-merge / ask the L
 FALLBACK_MIN = 0.88                  # deterministic token+difflib score needed when embeddings are unavailable
 REVIEW_BELOW = 0.9                   # a merge scored below this (or decided by the LLM) is flagged for review
 LLM_BUDGET = 40                      # max LLM verdicts / classifications per build (cost-aware)
-METHODS = ("override", "seed", "exact", "embed", "llm", "new")
+METHODS = ("override", "seed", "exact", "embed", "llm", "fallback", "new")
+# per-run tally keys (Canonicalizer.run_stats): every distinct label is counted once, under how it was resolved.
+# 'registry' = a decision of an earlier run reused, 'rule' = routed by a deterministic rule outside this module (accessory items)
+STAT_KEYS = ("override", "seed", "exact", "registry", "embed", "llm", "fallback", "new", "rule")
 
 
 def needs_review(method: str, score: float) -> bool:
     """A mapping the user should double-check: decided by the LLM, or a fuzzy (embedding / fallback) merge below REVIEW_BELOW."""
-    return method == "llm" or (method == "embed" and score < REVIEW_BELOW)
+    return method == "llm" or (method in ("embed", "fallback") and score < REVIEW_BELOW)
+
+
+def stats_line(stats: dict) -> str:
+    """One-line Korean summary of Canonicalizer.run_stats() for the Mapping sheet header and the compare payload."""
+    stage, model = stats.get("embed_stage"), stats.get("embed_model") or ""
+    head = {"used": f"임베딩 단계: 사용됨{f' ({model})' if model else ''}",
+            "unavailable": "임베딩 단계: 사용 불가 - 결정적 폴백",
+            "offline": "임베딩 단계: 사용 불가 (오프라인 모드) - 결정적 폴백",
+            "not_needed": "임베딩 단계: 호출 불필요 (모든 항목이 시드/레지스트리에서 해결)"}.get(stage, "임베딩 단계: 알 수 없음")
+    by = ", ".join(f"{k} {v}" for k, v in (stats.get("methods") or {}).items() if v)
+    return f"{head} | 항목 {stats.get('labels', 0)}개 해결 방법: {by or '-'}"
 
 
 @dataclass(frozen=True)
@@ -429,6 +446,7 @@ _CONFLICT = (
     ({"with", "including", "incl"}, {"without", "excluding", "excl"}),
     ({"watt", "wattage"}, {"amp", "ampere"}, {"volt", "voltage"}, {"hertz", "hz", "frequency"}),
     ({"hot"}, {"cold"}, {"warm"}),
+    ({"microwave"}, {"oven"}),
     ({"washer", "wash", "washing"}, {"dryer", "dry", "drying"}),
     ({"cubed"}, {"crushed"}),
     ({"number", "count"}, {"type", "size", "color", "capacity", "power", "location", "material"}),
@@ -496,6 +514,34 @@ def _soft_overlap(a: tuple, b: tuple) -> float:
             matched += 1
             unused.pop(bi)
     return matched / (len(a) + len(b) - matched)
+
+
+_GENERIC = {"mode", "type", "function", "feature", "setting", "option", "total", "overall", "appliance", "number", "count", "no", "item"}
+_NOUNS = {"rack", "light", "lamp", "drawer", "shelf", "probe", "basket", "tray", "filter", "burner", "element", "guide", "rail"}  # physical parts
+DISTINCT_OK = 0.93  # an embedding score this high overrides the 'each side has its own extra word' guard
+
+
+def distinct_heads(a: tuple, b: tuple) -> bool:
+    """True when the labels share a word but BOTH carry a content word the other lacks ('Slow Roast' / 'Slow Cook', 'Standard Rack' /
+    'Glide Rack', 'Language Conversion' / 'Temperature Conversion'): different specs sharing one word. One side being a plain
+    extension of the other ('Overall Appliance Width' / 'Overall Width') is not distinct. Generic words (mode, type, ...) do not count."""
+    ta = [t for t in a if t not in _GENERIC]
+    tb = [t for t in b if t not in _GENERIC]
+    if not ta or not tb:
+        return False
+    unused, only_a, shared = list(tb), 0, 0
+    for t in ta:
+        best, bi = 0.0, -1
+        for i, u in enumerate(unused):
+            r = 1.0 if t == u else difflib.SequenceMatcher(None, t, u).ratio()
+            if r > best:
+                best, bi = r, i
+        if best >= 0.8:
+            unused.pop(bi)
+            shared += 1
+        else:
+            only_a += 1
+    return shared > 0 and only_a > 0 and len(unused) > 0  # no shared word at all is the embedding's / the LLM's call
 
 
 def fallback_score(a: tuple, b: tuple) -> float:
@@ -600,6 +646,8 @@ class Canonicalizer:
         self._cache: Optional[_EmbedCache] = None
         self._mats: dict = {}
         self.stats = {"embed_calls": 0, "llm_calls": 0}
+        self._run = self._fresh_run()
+        self._pruned = 0     # learned merges dropped at load because the guards refuse them now
         self.attrs: dict[str, dict] = {}
         self._idx: dict = {}
         self._sidx: dict = {}
@@ -633,6 +681,26 @@ class Canonicalizer:
             if aid not in self.attrs:
                 self.attrs[aid] = {**a, "id": aid, "order": 5000 + i, "origin": "registry"}
         self._reindex()
+        self._prune_registry()
+
+    def _prune_registry(self) -> None:
+        """Forget learned fuzzy merges (embed / llm / fallback) that today's guards would refuse: earlier, laxer runs may have
+        stored e.g. 'Standard Rack' -> gliding racks. The label is then resolved again (and usually becomes its own row)."""
+        bad = []
+        for key, ent in self._reg["labels"].items():
+            a = self.attrs.get(ent.get("id", ""))
+            if a is None or ent.get("m") not in ("embed", "llm", "fallback") or not ent.get("label"):
+                continue
+            try:
+                if self._blocked(normalize(ent["label"]), a, float(ent.get("s", 0))):
+                    bad.append(key)
+            except Exception:  # noqa: BLE001 - a malformed entry is simply kept
+                continue
+        for key in bad:
+            del self._reg["labels"][key]
+        if bad:
+            self._dirty = True
+            self._pruned = len(bad)
 
     def _load_overrides(self) -> None:
         self._ov: dict[str, dict] = {}
@@ -699,8 +767,50 @@ class Canonicalizer:
 
     # ---------------------------------------------------------------- public API
     def begin(self) -> None:
-        """Reset the per-build LLM budget (called by compare_model.build_compare)."""
-        self._llm_left = LLM_BUDGET
+        """Reset the per-build LLM budget and run statistics (called by compare_model.build_compare)."""
+        with self._lock:
+            self._llm_left = LLM_BUDGET
+            self._run = self._fresh_run()
+
+    @staticmethod
+    def _fresh_run() -> dict:
+        return {"methods": {k: 0 for k in STAT_KEYS}, "seen": set(), "embed_ok": 0, "embed_fail": 0, "llm_calls": 0}
+
+    def tally(self, kind: str, key=None) -> None:
+        """Count one distinct label (`key` dedupes within the run) under `kind` (one of STAT_KEYS)."""
+        with self._lock:
+            run = self._run
+            if key is not None:
+                if key in run["seen"]:
+                    return
+                run["seen"].add(key)
+            run["methods"][kind] = run["methods"].get(kind, 0) + 1
+
+    def run_stats(self) -> dict:
+        """{'methods': {stage: n}, 'labels': n, 'embed_stage': 'used'|'unavailable'|'offline'|'not_needed', 'embed_ok', 'embed_fail',
+        'embed_model', 'llm_calls', 'line_ko': one-line summary} of the current run (since begin())."""
+        with self._lock:
+            run = self._run
+            methods = dict(run["methods"])
+            if self.offline or self._embed_fn is None:
+                stage = "offline"
+            elif run["embed_fail"] or time.time() < self._embed_dead_until:
+                stage = "unavailable"
+            elif run["embed_ok"]:
+                stage = "used"
+            else:
+                stage = "not_needed"
+            out = {"methods": methods, "labels": sum(methods.values()), "embed_stage": stage, "embed_ok": run["embed_ok"],
+                   "embed_fail": run["embed_fail"], "embed_model": (self._cache.model if self._cache is not None else "") or "",
+                   "llm_calls": run["llm_calls"], "registry_pruned": self._pruned}
+        out["line_ko"] = stats_line(out)
+        return out
+
+    def known(self, label: str, *, category: str, value=None, section: Optional[str] = None, space: str = "attr") -> bool:
+        """True when the label resolves by the cheap stages (override / seed / registry) - no learning, no embedding, no counting."""
+        with self._lock:
+            n = normalize(label, section)
+            return bool(n.tokens) and self._cheap_hit(n, _cat(category), space)
 
     def canonicalize(self, label: str, *, category: str, value=None, section: Optional[str] = None, space: str = "attr") -> Canon:
         with self._lock:
@@ -753,18 +863,22 @@ class Canonicalizer:
         n = normalize(label, section)
         if not n.tokens:
             return Canon("unnamed", "(unnamed)", "(이름 없음)", "보증·기타", "text", False, "new", 0.0)
+        seen = (space, cat, n.key)
         ov = self._override(n, cat)
         if ov is not None:
+            self.tally("override", seen)
             return self._finish(ov[0], None, "override", 1.0, space, value, cat)
         hit = self._lookup(n, cat, space)
         if hit is not None:
-            attr, qual, method, score = hit
+            attr, qual, method, score, via = hit
+            self.tally(via, seen)
         else:
             attr, method, score = self._fuzzy(n, cat, space, value)
             qual = None
             if attr is None:
                 attr = self._new_attr(n, label, cat, space, value, score)
                 method = "new"
+            self.tally(method, seen)
         return self._finish(attr, qual, method, score, space, value, cat)
 
     def _finish(self, attr: dict, qual, method: str, score: float, space: str, value, cat: Optional[str] = None) -> Canon:
@@ -838,7 +952,7 @@ class Canonicalizer:
         return out
 
     def _lookup(self, n: Norm, cat: str, space: str):
-        """Seed/registry hit -> (attr, qualifier, method, score) or None."""
+        """Seed/registry hit -> (attr, qualifier, method, score, stat key) or None."""
         cats = [cat] if cat in CATS else ["*"]
         for toks, cav, pos in self._variants(n):
             for c in cats:
@@ -849,11 +963,12 @@ class Canonicalizer:
                 if (cav and not a.get("cav")) or (pos and not a.get("pos")):
                     continue
                 qual = (cav if a.get("cav") and cav else None) or (pos if a.get("pos") and pos else None)
-                return a, qual, ("seed" if a.get("origin") == "seed" else "exact"), 1.0
+                kind = "seed" if a.get("origin") == "seed" else "exact"
+                return a, qual, kind, 1.0, kind
         learned = self._reg["labels"].get(f"{space}|{cat}|{n.key}")
         if learned and learned["id"] in self.attrs:
             m = learned.get("m", "exact")
-            return self.attrs[learned["id"]], None, ("exact" if m == "new" else m), float(learned.get("s", 1.0))
+            return self.attrs[learned["id"]], None, ("exact" if m == "new" else m), float(learned.get("s", 1.0)), "registry"
         return None
 
     def _cheap_hit(self, n: Norm, cat: str, space: str) -> bool:
@@ -870,6 +985,9 @@ class Canonicalizer:
         vecs = self._cache.get(texts)
         if vecs is None:
             self._embed_dead_until = time.time() + 120  # LM Studio unreachable: do not hammer it, use the fallback
+            self._run["embed_fail"] += 1
+        else:
+            self._run["embed_ok"] += 1
         return vecs
 
     def _cands(self, space: str, cat: str) -> list[dict]:
@@ -924,7 +1042,7 @@ class Canonicalizer:
                         per[o] = float(s)
                 for aid, score in sorted(per.items(), key=lambda kv: -kv[1])[:6]:
                     a = self.attrs[aid]
-                    if not self._compatible(a, value) or conflicts(n.tokens, self._best_syn(a, n)):
+                    if not self._compatible(a, value) or self._blocked(n, a, score):
                         continue
                     best_score = score
                     if score >= EMBED_AUTO:
@@ -940,14 +1058,27 @@ class Canonicalizer:
             if not self._compatible(a, value):
                 continue
             for _key, toks in self._syn_keys(a):
-                if not toks or not (pre & {t[:4] for t in toks}) or conflicts(n.tokens, toks):
+                if not toks or not (pre & {t[:4] for t in toks}) or conflicts(n.tokens, toks) or distinct_heads(n.tokens, toks):
                     continue
                 s = fallback_score(n.tokens, toks)
                 if s > best:
                     best, ba = s, a
         if ba is not None and best >= FALLBACK_MIN:
-            return self._learn(n, cat, space, ba, "embed", best)
+            return self._learn(n, cat, space, ba, "fallback", best)
         return None, "new", best
+
+    def _blocked(self, n: Norm, a: dict, score: float) -> bool:
+        """Guards of a fuzzy merge: discriminating words (vs the best synonym AND the attribute's own label), and - for same-script
+        labels scoring below DISTINCT_OK - 'each side has its own extra word'."""
+        syn = self._best_syn(a, n)
+        en = tuple(normalize(a.get("en", "")).tokens)
+        if conflicts(n.tokens, syn) or conflicts(n.tokens, en):
+            return True
+        if (_NOUNS & set(n.tokens)) - set(syn) - set(en):  # 'Self-Cleaning Oven Racks' is about racks, not about self clean
+            return True
+        if score >= DISTINCT_OK or _HANGUL.search(n.raw) or _HANGUL.search(" ".join(syn)):
+            return False
+        return distinct_heads(n.tokens, syn)
 
     def _best_syn(self, a: dict, n: Norm) -> tuple:
         syns = [t for _k, t in self._syn_keys(a) if t]
@@ -968,9 +1099,12 @@ class Canonicalizer:
             return False
         self._llm_left -= 1
         self.stats["llm_calls"] += 1
+        self._run["llm_calls"] += 1
         prompt = (f"Appliance spec sheets, product category: {cat}. Do these two spec labels name the SAME specification "
                   f"(the same measured attribute or feature, not a related but different one such as width vs height, "
-                  f"fridge vs freezer, bake vs broil, net vs gross weight, door lock vs door alarm)?\n"
+                  f"fridge vs freezer, bake vs broil, net vs gross weight, door lock vs door alarm, microwave vs oven, "
+                  f"a specific variant such as 'Audible Preheat Signal' vs 'Audible Signal', a plain rack vs a gliding rack)? "
+                  f"When in doubt answer false: a wrong merge hides a real difference between products.\n"
                   f"A: \"{n.raw}\" (sample value: {str(value)[:60] if value is not None else 'n/a'}; section: {n.section or 'n/a'})\n"
                   f"B: \"{a['en']}\" / \"{a.get('ko', '')}\" (also called: {'; '.join(a.get('syn', [])[:6])})\n"
                   f"Answer ONLY JSON: {{\"same\": true}} or {{\"same\": false}}.")
@@ -1035,6 +1169,7 @@ class Canonicalizer:
         if self._llm_fn is not None and not self.offline and self._llm_left > 0:
             self._llm_left -= 1
             self.stats["llm_calls"] += 1
+            self._run["llm_calls"] += 1
             try:
                 res = self._llm_fn(f"Classify the appliance spec label \"{n.raw}\" (category {cat}, sample value "
                                    f"{str(value)[:50] if value is not None else 'n/a'}) into exactly one of: {', '.join(SECTIONS)}. "

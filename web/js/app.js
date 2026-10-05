@@ -609,7 +609,7 @@ function resultGroups(res, picks) {
   const catOf = (p) => p.category || lookup.get(norm(p.brand) + '|' + norm(p.model_number)) || first;
   const idxOf = (list) => list.map((p) => P.findIndex((q) => norm(q.brand) === norm(p.brand) && norm(q.model_number) === norm(p.model_number)));
   let groups;
-  if (res.groups && res.groups.length) groups = res.groups.map((g) => ({ category: g.category, label_ko: g.label_ko, products: g.products || P.filter((p) => catOf(p) === g.category), compare: g.compare || null, pod: g.pod || (g.pod_rows ? { rows: g.pod_rows } : null) }));
+  if (res.groups && res.groups.length) groups = res.groups.map((g) => ({ category: g.category, label_ko: g.label_ko, products: g.products || P.filter((p) => catOf(p) === g.category), compare: g.compare || null, canon_stats: g.canon_stats || null, pod: g.pod || (g.pod_rows ? { rows: g.pod_rows } : null) }));
   else {
     const cats = []; P.forEach((p) => { const c = catOf(p); if (!cats.includes(c)) cats.push(c); });
     groups = cats.map((c) => ({ category: c, products: P.filter((p) => catOf(p) === c), pod: null }));
@@ -621,7 +621,7 @@ function resultGroups(res, picks) {
       rows = ((res.pod && res.pod.rows) || []).map((r) => (whole ? r : { ...r, present: ix.map((i) => r.present[i]), source: ix.map((i) => (r.source || [])[i]), wording: ix.map((i) => (r.wording || [])[i]) }))
         .filter((r) => r.present.some(Boolean));
     }
-    return { category: g.category, label_ko: g.label_ko || catLabel(g.category), products: g.products, podRows: rows, compare: g.compare };
+    return { category: g.category, label_ko: g.label_ko || catLabel(g.category), products: g.products, podRows: rows, compare: g.compare, canonStats: g.canon_stats || null };
   });
 }
 
@@ -664,6 +664,7 @@ function renderResults(job, picks) {
   const view = (g) => () => categoryView(g, res);
   if (groups.length > 1) body.append(tabset('cat', '제품군 선택', groups.map((g) => [g.category, g.label_ko, g.products.length, view(g)]), 'tabs-major'));
   else body.append(categoryView(groups[0], res));
+  if (window.GaugeTemplate) window.GaugeTemplate.mount(body, job, groups);   // "내 분류양식" panel + 비교표 기준 toggle (web/js/template.js)
   if (res.run_log.length) body.append(el('details', { class: 'rlog' }, el('summary', {}, `수집 로그 (${res.run_log.length})`),
     el('div', { class: 'logbox' }, res.run_log.map((r) => el('div', { class: r[1] === 'failed' ? 'f' : '' }, `[${r[1]}] ${r[2]}`)))));
   showStage('results');
@@ -673,7 +674,7 @@ function categoryView(g, res) {
   const P = g.products, c = g.category, hasModes = c === MODES_CATEGORY;
   const mineOf = (list) => list.filter((m) => P.some((p) => norm(p.brand) === norm(m.brand) && norm(p.model_number) === norm(m.model_number)));
   const modes = mineOf(res.modes), docs = mineOf(res.documents);
-  const defs = [g.compare && g.compare.length ? ['spec', '비교', P.length, () => comparePanel(P, g.compare)] : ['spec', '사양 비교', P.length, () => specPanel(P)], ['pod', 'POD 매트릭스', g.podRows.length, () => podPanel(P, g.podRows)]];
+  const defs = [g.compare && g.compare.length ? ['spec', '비교', P.length, () => comparePanel(P, g.compare, g.canonStats)] : ['spec', '사양 비교', P.length, () => specPanel(P)], ['pod', 'POD 매트릭스', g.podRows.length, () => podPanel(P, g.podRows)]];
   if (hasModes) defs.push(['modes', '동작 모드', modes.length, () => modesPanel(P, modes)]);
   defs.push(['docs', '문서', docs.length, () => docsPanel(P, docs)]);
   return el('div', { class: 'catview' }, tabset('t-' + c, `${g.label_ko} 결과 보기`, defs),
@@ -861,10 +862,11 @@ function specPanel(P) {
    method, sources:[[{label, value, method, score, via?}] per product]}. The Excel 'Compare' sheet is built from the very same
    rows. Default view = core rows; '전체 항목 보기' adds the long tail (collapsed per section). Basics shown in the column
    header (image/brand/model/name) are not repeated. */
-const CMP_SECTIONS = ['기본정보', '치수·무게', '용량', '전기·에너지', '성능', '기능', '디자인', '연결성', '조리(오븐·쿡탑)', '세탁·건조', '냉각·신선', '보증·기타'];
+const CMP_SECTIONS = ['기본정보', '치수·무게', '용량', '전기·에너지', '성능', '기능', '디자인', '연결성', '조리(오븐·쿡탑)', '세탁·건조', '냉각·신선', '보증·기타', '액세서리·옵션'];
 const CMP_HEADER_IDS = ['image', 'brand', 'model', 'name'];
 const CMP_BEST = { price: 'min', 'energy-annual': 'min', 'capacity-total': 'max', 'oven-capacity': 'max', 'washer-capacity': 'max' };
-const METHOD_KO = { override: '사용자 지정', seed: '표준 사전', exact: '이전 매핑', embed: '유사도', llm: 'AI 판단', new: '신규 항목' };
+const METHOD_KO = { override: '사용자 지정', seed: '표준 사전', exact: '이전 매핑', registry: '이전 매핑', embed: '유사도', llm: 'AI 판단', fallback: '규칙 유사도', new: '신규 항목', rule: '규칙(액세서리)', derived: '목록에서 계산' };
+const STAGE_KO = { used: '사용됨', unavailable: '사용 불가 · 결정적 폴백', offline: '사용 불가(오프라인) · 결정적 폴백', not_needed: '호출 불필요' };
 function cmpCell(r, v, note, best, nVals, srcs, showOrig) {
   const orig = showOrig && srcs && srcs.length ? el('div', { class: 'wording orig' }, srcs.slice(0, 2).map((s) => s.label).join(' · ')) : null;
   if (r.kind === 'flag') {
@@ -875,14 +877,15 @@ function cmpCell(r, v, note, best, nVals, srcs, showOrig) {
   if (r.id === 'url') return el('td', { class: 'v txt' }, httpsUrl(v) ? el('a', { class: 'ph-link', href: httpsUrl(v), target: '_blank', rel: 'noopener noreferrer' }, '제품 페이지', icon(I.ext, 'x')) : '—');
   const isBest = best && typeof v === 'number' && nVals.length > 1 && v === (best === 'min' ? Math.min(...nVals) : Math.max(...nVals));
   const text = typeof v === 'number' ? (r.unit === 'USD' ? usd(v) : num1(v)) : String(v);
-  return el('td', { class: 'v' + (typeof v === 'string' ? ' txt wrapv' : '') + (isBest ? ' best' : ''), title: isBest ? (best === 'min' ? '비교 대상 중 가장 낮음' : '비교 대상 중 가장 큼') : null }, text, isBest ? el('span', { class: 'vh' }, ' (최선)') : null, orig);
+  return el('td', { class: 'v' + (typeof v === 'string' ? ' txt wrapv' : '') + (isBest ? ' best' : ''), title: isBest ? (best === 'min' ? '비교 대상 중 가장 낮음' : '비교 대상 중 가장 큼') : null }, text, isBest ? el('span', { class: 'vh' }, ' (최선)') : null,
+    note ? el('div', { class: 'wording' }, note) : null, orig);  // e.g. 'derived from item list: 1 X Rack + 2 Y Racks'
 }
 function cmpTip(r, P) {  // hover / long-press text: each product's original wording
   const lines = P.map((p, i) => ((r.sources || [])[i] || []).map((s) => `${p.brand} ${p.model_number}: ${s.label} = ${s.value}`)).flat();
   return lines.length ? `원문 항목명\n${lines.join('\n')}` : null;
 }
-function comparePanel(P, rows) {
-  const uid = ++specSeq, st = { onlyDiff: false, q: '', all: false, en: false, orig: false, open: new Set(), tip: new Set() }, colspan = String(P.length + 1);
+function comparePanel(P, rows, canonStats) {
+  const uid = ++specSeq, st = { onlyDiff: false, q: '', all: false, en: false, orig: false, open: new Set(), shut: new Set(), tip: new Set() }, colspan = String(P.length + 1);
   const data = rows.filter((r) => !CMP_HEADER_IDS.includes(r.id)).map((r) => ({
     ...r, core: r.core !== false,
     q: `${r.section} ${r.group} ${r.key_ko} ${r.key_en} ${r.values.join(' ')} ${(r.notes || []).join(' ')} ${(r.sources || []).flat().map((s) => s.label).join(' ')}`.toLowerCase() }));
@@ -891,6 +894,9 @@ function comparePanel(P, rows) {
   const nTail = data.filter((r) => !r.core).length;
   const wrap = el('div', { class: 'specpanel' }), status = el('p', { class: 'spec-count', role: 'status', 'aria-live': 'polite' });
   const index = el('nav', { class: 'spec-index', 'aria-label': '비교 항목 구분 목차' }), tbody = el('tbody');
+  const cs = canonStats || null;   // server `canon_stats`: a silent degrade of the embedding stage must be visible
+  const stageNote = cs ? el('p', { class: 'embed-stage' + (cs.embed_stage === 'used' || cs.embed_stage === 'not_needed' ? '' : ' warn'), role: 'status', title: cs.line_ko || null },
+    `임베딩 단계: ${STAGE_KO[cs.embed_stage] || cs.embed_stage}`, cs.labels ? ` · 항목 ${cs.labels}개 매핑` : '') : null;
   const rowEl = (r) => {
     const nums = r.values.filter((v) => typeof v === 'number'), best = r.differs ? CMP_BEST[r.id.split(':')[0]] : null;
     const main = st.en ? r.key_en : r.key_ko, alt = st.en ? r.key_ko : r.key_en;
@@ -926,7 +932,20 @@ function comparePanel(P, rows) {
         const open = st.open.has(s) || !!st.q;
         tbody.append(el('tr', { class: 'tailrow' }, el('th', { colspan }, el('button', { type: 'button', class: 'tailbtn', 'aria-expanded': String(open), onclick: () => { if (st.open.has(s)) st.open.delete(s); else st.open.add(s); draw(); } },
           `${open ? '▾' : '▸'} 롱테일 항목 ${tail.length}개`, tail.some((r) => r.differs) ? el('span', { class: 'ic' }, ` · 다른 값 ${tail.filter((r) => r.differs).length}`) : null))));
-        if (open) tail.forEach((r) => { rowEl(r).forEach((n) => tbody.append(n)); shown++; });
+        if (open) {
+          let g = null;   // list values keep their parent: one collapsible sub-header per group, children right below it
+          tail.forEach((r) => {
+            const gk = r.group ? `${s}|${r.group}` : null, shut = !!gk && st.shut.has(gk) && !st.q;
+            if (r.group && r.group !== g) {
+              const kids = tail.filter((x) => x.group === r.group).length;
+              tbody.append(el('tr', { class: 'subgroup grp' }, el('th', { colspan }, el('button', { type: 'button', class: 'tailbtn', 'aria-expanded': String(!shut), onclick: () => { if (st.shut.has(gk)) st.shut.delete(gk); else st.shut.add(gk); draw(); } },
+                `${shut ? '▸' : '▾'} ${st.en ? r.group : (r.group_ko || r.group)} (${kids})`))));
+            }
+            g = r.group || null;
+            if (shut) return;
+            rowEl(r).forEach((n) => tbody.append(n)); shown++;
+          });
+        }
       }
     });
     if (!shown) tbody.append(el('tr', {}, el('td', { colspan, class: 'v txt na' }, st.q ? '필터와 일치하는 항목이 없습니다.' : st.onlyDiff ? '차이가 있는 항목이 없습니다.' : '표시할 항목이 없습니다.')));
@@ -947,7 +966,7 @@ function comparePanel(P, rows) {
     el('div', { class: 'key' }, el('span', {}, el('i', { class: 'k-diff' }), '값이 다른 항목'), el('span', {}, el('i', { class: 'k-best' }), '가장 유리한 값 (가격·소비전력 낮음, 용량 큼)'),
       el('span', {}, el('span', { class: 'badge-unsure' }, '검토'), ' 매핑이 불확실한 항목')),
     el('div', { class: 'key' }, filter, allTog, diffTog, tog('English 항목명', (v) => { st.en = v; }, '항목명을 영어(기본: 한국어)로 표시'),
-      tog('원문 항목명 보기', (v) => { st.orig = v; }, '각 제품 원문 항목명을 값 아래에 표시 (항목명을 누르면 원문 상세)'))), status,
+      tog('원문 항목명 보기', (v) => { st.orig = v; }, '각 제품 원문 항목명을 값 아래에 표시 (항목명을 누르면 원문 상세)'))), status, ...(stageNote ? [stageNote] : []),  // native append() would print a null as the text 'null'
     el('div', { class: 'spec-layout' }, index, el('div', { class: 'tbl-wrap' }, table)));
   draw();
   return wrap;

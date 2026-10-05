@@ -273,14 +273,32 @@ def test_compare_sheet_is_transposed_with_real_ovens():
     assert ws.row_dimensions[1].height and ws.row_dimensions[1].height > 80
     # Mapping audit sheet: canonical id | labels | section | core | per product (source label, value, method, score) | review flag
     mp = wb["Mapping"]
-    head = [c.value for c in mp[2]]
+    head = [c.value for c in mp[3]]
     assert head[:6] == ["구분(major)", "canonical id", "항목 (EN)", "항목 (KO)", "섹션", "핵심"] and head[6:10] == ["원문 항목명", "원문 값", "방법", "점수"]
     assert head[-1] == "검토 필요"
-    row = next(r for r in mp.iter_rows(min_row=3) if r[1].value == "width")
+    # row 2 = embedding stage visibility (unit tests run offline: a loud 'deterministic fallback' notice, never silent)
+    assert mp["A2"].value.startswith("[cooking] 임베딩 단계: 사용 불가") and "결정적 폴백" in mp["A2"].value and "seed" in mp["A2"].value
+    row = next(r for r in mp.iter_rows(min_row=4) if r[1].value == "width")
     assert row[0].value == "cooking" and row[3].value == "폭" and row[5].value == "Y"
     assert "Overall Width" in row[6].value and "Dimensions > Width" in row[10].value and row[8].value.startswith("seed") and row[9].value.startswith("1.00")
     assert row[-1].value in (None, "")
-    assert mp.auto_filter.ref and mp.freeze_panes == "C3"
+    assert mp.auto_filter.ref.startswith("A3") and mp.freeze_panes == "C4"
+    # accessories stay auditable in Mapping (section 액세서리·옵션, not core) ...
+    acc = next(r for r in mp.iter_rows(min_row=4) if "UXWORXR30" in str(r[2].value))
+    assert acc[4].value == "액세서리·옵션" and acc[5].value in (None, "") and acc[8].value.startswith("rule")
+    # ... and on the Compare sheet they are the last section, only inside the collapsed long tail
+    rows = [r for r in ws.iter_rows(min_row=7) if r[0].value]
+    secs = [r[0].value for r in rows]
+    assert secs[-1] == "액세서리·옵션" and [s for i, s in enumerate(secs) if i == 0 or s != secs[i - 1]][-1] == "액세서리·옵션"
+    uacc = _row_of(ws, 'UXWORXR30 - 30" Never Scrub Roller Rack')
+    assert uacc[0].value == "액세서리·옵션" and ws.row_dimensions[uacc[0].row].hidden and ws.row_dimensions[uacc[0].row].outline_level == 2
+    # list items keep their parent: a sub-band 'oven rack features' is shown once above its (hidden) children
+    sub = [r for r in ws.iter_rows(min_row=7) if r[1].value and str(r[1].value).startswith("▸ 오븐 랙 구성")]
+    assert len(sub) == 1 and ws.row_dimensions[sub[0][0].row].hidden
+    kids = [r[2].value for r in ws.iter_rows(min_row=sub[0][0].row + 1, max_row=sub[0][0].row + 4)]
+    assert "Embossed Rack Positions (Both Ovens)" in kids or "Standard Rack" in kids
+    racks = _row_of(ws, "Oven racks (count)")
+    assert racks[4].value == 3 and racks[5].value == 2 and "derived" in racks[4].comment.text
 
 
 def test_compare_sheets_per_major_and_formula_text_neutralised():

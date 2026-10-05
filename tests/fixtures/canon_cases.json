@@ -1090,6 +1090,98 @@
 "Overall Width",
 "Overall Height Index"
 ]
+},
+{
+"category": "cooking",
+"space": "item",
+"same": false,
+"labels": [
+"Reheat",
+"Air Fry"
+]
+},
+{
+"category": "cooking",
+"space": "item",
+"same": false,
+"labels": [
+"Cook/Start",
+"Auto Cook",
+"Slow Cook",
+"Slow Roast"
+]
+},
+{
+"category": "cooking",
+"space": "item",
+"same": false,
+"labels": [
+"Audible Signal",
+"Audible Preheat Signal"
+]
+},
+{
+"category": "cooking",
+"space": "item",
+"same": false,
+"labels": [
+"Language Conversion",
+"Convection Conversion"
+]
+},
+{
+"category": "cooking",
+"space": "item",
+"same": false,
+"labels": [
+"Standard Rack",
+"Heavy-Duty Offset Oven Rack",
+"Gliding Rack"
+]
+},
+{
+"category": "cooking",
+"space": "item",
+"same": false,
+"labels": [
+"Self-Cleaning Oven Racks",
+"Self Clean"
+]
+},
+{
+"category": "cooking",
+"space": "item",
+"same": false,
+"labels": [
+"Closed Door Broiling",
+"Broil"
+]
+},
+{
+"category": "cooking",
+"space": "attr",
+"same": false,
+"labels": [
+"Microwave Interior Light",
+"Oven Light Type"
+],
+"values": [
+"Halogen",
+"Halogen"
+]
+},
+{
+"category": "cooking",
+"space": "attr",
+"same": false,
+"labels": [
+"Microwave Configuration",
+"Oven Configuration"
+],
+"values": [
+"Built-In",
+"Single Oven"
+]
 }
 ]
 }

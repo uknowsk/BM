@@ -238,6 +238,98 @@ def test_comma_lists_explode_but_numbers_and_sentences_do_not():
     assert cm.item_norm("Air Fryer") == cm.item_norm("air-fry") == cm.item_norm("AIRFRY")
 
 
+ACC = "액세서리·옵션"
+
+
+def test_accessories_go_to_their_own_collapsed_last_section():
+    ge, ka = _ovens()
+    out = cm.build_compare([ge, ka])
+    rows = out["cooking"]
+    acc = [r for r in rows if r["section"] == ACC]
+    assert acc and all(r["core"] is False for r in acc) and ACC in cm.SECTIONS and cm.SECTIONS[-1] == ACC
+    assert any("UXWORXR30" in r["key_en"] for r in acc)
+    assert not any("UXWORXR30" in r["key_en"] for r in rows if r["section"] != ACC)
+    assert rows[-len(acc):] == acc  # shown after every other section
+    assert not any(r["section"] == ACC and r["core"] for r in rows)
+    # still auditable: the Mapping sheet reads row sources, so they must be kept
+    assert all(any(ss for ss in r["sources"]) for r in acc)
+    # an optional accessory is never a built-in air fry: GE's built-in evidence stays, the basket part number is not in the note
+    air = _by_id(rows)["air-fry"]
+    assert air["values"] == [True, True] and "JXAFTRAY1VSS" not in (air["notes"][0] or "") and air["section"] != ACC
+
+
+def test_air_fry_from_an_optional_basket_only_stays_on_the_air_fry_row_labelled_optional():
+    a = _mk("A", {"Accessories > Air Fry Basket": "Optional- JXAFTRAY1VSS", "Features > Fuel Type": "Electric"})
+    b = _mk("B", {"Features > Oven Cooking Modes": "Bake | Air Fry", "Features > Fuel Type": "Electric"})
+    r = _by_id(cm.build_compare([a, b])["cooking"])["air-fry"]
+    assert r["values"] == [True, True] and r["section"] != ACC and r["core"] is True
+    assert r["notes"][0].startswith("옵션(액세서리)") and "Optional" in r["notes"][0]
+    assert "옵션" not in (r["notes"][1] or "")
+
+
+def test_list_values_stay_grouped_under_the_parent_and_merge_into_canonical_rows():
+    ge, ka = _ovens()
+    rows = cm.build_compare([ge, ka])["cooking"]
+    b = _by_id(rows)
+    # '1 Gliding Roll-out Rack' (KitchenAid) and '2 Heavy-Duty Roller Racks' (GE) are the canonical gliding-rack row
+    glide = b["telescopic-rails"]
+    assert glide["values"] == [True, True] and glide["group"] == "Oven rack features" and glide["group_ko"] == "오븐 랙 구성"
+    kids = [r for r in rows if r["group"] == "Oven rack features"]
+    assert {"Embossed Rack Positions (Both Ovens)", "Standard Rack"} <= {r["key_en"] for r in kids}
+    assert all(not r["core"] for r in kids)
+    emb = next(r for r in kids if r["key_en"].startswith("Embossed"))
+    assert emb["child"] is True and emb["values"] == [True, None]
+    assert next(r for r in kids if r["key_en"] == "Standard Rack")["notes"] == [None, "1 Standard Rack"]
+    # a group's long-tail children are contiguous (the parent is shown once above them)
+    seen, last = {}, None
+    for i, r in enumerate(rows):
+        g = (r["section"], r["group"]) if (r["group"] and not r["core"]) else None
+        if g is not None and g != last and g in seen:
+            raise AssertionError(("group split", g, seen[g], i))
+        if g is not None:
+            seen[g] = i
+        last = g
+    orphans = [r for r in rows if not r["core"] and r["kind"] == "flag" and not r["group"] and r["section"] != ACC and any(
+        s.get("via") for ss in r["sources"] for s in ss)]
+    assert not orphans, [r["key_en"] for r in orphans]  # exploded list items always keep their parent group
+
+
+def test_rack_count_is_derived_from_the_item_list_with_provenance():
+    ge, ka = _ovens()
+    r = _by_id(cm.build_compare([ge, ka])["cooking"])["oven-racks-count"]
+    assert r["values"] == [3, 2] and r["differs"] is True and r["core"] is True
+    assert r["notes"][0].startswith("derived from item list") and "Roller Racks" in r["notes"][0] and r["notes"][1] is None
+    assert r["sources"][0][0]["method"] == "derived" and r["sources"][0][0]["via"].endswith("Oven Rack Features")
+    assert any(s["label"].endswith("Number of Oven Racks") and s["method"] != "derived" for s in r["sources"][1])  # explicit value wins
+    # explicit count beats the derived one
+    a = _mk("A", {"Oven Rack Type": "1 Standard Rack, 1 Gliding Roll-out Rack", "Number of Oven Racks": "5"})
+    c = _by_id(cm.build_compare([a, _mk("B")])["cooking"])["oven-racks-count"]
+    assert c["values"][0] == 5 and any(s["method"] == "derived" for s in c["sources"][0])
+
+
+def test_build_compare_reports_canon_stats_and_embedding_visibility():
+    ge, ka = _ovens()
+    out = cm.build_compare([ge, ka])  # unit tests run offline
+    st = out.canon_stats["cooking"]
+    assert st["embed_stage"] == "offline" and "사용 불가" in st["line_ko"] and "결정적 폴백" in st["line_ko"]
+    m = st["methods"]
+    assert set(m) >= {"override", "seed", "exact", "registry", "embed", "llm", "fallback", "new", "rule"} and m["seed"] > 20 and m["rule"] >= 1
+    assert st["labels"] == sum(m.values())
+    with tempfile.TemporaryDirectory() as d:  # embedding reachable: used
+        cz = canon.Canonicalizer(d, embed_fn=canon_mod_embed_fn(), llm_fn=lambda p: None, offline=False)
+        st = cm.build_compare([ge, ka], canonicalizer=cz).canon_stats["cooking"]
+        assert st["embed_stage"] == "used" and st["embed_ok"] >= 1 and st["embed_fail"] == 0 and "사용됨" in st["line_ko"]
+    with tempfile.TemporaryDirectory() as d:  # embedding down: loudly degraded to the deterministic fallback
+        cz = canon.Canonicalizer(d, embed_fn=lambda texts: None, llm_fn=lambda p: None, offline=False)
+        st = cm.build_compare([ge, ka], canonicalizer=cz).canon_stats["cooking"]
+        assert st["embed_stage"] == "unavailable" and st["embed_fail"] >= 1 and "사용 불가" in st["line_ko"] and "결정적 폴백" in st["line_ko"]
+
+
+def canon_mod_embed_fn():
+    import test_canon
+    return test_canon.fake_embed
+
+
 if __name__ == "__main__":
     fns = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
     for fn in fns:

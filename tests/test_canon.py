@@ -250,6 +250,78 @@ def test_fallback_when_embeddings_unreachable_never_blocks():
         assert off.canonicalize("Total Capacity", category="refrigerator").id == "capacity-total"
 
 
+def test_run_stats_count_methods_and_make_a_silent_degrade_visible():
+    with tempfile.TemporaryDirectory() as d:
+        cz = make(d, offline=True)
+        cz.begin()
+        cz.canonicalize("Total Capacity", category="refrigerator")
+        cz.canonicalize("Total Capacity", category="refrigerator")  # the same label twice counts once
+        cz.canonicalize("Zorblax Capacity Index", category="cooking", value="7")
+        cz.canonicalize("Zorblax Capacity Index", category="cooking", value="7")  # now a known attribute: still the same label
+        assert cz.canonicalize_item("Convectional Bake", category="cooking").method == "fallback"  # deterministic merge, named as such
+        s = cz.run_stats()
+        assert s["methods"]["seed"] == 1 and s["methods"]["new"] == 1 and s["methods"]["fallback"] == 1 and s["labels"] == 3
+        assert s["embed_stage"] == "offline"
+        assert set(s["methods"]) == {"override", "seed", "exact", "registry", "embed", "llm", "fallback", "new", "rule"}
+        assert "임베딩 단계: 사용 불가" in s["line_ko"] and "결정적 폴백" in s["line_ko"]
+        cz.begin()
+        assert cz.run_stats()["labels"] == 0  # per-run: begin() resets
+        cz.canonicalize_item("Convectional Bake", category="cooking")
+        assert cz.run_stats()["methods"]["registry"] == 1  # a decision of an earlier build, reused
+    with tempfile.TemporaryDirectory() as d:
+        cz = make(d)
+        cz.begin()
+        cz.canonicalize("Total Capacity", category="refrigerator")
+        assert cz.run_stats()["embed_stage"] == "not_needed"  # nothing needed the fuzzy stage
+        cz.canonicalize("Qwertyzzz Plinth", category="cooking")
+        s = cz.run_stats()
+        assert s["embed_stage"] == "used" and s["embed_ok"] >= 1 and s["embed_model"] == "fake-trigram" and "사용됨" in s["line_ko"]
+    with tempfile.TemporaryDirectory() as d:
+        cz = make(d, embed_fn=lambda texts: None)
+        cz.begin()
+        cz.canonicalize("Qwertyzzz Plinth", category="cooking")
+        s = cz.run_stats()
+        assert s["embed_stage"] == "unavailable" and s["embed_fail"] == 1 and "사용 불가" in s["line_ko"]
+        near = cz.canonicalize_item("Convectional Bake", category="cooking")
+        assert near.id == "convection-bake" and near.method == "fallback" and cz.run_stats()["methods"]["fallback"] == 1
+        assert canon.needs_review("fallback", 0.89) and not canon.needs_review("fallback", 0.95)  # reviewable like embedding merges
+
+
+def test_fuzzy_merge_guards_found_on_real_live_mistakes():
+    dh = canon.distinct_heads
+    assert dh(("slow", "roast"), ("slow", "cook")) and dh(("standard", "rack"), ("glide", "rack"))
+    assert dh(("language", "conversion"), ("temperature", "conversion")) and dh(("cook", "start"), ("auto", "cook"))
+    assert not dh(("overall", "appliance", "width"), ("overall", "width")) and not dh(("freezer", "capacity", "total"), ("freezer", "capacity"))
+    assert not dh(("qwertyuiop",), ("dimension",))      # nothing shared: the embedding / LLM decides
+    assert not dh(("convect", "bake", "mode"), ("convection", "bake"))  # generic words and stems do not count
+    with tempfile.TemporaryDirectory() as d:
+        cz = make(d, offline=True)
+        assert cz.canonicalize_item("Microwave Interior Light", category="cooking").id != cz.canonicalize("Oven Light Type", category="cooking").id
+        assert cz.canonicalize_item("Reheat", category="cooking").id == "reheat"  # seed: never an 'air reheat' merge into Air fry
+        near = cz.canonicalize_item("Self-Cleaning Oven Racks", category="cooking")
+        assert near.id != "self-clean"  # a rack is not the self-clean cycle (noun guard)
+
+
+def test_registry_entries_the_guards_refuse_today_are_forgotten_on_load():
+    with tempfile.TemporaryDirectory() as d:
+        reg = {"version": 1, "attrs": {}, "verdicts": {}, "labels": {
+            "item|cooking|standard rack": {"id": "telescopic-rails", "m": "llm", "s": 0.74, "label": "1 Standard Rack"},
+            "item|cooking|convectional bake": {"id": "convection-bake", "m": "embed", "s": 0.9, "label": "Convectional Bake"}}}
+        (Path(d) / "canon_registry.json").write_text(json.dumps(reg), encoding="utf-8")
+        cz = make(d, offline=True)
+        assert "item|cooking|standard rack" not in cz._reg["labels"] and "item|cooking|convectional bake" in cz._reg["labels"]
+        assert cz.run_stats()["registry_pruned"] == 1
+        assert cz.canonicalize_item("Standard Rack", category="cooking").id != "telescopic-rails"
+
+
+def test_known_is_a_side_effect_free_cheap_lookup():
+    with tempfile.TemporaryDirectory() as d:
+        cz = make(d, offline=True)
+        before = len(cz.attrs)
+        assert cz.known("Overall Width", category="cooking") and not cz.known("Zorblax Capacity Index", category="cooking")
+        assert len(cz.attrs) == before and cz.run_stats()["labels"] == 0
+
+
 def test_item_space_is_separate_and_unknown_items_become_flag_attributes():
     with tempfile.TemporaryDirectory() as d:
         cz = make(d, offline=True)

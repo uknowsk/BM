@@ -37,3 +37,6 @@ e2e_run.py
 verify_oven.py
 bosch_body.txt
 ge_body.txt
+
+# uploaded classification forms (template.py)
+data/templates/

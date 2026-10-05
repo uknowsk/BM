@@ -646,17 +646,20 @@ def _collect_groups(products, docs, modes, job: "Job", raw_specs=()) -> list[dic
         except Exception as exc:  # noqa: BLE001 - POD table is optional; keep the rest of the results
             logger.exception("pod rows failed for job %s (%s)", job.id, major)
             job.add_log(f"POD 비교 표 생성 실패 ({major}): {_public_error(exc)}")
-        compare = []
+        compare, canon_stats = [], None
         try:  # the same transposed rows the Excel 'Compare' sheet is built from
-            compare = compare_model.build_compare(ps, docs, list(raw_specs), gm, items,
-                                                  image_ref=lambda p: _image_src(p.image_path)).get(major, [])
+            built = compare_model.build_compare(ps, docs, list(raw_specs), gm, items,
+                                                image_ref=lambda p: _image_src(p.image_path))
+            compare = built.get(major, [])
+            canon_stats = getattr(built, "canon_stats", {}).get(major)
         except Exception as exc:  # noqa: BLE001 - UI falls back to the legacy tables
             logger.exception("compare rows failed for job %s (%s)", job.id, major)
             job.add_log(f"비교 표 생성 실패 ({major}): {_public_error(exc)}")
         groups.append({"category": major, "label_ko": catalog.label_ko(major),
                        "products": [_product_dict(p) for p in ps],
                        "documents": [_doc_dict(d) for d in docs if (d.brand, d.model_number) in ids],
-                       "modes": [m.model_dump() for m in gm], "pod": {"rows": rows}, "compare": compare})
+                       "modes": [m.model_dump() for m in gm], "pod": {"rows": rows}, "compare": compare,
+                       "canon_stats": canon_stats})
     return groups
 
 
@@ -1087,6 +1090,182 @@ def api_img(brand: str, name: str):
     if p.parent.parent != IMAGES_DIR or not p.is_file():
         raise HTTPException(404, "not found")
     return FileResponse(p, media_type=IMG_TYPES[suffix], headers={"Cache-Control": IMG_CACHE})
+
+
+# ------------------------------------------------------------------ classification form (template.py): /api/template/*
+TEMPLATE_BODY_LIMIT = 8 * 1024 * 1024  # raw upload <= 5 MB; JSON + base64 adds a third
+_TEMPLATE_BOUND: dict = {}             # (template id, job id) -> BoundTemplate (small LRU; rebuilt on demand)
+_TEMPLATE_BOUND_MAX = 8
+_TEMPLATE_LOCK = threading.Lock()      # one (possibly LLM-assisted) bind at a time
+_TEMPLATE_CACHE_LOCK = threading.Lock()
+_JOB_ID_RE = re.compile(r"[0-9a-f]{12}")
+SAMPLE_GROUPS = ("cooking", "refrigerator")
+
+
+class TemplateApplyReq(BaseModel):
+    job_id: str = Field(min_length=1, max_length=32)
+
+
+def _require_origin(request: Request) -> None:
+    """The guard middleware only checks POST; DELETE (state changing) gets the same same-origin rule here."""
+    site = request.headers.get("sec-fetch-site")
+    if request.headers.get("origin") not in _allowed_origins() or (site is not None and site not in SEC_FETCH_OK):
+        raise HTTPException(403, "forbidden origin")
+
+
+async def _read_limited(request: Request, limit: int) -> bytes:
+    length = request.headers.get("content-length")
+    if length and length.isdigit() and int(length) > limit:
+        raise _bad("파일이 너무 큽니다. (최대 5 MB)")
+    chunks, total = [], 0
+    async for chunk in request.stream():
+        total += len(chunk)
+        if total > limit:
+            raise _bad("파일이 너무 큽니다. (최대 5 MB)")
+        chunks.append(chunk)
+    return b"".join(chunks)
+
+
+def _template_or_404(tid: str):
+    import template as tpl_mod
+    try:
+        return tpl_mod.load(tid)
+    except tpl_mod.TemplateError:
+        raise HTTPException(404, "양식을 찾을 수 없습니다.")
+
+
+@app.post("/api/template")
+async def api_template_upload(request: Request):
+    """Upload a classification form: raw .xlsx bytes (header X-Filename) or JSON {filename, content_base64}."""
+    import base64
+    import binascii
+    import json
+    from urllib.parse import unquote
+
+    from starlette.concurrency import run_in_threadpool
+
+    import template as tpl_mod
+    body = await _read_limited(request, TEMPLATE_BODY_LIMIT)
+    if request.headers.get("content-type", "").split(";")[0].strip().lower() == "application/json":
+        try:
+            obj = json.loads(body)
+            filename = str(obj.get("filename") or "")[:200]
+            data = base64.b64decode(obj["content_base64"], validate=True)
+        except (ValueError, KeyError, TypeError, AttributeError, binascii.Error):
+            raise _bad("JSON 형식이 올바르지 않습니다. (filename, content_base64)")
+    else:
+        filename, data = unquote(request.headers.get("x-filename", ""))[:200], body
+    try:
+        tid, tpl = await run_in_threadpool(tpl_mod.save_upload, data, filename)
+    except tpl_mod.TemplateError as exc:
+        raise _bad(str(exc))
+    except Exception:  # noqa: BLE001 - details go to the log, never to the browser
+        logger.exception("template upload failed")
+        raise HTTPException(500, "양식을 처리하지 못했습니다.")
+    return {"template_id": tid, "summary": tpl.summary()}
+
+
+@app.get("/api/template/sample")
+def api_template_sample(group: str = Query("cooking", max_length=24)):
+    """The sample form of a product group, generated in memory (never a path taken from the request)."""
+    from fastapi import Response
+
+    import make_template_sample
+    if group not in SAMPLE_GROUPS:
+        raise _bad("지원하지 않는 제품군입니다. (cooking, refrigerator)")
+    return Response(make_template_sample.build(group), media_type=XLSX_MIME,
+                    headers={"Content-Disposition": f'attachment; filename="gauge_form_sample_{group}.xlsx"'})
+
+
+@app.get("/api/template/{template_id}")
+def api_template_get(template_id: str):
+    return {"template_id": template_id, "summary": _template_or_404(template_id).summary()}
+
+
+@app.delete("/api/template/{template_id}")
+def api_template_delete(template_id: str, request: Request):
+    import template as tpl_mod
+    _require_origin(request)
+    if not tpl_mod.valid_id(template_id) or not tpl_mod.delete(template_id):
+        raise HTTPException(404, "양식을 찾을 수 없습니다.")
+    for key in [k for k in _TEMPLATE_BOUND if k[0] == template_id]:
+        _TEMPLATE_BOUND.pop(key, None)
+    return {"ok": True}
+
+
+def _job_records(job_id: str):
+    """(products, raw_specs, modes, compare) of a finished collect job, rebuilt from its stored result."""
+    from schema import RawSpec
+    if not _JOB_ID_RE.fullmatch(job_id or ""):
+        raise HTTPException(404, "job not found")
+    job = _job(job_id)
+    snap = job.snapshot()
+    res = snap["result"]
+    if job.kind != "collect" or snap["status"] not in ("done", "cancelled") or not res or not res.get("products"):
+        raise HTTPException(409, "제품이 수집된 완료 작업만 선택할 수 있습니다.")
+    try:
+        pf, rf, mf = (set(m.model_fields) for m in (ProductRecord, RawSpec, ModeRecord))
+        products = [ProductRecord(**{k: v for k, v in p.items() if k in pf}) for p in res["products"]]
+        raw = [RawSpec(**{k: v for k, v in r.items() if k in rf}) for r in res.get("raw_specs") or []]
+        modes = [ModeRecord(**{k: v for k, v in m.items() if k in mf}) for m in res.get("modes") or []]
+    except Exception:  # noqa: BLE001
+        logger.exception("could not rebuild records of job %s", job_id)
+        raise HTTPException(500, "수집 결과를 읽지 못했습니다.")
+    compare = {g["category"]: g["compare"] for g in res.get("groups") or [] if g.get("compare")}
+    return products, raw, modes, compare
+
+
+def _bound_for(template_id: str, job_id: str):
+    """(Template, BoundTemplate) for a stored form and a finished collect job (cached; one bind at a time)."""
+    import template as tpl_mod
+    tpl = _template_or_404(template_id)
+    key = (template_id, job_id)
+    with _TEMPLATE_CACHE_LOCK:
+        hit = _TEMPLATE_BOUND.get(key)
+        if hit is not None:
+            return tpl, hit
+    products, raw, modes, compare = _job_records(job_id)
+    if not _TEMPLATE_LOCK.acquire(blocking=False):
+        raise HTTPException(409, "다른 양식 적용이 진행 중입니다. 잠시 뒤 다시 시도하세요.")
+    try:
+        import pod
+        majors = {pod.major_of_product(p) for p in products}
+        items = None if majors <= set(compare) else _pod_items(products, modes)
+        bound = tpl_mod.bind(tpl, products, raw, modes, items, compare=compare if items is None else None)
+    except tpl_mod.TemplateError as exc:
+        raise _bad(str(exc))
+    except Exception:  # noqa: BLE001
+        logger.exception("template bind failed (%s, %s)", template_id, job_id)
+        raise HTTPException(500, "양식을 적용하지 못했습니다.")
+    finally:
+        _TEMPLATE_LOCK.release()
+    with _TEMPLATE_CACHE_LOCK:
+        _TEMPLATE_BOUND[key] = bound
+        while len(_TEMPLATE_BOUND) > _TEMPLATE_BOUND_MAX:
+            _TEMPLATE_BOUND.pop(next(iter(_TEMPLATE_BOUND)))
+    return tpl, bound
+
+
+@app.post("/api/template/{template_id}/apply")
+def api_template_apply(template_id: str, req: TemplateApplyReq):
+    """Organise the products of a finished collect job by the form's rows -> status counts, preview rows, download url."""
+    _, bound = _bound_for(template_id, req.job_id)
+    out = bound.to_dict()
+    out.update(template_id=template_id, job_id=req.job_id,
+               download_url=f"/api/template/{template_id}/download?job_id={req.job_id}")
+    return out
+
+
+@app.get("/api/template/{template_id}/download")
+def api_template_download(template_id: str, job_id: str = Query(max_length=32)):
+    import template_writer
+    tpl, bound = _bound_for(template_id, job_id)
+    try:
+        path = template_writer.write_filled(tpl, bound, output_dir() / f"template_{template_id}_{job_id}.xlsx")
+    except Exception:  # noqa: BLE001
+        logger.exception("template export failed (%s, %s)", template_id, job_id)
+        raise HTTPException(500, "엑셀 파일을 만들지 못했습니다.")
+    return FileResponse(path, media_type=XLSX_MIME, filename=f"gauge_form_{datetime.now():%Y%m%d_%H%M%S}.xlsx")
 
 
 MOCK_TAG = '<script src="js/mock.js"></script>\n'

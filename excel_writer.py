@@ -1,4 +1,5 @@
 """Write scraped records to a multi-sheet Excel workbook."""
+import collections
 import os
 import sys
 from datetime import datetime
@@ -245,7 +246,8 @@ def _embed_images(ws, products: list[ProductRecord], col: int, root: Path) -> No
 
 
 SECTION_FILL = {"기본정보": "D9E2F3", "치수·무게": "E2EFDA", "용량": "DDEBF7", "전기·에너지": "FFF2CC", "성능": "FCE4D6", "기능": "E4DFEC",
-                "디자인": "EDEDED", "연결성": "D0E8F0", "조리(오븐·쿡탑)": "F8E1D0", "세탁·건조": "D9EAD3", "냉각·신선": "CFE2F3", "보증·기타": "E7E6E6"}
+                "디자인": "EDEDED", "연결성": "D0E8F0", "조리(오븐·쿡탑)": "F8E1D0", "세탁·건조": "D9EAD3", "냉각·신선": "CFE2F3", "보증·기타": "E7E6E6",
+                "액세서리·옵션": "EFE6DC"}
 UNSURE_FILL = PatternFill("solid", fgColor="FFE699")  # label cell of a row whose canonical mapping needs review
 QUIET_FONT = Font(color="8C8C8C")                      # rows that are identical for every product
 LONG_TAIL = "롱테일 항목 (펼쳐서 보기)"
@@ -329,12 +331,13 @@ def _add_compare_sheet(wb: Workbook, index: int, title: str, ps: list[ProductRec
         t = ws.cell(HEADER_ROWS, c, ["구분", "항목", "Item (EN)", "단위"][c - 1] if c < FIRST_PRODUCT_COL
                     else "diff" if c == diffc else clean_text(f"{ps[c - FIRST_PRODUCT_COL].brand} {ps[c - FIRST_PRODUCT_COL].model_number}"))
         t.font, t.fill, t.alignment = HEADER_FONT, HEADER_FILL, Alignment(vertical="center", wrap_text=True)
-    section, tail_band = None, False
+    section, tail_band, group = None, False, None
+    group_size = collections.Counter((r["section"], r.get("group")) for r in rows if r.get("group") and not r.get("core", True))
     for row in rows:
         if row["id"] in HEADER_IDS_SET:
             continue
         if row["section"] != section:
-            section, tail_band = row["section"], False
+            section, tail_band, group = row["section"], False, None
             r = ws.max_row + 1
             for c in range(1, last + 1):
                 ws.cell(r, c).fill = PatternFill("solid", fgColor=SECTION_FILL.get(section, "DDDDDD"))
@@ -352,6 +355,17 @@ def _add_compare_sheet(wb: Workbook, index: int, title: str, ps: list[ProductRec
             ws.row_dimensions[r].outline_level = 1
             ws.row_dimensions[r].collapsed = True
             ws.cell(r, diffc, "band")
+        if long_tail and row.get("group") and row["group"] != group:  # parent of exploded list items: shown once above its children
+            r = ws.max_row + 1
+            ws.cell(r, 1, section)
+            g = ws.cell(r, 2, clean_text(f"▸ {row.get('group_ko') or row['group']} ({group_size[(section, row['group'])]})"))
+            g.font = Font(bold=True, color="595959")
+            for c in range(1, last + 1):
+                ws.cell(r, c).fill = PatternFill("solid", fgColor="F7F7F7")
+            ws.row_dimensions[r].outline_level = 2
+            ws.row_dimensions[r].hidden = True
+            ws.cell(r, diffc, "band")
+        group = row.get("group") if long_tail else None
         r = ws.max_row + 1
         ws.cell(r, 1, section)
         for c, v in ((2, row["key_ko"]), (3, row["key_en"]), (4, row["unit"])):
@@ -403,30 +417,40 @@ def _add_compare_sheets(wb: Workbook, products, documents, raw_specs, modes, pod
 
 
 MAPPING_PER_PRODUCT = ("원문 항목명", "원문 값", "방법", "점수")
+MAPPING_HEAD_ROW = 3   # row 1 title, row 2 embedding-stage state per category, row 3 column titles
 
 
 def _add_mapping_sheet(wb: Workbook, index: int, model: dict, groups: dict) -> None:
     """'Mapping' (audit): one row per canonical attribute with every product's source label / value / method / score and a
-    needs-review flag (method llm, or an embedding merge scored < canon.REVIEW_BELOW). Fix a wrong mapping with data/canon_overrides.json."""
+    needs-review flag (method llm, or an embedding / fallback merge scored < canon.REVIEW_BELOW). Accessory rows are listed too. Row 2
+    states whether the embedding stage was used / unavailable. Fix a wrong mapping with data/canon_overrides.json."""
     import canon
     ws = wb.create_sheet("Mapping", index)
     fixed = ["구분(major)", "canonical id", "항목 (EN)", "항목 (KO)", "섹션", "핵심"]
     maxp = max((len(ps) for ps in groups.values()), default=0)
-    ws.cell(1, 1, "Mapping audit: how every source label was mapped to a canonical row (override > seed > exact > embed > llm > new)").font = HEADER_FONT
+    ws.cell(1, 1, "Mapping audit: how every source label was mapped to a canonical row (override > seed > exact > registry > embed > llm > fallback > new)").font = HEADER_FONT
+    stats = getattr(model, "canon_stats", {}) or {}  # row 2: the embedding stage state per category (a silent degrade must be visible)
+    lines = [f"[{major}] {s['line_ko']}" for major, s in stats.items() if s.get("line_ko")]
+    sc = ws.cell(2, 1, NL.join(lines) if lines else "임베딩 단계: 정보 없음")
+    sc.alignment = Alignment(wrap_text=False, vertical="top")
+    sc.font = Font(bold=True, color="C00000" if any(s.get("embed_stage") in ("unavailable", "offline") for s in stats.values()) else "1F6B47")
+    if len(lines) > 1:
+        ws.row_dimensions[2].height = 15 * len(lines)
+    head = MAPPING_HEAD_ROW
     for c, h in enumerate(fixed, 1):
-        ws.cell(2, c, h)
+        ws.cell(head, c, h)
     col = len(fixed) + 1
     for i in range(maxp):
         for j, h in enumerate(MAPPING_PER_PRODUCT):
-            ws.cell(2, col + 4 * i + j, h)
+            ws.cell(head, col + 4 * i + j, h)
     review_col = col + 4 * maxp
-    ws.cell(2, review_col, "검토 필요")
+    ws.cell(head, review_col, "검토 필요")
     for c in range(1, review_col + 1):
-        t = ws.cell(2, c)
+        t = ws.cell(head, c)
         t.font, t.fill, t.alignment = HEADER_FONT, HEADER_FILL, Alignment(vertical="center", wrap_text=True)
     for major, rows in model.items():
         ps = groups[major]
-        band = max(ws.max_row + 1, 3)  # one band per category naming its products in the per-product column slots
+        band = max(ws.max_row + 1, head + 1)  # one band per category naming its products in the per-product column slots
         ws.cell(band, 1, major).font = HEADER_FONT
         ws.cell(band, 2, "제품 →").font = HEADER_FONT
         for i, p in enumerate(ps):
@@ -436,7 +460,7 @@ def _add_mapping_sheet(wb: Workbook, index: int, model: dict, groups: dict) -> N
         for row in rows:
             if row["id"] in HEADER_IDS_SET or not any(row.get("sources", [])) or row["section"] == "기본정보":
                 continue
-            r = max(ws.max_row + 1, 3)
+            r = max(ws.max_row + 1, head + 1)
             vals = [major, row["id"], row["key_en"], row["key_ko"], row["section"], "Y" if row["core"] else ""]
             for c, v in enumerate(vals, 1):
                 _neutralize(ws.cell(r, c, clean_text(v)))
@@ -457,8 +481,8 @@ def _add_mapping_sheet(wb: Workbook, index: int, model: dict, groups: dict) -> N
     widths = [12, 26, 26, 22, 14, 6] + [30, 28, 9, 7] * maxp + [9]
     for i, w in enumerate(widths, 1):
         ws.column_dimensions[get_column_letter(i)].width = w
-    ws.freeze_panes = "C3"
-    ws.auto_filter.ref = f"A2:{get_column_letter(review_col)}{max(ws.max_row, 3)}"
+    ws.freeze_panes = f"C{head + 1}"
+    ws.auto_filter.ref = f"A{head}:{get_column_letter(review_col)}{max(ws.max_row, head + 1)}"
 
 
 def _atomic_save(wb: Workbook, path: Path) -> Path:

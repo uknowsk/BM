@@ -96,6 +96,26 @@ def test_every_derived_flag_label_maps_to_the_canonical_seed():
         assert set(unmapped) <= {("refrigerator", "Door-in-door"), ("refrigerator", "Dual evaporator"), ("washer", "Sanitize")} | set(), unmapped
 
 
+def test_accessory_detection_is_conservative():
+    yes = ['UXWORXR30 - 30" Never Scrub Roller Rack', "Optional- JXAFTRAY1VSS", "JXAFTRAY1VSS", "Trim Kit - 30 in", "Installation Kit",
+           "Stainless Cleaner WX10X300 (cleaner)", "Optional Pedestal", "Filler Panel $59.99"]
+    no = ["Convection Bake", "Air Fry", "Water Filter", "Self-Clean", "Delay Time", "Sabbath Mode", "Cover Glass Door", "1 Standard Rack",
+          "Embossed Rack Positions (Both Ovens)", "Stainless Steel", "Door Lock", "Custom Temp Drawer"]
+    assert all(features.is_accessory_item(t) for t in yes), [t for t in yes if not features.is_accessory_item(t)]
+    assert not any(features.is_accessory_item(t) for t in no), [t for t in no if features.is_accessory_item(t)]
+    assert features.is_accessory_spec("Accessories", "Air Fry Basket", "x") and features.is_accessory_spec("", "Optional Riser", "x")
+    assert features.is_accessory_spec("Features", "Air Fry Basket", "Optional- JXAFTRAY1VSS")
+    assert not features.is_accessory_spec("Features", "Oven Cooking Modes", "Bake | Air Fry")
+
+
+def test_air_fry_from_an_optional_basket_alone_is_labelled_an_accessory():
+    only = features.derive_flags("cooking", {"Accessories > Air Fry Basket": "Optional- JXAFTRAY1VSS"}, [])
+    assert only["Air fry"] == "Yes (옵션(액세서리): Air Fry Basket)", only
+    both = features.derive_flags("cooking", {"Accessories > Air Fry Basket": "Optional- JXAFTRAY1VSS",
+                                             "Features > Oven Cooking Modes": "Bake | No Preheat Air Fry"}, [])
+    assert both["Air fry"] == "Yes (No Preheat Air Fry)", both  # built-in evidence wins; the accessory never claims built-in
+
+
 if __name__ == "__main__":
     fns = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
     for fn in fns:

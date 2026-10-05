@@ -644,3 +644,6 @@ body.ui-v2 { padding-bottom: 2rem; } body.ui-v2.has-bar { padding-bottom: 8rem; 
 .srcline .who { font: 500 11px/1 var(--mono); color: var(--ink-3); min-width: 9em; }
 .srcline .src i { color: var(--ink-3); font-style: normal; font-size: 11px; }
 @media (max-width: 720px) { .srcline .who { min-width: 100%; } }
+.cmp tr.subgroup.grp th { padding: 4px 16px 4px 28px; background: var(--bg); border-bottom: 1px solid var(--rule); }
+.embed-stage { margin: 2px 0 10px; font: 500 12px/1.4 var(--mono); color: var(--ink-3); }
+.embed-stage.warn { color: var(--warn, #b45309); }
