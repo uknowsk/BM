@@ -34,6 +34,14 @@ Gauge: 경쟁사 가전 제품 스펙·POD·모드를 수집해 비교하는 로
 - 사용자 양식 기반 분류 (`template.py`, `template_writer.py`, `web/js/template.js`, `/api/template/*`): 구분/항목/동의어/단위/유형 열을 읽어 제품 데이터를 양식 순서로 채워 엑셀 출력. 값 상태는 found/absent/unknown/derived. 샘플 양식은 `make_template_sample.py` 또는 `/api/template/sample`. 실제 양식 샘플을 받으면 열 구성에 맞춰 다듬을 것.
 - 전체 테스트 24개 스크립트 통과.
 
+- 실제 LM Studio 모델로 양식 매칭 검증 (`python template_check.py`, `--offline`, `--probe 항목`): 40개 항목 중 37개는 동의어/정확 일치/표준 항목 사전으로 해결. 미해결 항목은 상위 5개 후보를 LLM이 고르는 방식, 예/아니오 항목은 관련 행 묶음(`family`)으로 판정. 임베딩은 후보 탐색용으로만 쓴다.
+
+## 모델 사용 시 알게 된 점
+- 임베딩 점수는 기준이 일정하지 않다 (bge-m3: Size~Dimensions 0.704는 합쳐야 하고, 냉장실~냉동실 용량 0.892는 합치면 안 됨). 점수 문턱만으로 병합하지 말고 값 형태/단위/구분 단어 가드와 LLM 판정을 함께 쓴다.
+- `text-embedding-bge-m3`가 기본이 맞다. `bge-reranker-v2-m3`는 임베딩이 아니라 재순위 모델이라 유사도에 쓰면 안 되고, qwen3-embedding과 nomic은 한국어-영어 쌍과 속도에서 밀린다.
+- 로컬 qwen3-8b는 보수적으로 "없음"이라고 답하는 경향이 있다. 사용자 양식의 동의어 칸이 가장 확실한 정밀도 수단이다.
+- 예/아니오 항목의 LLM 선택은 항목과 구분되는 단어를 공유해야만 인정한다 (코셔 인증 행이 ENERGY STAR의 답으로 선택된 오탐을 막기 위함).
+
 ## 작업 시 주의
 - 셸 heredoc으로 파이썬 파일을 만들면 `\b` 같은 백슬래시 정규식이 백스페이스 문자로 깨진다. 파일은 Write/Edit 도구로만 쓰고 raw 문자열을 쓸 것.
 - 서버를 종료할 때(Stop-Process)와 새 파일/편집 시 GateGuard 훅이 사실 4가지를 먼저 요구한다.
