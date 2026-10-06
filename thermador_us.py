@@ -274,6 +274,73 @@ def item_wifi(item: dict) -> bool | None:
     return True if isinstance(tags, list) and any(isinstance(t, dict) and t.get("isHomeConnect") for t in tags) else None
 
 
+# ---------------------------------------------------------------- site-published signals (shared core)
+# Rating / review count / NEW flag / release date exactly as the site publishes them; a missing key = unknown.
+
+_NEW_BADGE = re.compile(r"^\s*(new|neu|new arrival|neuheit)\s*!?\s*$", re.I)
+_DATE = re.compile(r"^(\d{4})(?:-(\d{2})(?:-(\d{2}))?)?")
+
+
+def rating_signals(average, count, best=5) -> dict:
+    """{'rating', 'review_count'} on the 5-point scale; {} when there are no reviews (0 / 0 means none) or bad values."""
+    ok = (isinstance(average, (int, float)) and isinstance(count, (int, float)) and not isinstance(average, bool)
+          and isinstance(best, (int, float)) and best > 0 and count > 0 and average > 0)
+    if not ok:
+        return {}
+    rating = round(float(average) * 5 / float(best), 2)
+    return {"rating": rating, "review_count": int(count)} if 0 < rating <= 5 else {}
+
+
+def release_signals(value) -> dict:
+    """{'release_date', 'release_src': 'site'} from a product-page date string (YYYY[-MM[-DD]] prefix); {} otherwise."""
+    m = _DATE.match(value) if isinstance(value, str) else None
+    if not m:
+        return {}
+    return {"release_date": "-".join(g for g in m.groups() if g), "release_src": "site"}
+
+
+def item_signals(item: dict) -> dict:
+    """Signals of a listing item: rating {average, count} and a NEW badge text (primary/secondary badge)."""
+    r = item.get("rating")
+    out = rating_signals(r.get("average"), r.get("count")) if isinstance(r, dict) else {}
+    badges = item.get("buyAreaOptionBadges")
+    if isinstance(badges, dict) and any(isinstance(b, dict) and _NEW_BADGE.match(str(b.get("text") or ""))
+                                        for b in badges.values()):
+        out["is_new"] = True
+    if item.get("isNewProduct") is True:
+        out["is_new"] = True
+    return out
+
+
+def page_signals(flight: str) -> dict:
+    """Signals of a product page: schema.org aggregateRating, product.isNewProduct (True only) and releaseDate."""
+    out: dict = {}
+    m = re.search(r'"aggregateRating":(?=\{)', flight)
+    if m:
+        try:
+            agg = json.JSONDecoder().raw_decode(flight, m.end())[0]
+        except ValueError:
+            agg = {}
+        out.update(rating_signals(_as_number(agg.get("ratingValue")), _as_number(agg.get("reviewCount") or agg.get("ratingCount")),
+                                  _as_number(agg.get("bestRating")) or 5))
+    m = re.search(r'"isNewProduct":(true|false)', flight)  # first hit = the page's own product object
+    if m and m.group(1) == "true":
+        out["is_new"] = True
+    m = re.search(r'"releaseDate":(null|"[^"]*")', flight)
+    if m and m.group(1) != "null":
+        out.update(release_signals(m.group(1).strip('"')))
+    return out
+
+
+def _as_number(v):
+    if isinstance(v, str):
+        try:
+            return float(v.replace(",", "."))
+        except ValueError:
+            return None
+    return v
+
+
 # ---------------------------------------------------------------- spec table (shared core)
 
 def noise(t) -> str:
@@ -421,6 +488,7 @@ def listing_attrs(item: dict, name: str, sub: str) -> dict:
     fin = filters.finish_word(name)
     if fin:
         attrs["finish"] = fin
+    attrs.update(item_signals(item))
     return attrs
 
 
@@ -529,7 +597,7 @@ def parse_product(model: str, url: str, root: str, flight: str) -> tuple[Product
         wifi_evidence=(f"Home Connect: {hc}" + (f"; features: {hc_type}" if hc_type else "")) if hc else None,
         pod_features=[h["headline"]["text"] for h in highlights
                       if isinstance(h, dict) and isinstance(h.get("headline"), dict) and h["headline"].get("text")],
-        extra_specs=extra, image_url=main_image_url(SITE, flight),
+        extra_specs=extra, image_url=main_image_url(SITE, flight), **page_signals(flight),
     )
     raw = [RawSpec(brand=BRAND, model_number=model, source="web", section=r["sec"], key=r["label"], value=r["value"])
            for r in rows]

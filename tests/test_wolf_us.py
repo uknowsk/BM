@@ -140,6 +140,26 @@ def test_sku_url_roundtrip_and_config():
             os.environ["FRIDGE_BROWSER_MODE"] = old
 
 
+def test_is_new_only_from_news_to_date():
+    assert sz.is_new({"news_to_date": ""}) is False and sz.is_new({}) is False and sz.is_new({"news_to_date": "garbage"}) is False
+    assert sz.is_new({"news_to_date": "2000-01-01 00:00:00"}) is False  # window already over
+    assert sz.is_new({"news_to_date": "2999-12-31 00:00:00"}) is True
+    # fixtures carry an empty news_to_date: no signal, keys omitted (= unconfirmed)
+    got = _with(FakeGraphQL(_j("search_ovens.json")), lambda: w.discover("sco", limit=5))
+    assert all(not ({"is_new", "rating", "review_count", "release_date"} & set(c.attrs)) for c in got)
+    rec, _d, _r = _with(FakeGraphQL(_j("product_SPO24.json")), lambda: w.scrape(SPO24))
+    assert rec.is_new is None and rec.rating is None and rec.review_count is None and rec.release_date is None
+    # a flagged product (news_to_date in the future) is reported on both paths
+    pv = _j("product_SPO24.json")
+    for a in pv["products"][0]["attributes"]:
+        if a["name"] == "news_to_date":
+            a["value"] = "2999-12-31 00:00:00"
+    rec2, _d, _r = _with(FakeGraphQL(pv), lambda: w.scrape(SPO24))
+    assert rec2.is_new is True
+    cand = sz.candidate_from(pv["products"][0], "Wolf", "sco", "electric")
+    assert cand.attrs["is_new"] is True and cand.attrs_src["is_new"] == "listing"
+
+
 if __name__ == "__main__":
     tests = [(n, f) for n, f in sorted(globals().items()) if n.startswith("test_") and callable(f)]
     for n, f in tests:

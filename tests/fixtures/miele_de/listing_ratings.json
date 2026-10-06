@@ -1,0 +1,40 @@
+{
+ "products": [
+  {
+   "name": "KM 6013",
+   "designTypeName": "Herdgesteuertes Elektrokochfeld",
+   "salesPrice": {
+    "currencyIso": "EUR",
+    "formattedValue": "650,00 €",
+    "value": 650
+   },
+   "pdpUrl": "https://www.miele.de/product/6910460/herdgesteuertes-elektrokochfeld-km-6013",
+   "rating": {
+    "average": 5,
+    "sample": 3
+   },
+   "code": "000000000006910460",
+   "dataLayer": {
+    "category": "APPLIANCE/MDA/Hobs/Electric hobs combined"
+   }
+  },
+  {
+   "name": "KM 7361 FL",
+   "designTypeName": "Herdunabhängiges Induktionskochfeld",
+   "salesPrice": {
+    "currencyIso": "EUR",
+    "formattedValue": "999,00 €",
+    "value": 999
+   },
+   "pdpUrl": "https://www.miele.de/product/12315510/herdunabhangiges-induktionskochfeld-km-7361-fl",
+   "rating": {},
+   "code": "000000000012315510",
+   "dataLayer": {
+    "category": "APPLIANCE/MDA/Hobs/Induction hobs independent"
+   }
+  }
+ ],
+ "currentPage": 0,
+ "totalPageCount": 1,
+ "totalProductCount": 2
+}

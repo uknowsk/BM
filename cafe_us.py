@@ -157,9 +157,11 @@ def parse_search(site: Site, data: dict, sub: str) -> list[tuple[Candidate, dict
             price = float(r.get("price")) if r.get("price") not in (None, "") else None
         except (TypeError, ValueError):
             price = None
+        sig = ge.signals(r.get("rating"), r.get("ratingCount"), r.get("product_first_distribution_date"))
         out.append((Candidate(brand=site.brand, model_number=sku, name=htmllib.unescape(str(r.get("name") or sku)),
                               url=url, price_usd=price or None, category=major, subcategory=sub,
-                              region=REGION, country=COUNTRY, currency=CURRENCY, attrs=_attrs(r)), r))
+                              region=REGION, country=COUNTRY, currency=CURRENCY, attrs={**_attrs(r), **sig},
+                              attrs_src={k: "listing" for k in sig}), r))
     return out
 
 

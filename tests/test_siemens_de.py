@@ -82,6 +82,23 @@ def test_candidate_price_and_filters():
     assert s.finish_de("Schwarz, Edelstahl") == "stainless" and s.finish_de("Weiß") == "white"
 
 
+def test_site_signals():
+    # real listing excerpt (EC6A5HI90: 5 stars from 2 ratings); items without a rating stay unknown
+    items, _ = t.parse_listing(_t("listing_gaskochfelder.html"))
+    assert s.item_to_candidate(items[0], "gas_cooktop").attrs.get("rating") is None
+    rated = {**items[0], "rating": {"average": 5, "count": 2}}
+    c = s.item_to_candidate(rated, "gas_cooktop")
+    assert c.attrs["rating"] == 5.0 and c.attrs["review_count"] == 2 and c.attrs_src["review_count"] == "listing"
+    # PDP: schema.org aggregateRating + product flags; fixtures carry none -> record fields stay unset
+    flight = t.flight_text(_t("pdp_ED645HQC1E.html"))
+    assert t.page_signals(flight) == {}
+    extra = '"aggregateRating":{"@type":"AggregateRating","bestRating":5,"ratingValue":4.5,"reviewCount":8}'
+    r, _ = s.parse_product("ED645HQC1E", URLS["ED645HQC1E"], flight + extra)
+    assert (r.rating, r.review_count, r.is_new, r.release_date) == (4.5, 8, None, None)
+    r0, _ = _parse("ED645HQC1E")
+    assert (r0.rating, r0.review_count, r0.release_src) == (None, None, None)
+
+
 def test_induction_hob_record():
     r, raw = _parse("ED645HQC1E")
     assert (r.brand, r.category, r.subcategory, r.country, r.currency) == ("Siemens", "cooking", "induction", "de", "EUR")

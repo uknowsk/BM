@@ -224,12 +224,18 @@ def parse_listing(html: str) -> list[dict]:
     for m in _CARD.finditer(html):
         model, series, path, name = m.group(1), _clean(m.group(2)), _html.unescape(m.group(3)), _clean(m.group(4))
         if _MODEL.match(model) and path.startswith("/products/cook/"):
-            out.append({"model": model, "series": series, "path": path, "name": name})
+            out.append({"model": model, "series": series, "path": path, "name": name,
+                        "new": any(re.match(r"new\b", _clean(t), re.I) for t in _BADGE.findall(m.group(0)))})
     return out
+
+
+_BADGE = re.compile(r'data-badge="[^"]*">([^<]*)')
 
 
 def _candidate(card: dict, sub: str) -> Candidate:
     attrs = _card_attrs(card["name"])
+    if card.get("new"):  # the site's own NEW badge on the listing card (Viking shows only BESTSELLER today)
+        attrs["is_new"] = True
     return Candidate(brand=BRAND, model_number=card["model"], name=card["name"], url=BASE + card["path"],
                      price_usd=None, category="cooking", subcategory=sub, region=REGION, country=COUNTRY,
                      currency=CURRENCY, attrs=attrs, attrs_src={k: "listing" for k in attrs})
@@ -362,6 +368,9 @@ def parse_product(url: str, html: str) -> tuple[ProductRecord, list[RawSpec]]:
         pod_features=highlights(html),
         extra_specs={f"{s} > {l}": v for s, l, v in rows} | {"Model": model, "SKU": sku, "Series": prof.get("series") or ""},
         image_url=main_image_url(html))
+    badges = (prof.get("badges") or {}).get("profile") if isinstance(prof.get("badges"), dict) else None
+    if isinstance(badges, dict) and any(re.match(r"new\b", str(t), re.I) for t in badges.values()):
+        record.is_new = True
     raw = [RawSpec(brand=BRAND, model_number=sku, source="web", section=s, key=l, value=v) for s, l, v in rows]
     return record, raw
 

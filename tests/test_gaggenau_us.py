@@ -96,6 +96,16 @@ def test_oven_record_capacity_and_wifi():
     assert r.extra_specs["Technical data > Total rating"].endswith("3.0 KW")
 
 
+def test_site_signals_page_only_and_unset_when_absent():
+    # gaggenau.com has reviews switched off and the sitemap lists no dates: only a page that states them fills the fields
+    r, _ = _rec("CG280212CA")
+    assert (r.rating, r.review_count, r.is_new, r.release_date, r.release_src) == (None,) * 5
+    flight = t.flight_text(_t("pdp_CG280212CA.html")) + \
+        '"product":{"releaseDate":"2025-09","isNewProduct":true}"aggregateRating":{"bestRating":5,"ratingValue":4.8,"reviewCount":5}'
+    r2, _ = g.build_record(g.SITE, "CG280212CA", URLS["CG280212CA"], flight, g.facts_en, dict(region="na", country="us", currency="USD"))
+    assert (r2.rating, r2.review_count, r2.is_new, r2.release_date, r2.release_src) == (4.8, 5, True, "2025-09", "site")
+
+
 def test_url_validation():
     assert g.model_from_url(URLS["CG280212CA"]) == "CG280212CA"
     for bad in ("http://www.gaggenau.com/us/en/mkt-product/cooktops/x/gas/CG1234",

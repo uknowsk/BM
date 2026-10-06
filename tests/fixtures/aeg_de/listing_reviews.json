@@ -1,0 +1,65 @@
+{
+ "products": [
+  {
+   "modelId": "BPE53516AB",
+   "code": "944068463",
+   "name": "SurroundCook Multifunktionsbackofen Einbaubackofen / Pyrolytische Selbstreinigung / Schwarz",
+   "description": "Multifunktionsbackofen mit Pyrolyse  / 59 x 56 cm / Schwarz / A+",
+   "productURL": "https://www.aeg.de/kitchen/cooking/ovens/oven/bpe53516ab/",
+   "price": {
+    "currencyIso": "EUR",
+    "formattedValue": "€ 519",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 519.0
+   },
+   "offerPrice": {
+    "currencyIso": "EUR",
+    "formattedValue": "€ 400",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 400.0
+   },
+   "categoryFallBack": {
+    "categoryFallBackCode": "kitchen/cooking/ovens/oven",
+    "categoryFallBackENName": "Oven",
+    "categoryFallBackName": "Einbaubacköfen, -herde und -dampfbacköfen"
+   },
+   "d2cSellable": true,
+   "reviewRating": 4.266666666666667,
+   "reviewCount": 15
+  },
+  {
+   "modelId": "TU5PB41ZPB",
+   "code": "949288094",
+   "name": "5000 SurroundCook® / Einbaubackofen / Pyrolytische Selbstreinigung / Schwarz",
+   "description": "Multifunktionsofen mit Ringheizkörper und AirFry / 59 x 56 cm / Schwarz / A++",
+   "productURL": "https://www.aeg.de/kitchen/cooking/ovens/oven/tu5pb41zpb/",
+   "price": {
+    "currencyIso": "EUR",
+    "formattedValue": "€ 610",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 610.0
+   },
+   "offerPrice": {
+    "currencyIso": "EUR",
+    "formattedValue": "€ 610",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 610.0
+   },
+   "categoryFallBack": {
+    "categoryFallBackCode": "kitchen/cooking/ovens/oven",
+    "categoryFallBackENName": "Oven",
+    "categoryFallBackName": "Einbaubacköfen, -herde und -dampfbacköfen"
+   },
+   "d2cSellable": true,
+   "reviewRating": 0.0,
+   "reviewCount": 0
+  }
+ ],
+ "pagination": {
+  "totalPages": 1
+ }
+}

@@ -71,6 +71,13 @@ def test_url_check():
     raise AssertionError("expected ValueError")
 
 
+def test_signals():
+    c = core.parse_search(haier.HAIER, _j("ss_otr.json"), "otr")[0][0]
+    assert (c.attrs["rating"], c.attrs["review_count"], c.attrs_src["rating"]) == (4.4, 52, "listing")
+    r = core.parse_product(haier.HAIER, "https://www.haierappliances.com/appliance/Thing-QGAS740RMSS", _j("po_QGAS740RMSS.json"))[0]
+    assert (r.release_date, r.release_src, r.rating, r.is_new) == ("2018-11-05", "distribution", None, None)
+
+
 if __name__ == "__main__":
     tests = [(n, f) for n, f in sorted(globals().items()) if n.startswith("test_") and callable(f)]
     for n, f in tests:

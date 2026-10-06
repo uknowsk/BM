@@ -423,6 +423,30 @@ def test_manual_electrical_fills_gaps_but_never_overrides_spec_table():
     assert (fridge.voltage_v, fridge.amps, fridge.frequency_hz) == ("115", 15.0, 60.0)
 
 
+def test_pdp_signals_review_and_new_tag():
+    new, _, _, _ = lg_us.parse_pdp(read("fd_pdp.html"), "https://x/fd")  # promotionTags ["New", ...], no review block
+    assert new.is_new is True and new.rating is None and new.review_count is None
+    mx, _, _, _ = lg_us.parse_pdp(read("mx_pdp.html"), "https://x/mx")  # review {points 2.82, reviewers 123}
+    assert (mx.rating, mx.review_count) == (2.82, 123) and mx.is_new is None  # tags Top Deal / Best Seller: not new
+    bf, _, _, _ = lg_us.parse_pdp(read("bf_pdp.html"), "https://x/bf")
+    assert bf.is_new is None and bf.release_date is None
+
+
+def test_listing_signals_rating_and_new_tag():
+    """Coveo raw fields ec_s_rating / ec_default_product_tag (real excerpt); no review count in the listing."""
+    mk = lambda m, **kw: {"raw": {"ec_model_display_name": m, "clickableuri": f"/us/refrigerators/{m.lower()}",
+                                  "ec_user_friendly_name": "French Door Refrigerator",
+                                  "ec_category_code": ["refrigerators", "french_door"], **kw}}
+    data = {"results": [mk("LRFLC2716V", ec_s_rating=3.85, ec_default_product_tag="New;LG Online Exclusive"),
+                        mk("LRFGC2706S", ec_s_rating=3.94, ec_default_product_tag="LG Online Exclusive"),
+                        mk("LZERO", ec_s_rating=0), mk("LNONE")]}
+    got = {c.model_number: c for c in lg_us.parse_listing(data, 30, "french_door")}
+    a = got["LRFLC2716V"]
+    assert a.attrs == {"rating": 3.85, "is_new": True} and a.attrs_src == {"rating": "listing", "is_new": "listing"}
+    assert got["LRFGC2706S"].attrs == {"rating": 3.94}  # no 'New' tag -> key omitted, never is_new=False
+    assert got["LZERO"].attrs == {} and got["LNONE"].attrs == {}
+
+
 if __name__ == "__main__":
     for name, fn in list(globals().items()):
         if name.startswith("test_"):

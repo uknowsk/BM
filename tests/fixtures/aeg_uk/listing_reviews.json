@@ -1,0 +1,65 @@
+{
+ "products": [
+  {
+   "modelId": "BEX335011B",
+   "code": "949496388",
+   "name": "3000 SurroundCook Aqua Clean Built-in Oven",
+   "description": "BEX335011B",
+   "productURL": "https://www.aeg.co.uk/kitchen/cooking/ovens/oven/bex335011b/",
+   "price": {
+    "currencyIso": "GBP",
+    "formattedValue": "£379.99",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 379.99
+   },
+   "offerPrice": {
+    "currencyIso": "GBP",
+    "formattedValue": "£379.99",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 379.99
+   },
+   "categoryFallBack": {
+    "categoryFallBackCode": "kitchen/cooking/ovens/oven",
+    "categoryFallBackENName": "Oven",
+    "categoryFallBackName": "Oven"
+   },
+   "d2cSellable": true,
+   "reviewRating": 4.78125,
+   "reviewCount": 32
+  },
+  {
+   "modelId": "OU5NP20B",
+   "code": "944171787",
+   "name": "6000 SurroundCook Clean enamel Built-in Oven",
+   "description": "OU5NP20B",
+   "productURL": "https://www.aeg.co.uk/kitchen/cooking/ovens/oven/ou5np20b/",
+   "price": {
+    "currencyIso": "GBP",
+    "formattedValue": "£549.99",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 549.99
+   },
+   "offerPrice": {
+    "currencyIso": "GBP",
+    "formattedValue": "£549.99",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 549.99
+   },
+   "categoryFallBack": {
+    "categoryFallBackCode": "kitchen/cooking/ovens/oven",
+    "categoryFallBackENName": "Oven",
+    "categoryFallBackName": "Oven"
+   },
+   "d2cSellable": true,
+   "reviewRating": 0.0,
+   "reviewCount": 0
+  }
+ ],
+ "pagination": {
+  "totalPages": 1
+ }
+}

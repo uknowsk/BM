@@ -332,6 +332,16 @@ def test_connect_survives_launch_error_and_close_error():
     assert isinstance(browser, Good) and not seq
 
 
+def test_rating_signals_listing_and_detail():
+    data = _j("search_KitchenCookingRanges.json")
+    cands = {c.model_number: c for s in wp.SUPPORTED_SUBCATEGORIES for c in wp.parse_search(data, s)}
+    c = cands["WFES5030RW"]
+    assert c.attrs == {"rating": 4.54, "review_count": 104} and c.attrs_src == {"rating": "listing", "review_count": "listing"}
+    r = _rec("WFES5030RW")[0]
+    assert (r.rating, r.review_count) == (4.54, 104) and r.is_new is None and r.release_date is None
+    assert _rec("WRS325SDHZ")[0].rating is None  # fixture without review fields -> unknown
+
+
 if __name__ == "__main__":
     fails = 0
     for n, f in list(globals().items()):

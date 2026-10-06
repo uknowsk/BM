@@ -16,7 +16,7 @@ import units
 from catalog import Candidate
 from schema import DocumentRecord, ProductRecord, RawSpec
 from thermador_us import (Site, clean_name, download_docs, flight_text, host_in, json_after, main_image_url, noise,
-                          session, spec_rows, title_of)
+                          page_signals, session, spec_rows, title_of)
 
 BRAND = "Gaggenau"
 COUNTRY = "us"
@@ -194,7 +194,7 @@ def build_record(site: Site, model: str, url: str, flight: str, facts, market: d
     record = ProductRecord(
         brand=BRAND, model_number=model, product_name=name, category="cooking", subcategory=classify(url, headline),
         product_url=url, price_usd=None, price_local=None, pod_features=en_lead, extra_specs=extra_specs,
-        image_url=main_image_url(site, flight), **market, **upd)
+        image_url=main_image_url(site, flight), **market, **upd, **page_signals(flight))
     raw = [RawSpec(brand=BRAND, model_number=model, source="web", section="Additional information",
                    key=f"Feature {i}", value=b) for i, b in enumerate(bullets, 1)]
     return record, raw

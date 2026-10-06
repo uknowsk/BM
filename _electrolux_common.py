@@ -213,6 +213,24 @@ def yes_no(v) -> Optional[bool]:
     return None
 
 
+def review_signal(rating, count, best=5) -> dict:
+    """{'rating': 0-5 float, 'review_count': int} from the site's own review summary (rating on a 0..best scale, rescaled to
+    5); {} when either value is missing, malformed or there is no review."""
+    try:
+        r, n, b = float(rating), int(float(count)), float(best)
+    except (TypeError, ValueError):
+        return {}
+    return {"rating": round(r * 5 / b, 2), "review_count": n} if b > 0 and 0 < r <= b and n > 0 else {}
+
+
+_NEW_FLAG = re.compile(r"new( arrival| product)?!?", re.I)
+
+
+def is_new_flag(*labels) -> dict:
+    """{'is_new': True} when the site's own flag/label reads 'New' (never False: no flag = unknown)."""
+    return {"is_new": True} if any(_NEW_FLAG.fullmatch(clean(x)) for x in labels if isinstance(x, str)) else {}
+
+
 def put_spec(table: dict[str, str], key: str, value: str) -> None:
     """Add key -> value; a repeated key keeps every distinct value joined with ' | '."""
     if key in table:
@@ -336,6 +354,7 @@ def us_candidate(cfg: UsSite, item: dict, sub: str, category_code: str) -> Optio
             attrs["finish"] = fin
     except ImportError:
         pass
+    attrs.update(is_new_flag(first.get("primaryFlag")))   # PLP corner flag ('Best Seller', 'Top Rated', 'Best Deal', ...)
     return Candidate(brand=cfg.brand, model_number=model, name=name, url=url,
                      price_usd=float(price) if price else None, category="cooking", subcategory=sub,
                      region="na", country="us", currency="USD",
@@ -442,6 +461,8 @@ def us_parse_product(cfg: UsSite, model: str, url: str, p: dict) -> tuple[Produc
     star = first.get("ENERGY STAR Certified")
     weight = first_num(first.get("Product Weight"))
     feats = list(dict.fromkeys(clean(f.get("title")) for f in p.get("productFeatures") or [] if clean(f.get("title"))))
+    variant = next((v for v in p.get("colorVariants") or [] if isinstance(v, dict) and v.get("code") == model), {})
+    signals = {**review_signal(p.get("averageRating"), p.get("numberOfReviews")), **is_new_flag(variant.get("primaryFlag"))}
     record = ProductRecord(
         brand=cfg.brand, model_number=model, product_name=clean(p["name"]), category="cooking", subcategory=sub,
         finish_color=clean(p.get("color")) or None, product_url=url,
@@ -452,7 +473,7 @@ def us_parse_product(cfg: UsSite, model: str, url: str, p: dict) -> tuple[Produc
         energy_star=None if star is None else bool(yes_no(star)),
         wifi_supported=None if wifi_key is None else yes_no(first[wifi_key]),
         wifi_evidence=None if wifi_key is None else f"{wifi_key}: {first[wifi_key]}",
-        pod_features=feats, extra_specs=table, image_url=us_main_image(p))
+        pod_features=feats, extra_specs=table, image_url=us_main_image(p), **signals)
     raw = [RawSpec(brand=cfg.brand, model_number=model, source="web", section=sec, key=label, value=val)
            for sec, label, val in rows]
     return record, raw
@@ -531,6 +552,14 @@ def eu_price(item: dict) -> Optional[float]:
     return None
 
 
+def eu_item_signals(item: dict) -> dict:
+    """rating / review_count (listing fields reviewRating, reviewCount) and is_new (b2BAttributes.isNewProduct, only when
+    True; the shop API does not return it) of a listing item."""
+    b2b = item.get("b2BAttributes")
+    return {**review_signal(item.get("reviewRating"), item.get("reviewCount")),
+            **({"is_new": True} if isinstance(b2b, dict) and b2b.get("isNewProduct") is True else {})}
+
+
 def eu_candidate(cfg: EuSite, item: dict, sub: str) -> Optional[Candidate]:
     model = clean(item.get("modelId")).upper()
     name = clean(item.get("name"))
@@ -550,6 +579,7 @@ def eu_candidate(cfg: EuSite, item: dict, sub: str) -> Optional[Candidate]:
     m = _CLASS_TAIL.search(desc)
     if m and not m.group(2):
         attrs["eu_class"] = m.group(1)
+    attrs.update(eu_item_signals(item))
     price = eu_price(item)
     return Candidate(brand=cfg.brand, model_number=model, name=name, url=url, price_usd=None, category="cooking",
                      subcategory=sub, region="eu", country=cfg.country, currency=cfg.currency, price_local=price,
@@ -557,7 +587,8 @@ def eu_candidate(cfg: EuSite, item: dict, sub: str) -> Optional[Candidate]:
 
 
 _NEXT_DATA = re.compile(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', re.S)
-_API_FIELDS = ("products(code,modelId,name,description,price,offerPrice,rrp,productURL,categoryFallBack,d2cSellable),"
+_API_FIELDS = ("products(code,modelId,name,description,price,offerPrice,rrp,productURL,categoryFallBack,d2cSellable,"
+               "reviewRating,reviewCount),"
                "pagination")
 
 
@@ -676,7 +707,17 @@ def parse_pdp(html_text: str) -> dict:
         price = float(price) if price not in (None, "") else None
     except ValueError:
         price = None
+    ld = re.search(r'"aggregateRating":\{[^{}]*\}', html_text)
+    try:
+        agg = json.loads("{" + ld.group(0) + "}")["aggregateRating"] if ld else {}
+    except ValueError:
+        agg = {}
+    signals = review_signal(agg.get("ratingValue"), agg.get("ratingCount") or agg.get("reviewCount"),
+                            agg.get("bestRating") or 5)
+    if top.get("isNewProduct") is True or (props.get("b2BProperties") or {}).get("isNewProduct") is True:
+        signals["is_new"] = True
     return {
+        "signals": signals,
         "model": clean(top.get("modelId") or seo.get("name")).upper(), "pnc": clean(props.get("productCode")),
         "heading": clean(top.get("pageHeading") or seo.get("pageHeading")), "brand": clean(top.get("brand") or seo.get("brand")),
         "category": clean(seo.get("category")), "ean": clean(top.get("ean")), "schema_price": price,
@@ -783,7 +824,7 @@ def eu_parse_product(cfg: EuSite, model: str, url: str, pdp: dict, price: Option
         voltage_v=(clean(volt) or None) if volt else None, frequency_hz=_mm(freq or ""),
         wifi_supported=wifi, wifi_evidence=f"{conn_key}: {first[conn_key]}" if conn_key else None,
         pod_features=list(dict.fromkeys(f for f in pod if f)), extra_specs=table,
-        image_url=eu_main_image(cfg, pdp))
+        image_url=eu_main_image(cfg, pdp), **(pdp.get("signals") or {}))
     raw = [RawSpec(brand=cfg.brand, model_number=model, source="web", section=sec, key=label, value=value)
            for sec, label, value in spec_rows]
     return record, raw
@@ -841,6 +882,7 @@ def eu_scrape(cfg: EuSite, url: str, translator=None) -> tuple[ProductRecord, li
     pdp["category_path"] = str(((item or {}).get("categoryFallBack") or {}).get("categoryFallBackCode") or path)
     pdp["description"] = clean((item or {}).get("description"))
     price = eu_price(item) if item else None
+    pdp["signals"] = {**(pdp.get("signals") or {}), **(eu_item_signals(item) if item else {})}   # listing values are unrounded
     record, raw = eu_parse_product(cfg, model, url, pdp, price, translator)
     wanted = [(t, u) for t, u in (("Manual", pdp["manual_url"]), ("EnergyGuide", pdp["sheet_url"]))
               if urlparse(u).scheme == "https"]

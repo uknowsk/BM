@@ -143,6 +143,37 @@ def test_scrape_flow_with_shop_item():
             pass
 
 
+def test_review_signals_listing_pdp_and_scrape():
+    rows = _j("listing_reviews.json")["products"]       # live excerpt: BEX335011B (4.78125 / 32) and an unreviewed oven (0.0 / 0)
+    cands = [ec.eu_candidate(a.SITE, r, a.classify(r["categoryFallBack"]["categoryFallBackCode"], r["name"], r.get("description", "")))
+             for r in rows]
+    rated, unrated = cands
+    assert rated.attrs["rating"] == 4.78 and rated.attrs["review_count"] == 32
+    assert rated.attrs_src["rating"] == "listing" and rated.attrs_src["review_count"] == "listing"
+    assert "is_new" not in rated.attrs and "release_date" not in rated.attrs      # the shop API exposes neither
+    assert "rating" not in unrated.attrs and "review_count" not in unrated.attrs   # 0 reviews = unknown, not a 0 rating
+    assert "reviewRating" in ec._API_FIELDS and "reviewCount" in ec._API_FIELDS
+    assert ec.parse_pdp(_t("pdp_BEX335011B_reviews.html"))["signals"] == {"rating": 4.8, "review_count": 32}   # JSON-LD aggregateRating
+    assert ec.parse_pdp(_t("pdp_BEX335011B.html"))["signals"] == {}
+    assert ec.review_signal(9, 5) == {} and ec.review_signal(4, 0) == {} and ec.review_signal("x", 3) == {}
+    assert ec.review_signal(8, 10, best=10) == {"rating": 4.0, "review_count": 10}
+    assert ec.is_new_flag("NEW") == {"is_new": True} and ec.is_new_flag("Best Seller", None) == {}
+    pdp_html = _t("pdp_BEX335011B_reviews.html")
+    pnc = ec.parse_pdp(pdp_html)["pnc"]
+    sess = FakeApi({f"relevance:code:{pnc}": {"products": [rows[0]], "pagination": {"totalPages": 1}}}, pdp_html)
+    orig = ec.fetch_docs
+    ec.fetch_docs = lambda brand, model, wanted: []
+    try:
+        with fake_session(sess):
+            rec, _, _ = a.scrape(PDP + "ovens/oven/bex335011b/")
+            assert (rec.rating, rec.review_count, rec.is_new, rec.release_date) == (4.78, 32, None, None)   # listing value is unrounded
+            sess.by_key.clear()   # no shop item -> the page's own summary
+            rec, _, _ = a.scrape(PDP + "ovens/oven/bex335011b/")
+            assert (rec.rating, rec.review_count) == (4.8, 32)
+    finally:
+        ec.fetch_docs = orig
+
+
 if __name__ == "__main__":
     tests = [(n, fn) for n, fn in sorted(globals().items()) if n.startswith("test_") and callable(fn)]
     for n, fn in tests:

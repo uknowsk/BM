@@ -147,6 +147,27 @@ def _cq(rule: _Rule) -> str:
     return " ".join(parts)
 
 
+def _signals(rating, count, tags) -> dict:
+    """Consumer-response / newness signals the site itself publishes (rating on a 5-point scale; the Coveo listing
+    carries no review count); absent or empty values are left out."""
+    out: dict = {}
+    try:
+        r = float(rating)
+    except (TypeError, ValueError):
+        r = None
+    try:
+        n = int(count) if count is not None else None
+    except (TypeError, ValueError):
+        n = None
+    if r is not None and 0 < r <= 5 and (n is None or n > 0):
+        out["rating"] = round(r, 2)
+        if n:
+            out["review_count"] = n
+    if any(isinstance(t, str) and t.strip().lower() == "new" for t in tags or []):
+        out["is_new"] = True
+    return out
+
+
 # ---------------------------------------------------------------- discover
 def parse_listing(data: dict, limit: int, sub: Optional[str] = None, stats: Optional[dict] = None) -> list[Candidate]:
     """Coveo search response -> deduped Candidates (by model number); with `sub`, only products that
@@ -174,8 +195,10 @@ def parse_listing(data: dict, limit: int, sub: Optional[str] = None, stats: Opti
         seen.add(model)
         price = raw.get("ec_final_price")
         extra = {"category": rule.major, "subcategory": sub} if rule else {}
+        attrs = _signals(raw.get("ec_s_rating"), None, str(raw.get("ec_default_product_tag") or "").split(";"))
         out.append(Candidate(brand=BRAND, model_number=model, name=name, url=url,
-                             price_usd=float(price) if price else None, **extra))
+                             price_usd=float(price) if price else None,
+                             attrs=attrs, attrs_src={k: "listing" for k in attrs}, **extra))
         if len(out) >= limit:
             break
     return out
@@ -196,7 +219,7 @@ def discover(subcategory: str, limit: int = 30) -> list[Candidate]:
         "searchHub": "LG.com - Commerce - PDS - Listing", "sortCriteria": "relevancy",
         "cq": _cq(SUB_RULES[subcategory]),
         "fieldsToInclude": ["ec_model_display_name", "ec_user_friendly_name", "ec_final_price",
-                            "clickableuri", "ec_group_id", "ec_category_code"],
+                            "clickableuri", "ec_group_id", "ec_category_code", "ec_s_rating", "ec_default_product_tag"],
         "numberOfResults": COVEO_PAGE,
     }
     found: dict[str, Candidate] = {}
@@ -508,9 +531,11 @@ def parse_pdp(html: str, url: str):
     width, height, depth = (_sane_in(v) for v in (width, height, depth))
     elec = _spec_electrical(spec) if not fridge else {}
 
+    review = prod.get("review") if isinstance(prod.get("review"), dict) else {}
     product = ProductRecord(
         brand=BRAND, model_number=model, product_name=title, product_url=url,
         category=major, subcategory=sub,
+        **_signals(review.get("points"), review.get("reviewers"), prod.get("promotionTags")),
         door_style=_door_style(title, prod.get("pdpUrl", ""), " ".join(codes)) if fridge else None,
         finish_color=option["variantDescription"] if option else get("All Available Colors", "Product Color"),
         price_usd=(prod.get("price", {}).get("finalPrice", {}).get("value") or None),

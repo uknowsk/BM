@@ -553,8 +553,36 @@ def test_polite_delay():
     assert time.monotonic() - t0 >= lg_kr.DELAY_S - 0.05
 
 
+def test_listing_signals_rating_reviews_release_date():
+    """Real listing fields (S834MEE111 excerpt): reviewsScore / reviewsCount / modelReleaseDate; hidden reviews skipped."""
+    base = jload("plp_refrigerators.json")["data"]["modelList"][0]
+    assert not {"reviewsScore", "modelReleaseDate"} & set(base)             # fixture rows predate these fields
+    sig = {"reviewsScore": 4.9, "reviewsCount": 2164, "modelReviewDisplayFlag": "Y",
+           "modelReleaseDate": "2024-04-01T00:00:00"}
+    a = lg_kr.listing_attrs({**base, **sig}, "french_door", 4)
+    assert (a["rating"], a["review_count"], a["release_date"], a["release_src"]) == (4.9, 2164, "2024-04-01", "site")
+    assert "is_new" not in a                                                    # a release year badge is not a NEW flag
+    hidden = lg_kr.listing_attrs({**base, **sig, "modelReviewDisplayFlag": "N", "reviewsScore": 5.0, "reviewsCount": 2}, "french_door", 4)
+    assert "rating" not in hidden and "review_count" not in hidden and hidden["release_date"] == "2024-04-01"
+    none = lg_kr.listing_attrs({**base, "reviewsScore": None, "reviewsCount": 0, "modelReleaseDate": None}, "french_door", 4)
+    assert not {"rating", "review_count", "release_date", "release_src"} & set(none)
+    got = lg_kr.parse_listing([{**base, **sig}], "side_by_side", _facets())
+    assert got and got[0].attrs["rating"] == 4.9 and got[0].attrs_src["rating"] == "listing"
+    assert got[0].attrs_src["release_date"] == got[0].attrs_src["release_src"] == "listing"
+
+
+def test_pdp_json_ld_aggregate_rating():
+    text = ('..."seller":{"@id":"https://www.lge.co.kr#organization"},"aggregateRating":{"@type":"AggregateRating",'
+            '"ratingValue":"4.9","reviewCount":"2164","bestRating":"5","worstRating":"1"},"additionalProperty":[]...')
+    assert lg_kr._pdp_rating(text) == {"rating": 4.9, "review_count": 2164}
+    assert lg_kr._pdp_rating('"aggregateRating":{"ratingValue":"0","reviewCount":"0"}') == {}
+    assert lg_kr._pdp_rating("no rating here") == {}
+    p, _, _ = _pdp("pdp_fridge_m876gbb231.html", "https://www.lge.co.kr/refrigerators/m876gbb231")
+    assert p.rating is None and p.review_count is None and p.is_new is None  # fixture carries no JSON-LD rating
+
+
 if __name__ == "__main__":
-    fns = [v for k, v in sorted(globals().items()) if k.startswith("test_") and callable(v)]
+    fns =[v for k, v in sorted(globals().items()) if k.startswith("test_") and callable(v)]
     for fn in fns:
         fn()
         print("ok  ", fn.__name__)

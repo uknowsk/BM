@@ -776,6 +776,49 @@ def test_host_allowlist_extra_domains():
     assert not server.host_allowed("LG", "https://lge.co.kr.evil.io/x")
 
 
+def test_match_and_launches_endpoints_on_a_seeded_history():
+    from catalog import Candidate
+    from store import Store
+    prev = (server._STORE, server._SEEN_READY)
+    with tempfile.TemporaryDirectory() as d:
+        st = Store(Path(d) / "m.db")
+        cands = [Candidate(brand=b, model_number=f"{b[:2]}{i:02d}", name=f"30 in. Smart Wall Oven {b}{i}", url=f"https://x.test/{b}/{i}",
+                           price_usd=900.0 + 100 * i, category="cooking", subcategory="electric_oven",
+                           attrs={"rating": 4.5, "review_count": 80 + i, "release_date": "2026-03"} if i == 3 else {})
+                 for b in ("GE", "LG") for i in range(8)]
+        st.record_seen(cands, limit=30)
+        server._STORE, server._SEEN_READY = st, True
+        try:
+            r = client.post("/api/match", json={"sub": "electric_oven", "price": 1300, "country": "us",
+                                                "specs": {"width_in": 30, "features": ["wifi"]}, "tier_window": 1})
+            assert r.status_code == 200, r.text
+            out = r.json()
+            assert len(out["tiers"]) == 5 and out["target"]["tier"] in (1, 2, 3, 4, 5) and out["results"]
+            assert out["data"]["models"] == 16 and out["data"]["with_rating"] == 2 and out["data"]["with_release_date"] == 2
+            assert all(abs(x["tier_diff"]) <= 1 for x in out["results"] if x["tier_diff"] is not None)
+            top = out["results"][0]
+            assert {"price", "spec", "recency", "response"} <= set(top["components"]) and 0 <= top["coverage"] <= 1
+            assert client.post("/api/match", json={"sub": "nope"}).status_code == 422
+            assert client.post("/api/match", json={"sub": "electric_oven", "country": "xx"}).status_code == 422
+            assert client.post("/api/match", json={"sub": "electric_oven", "weights": {"x": 1}}).status_code == 422
+            assert client.post("/api/match", json={"sub": "electric_oven", "weights": {"price": 500}}).status_code == 422
+            assert client.post("/api/match", json={"sub": "electric_oven", "specs": {"features": ["laser"]}}).status_code == 422
+            assert client.post("/api/match", json={"sub": "electric_oven", "band_pct": 1}).status_code == 422
+            la = client.get("/api/launches", params={"sub": "electric_oven", "window": 12}).json()
+            assert la["totals"]["new"] == 2 and set(la["by_brand"]) == {"GE", "LG"} and la["note"]
+            assert client.get("/api/launches", params={"sub": "nope"}).status_code == 422
+            assert client.get("/api/launches", params={"sub": "electric_oven", "window": 0}).status_code == 422
+        finally:
+            server._STORE, server._SEEN_READY = prev
+
+
+def test_match_page_is_served():
+    r = client.get("/match")
+    assert r.status_code in (200, 404)  # 404 until web/match.html exists; never a 500
+    if r.status_code == 200:
+        assert "경쟁 모델" in r.text
+
+
 if __name__ == "__main__":
     fns =[v for k, v in sorted(globals().items()) if k.startswith("test_")]
     for fn in fns:

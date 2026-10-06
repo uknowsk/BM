@@ -182,6 +182,35 @@ Candidate JSON (new fields last):
 `price_local` in `currency`; bands use `price_usd`, else `price_local` (custom band labels use the currency code instead of `$`).
 Products gain `region`, `country`, `currency`, `price_local`.
 
+## Competitor match (`match.py`, page `/match`; design: `docs/MATCHING_DESIGN.md`)
+Works on the durable discovery history (`store.seen_models`, filled by every `service.search` / `collect`, seeded once from cached
+listings; rows never expire). First sight of a (brand, country, sub) group is a baseline (`baseline=1`); only models that appear after a
+COMPLETE listing (shorter than `limit`) count as new discoveries (`baseline=0`), so a larger `limit` never makes old models look new.
+Standard signal keys (candidate `attrs` and `ProductRecord`; absent = unknown): `rating` (0-5), `review_count`, `is_new` (site flag only),
+`release_date` ('YYYY-MM-DD'|'YYYY-MM'|'YYYY'), `release_src` (`site` | `distribution` (manufacturer first distribution date, GE/Cafe) | `doc` | `sitemap`).
+
+### POST /api/match
+```
+{"sub":"electric_oven","country":"us","price":1800,
+ "specs":{"width_in":30,"capacity_total_cuft":5.0,"fuel":"electric","burners":null,"features":["wifi","air_fry"]},
+ "weights":{"price":35,"spec":30,"recency":20,"response":15},"band_pct":25,"tier_window":1,"top":20}
+```
+`sub` + `country` required (422 for unknown), `price` optional (without it nothing is price-ranked), `band_pct` 5..100, `tier_window` 0..4 or null
+(keep only models within +-N price tiers), `top` 1..50, `weights` keys price/spec/recency/response with 0..100. Response:
+`target` (+ `tier`, `tier_label`), `tiers` (5 quantile tiers of the sub group's prices: `{tier,label,min,max,count}`; fewer when there are
+few prices; the whole major group is used when the sub has < 10 priced models, see `tier_scope`), `counts` (`pool, ranked,
+excluded_by_spec, outside_tier_window, price_unknown`), `distrusted_new_flags` (groups whose site NEW flag marks >= 60 % of a listing are
+ignored), `data` (readiness: models, with_price, with_rating, with_release_date, site_new_flagged, new_discoveries) and `results[]`:
+`{brand, model_number, name, url, price, currency, tier, tier_label, tier_diff, total (0-100), coverage (0-1: share of the weights backed by
+real data), is_launch, components:{price:{score,delta_pct}, spec:{score,hard_fail,details[]}, recency:{score,basis,months,evidence},
+response:{score,rating,reviews,adjusted}}}`. Price = continuous proximity `max(0, 1 - |d|/band)^2` on top of the 5 tiers. Unknown parts score a
+neutral value (never 0, never renormalised away); a width outside +-1.5 in of the wanted width excludes the model; models without a price are
+not ranked when a target price is given (counted in `price_unknown`).
+
+### GET /api/launches?sub=&country=us&window=12
+New models per brand with their evidence (`release_date` | `site_new` | `first_seen`) and a feature trend (share of new vs existing models with
+Wi-Fi/convection/air fry/steam/ENERGY STAR, `delta_pts`, `low_sample`), `median_price`, `basis_counts`, `distrusted_new_flags`, `note`.
+
 ### Units (`units.py`)
 `cuft_to_l/l_to_cuft`, `in_to_mm/mm_to_in`, `lb_to_kg/kg_to_lb`, `f_to_c/c_to_f`, `fmt_dual(value, kind, primary)` ->
 `"28.0 cu ft (793 L)"`, `"36 in (914 mm)"`, `"300 lb (136 kg)"` (kinds `capacity|length|weight|temp`; primary `cuft|L|in|mm|lb|kg|F|C`).

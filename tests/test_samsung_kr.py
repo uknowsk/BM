@@ -304,6 +304,29 @@ def test_helpers_dimension_axis_order_and_numbers():
     assert sk._electrical([("a", "전원", "220 V/60 Hz")]) == ("220", 60.0)
 
 
+def test_listing_and_pdp_signals():
+    """Real goodsList fields reviewGrade/reviewCount (5-point) and the PDP JSON-LD aggregateRating."""
+    base = {"mdlCode": "RM90H64P2W", "goodsNm": "Bespoke AI 패밀리허브 4도어 키친핏 Max 602L",
+            "goodsDetailUrl": "refrigerators/french-door-rm90h64p2w-d2c/RM90H64P2W/", "salePrice": 3890000,
+            "saleStatCd": 12, "goodsTpCd": 10, "flagStr": "설치상품"}
+    items = [{**base, "reviewGrade": 4.9, "reviewCount": 126},
+             {**base, "mdlCode": "RM00NOREV", "goodsDetailUrl": "refrigerators/french-door-x/RM00NOREV/",
+              "reviewGrade": 0.0, "reviewCount": 0},
+             {**base, "mdlCode": "RM00NEW", "goodsDetailUrl": "refrigerators/french-door-y/RM00NEW/", "flagStr": "NEW"}]
+    got = {c.model_number: c for c in sk.parse_goods_list(items, "french_door")}
+    a = got["RM90H64P2W"]
+    assert a.attrs["rating"] == 4.9 and a.attrs["review_count"] == 126 and "is_new" not in a.attrs
+    assert a.attrs_src["rating"] == a.attrs_src["review_count"] == "listing"
+    assert "rating" not in got["RM00NOREV"].attrs and "review_count" not in got["RM00NOREV"].attrs  # unknown, not 0
+    assert got["RM00NEW"].attrs["is_new"] is True and "rating" not in got["RM00NEW"].attrs
+    page = sk.parse_pdp(_txt("pdp_jsonld_excerpt.html"), "https://www.samsung.com/sec/refrigerators/x/RM90H64P2W/")
+    assert page["rating"] == 4.9 and page["review_count"] == 126
+    assert "rating" not in sk.parse_pdp(_txt("pdp_fr.html"), "https://www.samsung.com/sec/refrigerators/x/RM90H64P2W/")
+    rec = sk.ProductRecord(brand="Samsung", model_number="M", product_name="n", product_url="u",
+                           rating=page["rating"], review_count=page["review_count"])
+    assert rec.rating == 4.9 and rec.is_new is None and rec.release_date is None
+
+
 # ------------------------------------------------------------------ build_record
 def _build(sub_fixture, url, name, model, features=(), panel=None, goods_id="G1"):
     page = {"name": name, "model": model, "goods_id": goods_id, "image_url": None, "features": list(features)}

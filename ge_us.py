@@ -151,6 +151,22 @@ def _safe_name(m: str) -> str:
 
 
 # ---------------------------------------------------------------- discover
+def signals(rating, count, first_dist) -> dict:
+    """Consumer-response / launch signals the site itself publishes (Bazaarvoice summary, Product_First_Distribution_Date).
+    Absent or zero-review values are omitted (= unknown); is_new is never set (the site has no NEW flag)."""
+    out = {}
+    try:
+        n, r = int(float(count)), float(rating)
+    except (TypeError, ValueError):
+        n = r = 0
+    if n > 0 and 0 < r <= 5:
+        out["rating"], out["review_count"] = round(r, 2), n
+    m = re.match(r"(\d{4})/(\d{2})/(\d{2})", str(first_dist or ""))
+    if m:
+        out["release_date"], out["release_src"] = "-".join(m.groups()), "distribution"
+    return out
+
+
 def parse_search(data: dict, sub: str) -> list[tuple[Candidate, dict]]:
     """Searchspring response -> [(Candidate, raw result item)] for one sub key; off-domain urls dropped."""
     results = data.get("results") if isinstance(data, dict) else None
@@ -170,8 +186,10 @@ def parse_search(data: dict, sub: str) -> list[tuple[Candidate, dict]]:
             price = float(r.get("price")) if r.get("price") not in (None, "") else None
         except (TypeError, ValueError):
             price = None
+        sig = signals(r.get("rating"), r.get("ratingCount"), r.get("product_first_distribution_date"))
         out.append((Candidate(brand=BRAND, model_number=sku, name=htmllib.unescape(str(r.get("name") or sku)),
-                              url=url, price_usd=price or None, category=major, subcategory=sub), r))
+                              url=url, price_usd=price or None, category=major, subcategory=sub,
+                              attrs=sig, attrs_src={k: "listing" for k in sig}), r))
     return out
 
 
@@ -581,6 +599,7 @@ def parse_product(url: str, po: dict) -> tuple[ProductRecord, list[RawSpec], lis
         pod_features=feats,
         extra_specs={**full_spec_table(po), **extra_specs(major, sub, spec, rows)},
         image_url=main_image_url(po),
+        **signals(fields.get("AverageOverallRating"), fields.get("TotalReviewCount"), fields.get("Product_First_Distribution_Date")),
     )
     raw = [RawSpec(brand=BRAND, model_number=model, source="web", section=s, key=k, value=v) for s, k, v in rows]
     if claims:

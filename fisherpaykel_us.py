@@ -219,9 +219,13 @@ def discover(subcategory: str, limit: int = 30) -> list[Candidate]:
         attrs = {k: v for k, v in (("width_in", _slug_width(url)), ("fuel", _fuel(subcategory, url))) if v}
         if rec["wifi"] is not None:
             attrs["wifi"] = rec["wifi"]
+        src = {}
+        if rec["is_new"]:
+            attrs["is_new"], src["is_new"] = True, "detail"
         found.setdefault(rec["model"], Candidate(
             brand=BRAND, model_number=rec["model"], name=rec["name"], url=url, price_usd=rec["price"],
-            category=_MAJOR, subcategory=subcategory, region=REGION, country=COUNTRY, currency=CURRENCY, attrs=attrs))
+            category=_MAJOR, subcategory=subcategory, region=REGION, country=COUNTRY, currency=CURRENCY, attrs=attrs,
+            attrs_src=src))
     return list(found.values())[:limit]
 
 
@@ -300,7 +304,9 @@ def parse_page(url: str, html: str) -> dict:
     rows = spec_tables(html)
     blob = " ".join(f"{k} {v}" for _, k, v in rows) + " " + " ".join(_key_features(html))
     wifi = True if re.search(r"wi-?fi|connected", blob, re.I) else None
-    return {"model": model, "name": name, "price": float(pm.group(1)) if pm else None, "wifi": wifi}
+    badges = re.search(r'<ul class="product-badges">(.*?)</ul>', html, re.S)
+    is_new = True if badges and any(_text(b).upper() == "NEW" for b in re.findall(r"<li>(.*?)</li>", badges.group(1), re.S)) else None
+    return {"model": model, "name": name, "price": float(pm.group(1)) if pm else None, "wifi": wifi, "is_new": is_new}
 
 
 def parse_product(url: str, html: str) -> tuple[ProductRecord, list[RawSpec], list[tuple[str, str]]]:
@@ -337,7 +343,7 @@ def parse_product(url: str, html: str) -> tuple[ProductRecord, list[RawSpec], li
         width_in=dim("Width", "width"), height_in=dim("Height", "height"), depth_in=dim("Depth", "depth"),
         voltage_v=f"{volts.group(1)}V" if volts else None, amps=amps, frequency_hz=hz,
         wifi_supported=page["wifi"], wifi_evidence="Fisher & Paykel product page mentions Wi-Fi/connected" if page["wifi"] else None,
-        pod_features=feats, extra_specs=extra, image_url=image)
+        pod_features=feats, extra_specs=extra, image_url=image, is_new=page["is_new"])
     raw = [RawSpec(brand=BRAND, model_number=model, source="web", section=s, key=k, value=v) for s, k, v in rows]
     return record, raw, doc_links(html)
 

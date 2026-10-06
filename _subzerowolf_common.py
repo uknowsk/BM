@@ -19,6 +19,7 @@ import os
 import re
 import sys
 import time
+from datetime import date
 from urllib.parse import urlparse
 
 import requests
@@ -215,9 +216,20 @@ def main_image_url(pv: dict) -> str | None:
     return None
 
 
+def is_new(attrs: dict) -> bool:
+    """True when the catalogue's own `news_to_date` ('Set Product as New to Date') is today or later. Empty = not flagged."""
+    m = re.match(r"(\d{4})-(\d{2})-(\d{2})", attrs.get("news_to_date") or "")
+    try:
+        return bool(m) and date(*map(int, m.groups())) >= date.today()
+    except ValueError:
+        return False
+
+
 def candidate_from(pv: dict, brand: str, sub: str, fuel: str | None, category: str = "cooking") -> Candidate:
     a = attrs_of(pv)
     attrs: dict = {}
+    if is_new(a):
+        attrs["is_new"] = True
     w = _num(r"([\d.]+)", a.get("mnwidth"))
     if w:
         attrs["width_in"] = w
@@ -281,7 +293,7 @@ def parse_product(url: str, pv: dict, brand: str, classify, category: str = "coo
         depth_in=_num(r"([\d.]+)", a.get("overalldepth")), weight_lb=_num(r"([\d.]+)", a.get("specweight")),
         voltage_v=(re.match(r"\s*([\d/.\-]+)\s*V", supply) or [None, None])[1], frequency_hz=_num(r"(?:\d+/)?(\d+)\s*Hz", supply),
         capacity_total_cuft=cap, pod_features=feature_bullets(a.get("features", "")), extra_specs=extra,
-        image_url=main_image_url(pv))
+        image_url=main_image_url(pv), is_new=True if is_new(a) else None)
     raw = [RawSpec(brand=brand, model_number=model, source="web", section="Specifications", key=l, value=v)
            for l, v in spec_rows]
     return record, raw

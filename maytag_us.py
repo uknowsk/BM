@@ -316,6 +316,19 @@ def _price(p: dict) -> float | None:
     return float(value) if value else None
 
 
+def occ_signals(p: dict) -> dict:
+    """Consumer signals the site's own OCC JSON publishes (listing and FULL product): averageRating (5 point) and
+    numberOfReviews. Without reviews the rating is meaningless, so both keys are omitted (= unknown). The OCC API
+    exposes no new flag and no release date."""
+    try:
+        count, rating = int(p.get("numberOfReviews")), float(p.get("averageRating"))
+    except (TypeError, ValueError):
+        return {}
+    if count <= 0 or not 0 <= rating <= 5:
+        return {}
+    return {"rating": round(rating, 2), "review_count": count}
+
+
 def site_parse_search(site: Site, data: dict, sub_key: str) -> list[Candidate]:
     """Candidates of a listing page that classify() (the rule scrape() uses) files under sub_key."""
     out, other = [], 0
@@ -331,7 +344,8 @@ def site_parse_search(site: Site, data: dict, sub_key: str) -> list[Candidate]:
             print(f"dropped off-domain candidate {p['code']}: {p['url'][:100]}", file=sys.stderr)
             continue
         out.append(Candidate(brand=site.brand, model_number=p["code"], name=_MARKS.sub("", p.get("name") or ""),
-                             url=url, price_usd=_price(p), category=major, subcategory=sub_key))
+                             url=url, price_usd=_price(p), category=major, subcategory=sub_key,
+                             attrs=(sig := occ_signals(p)), attrs_src={k: "listing" for k in sig}))
     if other:
         print(f"{site.brand.lower()}_us: parse_search({sub_key}): {other} listed product(s) classified under another "
               f"sub key or none, skipped", file=sys.stderr)
@@ -493,7 +507,7 @@ def site_parse_product(site: Site, model: str, url: str, prod: dict) -> tuple[Pr
         energy_star=_energy_star(f), wifi_supported=wifi, wifi_evidence=wifi_ev, pod_features=feats,
         ice_maker=(None if not ice else _yes_no(ice) is not False) if fridge else None,
         water_dispenser=(None if not disp else ("water" in disp.lower())) if fridge else None,
-        extra_specs=full_spec_table(rows), image_url=site_main_image_url(site, prod))
+        extra_specs=full_spec_table(rows), image_url=site_main_image_url(site, prod), **occ_signals(prod))
     raw = [RawSpec(brand=site.brand, model_number=model, source="web", section=sec, key=k, value=v)
            for sec, k, v in rows]
     return record, raw

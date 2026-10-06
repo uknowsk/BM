@@ -78,6 +78,16 @@ def test_oven_record_is_english_with_german_raw():
     assert r.image_url.startswith("https://media3.bsh-group.com/")
 
 
+def test_site_signals_unset_and_german_decimal_rating():
+    flight = t.flight_text(_t("pdp_BO420102.html"))
+    mk = dict(region="eu", country="de", currency="EUR")
+    r, _ = g.build_record(gd.SITE, "BO420102", URL, flight, gd.facts_de, mk, gd._translate)
+    assert (r.rating, r.review_count, r.is_new, r.release_date) == (None,) * 4  # site publishes none
+    extra = '"aggregateRating":{"bestRating":"5","ratingValue":"4,5","reviewCount":"12"}'
+    r2, _ = g.build_record(gd.SITE, "BO420102", URL, flight + extra, gd.facts_de, mk, gd._translate)
+    assert (r2.rating, r2.review_count) == (4.5, 12)
+
+
 def test_facts_de_parsing():
     upd, extra = gd.facts_de(["Energieverbrauch 207 kWh/Jahr.", "Energieeffizienzklasse E auf einer Skala der Effizienzklassen von A bis G.",
                               "Nutzinhalt gesamt: 272 Liter.", "Gesamtanschlusswert 0.090 kW.", "Gewicht ca. 20 kg"],

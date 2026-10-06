@@ -177,11 +177,27 @@ def parse_search(payload: dict, sub: str | None = None, stats: dict | None = Non
             bump("unclassified" if found is None else "other")
             continue
         price = r.get("sale_price") or r.get("msrp_price")
+        attrs = _signals(r.get("reviewRating"), r.get("numberOfReviews"),
+                         (r.get("badgeDetails") or {}).get("iconTitle"))
         out.append(Candidate(brand=BRAND, model_number=_model(code), name=name,
                              url=urljoin(BASE, path.rstrip("/") + "/"),
                              price_usd=float(price) if price else None,
                              category=catalog.major_of(found) or "refrigerator",
-                             subcategory=found))
+                             subcategory=found, attrs=attrs, attrs_src={k: "listing" for k in attrs}))
+    return out
+
+
+def _signals(rating, count, badge) -> dict:
+    """Consumer-response / newness signals the site itself publishes; absent or empty values are left out."""
+    out: dict = {}
+    try:
+        n, r = int(float(count)), float(rating)
+    except (TypeError, ValueError):
+        n = r = None
+    if n and n > 0 and r is not None and 0 < r <= 5:
+        out["rating"], out["review_count"] = round(r, 2), n
+    if isinstance(badge, str) and badge.strip().lower() == "new":
+        out["is_new"] = True
     return out
 
 
@@ -595,8 +611,11 @@ def build_record(url: str, nd: dict, rows, spec_url, supports) -> tuple[ProductR
         water_dispenser=_yes_no(rows, r"Ice/Water Dispenser", r"Water and Ice Dispenser",
                                 r"Dispenser with Water Filter", r"Dispenser Type"),
     ) if fridge else {}
+    rv = p.get("reviews") or {}
+    sig = _signals(rv.get("starRating"), rv.get("reviewCount"), p.get("uiFlag"))
     return ProductRecord(
         brand=BRAND, model_number=model, product_name=p.get("productTitle") or model, product_url=url,
+        **sig,
         category=major, subcategory=sub,
         finish_color=(p.get("attributes") or {}).get("Color") or _spec(rows, r"Color"),
         price_usd=float(price) if price else None,

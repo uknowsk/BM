@@ -72,6 +72,25 @@ def test_product_range():
     assert any(r.section == "Dimensions & Weight" and r.key == "Width" and r.value == "75.7 cm" for r in raw)
 
 
+def test_rating_signals():
+    cards = {c["model"]: c for c in b.parse_cards(read("list_ranges.html"))}
+    cand = b.card_to_candidate(cards["SLGR30532SS"], "gas_oven")
+    assert cand.attrs["rating"] == 3.5 and cand.attrs["review_count"] == 20
+    assert cand.attrs_src["rating"] == "listing" and cand.attrs_src["review_count"] == "listing"
+    assert "is_new" not in cand.attrs and "release_date" not in cand.attrs     # the site flags neither
+    zero = b.card_to_candidate(cards["SLGR30423SS"], "gas_oven")
+    assert "rating" not in zero.attrs and "review_count" not in zero.attrs      # '0.0 out of 5 stars.' = no reviews
+    assert b.rating_signal("5.0 out of 5 stars. 1 review ") == {"rating": 5.0, "review_count": 1}
+    assert b.rating_signal("0.0 out of 5 stars.  ") == {}
+    page = read("pdp_rated_excerpt.html")
+    rec, _ = b.parse_product(page, URL)
+    assert (rec.rating, rec.review_count) == (1.0, 1)
+    assert b.pdp_rating_signal(page, "SLGR24410SS") == {"rating": 1.0, "review_count": 1}
+    assert b.pdp_rating_signal(page, "OTHER123") == {} and b.pdp_rating_signal("<html></html>", "X") == {}
+    plain, _ = b.parse_product(read("pdp_range.html"), URL)
+    assert plain.rating is None and plain.review_count is None and plain.is_new is None and plain.release_date is None
+
+
 def test_product_cooktop_and_otr():
     rec, _ = b.parse_product(read("pdp_gas_cooktop.html"), URL)
     assert rec.subcategory == "gas_cooktop" and rec.width_in == 22.83 and rec.weight_lb == 25.4

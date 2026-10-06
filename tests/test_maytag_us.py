@@ -276,6 +276,22 @@ def test_connect_rejects_foreign_url_before_launch():
     raise AssertionError("expected ValueError")
 
 
+def test_occ_signals_listing_and_detail():
+    cands = {c.model_number: c for s in mt.SUPPORTED_SUBCATEGORIES for c in mt.parse_search(_j("search_all.json"), s)}
+    c = cands["MEC8830HS"]
+    assert c.attrs == {"rating": 3.76, "review_count": 430} and c.attrs_src == {"rating": "listing", "review_count": "listing"}
+    assert cands["MGC7430DS"].attrs == {} and cands["MGC7430DS"].attrs_src == {}  # no fields on the site -> unknown
+    r, _ = _rec("MEC8830HS")
+    assert (r.rating, r.review_count) == (3.76, 430) and r.is_new is None and r.release_date is None
+    assert _rec("MGC7430DS")[0].rating is None
+
+
+def test_occ_signals_edge_cases():
+    assert mt.occ_signals({"averageRating": 0, "numberOfReviews": 0}) == {}  # unrated product
+    assert mt.occ_signals({"averageRating": 4.5}) == {} and mt.occ_signals({"averageRating": 9, "numberOfReviews": 3}) == {}
+    assert mt.occ_signals({"averageRating": "4.25", "numberOfReviews": "12"}) == {"rating": 4.25, "review_count": 12}
+
+
 if __name__ == "__main__":
     for n, f in list(globals().items()):
         if n.startswith("test_"):

@@ -162,6 +162,20 @@ def test_scrape_flow_and_url_validation():
             pass
 
 
+def test_review_and_new_signals_in_ssr_items():
+    # live category items carry reviewRating/reviewCount = 0 and b2BAttributes.isNewProduct = false (no reviews exist on the site)
+    item = ec.parse_ssr_listing(_t("category_ovens.html"))[0][0]
+    c0 = ec.eu_candidate(e.SITE, item, "electric_oven")
+    assert "rating" not in c0.attrs and "review_count" not in c0.attrs and "is_new" not in c0.attrs
+    assert ec.eu_item_signals({"reviewRating": 0, "reviewCount": 0, "b2BAttributes": {"isNewProduct": False}}) == {}
+    # field names verified live; positive values are exercised with a modified copy of the item
+    flagged = dict(item, reviewRating=4.5, reviewCount=12, b2BAttributes={"isNewProduct": True})
+    c1 = ec.eu_candidate(e.SITE, flagged, "electric_oven")
+    assert c1.attrs["rating"] == 4.5 and c1.attrs["review_count"] == 12 and c1.attrs["is_new"] is True
+    assert c1.attrs_src["is_new"] == "listing" and "release_date" not in c1.attrs
+    assert ec.eu_item_signals({"b2BAttributes": {"isNewProduct": "true"}}) == {}      # only a real boolean True counts
+
+
 if __name__ == "__main__":
     tests = [(n, fn) for n, fn in sorted(globals().items()) if n.startswith("test_") and callable(fn)]
     for n, fn in tests:

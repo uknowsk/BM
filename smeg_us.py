@@ -230,10 +230,21 @@ def parse_listing(html: str) -> list[tuple[str, str]]:
     return out
 
 
-def _candidate(model: str, desc: str, sub: str) -> Candidate:
+_NEW_CARD = re.compile(r'<div[^>]*\bid="([^"]+)"[^>]*class="listItem[^"]*\bIS_NEW_1\b')
+
+
+def new_models(html: str) -> set[str]:
+    """Models whose listing card carries the site's own IS_NEW_1 class (the same attribute as its 'New' filter)."""
+    return set(_NEW_CARD.findall(html))
+
+
+def _candidate(model: str, desc: str, sub: str, is_new: bool = False) -> Candidate:
+    attrs = _card_attrs(desc)
+    if is_new:
+        attrs["is_new"] = True
     return Candidate(brand=BRAND, model_number=model, name=f"Smeg {model} - {desc}", url=f"{BASE}/products/{model}",
                      price_usd=None, category=_major_of(sub), subcategory=sub, region=REGION, country=COUNTRY,
-                     currency=CURRENCY, attrs=_card_attrs(desc), attrs_src={k: "listing" for k in _card_attrs(desc)})
+                     currency=CURRENCY, attrs=attrs, attrs_src={k: "listing" for k in attrs})
 
 
 def discover(subcategory: str, limit: int = 30) -> list[Candidate]:
@@ -242,12 +253,13 @@ def discover(subcategory: str, limit: int = 30) -> list[Candidate]:
     found: dict[str, Candidate] = {}
     for page in SUB_SOURCES[subcategory][1]:
         try:
-            cards = parse_listing(fetch_html(f"{BASE}/{page}", "product-preview"))
+            html = fetch_html(f"{BASE}/{page}", "product-preview")
         except SmegNotFound:
             continue
+        cards, new = parse_listing(html), new_models(html)
         for model, desc in cards:
             if classify(desc) == subcategory:
-                found.setdefault(model, _candidate(model, desc, subcategory))
+                found.setdefault(model, _candidate(model, desc, subcategory, model in new))
         print(f"smeg_us: discover({subcategory}) {page}: {len(cards)} listed, {len(found)} kept", file=sys.stderr)
         if len(found) >= limit:
             break

@@ -92,6 +92,20 @@ def test_candidate_filters():
         assert b.item_to_candidate(bad, "cooking", "gas_oven", "cooking-baking") is None
 
 
+def test_site_signals_from_listing_and_page():
+    ok = {"productCode": "HGI8056UC", "urlPath": "/product/cooking-baking/ranges/gas-ranges/HGI8056UC", "productName": ["a"],
+          "rating": {"average": 4.3, "count": 531}, "buyAreaOptionBadges": {"primaryBadge": None, "secondaryBadge": None}}
+    c = b.item_to_candidate(ok, "cooking", "gas_oven", "cooking-baking")
+    assert c.attrs == {"rating": 4.3, "review_count": 531} and c.attrs_src == {"rating": "listing", "review_count": "listing"}
+    none = b.item_to_candidate({**ok, "rating": {"average": 0, "count": 0}}, "cooking", "gas_oven", "cooking-baking")
+    assert none.attrs == {} and none.attrs_src == {}  # 0/0 = no reviews yet -> unknown, not 0
+    # PDP: schema.org aggregateRating (4.4 of 5, 3356 reviews); product.isNewProduct=false and releaseDate=null stay unset
+    r, _, _ = _parse("B36CT80SNS")
+    assert (r.rating, r.review_count) == (4.4, 3356) and (r.is_new, r.release_date, r.release_src) == (None, None, None)
+    r2, _, _ = _parse("HMV8045U")
+    assert r2.review_count == 23 and 0 < r2.rating <= 5
+
+
 def test_missing_markers_raise():
     for fn in (lambda: b.flight_text("<html>nothing</html>"),
                lambda: b.parse_listing('<script>self.__next_f.push([1,"{}"])</script>', "x"),

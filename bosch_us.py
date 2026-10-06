@@ -23,6 +23,7 @@ from playwright.sync_api import Error as PlaywrightError, TimeoutError as Playwr
 import common
 from catalog import Candidate
 from schema import DocumentRecord, ProductRecord, RawSpec
+from thermador_us import item_signals, page_signals  # shared BSH-platform signal readers
 
 BRAND = "Bosch"
 BASE = "https://www.bosch-home.com/us/en"
@@ -233,8 +234,10 @@ def item_to_candidate(item: dict, major: str, sub: str, root: str) -> Candidate 
         print(f"dropped off-domain candidate {code}: {url[:100]}", file=sys.stderr)
         return None
     amount = (item.get("price") or {}).get("amount")
+    attrs = item_signals(item)
     return Candidate(brand=BRAND, model_number=code, name=_clean_name(item.get("productName") or []) or code,
-                     url=url, price_usd=float(amount) if amount else None, category=major, subcategory=sub)
+                     url=url, price_usd=float(amount) if amount else None, category=major, subcategory=sub,
+                     attrs=attrs, attrs_src={k: "listing" for k in attrs})
 
 
 def discover(subcategory: str, limit: int = 30) -> list[Candidate]:
@@ -454,7 +457,7 @@ def parse_product(model: str, url: str, root: str, flight: str) -> tuple[Product
         pod_features=[h["headline"]["text"] for h in highlights
                       if isinstance(h.get("headline"), dict) and h["headline"].get("text")],
         extra_specs={**full_spec_table(sections), **extra},  # full sectioned table + legacy flat labels
-        image_url=main_image_url(flight),
+        image_url=main_image_url(flight), **page_signals(flight),
     )
     if fridge:
         record = record.model_copy(update=dict(

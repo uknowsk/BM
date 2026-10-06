@@ -106,7 +106,7 @@ def test_parser_version_invalidates_old_rows():
             assert s.get_product("u") is None  # written by an older parser
         finally:
             store.PARSER_VERSION = saved
-        assert store.PARSER_VERSION == "4"
+        assert store.PARSER_VERSION == saved == "5"  # restored after the temporary bump
 
 
 def test_migrates_legacy_db_without_parser_version():

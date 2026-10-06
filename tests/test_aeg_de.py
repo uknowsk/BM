@@ -229,6 +229,17 @@ def test_scrape_takes_price_and_class_from_the_shop_item():
             pass
 
 
+def test_review_signals_from_shop_listing():
+    rows = _j("listing_reviews.json")["products"]       # live excerpt: BPE53516AB (4.2667 / 15) and an unreviewed oven (0.0 / 0)
+    rated, unrated = (ec.eu_candidate(a.SITE, r, a.classify(r["categoryFallBack"]["categoryFallBackCode"], r["name"],
+                                                            r.get("description", ""))) for r in rows)
+    assert rated.attrs["rating"] == 4.27 and rated.attrs["review_count"] == 15
+    assert rated.attrs_src["rating"] == "listing" and rated.attrs_src["review_count"] == "listing"
+    assert "is_new" not in rated.attrs and "release_date" not in rated.attrs      # the shop API exposes neither
+    assert "rating" not in unrated.attrs and "review_count" not in unrated.attrs
+    assert "reviewRating" in ec._API_FIELDS and "reviewCount" in ec._API_FIELDS
+
+
 if __name__ == "__main__":
     tests = [(n, fn) for n, fn in sorted(globals().items()) if n.startswith("test_") and callable(fn)]
     for n, fn in tests:

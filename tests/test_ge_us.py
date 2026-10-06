@@ -421,6 +421,19 @@ def test_cooking_overlap_one_sub_per_model():
                                 {"name": "Combination Double Wall Oven"}) == "sco"
 
 
+def test_signals_listing_and_detail():
+    c = ge.parse_search(_j("ss_range.json"), "gas_oven")[0][0]
+    assert c.attrs == {"rating": 4.3, "review_count": 37, "release_date": "2025-11-01", "release_src": "distribution"}
+    assert set(c.attrs_src) == set(c.attrs) and set(c.attrs_src.values()) == {"listing"} and "is_new" not in c.attrs
+    r = _rec("fridge_top")[0]
+    assert (r.rating, r.review_count, r.release_date, r.release_src, r.is_new) == (4.39, 9535, "2022-02-01", "distribution", None)
+    r = _rec("otr")[0]  # AverageOverallRating 0.0 and no review count: unknown, not 0
+    assert (r.rating, r.review_count, r.release_date) == (None, None, "2025-11-03")
+    r = _rec("range")[0]  # no rating fields at all
+    assert (r.rating, r.review_count) == (None, None)
+    assert ge.signals("0", "0", "") == {} and ge.signals("x", None, "2025") == {}
+
+
 if __name__ == "__main__":
     tests = [(n, f) for n, f in sorted(globals().items()) if n.startswith("test_") and callable(f)]
     for n, f in tests:

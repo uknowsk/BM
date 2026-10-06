@@ -78,6 +78,21 @@ def test_security():
     assert h._wix_doc("wix:document://v1/../../x.pdf/n.pdf") is None
 
 
+def test_ribbon_new_signal():
+    items, _ = h.parse_listing(read("list_ranges.html"))
+    c = h.item_to_candidate(items[0], "gas_oven")
+    assert "is_new" not in c.attrs  # empty ribbon = not flagged
+    flagged = dict(items[0], ribbon="New")
+    c = h.item_to_candidate(flagged, "gas_oven")
+    assert c.attrs["is_new"] is True and c.attrs_src["is_new"] == "listing" and c.attrs_src["fuel"] == "name"
+    assert h._ribbon_is_new({"additionalRibbons": [{"text": "NEW ARRIVAL"}]}) and not h._ribbon_is_new({"ribbon": "Sale"})
+    html = read("pdp_with_specs.html")
+    rec, _raw, _docs = h.parse_product(html, "https://www.hisense-usa.com/product-page/x")
+    assert rec.is_new is None and rec.rating is None and rec.review_count is None and rec.release_date is None
+    rec2, _raw, _docs = h.parse_product(html.replace('"slug"', '"ribbon": "New", "slug"', 1), "https://www.hisense-usa.com/product-page/x")
+    assert rec2.is_new is True
+
+
 if __name__ == "__main__":
     for name, fn in list(globals().items()):
         if name.startswith("test_"):

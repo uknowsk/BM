@@ -164,7 +164,25 @@ def _clean_name(name: str) -> str:
     return " ".join(_html.unescape(name).replace("™", "").replace("®", "").split())
 
 
-def item_to_candidate(item: dict, sub: str) -> Candidate | None:
+def parse_new_urls(page: str) -> set[str]:
+    """Product paths whose listing card carries the site's own 'new' corner badge (<div class="promo promo--new">)."""
+    out: set[str] = set()
+    for m in re.finditer(r'<figure[^>]*\sdata-url="([^"]+)"[^>]*>(.*?)(?=<figure|\Z)', page, re.S):
+        if 'promo--new' in m.group(2):
+            out.add(m.group(1))
+    return out
+
+
+def rating_signal(rating, count) -> dict:
+    """{'rating': 0-5 float, 'review_count': int} from the site's own score/count; {} when absent or implausible."""
+    try:
+        r, n = float(rating), int(float(count))
+    except (TypeError, ValueError):
+        return {}
+    return {"rating": round(r, 2), "review_count": n} if 0 < r <= 5 and n > 0 else {}
+
+
+def item_to_candidate(item: dict, sub: str, new_paths: frozenset | set = frozenset()) -> Candidate | None:
     name, url, sku = _clean_name(str(item.get("name") or "")), str(item.get("url") or ""), str(item.get("sku") or "")
     if classify(name) != sub or not _SKU.match(sku) or urlparse(url).scheme != "https" or not _host_in(url) \
             or "/product/" not in url:
@@ -182,9 +200,15 @@ def item_to_candidate(item: dict, sub: str) -> Candidate | None:
         attrs["fuel"] = "electric"
     if re.search(r"wi-?fi|smart", name, re.I):
         attrs["wifi"] = True
+    src = {k: "name" for k in attrs}
+    ar = item.get("aggregateRating") if isinstance(item.get("aggregateRating"), dict) else {}
+    signals = rating_signal(ar.get("ratingValue"), ar.get("reviewCount"))
+    if urlparse(url).path in new_paths:
+        signals["is_new"] = True
+    attrs.update(signals)
+    src.update({k: "listing" for k in signals})
     return Candidate(brand=BRAND, model_number=sku, name=name, url=url, price_usd=None, category="cooking", subcategory=sub,
-                     region=REGION, country=COUNTRY, currency=CURRENCY, price_local=None, attrs=attrs,
-                     attrs_src={k: "name" for k in attrs})
+                     region=REGION, country=COUNTRY, currency=CURRENCY, price_local=None, attrs=attrs, attrs_src=src)
 
 
 def discover(subcategory: str, limit: int = 30) -> list[Candidate]:
@@ -196,10 +220,12 @@ def discover(subcategory: str, limit: int = 30) -> list[Candidate]:
         for path in SUB_SOURCES[subcategory]:
             seen = 0
             for page in range(1, MAX_PAGES + 1):
-                items, total = parse_listing(f.get(f"{BASE}/{path}" + (f"?page={page}" if page > 1 else "")))
+                html_page = f.get(f"{BASE}/{path}" + (f"?page={page}" if page > 1 else ""))
+                items, total = parse_listing(html_page)
+                new_paths = parse_new_urls(html_page)
                 seen += len(items)
                 for it in items:
-                    c = item_to_candidate(it, subcategory)
+                    c = item_to_candidate(it, subcategory, new_paths)
                     if c:
                         found.setdefault(c.model_number, c)
                 if not items or seen >= total or len(found) >= limit:
@@ -288,6 +314,10 @@ def parse_product(page: str, url: str) -> tuple[ProductRecord, list[RawSpec], li
     ld = re.search(r'"image":\s*"(https://[^"]+)"', page)
     img = ld.group(1) if ld else (re.search(r'<meta property="og:image" content="(https://[^"]+)"', page) or [None, None])[1]
     wifi = bool(re.search(r"wi-?fi|smart", name, re.I))
+    # the page's own Feefo summary: <div class="reviewscoretarget ..." data-score="4.5"> ... <div class="panel--rating-cnt">(291 reviews)
+    sc = re.search(r'class="reviewscoretarget[^"]*"[^>]*data-score="([\d.]+)"', page)
+    cnt = re.search(r'class="panel--rating-cnt">\(?\s*([\d,]+)\s*review', page)
+    signals = rating_signal(sc.group(1) if sc else None, cnt.group(1).replace(",", "") if cnt else None)
     record = ProductRecord(
         brand=BRAND, model_number=model, product_name=name, category="cooking", subcategory=sub, product_url=url,
         price_usd=None, region=REGION, country=COUNTRY, currency=CURRENCY, price_local=None,
@@ -297,7 +327,7 @@ def parse_product(page: str, url: str) -> tuple[ProductRecord, list[RawSpec], li
         weight_lb=round(units.kg_to_lb(kg), 1) if kg else None,
         capacity_total_cuft=round(units.l_to_cuft(litres), 2) if litres else None,
         wifi_supported=True if wifi else None, wifi_evidence=f"name: {name}" if wifi else None,
-        extra_specs=table, image_url=img if img and _host_in(img) else None)
+        extra_specs=table, image_url=img if img and _host_in(img) else None, **signals)
     return record, raw, doc_links(page)
 
 

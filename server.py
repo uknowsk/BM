@@ -32,6 +32,7 @@ from pydantic import BaseModel, Field  # noqa: E402
 import catalog  # noqa: E402
 import compare_model  # noqa: E402
 import filters  # noqa: E402
+import match  # noqa: E402
 import service  # noqa: E402
 from catalog import Candidate  # noqa: E402
 from schema import DocumentRecord, ModeRecord, ProductRecord  # noqa: E402
@@ -1063,6 +1064,98 @@ def api_collect(req: CollectReq):
     _register(job)
     _start(job, _run_collect, cands, req)
     return {"job_id": job.id}
+
+
+# ------------------------------------------------------------------ competitor match (works on the discovery history)
+class MatchSpecs(BaseModel):
+    width_in: Optional[float] = Field(None, ge=10, le=100)
+    capacity_total_cuft: Optional[float] = Field(None, gt=0, le=100)
+    oven_capacity_cuft: Optional[float] = Field(None, gt=0, le=100)
+    fuel: Optional[str] = Field(None, pattern="^(gas|electric|induction|dual_fuel)$")
+    burners: Optional[int] = Field(None, ge=1, le=12)
+    features: list[str] = Field(default_factory=list, max_length=len(match.FEATURES))
+
+
+class MatchReq(BaseModel):
+    sub: str = Field(max_length=32)
+    country: str = Field("us", max_length=2)
+    price: Optional[float] = Field(None, gt=0, le=1e7)
+    specs: MatchSpecs = Field(default_factory=MatchSpecs)
+    weights: Optional[dict[str, float]] = None
+    band_pct: float = Field(match.DEFAULT_BAND_PCT, ge=5, le=100)
+    tier_window: Optional[int] = Field(None, ge=0, le=4)
+    top: int = Field(20, ge=1, le=50)
+
+
+_SEEN_READY = False
+
+
+def _history():
+    """The store, with the history seeded once from candidate listings cached before it existed."""
+    global _SEEN_READY
+    st = _store()
+    if not _SEEN_READY:
+        try:
+            st.backfill_seen()
+        except Exception:  # noqa: BLE001 - an empty history is a valid (if poor) starting point
+            logger.exception("history backfill failed")
+        _SEEN_READY = True
+    return st
+
+
+def _match_scope(sub: str, country: str) -> tuple[str, str]:
+    if not catalog.is_sub(sub):
+        raise _bad(f"알 수 없는 소분류: {sub}")
+    if country not in catalog.COUNTRIES:
+        raise _bad(f"알 수 없는 국가: {country}")
+    return catalog.major_of(sub), catalog.currency_of(country)
+
+
+def _data_readiness(pool: list[dict]) -> dict:
+    """How much real evidence the pool holds (shown next to the ranking so thin data is never mistaken for a verdict)."""
+    facts = [match._facts(r) for r in pool]
+    by_brand: dict[str, int] = {}
+    for r in pool:
+        by_brand[r["brand"]] = by_brand.get(r["brand"], 0) + 1
+    return {"models": len(pool), "brands": dict(sorted(by_brand.items())),
+            "with_price": sum(1 for r in pool if match.row_price(r) is not None),
+            "with_rating": sum(1 for f in facts if f.get("rating") is not None and f.get("review_count")),
+            "with_release_date": sum(1 for f in facts if f.get("release_date")),
+            "site_new_flagged": sum(1 for f in facts if f.get("is_new")),
+            "new_discoveries": sum(1 for r in pool if r.get("baseline") == 0)}
+
+
+@app.post("/api/match")
+def api_match(req: MatchReq):
+    major, currency = _match_scope(req.sub, req.country)
+    weights = req.weights or {}
+    if set(weights) - set(match.DEFAULT_WEIGHTS) or any(not 0 <= v <= 100 for v in weights.values()):
+        raise _bad("가중치는 price, spec, recency, response 키에 0~100 값만 허용됩니다.")
+    if any(f not in match.FEATURES for f in req.specs.features):
+        raise _bad("지원하지 않는 기능 항목입니다.")
+    pool = _history().list_seen(major=major)
+    target = {"sub": req.sub, "country": req.country, "currency": currency, "price": req.price,
+              "specs": req.specs.model_dump(exclude_none=True)}
+    out = match.rank(pool, target, weights=weights, band_pct=req.band_pct, tier_window=req.tier_window, top=req.top)
+    out["data"] = _data_readiness([r for r in pool if r["sub"] == req.sub and (r.get("currency") or "USD") == currency])
+    return out
+
+
+@app.get("/api/launches")
+def api_launches(sub: str = Query(..., max_length=32), country: str = Query("us", max_length=2),
+                 window: int = Query(12, ge=1, le=60)):
+    major, currency = _match_scope(sub, country)
+    pool = _history().list_seen(major=major)
+    out = match.launches(pool, window_months=window, sub=sub, currency=currency)
+    out["data"] = _data_readiness([r for r in pool if r["sub"] == sub and (r.get("currency") or "USD") == currency])
+    return out
+
+
+@app.get("/match", include_in_schema=False)
+def web_match():
+    if not (WEB_DIR / "match.html").is_file():
+        raise HTTPException(404, "not found")
+    return FileResponse(WEB_DIR / "match.html", media_type="text/html")
 
 
 def _job(job_id: str) -> Job:

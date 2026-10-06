@@ -24,6 +24,7 @@ from playwright.sync_api import Error as PlaywrightError, TimeoutError as Playwr
 
 import common
 from catalog import Candidate
+from maytag_us import occ_signals  # same OCC platform; shared rating/review extraction
 from schema import DocumentRecord, ProductRecord, RawSpec
 
 BRAND = "KitchenAid"
@@ -305,7 +306,8 @@ def parse_search(data: dict, sub: str | None = None, segment: str | None = None)
         price = (p.get("price") or p.get("baseDisplayPrice") or {}).get("value")
         extra = {"category": rule.major, "subcategory": sub} if rule else {}
         out.append(Candidate(brand=BRAND, model_number=p["code"], name=p["name"], url=url,
-                             price_usd=float(price) if price else None, **extra))
+                             price_usd=float(price) if price else None,
+                             attrs=(sig := occ_signals(p)), attrs_src={k: "listing" for k in sig}, **extra))
     if other:
         print(f"kitchenaid_us: parse_search({sub}): {other} listed product(s) classified under another sub key "
               f"or none, skipped", file=sys.stderr)
@@ -501,6 +503,7 @@ def parse_product(model: str, url: str, spec: dict, prod: dict) -> tuple[Product
         pod_features=feats,
         extra_specs={**full_spec_table(spec), **_extra_specs(major, f)},
         image_url=main_image_url(prod),
+        **occ_signals(prod),
     )
     raw = [RawSpec(brand=BRAND, model_number=model, source="web", section=sec["name"], key=x["name"],
                    value=str(x["value"])) for sec in spec["specSections"] for x in sec["specs"]

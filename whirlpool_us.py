@@ -20,6 +20,7 @@ from playwright.sync_api import Error as PlaywrightError, TimeoutError as Playwr
 
 import common
 from catalog import Candidate
+from maytag_us import occ_signals  # same OCC platform; shared rating/review extraction
 from schema import DocumentRecord, ProductRecord, RawSpec
 
 BRAND = "Whirlpool"
@@ -308,7 +309,8 @@ def parse_search(data: dict, sub_key: str) -> list[Candidate]:
             continue
         price = (p.get("price") or p.get("baseDisplayPrice") or {}).get("value")
         out.append(Candidate(brand=BRAND, model_number=p["code"], name=p["name"], url=url,
-                             price_usd=float(price) if price else None, category=sub.major, subcategory=sub_key))
+                             price_usd=float(price) if price else None, category=sub.major, subcategory=sub_key,
+                             attrs=(sig := occ_signals(p)), attrs_src={k: "listing" for k in sig}))
     if other:
         print(f"whirlpool_us: parse_search({sub_key}): {other} listed product(s) classified under another sub key "
               f"or none, skipped", file=sys.stderr)
@@ -464,6 +466,7 @@ def parse_product(model: str, url: str, spec: dict, prod: dict) -> tuple[Product
             extra[k if k not in extra else f"{sec}: {k}"] = v
     kw["extra_specs"] = {**full_spec_table(rows), **extra}  # full sectioned table + legacy flat labels
     kw["image_url"] = main_image_url(prod)
+    kw.update(occ_signals(prod))
     raw = [RawSpec(brand=BRAND, model_number=model, source="web", section=sec, key=k, value=v) for sec, k, v in rows]
     return ProductRecord(**kw), raw
 

@@ -19,8 +19,8 @@ import i18n
 import units
 from catalog import Candidate
 from schema import DocumentRecord, ProductRecord, RawSpec
-from thermador_us import (Site, boolean, clean_name, download_docs, flight_text, item_price, item_url, item_wifi,
-                          iter_listing, json_after, main_image_url, session, spec_rows, title_of, host_in, DELAY_S)
+from thermador_us import (Site, boolean, clean_name, download_docs, flight_text, item_price, item_signals, item_url, item_wifi,
+                          iter_listing, json_after, main_image_url, page_signals, session, spec_rows, title_of, host_in, DELAY_S)
 
 BRAND = "Siemens"
 COUNTRY = "de"
@@ -97,6 +97,7 @@ def listing_attrs(item: dict, parts: list, sub: str) -> dict:
     fin = finish_de(" ".join(str(p) for p in parts[3:]))
     if fin:
         attrs["finish"] = fin
+    attrs.update(item_signals(item))
     return attrs
 
 
@@ -247,7 +248,7 @@ def parse_product(model: str, url: str, flight: str) -> tuple[ProductRecord, lis
         if hc else None,
         pod_features=tr.translate_many([h["headline"]["text"] for h in highlights if isinstance(h, dict)
                                         and isinstance(h.get("headline"), dict) and h["headline"].get("text")], "value"),
-        extra_specs=table, image_url=main_image_url(SITE, flight))
+        extra_specs=table, image_url=main_image_url(SITE, flight), **page_signals(flight))
     raw = [RawSpec(brand=BRAND, model_number=model, source="web", section=r["sec"], key=r["label"], value=r["value"])
            for r in rows]
     return record, raw

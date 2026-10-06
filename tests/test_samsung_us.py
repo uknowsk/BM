@@ -583,6 +583,32 @@ def test_classify_is_a_function_of_one_product_so_subs_partition():
     assert seen and all(len(v) == 1 for v in seen.values())
 
 
+def test_listing_signals_rating_reviews_new_badge():
+    """Real pf_search excerpt fields (reviewRating / numberOfReviews / badgeDetails.iconTitle)."""
+    base = {"pdpURL": "/us/refrigerators/french-door/x-sku-rf29db9900qdaa", "ial4_code": "08030202",
+            "productDisplayName": "Bespoke 4-Door Flex"}
+    payload = {"searchResults": [
+        {**base, "modelCode": "RF29DB9900QDAA", "numberOfReviews": 426, "reviewRating": 3.9413,
+         "badgeDetails": {"iconTitle": "Fall Savings", "iconColor": "Blue", "iconTypeCd": "S"}},
+        {**base, "modelCode": "RF80H30CERAA", "numberOfReviews": 5, "reviewRating": 4.8,
+         "badgeDetails": {"iconTitle": "NEW", "iconColor": None, "iconTypeCd": "N"}},
+        {**base, "modelCode": "RZ00NOREVIEWS", "numberOfReviews": 0, "reviewRating": 0,
+         "badgeDetails": {"iconTitle": None, "iconColor": None, "iconTypeCd": None}},
+        {**base, "modelCode": "RZ00NOFIELDS"},
+    ]}
+    got = {c.model_number: c for c in s.parse_search(payload, "french_door")}
+    a = got["RF29DB9900QDAA"]
+    assert a.attrs == {"rating": 3.94, "review_count": 426} and a.attrs_src == {"rating": "listing", "review_count": "listing"}
+    assert got["RF80H30CERAA"].attrs == {"rating": 4.8, "review_count": 5, "is_new": True}
+    assert got["RZ00NOREVIEWS"].attrs == {} and got["RZ00NOFIELDS"].attrs == {}  # unknown = key omitted, no is_new=False
+
+
+def test_pdp_reviews_set_record_signals():
+    p, _ = _build("kk", "https://www.samsung.com/us/refrigerators/french-door/x/")
+    assert p.rating == 4.8 and p.review_count == 177 and p.is_new is True  # PDP uiFlag == "New"
+    assert p.release_date is None and p.release_src is None
+
+
 if __name__ == "__main__":
     for name, fn in list(globals().items()):
         if name.startswith("test_"):

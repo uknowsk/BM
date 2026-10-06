@@ -113,6 +113,15 @@ def test_url_check_and_docs():
     assert fp._doc_type("https://dam.fisherpaykel.com/a/FP-Proposition65-CaliforniaWarning-en.pdf") is None
 
 
+def test_new_badge_only_when_site_flags_it():
+    html = _html("OS30SMUNB3")
+    assert fp.parse_page(URLS["OS30SMUNB3"], html)["is_new"] is None and fp.parse_product(URLS["OS30SMUNB3"], html)[0].is_new is None
+    flagged = html + '<div class="badges-container"> <ul class="product-badges"> <li>NEW</li> </ul> </div>'
+    assert flagged != html and fp.parse_product(URLS["OS30SMUNB3"], flagged)[0].is_new is True
+    arriving = html + '<div class="badges-container"> <ul class="product-badges"> <li>ARRIVING NOV 2026</li> </ul> </div>'
+    assert fp.parse_page(URLS["OS30SMUNB3"], arriving)["is_new"] is None
+
+
 if __name__ == "__main__":
     tests = [(n, f) for n, f in sorted(globals().items()) if n.startswith("test_") and callable(f)]
     for n, f in tests:

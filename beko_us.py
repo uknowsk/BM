@@ -157,8 +157,37 @@ def parse_cards(page: str) -> list[dict]:
         tok = _tokens(card)
         pair = lambda label: next((tok[i + 1] for i, t in enumerate(tok[:-1]) if t == label), "")
         out.append({"model": model, "name": name, "url": urljoin(BASE, href.group(1)), "image": img.group(1) if img else None,
-                    "cooktop_type": pair(_LABELS[0]), "burners": pair(_LABELS[1])})
+                    "cooktop_type": pair(_LABELS[0]), "burners": pair(_LABELS[1]), **rating_signal(card)})
     return out
+
+
+_BV_STARS = re.compile(r"([\d.]+) out of 5 stars\.\s*([\d,]+) reviews?", re.I)
+
+
+def rating_signal(fragment: str) -> dict:
+    """{'rating': 0-5 float, 'review_count': int} from the site's embedded Bazaarvoice summary ('4.0 out of 5 stars. 4 reviews',
+    the screen-reader text of the inline rating); {} when there is no review (the widget renders '0.0 out of 5 stars.')."""
+    m = _BV_STARS.search(fragment)
+    if not m:
+        return {}
+    r, n = float(m.group(1)), int(m.group(2).replace(",", ""))
+    return {"rating": r, "review_count": n} if 0 < r <= 5 and n > 0 else {}
+
+
+def pdp_rating_signal(page: str, model: str) -> dict:
+    """Same signal from the product page's Bazaarvoice summary (<script id="bv-jsonld-bvloader-summary"> aggregateRating) of
+    this model; {} when absent, malformed or reviewed under another model."""
+    m = re.search(r'<script[^>]*id="bv-jsonld-bvloader-summary"[^>]*>(.*?)</script>', page, re.S)
+    if not m:
+        return {}
+    try:
+        ar = json.loads(m.group(1)).get("aggregateRating") or {}
+        if str((ar.get("itemReviewed") or {}).get("name") or model).upper() != model.upper():
+            return {}
+        r, n = float(ar.get("ratingValue")), int(ar.get("reviewCount"))
+    except (ValueError, TypeError, AttributeError):
+        return {}
+    return {"rating": r, "review_count": n} if 0 < r <= 5 and n > 0 else {}
 
 
 def card_to_candidate(c: dict, sub: str) -> Candidate | None:
@@ -176,9 +205,13 @@ def card_to_candidate(c: dict, sub: str) -> Candidate | None:
         attrs["fuel"] = "dual fuel" if "dual fuel" in c["name"].lower() else "gas"
     elif sub in ("electric_oven", "radiant", "induction"):
         attrs["fuel"] = "electric"
+    src = {k: "name" for k in attrs}
+    for k in ("rating", "review_count"):
+        if k in c:
+            attrs[k], src[k] = c[k], "listing"
     return Candidate(brand=BRAND, model_number=c["model"], name=f"{c['name']} {c['model']}".strip(), url=c["url"], price_usd=None,
                      category="cooking", subcategory=sub, region=REGION, country=COUNTRY, currency=CURRENCY, attrs=attrs,
-                     attrs_src={k: "name" for k in attrs})
+                     attrs_src=src)
 
 
 def discover(subcategory: str, limit: int = 30) -> list[Candidate]:
@@ -271,7 +304,7 @@ def parse_product(page: str, url: str) -> tuple[ProductRecord, list[RawSpec]]:
         width_in=_cm_in(flat.get("width", "")), height_in=_cm_in(flat.get("height", "")), depth_in=_cm_in(flat.get("depth", "")),
         weight_lb=round(units.kg_to_lb(kg), 1) if kg else None, capacity_total_cuft=float(cu.group(1)) if cu else None,
         voltage_v=re.sub(r"\s*V\s*$", "", volt) or None, frequency_hz=hz, extra_specs=table,
-        image_url=ld.group(1) if ld and _host_in(ld.group(1)) else None)
+        image_url=ld.group(1) if ld and _host_in(ld.group(1)) else None, **pdp_rating_signal(page, model))
     return record, raw
 
 

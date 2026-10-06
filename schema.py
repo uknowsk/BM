@@ -41,6 +41,11 @@ class ProductRecord(BaseModel):
     extra_specs: dict[str, str] = Field(
         default_factory=dict,
         description="category-specific specs, English label -> value string (e.g. 'Spin speed (rpm)': '1300')")
+    rating: Optional[float] = Field(None, ge=0, le=5, description="average consumer rating on the brand site, 5-point scale")
+    review_count: Optional[int] = Field(None, ge=0, description="number of ratings/reviews behind `rating`")
+    is_new: Optional[bool] = Field(None, description="True only when the site itself flags the model as new")
+    release_date: Optional[str] = Field(None, description="'YYYY-MM-DD' | 'YYYY-MM' | 'YYYY' as stated by the site/doc; never guessed")
+    release_src: Optional[str] = Field(None, description="'site' | 'doc' | 'sitemap': where release_date came from")
     image_url: Optional[str] = Field(None, description="main product image URL on the brand site (https)")
     image_path: Optional[str] = Field(None, description="downloaded main image, path relative to the project root")
 

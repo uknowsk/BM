@@ -114,6 +114,17 @@ def test_url_validation_and_modes():
             os.environ["FRIDGE_BROWSER_MODE"] = old
 
 
+def test_new_badge_signal():
+    ck = b.parse_listing(_t("listing_cooktops.html"))
+    news = [c for c in ck if c["new"]]
+    assert 0 < len(news) < len(ck)  # only cards with the site's own is-new badge
+    cand = b._candidate(news[0], "induction")
+    assert cand.attrs["is_new"] is True and cand.attrs_src["is_new"] == "listing"
+    plain = next(c for c in ck if not c["new"])
+    assert "is_new" not in b._candidate(plain, "gas_cooktop").attrs
+    assert not ({"rating", "review_count", "release_date"} & set(cand.attrs))  # the site publishes none
+
+
 if __name__ == "__main__":
     tests = [(n, f) for n, f in sorted(globals().items()) if n.startswith("test_") and callable(f)]
     for n, f in tests:

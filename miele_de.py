@@ -329,6 +329,18 @@ def _clean_name(s: Any) -> str:
     return " ".join(str(s or "").replace(" ", " ").split())
 
 
+def rating_signal(p: dict) -> dict:
+    """{'rating': 0-5 float, 'review_count': int} from the shop's own customer-review summary (`rating` = {average, sample,
+    min 1, max 5}, present on listing rows and product data); {} when nobody has reviewed the product."""
+    r = p.get("rating")
+    if not isinstance(r, dict):
+        return {}
+    avg, n = r.get("average"), r.get("sample")
+    if isinstance(avg, bool) or isinstance(n, bool) or not isinstance(avg, (int, float)) or not isinstance(n, (int, float)):
+        return {}
+    return {"rating": round(float(avg), 2), "review_count": int(n)} if 0 < avg <= 5 and n > 0 else {}
+
+
 def candidate_from(p: dict, sub: str) -> Optional[Candidate]:
     url = p.get("pdpUrl")
     model = _clean_name(p.get("name"))
@@ -337,6 +349,7 @@ def candidate_from(p: dict, sub: str) -> Optional[Candidate]:
     attrs: dict[str, Any] = {"fuel": _SUB_FUEL[sub]}
     if "dampf" in _norm(p.get("designTypeName")):
         attrs["steam"] = True
+    attrs.update(rating_signal(p))
     design = _clean_name(p.get("designTypeName"))
     return Candidate(brand=BRAND, model_number=model, name=f"{model} {design}".strip(), url=url,
                      category=catalog.major_of(sub), subcategory=sub, region=REGION, country=COUNTRY, currency=CURRENCY,
@@ -581,7 +594,7 @@ def parse_product(product: dict, url: str) -> tuple[ProductRecord, list[RawSpec]
         depth_in=f.get("depth_in"), weight_lb=f.get("weight_lb"), voltage_v=f.get("voltage_v"),
         frequency_hz=f.get("frequency_hz"), energy_kwh_year=None, energy_star=None,
         wifi_supported=wifi, wifi_evidence=("Miele product data: connectedAppliance = true" if wifi else None),
-        pod_features=pod, extra_specs={**extra, **cur}, image_url=_image(product),
+        pod_features=pod, extra_specs={**extra, **cur}, image_url=_image(product), **rating_signal(product),
     )
     return rec, raw, {"documents": parse_documents(product)}
 

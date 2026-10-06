@@ -52,6 +52,33 @@ def _adapter(brand: str, country: str):
     return catalog.adapter(brand) if country == catalog.DEFAULT_COUNTRY else catalog.adapter(brand, country)
 
 
+_DETAIL_ATTRS = ("rating", "review_count", "is_new", "release_date", "release_src", "width_in", "height_in", "depth_in",
+                 "capacity_total_cuft", "energy_kwh_year", "energy_star", "wifi_supported")
+
+
+def _remember(store: Optional[Store], cands: list[Candidate], limit: int) -> None:
+    """Best-effort: add the listed models to the durable discovery history (never breaks a search)."""
+    if store is None:
+        return
+    try:
+        store.record_seen(cands, limit=limit)
+    except Exception:  # noqa: BLE001 - history is an extra, the search result must not depend on it
+        logger.exception("could not record discovery history")
+
+
+def _remember_detail(store: Optional[Store], url: str, product) -> None:
+    """Best-effort: merge a scraped product's consumer/launch signals and real dimensions into its history row."""
+    if store is None:
+        return
+    attrs = {k: getattr(product, k) for k in _DETAIL_ATTRS if getattr(product, k, None) is not None}
+    if "wifi_supported" in attrs:
+        attrs["wifi"] = attrs.pop("wifi_supported")
+    try:
+        store.update_seen_attrs(url, attrs)
+    except Exception:  # noqa: BLE001
+        logger.exception("could not update discovery history for %s", url)
+
+
 def search(brands: list[str], subcategories: str | list[str] = "refrigerator", limit: int = 30,
            store: Optional[Store] = None, use_cache: bool = True, countries: Optional[list[str]] = None):
     """Discover candidates per brand x sub group; one brand failing does not hide the others.
@@ -103,7 +130,9 @@ def search(brands: list[str], subcategories: str | list[str] = "refrigerator", l
                             continue
                         n_ok += 1
                         n_cached += cached is not None
-                        got.extend(_tag(c, sub, cc) for c in cands[:limit])
+                        tagged = [_tag(c, sub, cc) for c in cands[:limit]]
+                        _remember(store, tagged, limit)
+                        got.extend(tagged)
             got = list({c.url: c for c in reversed(got)}.values())[::-1]  # same URL in two sub lists: keep first
             found.extend(got)
             if n_fail and not n_ok:
@@ -265,6 +294,7 @@ def collect(candidates: list[Candidate], progress_cb: Optional[Callable[[int, in
                     store.update_product(cand.url, product)  # keep the scrape's fetched_at (TTL)
                 if modes_new:
                     store.update_modes(cand.url, pmodes)
+            _remember_detail(store, cand.url, product)
             products.append(product)
             documents.extend(docs)
             raw_specs.extend(specs)

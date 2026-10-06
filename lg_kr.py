@@ -516,7 +516,21 @@ def listing_attrs(item: dict, sub: str, doors: Optional[int] = None) -> dict:
     sale, lst = listing_prices(item)
     if lst:
         a["list_price_krw"] = lst
+    if item.get("modelReviewDisplayFlag") != "N":  # 'N' = the site itself hides the review summary
+        a.update(review_signals(item.get("reviewsScore"), item.get("reviewsCount")))
+    released = re.match(r"(\d{4}-\d{2}-\d{2})(?:T|$)", str(item.get("modelReleaseDate") or ""))
+    if released:  # the site's own model release date (the listing also shows it as the '20xx년출시' badge)
+        a["release_date"], a["release_src"] = released.group(1), "site"
     return a
+
+
+def review_signals(rating: Any, count: Any) -> dict:
+    """{'rating', 'review_count'} (5-point scale) when the site states both and there is at least one review."""
+    try:
+        n, r = int(float(count)), float(rating)
+    except (TypeError, ValueError):
+        return {}
+    return {"rating": round(r, 2), "review_count": n} if n > 0 and 0 < r <= 5 else {}
 
 
 def _listing_facts(item: dict, facets: dict) -> dict:
@@ -709,6 +723,12 @@ def _unique(key: str, taken: dict) -> str:
     return f"{key} ({n})"
 
 
+def _pdp_rating(text: str) -> dict:
+    """PDP JSON-LD aggregateRating (ratingValue / reviewCount are strings on LG KR)."""
+    agg = _json_after(text, "aggregateRating", must="ratingValue")
+    return review_signals(agg.get("ratingValue"), agg.get("reviewCount")) if agg else {}
+
+
 def parse_pdp(html: str, url: str) -> tuple[ProductRecord, list[RawSpec], dict]:
     """-> (ProductRecord, [RawSpec with the ORIGINAL Korean], info{'model_id','major','headlines_ko'}).
     Raises LGKRPageError if the page is not a recognisable LG KR PDP, ValueError for a product family this
@@ -837,6 +857,7 @@ def parse_pdp(html: str, url: str) -> tuple[ProductRecord, list[RawSpec], dict]:
         water_dispenser=(None if disp is None else _yn(disp)) if fridge else None,
         wifi_supported=wifi, wifi_evidence=wifi_ev,
         pod_features=heads_en, extra_specs={**extra, **cur}, image_url=image,
+        **_pdp_rating(text),
     )
     info = {"model_id": str(pi.get("modelId") or ""), "major": major, "headlines_ko": heads_ko}
     return product, raw, info

@@ -183,6 +183,33 @@ def test_browser_modes():
             os.environ["FRIDGE_BROWSER_MODE"] = old
 
 
+def test_site_signals_listing_and_page():
+    # real listing excerpts: Thermador has reviews switched off (0/0), Bosch/Siemens items carry rating {average, count}
+    assert t.item_signals({"rating": {"average": 0, "count": 0}, "buyAreaOptionBadges": {"primaryBadge": None, "secondaryBadge": None}}) == {}
+    assert t.item_signals({"buyAreaOptionBadges": {"primaryBadge": {"text": "Explore Virtual Showroom"}, "secondaryBadge": None}}) == {}
+    assert t.item_signals({"rating": {"average": 4.3, "count": 531}}) == {"rating": 4.3, "review_count": 531}
+    assert t.item_signals({"rating": {"average": 5, "count": 2}, "buyAreaOptionBadges": {"primaryBadge": {"text": "NEW"}}}) == \
+        {"rating": 5.0, "review_count": 2, "is_new": True}
+    assert t.item_signals({"rating": {"average": 9, "count": 3}}) == {}  # out of the 5-point scale: not trusted
+    # a listing item that states signals lands in attrs with src 'listing'; absent signals add no keys
+    item = {"productCode": "PRG304WH", "urlPath": "/mkt-product/ranges/30-ranges/PRG304WH", "productName": ["Gas Range 30''"],
+            "rating": {"average": 4.5, "count": 12}}
+    c = t.item_to_candidate(item, "cooking", "gas_oven", "ranges")
+    assert c.attrs["rating"] == 4.5 and c.attrs["review_count"] == 12 and c.attrs_src["rating"] == "listing"
+    assert "is_new" not in c.attrs and "release_date" not in c.attrs
+    # page: first isNewProduct/releaseDate = the page's product; null/false stay unknown (key omitted)
+    base = '"product":{"productCode":"X","releaseDate":%s,"isNewProduct":%s,"productFamily":"Cookers"}'
+    assert t.page_signals(base % ("null", "false")) == {}
+    assert t.page_signals(base % ('"2025-03-01T00:00:00Z"', "true")) == \
+        {"is_new": True, "release_date": "2025-03-01", "release_src": "site"}
+    assert t.page_signals(base % ('"2024-11"', "false")) == {"release_date": "2024-11", "release_src": "site"}
+    jl = '"aggregateRating":{"@type":"AggregateRating","bestRating":10,"ratingValue":8.6,"reviewCount":40}'
+    assert t.page_signals(jl) == {"rating": 4.3, "review_count": 40}
+    # fixtures: no review/NEW data on these pages -> the record leaves all five fields unset
+    r, _ = _parse("MC30WS")
+    assert (r.rating, r.review_count, r.is_new, r.release_date, r.release_src) == (None,) * 5
+
+
 if __name__ == "__main__":
     for name, fn in list(globals().items()):
         if name.startswith("test_"):

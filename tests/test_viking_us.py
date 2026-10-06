@@ -121,6 +121,29 @@ def test_url_validation_and_modes():
             os.environ["FRIDGE_BROWSER_MODE"] = old
 
 
+def test_new_badge_signal_only_when_site_flags_it():
+    cards = v.parse_listing(_t("listing_ranges.html"))
+    assert cards and not any(c["new"] for c in cards)  # BESTSELLER badges are not 'new'
+    assert all("is_new" not in v._candidate(c, "gas_oven").attrs for c in cards)
+    html = _t("listing_ranges.html").replace('data-badge="best_seller_product">BESTSELLER', 'data-badge="new_product">NEW', 1)
+    cards = v.parse_listing(html)
+    assert [c["model"] for c in cards if c["new"]] == [cards[0]["model"]]
+    cand = v._candidate(cards[0], "gas_oven")
+    assert cand.attrs["is_new"] is True and cand.attrs_src["is_new"] == "listing"
+    assert "rating" not in cand.attrs and "review_count" not in cand.attrs and "release_date" not in cand.attrs
+
+
+def test_pdp_is_new_from_profile_badges():
+    url = URLS["VRT53044BSS"]
+    html = _t("pdp_VRT53044BSS.html")
+    rec, _raw = v.parse_product(url, html)
+    assert rec.is_new is None and rec.rating is None and rec.review_count is None and rec.release_date is None
+    newer = html.replace('"profile":{"best_seller_product":"BESTSELLER"}', '"profile":{"new_product":"NEW"}')
+    assert newer != html
+    rec2, _raw = v.parse_product(url, newer)
+    assert rec2.is_new is True
+
+
 if __name__ == "__main__":
     tests = [(n, f) for n, f in sorted(globals().items()) if n.startswith("test_") and callable(f)]
     for n, f in tests:

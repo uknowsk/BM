@@ -90,6 +90,16 @@ def test_scrape_rejects_other_hosts():
             pass
 
 
+def test_review_and_new_signals_follow_the_shared_us_rules():
+    """Live (2026-10): Electrolux US cooking products have numberOfReviews 0 and no PLP flags -> no signal keys; positive values
+    use the OCC field names on a modified copy of the product."""
+    p = _j("product_ECFG3668AS.json")
+    rec, _ = e.parse_product("ECFG3668AS", PDP + "x/ECFG3668AS", p)
+    assert (rec.rating, rec.review_count, rec.is_new, rec.release_date) == (None,) * 4
+    rec, _ = e.parse_product("ECFG3668AS", PDP + "x/ECFG3668AS", dict(p, numberOfReviews=12, averageRating=4.6))
+    assert (rec.rating, rec.review_count, rec.is_new) == (4.6, 12, None)
+
+
 if __name__ == "__main__":
     tests = [(n, fn) for n, fn in sorted(globals().items()) if n.startswith("test_") and callable(fn)]
     for n, fn in tests:

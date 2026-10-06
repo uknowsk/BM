@@ -220,6 +220,25 @@ def _parse(tag):
         return miele_de.parse_product(p, p["pdpUrl"])
 
 
+def test_rating_signal_from_listing_and_product():
+    rows = jload("listing_ratings.json")["products"]          # two live rows: reviewed (average 5, sample 3) and unreviewed ({})
+    rated, unrated = (miele_de.candidate_from(r, "radiant") for r in rows[:1]), miele_de.candidate_from(rows[1], "induction")
+    rated = next(rated)
+    assert rated.attrs["rating"] == 5.0 and rated.attrs["review_count"] == 3
+    assert rated.attrs_src["rating"] == "listing" and rated.attrs_src["review_count"] == "listing"
+    assert "is_new" not in rated.attrs and "release_date" not in rated.attrs and "rating" not in unrated.attrs
+    rs = miele_de.rating_signal
+    assert rs({"rating": {"average": 4.7, "sample": 3, "min": 1, "max": 5}}) == {"rating": 4.7, "review_count": 3}
+    assert rs({"rating": {"sample": 0, "average": 0}}) == {} and rs({"rating": {}}) == {} and rs({}) == {}
+    assert rs({"rating": {"average": 7, "sample": 2}}) == {} and rs({"rating": {"average": "5", "sample": 2}}) == {}
+    p = copy.deepcopy(jload("pdp_oven.json"))
+    p["rating"] = {"sample": 12, "average": 4.5, "distribution": None, "min": 1, "max": 5}
+    with Offline():
+        rec, _, _ = miele_de.parse_product(p, p["pdpUrl"])
+    assert (rec.rating, rec.review_count, rec.is_new, rec.release_date) == (4.5, 12, None, None)
+    assert _parse("oven")[0].rating is None
+
+
 def test_parse_oven_sco_microwave():
     rec, raw, info = _parse("oven")
     assert (rec.brand, rec.model_number, rec.subcategory, rec.category) == ("Miele", "H 2465 B ACTIVE", "electric_oven", "cooking")

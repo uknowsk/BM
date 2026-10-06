@@ -107,6 +107,17 @@ def test_url_and_helpers():
             os.environ["FRIDGE_BROWSER_MODE"] = old
 
 
+def test_new_flag_from_listing_card_class():
+    html = _t("listing_ranges_all.html")
+    assert s.new_models(html) == set()  # IS_NEW_0 everywhere: not flagged, key omitted
+    cards = s.parse_listing(html)
+    assert "is_new" not in s._candidate(cards[0][0], cards[0][1], "gas_oven").attrs
+    flagged = html.replace("IS_NEW_0", "IS_NEW_1", 1)
+    assert s.new_models(flagged) == {cards[0][0]}
+    cand = s._candidate(cards[0][0], cards[0][1], "gas_oven", cards[0][0] in s.new_models(flagged))
+    assert cand.attrs["is_new"] is True and cand.attrs_src["is_new"] == "listing" and cand.attrs["fuel"] == "gas"
+
+
 if __name__ == "__main__":
     tests = [(n, f) for n, f in sorted(globals().items()) if n.startswith("test_") and callable(f)]
     for n, f in tests:

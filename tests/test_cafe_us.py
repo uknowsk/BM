@@ -131,6 +131,17 @@ def test_strategies_env():
             os.environ["FRIDGE_BROWSER_MODE"] = old
 
 
+def test_signals_listing_and_detail():
+    c = cafe.parse_search(cafe.CAFE, _j("ss_gas_ranges.json"), "gas_oven")[0][0]
+    assert (c.attrs["rating"], c.attrs["review_count"]) == (4.19, 300) and "release_date" not in c.attrs and "is_new" not in c.attrs
+    assert c.attrs_src == {"rating": "listing", "review_count": "listing"} and "finish" in c.attrs  # existing attrs kept
+    item = dict(_j("ss_gas_ranges.json")["results"][0], product_first_distribution_date="2021/04/05 00:00:00")
+    c = cafe.parse_search(cafe.CAFE, {"results": [item], "pagination": {}}, "gas_oven")[0][0]
+    assert (c.attrs["release_date"], c.attrs["release_src"], c.attrs_src["release_date"]) == ("2021-04-05", "distribution", "listing")
+    r = _rec("CGY366P2TS1")[0]  # PDP has the distribution date, no Bazaarvoice summary
+    assert (r.release_date, r.release_src, r.rating, r.review_count, r.is_new) == ("2021-04-05", "distribution", None, None, None)
+
+
 if __name__ == "__main__":
     tests = [(n, f) for n, f in sorted(globals().items()) if n.startswith("test_") and callable(f)]
     for n, f in tests:

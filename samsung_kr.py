@@ -423,7 +423,26 @@ def _listing_attrs(item: dict, sub: str, name: str) -> tuple[dict, dict]:
     if finish:
         put("finish", finish, "listing")
     put("sale_status", "on_sale" if str(item.get("saleStatCd")) == ON_SALE else "sold_out", "listing")
+    for key, value in _signals(item.get("reviewGrade"), item.get("reviewCount"), item.get("flagStr")).items():
+        put(key, value, "listing")  # the site's own review summary / NEW flag (5-point scale already)
     return attrs, src
+
+
+_NEW_FLAG = re.compile(r"^\s*(?:new|신제품|신상품)\s*$", re.I)
+
+
+def _signals(rating, count, flag) -> dict:
+    """Consumer-response / newness signals the site itself publishes; absent or empty values are left out."""
+    out: dict = {}
+    try:
+        n, r = int(float(count)), float(rating)
+    except (TypeError, ValueError):
+        n = r = None
+    if n and n > 0 and r is not None and 0 < r <= 5:
+        out["rating"], out["review_count"] = round(r, 2), n
+    if isinstance(flag, str) and _NEW_FLAG.match(flag):
+        out["is_new"] = True
+    return out
 
 
 def parse_goods_list(products: list[dict], sub: str | None = None, stats: dict | None = None) -> list[Candidate]:
@@ -550,8 +569,13 @@ def parse_pdp(page_html: str, url: str) -> dict:
     if not gid:
         raise SamsungKrPageError("PDP: no goodsId")
     img = re.search(r'<meta[^>]+property="og:image"[^>]+content="([^"]*)"', page_html)
-    return {"name": name, "model": model, "goods_id": gid.group(1), "image_url": _https(img.group(1)) if img else None,
-            "features": parse_features(page_html)}
+    out = {"name": name, "model": model, "goods_id": gid.group(1), "image_url": _https(img.group(1)) if img else None,
+           "features": parse_features(page_html)}
+    agg = re.search(r'"aggregateRating"\s*:\s*\{[^{}]*"ratingValue"\s*:\s*"?([\d.]+)"?[^{}]*"ratingCount"\s*:\s*"?(\d+)"?',
+                    page_html)  # JSON-LD of the PDP
+    if agg:
+        out.update(_signals(agg.group(1), agg.group(2), None))
+    return out
 
 
 _BOILERPLATE_H2 = re.compile(r"레이어 팝업|설치\s*(?:비\s*)?가이드|Highlights", re.I)
@@ -826,6 +850,7 @@ def build_record(url: str, page: dict, panel: dict, rows, manuals: list[dict],
         water_dispenser=water if fridge else None,
         wifi_supported=wifi_ok, wifi_evidence=wifi_ev,
         pod_features=pod_features,
+        rating=page.get("rating"), review_count=page.get("review_count"),
         extra_specs={**table, **std}, image_url=page["image_url"],
     ), docs
 

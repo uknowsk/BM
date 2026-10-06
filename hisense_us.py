@@ -178,6 +178,12 @@ def _price(item: dict) -> float | None:
     return float(p) if isinstance(p, (int, float)) and p >= MIN_REAL_PRICE else None
 
 
+def _ribbon_is_new(obj: dict) -> bool:
+    """True when the site's own Wix product ribbon (e.g. 'New') says so; empty ribbons are 'not flagged'."""
+    texts = [obj.get("ribbon")] + [r.get("text") if isinstance(r, dict) else r for r in obj.get("additionalRibbons") or []]
+    return any(isinstance(t, str) and re.match(r"\s*new\b", t, re.I) for t in texts)
+
+
 def item_to_candidate(item: dict, sub: str) -> Candidate | None:
     sku, name, part = item.get("sku"), item.get("name") or "", item.get("urlPart") or ""
     if not sku or not _SKU.match(sku) or not re.fullmatch(r"[^/\s]+", part) or classify(name) != sub:
@@ -190,9 +196,12 @@ def item_to_candidate(item: dict, sub: str) -> Candidate | None:
         attrs["fuel"] = "gas"
     elif sub in ("radiant", "induction", "electric_oven"):
         attrs["fuel"] = "electric"
+    src = {k: "name" for k in attrs}
+    if _ribbon_is_new(item):
+        attrs["is_new"], src["is_new"] = True, "listing"
     return Candidate(brand=BRAND, model_number=sku, name=" ".join(name.split()), url=f"{BASE}/product-page/{quote(part)}",
                      price_usd=_price(item), category="cooking", subcategory=sub, region=REGION, country=COUNTRY,
-                     currency=CURRENCY, attrs=attrs, attrs_src={k: "name" for k in attrs})
+                     currency=CURRENCY, attrs=attrs, attrs_src=src)
 
 
 def discover(subcategory: str, limit: int = 30) -> list[Candidate]:
@@ -300,7 +309,8 @@ def parse_product(html: str, url: str) -> tuple[ProductRecord, list[RawSpec], li
         brand=BRAND, model_number=sku, product_name=name, category="cooking", subcategory=sub, product_url=url,
         price_usd=_price(store), region=REGION, country=COUNTRY, currency=CURRENCY,
         width_in=dims[0] if dims else None, depth_in=dims[1] if dims else None, height_in=dims[2] if dims else None,
-        weight_lb=wt, pod_features=feats[:12], extra_specs=table, image_url=_wix_image(store.get("mainMedia")))
+        weight_lb=wt, pod_features=feats[:12], extra_specs=table, image_url=_wix_image(store.get("mainMedia")),
+        is_new=True if _ribbon_is_new(store) else None)
     return record, raw, doc_links(detail)
 
 

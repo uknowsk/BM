@@ -435,6 +435,14 @@ def test_connect_survives_launch_error_and_close_error():
     assert isinstance(browser, Good) and not seq
 
 
+def test_rating_signals_listing_and_detail():
+    c = {x.model_number: x for x in ka.parse_search(_j("search_all.json"), "french_door")}["KRFF436SBE"]
+    assert c.attrs == {"rating": 3.54, "review_count": 109} and c.attrs_src == {"rating": "listing", "review_count": "listing"}
+    m = "KRFF436SBE"
+    r, _ = ka.parse_product(m, _url(m), _j(f"spec_{m}.json"), _j(f"prod_{m}.json"))
+    assert (r.rating, r.review_count) == (3.54, 109) and r.is_new is None and r.release_date is None
+
+
 if __name__ == "__main__":
     for n, f in list(globals().items()):
         if n.startswith("test_"):

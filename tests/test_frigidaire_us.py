@@ -268,6 +268,32 @@ def test_browser_modes_and_headless_fallback():
         pass
 
 
+def test_review_and_new_signals_default_to_unknown():
+    """Live (2026-10): no Frigidaire cooking product has a review (FULL product: numberOfReviews 0, no averageRating) and the PLP
+    primaryFlag is only 'Best Seller' / 'Top Rated' / 'Best Deal', so the real data yields no signal keys."""
+    got = ec.us_candidate(f.SITE, _j("search_gas_ranges.json")["products"][0], "gas_oven", "M_FoodPreparation_Ranges_Gas")
+    assert not {"rating", "review_count", "is_new", "release_date"} & set(got.attrs)
+    (rec, _), p = _parse("GCFG3060BF-A1")
+    assert (rec.rating, rec.review_count, rec.is_new, rec.release_date, rec.release_src) == (None,) * 5
+    p0 = dict(p, numberOfReviews=0, colorVariants=[{"code": "GCFG3060BF-A1", "primaryFlag": "Best Seller"}])
+    assert f.parse_product("GCFG3060BF-A1", PDP + "x/GCFG3060BF-A1", p0)[0].is_new is None
+
+
+def test_review_and_new_signals_when_the_site_provides_them():
+    # OCC field names (numberOfReviews / averageRating) and the 'New' flag text are exercised with a modified copy of the product
+    (_, _), p = _parse("GCFG3060BF-A1")
+    p2 = dict(p, numberOfReviews=7, averageRating=4.3, colorVariants=[{"code": "GCFG3060BF-A1", "primaryFlag": "New"}])
+    rec, _ = f.parse_product("GCFG3060BF-A1", PDP + "x/GCFG3060BF-A1", p2)
+    assert (rec.rating, rec.review_count, rec.is_new) == (4.3, 7, True)
+    item = _j("search_gas_ranges.json")["products"][0]
+    item["colorVariants"][0]["primaryFlag"] = "New"
+    c = ec.us_candidate(f.SITE, item, "gas_oven", "M_FoodPreparation_Ranges_Gas")
+    assert c.attrs["is_new"] is True and c.attrs_src["is_new"] == "listing"
+    item["colorVariants"][0]["primaryFlag"] = "Best Seller"
+    assert "is_new" not in ec.us_candidate(f.SITE, item, "gas_oven", "M_FoodPreparation_Ranges_Gas").attrs
+    assert ec.review_signal(4.3, 0) == {} and ec.review_signal(None, 3) == {} and ec.review_signal(6, 3) == {}
+
+
 if __name__ == "__main__":
     tests = [(n, fn) for n, fn in sorted(globals().items()) if n.startswith("test_") and callable(fn)]
     for n, fn in tests:

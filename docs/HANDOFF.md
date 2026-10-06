@@ -59,6 +59,12 @@ Gauge: 경쟁사 가전 제품 스펙·POD·모드를 수집해 비교하는 로
 - 단계 2 완료: 허용 호스트 반영(`common.py`, 정확한 호스트만), 전체 테스트 51개 통과, 비밀 정보 검사 이상 없음, 브랜드 x 국가 33개 조합 end-to-end(검색 1건 -> 수집) 전부 성공(워크트리 서버 8799). 유럽 전용 브랜드(Miele, Siemens, AEG)는 `/api/brands?region=eu`에서만 활성(설계). 사용자 서버(8765)는 아직 이전 코드: 메인 체크아웃에 브랜치를 병합한 뒤 재시작해야 반영됨.
 - 남은 일: 메인 병합 + 8765 재시작(사용자 확인), 후속 과제는 `docs/TODO.md` F절(약관 확인, 냉장고·세탁기 확장 등).
 
+## 경쟁 모델 선별 기능 (2026-10-07)
+- 요청: 당사 제품/개발 스펙의 최적 경쟁 모델 선별(가격 유사, 최근 출시, 소비자 호응, 브랜드별 신제품 구분과 트렌드). 사용자 결정: 스펙·가격 직접 입력, 출시는 근사 조합(근거 표기), 호응은 브랜드 사이트 평점만, 가격은 **5단계(5분위) + 근접도 점수**.
+- 구현: `match.py`(순수 함수: 5단계, 근접도, 스펙 적합, 최근성, 베이지안 평점, 신제품 레이더), `store.py`의 발견 이력(`seen_models`/`seen_groups`, 만료 없음, baseline 규칙), `service.py`가 목록/수집 때 기록, `server.py`의 `POST /api/match`, `GET /api/launches`, 페이지 `/match`(`web/match.html`, `js/match.js`, `css/match.css`), 신호 필드(`schema.ProductRecord`와 `Candidate.attrs`: rating, review_count, is_new, release_date, release_src), 어댑터 신호 추출(6개 에이전트), `PARSER_VERSION`=5. 문서: `docs/MATCHING_DESIGN.md`, `README_API.md`.
+- 설계 결정: 미확인은 중립 점수(재분배하면 빈 모델이 이김), 가격 없는 모델은 순위 제외, 폭이 허용 오차를 벗어나면 제외, 한 그룹 NEW 표시가 60% 이상이면 무시.
+- 남은 일: `docs/TODO.md` G절(주기적 재검색, 최신순 정렬 활용, 5단계를 검색 화면에도 적용할지 등).
+
 ## 알려진 한계
 - 필터 대부분은 이름에서 추정한 값 또는 상세 수집된 제품에만 정확함.
 - 한국어 번역·모드 추출은 로컬 LLM 속도에 좌우됨 (제품당 수 분).

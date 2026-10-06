@@ -223,12 +223,14 @@ def parse_listing(html: str) -> list[dict]:
     for m in _CARD.finditer(html):
         path, model, name = _html.unescape(m.group(1)), _clean(m.group(2)), re.sub(r"^New\s+", "", _clean(m.group(3)))
         if path.startswith("/products/") and model and name:
-            out.append({"model": model, "path": path, "name": name})
+            out.append({"model": model, "path": path, "name": name, "new": 'class="is-new"' in m.group(3)})
     return out
 
 
 def _candidate(card: dict, sub: str) -> Candidate:
     attrs = _card_attrs(card["name"])
+    if card.get("new"):  # the site's own "New" badge on the listing card
+        attrs["is_new"] = True
     return Candidate(brand=BRAND, model_number=card["model"], name=card["name"], url=BASE + card["path"],
                      price_usd=None, category="cooking", subcategory=sub, region=REGION, country=COUNTRY,
                      currency=CURRENCY, attrs=attrs, attrs_src={k: "listing" for k in attrs})

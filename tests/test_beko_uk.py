@@ -93,6 +93,25 @@ def test_product_microwaves_and_hob():
     assert hob.subcategory == "gas_cooktop" and hob.width_in == 22.83 and hob.extra_specs["Hob Features > Fuel"] == "Gas"
 
 
+def test_rating_and_new_signals():
+    items, _ = b.parse_listing(read("list_ovens.html"))
+    by = {i["sku"]: b.item_to_candidate(i, "electric_oven") for i in items}
+    c = by["BBAIF22300"]
+    assert c.attrs["rating"] == 4.5 and c.attrs["review_count"] == 291 and c.attrs_src["rating"] == "listing"
+    assert c.attrs_src["review_count"] == "listing" and "is_new" not in c.attrs and "release_date" not in c.attrs
+    assert "rating" not in by["BBIF12311"].attrs and "review_count" not in by["BBIF12311"].attrs   # no reviews: unknown
+    new = b.parse_new_urls(read("list_new_badge.html"))
+    assert len(new) == 1 and next(iter(new)).endswith("bbima13501w-stainless-steel")
+    item = dict(items[0], url="https://www.beko.co.uk" + next(iter(new)))
+    n = b.item_to_candidate(item, "electric_oven", new)
+    assert n.attrs["is_new"] is True and n.attrs_src["is_new"] == "listing"
+    assert b.rating_signal("0", "0") == {} and b.rating_signal("4.5", "") == {} and b.rating_signal("9", "3") == {}
+    rec, _, _ = b.parse_product(read("pdp_rated_excerpt.html"), URL)
+    assert rec.rating == 4.5 and rec.review_count == 291 and rec.is_new is None and rec.release_date is None
+    plain, _, _ = b.parse_product(read("pdp_gas_hob.html"), URL)
+    assert plain.rating is None and plain.review_count is None
+
+
 def test_unit_parsing():
     assert b._mm("1790") == 1790 and b._mm("203.5 centimeters") == 2035 and b._mm("hX560X490") == 560
     assert b._mm("") is None
