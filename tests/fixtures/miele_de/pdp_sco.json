@@ -1,0 +1,1018 @@
+{
+ "name": "H 7240 BM",
+ "alternativeName": "H 7240 BM Obsidianschwarz",
+ "code": "000000000011104080",
+ "formattedCode": "11104080",
+ "designTypeName": "Kompakt-Backofen mit Mikrowelle",
+ "dataLayer": {
+  "brand": "Miele Compact ovens with microwave Compact ovens with microwave 60 cm",
+  "category": "APPLIANCE/MDA/Compact ovens with microwave/Compact ovens with microwave 60 cm",
+  "deliveryDays": "3",
+  "name": "H7240BM    D   OBSW  230/50",
+  "priceWithoutTax": "2099.000000"
+ },
+ "price": {
+  "currencyIso": "EUR",
+  "formattedValue": "2.099,00 €",
+  "priceType": "BUY",
+  "value": 2099
+ },
+ "salesPrice": {
+  "currencyIso": "EUR",
+  "formattedValue": "2.099,00 €",
+  "priceType": "BUY",
+  "value": 2099
+ },
+ "pdpUrl": "https://www.miele.de/product/11104080/kompakt-backofen-mit-mikrowelle-h-7240-bm-obsidianschwarz",
+ "shortPositioningText": "im perfekt kombinierbaren Design mit Automatikprogrammen u. Kombi-Betriebsarten.",
+ "techspecs": [
+  {
+   "attributes": [
+    {
+     "name": "Modellbezeichnung",
+     "sortOrder": 10,
+     "values": [
+      "H 7240 BM"
+     ]
+    },
+    {
+     "name": "Materialnummer Hersteller",
+     "sortOrder": 20,
+     "values": [
+      "11104080"
+     ]
+    },
+    {
+     "name": "EAN-Nummer",
+     "sortOrder": 30,
+     "values": [
+      "4002516132387"
+     ]
+    },
+    {
+     "featureValueCode": "lov_ZZMKTGRP_G",
+     "name": "Marketingklasse",
+     "sortOrder": 40,
+     "values": [
+      "Gold"
+     ]
+    }
+   ],
+   "name": "Allgemeine Informationen",
+   "sortOrder": 10
+  },
+  {
+   "attributes": [
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Einbau-Backofen mit Mikrowelle",
+     "sortOrder": 40,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "VitroLine",
+     "sortOrder": 140,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "lov_PD_101131_126",
+     "name": "Gerätefarbe",
+     "sortOrder": 220,
+     "values": [
+      "Obsidianschwarz"
+     ]
+    }
+   ],
+   "name": "Bauform und Design",
+   "sortOrder": 301
+  },
+  {
+   "attributes": [
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Quick & Gentle",
+     "sortOrder": 60,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Schnellaufheizen",
+     "sortOrder": 70,
+     "values": [
+      "TRUE"
+     ]
+    }
+   ],
+   "name": "Genussvorteile",
+   "sortOrder": 760
+  },
+  {
+   "attributes": [
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Heißluft plus",
+     "sortOrder": 10,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Mikrowelle",
+     "sortOrder": 160,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Mikrowelle mit Heißluft plus",
+     "sortOrder": 180,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Mikrowelle mit Grill",
+     "sortOrder": 190,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Mikrowelle mit Umluftgrill",
+     "sortOrder": 200,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Mikrowelle mit Bratautomatik",
+     "sortOrder": 210,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Bratautomatik",
+     "sortOrder": 350,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Umluftgrill",
+     "sortOrder": 360,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Grill",
+     "sortOrder": 370,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Grillbetriebsarten",
+     "sortOrder": 390,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Auftauen",
+     "sortOrder": 460,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Automatikprogramme",
+     "sortOrder": 500,
+     "values": [
+      "TRUE"
+     ]
+    }
+   ],
+   "name": "Betriebsarten",
+   "sortOrder": 800
+  },
+  {
+   "attributes": [
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Vernetzung mit Miele@home",
+     "sortOrder": 10,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "lov_c_PP_116410_10",
+     "name": "Display",
+     "sortOrder": 20,
+     "values": [
+      "DirectSensor S"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "SoftOpen",
+     "sortOrder": 120,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "SoftClose",
+     "sortOrder": 130,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "lov_ma_00000009_02",
+     "name": "3 in 1",
+     "sortOrder": 165,
+     "values": [
+      "Mikrowelle",
+      "Backofen",
+      "Kombibetrieb"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "MultiLingua",
+     "sortOrder": 170,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Popcorn-Funktion",
+     "sortOrder": 210,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Zeitfunktionen",
+     "sortOrder": 320,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Tageszeitanzeige",
+     "sortOrder": 330,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Uhrzeitsynchronisation",
+     "sortOrder": 340,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Kurzzeitwecker",
+     "sortOrder": 360,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Programmierung Garzeitanfang",
+     "sortOrder": 370,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Programmierung Garzeitende",
+     "sortOrder": 380,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Programmierung Garzeitdauer",
+     "sortOrder": 390,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Ist-Temperaturanzeige",
+     "sortOrder": 400,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Soll-Temperaturanzeige",
+     "sortOrder": 410,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Signalton bei Erreichen der Solltemperatur",
+     "sortOrder": 420,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Vorschlagstemperatur",
+     "sortOrder": 440,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Vorschlag Mikrowellenleistung",
+     "sortOrder": 450,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Quick-Mikrowelle",
+     "sortOrder": 460,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Individuelle Einstellungen",
+     "sortOrder": 510,
+     "values": [
+      "TRUE"
+     ]
+    }
+   ],
+   "name": "Bedienkomfort",
+   "sortOrder": 2800
+  },
+  {
+   "attributes": [
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Rezepte",
+     "sortOrder": 40,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "RemoteUpdate",
+     "sortOrder": 60,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Sprachsteuerung Alexa",
+     "sortOrder": 70,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Sprachsteuerung Google",
+     "sortOrder": 71,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Push-Nachrichten",
+     "sortOrder": 80,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Smart Home Integration",
+     "sortOrder": 100,
+     "values": [
+      "TRUE"
+     ]
+    }
+   ],
+   "footnote": {
+    "code": "CO_22727118",
+    "contentObjectType": "PATENT_INFORMATION",
+    "images": [],
+    "longText": [
+     {
+      "text": "Zusätzliches digitales Angebot der Miele & Cie. KG. Abhängig von Modell und Land kann der Funktionsumfang variieren. Erforderlich ist Ihr Einverständnis zu den Allgemeinen Geschäftsbedingungen und Datenschutzhinweisen für digitale Produkte und Dienste von Miele in der Miele App. Miele behält sich das Recht vor, die digitalen Angebote jederzeit zu ändern oder einzustellen.",
+      "type": "text"
+     }
+    ],
+    "name": [],
+    "shortText": [],
+    "subTitleText": [],
+    "titleText": []
+   },
+   "name": "Smart Extras",
+   "sortOrder": 2801
+  },
+  {
+   "attributes": [
+    {
+     "name": "Leistungsaufnahme im Aus-Zustand in W",
+     "sortOrder": 40,
+     "values": [
+      "0.3"
+     ]
+    },
+    {
+     "name": "Leistungsaufnahme im Stand-by Modus in W",
+     "sortOrder": 50,
+     "values": [
+      "0.8"
+     ]
+    },
+    {
+     "name": "Leistungsaufnahme im vernetzten Bereitschaftsbetrieb in W",
+     "sortOrder": 60,
+     "values": [
+      "2"
+     ]
+    },
+    {
+     "name": "Zeitdauer bis automatisches Schalten in Bereitschaftsbetrieb in min",
+     "sortOrder": 70,
+     "values": [
+      "20"
+     ]
+    },
+    {
+     "name": "Zeitdauer bis automatisches Schalten in vernetzten Bereitschaftsbetrieb in min",
+     "sortOrder": 80,
+     "values": [
+      "20"
+     ]
+    },
+    {
+     "name": "Zeitdauer bis automatisches Schalten in Aus-Zustand in min",
+     "sortOrder": 90,
+     "values": [
+      "20"
+     ]
+    }
+   ],
+   "name": "Effizienz",
+   "sortOrder": 3900
+  },
+  {
+   "attributes": [
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Edelstahl-Garraum mit Leinenstruktur und PerfectClean",
+     "sortOrder": 30,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Grillheizkörper abklappbar",
+     "sortOrder": 100,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "CleanGlass Tür",
+     "sortOrder": 220,
+     "values": [
+      "TRUE"
+     ]
+    }
+   ],
+   "name": "Pflegekomfort",
+   "sortOrder": 4000
+  },
+  {
+   "attributes": [
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Gerätekühlsystem mit kühler Front",
+     "sortOrder": 10,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Sicherheitsausschaltung",
+     "sortOrder": 20,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Inbetriebnahmesperre",
+     "sortOrder": 30,
+     "values": [
+      "TRUE"
+     ]
+    }
+   ],
+   "name": "Sicherheit",
+   "sortOrder": 6100
+  },
+  {
+   "attributes": [
+    {
+     "name": "Garraumvolumen in l",
+     "sortOrder": 40,
+     "values": [
+      "43"
+     ]
+    },
+    {
+     "name": "Anzahl der Einschubebenen",
+     "sortOrder": 50,
+     "values": [
+      "3"
+     ]
+    },
+    {
+     "name": "Garraumbeleuchtung",
+     "sortOrder": 80,
+     "values": [
+      "1 LED-Spot"
+     ]
+    },
+    {
+     "name": "Temperaturen in °C",
+     "sortOrder": 115,
+     "values": [
+      "30–250"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Elektronisch gesteuerte Mikrowellenleistung",
+     "sortOrder": 190,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "lov_c_PP_116130_1",
+     "name": "Mikrowellenleistungsstufen in W",
+     "sortOrder": 200,
+     "values": [
+      "80 /150 /300 /450 /600 /850 /1000"
+     ]
+    },
+    {
+     "name": "Nischenmaße (B x H x T) in mm",
+     "sortOrder": 231,
+     "values": [
+      "560-568 x 450-452 x 550"
+     ]
+    },
+    {
+     "name": "Nischenbreite min. in mm",
+     "sortOrder": 239,
+     "values": [
+      "560"
+     ]
+    },
+    {
+     "name": "Nischenbreite max. in mm",
+     "sortOrder": 240,
+     "values": [
+      "568"
+     ]
+    },
+    {
+     "name": "Nischenhöhe min. in mm",
+     "sortOrder": 250,
+     "values": [
+      "450"
+     ]
+    },
+    {
+     "name": "Nischenhöhe max. in mm",
+     "sortOrder": 260,
+     "values": [
+      "452"
+     ]
+    },
+    {
+     "name": "Nischentiefe in mm",
+     "sortOrder": 270,
+     "values": [
+      "550"
+     ]
+    },
+    {
+     "name": "Gerätemaße (B x H x T) in mm",
+     "sortOrder": 275,
+     "values": [
+      "595 x 456 x 562"
+     ]
+    },
+    {
+     "name": "Gewicht in kg",
+     "sortOrder": 293,
+     "values": [
+      "36"
+     ]
+    },
+    {
+     "name": "Gesamtanschlusswert in kW",
+     "sortOrder": 330,
+     "values": [
+      "2.700"
+     ]
+    },
+    {
+     "name": "Spannung in V",
+     "sortOrder": 340,
+     "values": [
+      "220 - 240"
+     ]
+    },
+    {
+     "name": "Frequenz in Hz",
+     "sortOrder": 370,
+     "values": [
+      "50"
+     ]
+    },
+    {
+     "name": "Absicherung in A",
+     "sortOrder": 380,
+     "values": [
+      "16"
+     ]
+    },
+    {
+     "name": "Phasenanzahl",
+     "sortOrder": 390,
+     "values": [
+      "1"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Anschlusskabel mit Netzstecker",
+     "sortOrder": 410,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "name": "Länge der elektrischen Zuleitung in m",
+     "sortOrder": 420,
+     "values": [
+      "2"
+     ]
+    },
+    {
+     "name": "Leuchtmittel tauschen",
+     "sortOrder": 450,
+     "values": [
+      "Kundendienst"
+     ]
+    }
+   ],
+   "name": "Technische Daten",
+   "sortOrder": 6400
+  },
+  {
+   "attributes": [
+    {
+     "name": "Back- und Bratrost mit PerfectClean",
+     "sortOrder": 50,
+     "values": [
+      "1"
+     ]
+    },
+    {
+     "name": "Glasschale",
+     "sortOrder": 230,
+     "values": [
+      "1"
+     ]
+    }
+   ],
+   "name": "Mitgeliefertes Zubehör",
+   "sortOrder": 6600
+  },
+  {
+   "attributes": [
+    {
+     "featureValueCode": "lov_PD_102902_UKRAINISCH",
+     "name": "Verfügbare Displaysprachen durch MultiLingua",
+     "sortOrder": 10,
+     "values": [
+      "yкраїнська",
+      "pусский",
+      "čeština",
+      "türkçe",
+      "italiano",
+      "dansk",
+      "中文",
+      "ελληνιкά",
+      "norsk",
+      "hrvatski",
+      "nederlands",
+      "日本語",
+      "english",
+      "español",
+      "한국어",
+      "français",
+      "suomi",
+      "română",
+      "polski",
+      "slovenščina",
+      "srpski",
+      "magyar",
+      "svenska",
+      "bahasa malaysia",
+      "繁體中文",
+      "deutsch",
+      "العربية",
+      "português",
+      "slovenčina"
+     ]
+    }
+   ],
+   "name": "Verfügbare Displaysprachen",
+   "sortOrder": 6700
+  }
+ ],
+ "documentGroups": [
+  {
+   "code": "OPERATING_INSTRUCTIONS",
+   "documents": [
+    {
+     "description": "EU - Konformitätserklärung",
+     "media": {
+      "altText": "EU Konformitätserklärung",
+      "mimeType": "application/pdf",
+      "url": "https://media.miele.com/downloads/23/0e/00_70A8A51285B71FE1A3DF56AA6990230E.pdf"
+     },
+     "name": "PDF"
+    },
+    {
+     "description": "EU - Konformitätserklärung",
+     "media": {
+      "altText": "EU Konformitätserklärung",
+      "mimeType": "application/pdf",
+      "url": "https://media.miele.com/downloads/1a/26/00_7CED8D23BC481FE1A3FBF48C26191A26.pdf"
+     },
+     "name": "PDF"
+    },
+    {
+     "description": "Gebrauchsanweisung/Montageanweisung",
+     "media": {
+      "altText": "Gebrauchsanweisung/Montageanweisung",
+      "mimeType": "application/pdf",
+      "url": "https://media.miele.com/downloads/41/f8/02_C7F13838BBFE1FD0A6D2DC47085441F8.pdf"
+     },
+     "name": "PDF"
+    },
+    {
+     "description": "Produktblatt",
+     "media": {
+      "altText": "Produktdatenblatt",
+      "mimeType": "application/pdf",
+      "url": "https://media.miele.com/downloads/e-/de/FS_11104080_DED_DE-de-DE.pdf"
+     },
+     "name": "PDF"
+    },
+    {
+     "description": "Garantiebedingungen",
+     "media": {
+      "altText": "Garantiebedingungen",
+      "mimeType": "application/pdf",
+      "url": "https://media.miele.com/downloads/47/33/16_C7F1282806E91FD0A8D4A4AD14174733.pdf"
+     },
+     "name": "PDF"
+    }
+   ],
+   "name": "Gebrauchsanweisung & Montage",
+   "sortOrder": 1
+  },
+  {
+   "code": "CAD_DATA",
+   "documents": [
+    {
+     "description": "dwg",
+     "media": {
+      "altText": "3D Daten im Dateiformat DWG",
+      "mimeType": "application/zip",
+      "url": "https://media.miele.com/downloads/0c/32/07_96106EC61D151EDD82D9E59063D40C32.zip"
+     },
+     "name": "ZIP"
+    },
+    {
+     "description": "fbx",
+     "media": {
+      "altText": "3D Daten im Dateiformat FBX",
+      "mimeType": "application/zip",
+      "url": "https://media.miele.com/downloads/4c/32/07_96106EC61D151EDD82D9E590AC0A4C32.zip"
+     },
+     "name": "ZIP"
+    },
+    {
+     "description": "ifc",
+     "media": {
+      "altText": "3D Daten im Dateiformat IFC",
+      "mimeType": "application/zip",
+      "url": "https://media.miele.com/downloads/0c/32/07_96106EC61D151EDD82D9E590F9FC0C32.zip"
+     },
+     "name": "ZIP"
+    },
+    {
+     "description": "rfa",
+     "media": {
+      "altText": "3D Daten im Dateiformat RFA",
+      "mimeType": "application/zip",
+      "url": "https://media.miele.com/downloads/4c/32/07_96106EC61D151EDD82D9E59146DD4C32.zip"
+     },
+     "name": "ZIP"
+    },
+    {
+     "description": "rvt",
+     "media": {
+      "altText": "3D Daten im Dateiformat RVT",
+      "mimeType": "application/zip",
+      "url": "https://media.miele.com/downloads/cc/32/07_96106EC61D151EDD82D9E591BA9DCC32.zip"
+     },
+     "name": "ZIP"
+    }
+   ],
+   "name": "CAD/BIM-Daten",
+   "sortOrder": 3
+  },
+  {
+   "code": "INSTALLATION_DRAWINGS",
+   "documents": [
+    {
+     "description": "22 mm - Glas, 23,3 mm - Edelstahl",
+     "descriptionTitle": "Seitenansicht H7000 BM, Skizze",
+     "media": {
+      "altText": "Einbauskizze",
+      "mimeType": "application/postscript",
+      "url": "https://media.miele.com/dam/9f95e670-24dc-4c2e-816d-b3c2017063fd/20000153708_HighresDigitalRGB.png"
+     },
+     "name": "POSTSCRIPT"
+    },
+    {
+     "description": "Installationszeichnungen",
+     "descriptionTitle": "Einbau H7000 BM, Skizze",
+     "media": {
+      "altText": "Einbauskizze",
+      "mimeType": "application/postscript",
+      "url": "https://media.miele.com/dam/3d650471-647f-4709-87b4-b3c2017051cf/20000153716_HighresDigitalRGB.png"
+     },
+     "name": "POSTSCRIPT"
+    },
+    {
+     "description": "Wenn der Backofen unter einem Kochfeld eingebaut werden soll, beachten Sie die Hinweise zum Einbau des Kochfeldes sowie die Einbauhöhe des Kochfeldes.",
+     "descriptionTitle": "Einbau H7000 BM Unterbau, Skizze",
+     "media": {
+      "altText": "Einbauskizze",
+      "mimeType": "application/postscript",
+      "url": "https://media.miele.com/dam/8a14bac3-6e40-4a4c-8b94-b3c2017048e0/20000153720_HighresDigitalRGB.png"
+     },
+     "name": "POSTSCRIPT"
+    },
+    {
+     "description": "1) Netzanschlussleitung, L=2000 mm, 2) In diesem Bereich kein Anschluss, 3) Lüftungsausschnitt min. 150 cm²",
+     "descriptionTitle": "Installation H7000 BM, Skizze",
+     "media": {
+      "altText": "Einbauskizze",
+      "mimeType": "application/postscript",
+      "url": "https://media.miele.com/dam/391c173d-f417-4b67-9888-b3c201703ff6/20000153724_HighresDigitalRGB.png"
+     },
+     "name": "POSTSCRIPT"
+    },
+    {
+     "description": "1) 400 mm, 2) 360 mm, 3) 47 mm, 4) 27 mm, 5) 32.5 mm",
+     "descriptionTitle": "H7000 Griff, Glas, Skizze",
+     "media": {
+      "altText": "Einbauskizze",
+      "mimeType": "application/postscript",
+      "url": "https://media.miele.com/dam/7ce0f0f6-54a3-420e-b7f0-b486010810e4/20000153737_HighresDigitalRGB.png"
+     },
+     "name": "POSTSCRIPT"
+    },
+    {
+     "description": "Installationszeichnungen",
+     "descriptionTitle": "Einbau H7000 BM XL, Skizze",
+     "media": {
+      "altText": "Einbauskizze",
+      "mimeType": "application/postscript",
+      "url": "https://media.miele.com/dam/6beb667d-f692-4b83-b270-b3c2017017ad/20000153741_HighresDigitalRGB.png"
+     },
+     "name": "POSTSCRIPT"
+    },
+    {
+     "description": "22 mm - Glas, 23,3 mm - Edelstahl",
+     "descriptionTitle": "Seitenansicht H7000 BM Unterbau, Skizze",
+     "media": {
+      "altText": "Einbauskizze",
+      "mimeType": "application/postscript",
+      "url": "https://media.miele.com/dam/70bad148-0feb-4dd1-926b-b3c3006e1d08/20000169779_HighresDigitalRGB.png"
+     },
+     "name": "POSTSCRIPT"
+    },
+    {
+     "description": "22 mm - Glas, 23,3 mm - Edelstahl",
+     "descriptionTitle": "Seitenansicht Kombi BM XL, Skizze",
+     "media": {
+      "altText": "Einbauskizze",
+      "mimeType": "application/postscript",
+      "url": "https://media.miele.com/dam/e43567f4-bf3b-4f47-afcb-b3c3007995f1/20000171086_HighresDigitalRGB.png"
+     },
+     "name": "POSTSCRIPT"
+    }
+   ],
+   "name": "Installationszeichnungen",
+   "sortOrder": 8
+  }
+ ],
+ "primaryProductImage": {
+  "altText": "Sachaufnahme",
+  "format": "cart",
+  "url": "https://media.miele.com/dam/edf619c9-de33-4429-a64f-b3bd00dfd02a/20000150260_HighresDigitalRGB.png"
+ },
+ "images": [
+  {
+   "akamaiImageType": "PRIMARY",
+   "altText": "Sachaufnahme",
+   "format": "cart",
+   "galleryIndex": 0,
+   "imageType": "PRIMARY",
+   "url": "https://media.miele.com/dam/edf619c9-de33-4429-a64f-b3bd00dfd02a/20000150260_HighresDigitalRGB.png"
+  },
+  {
+   "akamaiImageType": "FACIA",
+   "altText": "Abbildung der Blende",
+   "format": "cart",
+   "galleryIndex": 0,
+   "imageType": "GALLERY",
+   "url": "https://media.miele.com/dam/30e20884-cb53-4ea0-a1c8-b3bd00e659aa/20000150989_HighresDigitalRGB.png"
+  }
+ ],
+ "connectedAppliance": true,
+ "productTypeCode": "APPLIANCE",
+ "appliance": true,
+ "marketingClass": "GOLD",
+ "productSlug": "kompakt-backofen-mit-mikrowelle-h-7240-bm-obsidianschwarz"
+}

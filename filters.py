@@ -111,7 +111,7 @@ FILTER_SCHEMA: dict[str, list[dict]] = {
     "cooking:*": [
         _g("cook_type", "유형", "Appliance type", major_only=True, values=_vals(
             ("microwave", "전자레인지"), ("sco", "SCO (스피드쿡 오븐)"), ("otr", "OTR 오버더레인지"), ("gas_oven", "가스오븐"),
-            ("electric_oven", "전기오븐"), ("induction", "인덕션"), ("radiant", "라디언트"))),
+            ("gas_cooktop", "가스 쿡탑"), ("electric_oven", "전기오븐"), ("induction", "인덕션"), ("radiant", "라디언트"))),
         _g("fuel", "열원", "Fuel", values=_vals(("gas", "가스"), ("electric", "전기"), ("induction", "인덕션"),
                                                ("dual_fuel", "듀얼퓨얼"))),
         _g("width_class", "폭(width)", "Width", unit="in", display_units=["in", "mm"], bucketed=True,
@@ -143,7 +143,9 @@ FILTER_SCHEMA: dict[str, list[dict]] = {
 }
 FILTER_EXCLUDE: dict[str, set[str]] = {  # groups that make no sense for a sub group
     "microwave": {"burners", "fuel", "oven_capacity", "width_class"},
-    "otr": {"burners", "oven_capacity"},
+    "otr": {"burners", "fuel", "oven_capacity"},
+    "electric_oven": {"burners", "fuel"},
+    "gas_cooktop": {"fuel", "oven_capacity"},  # fuel is fixed (gas); a cooktop has burners and a width but no oven
     "induction": {"oven_capacity", "fuel"},
     "radiant": {"oven_capacity", "fuel"},
     "sco": {"burners", "fuel"},
@@ -196,13 +198,13 @@ _ALL_DEFS["region"] = [{"key": "region", "type": "multi", "values": _vals(*[(k, 
 _NUM = r"(\d{1,2}(?:\.\d+)?)"
 _CUFT_RE = re.compile(_NUM + r"\s*(?:cu\.?\s*ft\.?|cubic\s*f(?:ee|oo)t)", re.I)
 _L_RE = re.compile(r"(?<![A-Za-z0-9])(\d{3,4})\s*(?:L|리터)(?![A-Za-z])")
-_WIDTH_RE = re.compile(r"(?<![\d.])(\d{2}(?:\.\d)?)\s*(?:-?\s*inch(?:es)?\b|\"|in\b)", re.I)
+_WIDTH_RE = re.compile(r"(?<![\d.])(\d{2}(?:\.\d)?)\s*(?:-?\s*inch(?:es)?\b|\"|''|″|in\b)", re.I)
 _BURNER_RE = re.compile(r"(\d)\s*-?\s*burner", re.I)
 _WATT_RE = re.compile(r"(?<![\d,])(\d,?\d{3}|\d{3})\s*(?:watts?|w)\b", re.I)
 
 _SUB_DOOR = {"french_door": "french_door", "side_by_side": "side_by_side", "top_freezer": "top_freezer",
              "bottom_freezer": "bottom_freezer", "built_in": "built_in_panel"}
-_SUB_FUEL = {"gas_oven": "gas", "electric_oven": "electric", "induction": "induction", "radiant": "electric"}
+_SUB_FUEL = {"gas_oven": "gas", "gas_cooktop": "gas", "electric_oven": "electric", "induction": "induction", "radiant": "electric"}
 _FINISH = (("black_stainless", r"black\s+stainless"), ("stainless", r"stainless"), ("panel_ready", r"panel[\s-]?ready"),
            ("slate", r"slate"), ("white", r"\bwhite\b"), ("black", r"\bblack\b"))
 _DOORS = (("four_door", r"\b(?:4|four)[\s-]*door"), ("french_door", r"french[\s-]*door"),

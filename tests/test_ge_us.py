@@ -27,7 +27,7 @@ def _rec(name):
 def test_supported_subcategories_are_catalog_keys():
     assert ge.SUPPORTED_SUBCATEGORIES <= set(catalog.sub_keys())
     assert "built_in" not in ge.SUPPORTED_SUBCATEGORIES and "scr" not in ge.SUPPORTED_SUBCATEGORIES
-    assert {"sco", "gas_oven", "radiant", "induction", "electric_oven", "microwave", "otr"} <= ge.SUPPORTED_SUBCATEGORIES
+    assert {"sco", "gas_oven", "gas_cooktop", "radiant", "induction", "electric_oven", "microwave", "otr"} <= ge.SUPPORTED_SUBCATEGORIES
     for sub, (major, _) in ge.SUB_SOURCES.items():
         assert catalog.major_of(sub) == major
 
@@ -408,13 +408,14 @@ def test_cooking_overlap_one_sub_per_model():
     assert sorted(got.values(), key=str).count("radiant") >= 3  # + the electric cooktop
     # discover's filter (parse_search + classify == sub) puts every classified model under exactly one sub key
     by_sub = {}
-    for sub in ("sco", "gas_oven", "radiant", "induction", "electric_oven", "otr", "microwave"):
+    for sub in ("sco", "gas_oven", "gas_cooktop", "radiant", "induction", "electric_oven", "otr", "microwave"):
         by_sub[sub] = {c.model_number for c, it in ge.parse_search(data, sub)
                        if ge._classify(ge._item_categories(it), dict(it, name=unescape(it["name"]))) == sub}
     flat = [m for v in by_sub.values() for m in v]
     assert len(flat) == len(set(flat)) and set(flat) == {k for k, v in got.items() if v}
     gas_cooktop = [i for i in data["results"] if "Gas Cooktops" in " ".join(i["categories_hierarchy"])][0]
-    assert got[gas_cooktop["sku"]] is None  # a gas cooktop is no oven: unclassified
+    assert got[gas_cooktop["sku"]] == "gas_cooktop"  # oven-less gas cooktop (not an oven, not electric)
+    assert gas_cooktop["sku"] in by_sub["gas_cooktop"]
     assert ge.infer_subcategory({"category": ["GE Appliances/Kitchen/Wall Ovens/Microwave Oven Combination",
                                               "GE Appliances/Kitchen/Wall Ovens/Double Wall Ovens"]},
                                 {"name": "Combination Double Wall Oven"}) == "sco"

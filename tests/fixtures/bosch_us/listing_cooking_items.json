@@ -267,5 +267,72 @@
 "amount": 1249,
 "currency": "USD"
 }
+},
+{
+"productCode": "NGM5059UC",
+"urlPath": "/product/cooking-baking/gas-cooktops/gas-30-inch-cooktops/NGM5059UC",
+"productName": [
+"500 Series",
+"Gas Cooktop",
+"30''",
+"Stainless steel",
+""
+],
+"price": {
+"kind": "SHOP_PRICE",
+"vatIncluded": false,
+"amount": 1299,
+"currency": "USD"
+}
+},
+{
+"productCode": "NGM5453UC",
+"urlPath": "/product/cooking-baking/gas-cooktops/gas-24-inch-cooktops/NGM5453UC",
+"productName": [
+"500 Series",
+"Gas Cooktop",
+"Stainless steel",
+""
+],
+"price": {
+"kind": "SHOP_PRICE",
+"vatIncluded": false,
+"amount": 1149,
+"currency": "USD"
+}
+},
+{
+"productCode": "RGM8658UC",
+"urlPath": "/product/cooking-baking/gas-cooktops/gas-36-inch-cooktops/RGM8658UC",
+"productName": [
+"800 Series",
+"Gas Rangetop",
+"36 \"",
+"Stainless steel",
+""
+],
+"price": {
+"kind": "SHOP_PRICE",
+"vatIncluded": false,
+"amount": 4049,
+"currency": "USD"
+}
+},
+{
+"productCode": "NGM8659UC",
+"urlPath": "/product/cooking-baking/gas-cooktops/gas-36-inch-cooktops/NGM8659UC",
+"productName": [
+"800 Series",
+"Gas Cooktop",
+"36''",
+"Stainless steel",
+""
+],
+"price": {
+"kind": "SHOP_PRICE",
+"vatIncluded": false,
+"amount": 1849,
+"currency": "USD"
+}
 }
 ]

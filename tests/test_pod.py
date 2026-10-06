@@ -221,6 +221,10 @@ def test_washer_and_cooking_taxonomies():
                     "Sabbath mode", "21,000 BTU power boil burner"], "cooking")
     keys = {i.taxonomy_key for i in pod.normalize_pod(c, llm_fn=_no_llm, cache_path=_tmp())}
     assert {"air_fry", "convection", "self_clean", "griddle", "temp_probe", "sabbath_mode", "boost_burner"} <= keys
+    g = _cat("LG", ["22K BTU dual burner", "Auto re-ignition", "Center burner", "Cast iron continuous grates",
+                    "Wok grate"], "cooking")
+    keys = {i.taxonomy_key for i in pod.normalize_pod(g, llm_fn=_no_llm, cache_path=_tmp())}
+    assert {"boost_burner", "gas_burner", "griddle", "continuous_grates"} <= keys  # gas cooktop items
     s = _cat("Samsung", ["Microwave power 900W", "Speed cook combi modes", "Light wave oven", "Convection"], "cooking")
     keys = {i.taxonomy_key for i in pod.normalize_pod(s, llm_fn=_no_llm, cache_path=_tmp())}
     assert {"microwave_power", "speed_cook", "convection"} <= keys

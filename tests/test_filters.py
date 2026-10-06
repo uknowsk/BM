@@ -35,7 +35,14 @@ def test_schema_levels_and_lookup():
     sco = [g["key"] for g in filters.groups_for("sco")]
     assert {"oven_capacity", "microwave_power", "convection", "smart", "width_class"} <= set(sco)
     assert "burners" not in sco and "fuel" not in sco and "microwave_power" not in [g["key"] for g in filters.groups_for("gas_oven")]
-    assert "sco" in [v["key"] for g in filters.groups_for("cooking") if g["key"] == "cook_type" for v in g["values"]]
+    for sub in ("electric_oven", "microwave", "otr", "sco"):  # no burners and a fixed heat source on these
+        keys = [g["key"] for g in filters.groups_for(sub)]
+        assert "burners" not in keys and "fuel" not in keys, sub
+    gc = [g["key"] for g in filters.groups_for("gas_cooktop")]  # fuel is fixed (gas); burners/width stay, no oven
+    assert "burners" in gc and "width_class" in gc and "fuel" not in gc and "oven_capacity" not in gc
+    assert {"burners", "fuel"} <= {g["key"] for g in filters.groups_for("gas_oven")}  # mixed-fuel groups keep them
+    cook_types = [v["key"] for g in filters.groups_for("cooking") if g["key"] == "cook_type" for v in g["values"]]
+    assert "sco" in cook_types and "gas_cooktop" in cook_types
     assert "scr" not in [v["key"] for g in filters.groups_for("cooking") if g["key"] == "cook_type" for v in g["values"]]
     try:
         filters.groups_for("scr")
@@ -67,6 +74,15 @@ def test_name_facts_extraction():
     assert filters.name_facts("Speed Oven 1000W Microwave Convection")["microwave_watts"] == 1000
     assert filters.name_facts("Combi 1,100 watts Speed Cook")["microwave_watts"] == 1100
     assert "microwave_watts" not in filters.name_facts("Gas Range 30-inch")
+
+
+def test_gas_cooktop_facts_fixed_gas_and_burners_from_name():
+    c = cand('Gas Cooktop 36" 5-Burner', brand="LG", sub="gas_cooktop", major="cooking")
+    f = filters.facts(c)
+    assert f["fuel"] == "gas" and f["cook_type"] == "gas_cooktop" and f["burners"] == 5 and f["width_in"] == 36
+    out = filters.filter_candidates([c, cand("Electric Cooktop 30-inch", sub="radiant", major="cooking")],
+                                    {"cook_type": ["gas_cooktop"], "burners": ["5"]})
+    assert [x.name for x in out] == ['Gas Cooktop 36" 5-Burner']
 
 
 def test_enrich_marks_source():

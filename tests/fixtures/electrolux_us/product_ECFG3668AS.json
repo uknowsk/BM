@@ -1,0 +1,1073 @@
+{
+ "code": "ECFG3668AS",
+ "name": "36\" Front Control Freestanding Gas Range",
+ "color": "Stainless Steel",
+ "price": {
+  "bestValue": false,
+  "currencyIso": "USD",
+  "formattedValue": "$4,899.00",
+  "priceType": "BUY",
+  "value": 4899
+ },
+ "categories": [
+  {
+   "code": "M_FoodPreparation_Ranges_Gas",
+   "name": "Gas Ranges"
+  },
+  {
+   "code": "Promo_ELX_FlashSale",
+   "name": "Flash Sale"
+  }
+ ],
+ "classifications": [
+  {
+   "code": "HDR_Controls",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Controls.api_2cont_sabbath",
+     "comparable": true,
+     "description": "PL Product,AHAM,Key,PCT",
+     "featureValues": [
+      {
+       "value": "No"
+      }
+     ],
+     "name": "Sabbath Mode",
+     "range": false
+    }
+   ],
+   "name": "Controls"
+  },
+  {
+   "code": "HDR_Cooking_Controls",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_bake",
+     "comparable": true,
+     "description": "Basics,PL Product,PCT",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Bake",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_breadproof",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Bread Proof",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_broil",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Broil",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_childlockcook",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Child Lock",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_convbake",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Convection Bake",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_convroast",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Convection Roast",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_cooktime",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Cook Time",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_delaystart",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Delay Start",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_keepwarm",
+     "comparable": true,
+     "description": "Basics,PL Product,PCT",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Keep Warm",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_kitchentimer",
+     "comparable": true,
+     "description": "Basics,PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Kitchen Timer",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_probe",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Probe",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_selfclean",
+     "comparable": true,
+     "description": "Basics,PL Product,AHAM,PCT",
+     "featureValues": [
+      {
+       "value": "No"
+      }
+     ],
+     "name": "Self Clean",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_tempdisplay",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Temperature Display",
+     "range": false
+    }
+   ],
+   "name": "Cooking Controls"
+  },
+  {
+   "code": "HDR_CertificationsApprovals",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_CertificationsApprovals.api_cert_adacompliant",
+     "comparable": true,
+     "description": "PL Product,AHAM",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "ADA Compliant",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_CertificationsApprovals.api_cert_csacertified",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "CSA Listed",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_CertificationsApprovals.api_2ca_rohs",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "RoHS",
+     "range": false
+    }
+   ],
+   "name": "Certifications and Approvals"
+  },
+  {
+   "code": "HDR_Cooktop",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooktop.api_2cooktop_surfacetype",
+     "comparable": true,
+     "description": "Basics,PL Product,PCT",
+     "featureValues": [
+      {
+       "value": "Gas"
+      }
+     ],
+     "name": "Cooking Surface Type",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooktop.api_2cooktop_gratematerial",
+     "comparable": true,
+     "description": "Basics,PL Product,PCT",
+     "featureValues": [
+      {
+       "value": "Cast Iron"
+      }
+     ],
+     "name": "Grate Material",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooktop.api_2cooktop_gratequantity",
+     "comparable": true,
+     "description": "Basics,PL Product,PCT",
+     "featureValues": [
+      {
+       "value": "3"
+      }
+     ],
+     "name": "Grate Quantity",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooktop.api_2cooktop_gratestyle",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Continuous"
+      }
+     ],
+     "name": "Grate Style",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooktop.api_2cooktop_sealedburners",
+     "comparable": true,
+     "description": "PL Product,AHAM",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Sealed Burners",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooktop.api_2cooktop_totalburners",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "6"
+      }
+     ],
+     "name": "Total Number of Burners",
+     "range": false
+    }
+   ],
+   "name": "Cooktop"
+  },
+  {
+   "code": "HDR_Cooktop_Performance",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooktop_Performance.api_2cooktopperf_rfrontbtudual",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "18,000 / 750 BTU Dual"
+      }
+     ],
+     "name": "Right Front Element Burner",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooktop_Performance.api_2cooktopperf_rrearbtudual",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "12,000 / 750 BTU Dual"
+      }
+     ],
+     "name": "Right Rear Element Burner",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooktop_Performance.api_2cooktopperf_lfrontbtudual",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "18,000 / 750 BTU Dual"
+      }
+     ],
+     "name": "Left Front Element Burner",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooktop_Performance.api_2cooktopperf_lrearbtudual",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "12,000 / 750 BTU Dual"
+      }
+     ],
+     "name": "Left Rear Element Burner",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooktop_Performance.api_2cooktopperf_cenfrontbtudual",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "12,000 / 750 BTU Dual"
+      }
+     ],
+     "name": "Center Front Element Burner",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooktop_Performance.api_2cooktopperf_cenrearbtucenter",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "12,000 / 750 BTU Dual"
+      }
+     ],
+     "name": "Center Rear Element Burner",
+     "range": false
+    }
+   ],
+   "name": "Cooktop Performance"
+  },
+  {
+   "code": "HDR_DimensionsandVolume",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_customerheight",
+     "comparable": true,
+     "description": "PL Product,AHAM,Height,PCT",
+     "featureValues": [
+      {
+       "value": "35 9/16\""
+      }
+     ],
+     "name": "Height",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_customerwidth",
+     "comparable": true,
+     "description": "PL Product,AHAM,Width,PCT",
+     "featureValues": [
+      {
+       "value": "35 15/16\""
+      }
+     ],
+     "name": "Width",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_customerdepth",
+     "comparable": true,
+     "description": "PL Product,AHAM,Depth,PCT",
+     "featureValues": [
+      {
+       "value": "25 7/8\""
+      }
+     ],
+     "name": "Depth",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_minheight",
+     "comparable": true,
+     "description": "Basics,PL Product",
+     "featureValues": [
+      {
+       "value": "35 9/16\""
+      }
+     ],
+     "name": "Minimum Height",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_maxheight",
+     "comparable": true,
+     "description": "Basics,PL Product",
+     "featureValues": [
+      {
+       "value": "36 9/16\""
+      }
+     ],
+     "name": "Maximum Height",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_width",
+     "comparable": true,
+     "description": "Basics,PL Product,Key",
+     "featureValues": [
+      {
+       "value": "35 15/16\""
+      }
+     ],
+     "name": "Width",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_depth",
+     "comparable": true,
+     "description": "Basics,PL Product,Key",
+     "featureValues": [
+      {
+       "value": "25 7/8\""
+      }
+     ],
+     "name": "Depth",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_depth90",
+     "comparable": true,
+     "description": "Basics,PL Product,Key",
+     "featureValues": [
+      {
+       "value": "43 15/16\""
+      }
+     ],
+     "name": "Depth With Door 90° Open",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_ovenintheight",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "15 1/16\""
+      }
+     ],
+     "name": "Oven Interior Height",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_ovenintwidth",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "28 7/16\""
+      }
+     ],
+     "name": "Oven Interior Width",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_ovenintdepth",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "17 1/2\""
+      }
+     ],
+     "name": "Oven Interior Depth",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_ovencap",
+     "comparable": true,
+     "description": "Basics,PL Product,PLP,PCT",
+     "featureValues": [
+      {
+       "value": "4.4 Cu. Ft."
+      }
+     ],
+     "name": "Oven Capacity",
+     "range": false
+    }
+   ],
+   "name": "Dimensions and Volume"
+  },
+  {
+   "code": "HDR_ElectricalSpecifications",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_ElectricalSpecifications.api_2es_amps",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "9.2 Amps"
+      }
+     ],
+     "name": "Amps @ 120 Volts",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_ElectricalSpecifications.api_2es_connectedload",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "1.1 kW"
+      }
+     ],
+     "name": "Connected Load @ 120V",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_ElectricalSpecifications.api_2es_mincir",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "15 Amps"
+      }
+     ],
+     "name": "Minimum Circuit Required",
+     "range": false
+    }
+   ],
+   "name": "Electrical Specifications"
+  },
+  {
+   "code": "HDR_InstallationType",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_InstallationType.api_2install_levellegs",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Adjustable Leveling Legs",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_InstallationType.api_2es_cordincludedtype",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "3-Prong Plug"
+      }
+     ],
+     "name": "Included Power Cord Type",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_InstallationType.api_2install_lpconvkit",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "LP Conversion Kit Included",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_InstallationType.api_2install_plinth",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Plinth",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_InstallationType.api_2es_cordincluded",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Power Cord Included",
+     "range": false
+    }
+   ],
+   "name": "Installation"
+  },
+  {
+   "code": "HDR_GeneralSpecifications",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_GeneralSpecifications.api_2gen_prodweight",
+     "comparable": true,
+     "description": "PL Product,AHAM",
+     "featureValues": [
+      {
+       "value": "245 lbs"
+      }
+     ],
+     "name": "Product Weight",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_GeneralSpecifications.api_2gen_warlabor",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "1 Year"
+      }
+     ],
+     "name": "Warranty - Labor",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_GeneralSpecifications.api_2gen_warparts",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "1 Year"
+      }
+     ],
+     "name": "Warranty - Parts",
+     "range": false
+    }
+   ],
+   "name": "General Specifications"
+  },
+  {
+   "code": "HDR_Oven_1",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Oven_1.api_2oven_bakebtu",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "17000 BTU"
+      }
+     ],
+     "name": "Bake Element",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Oven_1.api_2oven_baketype",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Hidden"
+      }
+     ],
+     "name": "Bake Element Type",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Oven_1.api_2oven_broilbtu",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "14000 BTU"
+      }
+     ],
+     "name": "Broil Element",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Oven_1.api_2oven_convection",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Convection",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Oven_1.api_2oven_convectionwatts",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "1000 Watts"
+      }
+     ],
+     "name": "Convection Element",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Oven_1.api_2oven_convectiontype",
+     "comparable": true,
+     "description": "Basics,PL Product,PCT",
+     "featureValues": [
+      {
+       "value": "True"
+      }
+     ],
+     "name": "Convection Type",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Oven_1.api_2oven_convectionfans",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "1"
+      }
+     ],
+     "name": "Number of Convection Fans",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Oven_1.api_2oven_numrackpos",
+     "comparable": true,
+     "description": "Basics,PL Product",
+     "featureValues": [
+      {
+       "value": "5"
+      }
+     ],
+     "name": "Number of Rack Positions",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Oven_1.api_2oven_intcolor",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Gray"
+      }
+     ],
+     "name": "Oven Interior Color",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Oven_1.api_2oven_lightquant",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "2"
+      }
+     ],
+     "name": "Oven Light Quantity",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Oven_1.api_2oven_lighttype",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Halogen"
+      }
+     ],
+     "name": "Oven Light Type",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Oven_1.api_2oven_lightwatts",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "40 Watts"
+      }
+     ],
+     "name": "Oven Light Watts",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Oven_1.api_2oven_rackpostype",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Ladder"
+      }
+     ],
+     "name": "Rack Position Type",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Oven_1.api_2oven_rack1",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Flat"
+      }
+     ],
+     "name": "Rack Type 1",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Oven_1.api_2oven_numrack1",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "2"
+      }
+     ],
+     "name": "Rack Type 1 Quantity",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Oven_1.api_2oven_rack2",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Glide"
+      }
+     ],
+     "name": "Rack Type 2",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Oven_1.api_2oven_numrack2",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "1"
+      }
+     ],
+     "name": "Rack Type 2 Quantity",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Oven_1.api_2oven_windowtype",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Extra Large Visual"
+      }
+     ],
+     "name": "Window Type",
+     "range": false
+    }
+   ],
+   "name": "Oven"
+  },
+  {
+   "code": "HDR_Display",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Display.api_2dis_lightcolor",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "White"
+      }
+     ],
+     "name": "Display Light Color",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Display.api_2dis_type",
+     "comparable": true,
+     "description": "Basics,PL Product,AHAM,PCT",
+     "featureValues": [
+      {
+       "value": "LED"
+      }
+     ],
+     "name": "Display Type",
+     "range": false
+    }
+   ],
+   "name": "Display"
+  }
+ ],
+ "plpImage": "https://frigidaire.bynder.com/transform/1d3c817c-f176-4342-a049-9612f9cbf7b6/ECFG3668AS-HOV-psd",
+ "categoryUrl": "/kitchen/ranges/gas-ranges",
+ "baseProduct": "ECFG3668A",
+ "url": "/c//p/ECFG3668AS",
+ "msrpUSD": 6299,
+ "images": [
+  {
+   "altText": "",
+   "code": "ECFG3668AS_457859",
+   "description": "Product - Dimensions",
+   "displayOrder": "5",
+   "imageType": "GALLERY",
+   "url": "https://frigidaire.bynder.com/transform/d0519d3f-1036-49c8-bdaf-7b8de6b2161e/ECFG3668AS-DIM-psd"
+  },
+  {
+   "altText": "",
+   "code": "ECFG3668AS_458248",
+   "description": "Product - Open / Loaded",
+   "displayOrder": "20",
+   "imageType": "GALLERY",
+   "url": "https://frigidaire.bynder.com/transform/d41892a8-ecb1-4ce7-8f24-53f650dc8c21/ECFG3668AS-OL-psd"
+  },
+  {
+   "altText": "",
+   "code": "ECFG3668AS_459399",
+   "description": "Product - Top",
+   "displayOrder": "25",
+   "imageType": "GALLERY",
+   "url": "https://frigidaire.bynder.com/transform/00a82199-02d2-4b99-bf9a-7515904ad613/ECFG3668AS-OT-psd"
+  }
+ ],
+ "ownerManuals": [
+  {
+   "altText": "Right to Repair",
+   "downloadUrl": "https://frigidaire.bynder.com/asset/0b8539fe-9136-4c1b-a700-a57044e492c9/Right_To_Repair_Electrolux_en-pdf.pdf",
+   "language": "en",
+   "mime": "application/pdf"
+  },
+  {
+   "altText": "Droit à la réparation",
+   "downloadUrl": "https://frigidaire.bynder.com/asset/65c52bb5-16a1-476e-b188-5b215bcccd99/Right_To_Repair_Electrolux_fr-pdf.pdf",
+   "language": "fr",
+   "mime": "application/pdf"
+  },
+  {
+   "altText": "Product Specifications Sheet",
+   "downloadUrl": "https://frigidaire.bynder.com/asset/7ee7d0ca-358e-4b8f-9dc7-36cfaa49a0f8/ECFG3668A_EN-pdf.pdf",
+   "language": "en",
+   "mime": "application/pdf"
+  },
+  {
+   "altText": "Feuille de spécifications du produit",
+   "downloadUrl": "https://frigidaire.bynder.com/asset/a1314d31-d0cc-4dc2-91e0-b1149aad89a5/ECFG3668A_FR-pdf.pdf",
+   "language": "fr",
+   "mime": "application/pdf"
+  },
+  {
+   "altText": "Installation Instructions",
+   "downloadUrl": "https://frigidaire.bynder.com/asset/96652dc1-95fb-4f55-aafb-e4c7db273dd6/914780110-pdf.pdf",
+   "language": "en,fr,sp",
+   "mime": "application/pdf"
+  },
+  {
+   "altText": "Guía de inicio rápido",
+   "downloadUrl": "https://frigidaire.bynder.com/asset/16bf4273-bcc1-4830-bc29-d9213561773f/913531592-pdf.pdf",
+   "language": "sp",
+   "mime": "application/pdf"
+  },
+  {
+   "altText": "Quick Start Guide",
+   "downloadUrl": "https://frigidaire.bynder.com/asset/1b19b05d-2b99-431c-baed-6c7e19088ac1/913531594-pdf.pdf",
+   "language": "en",
+   "mime": "application/pdf"
+  },
+  {
+   "altText": "Guide de démarrage rapide",
+   "downloadUrl": "https://frigidaire.bynder.com/asset/d23f8a63-0c5e-4d11-b234-949764e5a7dd/913531593-pdf.pdf",
+   "language": "fr",
+   "mime": "application/pdf"
+  },
+  {
+   "altText": "Complete Owner's Guide",
+   "downloadUrl": "https://frigidaire.bynder.com/asset/2d26c2b5-f8d1-4451-baf4-b9d9317292e7/914779989_EN-pdf.pdf",
+   "language": "en",
+   "mime": "application/pdf"
+  },
+  {
+   "altText": "Guide d'utilisation complet",
+   "downloadUrl": "https://frigidaire.bynder.com/asset/618c175d-b6c1-4673-9e48-c9b30a7e139d/914779989_FR-pdf.pdf",
+   "language": "fr",
+   "mime": "application/pdf"
+  },
+  {
+   "altText": "Propietario completa Guía",
+   "downloadUrl": "https://frigidaire.bynder.com/asset/5df10af8-cf82-41c2-b40f-a7ceb441d569/914779989_SP-pdf.pdf",
+   "language": "sp",
+   "mime": "application/pdf"
+  }
+ ],
+ "productFeatures": [
+  {
+   "title": "True Convection"
+  },
+  {
+   "title": "Two Brass Power Burners"
+  },
+  {
+   "title": "Six Flexible Dual Burners"
+  },
+  {
+   "title": "Continuous Grates"
+  },
+  {
+   "title": "Temperature Probe"
+  },
+  {
+   "title": "Sleek Design"
+  }
+ ]
+}

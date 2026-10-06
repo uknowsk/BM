@@ -91,7 +91,7 @@ const S = {
   selBrands: new Set(), selMajors: new Set(), selSubs: new Set(), bandMode: 'auto', browser: 'auto',
   result: null, groups: [], notes: [], searched: [], picks: new Map(), filter: '', ctl: null, jobId: null, running: false,
   /* v2 shell: regionList [{key,label_ko,enabled,note,brands}], regions = selected region keys, hasRegions = /api/regions exists */
-  v2: true, maxSel: 12, regionList: [], regions: new Set(['na']), hasRegions: false, hasFilters: false,
+  v2: true, maxSel: 12, maxCombos: 120, brandQ: '', regionList: [], regions: new Set(['na']), hasRegions: false, hasFilters: false,
   byUrl: new Map(), fgroups: [], fsel: new Map(), funk: new Set(), searchKey: '', openMajor: null,
 };
 const keyOf = (x) => (typeof x === 'string' ? x : x && (x.key || x.subcategory || x.id));
@@ -135,7 +135,8 @@ function showStage(name, scroll = true) {
 /* ---------- data normalisation ---------- */
 function loadCatalog(brands, cats) {
   S.legacy = false;
-  S.brands = brands.map((b) => ({ name: b.name, enabled: !!b.enabled, note: b.note || '', cats: Array.isArray(b.categories) ? new Set(b.categories.map(keyOf)) : null }));
+  S.brands = brands.map((b) => ({ name: b.name, enabled: !!b.enabled, note: b.note || '', cats: Array.isArray(b.categories) ? new Set(b.categories.map(keyOf)) : null,
+    group: b.group || '', countries: Array.isArray(b.countries) ? b.countries : [] }));
   S.cats = cats.map((c) => {
     let kids = (c.children || c.subcategories || []).map((k) => ({ key: keyOf(k), label_ko: typeof k === 'string' ? k : (k.label_ko || k.label || keyOf(k)) }));
     if (!kids.length) { S.legacy = true; kids = [{ key: c.key, label_ko: c.label_ko }]; }   // older server: the major itself is the only "sub-category"
@@ -267,6 +268,12 @@ function plan() {
   brands.forEach((b) => { const miss = subs.filter((s) => !supports(b, s)); if (miss.length) lines.push(`${b.name}: ${miss.map((s) => (S.subs.get(s) || {}).label_ko || s).join(', ')} 미지원 — 이 조합은 건너뜁니다.`); });
   return { subs, brands, lines };
 }
+/* brand x country x sub-category listings a search would run (an estimate; the server enforces MAX_SEARCH_COMBOS) */
+const CC_REGION = { us: 'na', ca: 'na', kr: 'kr', de: 'eu', uk: 'eu', fr: 'eu' };
+function comboEstimate(p) {
+  return p.brands.reduce((n, b) => n + p.subs.filter((s) => supports(b, s)).length * Math.max(1, b.countries.filter((c) => S.regions.has(CC_REGION[c])).length), 0);
+}
+const brandsLabel = (list) => (list.length > 6 ? `${list.slice(0, 5).map((b) => b.name).join(' · ')} 외 ${list.length - 5}개` : list.map((b) => b.name).join(' · '));
 function thresholds() { return [parseFloat($('#thr-lo').value), parseFloat($('#thr-hi').value)]; }
 function thresholdError() {
   if (S.bandMode !== 'custom') return '';
@@ -283,9 +290,11 @@ function updateSummary() {
   const perMajor = S.cats.filter((c) => S.selMajors.has(c.key)).map((c) => `${c.label_ko} ${c.children.filter((k) => S.selSubs.has(k.key)).length}`).filter((t) => !/ 0$/.test(t));
   const sum = $('#search-summary');
   sum.replaceChildren(...(!S.selBrands.size ? ['브랜드를 하나 이상 선택하세요.'] : !S.selMajors.size ? ['제품군을 선택하세요.'] : !p.subs.length ? ['소분류를 하나 이상 선택하세요.']
-    : !p.brands.length ? ['선택한 소분류를 지원하는 브랜드가 없습니다.'] : [el('b', {}, p.brands.map((b) => b.name).join(' · ')), ` · ${perMajor.join(' · ')} · ${band}`]));
-  const note = $('#combo-note'); note.hidden = !p.lines.length;
-  note.replaceChildren(icon(I.warn, 'glyph'), el('span', {}, p.lines.map((l, i) => [i ? el('br') : null, l])));
+    : !p.brands.length ? ['선택한 소분류를 지원하는 브랜드가 없습니다.'] : [el('b', {}, brandsLabel(p.brands)), ` · ${perMajor.join(' · ')} · ${band}`]));
+  const lines = p.lines.slice(), est = p.brands.length && p.subs.length ? comboEstimate(p) : 0;
+  if (est > S.maxCombos) lines.push(`선택한 조합이 약 ${est}개로 한 번에 검색할 수 있는 ${S.maxCombos}개를 넘을 수 있습니다. 브랜드나 소분류를 줄이세요.`);
+  const note = $('#combo-note'); note.hidden = !lines.length;
+  note.replaceChildren(icon(I.warn, 'glyph'), el('span', {}, lines.map((l, i) => [i ? el('br') : null, l])));
   $('#go-search').disabled = !p.brands.length || !p.subs.length || !!err || S.running;
   if (S.v2) syncShell();
   $('#band-hint').replaceChildren(...(S.bandMode === 'auto'
@@ -1064,24 +1073,57 @@ function regionClick(r) {
   updateSummary(); saveSel();
 }
 
-/* ---- brand popover ---- */
+/* ---- brand popover: grouped by 계열 (group), searchable, only brands that sell in a selected region are enabled ---- */
+const brandOk = (b) => b.enabled && regionOk(b);
+const brandSel = () => S.brands.filter((b) => S.selBrands.has(b.name) && brandOk(b)).length;   // selected AND usable in the chosen markets
+const brandWhy = (b) => (!b.enabled ? '준비 중' : !regionOk(b) ? '선택한 출향지 미판매' : '');
+const foldQ = (t) => String(t).normalize('NFKD').replace(/[\u0300-\u036f]/g, '').normalize('NFC').toLowerCase().replace(/[^a-z0-9\u3131-\u318e\uac00-\ud7a3]/g, '');
+const brandGroups = () => [...new Set(S.brands.map((b) => b.group || '기타'))];
+function brandCount() {
+  const n = $('#pop-n'); if (n) n.textContent = `${brandSel()}/${S.brands.length} 선택 · 선택 가능 ${S.brands.filter(brandOk).length}`;
+}
+/* search = hide rows/groups in place (no re-render, so the input keeps focus) */
+function filterBrandRows() {
+  const q = foldQ(S.brandQ); let shown = 0;
+  document.querySelectorAll('#brand-pop .pop-g').forEach((g) => {
+    const rows = [...g.querySelectorAll('.pop-li')]; let any = 0;
+    rows.forEach((li) => { const hit = !q || li.dataset.q.includes(q); li.hidden = !hit; if (hit) any++; });
+    g.hidden = !any; shown += any;
+  });
+  const e = document.querySelector('#brand-pop .pop-empty'); if (e) e.hidden = shown > 0;
+}
 function renderBrandPop() {
-  const pop = $('#brand-pop'), ready = S.brands.filter((b) => b.enabled && regionOk(b));
+  const pop = $('#brand-pop'), ready = S.brands.filter(brandOk);
   const allOn = ready.length > 0 && ready.every((b) => S.selBrands.has(b.name));
+  const toggle = (list, on) => { list.forEach((b) => (on ? S.selBrands.delete(b.name) : S.selBrands.add(b.name))); onSelectionChange(true); };
+  const row = (b, i) => {
+    const ok = brandOk(b), why = brandWhy(b);
+    return el('li', { class: 'pop-li', 'data-q': foldQ(b.name + ' ' + (b.group || '')) }, el('label', { class: 'pop-row' + (ok ? '' : ' off') },
+      el('input', { type: 'checkbox', checked: ok && S.selBrands.has(b.name), disabled: !ok, 'data-fk': 'bp-' + i,
+        onchange: (e) => { e.target.checked ? S.selBrands.add(b.name) : S.selBrands.delete(b.name); onSelectionChange(true); } }),
+      el('span', { class: 'bn' }, b.name),
+      b.countries.length ? el('span', { class: 'cc', title: '어댑터가 있는 국가' }, b.countries.map((c) => c.toUpperCase()).join(' ')) : null,
+      why ? el('small', {}, why) : null));
+  };
+  const groups = brandGroups().map((g, gi) => {
+    const list = S.brands.filter((b) => (b.group || '기타') === g), rdy = list.filter(brandOk), on = rdy.length > 0 && rdy.every((b) => S.selBrands.has(b.name));
+    return el('section', { class: 'pop-g', 'aria-label': g },
+      el('div', { class: 'pop-gh' }, el('h4', {}, g), el('span', { class: 'gn' }, `${list.filter((b) => S.selBrands.has(b.name) && brandOk(b)).length}/${list.length}`),
+        el('button', { class: 'link-btn', type: 'button', 'data-fk': 'bg-' + gi, disabled: !rdy.length, onclick: () => toggle(rdy, on) }, on ? '해제' : '전체')),
+      el('ul', {}, list.map((b) => row(b, S.brands.indexOf(b)))));
+  });
   pop.replaceChildren(
-    el('div', { class: 'pop-h' }, el('b', {}, '브랜드'), el('button', { class: 'link-btn', type: 'button', 'data-fk': 'bp-all', onclick: () => { ready.forEach((b) => (allOn ? S.selBrands.delete(b.name) : S.selBrands.add(b.name))); onSelectionChange(true); } }, allOn ? '전체 해제' : '전체 선택')),
-    el('ul', {}, S.brands.map((b, i) => {
-      const ok = b.enabled && regionOk(b), why = !b.enabled ? '준비 중' : !regionOk(b) ? '선택한 출향지 미판매' : '';
-      return el('li', {}, el('label', { class: 'pop-row' + (ok ? '' : ' off') },
-        el('input', { type: 'checkbox', checked: ok && S.selBrands.has(b.name), disabled: !ok, 'data-fk': 'bp-' + i,
-          onchange: (e) => { e.target.checked ? S.selBrands.add(b.name) : S.selBrands.delete(b.name); onSelectionChange(true); } }),
-        el('span', {}, b.name), why ? el('small', {}, why) : null));
-    })));
+    el('div', { class: 'pop-h' }, el('b', {}, '브랜드'), el('span', { class: 'pop-n', id: 'pop-n' }),
+      el('button', { class: 'link-btn', type: 'button', 'data-fk': 'bp-all', onclick: () => toggle(ready, allOn) }, allOn ? '전체 해제' : '전체 선택')),
+    el('input', { class: 'pop-q', type: 'search', 'data-fk': 'bp-q', placeholder: '브랜드 검색 (이름·계열)', 'aria-label': '브랜드 검색', autocomplete: 'off', value: S.brandQ,
+      oninput: (e) => { S.brandQ = e.target.value; filterBrandRows(); } }),
+    el('div', { class: 'pop-body' }, groups, el('p', { class: 'pop-empty', hidden: true }, '검색 결과가 없습니다.')));
+  brandCount(); filterBrandRows();
 }
 function setPop(open) {
   const btn = $('#brand-btn'), pop = $('#brand-pop');
   pop.hidden = !open; btn.setAttribute('aria-expanded', String(open));
-  if (open) { const f = pop.querySelector('input:not(:disabled)') || pop.querySelector('button'); if (f) f.focus(); }
+  if (open) { const f = pop.querySelector('.pop-q') || pop.querySelector('input:not(:disabled)') || pop.querySelector('button'); if (f) f.focus(); }
 }
 function initBrandPop() {
   $('#brand-btn').addEventListener('click', () => setPop($('#brand-pop').hidden));
@@ -1104,7 +1146,7 @@ function renderRail() {
         return el('button', { class: 'fsub' + (ok ? '' : ' off'), type: 'button', 'aria-pressed': String(on), 'aria-disabled': ok ? null : 'true', 'data-fk': 'fs-' + k.key,
           title: ok ? null : '선택한 브랜드·출향지에서 지원하지 않습니다.',
           onclick: () => { if (!ok) return toast(`${k.label_ko}: 선택한 브랜드·출향지에서 지원하지 않습니다.`); on ? S.selSubs.delete(k.key) : S.selSubs.add(k.key); subsChanged(c.key); } },
-          el('span', { class: 'box', 'aria-hidden': 'true' }, icon(I.check)), el('span', { class: 'fl' }, k.label_ko), el('span', { class: 'fc' }, ok ? `${sp.length}개 브랜드` : '미지원'));
+          el('span', { class: 'box', 'aria-hidden': 'true' }, icon(I.check)), el('span', { class: 'ft' }, el('span', { class: 'fl' }, k.label_ko), el('span', { class: 'fc' }, ok ? `${sp.length}개 브랜드` : '미지원')));
       })));
     return el('li', { class: 'rail-i' + (open ? ' open' : '') },
       el('button', { class: 'major', type: 'button', 'aria-expanded': String(open), 'aria-controls': 'fly-' + c.key, 'aria-disabled': st.ok ? null : 'true', 'data-fk': 'mj-' + c.key, 'data-k': c.key,
@@ -1329,8 +1371,8 @@ function updateStale() {
 function syncShell() {
   const subs = [...S.selSubs].map((s) => (S.subs.get(s) || {}).label_ko || s), majors = S.cats.filter((c) => S.selMajors.has(c.key)).map((c) => c.label_ko);
   $('#crumb').textContent = `${[...S.regions].map(regionLabel).join('·')} · ${majors.length ? majors.join(' · ') + ' › ' : ''}${subs.length ? subs[0] + (subs.length > 1 ? ` 외 ${subs.length - 1}` : '') : '소분류를 선택하세요'}`;
-  const nb = S.selBrands.size, tot = S.brands.filter((b) => b.enabled && regionOk(b)).length;
-  $('#brand-btn-t').textContent = `브랜드 ${nb}/${tot}`;
+  $('#brand-btn-t').textContent = `브랜드 ${brandSel()}/${S.brands.length}`;
+  $('#brand-btn').title = `선택 ${brandSel()}개 · 현재 출향지에서 선택 가능 ${S.brands.filter(brandOk).length}개 · 전체 ${S.brands.length}개`;
   $('#v2-empty').hidden = !$('#candidates').hidden;
   updateStale(); loadFilterSchema();
 }
@@ -1364,7 +1406,7 @@ async function boot() {
   document.querySelectorAll('.stages a').forEach((a) => a.addEventListener('click', (e) => { if (a.getAttribute('aria-disabled') === 'true') e.preventDefault(); }));
   try {
     const [brands, cats, meta] = await Promise.all([api('/api/brands'), api('/api/categories'), api('/api/meta').catch(() => ({}))]);
-    loadCatalog(brands, cats); $('#mockflag').hidden = !meta.mock; S.maxSel = +meta.max_selected || 12;
+    loadCatalog(brands, cats); $('#mockflag').hidden = !meta.mock; S.maxSel = +meta.max_selected || 12; S.maxCombos = +meta.max_search_combos || 120;
     const saved = lsGet(LS + 'sel', null);
     if (saved) applySel(saved);
     if (S.v2) {                                                      // regions: only enabled ones; default 북미

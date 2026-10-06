@@ -1,5 +1,5 @@
-# Brands shown in the app. To add a brand: add an entry here and write <module>.py
-# exposing discover(subcategory, limit) and scrape(url) (see catalog.py).
+# Brands shown in the app, in display order (group/markets live in catalog.BRAND_META). A brand is usable only when its
+# module file exists; module = US adapter, other countries are <brand slug>_<cc>.py (see catalog.py).
 brands:
   - name: Samsung
     module: samsung_us
@@ -13,6 +13,54 @@ brands:
     module: whirlpool_us
   - name: Bosch
     module: bosch_us
+  - name: Maytag
+    module: maytag_us
+  - name: JennAir
+    module: jennair_us
+  - name: Amana
+    module: amana_us
+  - name: Thermador
+    module: thermador_us
+  - name: Gaggenau
+    module: gaggenau_us
+  - name: Siemens
+    module: siemens_us
+  - name: Frigidaire
+    module: frigidaire_us
+  - name: Electrolux
+    module: electrolux_us
+  - name: AEG
+    module: aeg_us
+  - name: Café
+    module: cafe_us
+  - name: Monogram
+    module: monogram_us
+  - name: Haier
+    module: haier_us
+  - name: Fisher & Paykel
+    module: fisherpaykel_us
+  - name: Viking
+    module: viking_us
+  - name: Sub-Zero
+    module: subzero_us
+  - name: Wolf
+    module: wolf_us
+  - name: Miele
+    module: miele_us
+  - name: Smeg
+    module: smeg_us
+  - name: Liebherr
+    module: liebherr_us
+  - name: Bertazzoni
+    module: bertazzoni_us
+  - name: De Dietrich
+    module: dedietrich_us
+  - name: Beko
+    module: beko_us
+  - name: Hisense
+    module: hisense_us
+  - name: Panasonic
+    module: panasonic_us
 
 # Legacy flat list (used by the Streamlit app.py only). The API's two-level tree lives in catalog.CATEGORY_TREE.
 # Product groups. Only enabled ones can be searched; others show as "coming soon".

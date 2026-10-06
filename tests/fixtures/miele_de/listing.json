@@ -1,0 +1,450 @@
+{
+ "products": [
+  {
+   "name": "H 2465 B ACTIVE",
+   "designTypeName": "Backofen",
+   "dataLayer": {
+    "category": "APPLIANCE/MDA/Ovens/Ovens <lt/>= 60 cm",
+    "name": "H 2465 B ACTIVE"
+   },
+   "salesPrice": {
+    "currencyIso": "EUR",
+    "value": 739
+   },
+   "pdpUrl": "https://www.miele.de/product/12428770/backofen-h-2465-b-active-obsidianschwarz",
+   "code": "000000000012428770"
+  },
+  {
+   "name": "H 2465 B ACTIVE",
+   "designTypeName": "Backofen",
+   "dataLayer": {
+    "category": "APPLIANCE/MDA/Ovens/Ovens <lt/>= 60 cm",
+    "name": "H 2465 B ACTIVE"
+   },
+   "salesPrice": {
+    "currencyIso": "EUR",
+    "value": 739
+   },
+   "pdpUrl": "https://www.miele.de/product/99999999/backofen-h-2465-b-active-obsidianschwarz",
+   "code": "000000000099999999"
+  },
+  {
+   "name": "H 2465 B ACTIVE",
+   "designTypeName": "Backofen",
+   "dataLayer": {
+    "category": "APPLIANCE/MDA/Ovens/Ovens <lt/>= 60 cm",
+    "name": "H 2465 B ACTIVE"
+   },
+   "salesPrice": {
+    "currencyIso": "EUR",
+    "value": 739
+   },
+   "pdpUrl": "https://www.miele.de/product/12144170/backofen-h-2465-b-active-obsidianschw-el",
+   "code": "000000000012144170"
+  },
+  {
+   "name": "H 2455 EP ACTIVE",
+   "designTypeName": "Herd",
+   "dataLayer": {
+    "category": "APPLIANCE/MDA/Ovens/Cookers",
+    "name": "H 2455 EP ACTIVE"
+   },
+   "salesPrice": {
+    "currencyIso": "EUR",
+    "value": 949
+   },
+   "pdpUrl": "https://www.miele.de/product/12401350/herd-h-2455-ep-active-obsidianschwarz",
+   "code": "000000000012401350"
+  },
+  {
+   "name": "H 2455 E ACTIVE",
+   "designTypeName": "Herd",
+   "dataLayer": {
+    "category": "APPLIANCE/MDA/Ovens/Cookers",
+    "name": "H 2455 E ACTIVE"
+   },
+   "salesPrice": {
+    "currencyIso": "EUR",
+    "value": 679
+   },
+   "pdpUrl": "https://www.miele.de/product/12401290/herd-h-2455-e-active-obsidianschwarz",
+   "code": "000000000012401290"
+  },
+  {
+   "name": "H 7240 BM",
+   "designTypeName": "Kompakt-Backofen mit Mikrowelle",
+   "dataLayer": {
+    "category": "APPLIANCE/MDA/Compact ovens with microwave/Compact ovens with microwave 60 cm",
+    "name": "H 7240 BM"
+   },
+   "salesPrice": {
+    "currencyIso": "EUR",
+    "value": 2099
+   },
+   "pdpUrl": "https://www.miele.de/product/11104080/kompakt-backofen-mit-mikrowelle-h-7240-bm-obsidianschwarz",
+   "code": "000000000011104080"
+  },
+  {
+   "name": "H 7640 BM",
+   "designTypeName": "Kompakt-Backofen mit Mikrowelle",
+   "dataLayer": {
+    "category": "APPLIANCE/MDA/Compact ovens with microwave/Compact ovens with microwave 60 cm",
+    "name": "H 7640 BM"
+   },
+   "salesPrice": {
+    "currencyIso": "EUR",
+    "value": 2999
+   },
+   "pdpUrl": "https://www.miele.de/product/11105810/kompakt-backofen-mit-mikrowelle-h-7640-bm-obsidianschwarz",
+   "code": "000000000011105810"
+  },
+  {
+   "name": "H 7440 BMX",
+   "designTypeName": "Griffloser Kompakt-Backofen mit Mikrowelle",
+   "dataLayer": {
+    "category": "APPLIANCE/MDA/Compact ovens with microwave/Compact ovens with microwave 60 cm",
+    "name": "H 7440 BMX"
+   },
+   "salesPrice": {
+    "currencyIso": "EUR",
+    "value": 2679
+   },
+   "pdpUrl": "https://www.miele.de/product/12548910/griffloser-kompakt-backofen-mit-mikrowelle-h-7440-bmx-pearlbeige",
+   "code": "000000000012548910"
+  },
+  {
+   "name": "H 7840 BMX",
+   "designTypeName": "Griffloser Kompakt-Backofen mit Mikrowelle",
+   "dataLayer": {
+    "category": "APPLIANCE/MDA/Compact ovens with microwave/Compact ovens with microwave 60 cm",
+    "name": "H 7840 BMX"
+   },
+   "salesPrice": {
+    "currencyIso": "EUR",
+    "value": 3569
+   },
+   "pdpUrl": "https://www.miele.de/product/11106020/griffloser-kompakt-backofen-mit-mikrowelle-h-7840-bmx-obsidianschwarz",
+   "code": "000000000011106020"
+  },
+  {
+   "name": "KM 7361 FL",
+   "designTypeName": "Herdunabhängiges Induktionskochfeld",
+   "dataLayer": {
+    "category": "APPLIANCE/MDA/Hobs/Induction hobs independent",
+    "name": "KM 7361 FL"
+   },
+   "salesPrice": {
+    "currencyIso": "EUR",
+    "value": 999
+   },
+   "pdpUrl": "https://www.miele.de/product/12315510/herdunabhangiges-induktionskochfeld-km-7361-fl",
+   "code": "000000000012315510"
+  },
+  {
+   "name": "KM 8765 FL Diamond",
+   "designTypeName": "Herdunabhängiges Induktionskochfeld",
+   "dataLayer": {
+    "category": "APPLIANCE/MDA/Hobs/Induction hobs independent",
+    "name": "KM 8765 FL Diamond"
+   },
+   "salesPrice": {
+    "currencyIso": "EUR",
+    "value": 2599
+   },
+   "pdpUrl": "https://www.miele.de/product/12911700/herdunabhangiges-induktionskochfeld-km-8765-fl-diamond",
+   "code": "000000000012911700"
+  },
+  {
+   "name": "KM 6003 LPT",
+   "designTypeName": "Herdgesteuertes Elektrokochfeld",
+   "dataLayer": {
+    "category": "APPLIANCE/MDA/Hobs/Electric hobs combined",
+    "name": "KM 6003 LPT"
+   },
+   "salesPrice": {
+    "currencyIso": "EUR",
+    "value": 550
+   },
+   "pdpUrl": "https://www.miele.de/product/7077470/herdgesteuertes-elektrokochfeld-km-6003-lpt",
+   "code": "000000000007077470"
+  },
+  {
+   "name": "KM 6017",
+   "designTypeName": "Herdgesteuertes Elektrokochfeld",
+   "dataLayer": {
+    "category": "APPLIANCE/MDA/Hobs/Electric hobs combined",
+    "name": "KM 6017"
+   },
+   "salesPrice": {
+    "currencyIso": "EUR",
+    "value": 810
+   },
+   "pdpUrl": "https://www.miele.de/product/6910520/herdgesteuertes-elektrokochfeld-km-6017",
+   "code": "000000000006910520"
+  },
+  {
+   "name": "KMDA 7876-1 FL MattFinish",
+   "designTypeName": "Induktionskochfeld mit integriertem Dunstabzug",
+   "dataLayer": {
+    "category": "APPLIANCE/MDA/Hobs/Induction hobs with vapour extraction",
+    "name": "KMDA 7876-1 FL MattFinish"
+   },
+   "salesPrice": {
+    "currencyIso": "EUR",
+    "value": 3699
+   },
+   "pdpUrl": "https://www.miele.de/product/12904830/induktionskochfeld-mit-integriertem-dunstabzug-kmda-7876-1-fl-mattfinish",
+   "code": "000000000012904830"
+  },
+  {
+   "name": "KMDA 7676-1 FL BlackPerfection",
+   "designTypeName": "Induktionskochfeld mit integriertem Dunstabzug",
+   "dataLayer": {
+    "category": "APPLIANCE/MDA/Hobs/Induction hobs with vapour extraction",
+    "name": "KMDA 7676-1 FL BlackPerfection"
+   },
+   "salesPrice": {
+    "currencyIso": "EUR",
+    "value": 3399
+   },
+   "pdpUrl": "https://www.miele.de/product/12904820/induktionskochfeld-mit-integriertem-dunstabzug-kmda-7676-1-fl-blackperfection",
+   "code": "000000000012904820"
+  },
+  {
+   "name": "KM 6521 FR",
+   "designTypeName": "Herdunabhängiges Elektrokochfeld",
+   "dataLayer": {
+    "category": "APPLIANCE/MDA/Hobs/Electric hobs independent",
+    "name": "KM 6521 FR"
+   },
+   "salesPrice": {
+    "currencyIso": "EUR",
+    "value": 899
+   },
+   "pdpUrl": "https://www.miele.de/product/12048010/herdunabhangiges-elektrokochfeld-km-6521-fr",
+   "code": "000000000012048010"
+  },
+  {
+   "name": "DG 7240",
+   "designTypeName": "Einbau-Dampfgarer",
+   "dataLayer": {
+    "category": "APPLIANCE/MDA/Steam ovens/Steam ovens 45 cm",
+    "name": "DG 7240"
+   },
+   "salesPrice": {
+    "currencyIso": "EUR",
+    "value": 1839
+   },
+   "pdpUrl": "https://www.miele.de/product/11106370/einbau-dampfgarer-dg-7240-obsidianschwarz",
+   "code": "000000000011106370"
+  },
+  {
+   "name": "DGM 7440",
+   "designTypeName": "Dampfgarer mit Mikrowelle",
+   "dataLayer": {
+    "category": "APPLIANCE/MDA/Steam ovens/Steam ovens with microwave",
+    "name": "DGM 7440"
+   },
+   "salesPrice": {
+    "currencyIso": "EUR",
+    "value": 2799
+   },
+   "pdpUrl": "https://www.miele.de/product/11106510/dampfgarer-mit-mikrowelle-dgm-7440-graphitgrau",
+   "code": "000000000011106510"
+  },
+  {
+   "name": "DGC 7460 HC Pro",
+   "designTypeName": "Dampfbackofen",
+   "dataLayer": {
+    "category": "APPLIANCE/MDA/Steam ovens/Combi steam ovens 60 cm",
+    "name": "DGC 7460 HC Pro"
+   },
+   "salesPrice": {
+    "currencyIso": "EUR",
+    "value": 3959
+   },
+   "pdpUrl": "https://www.miele.de/product/12099690/dampfbackofen-dgc-7460-hc-pro-obsidianschwarz",
+   "code": "000000000012099690"
+  },
+  {
+   "name": "DGM 7440",
+   "designTypeName": "Dampfgarer mit Mikrowelle",
+   "dataLayer": {
+    "category": "APPLIANCE/MDA/Steam ovens/Steam ovens with microwave",
+    "name": "DGM 7440"
+   },
+   "salesPrice": {
+    "currencyIso": "EUR",
+    "value": 2799
+   },
+   "pdpUrl": "https://www.miele.de/product/11106530/dampfgarer-mit-mikrowelle-dgm-7440-obsidianschwarz",
+   "code": "000000000011106530"
+  },
+  {
+   "name": "DGC 7460 HC Pro",
+   "designTypeName": "Dampfbackofen",
+   "dataLayer": {
+    "category": "APPLIANCE/MDA/Steam ovens/Combi steam ovens 60 cm",
+    "name": "DGC 7460 HC Pro"
+   },
+   "salesPrice": {
+    "currencyIso": "EUR",
+    "value": 3959
+   },
+   "pdpUrl": "https://www.miele.de/product/12867640/dampfbackofen-dgc-7460-hc-pro-pearlbeige",
+   "code": "000000000012867640"
+  },
+  {
+   "name": "DG 7440",
+   "designTypeName": "Einbau-Dampfgarer",
+   "dataLayer": {
+    "category": "APPLIANCE/MDA/Steam ovens/Steam ovens 45 cm",
+    "name": "DG 7440"
+   },
+   "salesPrice": {
+    "currencyIso": "EUR",
+    "value": 2389
+   },
+   "pdpUrl": "https://www.miele.de/product/12867620/einbau-dampfgarer-dg-7440-pearlbeige",
+   "code": "000000000012867620"
+  },
+  {
+   "name": "KM 6520 FL",
+   "designTypeName": "Herdunabhängiges Elektrokochfeld",
+   "dataLayer": {
+    "category": "APPLIANCE/MDA/Hobs/Electric hobs independent",
+    "name": "KM 6520 FL"
+   },
+   "salesPrice": {
+    "currencyIso": "EUR",
+    "value": 779
+   },
+   "pdpUrl": "https://www.miele.de/product/10882030/herdunabhangiges-elektrokochfeld-km-6520-fl",
+   "code": "000000000010882030"
+  },
+  {
+   "name": "CS 1212-1 I",
+   "designTypeName": "ProLine-Element",
+   "dataLayer": {
+    "category": "APPLIANCE/MDA/CombiSets/CombiSet Induction",
+    "name": "CS 1212-1 I"
+   },
+   "salesPrice": {
+    "currencyIso": "EUR",
+    "value": 1529
+   },
+   "pdpUrl": "https://www.miele.de/product/9047620/proline-element-cs-1212-1-i",
+   "code": "000000000009047620"
+  },
+  {
+   "name": "CS 1222 I",
+   "designTypeName": "ProLine-Element",
+   "dataLayer": {
+    "category": "APPLIANCE/MDA/CombiSets/CombiSet Induction",
+    "name": "CS 1222 I"
+   },
+   "salesPrice": {
+    "currencyIso": "EUR",
+    "value": 1699
+   },
+   "pdpUrl": "https://www.miele.de/product/9047640/proline-element-cs-1222-i",
+   "code": "000000000009047640"
+  },
+  {
+   "name": "KM 3054-1",
+   "designTypeName": "Gaskochfeld",
+   "dataLayer": {
+    "category": "APPLIANCE/MDA/Hobs/Gas hobs",
+    "name": "KM 3054-1"
+   },
+   "salesPrice": {
+    "currencyIso": "EUR",
+    "value": 2149
+   },
+   "pdpUrl": "https://www.miele.de/product/10933860/gaskochfeld-km-3054-1",
+   "code": "000000000010933860"
+  },
+  {
+   "name": "KM 2010",
+   "designTypeName": "Gaskochfeld",
+   "dataLayer": {
+    "category": "APPLIANCE/MDA/Hobs/Gas hobs",
+    "name": "KM 2010"
+   },
+   "salesPrice": {
+    "currencyIso": "EUR",
+    "value": 919
+   },
+   "pdpUrl": "https://www.miele.de/product/7111080/gaskochfeld-km-2010",
+   "code": "000000000007111080"
+  },
+  {
+   "name": "M 7240 TC",
+   "designTypeName": "Einbau-Mikrowellengerät",
+   "dataLayer": {
+    "category": "APPLIANCE/MDA/Microwave ovens/Microwave ovens (built-in)",
+    "name": "M 7240 TC"
+   },
+   "salesPrice": {
+    "currencyIso": "EUR",
+    "value": 1429
+   },
+   "pdpUrl": "https://www.miele.de/product/11103590/einbau-mikrowellengerat-m-7240-tc-edelstahl-cleansteel",
+   "code": "000000000011103590"
+  },
+  {
+   "name": "M 7140 TC",
+   "designTypeName": "Einbau-Mikrowellengerät",
+   "dataLayer": {
+    "category": "APPLIANCE/MDA/Microwave ovens/Microwave ovens (built-in)",
+    "name": "M 7140 TC"
+   },
+   "salesPrice": {
+    "currencyIso": "EUR",
+    "value": 1429
+   },
+   "pdpUrl": "https://www.miele.de/product/11103470/einbau-mikrowellengerat-m-7140-tc-edelstahl-cleansteel",
+   "code": "000000000011103470"
+  },
+  {
+   "name": "M 6012 SC",
+   "designTypeName": "Stand-Mikrowellengerät",
+   "dataLayer": {
+    "category": "APPLIANCE/MDA/Microwave ovens/Microwave ovens (freestanding)",
+    "name": "M 6012 SC"
+   },
+   "salesPrice": {
+    "currencyIso": "EUR",
+    "value": 719
+   },
+   "pdpUrl": "https://www.miele.de/product/9485210/stand-mikrowellengerat-m-6012-sc-edelstahl",
+   "code": "000000000009485210"
+  },
+  {
+   "name": "KM 0000 NOPRICE",
+   "designTypeName": "Gaskochfeld",
+   "dataLayer": {
+    "category": "APPLIANCE/MDA/Hobs/Gas hobs"
+   },
+   "salesPrice": null,
+   "pdpUrl": "https://www.miele.de/product/12144170/backofen-h-2465-b-active-obsidianschw-el",
+   "code": "000000000012144170"
+  },
+  {
+   "name": "H 0000 EVIL",
+   "designTypeName": "Backofen",
+   "dataLayer": {
+    "category": "APPLIANCE/MDA/Ovens/Ovens <lt/>= 60 cm"
+   },
+   "salesPrice": {
+    "currencyIso": "EUR",
+    "value": 739
+   },
+   "pdpUrl": "https://evil.example.com/product/1/x",
+   "code": "000000000012144170"
+  }
+ ],
+ "currentPage": 0,
+ "totalPageCount": 1,
+ "totalProductCount": 32
+}

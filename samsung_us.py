@@ -72,12 +72,13 @@ def _require_samsung(url: str) -> None:
 _FRIDGE, _LAUNDRY, _COOK, _MICRO = "08030000", "08010000", "08080000", "08110000"
 
 # sub key -> (major, [pf_search category codes]). Edit the mapping here only.
-# Not offered (Samsung US lists none): bottom_freezer, built_in, compact fridges. Gas cooktops, range hoods,
+# Not offered (Samsung US lists none): bottom_freezer, built_in, compact fridges. Range hoods,
 # upright freezers, bundles/F- sets are skipped.
 # ASSUMPTIONS: sco = combi wall ovens (microwave + oven, leaf 08080103 / 'combi' in the name); electric_oven = single/
 # double wall ovens (all electric); gas_oven = gas ranges (leaf 08080201 / 'gas' in the name); radiant = electric
 # ranges (leaf 08080202) + electric cooktops; induction = induction ranges + induction cooktops (Samsung US sells
-# no gas wall oven, no dual-fuel range and no standalone speed oven);
+# no gas wall oven, no dual-fuel range and no standalone speed oven); gas_cooktop = gas cooktops (leaf 08080301,
+# no oven; Samsung US sells no rangetop);
 # laundry_center = stacked Laundry Hub + all-in-one washer-dryer combo (single model numbers only).
 SUB_SOURCES: dict[str, tuple[str, list[str]]] = {
     "french_door": ("refrigerator", [_FRIDGE]),
@@ -91,6 +92,7 @@ SUB_SOURCES: dict[str, tuple[str, list[str]]] = {
     "otr": ("cooking", [_MICRO]),
     "sco": ("cooking", [_COOK]),
     "gas_oven": ("cooking", [_COOK]),
+    "gas_cooktop": ("cooking", [_COOK]),
     "electric_oven": ("cooking", [_COOK]),
     "induction": ("cooking", [_COOK]),
     "radiant": ("cooking", [_COOK]),
@@ -99,7 +101,7 @@ SUPPORTED_SUBCATEGORIES = set(SUB_SOURCES)
 
 _FRIDGE_PATHS = {"refrigerators/french-door": "french_door", "refrigerators/side-by-side": "side_by_side",
                  "refrigerators/top-freezer": "top_freezer"}
-_INDUCTION_RANGE, _INDUCTION_TOP, _RADIANT_TOP = "08080204", "08080303", "08080304"
+_INDUCTION_RANGE, _INDUCTION_TOP, _RADIANT_TOP, _GAS_TOP = "08080204", "08080303", "08080304", "08080301"
 _GAS_RANGE, _ELECTRIC_RANGE, _COMBI_WALL_OVEN = "08080201", "08080202", "08080103"
 _SCO_NAME = re.compile(r"combi(?![a-z])|combination|speed oven|with microwave")
 
@@ -138,6 +140,8 @@ def classify(path_key: str, name: str = "", leaf: str = "", model: str = "") -> 
             return "induction"
         if leaf == _RADIANT_TOP or n.startswith("electric cooktop"):
             return "radiant"
+        if leaf == _GAS_TOP or n.startswith("gas cooktop"):
+            return "gas_cooktop"
     return None
 
 
@@ -516,7 +520,7 @@ def extra_specs(major: str, sub: str | None, rows, product: dict) -> dict[str, s
                 air = True
             if air is not None:
                 out["Air fry"] = "Yes" if air else "No"
-        if sub in ("gas_oven", "induction", "radiant"):
+        if sub in ("gas_oven", "gas_cooktop", "induction", "radiant"):
             b = _burner_rows(rows)
             count = _spec(rows, r"Total Number of (?:Burners|Elements)")
             if count and (n := _num_str(count)):

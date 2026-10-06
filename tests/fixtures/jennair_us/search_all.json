@@ -1,0 +1,3345 @@
+{
+"products": [
+{
+"code": "JBZFR18IGX",
+"name": "18\" Panel-Ready Built-In Column Freezer, Right Swing",
+"brand": null,
+"url": "/refrigeration/columns/column-freezers/p.18-panel-ready-built-in-column-freezer,-right-swing.jbzfr18igx.html",
+"price": {
+"value": 7999.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Columns|Column-Freezers"
+},
+"isMemberPrice": false
+},
+{
+"code": "JBZFL30IGX",
+"name": "30\" Panel-Ready Built-In Column Freezer, Left Swing",
+"brand": null,
+"url": "/refrigeration/columns/column-freezers/p.30-panel-ready-built-in-column-freezer,-left-swing.jbzfl30igx.html",
+"price": {
+"value": 8999.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Columns|Column-Freezers"
+},
+"isMemberPrice": false
+},
+{
+"code": "JBRFL30IGX",
+"name": "30\" Panel-Ready Built-In Column Refrigerator, Left Swing",
+"brand": null,
+"url": "/refrigeration/columns/column-refrigerators/p.30-panel-ready-built-in-column-refrigerator,-left-swing.jbrfl30igx.html",
+"price": {
+"value": 8999.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Columns|Column-Refrigerators"
+},
+"isMemberPrice": false
+},
+{
+"code": "JXW8530HS",
+"name": "30\" Pyramid Style Canopy Wall Hood",
+"brand": null,
+"url": "/hoods-and-ventilation/wall-mount-ventilation/p.30-pyramid-style-canopy-wall-hood.jxw8530hs.html",
+"price": {
+"value": 2399.0
+},
+"primaryCategory": {
+"pipedCategory": "Hoods-and-Ventilation|Wall-Mount-Ventilation"
+},
+"isMemberPrice": false
+},
+{
+"code": "JXW8536HS",
+"name": "Lustre Stainless 36\" Pyramid Style Canopy Wall Hood",
+"brand": null,
+"url": "/hoods-and-ventilation/wall-mount-ventilation/p.lustre-stainless-36-pyramid-style-canopy-wall-hood.jxw8536hs.html",
+"price": {
+"value": 2499.0
+},
+"primaryCategory": {
+"pipedCategory": "Hoods-and-Ventilation|Wall-Mount-Ventilation"
+},
+"isMemberPrice": false
+},
+{
+"code": "JXI8536HS",
+"name": "Lustre Stainless 36\" Pyramid Style Island Mount Canopy Hood",
+"brand": null,
+"url": "/hoods-and-ventilation/wall-mount-ventilation/p.lustre-stainless-36-pyramid-style-island-mount-canopy-hood.jxi8536hs.html",
+"price": {
+"value": 2999.0
+},
+"primaryCategory": {
+"pipedCategory": "Hoods-and-Ventilation|Wall-Mount-Ventilation"
+},
+"isMemberPrice": false
+},
+{
+"code": "JXW9048HP",
+"name": "Pro-Style® 48\"Professional Wall-Mount Hood",
+"brand": null,
+"url": "/hoods-and-ventilation/commercial-ventilation/p.pro-style-48professional-wall-mount-hood.jxw9048hp.html",
+"price": {
+"value": 3199.0
+},
+"primaryCategory": {
+"pipedCategory": "Hoods-and-Ventilation|Commercial-Ventilation"
+},
+"isMemberPrice": false
+},
+{
+"code": "JEC3430HB",
+"name": "Oblivion Glass 30\" Electric Radiant Cooktop",
+"brand": null,
+"url": "/cooktops/electric/radiant-cooktops/p.oblivion-glass-30-electric-radiant-cooktop.jec3430hb.html",
+"price": {
+"value": 1999.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooktops|Electric|Radiant-Cooktops"
+},
+"isMemberPrice": false
+},
+{
+"code": "JEC3430HS",
+"name": "Lustre Stainless 30\" Electric Radiant Cooktop",
+"brand": null,
+"url": "/cooktops/electric/radiant-cooktops/p.lustre-stainless-30-electric-radiant-cooktop.jec3430hs.html",
+"price": {
+"value": 1999.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooktops|Electric|Radiant-Cooktops"
+},
+"isMemberPrice": false
+},
+{
+"code": "JEC3536HB",
+"name": "Oblivion Glass 36\" Electric Radiant Cooktop",
+"brand": null,
+"url": "/cooktops/electric/radiant-cooktops/p.oblivion-glass-36-electric-radiant-cooktop.jec3536hb.html",
+"price": {
+"value": 2199.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooktops|Electric|Radiant-Cooktops"
+},
+"isMemberPrice": false
+},
+{
+"code": "JVR0430HS",
+"name": "Lustre Stainless 30\" Recirculating Wall-Mount Canopy Hood",
+"brand": null,
+"url": "/hoods-and-ventilation/wall-mount-ventilation/p.lustre-stainless-30-recirculating-wall-mount-canopy-hood.jvr0430hs.html",
+"price": {
+"value": 2199.0
+},
+"primaryCategory": {
+"pipedCategory": "Hoods-and-Ventilation|Wall-Mount-Ventilation"
+},
+"isMemberPrice": false
+},
+{
+"code": "JVR0436HS",
+"name": "Lustre Stainless 36\" Recirculating Wall-Mount Canopy Hood",
+"brand": null,
+"url": "/hoods-and-ventilation/wall-mount-ventilation/p.lustre-stainless-36-recirculating-wall-mount-canopy-hood.jvr0436hs.html",
+"price": {
+"value": 2299.0
+},
+"primaryCategory": {
+"pipedCategory": "Hoods-and-Ventilation|Wall-Mount-Ventilation"
+},
+"isMemberPrice": false
+},
+{
+"code": "JBZFL18IGX",
+"name": "18\" Panel-Ready Built-In Column Freezer, Left Swing",
+"brand": null,
+"url": "/refrigeration/columns/column-freezers/p.18-panel-ready-built-in-column-freezer,-left-swing.jbzfl18igx.html",
+"price": {
+"value": 7999.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Columns|Column-Freezers"
+},
+"isMemberPrice": false
+},
+{
+"code": "JBRFR30IGX",
+"name": "30\" Panel-Ready Built-In Column Refrigerator, Right Swing",
+"brand": null,
+"url": "/refrigeration/columns/column-refrigerators/p.30-panel-ready-built-in-column-refrigerator,-right-swing.jbrfr30igx.html",
+"price": {
+"value": 8999.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Columns|Column-Refrigerators"
+},
+"isMemberPrice": false
+},
+{
+"code": "JBRFR24IGX",
+"name": "24\" Panel-Ready Built-In Column Refrigerator, Right Swing",
+"brand": null,
+"url": "/refrigeration/columns/column-refrigerators/p.24-panel-ready-built-in-column-refrigerator,-right-swing.jbrfr24igx.html",
+"price": {
+"value": 8499.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Columns|Column-Refrigerators"
+},
+"isMemberPrice": false
+},
+{
+"code": "JEC3536HS",
+"name": "Lustre Stainless 36\" Electric Radiant Cooktop",
+"brand": null,
+"url": "/cooktops/electric/radiant-cooktops/p.lustre-stainless-36-electric-radiant-cooktop.jec3536hs.html",
+"price": {
+"value": 2199.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooktops|Electric|Radiant-Cooktops"
+},
+"isMemberPrice": false
+},
+{
+"code": "JBZFL24IGX",
+"name": "24\" Panel-Ready Built-In Column Freezer, Left Swing",
+"brand": null,
+"url": "/refrigeration/columns/column-freezers/p.24-panel-ready-built-in-column-freezer,-left-swing.jbzfl24igx.html",
+"price": {
+"value": 8499.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Columns|Column-Freezers"
+},
+"isMemberPrice": false
+},
+{
+"code": "JMV8208CS",
+"name": "Euro-Style 30\" Over-the-Range Microwave Oven",
+"brand": null,
+"url": "/microwaves/over-the-range/p.euro-style-30-over-the-range-microwave-oven.jmv8208cs.html",
+"price": {
+"value": 1099.0
+},
+"primaryCategory": {
+"pipedCategory": "Microwaves|Over-the-Range"
+},
+"isMemberPrice": false
+},
+{
+"code": "JGD3430GB",
+"name": "30” JX3™ Gas Downdraft Cooktop",
+"brand": null,
+"url": "/cooktops/gas/downdraft-gas-cooktops/p.30”-jx3-gas-downdraft-cooktop.jgd3430gb.html",
+"price": {
+"value": 2999.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooktops|Gas|Downdraft-Gas-Cooktops"
+},
+"isMemberPrice": false
+},
+{
+"code": "JGD3430GS",
+"name": "30” JX3™ Gas Downdraft Cooktop",
+"brand": null,
+"url": "/cooktops/gas/downdraft-gas-cooktops/p.30”-jx3-gas-downdraft-cooktop.jgd3430gs.html",
+"price": {
+"value": 2999.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooktops|Gas|Downdraft-Gas-Cooktops"
+},
+"isMemberPrice": false
+},
+{
+"code": "JMC1116AS",
+"name": "Stainless Steel 22\" Built-In/Countertop Microwave Oven",
+"brand": null,
+"url": "/microwaves/countertop/p.stainless-steel-22-built-in-countertop-microwave-oven.jmc1116as.html",
+"price": {
+"value": 949.0
+},
+"primaryCategory": {
+"pipedCategory": "Microwaves|Countertop"
+},
+"isMemberPrice": false
+},
+{
+"code": "JMC3415ES",
+"name": "Stainless Steel 25\" Countertop Microwave Oven with Convection",
+"brand": null,
+"url": "/microwaves/countertop/p.stainless-steel-25-countertop-microwave-oven-with-convection.jmc3415es.html",
+"price": {
+"value": 1199.0
+},
+"primaryCategory": {
+"pipedCategory": "Microwaves|Countertop"
+},
+"isMemberPrice": false
+},
+{
+"code": "JWD3027EX",
+"name": "Panel-Ready 27” Warming Drawer",
+"brand": null,
+"url": "/warming-drawers/p.panel-ready-27”-warming-drawer.jwd3027ex.html",
+"price": {
+"value": 2199.0
+},
+"primaryCategory": {
+"pipedCategory": "Warming-Drawers"
+},
+"isMemberPrice": false
+},
+{
+"code": "JED3536GB",
+"name": "Black Floating Glass 36\" JX3™ Electric Downdraft Cooktop",
+"brand": null,
+"url": "/cooktops/electric/radiant-cooktops/p.black-floating-glass-36-jx3-electric-downdraft-cooktop.jed3536gb.html",
+"price": {
+"value": 3099.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooktops|Electric|Radiant-Cooktops"
+},
+"isMemberPrice": false
+},
+{
+"code": "JUIFN15HX",
+"name": "Panel-Ready 15\" Undercounter Ice Machine with Articulating Hinge",
+"brand": null,
+"url": "/refrigeration/undercounter-refrigerators/ice-makers/p.panel-ready-15-undercounter-ice-machine-with-articulating-hinge.juifn15hx.html",
+"price": {
+"value": 3599.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Undercounter-Refrigerators|Ice-Makers"
+},
+"isMemberPrice": false
+},
+{
+"code": "JDTSS246GL",
+"name": "RISE™ 24\" TriFecta™ Dishwasher, 38 dBA",
+"brand": null,
+"url": "/dishwashers/p.rise-24-trifecta-dishwasher,-38-dba.jdtss246gl.html",
+"price": {
+"value": 2199.0
+},
+"primaryCategory": {
+"pipedCategory": "Dishwashers"
+},
+"isMemberPrice": false
+},
+{
+"code": "JF36NXFXDE",
+"name": "36\" Panel-Ready Built-In French Door Refrigerator",
+"brand": null,
+"url": "/refrigeration/built-in-refrigerators/p.36-panel-ready-built-in-french-door-refrigerator.jf36nxfxde.html",
+"price": {
+"value": 11499.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Built-in-Refrigerators"
+},
+"isMemberPrice": false
+},
+{
+"code": "JB36NXFXRE",
+"name": "36” Panel-Ready Built-In Bottom-Freezer Refrigerator (Right-Hand Door Swing)",
+"brand": null,
+"url": "/refrigeration/built-in-refrigerators/p.36”-panel-ready-built-in-bottom-freezer-refrigerator-right-hand-door-swing.jb36nxfxre.html",
+"price": {
+"value": 10999.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Built-in-Refrigerators"
+},
+"isMemberPrice": false
+},
+{
+"code": "JGD3536GS",
+"name": "Euro-Style 36\" JX3™ Gas Downdraft Cooktop",
+"brand": null,
+"url": "/cooktops/gas/downdraft-gas-cooktops/p.euro-style-36-jx3-gas-downdraft-cooktop.jgd3536gs.html",
+"price": {
+"value": 3199.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooktops|Gas|Downdraft-Gas-Cooktops"
+},
+"isMemberPrice": false
+},
+{
+"code": "JF42NXFXDE",
+"name": "42\" Panel-Ready Built-In French Door Refrigerator",
+"brand": null,
+"url": "/refrigeration/built-in-refrigerators/p.42-panel-ready-built-in-french-door-refrigerator.jf42nxfxde.html",
+"price": {
+"value": 11999.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Built-in-Refrigerators"
+},
+"isMemberPrice": false
+},
+{
+"code": "JB36NXFXLE",
+"name": "36” Panel-Ready Built-In Bottom-Freezer Refrigerator (Left-Hand Door Swing)",
+"brand": null,
+"url": "/refrigeration/built-in-refrigerators/p.36”-panel-ready-built-in-bottom-freezer-refrigerator-left-hand-door-swing.jb36nxfxle.html",
+"price": {
+"value": 10999.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Built-in-Refrigerators"
+},
+"isMemberPrice": false
+},
+{
+"code": "JED3536GS",
+"name": "Euro-Style 36\" JX3™ Electric Downdraft Cooktop",
+"brand": null,
+"url": "/cooktops/electric/radiant-cooktops/p.euro-style-36-jx3-electric-downdraft-cooktop.jed3536gs.html",
+"price": {
+"value": 3099.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooktops|Electric|Radiant-Cooktops"
+},
+"isMemberPrice": false
+},
+{
+"code": "JBRFL24IGX",
+"name": "24\" Panel-Ready Built-In Column Refrigerator, Left Swing",
+"brand": null,
+"url": "/refrigeration/columns/column-refrigerators/p.24-panel-ready-built-in-column-refrigerator,-left-swing.jbrfl24igx.html",
+"price": {
+"value": 8499.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Columns|Column-Refrigerators"
+},
+"isMemberPrice": false
+},
+{
+"code": "JBZFR24IGX",
+"name": "24\" Panel-Ready Built-In Column Freezer, Right Swing",
+"brand": null,
+"url": "/refrigeration/columns/column-freezers/p.24-panel-ready-built-in-column-freezer,-right-swing.jbzfr24igx.html",
+"price": {
+"value": 8499.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Columns|Column-Freezers"
+},
+"isMemberPrice": false
+},
+{
+"code": "JXU9136HP",
+"name": "Pro-Style® 36\" Professional Low Profile Under Cabinet Hood",
+"brand": null,
+"url": "/hoods-and-ventilation/commercial-ventilation/p.pro-style-36-professional-low-profile-under-cabinet-hood.jxu9136hp.html",
+"price": {
+"value": 1999.0
+},
+"primaryCategory": {
+"pipedCategory": "Hoods-and-Ventilation|Commercial-Ventilation"
+},
+"isMemberPrice": false
+},
+{
+"code": "JBZFR30IGX",
+"name": "30\" Panel-Ready Built-In Column Freezer, Right Swing",
+"brand": null,
+"url": "/refrigeration/columns/column-freezers/p.30-panel-ready-built-in-column-freezer,-right-swing.jbzfr30igx.html",
+"price": {
+"value": 8999.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Columns|Column-Freezers"
+},
+"isMemberPrice": false
+},
+{
+"code": "JUIFX15HX",
+"name": "Panel-Ready 15\" Undercounter Ice Machine with Articulating Hinge with Drain Pump",
+"brand": null,
+"url": "/refrigeration/undercounter-refrigerators/ice-makers/p.panel-ready-15-undercounter-ice-machine-with-articulating-hinge-with-drain-pump.juifx15hx.html",
+"price": {
+"value": 3999.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Undercounter-Refrigerators|Ice-Makers"
+},
+"isMemberPrice": false
+},
+{
+"code": "JGC3536GS",
+"name": "Euro-Style 36\" 5-Burner Gas Cooktop",
+"brand": null,
+"url": "/cooktops/gas/traditional-gas-cooktops/p.euro-style-36-5-burner-gas-cooktop.jgc3536gs.html",
+"price": {
+"value": 2599.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooktops|Gas|Traditional-Gas-Cooktops"
+},
+"isMemberPrice": false
+},
+{
+"code": "JEF3115GS",
+"name": "Custom 15\" Electric Griddle",
+"brand": null,
+"url": "/custom-cooktops/custom-electric-cooktops/p.custom-15-electric-griddle.jef3115gs.html",
+"price": {
+"value": 3549.0
+},
+"primaryCategory": {
+"pipedCategory": "Custom-Cooktops|Custom-Electric-Cooktops"
+},
+"isMemberPrice": false
+},
+{
+"code": "JGC3530GS",
+"name": "Euro-Style 30\" 5-Burner Gas Cooktop",
+"brand": null,
+"url": "/cooktops/gas/traditional-gas-cooktops/p.euro-style-30-5-burner-gas-cooktop.jgc3530gs.html",
+"price": {
+"value": 2399.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooktops|Gas|Traditional-Gas-Cooktops"
+},
+"isMemberPrice": false
+},
+{
+"code": "JIE4115GS",
+"name": "Custom 15\" Induction Wok",
+"brand": null,
+"url": "/custom-cooktops/custom-electric-cooktops/p.custom-15-induction-wok.jie4115gs.html",
+"price": {
+"value": 2349.0
+},
+"primaryCategory": {
+"pipedCategory": "Custom-Cooktops|Custom-Electric-Cooktops"
+},
+"isMemberPrice": false
+},
+{
+"code": "JIC4715GS",
+"name": "Custom 15\" Induction Cooktop",
+"brand": null,
+"url": "/custom-cooktops/custom-electric-cooktops/p.custom-15-induction-cooktop.jic4715gs.html",
+"price": {
+"value": 3598.0
+},
+"primaryCategory": {
+"pipedCategory": "Custom-Cooktops|Custom-Electric-Cooktops"
+},
+"isMemberPrice": false
+},
+{
+"code": "JGC3115GS",
+"name": "Custom 15\" Single-Burner Gas Cooktop with Wok Ring",
+"brand": null,
+"url": "/custom-cooktops/custom-gas-cooktops/p.custom-15-single-burner-gas-cooktop-with-wok-ring.jgc3115gs.html",
+"price": {
+"value": 1549.0
+},
+"primaryCategory": {
+"pipedCategory": "Custom-Cooktops|Custom-Gas-Cooktops"
+},
+"isMemberPrice": false
+},
+{
+"code": "JGCP536HL",
+"name": "RISE™ 36\" Gas Rangetop",
+"brand": null,
+"url": "/rangetops/gas/p.rise-36-gas-rangetop.jgcp536hl.html",
+"price": {
+"value": 5199.0
+},
+"primaryCategory": {
+"pipedCategory": "Rangetops|Gas"
+},
+"isMemberPrice": false
+},
+{
+"code": "JGCP536HM",
+"name": "NOIR™ 36\" Gas Rangetop",
+"brand": null,
+"url": "/rangetops/gas/p.noir-36-gas-rangetop.jgcp536hm.html",
+"price": {
+"value": 4399.0
+},
+"primaryCategory": {
+"pipedCategory": "Rangetops|Gas"
+},
+"isMemberPrice": false
+},
+{
+"code": "JGCP548HL",
+"name": "RISE™ 48\" Gas Rangetop",
+"brand": null,
+"url": "/rangetops/gas/p.rise-48-gas-rangetop.jgcp548hl.html",
+"price": {
+"value": 5999.0
+},
+"primaryCategory": {
+"pipedCategory": "Rangetops|Gas"
+},
+"isMemberPrice": false
+},
+{
+"code": "JGCP548HM",
+"name": "NOIR™ 48\" Gas Rangetop",
+"brand": null,
+"url": "/rangetops/gas/p.noir-48-gas-rangetop.jgcp548hm.html",
+"price": {
+"value": 5099.0
+},
+"primaryCategory": {
+"pipedCategory": "Rangetops|Gas"
+},
+"isMemberPrice": false
+},
+{
+"code": "JDRP548HM",
+"name": "NOIR™ 48\" Dual-Fuel Professional Range with Chrome-Infused Griddle",
+"brand": null,
+"url": "/ranges/dual-stacked-burner-ranges/p.noir-48-dual-fuel-professional-range-with-chrome-infused-griddle.jdrp548hm.html",
+"price": {
+"value": 13199.0
+},
+"primaryCategory": {
+"pipedCategory": "Ranges|Dual-Stacked-Burner-Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "JDRP636HM",
+"name": "NOIR™ 36\" Dual-Fuel Professional Range with Gas Grill",
+"brand": null,
+"url": "/ranges/dual-stacked-burner-ranges/p.noir-36-dual-fuel-professional-range-with-gas-grill.jdrp636hm.html",
+"price": {
+"value": 9599.0
+},
+"primaryCategory": {
+"pipedCategory": "Ranges|Dual-Stacked-Burner-Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "JGC7636BS",
+"name": "Euro-Style 36\" 6-Burner Gas Cooktop",
+"brand": null,
+"url": "/cooktops/gas/traditional-gas-cooktops/p.euro-style-36-6-burner-gas-cooktop.jgc7636bs.html",
+"price": {
+"value": 2799.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooktops|Gas|Traditional-Gas-Cooktops"
+},
+"isMemberPrice": false
+},
+{
+"code": "JGC7530BS",
+"name": "Euro-Style 30\" 5-Burner Gas Cooktop",
+"brand": null,
+"url": "/cooktops/gas/traditional-gas-cooktops/p.euro-style-30-5-burner-gas-cooktop.jgc7530bs.html",
+"price": {
+"value": 2599.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooktops|Gas|Traditional-Gas-Cooktops"
+},
+"isMemberPrice": false
+},
+{
+"code": "JGC3215GS",
+"name": "Custom 15” 2-Burner Gas Cooktop",
+"brand": null,
+"url": "/custom-cooktops/custom-gas-cooktops/p.custom-15”-2-burner-gas-cooktop.jgc3215gs.html",
+"price": {
+"value": 1299.0
+},
+"primaryCategory": {
+"pipedCategory": "Custom-Cooktops|Custom-Gas-Cooktops"
+},
+"isMemberPrice": false
+},
+{
+"code": "JGCP436HM",
+"name": "NOIR™  36\" Gas Rangetop",
+"brand": null,
+"url": "/rangetops/gas/p.noir-36-gas-rangetop.jgcp436hm.html",
+"price": {
+"value": 4199.0
+},
+"primaryCategory": {
+"pipedCategory": "Rangetops|Gas"
+},
+"isMemberPrice": false
+},
+{
+"code": "JDRP636HL",
+"name": "RISE™ 36\" Dual-Fuel Professional Range with Gas Grill",
+"brand": null,
+"url": "/ranges/dual-stacked-burner-ranges/p.rise-36-dual-fuel-professional-range-with-gas-grill.jdrp636hl.html",
+"price": {
+"value": 11299.0
+},
+"primaryCategory": {
+"pipedCategory": "Ranges|Dual-Stacked-Burner-Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "JGCP430HM",
+"name": "NOIR™  30\" Gas Rangetop",
+"brand": null,
+"url": "/rangetops/gas/p.noir-30-gas-rangetop.jgcp430hm.html",
+"price": {
+"value": 3699.0
+},
+"primaryCategory": {
+"pipedCategory": "Rangetops|Gas"
+},
+"isMemberPrice": false
+},
+{
+"code": "JDSP536HL",
+"name": "RISE™ 36\" Dual-Fuel Professional Range with Chrome-Infused Griddle and Steam Assist",
+"brand": null,
+"url": "/ranges/dual-stacked-burner-ranges/p.rise-36-dual-fuel-professional-range-with-chrome-infused-griddle-and-steam-assist.jdsp536hl.html",
+"price": {
+"value": 11199.0
+},
+"primaryCategory": {
+"pipedCategory": "Ranges|Dual-Stacked-Burner-Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "JGCP430HL",
+"name": "RISE™  30\" Gas Rangetop",
+"brand": null,
+"url": "/rangetops/gas/p.rise-30-gas-rangetop.jgcp430hl.html",
+"price": {
+"value": 4399.0
+},
+"primaryCategory": {
+"pipedCategory": "Rangetops|Gas"
+},
+"isMemberPrice": false
+},
+{
+"code": "JDRP436HM",
+"name": "NOIR™ 36\" Dual-Fuel Professional Range",
+"brand": null,
+"url": "/ranges/dual-stacked-burner-ranges/p.noir-36-dual-fuel-professional-range.jdrp436hm.html",
+"price": {
+"value": 9299.0
+},
+"primaryCategory": {
+"pipedCategory": "Ranges|Dual-Stacked-Burner-Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "JGCP436HL",
+"name": "RISE™ 36\" Gas Rangetop",
+"brand": null,
+"url": "/rangetops/gas/p.rise-36-gas-rangetop.jgcp436hl.html",
+"price": {
+"value": 4899.0
+},
+"primaryCategory": {
+"pipedCategory": "Rangetops|Gas"
+},
+"isMemberPrice": false
+},
+{
+"code": "JGCP636HL",
+"name": "RISE™ 36\" Gas Professional-Style Rangetop with Grill",
+"brand": null,
+"url": "/rangetops/gas/p.rise-36-gas-professional-style-rangetop-with-grill.jgcp636hl.html",
+"price": {
+"value": 5299.0
+},
+"primaryCategory": {
+"pipedCategory": "Rangetops|Gas"
+},
+"isMemberPrice": false
+},
+{
+"code": "JDRP536HM",
+"name": "NOIR™ 36\" Dual-Fuel Professional Range with Chrome-Infused Griddle",
+"brand": null,
+"url": "/ranges/dual-stacked-burner-ranges/p.noir-36-dual-fuel-professional-range-with-chrome-infused-griddle.jdrp536hm.html",
+"price": {
+"value": 9599.0
+},
+"primaryCategory": {
+"pipedCategory": "Ranges|Dual-Stacked-Burner-Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "JDRP648HM",
+"name": "NOIR™ 48\" Dual-Fuel Professional-Style Range with Grill",
+"brand": null,
+"url": "/ranges/dual-stacked-burner-ranges/p.noir-48-dual-fuel-professional-style-range-with-grill.jdrp648hm.html",
+"price": {
+"value": 13199.0
+},
+"primaryCategory": {
+"pipedCategory": "Ranges|Dual-Stacked-Burner-Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "JDRP748HM",
+"name": "NOIR™ 48\" Dual-Fuel Professional-Style Range with Chrome-Infused Griddle and Grill",
+"brand": null,
+"url": "/ranges/dual-stacked-burner-ranges/p.noir-48-dual-fuel-professional-style-range-with-chrome-infused-griddle-and-grill.jdrp748hm.html",
+"price": {
+"value": 13499.0
+},
+"primaryCategory": {
+"pipedCategory": "Ranges|Dual-Stacked-Burner-Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "JGCP648HL",
+"name": "RISE™ 48\" Gas Professional-Style Rangetop with Grill",
+"brand": null,
+"url": "/rangetops/gas/p.rise-48-gas-professional-style-rangetop-with-grill.jgcp648hl.html",
+"price": {
+"value": 5999.0
+},
+"primaryCategory": {
+"pipedCategory": "Rangetops|Gas"
+},
+"isMemberPrice": false
+},
+{
+"code": "JGCP748HL",
+"name": "RISE™ 48\" Gas Professional-Style Rangetop with Chrome-Infused Griddle and Grill",
+"brand": null,
+"url": "/rangetops/gas/p.rise-48-gas-professional-style-rangetop-with-chrome-infused-griddle-and-grill.jgcp748hl.html",
+"price": {
+"value": 6299.0
+},
+"primaryCategory": {
+"pipedCategory": "Rangetops|Gas"
+},
+"isMemberPrice": false
+},
+{
+"code": "JDSP548HL",
+"name": "RISE™ 48\" Dual-Fuel Professional-Style Range with Chrome-Infused Griddle and Steam Assist",
+"brand": null,
+"url": "/ranges/dual-stacked-burner-ranges/p.rise-48-dual-fuel-professional-style-range-with-chrome-infused-griddle-and-steam-assist.jdsp548hl.html",
+"price": {
+"value": 15399.0
+},
+"primaryCategory": {
+"pipedCategory": "Ranges|Dual-Stacked-Burner-Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "JGCP648HM",
+"name": "NOIR™ 48\" Gas Professional-Style Rangetop with Grill",
+"brand": null,
+"url": "/rangetops/gas/p.noir-48-gas-professional-style-rangetop-with-grill.jgcp648hm.html",
+"price": {
+"value": 5099.0
+},
+"primaryCategory": {
+"pipedCategory": "Rangetops|Gas"
+},
+"isMemberPrice": false
+},
+{
+"code": "JDRP548HL",
+"name": "RISE™ 48\" Dual-Fuel Professional Range with Chrome-Infused Griddle",
+"brand": null,
+"url": "/ranges/dual-stacked-burner-ranges/p.rise-48-dual-fuel-professional-range-with-chrome-infused-griddle.jdrp548hl.html",
+"price": {
+"value": 15499.0
+},
+"primaryCategory": {
+"pipedCategory": "Ranges|Dual-Stacked-Burner-Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "JDRP748HL",
+"name": "RISE™ 48\" Dual-Fuel Professional-Style Range with Chrome-Infused Griddle and Grill",
+"brand": null,
+"url": "/ranges/dual-stacked-burner-ranges/p.rise-48-dual-fuel-professional-style-range-with-chrome-infused-griddle-and-grill.jdrp748hl.html",
+"price": {
+"value": 15799.0
+},
+"primaryCategory": {
+"pipedCategory": "Ranges|Dual-Stacked-Burner-Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "JGRP430HL",
+"name": "RISE™ 30\" Gas Professional Range",
+"brand": null,
+"url": "/ranges/dual-stacked-burner-ranges/p.rise-30-gas-professional-range.jgrp430hl.html",
+"price": {
+"value": 5899.0
+},
+"primaryCategory": {
+"pipedCategory": "Ranges|Dual-Stacked-Burner-Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "JGCP748HM",
+"name": "NOIR™ 48\" Gas Professional-Style Rangetop with Chrome-Infused Griddle and Grill",
+"brand": null,
+"url": "/rangetops/gas/p.noir-48-gas-professional-style-rangetop-with-chrome-infused-griddle-and-grill.jgcp748hm.html",
+"price": {
+"value": 5399.0
+},
+"primaryCategory": {
+"pipedCategory": "Rangetops|Gas"
+},
+"isMemberPrice": false
+},
+{
+"code": "JMDFS30HL",
+"name": "RISE™ 30\" Under Counter Microwave Oven with Drawer Design",
+"brand": null,
+"url": "/microwaves/drawer/p.rise-30-under-counter-microwave-oven-with-drawer-design.jmdfs30hl.html",
+"price": {
+"value": 2499.0
+},
+"primaryCategory": {
+"pipedCategory": "Microwaves|Drawer"
+},
+"isMemberPrice": false
+},
+{
+"code": "JDRP436HL",
+"name": "RISE™ 36\" Dual-Fuel Professional Range",
+"brand": null,
+"url": "/ranges/dual-stacked-burner-ranges/p.rise-36-dual-fuel-professional-range.jdrp436hl.html",
+"price": {
+"value": 10999.0
+},
+"primaryCategory": {
+"pipedCategory": "Ranges|Dual-Stacked-Burner-Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "JDRP536HL",
+"name": "RISE™ 36\" Dual-Fuel Professional Range with Chrome-Infused Griddle",
+"brand": null,
+"url": "/ranges/dual-stacked-burner-ranges/p.rise-36-dual-fuel-professional-range-with-chrome-infused-griddle.jdrp536hl.html",
+"price": {
+"value": 11299.0
+},
+"primaryCategory": {
+"pipedCategory": "Ranges|Dual-Stacked-Burner-Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "JMDFS24HM",
+"name": "NOIR™ 24\" Under Counter Microwave Oven with Drawer Design",
+"brand": null,
+"url": "/microwaves/drawer/p.noir-24-under-counter-microwave-oven-with-drawer-design.jmdfs24hm.html",
+"price": {
+"value": 1999.0
+},
+"primaryCategory": {
+"pipedCategory": "Microwaves|Drawer"
+},
+"isMemberPrice": false
+},
+{
+"code": "JMV9196CS",
+"name": "Euro-Style 30\" Over-the-Range Microwave Oven with Convection",
+"brand": null,
+"url": "/microwaves/over-the-range/p.euro-style-30-over-the-range-microwave-oven-with-convection.jmv9196cs.html",
+"price": {
+"value": 1349.0
+},
+"primaryCategory": {
+"pipedCategory": "Microwaves|Over-the-Range"
+},
+"isMemberPrice": false
+},
+{
+"code": "JGD3536GB",
+"name": "36” JX3™ Gas Downdraft Cooktop",
+"brand": null,
+"url": "/cooktops/gas/downdraft-gas-cooktops/p.36”-jx3-gas-downdraft-cooktop.jgd3536gb.html",
+"price": {
+"value": 3199.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooktops|Gas|Downdraft-Gas-Cooktops"
+},
+"isMemberPrice": false
+},
+{
+"code": "JED3430GS",
+"name": "Euro-Style 30\" JX3™ Electric Downdraft Cooktop",
+"brand": null,
+"url": "/cooktops/electric/radiant-cooktops/p.euro-style-30-jx3-electric-downdraft-cooktop.jed3430gs.html",
+"price": {
+"value": 2899.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooktops|Electric|Radiant-Cooktops"
+},
+"isMemberPrice": false
+},
+{
+"code": "JWD3030EX",
+"name": "Panel-Ready 30” Warming Drawer",
+"brand": null,
+"url": "/warming-drawers/p.panel-ready-30”-warming-drawer.jwd3030ex.html",
+"price": {
+"value": 2299.0
+},
+"primaryCategory": {
+"pipedCategory": "Warming-Drawers"
+},
+"isMemberPrice": false
+},
+{
+"code": "JED3430GB",
+"name": "Black Floating Glass 30\" JX3™ Electric Downdraft Cooktop",
+"brand": null,
+"url": "/cooktops/electric/radiant-cooktops/p.black-floating-glass-30-jx3-electric-downdraft-cooktop.jed3430gb.html",
+"price": {
+"value": 2899.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooktops|Electric|Radiant-Cooktops"
+},
+"isMemberPrice": false
+},
+{
+"code": "JBRFR36IGX",
+"name": "36\" Panel-Ready Built-In Column Refrigerator, Right Swing",
+"brand": null,
+"url": "/refrigeration/columns/column-refrigerators/p.36-panel-ready-built-in-column-refrigerator,-right-swing.jbrfr36igx.html",
+"price": {
+"value": 9499.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Columns|Column-Refrigerators"
+},
+"isMemberPrice": false
+},
+{
+"code": "JFFCC72EHL",
+"name": "RISE™ 36” Counter-Depth French Door Refrigerator with Obsidian Interior",
+"brand": null,
+"url": "/refrigeration/french-door-refrigerators/p.rise-36”-counter-depth-french-door-refrigerator-with-obsidian-interior.jffcc72ehl.html",
+"price": {
+"value": 5999.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|French-Door-Refrigerators"
+},
+"isMemberPrice": false
+},
+{
+"code": "JXU9130HP",
+"name": "Pro-Style® 30\" Professional Low Profile Under Cabinet Hood",
+"brand": null,
+"url": "/hoods-and-ventilation/commercial-ventilation/p.pro-style-30-professional-low-profile-under-cabinet-hood.jxu9130hp.html",
+"price": {
+"value": 1899.0
+},
+"primaryCategory": {
+"pipedCategory": "Hoods-and-Ventilation|Commercial-Ventilation"
+},
+"isMemberPrice": false
+},
+{
+"code": "JXL6536HSS",
+"name": "Stainless Steel 36\" Custom Hood Liner",
+"brand": null,
+"url": "/hoods-and-ventilation/island-mount-ventilation/p.stainless-steel-36-custom-hood-liner.jxl6536hss.html",
+"price": {
+"value": 1999.0
+},
+"primaryCategory": {
+"pipedCategory": "Hoods-and-Ventilation|Island-Mount-Ventilation"
+},
+"isMemberPrice": false
+},
+{
+"code": "JXW9036HP",
+"name": "Pro-Style® 36\"Professional Wall-Mount Hood",
+"brand": null,
+"url": "/hoods-and-ventilation/commercial-ventilation/p.pro-style-36professional-wall-mount-hood.jxw9036hp.html",
+"price": {
+"value": 2899.0
+},
+"primaryCategory": {
+"pipedCategory": "Hoods-and-Ventilation|Commercial-Ventilation"
+},
+"isMemberPrice": false
+},
+{
+"code": "JXW9030HP",
+"name": "Pro-Style® 30\"Professional Wall-Mount Hood",
+"brand": null,
+"url": "/hoods-and-ventilation/commercial-ventilation/p.pro-style-30professional-wall-mount-hood.jxw9030hp.html",
+"price": {
+"value": 2499.0
+},
+"primaryCategory": {
+"pipedCategory": "Hoods-and-Ventilation|Commercial-Ventilation"
+},
+"isMemberPrice": false
+},
+{
+"code": "JDRP430HL",
+"name": "RISE™ 30\" Dual-Fuel Professional Range",
+"brand": null,
+"url": "/ranges/dual-stacked-burner-ranges/p.rise-30-dual-fuel-professional-range.jdrp430hl.html",
+"price": {
+"value": 7699.0
+},
+"primaryCategory": {
+"pipedCategory": "Ranges|Dual-Stacked-Burner-Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "JDRP430HM",
+"name": "NOIR™ 30\" Dual-Fuel Professional Range",
+"brand": null,
+"url": "/ranges/dual-stacked-burner-ranges/p.noir-30-dual-fuel-professional-range.jdrp430hm.html",
+"price": {
+"value": 6199.0
+},
+"primaryCategory": {
+"pipedCategory": "Ranges|Dual-Stacked-Burner-Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "JDRP648HL",
+"name": "RISE™ 48\" Dual-Fuel Professional-Style Range with Grill",
+"brand": null,
+"url": "/ranges/dual-stacked-burner-ranges/p.rise-48-dual-fuel-professional-style-range-with-grill.jdrp648hl.html",
+"price": {
+"value": 15499.0
+},
+"primaryCategory": {
+"pipedCategory": "Ranges|Dual-Stacked-Burner-Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "JGCP636HM",
+"name": "NOIR™ 36\" Gas Professional-Style Rangetop with Grill",
+"brand": null,
+"url": "/rangetops/gas/p.noir-36-gas-professional-style-rangetop-with-grill.jgcp636hm.html",
+"price": {
+"value": 4499.0
+},
+"primaryCategory": {
+"pipedCategory": "Rangetops|Gas"
+},
+"isMemberPrice": false
+},
+{
+"code": "JMDFS30HM",
+"name": "NOIR™ 30\" Under Counter Microwave Oven with Drawer Design",
+"brand": null,
+"url": "/microwaves/drawer/p.noir-30-under-counter-microwave-oven-with-drawer-design.jmdfs30hm.html",
+"price": {
+"value": 2099.0
+},
+"primaryCategory": {
+"pipedCategory": "Microwaves|Drawer"
+},
+"isMemberPrice": false
+},
+{
+"code": "JUBFL242HL",
+"name": "RISE™ 24\" Built-In Undercounter Beverage Center, Left Swing",
+"brand": null,
+"url": "/refrigeration/undercounter-refrigerators/beverage-centers/p.rise-24-built-in-undercounter-beverage-center,-left-swing.jubfl242hl.html",
+"price": {
+"value": 3499.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Undercounter-Refrigerators|Beverage-Centers"
+},
+"isMemberPrice": false
+},
+{
+"code": "JUBFL242HM",
+"name": "NOIR™ 24\" Built-In Undercounter Beverage Center - Left Swing",
+"brand": null,
+"url": "/refrigeration/undercounter-refrigerators/beverage-centers/p.noir-24-built-in-undercounter-beverage-center-left-swing.jubfl242hm.html",
+"price": {
+"value": 2799.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Undercounter-Refrigerators|Beverage-Centers"
+},
+"isMemberPrice": false
+},
+{
+"code": "JUBFL242HX",
+"name": "Panel-Ready 24\" Built-In Undercounter Beverage Center, Left Swing",
+"brand": null,
+"url": "/refrigeration/undercounter-refrigerators/beverage-centers/p.panel-ready-24-built-in-undercounter-beverage-center,-left-swing.jubfl242hx.html",
+"price": {
+"value": 3399.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Undercounter-Refrigerators|Beverage-Centers"
+},
+"isMemberPrice": false
+},
+{
+"code": "JUBFR242HM",
+"name": "NOIR™ 24\" Built-In Undercounter Beverage Center, Right Swing",
+"brand": null,
+"url": "/refrigeration/undercounter-refrigerators/beverage-centers/p.noir-24-built-in-undercounter-beverage-center,-right-swing.jubfr242hm.html",
+"price": {
+"value": 2799.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Undercounter-Refrigerators|Beverage-Centers"
+},
+"isMemberPrice": false
+},
+{
+"code": "TC607X",
+"name": "Panel-Ready 15\" Trash Compactor",
+"brand": null,
+"url": "/trash-compactors/p.panel-ready-15-trash-compactor.tc607x.html",
+"price": {
+"value": 2299.0
+},
+"primaryCategory": {
+"pipedCategory": "Trash-Compactors"
+},
+"isMemberPrice": false
+},
+{
+"code": "JXD7036YS",
+"name": "Euro-Style Stainless 36\" Telescoping Downdraft Ventilation",
+"brand": null,
+"url": "/hoods-and-ventilation/downdraft-ventilation/p.euro-style-stainless-36-telescoping-downdraft-ventilation.jxd7036ys.html",
+"price": {
+"value": 2499.0
+},
+"primaryCategory": {
+"pipedCategory": "Hoods-and-Ventilation|Downdraft-Ventilation"
+},
+"isMemberPrice": false
+},
+{
+"code": "JXD7030YS",
+"name": "Euro-Style Stainless 30\" Telescoping Downdraft Ventilation",
+"brand": null,
+"url": "/hoods-and-ventilation/downdraft-ventilation/p.euro-style-stainless-30-telescoping-downdraft-ventilation.jxd7030ys.html",
+"price": {
+"value": 2399.0
+},
+"primaryCategory": {
+"pipedCategory": "Hoods-and-Ventilation|Downdraft-Ventilation"
+},
+"isMemberPrice": false
+},
+{
+"code": "JUWFL242HL",
+"name": "RISE™ 24\" Built-In Undercounter Wine Cellar - Left Swing",
+"brand": null,
+"url": "/refrigeration/undercounter-refrigerators/wine-cellars/p.rise-24-built-in-undercounter-wine-cellar-left-swing.juwfl242hl.html",
+"price": {
+"value": 4199.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Undercounter-Refrigerators|Wine-Cellars"
+},
+"isMemberPrice": false
+},
+{
+"code": "JUWFL242HM",
+"name": "NOIR™ 24\" Built-In Undercounter Wine Cellar - Left Swing",
+"brand": null,
+"url": "/refrigeration/undercounter-refrigerators/wine-cellars/p.noir-24-built-in-undercounter-wine-cellar-left-swing.juwfl242hm.html",
+"price": {
+"value": 3499.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Undercounter-Refrigerators|Wine-Cellars"
+},
+"isMemberPrice": false
+},
+{
+"code": "JUWFL242HX",
+"name": "Panel-Ready 24\" Built-In Undercounter Wine Cellar - Left Swing",
+"brand": null,
+"url": "/refrigeration/undercounter-refrigerators/wine-cellars/p.panel-ready-24-built-in-undercounter-wine-cellar-left-swing.juwfl242hx.html",
+"price": {
+"value": 4099.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Undercounter-Refrigerators|Wine-Cellars"
+},
+"isMemberPrice": false
+},
+{
+"code": "JUWFR242HX",
+"name": "Panel-Ready 24\" Built-In Undercounter Wine Cellar - Right Swing",
+"brand": null,
+"url": "/refrigeration/undercounter-refrigerators/wine-cellars/p.panel-ready-24-built-in-undercounter-wine-cellar-right-swing.juwfr242hx.html",
+"price": {
+"value": 4099.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Undercounter-Refrigerators|Wine-Cellars"
+},
+"isMemberPrice": false
+},
+{
+"code": "JUWFR242HL",
+"name": "RISE™ 24\" Built-In Undercounter Wine Cellar - Right Swing",
+"brand": null,
+"url": "/refrigeration/undercounter-refrigerators/wine-cellars/p.rise-24-built-in-undercounter-wine-cellar-right-swing.juwfr242hl.html",
+"price": {
+"value": 4199.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Undercounter-Refrigerators|Wine-Cellars"
+},
+"isMemberPrice": false
+},
+{
+"code": "JUWFR242HM",
+"name": "NOIR™ 24\" Built-In Undercounter Wine Cellar - RIght Swing",
+"brand": null,
+"url": "/refrigeration/undercounter-refrigerators/wine-cellars/p.noir-24-built-in-undercounter-wine-cellar-right-swing.juwfr242hm.html",
+"price": {
+"value": 3499.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Undercounter-Refrigerators|Wine-Cellars"
+},
+"isMemberPrice": false
+},
+{
+"code": "JGRP636HL",
+"name": "RISE™ 36\" Gas Professional-Style Range with Grill",
+"brand": null,
+"url": "/ranges/dual-stacked-burner-ranges/p.rise-36-gas-professional-style-range-with-grill.jgrp636hl.html",
+"price": {
+"value": 8599.0
+},
+"primaryCategory": {
+"pipedCategory": "Ranges|Dual-Stacked-Burner-Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "JGRP536HL",
+"name": "36\" RISE™ Gas Professional-Style Range with Chrome-Infused Griddle",
+"brand": null,
+"url": "/ranges/dual-stacked-burner-ranges/p.36-rise-gas-professional-style-range-with-chrome-infused-griddle.jgrp536hl.html",
+"price": {
+"value": 8599.0
+},
+"primaryCategory": {
+"pipedCategory": "Ranges|Dual-Stacked-Burner-Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "JGRP548HL",
+"name": "48\" RISE™ Gas Professional-Style Range with Chrome-Infused Griddle",
+"brand": null,
+"url": "/ranges/dual-stacked-burner-ranges/p.48-rise-gas-professional-style-range-with-chrome-infused-griddle.jgrp548hl.html",
+"price": {
+"value": 12799.0
+},
+"primaryCategory": {
+"pipedCategory": "Ranges|Dual-Stacked-Burner-Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "JGRP648HL",
+"name": "RISE™ 48\" Gas Professional-Style Range with Grill",
+"brand": null,
+"url": "/ranges/dual-stacked-burner-ranges/p.rise-48-gas-professional-style-range-with-grill.jgrp648hl.html",
+"price": {
+"value": 12799.0
+},
+"primaryCategory": {
+"pipedCategory": "Ranges|Dual-Stacked-Burner-Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "JGRP436HL",
+"name": "36\" RISE™ Gas Professional-Style Range",
+"brand": null,
+"url": "/ranges/dual-stacked-burner-ranges/p.36-rise-gas-professional-style-range.jgrp436hl.html",
+"price": {
+"value": 8299.0
+},
+"primaryCategory": {
+"pipedCategory": "Ranges|Dual-Stacked-Burner-Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "JGRP748HL",
+"name": "RISE™ 48\" Gas Professional-Style Range with Chrome-Infused Griddle and Grill",
+"brand": null,
+"url": "/ranges/dual-stacked-burner-ranges/p.rise-48-gas-professional-style-range-with-chrome-infused-griddle-and-grill.jgrp748hl.html",
+"price": {
+"value": 13099.0
+},
+"primaryCategory": {
+"pipedCategory": "Ranges|Dual-Stacked-Burner-Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "JGRP636HM",
+"name": "NOIR™ 36\" Gas Professional-Style Range with Grill",
+"brand": null,
+"url": "/ranges/dual-stacked-burner-ranges/p.noir-36-gas-professional-style-range-with-grill.jgrp636hm.html",
+"price": {
+"value": 7299.0
+},
+"primaryCategory": {
+"pipedCategory": "Ranges|Dual-Stacked-Burner-Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "JGRP436HM",
+"name": "36\" NOIR™ Gas Professional-Style Range",
+"brand": null,
+"url": "/ranges/flat-tine-rack-ranges/p.36-noir-gas-professional-style-range.jgrp436hm.html",
+"price": {
+"value": 6999.0
+},
+"primaryCategory": {
+"pipedCategory": "Ranges|Flat-Tine-Rack-Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "JGRP748HM",
+"name": "NOIR™ 48\" Gas Professional-Style Range with Chrome-Infused Griddle and Grill",
+"brand": null,
+"url": "/ranges/dual-stacked-burner-ranges/p.noir-48-gas-professional-style-range-with-chrome-infused-griddle-and-grill.jgrp748hm.html",
+"price": {
+"value": 11099.0
+},
+"primaryCategory": {
+"pipedCategory": "Ranges|Dual-Stacked-Burner-Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "JGRP536HM",
+"name": "36\" NOIR™ Gas Professional-Style Range with Chrome-Infused Griddle",
+"brand": null,
+"url": "/ranges/dual-stacked-burner-ranges/p.36-noir-gas-professional-style-range-with-chrome-infused-griddle.jgrp536hm.html",
+"price": {
+"value": 7299.0
+},
+"primaryCategory": {
+"pipedCategory": "Ranges|Dual-Stacked-Burner-Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "JGRP648HM",
+"name": "NOIR™ 48\" Gas Professional-Style Range with Grill",
+"brand": null,
+"url": "/ranges/dual-stacked-burner-ranges/p.noir-48-gas-professional-style-range-with-grill.jgrp648hm.html",
+"price": {
+"value": 10899.0
+},
+"primaryCategory": {
+"pipedCategory": "Ranges|Dual-Stacked-Burner-Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "JGRP548HM",
+"name": "48\" NOIR™ Gas Professional-Style Range with Chrome-Infused Griddle",
+"brand": null,
+"url": "/ranges/dual-stacked-burner-ranges/p.48-noir-gas-professional-style-range-with-chrome-infused-griddle.jgrp548hm.html",
+"price": {
+"value": 10899.0
+},
+"primaryCategory": {
+"pipedCategory": "Ranges|Dual-Stacked-Burner-Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "JJB6424HL",
+"name": "RISE 24\" Built-In Coffee System",
+"brand": null,
+"url": "/built-in-coffee-maker/p.rise-24-built-in-coffee-system.jjb6424hl.html",
+"price": {
+"value": 3999.0
+},
+"primaryCategory": {
+"pipedCategory": "Built-In-Coffee-Maker"
+},
+"isMemberPrice": false
+},
+{
+"code": "JJB6424HM",
+"name": "NOIR 24\" Built-In Coffee System",
+"brand": null,
+"url": "/built-in-coffee-maker/p.noir-24-built-in-coffee-system.jjb6424hm.html",
+"price": {
+"value": 3399.0
+},
+"primaryCategory": {
+"pipedCategory": "Built-In-Coffee-Maker"
+},
+"isMemberPrice": false
+},
+{
+"code": "JJD3024HM",
+"name": "JennAir® NOIR 24\" Warming Drawer",
+"brand": null,
+"url": "/warming-drawers/p.jennair-noir-24-warming-drawer.jjd3024hm.html",
+"price": {
+"value": 1699.0
+},
+"primaryCategory": {
+"pipedCategory": "Warming-Drawers"
+},
+"isMemberPrice": false
+},
+{
+"code": "JJD3024HL",
+"name": "JennAir® RISE 24\" Warming Drawer",
+"brand": null,
+"url": "/warming-drawers/p.jennair-rise-24-warming-drawer.jjd3024hl.html",
+"price": {
+"value": 1999.0
+},
+"primaryCategory": {
+"pipedCategory": "Warming-Drawers"
+},
+"isMemberPrice": false
+},
+{
+"code": "JMC6224HM",
+"name": "NOIR 24\" Built-In Speed Oven",
+"brand": null,
+"url": "/wall-ovens/single-wall-ovens/p.noir-24-built-in-speed-oven.jmc6224hm.html",
+"price": {
+"value": 2999.0
+},
+"primaryCategory": {
+"pipedCategory": "Wall-Ovens|Single-Wall-Ovens"
+},
+"isMemberPrice": false
+},
+{
+"code": "JMC6224HL",
+"name": "RISE 24\" Built-In Speed Oven",
+"brand": null,
+"url": "/wall-ovens/single-wall-ovens/p.rise-24-built-in-speed-oven.jmc6224hl.html",
+"price": {
+"value": 3599.0
+},
+"primaryCategory": {
+"pipedCategory": "Wall-Ovens|Single-Wall-Ovens"
+},
+"isMemberPrice": false
+},
+{
+"code": "JJW6024HL",
+"name": "RISE 24\" Built-In Steam and Convection Wall Oven",
+"brand": null,
+"url": "/wall-ovens/single-wall-ovens/p.rise-24-built-in-steam-and-convection-wall-oven.jjw6024hl.html",
+"price": {
+"value": 3999.0
+},
+"primaryCategory": {
+"pipedCategory": "Wall-Ovens|Single-Wall-Ovens"
+},
+"isMemberPrice": false
+},
+{
+"code": "JJW6024HM",
+"name": "NOIR 24\" Built-In Steam and Convection Wall Oven",
+"brand": null,
+"url": "/wall-ovens/single-wall-ovens/p.noir-24-built-in-steam-and-convection-wall-oven.jjw6024hm.html",
+"price": {
+"value": 3299.0
+},
+"primaryCategory": {
+"pipedCategory": "Wall-Ovens|Single-Wall-Ovens"
+},
+"isMemberPrice": false
+},
+{
+"code": "JJW2424HL",
+"name": "RISE 24\" Built-In Wall Oven with True Convection",
+"brand": null,
+"url": "/wall-ovens/single-wall-ovens/p.rise-24-built-in-wall-oven-with-true-convection.jjw2424hl.html",
+"price": {
+"value": 3599.0
+},
+"primaryCategory": {
+"pipedCategory": "Wall-Ovens|Single-Wall-Ovens"
+},
+"isMemberPrice": false
+},
+{
+"code": "JJW2424HM",
+"name": "NOIR 24\" Built-In Wall Oven with True Convection",
+"brand": null,
+"url": "/wall-ovens/single-wall-ovens/p.noir-24-built-in-wall-oven-with-true-convection.jjw2424hm.html",
+"price": {
+"value": 2999.0
+},
+"primaryCategory": {
+"pipedCategory": "Wall-Ovens|Single-Wall-Ovens"
+},
+"isMemberPrice": false
+},
+{
+"code": "JMC2427IL",
+"name": "RISE™  27\" BUILT-IN MICROWAVE OVEN WITH SPEED-COOK",
+"brand": null,
+"url": "/microwaves/built-in/p.rise-27-built-in-microwave-oven-with-speed-cook.jmc2427il.html",
+"price": {
+"value": 2649.0
+},
+"primaryCategory": {
+"pipedCategory": "Microwaves|Built-In"
+},
+"isMemberPrice": false
+},
+{
+"code": "JUCFP242HL",
+"name": "RISE 24\" Double Drawer Refrigerator/Freezer",
+"brand": null,
+"url": "/refrigeration/undercounter-refrigerators/refrigerator-drawers/p.rise-24-double-drawer-refrigerator-freezer.jucfp242hl.html",
+"price": {
+"value": 4599.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Undercounter-Refrigerators|Refrigerator-Drawers"
+},
+"isMemberPrice": false
+},
+{
+"code": "JUGFR242HM",
+"name": "24\" NOIR™ Under Counter Glass Door Refrigerator, Right Swing",
+"brand": null,
+"url": "/refrigeration/undercounter-refrigerators/compact-refrigerators/p.24-noir-under-counter-glass-door-refrigerator,-right-swing.jugfr242hm.html",
+"price": {
+"value": 2999.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Undercounter-Refrigerators|Compact-Refrigerators"
+},
+"isMemberPrice": false
+},
+{
+"code": "JUGFR242HL",
+"name": "RISE™ 24\"  Under Counter Glass Door Refrigerator, Right Swing",
+"brand": null,
+"url": "/refrigeration/undercounter-refrigerators/compact-refrigerators/p.rise-24-under-counter-glass-door-refrigerator,-right-swing.jugfr242hl.html",
+"price": {
+"value": 3699.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Undercounter-Refrigerators|Compact-Refrigerators"
+},
+"isMemberPrice": false
+},
+{
+"code": "JUGFL242HL",
+"name": "RISE™ 24\"  Under Counter Glass Door Refrigerator, Left Swing",
+"brand": null,
+"url": "/refrigeration/undercounter-refrigerators/compact-refrigerators/p.rise-24-under-counter-glass-door-refrigerator,-left-swing.jugfl242hl.html",
+"price": {
+"value": 3699.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Undercounter-Refrigerators|Compact-Refrigerators"
+},
+"isMemberPrice": false
+},
+{
+"code": "JUGFR242HX",
+"name": "Panel-Ready 24\" Under Counter Glass Door Refrigerator, Right Swing",
+"brand": null,
+"url": "/refrigeration/undercounter-refrigerators/compact-refrigerators/p.panel-ready-24-under-counter-glass-door-refrigerator,-right-swing.jugfr242hx.html",
+"price": {
+"value": 3599.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Undercounter-Refrigerators|Compact-Refrigerators"
+},
+"isMemberPrice": false
+},
+{
+"code": "JURFR242HM",
+"name": "NOIR™ 24\" Under Counter Solid Door Refrigerator, Right Swing",
+"brand": null,
+"url": "/refrigeration/undercounter-refrigerators/compact-refrigerators/p.noir-24-under-counter-solid-door-refrigerator,-right-swing.jurfr242hm.html",
+"price": {
+"value": 2799.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Undercounter-Refrigerators|Compact-Refrigerators"
+},
+"isMemberPrice": false
+},
+{
+"code": "JUGFL242HX",
+"name": "Panel-Ready 24\" Under Counter Glass Door Refrigerator, Left Swing",
+"brand": null,
+"url": "/refrigeration/undercounter-refrigerators/compact-refrigerators/p.panel-ready-24-under-counter-glass-door-refrigerator,-left-swing.jugfl242hx.html",
+"price": {
+"value": 3599.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Undercounter-Refrigerators|Compact-Refrigerators"
+},
+"isMemberPrice": false
+},
+{
+"code": "JUGFL242HM",
+"name": "24\" NOIR™ Under Counter Glass Door Refrigerator, Left Swing",
+"brand": null,
+"url": "/refrigeration/undercounter-refrigerators/compact-refrigerators/p.24-noir-under-counter-glass-door-refrigerator,-left-swing.jugfl242hm.html",
+"price": {
+"value": 2999.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Undercounter-Refrigerators|Compact-Refrigerators"
+},
+"isMemberPrice": false
+},
+{
+"code": "JURFL242HL",
+"name": "RISE™ 24\"  Under Counter Solid Door Refrigerator, Left Swing",
+"brand": null,
+"url": "/refrigeration/undercounter-refrigerators/compact-refrigerators/p.rise-24-under-counter-solid-door-refrigerator,-left-swing.jurfl242hl.html",
+"price": {
+"value": 3299.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Undercounter-Refrigerators|Compact-Refrigerators"
+},
+"isMemberPrice": false
+},
+{
+"code": "JURFR242HL",
+"name": "RISE™ 24\" Under Counter Solid Door Refrigerator, Right Swing",
+"brand": null,
+"url": "/refrigeration/undercounter-refrigerators/compact-refrigerators/p.rise-24-under-counter-solid-door-refrigerator,-right-swing.jurfr242hl.html",
+"price": {
+"value": 3299.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Undercounter-Refrigerators|Compact-Refrigerators"
+},
+"isMemberPrice": false
+},
+{
+"code": "JURFL242HM",
+"name": "NOIR™ 24\" Under Counter Solid Door Refrigerator, Left Swing",
+"brand": null,
+"url": "/refrigeration/undercounter-refrigerators/compact-refrigerators/p.noir-24-under-counter-solid-door-refrigerator,-left-swing.jurfl242hm.html",
+"price": {
+"value": 2799.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Undercounter-Refrigerators|Compact-Refrigerators"
+},
+"isMemberPrice": false
+},
+{
+"code": "JURFR242HX",
+"name": "Panel-Ready 24\" Under Counter Solid Door Refrigerator, Right Swing",
+"brand": null,
+"url": "/refrigeration/undercounter-refrigerators/compact-refrigerators/p.panel-ready-24-under-counter-solid-door-refrigerator,-right-swing.jurfr242hx.html",
+"price": {
+"value": 3199.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Undercounter-Refrigerators|Compact-Refrigerators"
+},
+"isMemberPrice": false
+},
+{
+"code": "JUDFP242HM",
+"name": "NOIR 24\" Double-Refrigerator Drawers",
+"brand": null,
+"url": "/refrigeration/undercounter-refrigerators/refrigerator-drawers/p.noir-24-double-refrigerator-drawers.judfp242hm.html",
+"price": {
+"value": 3799.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Undercounter-Refrigerators|Refrigerator-Drawers"
+},
+"isMemberPrice": false
+},
+{
+"code": "JDSP536HM",
+"name": "NOIR™ 36\" Dual-Fuel Professional-Style Range with Chrome-Infused Griddle and Steam Assist",
+"brand": null,
+"url": "/ranges/dual-stacked-burner-ranges/p.noir-36-dual-fuel-professional-style-range-with-chrome-infused-griddle-and-steam-assist.jdsp536hm.html",
+"price": {
+"value": 9499.0
+},
+"primaryCategory": {
+"pipedCategory": "Ranges|Dual-Stacked-Burner-Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "JJD3030IL",
+"name": "RISE™ 30\" 1.5 cu. ft. Capacity Warming Drawer",
+"brand": null,
+"url": "/warming-drawers/p.rise-30-1.5-cu.-ft.-capacity-warming-drawer.jjd3030il.html",
+"price": {
+"value": 2499.0
+},
+"primaryCategory": {
+"pipedCategory": "Warming-Drawers"
+},
+"isMemberPrice": false
+},
+{
+"code": "JJD3030IM",
+"name": "NOIR™ 30\" 1.5 cu. ft. Capacity Warming Drawer",
+"brand": null,
+"url": "/warming-drawers/p.noir-30-1.5-cu.-ft.-capacity-warming-drawer.jjd3030im.html",
+"price": {
+"value": 2099.0
+},
+"primaryCategory": {
+"pipedCategory": "Warming-Drawers"
+},
+"isMemberPrice": false
+},
+{
+"code": "JJD3027IL",
+"name": "RISE™ 27\", 1.5 cu. ft. Capacity Warming Drawer",
+"brand": null,
+"url": "/warming-drawers/p.rise-27,-1.5-cu.-ft.-capacity-warming-drawer.jjd3027il.html",
+"price": {
+"value": 2399.0
+},
+"primaryCategory": {
+"pipedCategory": "Warming-Drawers"
+},
+"isMemberPrice": false
+},
+{
+"code": "JJD3027IM",
+"name": "NOIR™ 27\", 1.5 cu. ft. Capacity Warming Drawer",
+"brand": null,
+"url": "/warming-drawers/p.noir-27,-1.5-cu.-ft.-capacity-warming-drawer.jjd3027im.html",
+"price": {
+"value": 2099.0
+},
+"primaryCategory": {
+"pipedCategory": "Warming-Drawers"
+},
+"isMemberPrice": false
+},
+{
+"code": "ALOVE30RRC",
+"name": "Burlesque By JennAir® 30\" Column Refrigerator (Right Swing)",
+"brand": null,
+"url": "/statements/p.burlesque-by-jennair-30-column-refrigerator-right-swing.alove30rrc.html",
+"price": {
+"value": 10999.0
+},
+"primaryCategory": {
+"pipedCategory": "Statements"
+},
+"isMemberPrice": false
+},
+{
+"code": "ALOVE24FLC",
+"name": "Burlesque By JennAir® 24\" Column Freezer (Left Swing)",
+"brand": null,
+"url": "/statements/p.burlesque-by-jennair-24-column-freezer-left-swing.alove24flc.html",
+"price": {
+"value": 10599.0
+},
+"primaryCategory": {
+"pipedCategory": "Statements"
+},
+"isMemberPrice": false
+},
+{
+"code": "ALOVE24RRC",
+"name": "Burlesque By JennAir® 24\" Column Refrigerator (Right Swing)",
+"brand": null,
+"url": "/statements/p.burlesque-by-jennair-24-column-refrigerator-right-swing.alove24rrc.html",
+"price": {
+"value": 10599.0
+},
+"primaryCategory": {
+"pipedCategory": "Statements"
+},
+"isMemberPrice": false
+},
+{
+"code": "ALOVE18FLC",
+"name": "Burlesque By JennAir® 18\" Column Freezer (Left Swing)",
+"brand": null,
+"url": "/statements/p.burlesque-by-jennair-18-column-freezer-left-swing.alove18flc.html",
+"price": {
+"value": 9999.0
+},
+"primaryCategory": {
+"pipedCategory": "Statements"
+},
+"isMemberPrice": false
+},
+{
+"code": "JGRP430HM",
+"name": "30\" NOIR™ Gas Professional-Style Range",
+"brand": null,
+"url": "/ranges/dual-stacked-burner-ranges/p.30-noir-gas-professional-style-range.jgrp430hm.html",
+"price": {
+"value": 4799.0
+},
+"primaryCategory": {
+"pipedCategory": "Ranges|Dual-Stacked-Burner-Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "JDSP548HM",
+"name": "NOIR™ 48\" Dual-Fuel Professional-Style Range with Chrome-Infused Griddle and Steam Assist",
+"brand": null,
+"url": "/ranges/dual-stacked-burner-ranges/p.noir-48-dual-fuel-professional-style-range-with-chrome-infused-griddle-and-steam-assist.jdsp548hm.html",
+"price": {
+"value": 13099.0
+},
+"primaryCategory": {
+"pipedCategory": "Ranges|Dual-Stacked-Burner-Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "JMDFS24JL",
+"name": "RISE™ 24” Under Counter Microwave Oven with Drawer Design",
+"brand": null,
+"url": "/microwaves/drawer/p.rise-24”-under-counter-microwave-oven-with-drawer-design.jmdfs24jl.html",
+"price": {
+"value": 2399.0
+},
+"primaryCategory": {
+"pipedCategory": "Microwaves|Drawer"
+},
+"isMemberPrice": false
+},
+{
+"code": "JFFCF72DKL",
+"name": "RISE 36\" French Door Freestanding Refrigerator",
+"brand": null,
+"url": "/refrigeration/french-door-refrigerators/p.rise-36-french-door-freestanding-refrigerator.jffcf72dkl.html",
+"price": {
+"value": 4599.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|French-Door-Refrigerators"
+},
+"isMemberPrice": false
+},
+{
+"code": "JURFL242HX",
+"name": "Panel-Ready 24\" Under Counter Solid Door Refrigerator, Left Swing",
+"brand": null,
+"url": "/refrigeration/undercounter-refrigerators/compact-refrigerators/p.panel-ready-24-under-counter-solid-door-refrigerator,-left-swing.jurfl242hx.html",
+"price": {
+"value": 3199.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Undercounter-Refrigerators|Compact-Refrigerators"
+},
+"isMemberPrice": false
+},
+{
+"code": "UVL6048JSS",
+"name": "48\" 585 or 1170 CFM Motor Class Custom Hood Liner",
+"brand": null,
+"url": "/hoods-and-ventilation/wall-mount-ventilation/p.48-585-or-1170-cfm-motor-class-custom-hood-liner.uvl6048jss.html",
+"price": {
+"value": 1349.0
+},
+"primaryCategory": {
+"pipedCategory": "Hoods-and-Ventilation|Wall-Mount-Ventilation"
+},
+"isMemberPrice": false
+},
+{
+"code": "UVL6036JSS",
+"name": "36\" 585 or 1170 CFM Motor Class Custom Hood Liner",
+"brand": null,
+"url": "/hoods-and-ventilation/wall-mount-ventilation/p.36-585-or-1170-cfm-motor-class-custom-hood-liner.uvl6036jss.html",
+"price": {
+"value": 1249.0
+},
+"primaryCategory": {
+"pipedCategory": "Hoods-and-Ventilation|Wall-Mount-Ventilation"
+},
+"isMemberPrice": false
+},
+{
+"code": "UVL5430JSS",
+"name": "30\" 400 CFM Motor Class Custom Hood Liner",
+"brand": null,
+"url": "/hoods-and-ventilation/wall-mount-ventilation/p.30-400-cfm-motor-class-custom-hood-liner.uvl5430jss.html",
+"price": {
+"value": 849.0
+},
+"primaryCategory": {
+"pipedCategory": "Hoods-and-Ventilation|Wall-Mount-Ventilation"
+},
+"isMemberPrice": false
+},
+{
+"code": "JDPSS244LM",
+"name": "NOIR™ 24\" Built-In Dishwasher, 39 dBA",
+"brand": null,
+"url": "/dishwashers/p.noir-24-built-in-dishwasher,-39-dba.jdpss244lm.html",
+"price": {
+"value": 1599.0
+},
+"primaryCategory": {
+"pipedCategory": "Dishwashers"
+},
+"isMemberPrice": false
+},
+{
+"code": "JUDFP242HL",
+"name": "RISE 24\" Double-Refrigerator Drawers",
+"brand": null,
+"url": "/refrigeration/undercounter-refrigerators/refrigerator-drawers/p.rise-24-double-refrigerator-drawers.judfp242hl.html",
+"price": {
+"value": 4499.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Undercounter-Refrigerators|Refrigerator-Drawers"
+},
+"isMemberPrice": false
+},
+{
+"code": "JDPSS245LX",
+"name": "Panel-Ready 24\" Built-In Dishwasher, 38 dBA",
+"brand": null,
+"url": "/dishwashers/p.panel-ready-24-built-in-dishwasher,-38-dba.jdpss245lx.html",
+"price": {
+"value": 2199.0
+},
+"primaryCategory": {
+"pipedCategory": "Dishwashers"
+},
+"isMemberPrice": false
+},
+{
+"code": "JEC4536KB",
+"name": "Oblivion 36\" Electric Radiant Cooktop with Emotive Controls",
+"brand": null,
+"url": "/cooktops/electric/traditional-electric-cooktops/p.oblivion-36-electric-radiant-cooktop-with-emotive-controls.jec4536kb.html",
+"price": {
+"value": 2349.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooktops|Electric|Traditional-Electric-Cooktops"
+},
+"isMemberPrice": false
+},
+{
+"code": "JEC4536KS",
+"name": "Lustre 36\" Electric Radiant Cooktop with Emotive Controls",
+"brand": null,
+"url": "/cooktops/electric/traditional-electric-cooktops/p.lustre-36-electric-radiant-cooktop-with-emotive-controls.jec4536ks.html",
+"price": {
+"value": 2349.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooktops|Electric|Traditional-Electric-Cooktops"
+},
+"isMemberPrice": false
+},
+{
+"code": "JEC4424KB",
+"name": "Oblivion 24\" Electric Radiant Cooktop with Emotive Controls",
+"brand": null,
+"url": "/cooktops/electric/radiant-cooktops/p.oblivion-24-electric-radiant-cooktop-with-emotive-controls.jec4424kb.html",
+"price": {
+"value": 1799.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooktops|Electric|Radiant-Cooktops"
+},
+"isMemberPrice": false
+},
+{
+"code": "JEC4430KS",
+"name": "Lustre 30\" Electric Radiant Cooktop with Emotive Controls",
+"brand": null,
+"url": "/cooktops/electric/traditional-electric-cooktops/p.lustre-30-electric-radiant-cooktop-with-emotive-controls.jec4430ks.html",
+"price": {
+"value": 2149.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooktops|Electric|Traditional-Electric-Cooktops"
+},
+"isMemberPrice": false
+},
+{
+"code": "JEC4430KB",
+"name": "Oblivion 30\" Electric Radiant Cooktop with Emotive Controls",
+"brand": null,
+"url": "/cooktops/electric/traditional-electric-cooktops/p.oblivion-30-electric-radiant-cooktop-with-emotive-controls.jec4430kb.html",
+"price": {
+"value": 2149.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooktops|Electric|Traditional-Electric-Cooktops"
+},
+"isMemberPrice": false
+},
+{
+"code": "JIC4530KS",
+"name": "Lustre 30\" Induction Cooktop",
+"brand": null,
+"url": "/cooktops/electric/induction-cooktops/p.lustre-30-induction-cooktop.jic4530ks.html",
+"price": {
+"value": 2599.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooktops|Electric|Induction-Cooktops"
+},
+"isMemberPrice": false
+},
+{
+"code": "JMC2427LM",
+"name": "NOIR™ 27\" Built-In Microwave Oven with Speed-Cook",
+"brand": null,
+"url": "/microwaves/built-in/p.noir-27-built-in-microwave-oven-with-speed-cook.jmc2427lm.html",
+"price": {
+"value": 5998.0
+},
+"primaryCategory": {
+"pipedCategory": "Microwaves|Built-In"
+},
+"isMemberPrice": false
+},
+{
+"code": "JMC2427LL",
+"name": "RISE™ 27\" Built-In Microwave Oven with Speed-Cook",
+"brand": null,
+"url": "/microwaves/built-in/p.rise-27-built-in-microwave-oven-with-speed-cook.jmc2427ll.html",
+"price": {
+"value": 2999.0
+},
+"primaryCategory": {
+"pipedCategory": "Microwaves|Built-In"
+},
+"isMemberPrice": false
+},
+{
+"code": "JMW2430LL",
+"name": "RISE™ 30\" Combination Microwave/Wall Oven",
+"brand": null,
+"url": "/wall-ovens/wall-oven-microwave-combinations/p.rise-30-combination-microwave-wall-oven.jmw2430ll.html",
+"price": {
+"value": 6299.0
+},
+"primaryCategory": {
+"pipedCategory": "Wall-Ovens|Wall-Oven-Microwave-Combinations"
+},
+"isMemberPrice": false
+},
+{
+"code": "JJW2430LL",
+"name": "RISE™ 30\" Single Wall Oven",
+"brand": null,
+"url": "/wall-ovens/single-wall-ovens/p.rise-30-single-wall-oven.jjw2430ll.html",
+"price": {
+"value": 4599.0
+},
+"primaryCategory": {
+"pipedCategory": "Wall-Ovens|Single-Wall-Ovens"
+},
+"isMemberPrice": false
+},
+{
+"code": "JVW0636LS",
+"name": "Stainless Steel 36\" Wall Mount Hood",
+"brand": null,
+"url": "/hoods-and-ventilation/wall-mount-ventilation/p.stainless-steel-36-wall-mount-hood.jvw0636ls.html",
+"price": {
+"value": 2599.0
+},
+"primaryCategory": {
+"pipedCategory": "Hoods-and-Ventilation|Wall-Mount-Ventilation"
+},
+"isMemberPrice": false
+},
+{
+"code": "JVW0630LS",
+"name": "Stainless Steel 30\" Wall Mount Hood",
+"brand": null,
+"url": "/hoods-and-ventilation/wall-mount-ventilation/p.stainless-steel-30-wall-mount-hood.jvw0630ls.html",
+"price": {
+"value": 2499.0
+},
+"primaryCategory": {
+"pipedCategory": "Hoods-and-Ventilation|Wall-Mount-Ventilation"
+},
+"isMemberPrice": false
+},
+{
+"code": "JVI0636LS",
+"name": "Stainless Steel 36\" Island Mount Hood",
+"brand": null,
+"url": "/hoods-and-ventilation/island-mount-ventilation/p.stainless-steel-36-island-mount-hood.jvi0636ls.html",
+"price": {
+"value": 2999.0
+},
+"primaryCategory": {
+"pipedCategory": "Hoods-and-Ventilation|Island-Mount-Ventilation"
+},
+"isMemberPrice": false
+},
+{
+"code": "JVW0330LS",
+"name": "Stainless Steel 30\" Wall Mount Hood",
+"brand": null,
+"url": "/hoods-and-ventilation/wall-mount-ventilation/p.stainless-steel-30-wall-mount-hood.jvw0330ls.html",
+"price": {
+"value": 2499.0
+},
+"primaryCategory": {
+"pipedCategory": "Hoods-and-Ventilation|Wall-Mount-Ventilation"
+},
+"isMemberPrice": false
+},
+{
+"code": "JMW3430LM",
+"name": "NOIR™ 30\" Combination Microwave/Wall Oven with V2™ Vertical Dual-Fan Convection",
+"brand": null,
+"url": "/wall-ovens/wall-oven-microwave-combinations/p.noir-30-combination-microwave-wall-oven-with-v2-vertical-dual-fan-convection.jmw3430lm.html",
+"price": {
+"value": 7399.0
+},
+"primaryCategory": {
+"pipedCategory": "Wall-Ovens|Wall-Oven-Microwave-Combinations"
+},
+"isMemberPrice": false
+},
+{
+"code": "JBSS42E22L",
+"name": "RISE™ 42\" Built-In Side-By-Side Refrigerator with External Ice and Water Dispenser",
+"brand": null,
+"url": "/refrigeration/built-in-refrigerators/p.rise-42-built-in-side-by-side-refrigerator-with-external-ice-and-water-dispenser.jbss42e22l.html",
+"price": {
+"value": 12999.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Built-in-Refrigerators"
+},
+"isMemberPrice": false
+},
+{
+"code": "JBSS48E22L",
+"name": "RISE™ 48\" Built-In Side-By-Side Refrigerator with External Ice and Water Dispenser",
+"brand": null,
+"url": "/refrigeration/built-in-refrigerators/p.rise-48-built-in-side-by-side-refrigerator-with-external-ice-and-water-dispenser.jbss48e22l.html",
+"price": {
+"value": 14199.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Built-in-Refrigerators"
+},
+"isMemberPrice": false
+},
+{
+"code": "JBSFS42NMX",
+"name": "Panel-Ready 42\" Built-In Side-By-Side Refrigerator",
+"brand": null,
+"url": "/refrigeration/built-in-refrigerators/p.panel-ready-42-built-in-side-by-side-refrigerator.jbsfs42nmx.html",
+"price": {
+"value": 11399.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Built-in-Refrigerators"
+},
+"isMemberPrice": false
+},
+{
+"code": "JBSFS48NMX",
+"name": "Panel-Ready 48\" Built-In Side-By-Side Refrigerator",
+"brand": null,
+"url": "/refrigeration/built-in-refrigerators/p.panel-ready-48-built-in-side-by-side-refrigerator.jbsfs48nmx.html",
+"price": {
+"value": 12599.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Built-in-Refrigerators"
+},
+"isMemberPrice": false
+},
+{
+"code": "JBBFX22NMX",
+"name": "22\" Built-In Bottom Mount Refrigerator",
+"brand": null,
+"url": "/refrigeration/built-in-refrigerators/p.22-built-in-bottom-mount-refrigerator.jbbfx22nmx.html",
+"price": {
+"value": 4299.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Built-in-Refrigerators"
+},
+"isMemberPrice": false
+},
+{
+"code": "JES1450ML",
+"name": "RISE™ 30\" ELECTRIC SLIDE-IN RANGE",
+"brand": null,
+"url": "/ranges/electric/slide-in-electric-ranges/p.rise-30-electric-slide-in-range.jes1450ml.html",
+"price": {
+"value": 3699.0
+},
+"primaryCategory": {
+"pipedCategory": "Ranges|Electric|Slide-In-Electric-Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "JES1750ML",
+"name": "RISE™ 30\" ELECTRIC DOWNDRAFT SLIDE-IN RANGE",
+"brand": null,
+"url": "/ranges/electric/downdraft-electric-ranges/p.rise-30-electric-downdraft-slide-in-range.jes1750ml.html",
+"price": {
+"value": 4299.0
+},
+"primaryCategory": {
+"pipedCategory": "Ranges|Electric|Downdraft-Electric-Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "JDS1750ML",
+"name": "RISE™ 30\" DUAL-FUEL DOWNDRAFT SLIDE-IN RANGE",
+"brand": null,
+"url": "/ranges/dual-fuel/slide-in-dual-fuel-ranges/p.rise-30-dual-fuel-downdraft-slide-in-range.jds1750ml.html",
+"price": {
+"value": 4699.0
+},
+"primaryCategory": {
+"pipedCategory": "Ranges|Dual-Fuel|Slide-In-Dual-Fuel-Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "JDS1450ML",
+"name": "RISE™ 30\" DUAL-FUEL SLIDE-IN RANGE",
+"brand": null,
+"url": "/ranges/dual-fuel/slide-in-dual-fuel-ranges/p.rise-30-dual-fuel-slide-in-range.jds1450ml.html",
+"price": {
+"value": 3899.0
+},
+"primaryCategory": {
+"pipedCategory": "Ranges|Dual-Fuel|Slide-In-Dual-Fuel-Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "JGS1450ML",
+"name": "RISE™ 30\" GAS SLIDE-IN RANGE",
+"brand": null,
+"url": "/ranges/gas/slide-in-gas-ranges/p.rise-30-gas-slide-in-range.jgs1450ml.html",
+"price": {
+"value": 3699.0
+},
+"primaryCategory": {
+"pipedCategory": "Ranges|Gas|Slide-In-Gas-Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "JIS1450ML",
+"name": "RISE™ 30” Induction Slide-In Range",
+"brand": null,
+"url": "/ranges/electric/slide-in-electric-ranges/p.rise-30”-induction-slide-in-range.jis1450ml.html",
+"price": {
+"value": 4499.0
+},
+"primaryCategory": {
+"pipedCategory": "Ranges|Electric|Slide-In-Electric-Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "JDPSG244PS",
+"name": "Pocket-Handle 24\" Built-In Dishwasher, 39 dBA",
+"brand": null,
+"url": "/dishwashers/p.pocket-handle-24-built-in-dishwasher,-39-dba.jdpsg244ps.html",
+"price": {
+"value": 1449.0
+},
+"primaryCategory": {
+"pipedCategory": "Dishwashers"
+},
+"isMemberPrice": false
+},
+{
+"code": "JDPSS244PM",
+"name": "NOIR™ 24\" Built-In Dishwasher, 39 dBA",
+"brand": null,
+"url": "/dishwashers/p.noir-24-built-in-dishwasher,-39-dba.jdpss244pm.html",
+"price": {
+"value": 1649.0
+},
+"primaryCategory": {
+"pipedCategory": "Dishwashers"
+},
+"isMemberPrice": false
+},
+{
+"code": "JMHF730RBL",
+"name": "30\" Flush Oven Hood Combination with Air Fry Mode",
+"brand": null,
+"url": "/microwaves/over-the-range/p.30-flush-oven-hood-combination-with-air-fry-mode.jmhf730rbl.html",
+"price": {
+"value": 899.0
+},
+"primaryCategory": {
+"pipedCategory": "Microwaves|Over-the-Range"
+},
+"isMemberPrice": false
+},
+{
+"code": "JMHF930RSS",
+"name": "30\" Flush 7-in-1 Oven Hood Combination",
+"brand": null,
+"url": "/microwaves/over-the-range/p.30-flush-7-in-1-oven-hood-combination.jmhf930rss.html",
+"price": {
+"value": 1299.0
+},
+"primaryCategory": {
+"pipedCategory": "Microwaves|Over-the-Range"
+},
+"isMemberPrice": false
+},
+{
+"code": "JFFCF72DKM",
+"name": "NOIR 36\" French Door Freestanding Refrigerator",
+"brand": null,
+"url": "/refrigeration/french-door-refrigerators/p.noir-36-french-door-freestanding-refrigerator.jffcf72dkm.html",
+"price": {
+"value": 3899.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|French-Door-Refrigerators"
+},
+"isMemberPrice": false
+},
+{
+"code": "JGCK424PS",
+"name": "24\" Gas Cooktop",
+"brand": null,
+"url": "/cooktops/gas/traditional-gas-cooktops/p.24-gas-cooktop.jgck424ps.html",
+"price": {
+"value": 1999.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooktops|Gas|Traditional-Gas-Cooktops"
+},
+"isMemberPrice": false
+},
+{
+"code": "JBBFL30NMX",
+"name": "Panel-Ready 30\" Built-In Bottom-Mount Refrigerator, Left Swing",
+"brand": null,
+"url": "/refrigeration/built-in-refrigerators/p.panel-ready-30-built-in-bottom-mount-refrigerator,-left-swing.jbbfl30nmx.html",
+"price": {
+"value": 10299.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Built-in-Refrigerators"
+},
+"isMemberPrice": false
+},
+{
+"code": "JBBFR30NMX",
+"name": "Panel-Ready 30\" Built-In Bottom-Mount Refrigerator, Right Swing",
+"brand": null,
+"url": "/refrigeration/built-in-refrigerators/p.panel-ready-30-built-in-bottom-mount-refrigerator,-right-swing.jbbfr30nmx.html",
+"price": {
+"value": 10299.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Built-in-Refrigerators"
+},
+"isMemberPrice": false
+},
+{
+"code": "JDAF3924RX",
+"name": "24\" Panel-Ready Fully Integrated Dishwasher with Precise Fit 3rd Rack for Cutlery",
+"brand": null,
+"url": "/dishwashers/p.24-panel-ready-fully-integrated-dishwasher-with-precise-fit-3rd-rack-for-cutlery.jdaf3924rx.html",
+"price": {
+"value": 1999.0
+},
+"primaryCategory": {
+"pipedCategory": "Dishwashers"
+},
+"isMemberPrice": false
+},
+{
+"code": "JDAF5924RX",
+"name": "24\" Panel-Ready Fully Integrated Dishwasher with 3rd Level Rack with Wash",
+"brand": null,
+"url": "/dishwashers/p.24-panel-ready-fully-integrated-dishwasher-with-3rd-level-rack-with-wash.jdaf5924rx.html",
+"price": {
+"value": 2599.0
+},
+"primaryCategory": {
+"pipedCategory": "Dishwashers"
+},
+"isMemberPrice": false
+},
+{
+"code": "JDAF5924RM",
+"name": "24\" NOIR™ Fully Integrated Dishwasher with 3rd Level Rack with Wash",
+"brand": null,
+"url": "/dishwashers/p.24-noir-fully-integrated-dishwasher-with-3rd-level-rack-with-wash.jdaf5924rm.html",
+"price": {
+"value": 2099.0
+},
+"primaryCategory": {
+"pipedCategory": "Dishwashers"
+},
+"isMemberPrice": false
+},
+{
+"code": "JDAF5924RL",
+"name": "24\" RISE™ Fully Integrated Dishwasher with 3rd Level Rack with Wash",
+"brand": null,
+"url": "/dishwashers/p.24-rise-fully-integrated-dishwasher-with-3rd-level-rack-with-wash.jdaf5924rl.html",
+"price": {
+"value": 2699.0
+},
+"primaryCategory": {
+"pipedCategory": "Dishwashers"
+},
+"isMemberPrice": false
+},
+{
+"code": "JMCTC15RB",
+"name": "Countertop Microwave",
+"brand": null,
+"url": "/microwaves/countertop/p.countertop-microwave.jmctc15rb.html",
+"price": {
+"value": 999.0
+},
+"primaryCategory": {
+"pipedCategory": "Microwaves|Countertop"
+},
+"isMemberPrice": false
+},
+{
+"code": "JOEDC330RL",
+"name": "RISE™ 30\" Double Wall Oven with MultiMode® True Convection",
+"brand": null,
+"url": "/wall-ovens/double-wall-ovens/p.rise-30-double-wall-oven-with-multimode-true-convection.joedc330rl.html",
+"price": {
+"value": 6399.0
+},
+"primaryCategory": {
+"pipedCategory": "Wall-Ovens|Double-Wall-Ovens"
+},
+"isMemberPrice": false
+},
+{
+"code": "JOEDC330RM",
+"name": "NOIR™ 30\" Double Wall Oven with MultiMode® True Convection",
+"brand": null,
+"url": "/wall-ovens/double-wall-ovens/p.noir-30-double-wall-oven-with-multimode-true-convection.joedc330rm.html",
+"price": {
+"value": 5399.0
+},
+"primaryCategory": {
+"pipedCategory": "Wall-Ovens|Double-Wall-Ovens"
+},
+"isMemberPrice": false
+},
+{
+"code": "JOECC530RL",
+"name": "RISE™ Microwave Combination Wall Oven with MultiMode® Convection",
+"brand": null,
+"url": "/wall-ovens/wall-oven-microwave-combinations/p.rise-microwave-combination-wall-oven-with-multimode-convection.joecc530rl.html",
+"price": {
+"value": 6899.0
+},
+"primaryCategory": {
+"pipedCategory": "Wall-Ovens|Wall-Oven-Microwave-Combinations"
+},
+"isMemberPrice": false
+},
+{
+"code": "JOEDC730RL",
+"name": "RISE™ 30\" Double Wall Oven with V2™ Vertical Dual-Fan True Convection with Advanced Temperature Precision",
+"brand": null,
+"url": "/wall-ovens/double-wall-ovens/p.rise-30-double-wall-oven-with-v2-vertical-dual-fan-true-convection-with-advanced-temperature-precision.joedc730rl.html",
+"price": {
+"value": 8199.0
+},
+"primaryCategory": {
+"pipedCategory": "Wall-Ovens|Double-Wall-Ovens"
+},
+"isMemberPrice": false
+},
+{
+"code": "JOEDC530RM",
+"name": "NOIR™ 30\" Double Wall Oven with MultiMode® True Convection with Smooth Glide Flat-Tine Racks",
+"brand": null,
+"url": "/wall-ovens/double-wall-ovens/p.noir-30-double-wall-oven-with-multimode-true-convection-with-smooth-glide-flat-tine-racks.joedc530rm.html",
+"price": {
+"value": 5999.0
+},
+"primaryCategory": {
+"pipedCategory": "Wall-Ovens|Double-Wall-Ovens"
+},
+"isMemberPrice": false
+},
+{
+"code": "JOECC730RL",
+"name": "RISE™ Microwave Combination Wall Oven with V2™ Vertical Dual-Fan True Convection with Advanced Temperature Precision",
+"brand": null,
+"url": "/wall-ovens/wall-oven-microwave-combinations/p.rise-microwave-combination-wall-oven-with-v2-vertical-dual-fan-true-convection-with-advanced-temperature-precision.joecc730rl.html",
+"price": {
+"value": 7999.0
+},
+"primaryCategory": {
+"pipedCategory": "Wall-Ovens|Wall-Oven-Microwave-Combinations"
+},
+"isMemberPrice": false
+},
+{
+"code": "JOECC530RM",
+"name": "NOIR™ Microwave Combination Wall Oven with MultiMode® Convection",
+"brand": null,
+"url": "/wall-ovens/wall-oven-microwave-combinations/p.noir-microwave-combination-wall-oven-with-multimode-convection.joecc530rm.html",
+"price": {
+"value": 5899.0
+},
+"primaryCategory": {
+"pipedCategory": "Wall-Ovens|Wall-Oven-Microwave-Combinations"
+},
+"isMemberPrice": false
+},
+{
+"code": "JOEDC530RL",
+"name": "RISE™ 30\" Double Wall Oven with MultiMode® True Convection with Smooth Glide Flat-Tine Racks",
+"brand": null,
+"url": "/wall-ovens/double-wall-ovens/p.rise-30-double-wall-oven-with-multimode-true-convection-with-smooth-glide-flat-tine-racks.joedc530rl.html",
+"price": {
+"value": 6999.0
+},
+"primaryCategory": {
+"pipedCategory": "Wall-Ovens|Double-Wall-Ovens"
+},
+"isMemberPrice": false
+},
+{
+"code": "JOEDC730RM",
+"name": "NOIR™ 30\" Double Wall Oven with V2™ Vertical Dual-Fan True Convection with Advanced Temperature Precision",
+"brand": null,
+"url": "/wall-ovens/double-wall-ovens/p.noir-30-double-wall-oven-with-v2-vertical-dual-fan-true-convection-with-advanced-temperature-precision.joedc730rm.html",
+"price": {
+"value": 6999.0
+},
+"primaryCategory": {
+"pipedCategory": "Wall-Ovens|Double-Wall-Ovens"
+},
+"isMemberPrice": false
+},
+{
+"code": "JOECC730RM",
+"name": "NOIR™ Microwave Combination Wall Oven with V2™ Vertical Dual-Fan True Convection with Advanced Temperature Precision",
+"brand": null,
+"url": "/wall-ovens/wall-oven-microwave-combinations/p.noir-microwave-combination-wall-oven-with-v2-vertical-dual-fan-true-convection-with-advanced-temperature-precision.joecc730rm.html",
+"price": {
+"value": 6799.0
+},
+"primaryCategory": {
+"pipedCategory": "Wall-Ovens|Wall-Oven-Microwave-Combinations"
+},
+"isMemberPrice": false
+},
+{
+"code": "JDTS3924SL",
+"name": "RISE™ 24\" Built-In Dishwasher with Precise Fit 3rd Rack for Cutlery with Plasma Coating, 39 dBA",
+"brand": null,
+"url": "/dishwashers/p.rise-24-built-in-dishwasher-with-precise-fit-3rd-rack-for-cutlery-with-plasma-coating,-39-dba.jdts3924sl.html",
+"price": {
+"value": 1699.0
+},
+"primaryCategory": {
+"pipedCategory": "Dishwashers"
+},
+"isMemberPrice": false
+},
+{
+"code": "JDTS3924SP",
+"name": "Pocket Handle 24\" Built-In Dishwasher with Precise Fit 3rd Rack for Cutlery with Plasma Coating, 39 dBA",
+"brand": null,
+"url": "/dishwashers/p.pocket-handle-24-built-in-dishwasher-with-precise-fit-3rd-rack-for-cutlery-with-plasma-coating,-39-dba.jdts3924sp.html",
+"price": {
+"value": 1499.0
+},
+"primaryCategory": {
+"pipedCategory": "Dishwashers"
+},
+"isMemberPrice": false
+},
+{
+"code": "JDTS3924SM",
+"name": "NOIR™ 24\" Built-In Dishwasher with Precise Fit 3rd Rack for Cutlery with Plasma Coating, 39 dBA",
+"brand": null,
+"url": "/dishwashers/p.noir-24-built-in-dishwasher-with-precise-fit-3rd-rack-for-cutlery-with-plasma-coating,-39-dba.jdts3924sm.html",
+"price": {
+"value": 1499.0
+},
+"primaryCategory": {
+"pipedCategory": "Dishwashers"
+},
+"isMemberPrice": false
+},
+{
+"code": "JOESC330RL",
+"name": "RISE™ 30\" Single Oven With MultiMode® Convection system",
+"brand": null,
+"url": "/wall-ovens/single-wall-ovens/p.rise-30-single-oven-with-multimode-convection-system.joesc330rl.html",
+"price": {
+"value": 4599.0
+},
+"primaryCategory": {
+"pipedCategory": "Wall-Ovens|Single-Wall-Ovens"
+},
+"isMemberPrice": false
+},
+{
+"code": "JOESC330RM",
+"name": "NOIR™ 30\" Single Oven With MultiMode® Convection system",
+"brand": null,
+"url": "/wall-ovens/single-wall-ovens/p.noir-30-single-oven-with-multimode-convection-system.joesc330rm.html",
+"price": {
+"value": 3899.0
+},
+"primaryCategory": {
+"pipedCategory": "Wall-Ovens|Single-Wall-Ovens"
+},
+"isMemberPrice": false
+},
+{
+"code": "JOESC730RL",
+"name": "RISE™ Single Wall Oven with V2™ Vertical Dual-Fan True Convection, Advanced Temperature Precision",
+"brand": null,
+"url": "/wall-ovens/single-wall-ovens/p.rise-single-wall-oven-with-v2-vertical-dual-fan-true-convection,-advanced-temperature-precision.joesc730rl.html",
+"price": {
+"value": 5599.0
+},
+"primaryCategory": {
+"pipedCategory": "Wall-Ovens|Single-Wall-Ovens"
+},
+"isMemberPrice": false
+},
+{
+"code": "JOESC530RM",
+"name": "NOIR™ Single Wall Oven with MultiMode® True Convection, Flat-Tine Racks",
+"brand": null,
+"url": "/wall-ovens/single-wall-ovens/p.noir-single-wall-oven-with-multimode-true-convection,-flat-tine-racks.joesc530rm.html",
+"price": {
+"value": 4299.0
+},
+"primaryCategory": {
+"pipedCategory": "Wall-Ovens|Single-Wall-Ovens"
+},
+"isMemberPrice": false
+},
+{
+"code": "JOESC530RL",
+"name": "RISE™ Single Wall Oven with MultiMode® True Convection, Flat-Tine Racks",
+"brand": null,
+"url": "/wall-ovens/single-wall-ovens/p.rise-single-wall-oven-with-multimode-true-convection,-flat-tine-racks.joesc530rl.html",
+"price": {
+"value": 4999.0
+},
+"primaryCategory": {
+"pipedCategory": "Wall-Ovens|Single-Wall-Ovens"
+},
+"isMemberPrice": false
+},
+{
+"code": "JOESC730RM",
+"name": "NOIR™ Single Wall Oven with V2™ Vertical Dual-Fan True Convection, Advanced Temperature Precision",
+"brand": null,
+"url": "/wall-ovens/single-wall-ovens/p.noir-single-wall-oven-with-v2-vertical-dual-fan-true-convection,-advanced-temperature-precision.joesc730rm.html",
+"price": {
+"value": 4799.0
+},
+"primaryCategory": {
+"pipedCategory": "Wall-Ovens|Single-Wall-Ovens"
+},
+"isMemberPrice": false
+},
+{
+"code": "JBWFNL18RX",
+"name": "18\"Panel-Ready Built-In Wine Column Refrigerator, Left Swing",
+"brand": null,
+"url": "/refrigeration/columns/column-wine-cellars/p.18panel-ready-built-in-wine-column-refrigerator,-left-swing.jbwfnl18rx.html",
+"price": {
+"value": 8999.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Columns|Column-Wine-Cellars"
+},
+"isMemberPrice": false
+},
+{
+"code": "JBWFNL24RX",
+"name": "24\"Panel-Ready Built-In Wine Column Refrigerator, Left Swing",
+"brand": null,
+"url": "/refrigeration/columns/column-wine-cellars/p.24panel-ready-built-in-wine-column-refrigerator,-left-swing.jbwfnl24rx.html",
+"price": {
+"value": 9499.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Columns|Column-Wine-Cellars"
+},
+"isMemberPrice": false
+},
+{
+"code": "JBWFNR18RX",
+"name": "18\"Panel-Ready Built-In Wine Column Refrigerator, Right Swing",
+"brand": null,
+"url": "/refrigeration/columns/column-wine-cellars/p.18panel-ready-built-in-wine-column-refrigerator,-right-swing.jbwfnr18rx.html",
+"price": {
+"value": 8999.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Columns|Column-Wine-Cellars"
+},
+"isMemberPrice": false
+},
+{
+"code": "JBWFNR24RX",
+"name": "24\"Panel-Ready Built-In Wine Column Refrigerator, Right Swing",
+"brand": null,
+"url": "/refrigeration/columns/column-wine-cellars/p.24panel-ready-built-in-wine-column-refrigerator,-right-swing.jbwfnr24rx.html",
+"price": {
+"value": 9499.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Columns|Column-Wine-Cellars"
+},
+"isMemberPrice": false
+},
+{
+"code": "JBRFSR30RX",
+"name": "30\" Right Swing Column Refrigerator featuring Slimtech Insulation Technology in Door",
+"brand": null,
+"url": "/refrigeration/columns/column-refrigerators/p.30-right-swing-column-refrigerator-featuring-slimtech-insulation-technology-in-door.jbrfsr30rx.html",
+"price": {
+"value": 8999.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Columns|Column-Refrigerators"
+},
+"isMemberPrice": false
+},
+{
+"code": "JICT724SB",
+"name": "24” Oblivion Smart Induction Cooktop with Temperature-Controlled Cooking",
+"brand": null,
+"url": "/cooktops/electric/induction-cooktops/p.24”-oblivion-smart-induction-cooktop-with-temperature-controlled-cooking.jict724sb.html",
+"price": {
+"value": 2599.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooktops|Electric|Induction-Cooktops"
+},
+"isMemberPrice": false
+},
+{
+"code": "JOEMC130RL",
+"name": "RISE™ 30\" Single Wall Speed Oven",
+"brand": null,
+"url": "/microwaves/built-in/p.rise-30-single-wall-speed-oven.joemc130rl.html",
+"price": {
+"value": 3499.0
+},
+"primaryCategory": {
+"pipedCategory": "Microwaves|Built-In"
+},
+"isMemberPrice": false
+},
+{
+"code": "JOEMC130RM",
+"name": "NOIR™ 30\" Single Wall Speed Oven",
+"brand": null,
+"url": "/microwaves/built-in/p.noir-30-single-wall-speed-oven.joemc130rm.html",
+"price": {
+"value": 2799.0
+},
+"primaryCategory": {
+"pipedCategory": "Microwaves|Built-In"
+},
+"isMemberPrice": false
+},
+{
+"code": "JIDT836SBL",
+"name": "36\" NextGen JennAir Downdraft Induction Cooktop",
+"brand": null,
+"url": "/cooktops/electric/induction-cooktops/p.36-nextgen-jennair-downdraft-induction-cooktop.jidt836sbl.html",
+"price": {
+"value": 4699.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooktops|Electric|Induction-Cooktops"
+},
+"isMemberPrice": false
+},
+{
+"code": "JPIGC748RL",
+"name": "RISE™ 48\" Induction Professional-Style Range with Chrome-Infused Griddle",
+"brand": null,
+"url": "/ranges/electric/induction-ranges/p.rise-48-induction-professional-style-range-with-chrome-infused-griddle.jpigc748rl.html",
+"price": {
+"value": 15999.0
+},
+"primaryCategory": {
+"pipedCategory": "Ranges|Electric|Induction-Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "JPIFC736RL",
+"name": "RISE™ 36\" Induction Professional-Style Range",
+"brand": null,
+"url": "/ranges/electric/induction-ranges/p.rise-36-induction-professional-style-range.jpifc736rl.html",
+"price": {
+"value": 11699.0
+},
+"primaryCategory": {
+"pipedCategory": "Ranges|Electric|Induction-Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "JICT730SS",
+"name": "30\" Lustre Smart Induction Cooktop with Temperature-Controlled Cooking",
+"brand": null,
+"url": "/cooktops/electric/induction-cooktops/p.30-lustre-smart-induction-cooktop-with-temperature-controlled-cooking.jict730ss.html",
+"price": {
+"value": 3299.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooktops|Electric|Induction-Cooktops"
+},
+"isMemberPrice": false
+},
+{
+"code": "JPIFC730RL",
+"name": "RISE™ 30\" Induction Professional-Style Range",
+"brand": null,
+"url": "/ranges/electric/induction-ranges/p.rise-30-induction-professional-style-range.jpifc730rl.html",
+"price": {
+"value": 8599.0
+},
+"primaryCategory": {
+"pipedCategory": "Ranges|Electric|Induction-Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "JICT736SS",
+"name": "36\" Lustre Smart Induction Cooktop with Temperature-Controlled Cooking",
+"brand": null,
+"url": "/cooktops/electric/induction-cooktops/p.36-lustre-smart-induction-cooktop-with-temperature-controlled-cooking.jict736ss.html",
+"price": {
+"value": 3499.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooktops|Electric|Induction-Cooktops"
+},
+"isMemberPrice": false
+},
+{
+"code": "JOETC330SM",
+"name": "NOIR™ 7-in-1 Flush, Built-in Microwave Oven",
+"brand": null,
+"url": "/microwaves/built-in/p.noir-7-in-1-flush,-built-in-microwave-oven.joetc330sm.html",
+"price": {
+"value": 1699.0
+},
+"primaryCategory": {
+"pipedCategory": "Microwaves|Built-In"
+},
+"isMemberPrice": false
+},
+{
+"code": "JICT736SB",
+"name": "36\" Oblivion Smart Induction Cooktop with Temperature-Controlled Cooking",
+"brand": null,
+"url": "/cooktops/electric/induction-cooktops/p.36-oblivion-smart-induction-cooktop-with-temperature-controlled-cooking.jict736sb.html",
+"price": {
+"value": 3499.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooktops|Electric|Induction-Cooktops"
+},
+"isMemberPrice": false
+},
+{
+"code": "JIDT730SBL",
+"name": "30\" NextGen JennAir Downdraft Induction Cooktop",
+"brand": null,
+"url": "/cooktops/electric/downdraft-electric-cooktops/p.30-nextgen-jennair-downdraft-induction-cooktop.jidt730sbl.html",
+"price": {
+"value": 4499.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooktops|Electric|Downdraft-Electric-Cooktops"
+},
+"isMemberPrice": false
+},
+{
+"code": "JPIFC730RM",
+"name": "NOIR™ 30\" Induction Professional-Style Range",
+"brand": null,
+"url": "/ranges/electric/induction-ranges/p.noir-30-induction-professional-style-range.jpifc730rm.html",
+"price": {
+"value": 7299.0
+},
+"primaryCategory": {
+"pipedCategory": "Ranges|Electric|Induction-Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "JICT730SB",
+"name": "30\" Oblivion Smart Induction Cooktop with Temperature-Controlled Cooking",
+"brand": null,
+"url": "/cooktops/electric/induction-cooktops/p.30-oblivion-smart-induction-cooktop-with-temperature-controlled-cooking.jict730sb.html",
+"price": {
+"value": 3299.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooktops|Electric|Induction-Cooktops"
+},
+"isMemberPrice": false
+},
+{
+"code": "JPIFC736RM",
+"name": "NOIR™ 36\" Induction Professional-Style Range",
+"brand": null,
+"url": "/ranges/electric/induction-ranges/p.noir-36-induction-professional-style-range.jpifc736rm.html",
+"price": {
+"value": 9999.0
+},
+"primaryCategory": {
+"pipedCategory": "Ranges|Electric|Induction-Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "JOETC330SL",
+"name": "RISE™ 7-in-1 Flush, Built-in Microwave Oven",
+"brand": null,
+"url": "/microwaves/built-in/p.rise-7-in-1-flush,-built-in-microwave-oven.joetc330sl.html",
+"price": {
+"value": 1999.0
+},
+"primaryCategory": {
+"pipedCategory": "Microwaves|Built-In"
+},
+"isMemberPrice": false
+},
+{
+"code": "JPIGC748RM",
+"name": "NOIR™ 48\" Induction Professional-Style Range with Chrome-Infused Griddle",
+"brand": null,
+"url": "/ranges/electric/induction-ranges/p.noir-48-induction-professional-style-range-with-chrome-infused-griddle.jpigc748rm.html",
+"price": {
+"value": 13599.0
+},
+"primaryCategory": {
+"pipedCategory": "Ranges|Electric|Induction-Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "JOESC327TL",
+"name": "RISE™ 27\" Single Wall Oven With MultiMode® Convection system",
+"brand": null,
+"url": "/wall-ovens/single-wall-ovens/p.rise-27-single-wall-oven-with-multimode-convection-system.joesc327tl.html",
+"price": {
+"value": 4199.0
+},
+"primaryCategory": {
+"pipedCategory": "Wall-Ovens|Single-Wall-Ovens"
+},
+"isMemberPrice": false
+},
+{
+"code": "JFFCCI72SL",
+"name": "RISE™ 36\" Counter-Depth French Door Refrigerator with Internal Dispenser",
+"brand": null,
+"url": "/refrigeration/freestanding-refrigerators/p.rise-36-counter-depth-french-door-refrigerator-with-internal-dispenser.jffcci72sl.html",
+"price": {
+"value": 4799.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Freestanding-Refrigerators"
+},
+"isMemberPrice": false
+},
+{
+"code": "JFFCCI72SM",
+"name": "NOIR™ 36\" Counter-Depth French Door Refrigerator with Internal Dispenser",
+"brand": null,
+"url": "/refrigeration/freestanding-refrigerators/p.noir-36-counter-depth-french-door-refrigerator-with-internal-dispenser.jffcci72sm.html",
+"price": {
+"value": 3899.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Freestanding-Refrigerators"
+},
+"isMemberPrice": false
+},
+{
+"code": "JFFCCE72SL",
+"name": "RISE™ 36\" Counter-Depth French Door Refrigerator with External Dispenser",
+"brand": null,
+"url": "/refrigeration/freestanding-refrigerators/p.rise-36-counter-depth-french-door-refrigerator-with-external-dispenser.jffcce72sl.html",
+"price": {
+"value": 5999.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Freestanding-Refrigerators"
+},
+"isMemberPrice": false
+},
+{
+"code": "JOECC327TL",
+"name": "27\" RISE™ Built-In Microwave Combo Wall Oven with MultiMode® Convection",
+"brand": null,
+"url": "/wall-ovens/wall-oven-microwave-combinations/p.27-rise-built-in-microwave-combo-wall-oven-with-multimode-convection.joecc327tl.html",
+"price": {
+"value": 5899.0
+},
+"primaryCategory": {
+"pipedCategory": "Wall-Ovens|Wall-Oven-Microwave-Combinations"
+},
+"isMemberPrice": false
+},
+{
+"code": "JOEDC327TL",
+"name": "27\" RISE™ Built-In Double Wall Oven with MultiMode® True Convection",
+"brand": null,
+"url": "/wall-ovens/double-wall-ovens/p.27-rise-built-in-double-wall-oven-with-multimode-true-convection.joedc327tl.html",
+"price": {
+"value": 5599.0
+},
+"primaryCategory": {
+"pipedCategory": "Wall-Ovens|Double-Wall-Ovens"
+},
+"isMemberPrice": false
+},
+{
+"code": "JOEMC127TL",
+"name": "27\" RISE™ Single Wall Speed Oven",
+"brand": null,
+"url": "/microwaves/built-in/p.27-rise-single-wall-speed-oven.joemc127tl.html",
+"price": {
+"value": 3499.0
+},
+"primaryCategory": {
+"pipedCategory": "Microwaves|Built-In"
+},
+"isMemberPrice": false
+},
+{
+"code": "JBRFL36IGX",
+"name": "36\" Panel-Ready Built-In Column Refrigerator, Left Swing",
+"brand": null,
+"url": "/refrigeration/columns/column-refrigerators/p.36-panel-ready-built-in-column-refrigerator,-left-swing.jbrfl36igx.html",
+"price": {
+"value": 9499.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Columns|Column-Refrigerators"
+},
+"isMemberPrice": false
+},
+{
+"code": "JUBFR242HL",
+"name": "RISE™ 24\" Built-In Undercounter Beverage Center, Right Swing",
+"brand": null,
+"url": "/refrigeration/undercounter-refrigerators/beverage-centers/p.rise-24-built-in-undercounter-beverage-center,-right-swing.jubfr242hl.html",
+"price": {
+"value": 3499.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Undercounter-Refrigerators|Beverage-Centers"
+},
+"isMemberPrice": false
+},
+{
+"code": "JUBFR242HX",
+"name": "Panel-Ready 24\" Built-In Undercounter Beverage Center, Right Swing",
+"brand": null,
+"url": "/refrigeration/undercounter-refrigerators/beverage-centers/p.panel-ready-24-built-in-undercounter-beverage-center,-right-swing.jubfr242hx.html",
+"price": {
+"value": 3399.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Undercounter-Refrigerators|Beverage-Centers"
+},
+"isMemberPrice": false
+},
+{
+"code": "JUCFP242HX",
+"name": "Panel-Ready 24\" Double Drawer Refrigerator/Freezer",
+"brand": null,
+"url": "/refrigeration/undercounter-refrigerators/refrigerator-drawers/p.panel-ready-24-double-drawer-refrigerator-freezer.jucfp242hx.html",
+"price": {
+"value": 4399.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Undercounter-Refrigerators|Refrigerator-Drawers"
+},
+"isMemberPrice": false
+},
+{
+"code": "W11290015",
+"name": "27\" or 30\" Built-In Oven/Microwave/Coffee Machine Side Trim Cover Kit, Black/Noir",
+"brand": null,
+"url": "/built-in-coffee-maker/p.27-or-30-built-in-oven-microwave-coffee-machine-side-trim-cover-kit,-black-noir.w11290015.html",
+"price": {
+"value": 545.99
+},
+"primaryCategory": {
+"pipedCategory": "Built-In-Coffee-Maker"
+},
+"isMemberPrice": false
+},
+{
+"code": "JUDFP242HX",
+"name": "Panel-Ready 24\" Double-Refrigerator Drawers",
+"brand": null,
+"url": "/refrigeration/undercounter-refrigerators/refrigerator-drawers/p.panel-ready-24-double-refrigerator-drawers.judfp242hx.html",
+"price": {
+"value": 4299.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigeration|Undercounter-Refrigerators|Refrigerator-Drawers"
+},
+"isMemberPrice": false
+},
+{
+"code": "W11751830",
+"name": "JennAir Downdraft Cooktop Air Inlet Nozzle - Black",
+"brand": null,
+"url": "/custom-cooktops/custom-electric-cooktops/p.jennair-downdraft-cooktop-air-inlet-nozzle-black.w11751830.html",
+"price": {
+"value": 154.99
+},
+"primaryCategory": {
+"pipedCategory": "Custom-Cooktops|Custom-Electric-Cooktops"
+},
+"isMemberPrice": false
+},
+{
+"code": "WP4151750",
+"name": "Trash Compactor Charcoal Air Filter - Black, Square (4 1/2-IN X 4 1/2-IN)",
+"brand": null,
+"url": "/trash-compactors/p.trash-compactor-charcoal-air-filter-black,-square-4-1-2-in-x-4-1-2-in.wp4151750.html",
+"price": {
+"value": 10.49
+},
+"primaryCategory": {
+"pipedCategory": "Trash-Compactors"
+},
+"isMemberPrice": false
+},
+{
+"code": "W10165295RP",
+"name": "Heavy-Duty Plastic Compactor Bags (15-Pack) - White with Odor Remover for 15-IN Compactor Models",
+"brand": null,
+"url": "/trash-compactors/p.heavy-duty-plastic-compactor-bags-15-pack-white-with-odor-remover-for-15-in-compactor-models.w10165295rp.html",
+"price": {
+"value": 16.99
+},
+"primaryCategory": {
+"pipedCategory": "Trash-Compactors"
+},
+"isMemberPrice": false
+},
+{
+"code": "W10165293RB",
+"name": "Heavy-Duty Plastic Compactor Bags (60-Pack) - White with Odor Remover for 18-IN Compactor Models",
+"brand": null,
+"url": "/trash-compactors/p.heavy-duty-plastic-compactor-bags-60-pack-white-with-odor-remover-for-18-in-compactor-models.w10165293rb.html",
+"price": {
+"value": 62.99
+},
+"primaryCategory": {
+"pipedCategory": "Trash-Compactors"
+},
+"isMemberPrice": false
+}
+]
+}

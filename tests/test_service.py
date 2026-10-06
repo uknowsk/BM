@@ -141,7 +141,8 @@ def test_export_excel_has_pod_compare():
 
 def test_load_config_registers_brands():
     cfg = service.load_config()
-    assert [b["name"] for b in cfg["brands"]] == ["Samsung", "LG", "KitchenAid", "GE", "Whirlpool", "Bosch"]
+    assert [b["name"] for b in cfg["brands"]][:6] == ["Samsung", "LG", "KitchenAid", "GE", "Whirlpool", "Bosch"]
+    assert len(cfg["brands"]) == 30 and cfg["brands"][-1]["name"] == "Panasonic"  # 6 original + 24 new (brands.yaml)
     assert catalog.ADAPTERS["LG"] == "lg_us" and catalog.ADAPTERS["Bosch"] == "bosch_us"
     assert [c["key"] for c in cfg["categories"] if c["enabled"]] == ["refrigerator"]
 

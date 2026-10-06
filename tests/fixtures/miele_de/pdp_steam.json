@@ -1,0 +1,1443 @@
+{
+ "name": "DGC 7460 HC Pro",
+ "alternativeName": "DGC 7460 HC Pro Obsidianschwarz",
+ "code": "000000000012099690",
+ "formattedCode": "12099690",
+ "designTypeName": "Dampfbackofen",
+ "dataLayer": {
+  "brand": "Miele Steam ovens Combi steam ovens 60 cm",
+  "category": "APPLIANCE/MDA/Steam ovens/Combi steam ovens 60 cm",
+  "deliveryDays": "3",
+  "name": "DGC7460 HC Pro   D   OBSW   230/50",
+  "priceWithoutTax": "3959.000000"
+ },
+ "price": {
+  "currencyIso": "EUR",
+  "formattedValue": "3.959,00 €",
+  "priceType": "BUY",
+  "value": 3959
+ },
+ "salesPrice": {
+  "currencyIso": "EUR",
+  "formattedValue": "3.959,00 €",
+  "priceType": "BUY",
+  "value": 3959
+ },
+ "pdpUrl": "https://www.miele.de/product/12099690/dampfbackofen-dgc-7460-hc-pro-obsidianschwarz",
+ "shortPositioningText": "zum Dampfgaren, Backen, Braten mit Vernetzung + HydroClean.",
+ "techspecs": [
+  {
+   "attributes": [
+    {
+     "name": "Modellbezeichnung",
+     "sortOrder": 10,
+     "values": [
+      "DGC 7460 HC Pro"
+     ]
+    },
+    {
+     "name": "Materialnummer Hersteller",
+     "sortOrder": 20,
+     "values": [
+      "12099690"
+     ]
+    },
+    {
+     "name": "EAN-Nummer",
+     "sortOrder": 30,
+     "values": [
+      "4002516587491"
+     ]
+    },
+    {
+     "featureValueCode": "lov_ZZMKTGRP_G",
+     "name": "Marketingklasse",
+     "sortOrder": 40,
+     "values": [
+      "Gold"
+     ]
+    }
+   ],
+   "name": "Allgemeine Informationen",
+   "sortOrder": 10
+  },
+  {
+   "attributes": [
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Dampfbackofen",
+     "sortOrder": 110,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "VitroLine",
+     "sortOrder": 140,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "lov_PD_101131_126",
+     "name": "Gerätefarbe",
+     "sortOrder": 220,
+     "values": [
+      "Obsidianschwarz"
+     ]
+    }
+   ],
+   "name": "Bauform und Design",
+   "sortOrder": 301
+  },
+  {
+   "attributes": [
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Schnellaufheizen",
+     "sortOrder": 70,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Vorheizen",
+     "sortOrder": 80,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Externe Dampferzeugung",
+     "sortOrder": 90,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Klimasensor",
+     "sortOrder": 100,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Individuelle Einstellmöglichkeit der Feuchte beim Combigaren",
+     "sortOrder": 110,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Menügaren ohne Geschmacksübertragung",
+     "sortOrder": 120,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Mix & Match",
+     "sortOrder": 130,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Automatikprogramme mit individueller Anpassung des Garergebnisses",
+     "sortOrder": 160,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Warmhalten",
+     "sortOrder": 170,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "CrispFunction",
+     "sortOrder": 180,
+     "values": [
+      "TRUE"
+     ]
+    }
+   ],
+   "name": "Genussvorteile",
+   "sortOrder": 760
+  },
+  {
+   "attributes": [
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Heißluft plus",
+     "sortOrder": 10,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Ober-/Unterhitze",
+     "sortOrder": 40,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Dampfgaren",
+     "sortOrder": 50,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Combigaren",
+     "sortOrder": 120,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Combigaren mit Heißluft plus",
+     "sortOrder": 130,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Combigaren mit Ober-/Unterhitze",
+     "sortOrder": 140,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Combigaren mit Grill groß",
+     "sortOrder": 150,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Sous-vide",
+     "sortOrder": 320,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Intensivbacken",
+     "sortOrder": 340,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Umluftgrill",
+     "sortOrder": 360,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Grill",
+     "sortOrder": 370,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Grill klein",
+     "sortOrder": 380,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Grillbetriebsarten",
+     "sortOrder": 390,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Oberhitze",
+     "sortOrder": 400,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Unterhitze",
+     "sortOrder": 410,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Kuchen Spezial",
+     "sortOrder": 420,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Auftauen",
+     "sortOrder": 460,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Gourmet Braten",
+     "sortOrder": 470,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Erhitzen",
+     "sortOrder": 480,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Teller wärmen",
+     "sortOrder": 490,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Automatikprogramme",
+     "sortOrder": 500,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Länderspezifische Automatikprogramme",
+     "sortOrder": 510,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Spezialanwendungen",
+     "sortOrder": 520,
+     "values": [
+      "TRUE"
+     ]
+    }
+   ],
+   "name": "Betriebsarten",
+   "sortOrder": 800
+  },
+  {
+   "attributes": [
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Vernetzung mit Miele@home",
+     "sortOrder": 10,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "lov_c_PP_110015_DB_4",
+     "name": "Display",
+     "sortOrder": 30,
+     "values": [
+      "DirectSensor"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "SoftOpen",
+     "sortOrder": 120,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "SoftClose",
+     "sortOrder": 130,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "MultiLingua",
+     "sortOrder": 170,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Motorische Liftblende",
+     "sortOrder": 240,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Mengenunabhängiges Garen",
+     "sortOrder": 250,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Dampfgaren auf bis zu 4 Ebenen gleichzeitig",
+     "sortOrder": 270,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Automatisches Menügaren",
+     "sortOrder": 280,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Dampfreduktion vor Garzeitende",
+     "sortOrder": 300,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Zeitfunktionen",
+     "sortOrder": 320,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Tageszeitanzeige",
+     "sortOrder": 330,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Anzeige Datum",
+     "sortOrder": 350,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Kurzzeitwecker",
+     "sortOrder": 360,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Programmierung Garzeitanfang",
+     "sortOrder": 370,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Programmierung Garzeitende",
+     "sortOrder": 380,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Programmierung Garzeitdauer",
+     "sortOrder": 390,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Ist-Temperaturanzeige",
+     "sortOrder": 400,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Soll-Temperaturanzeige",
+     "sortOrder": 410,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Signalton bei Erreichen der Solltemperatur",
+     "sortOrder": 420,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Vorschlagstemperatur",
+     "sortOrder": 440,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Eigene Programme",
+     "sortOrder": 470,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Sabbat Programm",
+     "sortOrder": 490,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Individuelle Einstellungen",
+     "sortOrder": 500,
+     "values": [
+      "TRUE"
+     ]
+    }
+   ],
+   "name": "Bedienkomfort",
+   "sortOrder": 2800
+  },
+  {
+   "attributes": [
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "MealSync",
+     "sortOrder": 30,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Rezepte",
+     "sortOrder": 40,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "RemoteUpdate",
+     "sortOrder": 60,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Sprachsteuerung Alexa",
+     "sortOrder": 70,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Sprachsteuerung Google",
+     "sortOrder": 71,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Push-Nachrichten",
+     "sortOrder": 80,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Smart Home Integration",
+     "sortOrder": 100,
+     "values": [
+      "TRUE"
+     ]
+    }
+   ],
+   "footnote": {
+    "code": "CO_22727118",
+    "contentObjectType": "PATENT_INFORMATION",
+    "images": [],
+    "longText": [
+     {
+      "text": "Zusätzliches digitales Angebot der Miele & Cie. KG. Abhängig von Modell und Land kann der Funktionsumfang variieren. Erforderlich ist Ihr Einverständnis zu den Allgemeinen Geschäftsbedingungen und Datenschutzhinweisen für digitale Produkte und Dienste von Miele in der Miele App. Miele behält sich das Recht vor, die digitalen Angebote jederzeit zu ändern oder einzustellen.",
+      "type": "text"
+     }
+    ],
+    "name": [],
+    "shortText": [],
+    "subTitleText": [],
+    "titleText": []
+   },
+   "name": "Smart Extras",
+   "sortOrder": 2801
+  },
+  {
+   "attributes": [
+    {
+     "name": "Energieeffizienzklasse (A+++ - D)",
+     "sortOrder": 10,
+     "values": [
+      "A+"
+     ]
+    },
+    {
+     "name": "Leistungsaufnahme im Aus-Zustand in W",
+     "sortOrder": 40,
+     "values": [
+      "0.3"
+     ]
+    },
+    {
+     "name": "Leistungsaufnahme im Stand-by Modus in W",
+     "sortOrder": 50,
+     "values": [
+      "0.8"
+     ]
+    },
+    {
+     "name": "Leistungsaufnahme im vernetzten Bereitschaftsbetrieb in W",
+     "sortOrder": 60,
+     "values": [
+      "2"
+     ]
+    },
+    {
+     "name": "Zeitdauer bis automatisches Schalten in Bereitschaftsbetrieb in min",
+     "sortOrder": 70,
+     "values": [
+      "20"
+     ]
+    },
+    {
+     "name": "Zeitdauer bis automatisches Schalten in vernetzten Bereitschaftsbetrieb in min",
+     "sortOrder": 80,
+     "values": [
+      "20"
+     ]
+    },
+    {
+     "name": "Zeitdauer bis automatisches Schalten in Aus-Zustand in min",
+     "sortOrder": 90,
+     "values": [
+      "20"
+     ]
+    }
+   ],
+   "name": "Effizienz",
+   "sortOrder": 3900
+  },
+  {
+   "attributes": [
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Edelstahl-Garraum mit Leinenstruktur",
+     "sortOrder": 40,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Grillheizkörper abklappbar",
+     "sortOrder": 100,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Externer Dampferzeuger",
+     "sortOrder": 120,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "HydroClean",
+     "sortOrder": 140,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Pflegeprogramme",
+     "sortOrder": 150,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Pflegeprogramm Einweichen",
+     "sortOrder": 160,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Pflegeprogramm Spülen",
+     "sortOrder": 170,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Garraum-Trocknungsprogramm",
+     "sortOrder": 180,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Schnellsteckverschluss für Aufnahmegitter",
+     "sortOrder": 190,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Herausnehmbare Aufnahmegitter",
+     "sortOrder": 200,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Entkalken",
+     "sortOrder": 210,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "CleanGlass Tür",
+     "sortOrder": 230,
+     "values": [
+      "TRUE"
+     ]
+    }
+   ],
+   "name": "Pflegekomfort",
+   "sortOrder": 4000
+  },
+  {
+   "attributes": [
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "DualSteam",
+     "sortOrder": 10,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "name": "Dampferzeuger Leistung in kW",
+     "sortOrder": 50,
+     "values": [
+      "3.300"
+     ]
+    },
+    {
+     "name": "Frischwassertank Volumen in l",
+     "sortOrder": 60,
+     "values": [
+      "1.4"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Frischwassertank hinter Liftblende",
+     "sortOrder": 80,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Kondensatbehälter hinter Liftblende",
+     "sortOrder": 90,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Ablaufsieb",
+     "sortOrder": 130,
+     "values": [
+      "TRUE"
+     ]
+    }
+   ],
+   "name": "Dampftechnologie und Wasserversorgung",
+   "sortOrder": 4200
+  },
+  {
+   "attributes": [
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Gerätekühlsystem mit kühler Front",
+     "sortOrder": 10,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Sicherheitsausschaltung",
+     "sortOrder": 20,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Inbetriebnahmesperre",
+     "sortOrder": 30,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Wrasen-Kühlsystem",
+     "sortOrder": 50,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Tastensperre",
+     "sortOrder": 100,
+     "values": [
+      "TRUE"
+     ]
+    }
+   ],
+   "name": "Sicherheit",
+   "sortOrder": 6100
+  },
+  {
+   "attributes": [
+    {
+     "name": "Garraumvolumen in l",
+     "sortOrder": 40,
+     "values": [
+      "67"
+     ]
+    },
+    {
+     "name": "Anzahl der Einschubebenen",
+     "sortOrder": 50,
+     "values": [
+      "4"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Kennzeichnung der Einschubebenen",
+     "sortOrder": 60,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "lov_PD_101999_3",
+     "name": "Türanschlag",
+     "sortOrder": 70,
+     "values": [
+      "unten"
+     ]
+    },
+    {
+     "name": "Garraumbeleuchtung",
+     "sortOrder": 80,
+     "values": [
+      "BrilliantLight"
+     ]
+    },
+    {
+     "name": "Temperaturen Backofenbetrieb in °C",
+     "sortOrder": 152,
+     "values": [
+      "30–230"
+     ]
+    },
+    {
+     "name": "Temperaturen Dampfgarbetrieb max. in °C",
+     "sortOrder": 170,
+     "values": [
+      "100"
+     ]
+    },
+    {
+     "name": "Temperaturen Dampfgarbetrieb in °C",
+     "sortOrder": 171,
+     "values": [
+      "40–100"
+     ]
+    },
+    {
+     "name": "Nischenmaße (B x H x T) in mm",
+     "sortOrder": 231,
+     "values": [
+      "560-568 x 590-595 x 550"
+     ]
+    },
+    {
+     "name": "Nischenbreite min. in mm",
+     "sortOrder": 239,
+     "values": [
+      "560"
+     ]
+    },
+    {
+     "name": "Nischenbreite max. in mm",
+     "sortOrder": 240,
+     "values": [
+      "568"
+     ]
+    },
+    {
+     "name": "Nischenhöhe min. in mm",
+     "sortOrder": 250,
+     "values": [
+      "590"
+     ]
+    },
+    {
+     "name": "Nischenhöhe max. in mm",
+     "sortOrder": 260,
+     "values": [
+      "595"
+     ]
+    },
+    {
+     "name": "Nischentiefe in mm",
+     "sortOrder": 270,
+     "values": [
+      "550"
+     ]
+    },
+    {
+     "name": "Gerätemaße (B x H x T) in mm",
+     "sortOrder": 275,
+     "values": [
+      "595 x 596 x 567"
+     ]
+    },
+    {
+     "name": "Gewicht in kg",
+     "sortOrder": 293,
+     "values": [
+      "46.4"
+     ]
+    },
+    {
+     "name": "Gesamtanschlusswert in kW",
+     "sortOrder": 330,
+     "values": [
+      "3.450"
+     ]
+    },
+    {
+     "name": "Spannung in V",
+     "sortOrder": 340,
+     "values": [
+      "230"
+     ]
+    },
+    {
+     "name": "Frequenz in Hz",
+     "sortOrder": 370,
+     "values": [
+      "50"
+     ]
+    },
+    {
+     "name": "Absicherung in A",
+     "sortOrder": 380,
+     "values": [
+      "16"
+     ]
+    },
+    {
+     "name": "Phasenanzahl",
+     "sortOrder": 390,
+     "values": [
+      "1"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Anschlusskabel mit Netzstecker",
+     "sortOrder": 410,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "name": "Länge der elektrischen Zuleitung in m",
+     "sortOrder": 420,
+     "values": [
+      "2"
+     ]
+    },
+    {
+     "name": "Leuchtmittel tauschen",
+     "sortOrder": 450,
+     "values": [
+      "Kundendienst"
+     ]
+    }
+   ],
+   "name": "Technische Daten",
+   "sortOrder": 6400
+  },
+  {
+   "attributes": [
+    {
+     "name": "Universalblech mit PerfectClean HUBB 71",
+     "sortOrder": 30,
+     "values": [
+      "1"
+     ]
+    },
+    {
+     "name": "Back- und Bratrost mit PerfectClean HBBR 71",
+     "sortOrder": 50,
+     "values": [
+      "1"
+     ]
+    },
+    {
+     "name": "Herausnehmbare Aufnahmegitter (Paar)",
+     "sortOrder": 110,
+     "values": [
+      "1"
+     ]
+    },
+    {
+     "name": "Gelochte Edelstahl-Garbehälter",
+     "sortOrder": 150,
+     "values": [
+      "1"
+     ]
+    },
+    {
+     "name": "Ungelochte Edelstahl Garbehälter",
+     "sortOrder": 160,
+     "values": [
+      "1"
+     ]
+    },
+    {
+     "name": "HydroClean Reiniger",
+     "sortOrder": 270,
+     "values": [
+      "1"
+     ]
+    },
+    {
+     "name": "Entkalkungstabletten",
+     "sortOrder": 280,
+     "values": [
+      "2"
+     ]
+    }
+   ],
+   "name": "Mitgeliefertes Zubehör",
+   "sortOrder": 6600
+  },
+  {
+   "attributes": [
+    {
+     "featureValueCode": "lov_PD_102902_UKRAINISCH",
+     "name": "Verfügbare Displaysprachen durch MultiLingua",
+     "sortOrder": 10,
+     "values": [
+      "yкраїнська",
+      "pусский",
+      "čeština",
+      "türkçe",
+      "italiano",
+      "dansk",
+      "ελληνιкά",
+      "中文",
+      "norsk",
+      "hrvatski",
+      "nederlands",
+      "日本語",
+      "english",
+      "español",
+      "한국어",
+      "français",
+      "suomi",
+      "română",
+      "polski",
+      "slovenščina",
+      "srpski",
+      "magyar",
+      "svenska",
+      "bahasa malaysia",
+      "繁體中文",
+      "العربية",
+      "português",
+      "deutsch",
+      "slovenčina"
+     ]
+    }
+   ],
+   "name": "Verfügbare Displaysprachen",
+   "sortOrder": 6700
+  }
+ ],
+ "documentGroups": [
+  {
+   "code": "OPERATING_INSTRUCTIONS",
+   "documents": [
+    {
+     "description": "EU - Konformitätserklärung",
+     "media": {
+      "altText": "EU Konformitätserklärung",
+      "mimeType": "application/pdf",
+      "url": "https://media.miele.com/downloads/98/b2/00_7CED8D2439161FD1A2B2F472515698B2.pdf"
+     },
+     "name": "PDF"
+    },
+    {
+     "description": "Gebrauchsanweisung/Montageanweisung",
+     "media": {
+      "altText": "Gebrauchsanweisung/Montageanweisung",
+      "mimeType": "application/pdf",
+      "url": "https://media.miele.com/downloads/80/85/05_C7F12828A2B01FD0A3DECC9068A48085.pdf"
+     },
+     "name": "PDF"
+    },
+    {
+     "description": "Produktblatt",
+     "media": {
+      "altText": "Produktdatenblatt",
+      "mimeType": "application/pdf",
+      "url": "https://media.miele.com/downloads/e-/de/FS_12099690_DED_DE-de-DE.pdf"
+     },
+     "name": "PDF"
+    },
+    {
+     "description": "Garantiebedingungen",
+     "media": {
+      "altText": "Garantiebedingungen",
+      "mimeType": "application/pdf",
+      "url": "https://media.miele.com/downloads/47/33/16_C7F1282806E91FD0A8D4A4AD14174733.pdf"
+     },
+     "name": "PDF"
+    }
+   ],
+   "name": "Gebrauchsanweisung & Montage",
+   "sortOrder": 1
+  },
+  {
+   "code": "CAD_DATA",
+   "documents": [
+    {
+     "description": "dwg",
+     "media": {
+      "altText": "3D Daten im Dateiformat DWG",
+      "mimeType": "application/zip",
+      "url": "https://media.miele.com/downloads/89/a0/01_C7F138382B5F1EEF97BDDD325EF289A0.zip"
+     },
+     "name": "ZIP"
+    },
+    {
+     "description": "fbx",
+     "media": {
+      "altText": "3D Daten im Dateiformat FBX",
+      "mimeType": "application/zip",
+      "url": "https://media.miele.com/downloads/c9/a0/01_C7F138382B5F1EEF97BDDD32A052C9A0.zip"
+     },
+     "name": "ZIP"
+    },
+    {
+     "description": "ifc",
+     "media": {
+      "altText": "3D Daten im Dateiformat IFC",
+      "mimeType": "application/zip",
+      "url": "https://media.miele.com/downloads/49/a0/01_C7F138382B5F1EEF97BDDD32E0F649A0.zip"
+     },
+     "name": "ZIP"
+    },
+    {
+     "description": "rfa",
+     "media": {
+      "altText": "3D Daten im Dateiformat RFA",
+      "mimeType": "application/zip",
+      "url": "https://media.miele.com/downloads/89/a0/01_C7F138382B5F1EEF97BDDD3323C889A0.zip"
+     },
+     "name": "ZIP"
+    },
+    {
+     "description": "rvt",
+     "media": {
+      "altText": "3D Daten im Dateiformat RVT",
+      "mimeType": "application/zip",
+      "url": "https://media.miele.com/downloads/49/a0/01_C7F138382B5F1EEF97BDDD33598C49A0.zip"
+     },
+     "name": "ZIP"
+    }
+   ],
+   "name": "CAD/BIM-Daten",
+   "sortOrder": 3
+  },
+  {
+   "code": "ENERGY",
+   "documents": [
+    {
+     "description": "Energielabel",
+     "media": {
+      "altText": "Energielabel PDF",
+      "mimeType": "application/pdf",
+      "url": "https://media.miele.com/downloads/da/42/01_C7F138389C6F1FD0A3CA94B455E5DA42.pdf"
+     },
+     "name": "PDF"
+    },
+    {
+     "description": "Energielabel",
+     "media": {
+      "altText": "Energielabel PNG",
+      "mimeType": "image/png",
+      "url": "https://media.miele.com/downloads/9a/42/01_C7F138389C6F1FD0A3CA950318699A42.png"
+     },
+     "name": "PNG"
+    },
+    {
+     "description": "EU - Datenblatt",
+     "media": {
+      "altText": "EU Datenblatt PDF",
+      "mimeType": "application/pdf",
+      "url": "https://media.miele.com/downloads/d1/3e/04_C7F13838CE961EDF96D7B44F9CDCD13E.pdf"
+     },
+     "name": "PDF"
+    },
+    {
+     "description": "Energielabel-Icon",
+     "descriptionTitle": "Pfeil Energielabel A+",
+     "media": {
+      "altText": "Onlinelabel Image, Energielabel",
+      "mimeType": "application/pdf",
+      "url": "https://media.miele.com/dam/95196625-8a86-4922-b8b7-b3c5007b817c/20000115128_HighresDigitalRGB.png"
+     },
+     "name": "PDF"
+    }
+   ],
+   "name": "ECO Informationen",
+   "sortOrder": 6
+  },
+  {
+   "code": "INSTALLATION_DRAWINGS",
+   "documents": [
+    {
+     "description": "1) 400 mm, 2) 360 mm, 3) 47 mm, 4) 27 mm, 5) 32.5 mm",
+     "descriptionTitle": "H7000 Griff, Glas, Skizze",
+     "media": {
+      "altText": "Einbauskizze",
+      "mimeType": "application/postscript",
+      "url": "https://media.miele.com/dam/7ce0f0f6-54a3-420e-b7f0-b486010810e4/20000153737_HighresDigitalRGB.png"
+     },
+     "name": "POSTSCRIPT"
+    },
+    {
+     "description": "Installationszeichnungen",
+     "descriptionTitle": "Einbau DGC XXL, ESW7x20 Skizze",
+     "media": {
+      "altText": "Einbauskizze",
+      "mimeType": "application/postscript",
+      "url": "https://media.miele.com/dam/f00e950e-8ead-4994-b533-b3c2017b615b/20000154829_HighresDigitalRGB.png"
+     },
+     "name": "POSTSCRIPT"
+    },
+    {
+     "description": "Installationszeichnungen",
+     "descriptionTitle": "Einbau_DGC_XXL_ESW7x10_EVS7010, Skizze",
+     "media": {
+      "altText": "Einbauskizze",
+      "mimeType": "application/postscript",
+      "url": "https://media.miele.com/dam/29e3aac3-5e3a-43d8-9758-b3c2017b53c0/20000154836_HighresDigitalRGB.png"
+     },
+     "name": "POSTSCRIPT"
+    },
+    {
+     "description": "Installationszeichnungen",
+     "descriptionTitle": "Einbau DGC XXL, Skizze",
+     "media": {
+      "altText": "Einbauskizze",
+      "mimeType": "application/postscript",
+      "url": "https://media.miele.com/dam/1e2056b9-bd5f-4e2e-916b-b3c2017b26a3/20000154864_HighresDigitalRGB.png"
+     },
+     "name": "POSTSCRIPT"
+    },
+    {
+     "description": "Arbeitsplattenüberstand ≤ 29 mm",
+     "descriptionTitle": "Einbau DGC XXL Unterbau, Skizze",
+     "media": {
+      "altText": "Einbauskizze",
+      "mimeType": "application/postscript",
+      "url": "https://media.miele.com/dam/914c5eef-55d7-4685-877f-b3c2017b1dae/20000154870_HighresDigitalRGB.png"
+     },
+     "name": "POSTSCRIPT"
+    },
+    {
+     "description": "Installationszeichnungen",
+     "descriptionTitle": "Verschraubung DGC XXL, Skizze",
+     "media": {
+      "altText": "Einbauskizze",
+      "mimeType": "application/postscript",
+      "url": "https://media.miele.com/dam/f3005e51-33f7-41c0-9d11-b3c2017b1d9e/20000154871_HighresDigitalRGB.png"
+     },
+     "name": "POSTSCRIPT"
+    },
+    {
+     "description": "Installationszeichnungen",
+     "descriptionTitle": "DGC7x4x Schwenkbereich der Blende, Skizze",
+     "media": {
+      "altText": "Einbauskizze",
+      "mimeType": "application/postscript",
+      "url": "https://media.miele.com/dam/24c7e7dc-1acf-403c-8168-b3c2017b14b7/20000154875_HighresDigitalRGB.png"
+     },
+     "name": "POSTSCRIPT"
+    },
+    {
+     "description": "*22 mm - Glas, *23,3 mm – Edelstahl",
+     "descriptionTitle": "Seitenansicht DGC XXL, Skizze",
+     "media": {
+      "altText": "Einbauskizze",
+      "mimeType": "application/postscript",
+      "url": "https://media.miele.com/dam/515d3578-13bd-43c2-8814-b3c2017b1052/20000154876_HighresDigitalRGB.png"
+     },
+     "name": "POSTSCRIPT"
+    }
+   ],
+   "name": "Installationszeichnungen",
+   "sortOrder": 8
+  }
+ ],
+ "primaryProductImage": {
+  "altText": "Sachaufnahme",
+  "format": "cart",
+  "url": "https://media.miele.com/dam/b8b52054-2ac8-465a-a229-b3bd00e0ba92/20000150156_HighresDigitalRGB.png"
+ },
+ "images": [
+  {
+   "akamaiImageType": "PRIMARY",
+   "altText": "Sachaufnahme",
+   "format": "cart",
+   "galleryIndex": 0,
+   "imageType": "PRIMARY",
+   "url": "https://media.miele.com/dam/b8b52054-2ac8-465a-a229-b3bd00e0ba92/20000150156_HighresDigitalRGB.png"
+  },
+  {
+   "akamaiImageType": "FACIA",
+   "altText": "Abbildung der Blende",
+   "format": "cart",
+   "galleryIndex": 0,
+   "imageType": "GALLERY",
+   "url": "https://media.miele.com/dam/ab139d13-6124-4a75-b388-b3bd00e6e578/20000150927_HighresDigitalRGB.png"
+  }
+ ],
+ "connectedAppliance": true,
+ "productTypeCode": "APPLIANCE",
+ "appliance": true,
+ "euDataSheet": {
+  "altText": "EU Datenblatt PDF",
+  "description": "EU - Datenblatt",
+  "mimeType": "application/pdf",
+  "url": "https://media.miele.com/downloads/d1/3e/04_C7F13838CE961EDF96D7B44F9CDCD13E.pdf"
+ },
+ "energyLabel": {
+  "altText": "Energielabel PNG",
+  "description": "Energielabel",
+  "mimeType": "image/png",
+  "url": "https://media.miele.com/downloads/9a/42/01_C7F138389C6F1FD0A3CA950318699A42.png"
+ },
+ "marketingClass": "GOLD",
+ "productSlug": "dampfbackofen-dgc-7460-hc-pro-obsidianschwarz"
+}

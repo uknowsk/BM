@@ -1,0 +1,155 @@
+{
+ "pagination": {
+  "currentPage": 0,
+  "pageSize": 3,
+  "sort": "relevance",
+  "totalPages": 9,
+  "totalResults": 25
+ },
+ "products": [
+  {
+   "bundleAvailable": false,
+   "categoryFallBack": {
+    "categoryFallBackCode": "kitchen/cooking/hobs/induction-hob",
+    "categoryFallBackENName": "Induction hob",
+    "categoryFallBackName": "Induktionskochfelder"
+   },
+   "code": "949598262",
+   "d2cExclusiveFlag": false,
+   "d2cSellable": true,
+   "description": "Induktions-Kochfeld / 80 cm / Edelstahlrahmen",
+   "displayLowestPriceMesssage": false,
+   "displayToolTipForLowestPrice": false,
+   "flashPromoDR": false,
+   "hideShowPncFlag": false,
+   "isServiceable": false,
+   "kit": false,
+   "lowestPricePeriod": 0,
+   "minCTFError": false,
+   "modelId": "TK85IM0FRB",
+   "nakedProduct": false,
+   "name": "6000 Flex Autarkes Induktionskochfeld / Hob²Hood® / 83 cm",
+   "offerPrice": {
+    "currencyIso": "EUR",
+    "formattedValue": "€ 740",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 740
+   },
+   "price": {
+    "currencyIso": "EUR",
+    "formattedValue": "€ 799",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 799
+   },
+   "productURL": "https://www.aeg.de/kitchen/cooking/hobs/induction-hob/tk85im0frb/",
+   "rrp": {
+    "currencyIso": "EUR",
+    "formattedValue": "€ 1.598",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 1598
+   },
+   "rts": false,
+   "smallAppliance": false,
+   "suggestedDiscount": 0
+  },
+  {
+   "bundleAvailable": false,
+   "categoryFallBack": {
+    "categoryFallBackCode": "kitchen/cooking/hobs/induction-hob",
+    "categoryFallBackENName": "Induction hob",
+    "categoryFallBackName": "Induktionskochfelder"
+   },
+   "code": "949598413",
+   "d2cExclusiveFlag": false,
+   "d2cSellable": true,
+   "description": "Induktions-Kochfeld / 80 cm / Edelstahlrahmen",
+   "displayLowestPriceMesssage": false,
+   "displayToolTipForLowestPrice": false,
+   "flashPromoDR": false,
+   "hideShowPncFlag": false,
+   "isServiceable": false,
+   "kit": false,
+   "lowestPricePeriod": 0,
+   "minCTFError": false,
+   "modelId": "TI84IF0FRB",
+   "nakedProduct": false,
+   "name": "6000 Flex Autarkes Induktionskochfeld / Hob²Hood® / 83 cm",
+   "offerPrice": {
+    "currencyIso": "EUR",
+    "formattedValue": "€ 767",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 767
+   },
+   "price": {
+    "currencyIso": "EUR",
+    "formattedValue": "€ 849",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 849
+   },
+   "productURL": "https://www.aeg.de/kitchen/cooking/hobs/induction-hob/ti84if0frb/",
+   "rrp": {
+    "currencyIso": "EUR",
+    "formattedValue": "€ 1.598",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 1598
+   },
+   "rts": false,
+   "smallAppliance": false,
+   "suggestedDiscount": 0
+  },
+  {
+   "bundleAvailable": false,
+   "categoryFallBack": {
+    "categoryFallBackCode": "kitchen/cooking/hobs/induction-hob",
+    "categoryFallBackENName": "Induction hob",
+    "categoryFallBackName": "Induktionskochfelder"
+   },
+   "code": "949598284",
+   "d2cExclusiveFlag": false,
+   "d2cSellable": true,
+   "description": "Induktions-Kochfeld / 80 cm / Edelstahlrahmen",
+   "displayLowestPriceMesssage": false,
+   "displayToolTipForLowestPrice": false,
+   "flashPromoDR": false,
+   "hideShowPncFlag": false,
+   "isServiceable": false,
+   "kit": false,
+   "lowestPricePeriod": 0,
+   "minCTFError": false,
+   "modelId": "TO84IB0FRB",
+   "nakedProduct": false,
+   "name": "6000 Flex Autarkes Induktionskochfeld / Hob²Hood® / 83 cm",
+   "offerPrice": {
+    "currencyIso": "EUR",
+    "formattedValue": "€ 620",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 620
+   },
+   "price": {
+    "currencyIso": "EUR",
+    "formattedValue": "€ 739",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 739
+   },
+   "productURL": "https://www.aeg.de/kitchen/cooking/hobs/induction-hob/to84ib0frb/",
+   "rrp": {
+    "currencyIso": "EUR",
+    "formattedValue": "€ 1.398",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 1398
+   },
+   "rts": false,
+   "smallAppliance": false,
+   "suggestedDiscount": 0
+  }
+ ]
+}

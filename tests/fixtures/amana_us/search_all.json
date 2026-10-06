@@ -1,0 +1,589 @@
+{
+"products": [
+{
+"code": "WVW75UC6DS",
+"name": "36\" Modern Glass Wall Mount Range Hood",
+"brand": "Whirlpool",
+"url": "/cooking/hoods/p.36-modern-glass-wall-mount-range-hood.wvw75uc6ds.html",
+"price": {
+"value": 925.99
+},
+"primaryCategory": {
+"pipedCategory": "Cooking|Hoods"
+},
+"isMemberPrice": false
+},
+{
+"code": "WVW57UC0FS",
+"name": "30\" Stainless Steel Wall Mount Flat Range Hood",
+"brand": "Whirlpool",
+"url": "/cooking/hoods/p.30-stainless-steel-wall-mount-flat-range-hood.wvw57uc0fs.html",
+"price": {
+"value": 548.99
+},
+"primaryCategory": {
+"pipedCategory": "Cooking|Hoods"
+},
+"isMemberPrice": false
+},
+{
+"code": "AER6303MMS",
+"name": "30-inch Amana® Electric Range with Extra-Large Oven Window",
+"brand": "Amana",
+"url": "/cooking/ranges/p.30-inch-amana-electric-range-with-extra-large-oven-window.aer6303mms.html",
+"price": {
+"value": 599.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooking|Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "AGR6603SMS",
+"name": "30-inch Gas Range with Self-Clean Option",
+"brand": "Amana",
+"url": "/cooking/ranges/p.30-inch-gas-range-with-self-clean-option.agr6603sms.html",
+"price": {
+"value": 779.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooking|Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "ADFS2524RS",
+"name": "Amana® Dishwasher with Midnight Interior",
+"brand": "Amana",
+"url": "/kitchen/dishwashers/p.amana-dishwasher-with-midnight-interior.adfs2524rs.html",
+"price": {
+"value": 349.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Dishwashers"
+},
+"isMemberPrice": false
+},
+{
+"code": "AFCS2530TS",
+"name": "Amana® 30-Inch Electric Range with Extra-Large Oven Window",
+"brand": "Amana",
+"url": "/cooking/ranges/p.amana-30-inch-electric-range-with-extra-large-oven-window.afcs2530ts.html",
+"price": {
+"value": 559.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooking|Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "UXW7324BSS",
+"name": "24\" Wall-Mount Canopy",
+"brand": "Unbranded",
+"url": "/cooking/hoods/p.24-wall-mount-canopy.uxw7324bss.html",
+"price": {
+"value": 969.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooking|Hoods"
+},
+"isMemberPrice": false
+},
+{
+"code": "UXD8630DYS",
+"name": "30\" Retractable Downdraft System with Interior Blower Motor",
+"brand": "Unbranded",
+"url": "/cooking/hoods/p.30-retractable-downdraft-system-with-interior-blower-motor.uxd8630dys.html",
+"price": {
+"value": 1241.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooking|Hoods"
+},
+"isMemberPrice": false
+},
+{
+"code": "UXT3030ADB",
+"name": "30\" Range Hood with the FIT System",
+"brand": "Unbranded",
+"url": "/cooking/hoods/p.30-range-hood-with-the-fit-system.uxt3030adb.html",
+"price": {
+"value": 152.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooking|Hoods"
+},
+"isMemberPrice": false
+},
+{
+"code": "ART104TFDB",
+"name": "28-inch Top-Freezer Refrigerator with Dairy Bin",
+"brand": "Amana",
+"url": "/refrigerators/top-freezer/p.28-inch-top-freezer-refrigerator-with-dairy-bin.art104tfdb.html",
+"price": {
+"value": 622.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigerators|Top-Freezer"
+},
+"isMemberPrice": false
+},
+{
+"code": "AZC5216LW",
+"name": "16 cu. ft. Amana® Chest Freezer",
+"brand": "Amana",
+"url": "/freezers/chest/p.16-cu.-ft.-amana-chest-freezer.azc5216lw.html",
+"price": {
+"value": 638.99
+},
+"primaryCategory": {
+"pipedCategory": "Freezers|Chest"
+},
+"isMemberPrice": false
+},
+{
+"code": "ARTX3028PB",
+"name": "Top Freezer Refrigerator - 16.3 cu. ft.",
+"brand": "Amana",
+"url": "/refrigerators/top-freezer/p.top-freezer-refrigerator-16.3-cu.-ft.artx3028pb.html",
+"price": {
+"value": 739.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigerators|Top-Freezer"
+},
+"isMemberPrice": false
+},
+{
+"code": "UMV1170LS",
+"name": "1,000-Watt Over-the-Range Microwave - 1.7 cu. ft",
+"brand": "Unbranded",
+"url": "/cooking/microwaves/p.1,000-watt-over-the-range-microwave-1.7-cu.-ft.umv1170ls.html",
+"price": {
+"value": 359.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooking|Microwaves"
+},
+"isMemberPrice": false
+},
+{
+"code": "AMMS2230TW",
+"name": "1.7 Cu. Ft. Over-the-Range Microwave with Quick Start Presets",
+"brand": "Amana",
+"url": "/kitchen/cooking/microwaves/p.1.7-cu.-ft.-over-the-range-microwave-with-quick-start-presets.amms2230tw.html",
+"price": {
+"value": 269.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Cooking|Microwaves"
+},
+"isMemberPrice": false
+},
+{
+"code": "AER6303MFW",
+"name": "30-inch Amana® Electric Range with Extra-Large Oven Window",
+"brand": "Amana",
+"url": "/cooking/ranges/p.30-inch-amana-electric-range-with-extra-large-oven-window.aer6303mfw.html",
+"price": {
+"value": 599.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooking|Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "AER6603SFW",
+"name": "30-inch Amana® Electric Range with Extra-Large Oven Window",
+"brand": "Amana",
+"url": "/cooking/ranges/p.30-inch-amana-electric-range-with-extra-large-oven-window.aer6603sfw.html",
+"price": {
+"value": 679.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooking|Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "UXD8636DYS",
+"name": "36\" Retractable Downdraft System with Interior Blower Motor",
+"brand": "Unbranded",
+"url": "/cooking/hoods/p.36-retractable-downdraft-system-with-interior-blower-motor.uxd8636dys.html",
+"price": {
+"value": 1331.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooking|Hoods"
+},
+"isMemberPrice": false
+},
+{
+"code": "AGG222VDW",
+"name": "20-inch Gas Range with Compact Oven Capacity",
+"brand": "Amana",
+"url": "/cooking/ranges/p.20-inch-gas-range-with-compact-oven-capacity.agg222vdw.html",
+"price": {
+"value": 929.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooking|Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "WVW57UC6FS",
+"name": "36\" Stainless Steel Wall Mount Flat Range Hood",
+"brand": "Whirlpool",
+"url": "/cooking/hoods/p.36-stainless-steel-wall-mount-flat-range-hood.wvw57uc6fs.html",
+"price": {
+"value": 598.99
+},
+"primaryCategory": {
+"pipedCategory": "Cooking|Hoods"
+},
+"isMemberPrice": false
+},
+{
+"code": "ACR4303MFW",
+"name": "30-inch Amana® Electric Range with Bake Assist Temps",
+"brand": "Amana",
+"url": "/cooking/ranges/p.30-inch-amana-electric-range-with-bake-assist-temps.acr4303mfw.html",
+"price": {
+"value": 599.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooking|Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "NFW5800HW",
+"name": "4.3 cu. ft. Front-Load Washer with Large Capacity",
+"brand": "Amana",
+"url": "/laundry/washers/top-load/p.4.3-cu.-ft.-front-load-washer-with-large-capacity.nfw5800hw.html",
+"price": {
+"value": 759.0
+},
+"primaryCategory": {
+"pipedCategory": "Laundry|Washers|Top-Load"
+},
+"isMemberPrice": false
+},
+{
+"code": "AGR6303MMS",
+"name": "30-inch Gas Range with Bake Assist Temps",
+"brand": "Amana",
+"url": "/cooking/ranges/p.30-inch-gas-range-with-bake-assist-temps.agr6303mms.html",
+"price": {
+"value": 699.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooking|Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "AGR4203MNS",
+"name": "Amana® 30-inch Gas Range with Easy-Clean Glass Door",
+"brand": "Amana",
+"url": "/cooking/ranges/p.amana-30-inch-gas-range-with-easy-clean-glass-door.agr4203mns.html",
+"price": {
+"value": 699.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooking|Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "ARTX2021TB",
+"name": "33-Inch Wide Top-Freezer Refrigerator With Dual Crisper Drawers—21 Cu. Ft.",
+"brand": "Amana",
+"url": "/refrigerators/top-freezer/p.33-inch-wide-top-freezer-refrigerator-with-dual-crisper-drawers-21-cu.-ft.artx2021tb.html",
+"price": {
+"value": 809.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigerators|Top-Freezer"
+},
+"isMemberPrice": false
+},
+{
+"code": "AMV2307PFW",
+"name": "1.6 Cu. Ft. Over-the-Range Microwave with Add 0:30 Seconds",
+"brand": "Amana",
+"url": "/cooking/microwaves/p.1.6-cu.-ft.-over-the-range-microwave-with-add-0:30-seconds.amv2307pfw.html",
+"price": {
+"value": 209.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooking|Microwaves"
+},
+"isMemberPrice": false
+},
+{
+"code": "NED4655EW",
+"name": "6.5 cu. ft. Electric Dryer with Wrinkle Prevent Option",
+"brand": "Amana",
+"url": "/laundry/dryers/top-load/p.6.5-cu.-ft.-electric-dryer-with-wrinkle-prevent-option.ned4655ew.html",
+"price": {
+"value": 519.0
+},
+"primaryCategory": {
+"pipedCategory": "Laundry|Dryers|Top-Load"
+},
+"isMemberPrice": false
+},
+{
+"code": "AGR5330BAB",
+"name": "30-inch Gas Range with Easy Touch Electronic Controls",
+"brand": "Amana",
+"url": "/cooking/ranges/p.30-inch-gas-range-with-easy-touch-electronic-controls.agr5330bab.html",
+"price": {
+"value": 655.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooking|Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "ARTX2314TB",
+"name": "28.5-Inch Wide Top-Freezer Refrigerator With A Large Crisper Drawer—14 Cu. Ft.",
+"brand": "Amana",
+"url": "/refrigerators/top-freezer/p.28.5-inch-wide-top-freezer-refrigerator-with-a-large-crisper-drawer-14-cu.-ft.artx2314tb.html",
+"price": {
+"value": 719.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigerators|Top-Freezer"
+},
+"isMemberPrice": false
+},
+{
+"code": "ARTX2014TW",
+"name": "28.5-Inch Wide Top-Freezer Refrigerator With A Large Crisper Drawer—14 Cu. Ft.",
+"brand": "Amana",
+"url": "/refrigerators/top-freezer/p.28.5-inch-wide-top-freezer-refrigerator-with-a-large-crisper-drawer-14-cu.-ft.artx2014tw.html",
+"price": {
+"value": 699.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigerators|Top-Freezer"
+},
+"isMemberPrice": false
+},
+{
+"code": "UXT2030ADW",
+"name": "30\" Range Hood with the FIT System",
+"brand": "Unbranded",
+"url": "/cooking/hoods/p.30-range-hood-with-the-fit-system.uxt2030adw.html",
+"price": {
+"value": 152.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooking|Hoods"
+},
+"isMemberPrice": false
+},
+{
+"code": "ASI2175GRB",
+"name": "33-inch Side-by-Side Refrigerator with Dual Pad External Ice and Water Dispenser",
+"brand": "Amana",
+"url": "/refrigerators/side-by-side/p.33-inch-side-by-side-refrigerator-with-dual-pad-external-ice-and-water-dispenser.asi2175grb.html",
+"price": {
+"value": 1399.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigerators|Side-by-Side"
+},
+"isMemberPrice": false
+},
+{
+"code": "AEP222VAW",
+"name": "20-inch Amana® Electric Range Oven with Versatile Cooktop",
+"brand": "Amana",
+"url": "/cooking/ranges/p.20-inch-amana-electric-range-oven-with-versatile-cooktop.aep222vaw.html",
+"price": {
+"value": 929.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooking|Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "WVU17UC0JW",
+"name": "30\" Range Hood with Full-Width Grease Filters",
+"brand": "Whirlpool",
+"url": "/cooking/hoods/p.30-range-hood-with-full-width-grease-filters.wvu17uc0jw.html",
+"price": {
+"value": 205.99
+},
+"primaryCategory": {
+"pipedCategory": "Cooking|Hoods"
+},
+"isMemberPrice": false
+},
+{
+"code": "AZCC2316TW",
+"name": "Amana® 16 Cu. Ft. Chest Freezer with Up-Front Temperature Control System",
+"brand": "Amana",
+"url": "/freezers/chest/p.amana-16-cu.-ft.-chest-freezer-with-up-front-temperature-control-system.azcc2316tw.html",
+"price": {
+"value": 549.0
+},
+"primaryCategory": {
+"pipedCategory": "Freezers|Chest"
+},
+"isMemberPrice": false
+},
+{
+"code": "NTW4519JW",
+"name": "3.8 cu. ft. Large Capacity Top Load Washer with High-Efficiency Agitator",
+"brand": "Amana",
+"url": "/laundry/washers/top-load/p.3.8-cu.-ft.-large-capacity-top-load-washer-with-high-efficiency-agitator.ntw4519jw.html",
+"price": {
+"value": 519.0
+},
+"primaryCategory": {
+"pipedCategory": "Laundry|Washers|Top-Load"
+},
+"isMemberPrice": false
+},
+{
+"code": "AER6603SMS",
+"name": "30-inch Amana® Electric Range with Extra-Large Oven Window",
+"brand": "Amana",
+"url": "/cooking/ranges/p.30-inch-amana-electric-range-with-extra-large-oven-window.aer6603sms.html",
+"price": {
+"value": 699.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooking|Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "ACR4303MMS",
+"name": "30-inch Amana® Electric Range with Bake Assist Temps",
+"brand": "Amana",
+"url": "/cooking/ranges/p.30-inch-amana-electric-range-with-bake-assist-temps.acr4303mms.html",
+"price": {
+"value": 599.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooking|Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "ABB2224BRM",
+"name": "33-inch Wide Bottom-Freezer Refrigerator with EasyFreezer™ Pull-Out Drawer - 22 cu. ft. Capacity",
+"brand": "Amana",
+"url": "/refrigerators/bottom-freezer/p.33-inch-wide-bottom-freezer-refrigerator-with-easyfreezer-pull-out-drawer-22-cu.-ft.-capacity.abb2224brm.html",
+"price": {
+"value": 1399.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigerators|Bottom-Freezer"
+},
+"isMemberPrice": false
+},
+{
+"code": "ABB1924BRM",
+"name": "29-inch Wide Bottom-Freezer Refrigerator with EasyFreezer™ Pull-Out Drawer -- 18 cu. ft. Capacity",
+"brand": "Amana",
+"url": "/refrigerators/bottom-freezer/p.29-inch-wide-bottom-freezer-refrigerator-with-easyfreezer-pull-out-drawer-18-cu.-ft.-capacity.abb1924brm.html",
+"price": {
+"value": 1399.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigerators|Bottom-Freezer"
+},
+"isMemberPrice": false
+},
+{
+"code": "AER6203MSS",
+"name": "30-inch Amana® Electric Range with Extra-Large Oven Window",
+"brand": "Amana",
+"url": "/cooking/ranges/p.30-inch-amana-electric-range-with-extra-large-oven-window.aer6203mss.html",
+"price": {
+"value": 599.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooking|Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "AGR6603SFB",
+"name": "30-inch Gas Range with Self-Clean Option",
+"brand": "Amana",
+"url": "/cooking/ranges/p.30-inch-gas-range-with-self-clean-option.agr6603sfb.html",
+"price": {
+"value": 749.0
+},
+"primaryCategory": {
+"pipedCategory": "Cooking|Ranges"
+},
+"isMemberPrice": false
+},
+{
+"code": "NGD4655EW",
+"name": "6.5 cu. ft. Gas Dryer with Wrinkle Prevent Option",
+"brand": "Amana",
+"url": "/laundry/dryers/top-load/p.6.5-cu.-ft.-gas-dryer-with-wrinkle-prevent-option.ngd4655ew.html",
+"price": {
+"value": 619.0
+},
+"primaryCategory": {
+"pipedCategory": "Laundry|Dryers|Top-Load"
+},
+"isMemberPrice": false
+},
+{
+"code": "ASI2575GRB",
+"name": "36-inch Wide Side-by-Side Refrigerator with Dual Pad External Ice and Water Dispenser - 25 Cu. Ft.",
+"brand": "Amana",
+"url": "/refrigerators/side-by-side/p.36-inch-wide-side-by-side-refrigerator-with-dual-pad-external-ice-and-water-dispenser-25-cu.-ft.asi2575grb.html",
+"price": {
+"value": 1399.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigerators|Side-by-Side"
+},
+"isMemberPrice": false
+},
+{
+"code": "ARTX2019SZ",
+"name": "30-Inch Wide Top-Freezer Refrigerator With Dual Crisper Drawers—19 Cu. Ft.",
+"brand": "Amana",
+"url": "/refrigerators/top-freezer/p.30-inch-wide-top-freezer-refrigerator-with-dual-crisper-drawers-19-cu.-ft.artx2019sz.html",
+"price": {
+"value": 779.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigerators|Top-Freezer"
+},
+"isMemberPrice": false
+},
+{
+"code": "ARTX2419SW",
+"name": "30-Inch Wide Garage Ready Top-Freezer Refrigerator—19 Cu. Ft.",
+"brand": "Amana",
+"url": "/refrigerators/top-freezer/p.30-inch-wide-garage-ready-top-freezer-refrigerator-19-cu.-ft.artx2419sw.html",
+"price": {
+"value": 739.0
+},
+"primaryCategory": {
+"pipedCategory": "Refrigerators|Top-Freezer"
+},
+"isMemberPrice": false
+}
+]
+}

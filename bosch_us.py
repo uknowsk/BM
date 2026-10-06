@@ -33,9 +33,9 @@ MAX_PAGES = 15
 CONSENT_DECLINE, CONSENT_ACCEPT = "Decline all", "Accept all"
 
 # sub key -> (major key, category pages whose listings make up the sub group). Keys Bosch US does not sell
-# (side_by_side, top_freezer, compact, top_load, laundry_center, gas_oven) are deliberately absent.
+# (side_by_side, top_freezer, compact, top_load, laundry_center) are deliberately absent.
 # Assumptions: sco = speed ovens + combination (oven + microwave) wall ovens; gas_oven = gas and dual-fuel ranges
-# (no gas wall oven exists); radiant = electric ranges + electric cooktops; induction = induction ranges + cooktops;
+# (no gas wall oven exists); gas_cooktop = gas cooktops + rangetops (category gas-cooktops, no oven); radiant = electric ranges + electric cooktops; induction = induction ranges + cooktops;
 # electric_oven = wall ovens without microwave/speed function; microwave = built-in + drawer (OTR has its own key).
 # Cooking category pages overlap (a speed oven is listed under wall ovens), so classify_cooking() - one rule shared
 # by discover() and scrape() - decides the sub key of every listed product from its URL path + name.
@@ -50,6 +50,7 @@ SUB_SOURCES: dict[str, tuple[str, tuple[str, ...]]] = {
     "otr": ("cooking", ("cooking-baking/microwaves/over-the-range-microwaves",)),
     "sco": ("cooking", ("cooking-baking/wall-ovens", "cooking-baking/microwaves/built-in-microwaves")),
     "gas_oven": ("cooking", ("cooking-baking/ranges",)),
+    "gas_cooktop": ("cooking", ("cooking-baking/gas-cooktops",)),
     "electric_oven": ("cooking", ("cooking-baking/wall-ovens",)),
     "induction": ("cooking", ("cooking-baking/induction-electric-cooktops/induction-cooktops",
                               "cooking-baking/ranges")),
@@ -368,7 +369,7 @@ def classify_fridge(path: str, headline: str) -> str | None:
 
 def classify_cooking(path: str, headline: str) -> str | None:
     """Cooking sub key from the product's URL path + headline. Single source of truth for discover() and
-    scrape(); mutually exclusive by precedence: otr, sco, microwave, induction, gas_oven, radiant, electric_oven."""
+    scrape(); mutually exclusive by precedence: otr, sco, microwave, induction, gas_cooktop, gas_oven, radiant, electric_oven."""
     rel = path.split("/product/", 1)[-1].lower()
     h = (headline or "").lower()
     if rel.startswith("cooking-baking/microwaves/over-the-range"):
@@ -380,6 +381,8 @@ def classify_cooking(path: str, headline: str) -> str | None:
         return "microwave"
     if "/induction-ranges/" in rel or rel.startswith("cooking-baking/induction-electric-cooktops/induction-cooktops"):
         return "induction"
+    if rel.startswith("cooking-baking/gas-cooktops/"):
+        return "gas_cooktop"
     if rel.startswith("cooking-baking/ranges/"):
         if "/gas-ranges/" in rel or "/dual-fuel-ranges/" in rel or re.search(r"(?<![a-z])gas(?![a-z])|dual fuel", h):
             return "gas_oven"

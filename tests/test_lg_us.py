@@ -174,7 +174,7 @@ def _pdp(name):
 def test_supported_subcategories_and_unsupported_raises():
     assert lg_us.SUPPORTED_SUBCATEGORIES == set(lg_us.SUB_RULES)
     assert "scr" not in lg_us.SUPPORTED_SUBCATEGORIES and "french_door" in lg_us.SUPPORTED_SUBCATEGORIES
-    assert {"sco", "gas_oven", "radiant", "induction", "electric_oven", "microwave", "otr"} <= lg_us.SUPPORTED_SUBCATEGORIES
+    assert {"sco", "gas_oven", "gas_cooktop", "radiant", "induction", "electric_oven", "microwave", "otr"} <= lg_us.SUPPORTED_SUBCATEGORIES
     assert all(catalog.major_of(s) == lg_us.SUB_RULES[s].major for s in lg_us.SUPPORTED_SUBCATEGORIES)
     for bad in ("scr", "refrigerator", "nope"):
         try:
@@ -213,7 +213,8 @@ def test_infer_subcategory_from_codes_and_title():
     assert f(["microwaves", "over_the_range"], "Over-the-Range Microwave Hood Combination") == "otr"
     assert f(["cooktops", "cooktops_electric", "cooktop_induction"], "Induction Cooktop") == "induction"
     assert f(["cooktops", "cooktops_electric"], "Electric Cooktop") == "radiant"
-    assert f(["cooktops", "cooktops_gas"], "Gas Cooktop") is None
+    assert f(["cooktops", "cooktops_gas"], "Gas Cooktop") == "gas_cooktop"
+    assert f(["ranges", "gas"], "Gas Range") == "gas_oven"  # a gas range is not a gas cooktop
     assert f(["dishwashers"], "Dishwasher") is None
 
 
@@ -221,6 +222,8 @@ def test_parse_listing_by_sub_filters_and_tags():
     data = json.loads(read("coveo_catalog.json"))
     allm = lg_us.parse_listing(data, 500)
     assert all(c.category == "refrigerator" and c.subcategory is None for c in allm)  # untyped legacy call
+    # the catalog fixture has no gas cooktop: borrow the one from the cooking fixture so every sub key has a hit
+    data["results"] += [r for r in json.loads(read("coveo_cooking.json"))["results"] if "Gas Cooktop" in r["title"]]
     seen = {}
     for sub in lg_us.SUB_RULES:
         got = lg_us.parse_listing(data, 500, sub)
@@ -244,7 +247,7 @@ def test_cooking_fixture_one_sub_per_model():
     assert {"LSDL6336F", "LTGL6937F", "LRGL5825F"} <= got["gas_oven"]  # dual fuel + gas ranges
     assert {"LTEL7337F", "LSEL6331F", "LRE3194SW"} <= got["radiant"] and not got["radiant"] & got["gas_oven"]
     assert {"LTIS7338XE", "LSIL6334FE", "LSIU6339XE"} <= got["induction"] and not got["induction"] & got["radiant"]
-    assert "CBGJ3027S" not in flat  # gas cooktop: no oven
+    assert got["gas_cooktop"] == {"CBGJ3027S"} and not got["gas_cooktop"] & got["gas_oven"]  # oven-less gas cooktop
 
 
 def test_pdp_front_load_washer():

@@ -1,0 +1,90 @@
+{
+"documents": [
+{
+"doc_type": [
+"warranty"
+],
+"language": [
+"en_ca",
+"en_us",
+"fr_ca",
+"es_mx"
+],
+"asseturl": "/content/dam/global/documents/202303/warranty-w11655301-revA.pdf"
+},
+{
+"doc_type": [
+"guarantee/fit-system"
+],
+"language": [
+"en_us"
+],
+"asseturl": "/content/dam/global/documents/202602/2026-Maytag-FIT-Limited-Guarantee-en-us.pdf"
+},
+{
+"doc_type": [
+"quick-start-guide"
+],
+"language": [
+"en_ca",
+"en_us",
+"fr_ca"
+],
+"asseturl": "/content/dam/global/documents/202205/reference-sheet-w11553924-revb.pdf"
+},
+{
+"doc_type": [
+"owners-manual"
+],
+"language": [
+"en_ca",
+"en_us",
+"fr_ca",
+"es_mx"
+],
+"asseturl": "/content/dam/global/documents/202403/owners-manual-w11655510-revA.pdf"
+},
+{
+"doc_type": [
+"installers-floor-damage-guide"
+],
+"language": [
+"en_ca",
+"en_us",
+"fr_ca"
+],
+"asseturl": "/content/dam/global/documents/202107/installation-instructions-w11423741-reva.pdf"
+},
+{
+"doc_type": [
+"control-guide"
+],
+"language": [
+"fr_ca",
+"en_us",
+"en_ca"
+],
+"asseturl": "/content/dam/global/documents/202307/control-guide-w11553949-revB.pdf"
+},
+{
+"doc_type": [
+"cad"
+],
+"language": [
+"en_us"
+],
+"asseturl": "/content/dam/global/cad/maytag/cooking/wall-oven/cad-bundles/P220096MC-036_MOEC6030LZ.zip"
+},
+{
+"doc_type": [
+"dimension-guide"
+],
+"language": [
+"en_ca",
+"en_us",
+"fr_ca"
+],
+"asseturl": "/content/dam/global/documents/202305/dimension-guide-w11611026-revA.pdf"
+}
+]
+}

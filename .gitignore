@@ -12,6 +12,8 @@ data/cache.db
 data/cache.db-*
 data/ko_cache.json
 data/ko_cache.json.*.tmp
+data/de_cache.json
+data/fr_cache.json
 pod_cache.json
 pod_cache.json.*.tmp
 

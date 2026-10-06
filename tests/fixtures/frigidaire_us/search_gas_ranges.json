@@ -1,0 +1,85 @@
+{
+ "pagination": {
+  "currentPage": 0,
+  "pageSize": 2,
+  "sort": "relevance",
+  "totalPages": 9,
+  "totalResults": 18
+ },
+ "products": [
+  {
+   "code": "MGCFG3060BF-A1",
+   "name": "30” Gas Range with 15+ Ways to Cook, Includes Free Air Fry Tray",
+   "url": "/c//p/GCFG3060BF-A1",
+   "categoryUrl": "/kitchen/ranges/gas-ranges",
+   "price": {
+    "bestValue": false,
+    "currencyIso": "USD",
+    "formattedValue": "$1,499.00",
+    "priceType": "BUY",
+    "value": 1499
+   },
+   "colorVariants": [
+    {
+     "code": "GCFG3060BF-A1",
+     "color": "Stainless Steel",
+     "width": "30\"",
+     "height": "35 5/8\"",
+     "depth": "28 1/2\"",
+     "price": {
+      "bestValue": false,
+      "currencyIso": "USD",
+      "formattedValue": "$1,499.00",
+      "priceType": "BUY",
+      "value": 1499
+     }
+    },
+    {
+     "code": "GCFG3060BD-A1",
+     "color": "Black Stainless Steel",
+     "width": "30\"",
+     "height": "35 5/8\"",
+     "depth": "28 1/2\"",
+     "price": {
+      "bestValue": false,
+      "currencyIso": "USD",
+      "formattedValue": "$1,699.00",
+      "priceType": "BUY",
+      "value": 1699
+     }
+    }
+   ],
+   "brand": "Frigidaire Gallery"
+  },
+  {
+   "code": "MGCFG3070BF-A",
+   "name": "30\" Front Control Gas Range with Stone-Baked Pizza, Includes Free Air Fry Tray",
+   "url": "/c//p/GCFG3070BF-A2",
+   "categoryUrl": "/kitchen/ranges/gas-ranges",
+   "price": {
+    "bestValue": false,
+    "currencyIso": "USD",
+    "formattedValue": "$1,599.00",
+    "priceType": "BUY",
+    "value": 1599
+   },
+   "colorVariants": [
+    {
+     "code": "GCFG3070BF-A2",
+     "color": "Stainless Steel",
+     "width": "30\"",
+     "height": "35 5/8\"",
+     "depth": "28 1/2\"",
+     "price": {
+      "bestValue": false,
+      "currencyIso": "USD",
+      "formattedValue": "$1,599.00",
+      "priceType": "BUY",
+      "value": 1599
+     }
+    }
+   ],
+   "brand": "Frigidaire Gallery"
+  }
+ ]
+}

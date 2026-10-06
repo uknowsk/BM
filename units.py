@@ -2,6 +2,7 @@
 
 Washer capacity (kg vs US drum cu ft) and energy figures (DOE vs EU/KS) are NOT convertible and are not handled here.
 """
+import re
 from typing import Optional
 
 L_PER_CUFT = 28.3168
@@ -68,3 +69,75 @@ def fmt_dual(value: Optional[float], kind: str, primary: str) -> str:
     converted = conv(value)
     b = _trim(converted, ond) if otrim else f"{converted:.{ond}f}"
     return f"{a} {label} ({b} {olabel})"
+
+
+# ------------------------------------------------------------------ European number/price/energy-label parsing
+# Used by the de/uk/fr adapters. EU energy label classes are a separate scale from ENERGY STAR: they are stored as the
+# text 'EU class X' (never converted to or merged with the ENERGY STAR flag).
+_NBSP = "\u00a0\u202f\u2009 "
+_EU_NUM_RE = re.compile(r"-?\d{1,3}(?:,\d{3})+\.\d+|-?\d[\d.\u00a0\u202f\u2009 ']*(?:,\d+)?|-?\d+(?:\.\d+)?")
+
+
+def parse_eu_number(text) -> Optional[float]:
+    """First number of European-formatted text, comma = decimal separator: '1.299,00 €', '1 299,00 €' (also NBSP/thin
+    space), "1'299,00" -> 1299.0; '12,5 kg' -> 12.5; '1.299' (dot + exactly 3 digits, no comma) -> 1299.0 (German
+    thousands dot); '1.5' -> 1.5; plain '1299' -> 1299.0. Also reads US-style '1,299.50' (a comma followed by exactly 3
+    digits and a later dot). None for None/bool/text without a number. Ints/floats pass through."""
+    if text is None or isinstance(text, bool):
+        return None
+    if isinstance(text, (int, float)):
+        return float(text)
+    s = str(text).strip()
+    m = _EU_NUM_RE.search(s)
+    if not m:
+        return None
+    raw = m.group(0).strip().rstrip(".' " + _NBSP)
+    neg = raw.startswith("-")
+    raw = raw.lstrip("-")
+    if re.fullmatch(r"\d{1,3}(?:,\d{3})+(?:\.\d+)?", raw) and "." in raw:  # US style 1,299.50
+        val = float(raw.replace(",", ""))
+    else:
+        raw = re.sub(r"[\u00a0\u202f\u2009 ']", "", raw)
+        if "," in raw:
+            whole, _, frac = raw.rpartition(",")
+            val = float(whole.replace(".", "") + "." + frac)
+        elif raw.count(".") > 1 or re.fullmatch(r"\d{1,3}\.\d{3}", raw):
+            val = float(raw.replace(".", ""))
+        else:
+            val = float(raw)
+    return -val if neg else val
+
+
+_EU_CLASS_CTX_RE = re.compile(
+    r"(?:energy\s*(?:efficiency\s*)?(?:class|label|rating)|energieeffizienzklasse|energieeffizienz|energieklasse|"
+    r"klasse|class(?:e(?:\s+[ée]nerg[ée]tique)?)?|energielabel)\W{0,4}([A-G])(\+{1,3})?(?![A-Za-z])", re.I)
+_EU_CLASS_BARE_RE = re.compile(r"\s*([A-G])(\+{1,3})?\s*", re.I)
+
+
+def eu_energy_class(text) -> Optional[str]:
+    """EU energy label class as 'EU class A' .. 'EU class G' ('EU class A+++' for the pre-2021 scale), else None.
+    Accepts 'E', 'Energieeffizienzklasse C', 'classe énergétique F', 'Energy class: D (scale A to G)'. A bare letter
+    must be the whole string (so prose such as 'A good fridge' is not read as class A)."""
+    if text is None or isinstance(text, bool):
+        return None
+    s = str(text).strip()
+    m = _EU_CLASS_CTX_RE.search(s) or _EU_CLASS_BARE_RE.fullmatch(s)
+    if not m or not m.group(1):
+        return None
+    letter = m.group(1).upper()
+    plus = m.group(2) or ""
+    return f"EU class {letter}{plus}"
+
+
+_KWH_YEAR_RE = re.compile(
+    r"(-?\d[\d.\u00a0\u202f\u2009 ']*(?:,\d+)?|\d+(?:\.\d+)?)\s*kWh\s*(?:/|pro|per|par)\s*"
+    r"(?:year|yr|annum|a\b|jahr|an\b|ann[ée]e|ans\b|pa\b)", re.I)
+
+
+def parse_kwh_per_year(text) -> Optional[float]:
+    """Annual energy figure 'kWh/Jahr' | 'kWh/year' | 'kWh/an' | 'kWh per annum' | 'kWh/a' -> float kWh per year
+    ('123 kWh/Jahr', '1.234,5 kWh/Jahr' -> 1234.5). None for other bases (kWh/100 cycles, kWh/1000 h, kWh/month)."""
+    if text is None or isinstance(text, bool):
+        return None
+    m = _KWH_YEAR_RE.search(str(text))
+    return parse_eu_number(m.group(1)) if m else None

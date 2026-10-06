@@ -1,0 +1,71 @@
+{
+ "pagination": {
+  "currentPage": 0,
+  "pageSize": 2,
+  "sort": "relevance",
+  "totalPages": 2,
+  "totalResults": 3
+ },
+ "products": [
+  {
+   "code": "ECCG3672A",
+   "name": "36\" Gas Rangetop",
+   "url": "/c//p/ECCG3672AS",
+   "categoryUrl": "/kitchen/cooktops/gas-cooktops",
+   "price": {
+    "bestValue": false,
+    "currencyIso": "USD",
+    "formattedValue": "$3,049.00",
+    "priceType": "BUY",
+    "value": 3049
+   },
+   "colorVariants": [
+    {
+     "code": "ECCG3672AS",
+     "color": "Stainless Steel",
+     "width": "35 15/16\"",
+     "height": "7 1/2\"",
+     "depth": "27 1/8\"",
+     "price": {
+      "bestValue": false,
+      "currencyIso": "USD",
+      "formattedValue": "$3,049.00",
+      "priceType": "BUY",
+      "value": 3049
+     }
+    }
+   ],
+   "brand": "Electrolux"
+  },
+  {
+   "code": "ECCG3668A",
+   "name": "36\" Gas Cooktop",
+   "url": "/c//p/ECCG3668AS",
+   "categoryUrl": "/kitchen/cooktops/gas-cooktops",
+   "price": {
+    "bestValue": false,
+    "currencyIso": "USD",
+    "formattedValue": "$1,499.00",
+    "priceType": "BUY",
+    "value": 1499
+   },
+   "colorVariants": [
+    {
+     "code": "ECCG3668AS",
+     "color": "Stainless Steel",
+     "width": "36\"",
+     "height": "2 219/500\"",
+     "depth": "21\"",
+     "price": {
+      "bestValue": false,
+      "currencyIso": "USD",
+      "formattedValue": "$1,499.00",
+      "priceType": "BUY",
+      "value": 1499
+     }
+    }
+   ],
+   "brand": "Electrolux"
+  }
+ ]
+}

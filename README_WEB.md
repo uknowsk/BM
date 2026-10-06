@@ -106,8 +106,10 @@ exist) and are never merged with the seed attribute they would otherwise match. 
 state/search/collect/results code, so v1 stays a safe fallback until the v2 shell is signed off.
 
 - **Top bar** (`#subbar`): 출향지(시장) chips from `GET /api/regions` (`[{key,label_ko,enabled,note,brands[]}]`; default 북미, 1-4 selectable,
-  disabled = dashed chip + "준비 중"; 중동/아시아/오세아니아 collapsed behind "+"), and the brand multi-select popover. Brands not sold in the
-  selected regions (`regions[].brands`) are disabled with "선택한 출향지 미판매". Without `/api/regions` (404) a built-in list is used (only 북미 enabled).
+  disabled = dashed chip + "준비 중"; 중동/아시아/오세아니아 collapsed behind "+"), and the brand multi-select popover: brands grouped by family (`/api/brands[].group`), a search box (name or family, accent-insensitive),
+  per-group "전체/해제", adapter countries as small tags (`/api/brands[].countries`) and a "n/30" count (selected brands usable in the chosen markets).
+  Brands not sold in the
+  selected regions (`regions[].brands`) are disabled with "선택한 출향지 미판매"; brands without an adapter yet show "준비 중". Without `/api/regions` (404) a built-in list is used (only 북미 enabled).
 - **Rail** (`#rail`): major groups; hover (120 ms in / 250 ms out, diagonal-safe because the fly-out is a child of the rail) or focus opens the fly-out with
   that group's sub-types (multi-select checkboxes + "지원 항목 전체 선택"). Keyboard: Up/Down/Home/End between groups, Right/Enter/Space into the fly-out,
   Up/Down/Home/End inside it, Left/Esc back (and close). Touch (`hover:none`) and < 900px: inline accordion; < 900px the rail is a slide-in drawer

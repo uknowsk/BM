@@ -11,18 +11,44 @@ window.__GAUGE_MOCK__ = true;   // app.js then namespaces localStorage as 'gauge
 const MAJORS = [
   { key: 'refrigerator', label_ko: '냉장고', children: [['french_door', '프렌치도어'], ['side_by_side', '사이드바이사이드'], ['top_freezer', '상냉동'], ['bottom_freezer', '하냉동'], ['built_in', '빌트인'], ['compact', '소형']] },
   { key: 'washer', label_ko: '세탁기', children: [['top_load', '전자동/탑로더'], ['front_load', '드럼'], ['dryer', '건조기'], ['laundry_center', '트윈/스택·워시타워']] },
-  { key: 'cooking', label_ko: '조리기기', children: [['microwave', '전자레인지'], ['sco', 'SCO (스피드쿡 오븐)'], ['otr', 'OTR'], ['gas_oven', '가스오븐'], ['electric_oven', '전기오븐'], ['induction', '인덕션'], ['radiant', '라디언트']] },
+  { key: 'cooking', label_ko: '조리기기', children: [['microwave', '전자레인지'], ['sco', 'SCO (스피드쿡 오븐)'], ['otr', 'OTR'], ['gas_oven', '가스오븐'], ['gas_cooktop', '가스 쿡탑'], ['electric_oven', '전기오븐'], ['induction', '인덕션'], ['radiant', '라디언트']] },
 ];
 const SUPPORT = {
-  Samsung: ['french_door', 'side_by_side', 'top_freezer', 'bottom_freezer', 'built_in', 'top_load', 'front_load', 'dryer', 'microwave', 'otr', 'gas_oven', 'electric_oven', 'induction', 'radiant'],
-  LG: ['french_door', 'side_by_side', 'top_freezer', 'bottom_freezer', 'compact', 'top_load', 'front_load', 'dryer', 'laundry_center', 'microwave', 'sco', 'otr', 'gas_oven', 'electric_oven', 'induction', 'radiant'],
-  KitchenAid: ['french_door', 'side_by_side', 'bottom_freezer', 'built_in', 'microwave', 'sco', 'otr', 'gas_oven', 'electric_oven', 'induction', 'radiant'],
-  GE: ['french_door', 'side_by_side', 'top_freezer', 'bottom_freezer', 'built_in', 'compact', 'top_load', 'front_load', 'dryer', 'microwave', 'sco', 'otr', 'gas_oven', 'electric_oven', 'induction', 'radiant'],
-  Whirlpool: ['french_door', 'side_by_side', 'top_freezer', 'bottom_freezer', 'compact', 'top_load', 'front_load', 'dryer', 'microwave', 'otr', 'gas_oven', 'electric_oven', 'radiant'],
-  Bosch: ['french_door', 'bottom_freezer', 'built_in', 'front_load', 'dryer', 'microwave', 'gas_oven', 'electric_oven', 'induction', 'radiant'],
+  Samsung: ['french_door', 'side_by_side', 'top_freezer', 'bottom_freezer', 'built_in', 'top_load', 'front_load', 'dryer', 'microwave', 'otr', 'gas_oven', 'gas_cooktop', 'electric_oven', 'induction', 'radiant'],
+  LG: ['french_door', 'side_by_side', 'top_freezer', 'bottom_freezer', 'compact', 'top_load', 'front_load', 'dryer', 'laundry_center', 'microwave', 'sco', 'otr', 'gas_oven', 'gas_cooktop', 'electric_oven', 'induction', 'radiant'],
+  KitchenAid: ['french_door', 'side_by_side', 'bottom_freezer', 'built_in', 'microwave', 'sco', 'otr', 'gas_oven', 'gas_cooktop', 'electric_oven', 'induction', 'radiant'],
+  GE: ['french_door', 'side_by_side', 'top_freezer', 'bottom_freezer', 'built_in', 'compact', 'top_load', 'front_load', 'dryer', 'microwave', 'sco', 'otr', 'gas_oven', 'gas_cooktop', 'electric_oven', 'induction', 'radiant'],
+  Whirlpool: ['french_door', 'side_by_side', 'top_freezer', 'bottom_freezer', 'compact', 'top_load', 'front_load', 'dryer', 'microwave', 'otr', 'gas_oven', 'gas_cooktop', 'electric_oven', 'radiant'],
+  Bosch: ['french_door', 'bottom_freezer', 'built_in', 'front_load', 'dryer', 'microwave', 'gas_oven', 'gas_cooktop', 'electric_oven', 'induction', 'radiant'],
 };
 const DOMAIN = { Samsung: 'samsung.com', LG: 'lg.com', KitchenAid: 'kitchenaid.com', GE: 'geappliances.com', Whirlpool: 'whirlpool.com', Bosch: 'bosch-home.com' };
 const PREFIX = { Samsung: 'RF', LG: 'LR', KitchenAid: 'KR', GE: 'GN', Whirlpool: 'WR', Bosch: 'B36' };
+/* 6 -> 30 brands. [name, group, countries with an adapter, ready, domain, prefix, coverage]; ready=false -> '준비 중' (no adapter file yet).
+   coverage: full = every sub-category, cook = cooking + built-in fridge, fridge = refrigerators, laundry = washers/dryers + cooking */
+const GROUP = { Samsung: 'Samsung·LG', LG: 'Samsung·LG', KitchenAid: 'Whirlpool Corp.', GE: 'Haier·GE', Whirlpool: 'Whirlpool Corp.', Bosch: 'BSH' };
+const COUNTRIES = { Samsung: ['us', 'kr'], LG: ['us', 'kr'], KitchenAid: ['us'], GE: ['us'], Whirlpool: ['us'], Bosch: ['us'] };
+const NEW_BRANDS = [
+  ['Maytag', 'Whirlpool Corp.', ['us'], true, 'maytag.com', 'MT', 'full'], ['JennAir', 'Whirlpool Corp.', ['us'], true, 'jennair.com', 'JA', 'cook'],
+  ['Amana', 'Whirlpool Corp.', ['us'], false, 'amana.com', 'AM', 'full'], ['Thermador', 'BSH', ['us'], true, 'thermador.com', 'TH', 'cook'],
+  ['Gaggenau', 'BSH', [], false, 'gaggenau.com', 'GG', 'cook'], ['Siemens', 'BSH', [], false, 'siemens-home.bsh-group.com', 'SI', 'full'],
+  ['Frigidaire', 'Electrolux', ['us'], true, 'frigidaire.com', 'FG', 'full'], ['Electrolux', 'Electrolux', ['us'], true, 'electrolux.com', 'EL', 'full'],
+  ['AEG', 'Electrolux', ['us'], true, 'aeg.com', 'AE', 'full'], ['Café', 'Haier·GE', ['us'], true, 'cafeappliances.com', 'CF', 'cook'],
+  ['Monogram', 'Haier·GE', [], false, 'monogram.com', 'MG', 'cook'], ['Haier', 'Haier·GE', ['us'], true, 'haierappliances.com', 'HA', 'full'],
+  ['Fisher & Paykel', 'Haier·GE', [], false, 'fisherpaykel.com', 'FP', 'laundry'], ['Viking', '프리미엄', ['us'], true, 'vikingrange.com', 'VK', 'cook'],
+  ['Sub-Zero', '프리미엄', ['us'], true, 'subzero-wolf.com', 'SZ', 'fridge'], ['Wolf', '프리미엄', [], false, 'subzero-wolf.com', 'WF', 'cook'],
+  ['Miele', '프리미엄', ['us'], true, 'miele.com', 'MI', 'full'], ['Smeg', '프리미엄', ['us'], true, 'smeg.com', 'SM', 'cook'],
+  ['Liebherr', '프리미엄', ['us'], true, 'liebherr.com', 'LB', 'fridge'], ['Bertazzoni', '프리미엄', [], false, 'bertazzoni.com', 'BZ', 'cook'],
+  ['De Dietrich', '프리미엄', [], false, 'dedietrich-electromenager.fr', 'DD', 'cook'], ['Beko', '글로벌', ['us'], true, 'beko.com', 'BK', 'full'],
+  ['Hisense', '글로벌', [], false, 'hisense-usa.com', 'HS', 'full'], ['Panasonic', '글로벌', [], false, 'panasonic.com', 'PA', 'cook'],
+];
+const COVER = {
+  full: () => MAJORS.flatMap((m) => m.children.map(([k]) => k)),
+  cook: () => ['built_in', ...MAJORS[2].children.map(([k]) => k)],
+  fridge: () => ['french_door', 'side_by_side', 'bottom_freezer', 'built_in', 'compact'],
+  laundry: () => [...MAJORS[1].children.map(([k]) => k), ...MAJORS[2].children.map(([k]) => k)],
+};
+const NOT_READY = new Set();
+NEW_BRANDS.forEach(([n, g, cc, ready, dom, pre, cov]) => { GROUP[n] = g; COUNTRIES[n] = cc; DOMAIN[n] = dom; PREFIX[n] = pre; if (ready) SUPPORT[n] = COVER[cov](); else NOT_READY.add(n); });
 const SUBS = new Map(MAJORS.flatMap((m) => m.children.map(([k, l]) => [k, { label: l, major: m.key }])));
 const PRICE = { refrigerator: [699, 4200], washer: [549, 2100], cooking: [149, 3400] };
 const REGIONS = [
@@ -43,8 +69,9 @@ const FILTERS = (sub) => [
   { key: 'door_type', label_ko: '도어 타입', type: 'multi', level: 'listing', values: [{ key: 'french_door', label_ko: '프렌치도어' }] },
   { key: 'price', label_ko: '가격대', type: 'range', level: 'listing', unit: 'USD', values: [] },
 ];
-const brands = () => Object.keys(SUPPORT).map((n) => ({ name: n, enabled: true, note: '', categories: SUPPORT[n] }))
-  .concat(['Miele', 'AEG'].map((n) => ({ name: n, enabled: false, note: '준비 중', categories: [] })));
+const ORDER = ['Samsung', 'LG', 'KitchenAid', 'GE', 'Whirlpool', 'Bosch', ...NEW_BRANDS.map((b) => b[0])];
+const brands = () => [...Object.keys(SUPPORT), ...NOT_READY].map((n) => ({ name: n, enabled: !NOT_READY.has(n), note: NOT_READY.has(n) ? '준비 중' : '', categories: SUPPORT[n] || [], group: GROUP[n], countries: COUNTRIES[n] || [] }))
+  .sort((a, b) => ORDER.indexOf(a.name) - ORDER.indexOf(b.name));
 const categories = () => MAJORS.map((m) => ({ key: m.key, label_ko: m.label_ko, enabled: true, children: m.children.map(([key, label_ko]) => ({ key, label_ko })) }));
 
 const hash = (s) => { let h = 2166136261; for (const c of s) { h ^= c.charCodeAt(0); h = Math.imul(h, 16777619); } return (h >>> 0) / 4294967296; };
@@ -138,7 +165,7 @@ window.fetch = async (path, opts) => {
   const body = opts && opts.body ? JSON.parse(opts.body) : null;
   if (url === '/api/brands') return json(brands());
   if (url === '/api/categories') return json(categories());
-  if (url === '/api/meta') return json({ mock: true, max_selected: 12, delay_s: 0 });
+  if (url === '/api/meta') return json({ mock: true, max_selected: 12, delay_s: 0, max_search_combos: 120, max_brands: 30 });
   if (url === '/api/regions') return json(REGIONS);
   if (url.startsWith('/api/filters')) return json({ groups: FILTERS() });
   if (url === '/api/search' || url === '/api/collect') {

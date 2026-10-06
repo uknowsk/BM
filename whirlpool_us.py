@@ -100,9 +100,12 @@ SUBS: dict[str, _Sub] = {
                       r"Cooking\|Microwaves", name_ex=r"refurbish"),
     "induction": _Sub("cooking", _PAGE["cooking"], ("KitchenCookingCooktops", "KitchenCookingRanges"),
                       r"Cooking\|(Cooktops|Ranges)", name_in=r"induction", name_ex=r"refurbish|\bhood\b"),
-    # gas_oven = gas / dual-fuel RANGES (Whirlpool sells no gas wall oven; gas cooktops are not ovens).
+    # gas_oven = gas / dual-fuel RANGES (Whirlpool sells no gas wall oven; gas cooktops are gas_cooktop).
     "gas_oven": _Sub("cooking", _PAGE["cooking"], ("KitchenCookingRanges",), r"Cooking\|Ranges",
                      name_in=r"\bgas\b|dual[- ]fuel", name_ex=r"refurbish|\bhood\b"),
+    # gas_cooktop = oven-less gas cooktops (the Cooktops category; a gas range stays gas_oven).
+    "gas_cooktop": _Sub("cooking", _PAGE["cooking"], ("KitchenCookingCooktops",), r"Cooking\|Cooktops",
+                        name_in=r"\bgas\b", name_ex=r"refurbish|\bhood\b|induction"),
     # radiant = electric ranges and electric (ceramic glass / radiant / coil) cooktops, induction excluded.
     "radiant": _Sub("cooking", _PAGE["cooking"], ("KitchenCookingRanges", "KitchenCookingCooktops"),
                     r"Cooking\|(Ranges|Cooktops)", name_in=r"electric|ceramic|radiant|smooth ?top|coil",

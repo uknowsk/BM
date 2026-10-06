@@ -1,0 +1,651 @@
+{
+ "name": "KM 3054-1",
+ "alternativeName": "KM 3054-1",
+ "code": "000000000010933860",
+ "formattedCode": "10933860",
+ "designTypeName": "Gaskochfeld",
+ "dataLayer": {
+  "brand": "Miele Hobs Gas hobs",
+  "category": "APPLIANCE/MDA/Hobs/Gas hobs",
+  "deliveryDays": "5",
+  "name": "KM3054-1   D   EDST   230/50",
+  "priceWithoutTax": "2149.000000"
+ },
+ "price": {
+  "currencyIso": "EUR",
+  "formattedValue": "2.149,00 €",
+  "priceType": "BUY",
+  "value": 2149
+ },
+ "salesPrice": {
+  "currencyIso": "EUR",
+  "formattedValue": "2.149,00 €",
+  "priceType": "BUY",
+  "value": 2149
+ },
+ "pdpUrl": "https://www.miele.de/product/10933860/gaskochfeld-km-3054-1",
+ "shortPositioningText": "mit Elektronikfunktionen für größte Sicherheit und Bedienkomfort.",
+ "techspecs": [
+  {
+   "attributes": [
+    {
+     "name": "Modellbezeichnung",
+     "sortOrder": 10,
+     "values": [
+      "KM 3054-1"
+     ]
+    },
+    {
+     "name": "Materialnummer Hersteller",
+     "sortOrder": 20,
+     "values": [
+      "10933860"
+     ]
+    },
+    {
+     "name": "EAN-Nummer",
+     "sortOrder": 30,
+     "values": [
+      "4002516127512"
+     ]
+    },
+    {
+     "featureValueCode": "lov_ZZMKTGRP_H",
+     "name": "Marketingklasse",
+     "sortOrder": 40,
+     "values": [
+      "Platinum"
+     ]
+    }
+   ],
+   "name": "Allgemeine Informationen",
+   "sortOrder": 10
+  },
+  {
+   "attributes": [
+    {
+     "featureValueCode": "lov_c_PP_118140_6",
+     "name": "Beheizungsart",
+     "sortOrder": 10,
+     "values": [
+      "Gas"
+     ]
+    }
+   ],
+   "name": "Beheizungsart",
+   "sortOrder": 200
+  },
+  {
+   "attributes": [
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Unabhängig vom Herd",
+     "sortOrder": 20,
+     "values": [
+      "TRUE"
+     ]
+    }
+   ],
+   "name": "Bauform",
+   "sortOrder": 300
+  },
+  {
+   "attributes": [
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Elegante Glaskeramikoberfläche",
+     "sortOrder": 19,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Guss-Topfträger (matt schwarz emailliert)",
+     "sortOrder": 79,
+     "values": [
+      "TRUE"
+     ]
+    }
+   ],
+   "name": "Design",
+   "sortOrder": 900
+  },
+  {
+   "attributes": [
+    {
+     "name": "Anzahl der Kochzonen",
+     "sortOrder": 10,
+     "values": [
+      "5"
+     ]
+    }
+   ],
+   "name": "Kochzonenausstattung",
+   "sortOrder": 2300
+  },
+  {
+   "attributes": [
+    {
+     "name": "Sparbrenner in kW",
+     "sortOrder": 10,
+     "values": [
+      "1"
+     ]
+    },
+    {
+     "name": "Normalbrenner in kW",
+     "sortOrder": 20,
+     "values": [
+      "1.70"
+     ]
+    },
+    {
+     "name": "Starkbrenner in kW",
+     "sortOrder": 30,
+     "values": [
+      "2.70"
+     ]
+    },
+    {
+     "name": "Dual-Wokbrenner in kW",
+     "sortOrder": 50,
+     "values": [
+      "4.70"
+     ]
+    }
+   ],
+   "name": "Leistung Gasbrenner",
+   "sortOrder": 2450
+  },
+  {
+   "attributes": [
+    {
+     "name": "Position",
+     "sortOrder": 10,
+     "values": [
+      "links mittig"
+     ]
+    },
+    {
+     "featureValueCode": "lov_PD_100377_13",
+     "name": "Art",
+     "sortOrder": 20,
+     "values": [
+      "Dual-Wokbrenner"
+     ]
+    }
+   ],
+   "name": "1. Kochzone / Kochbereich",
+   "sortOrder": 2500
+  },
+  {
+   "attributes": [
+    {
+     "name": "Position",
+     "sortOrder": 10,
+     "values": [
+      "hinten mittig"
+     ]
+    },
+    {
+     "name": "Art",
+     "sortOrder": 20,
+     "values": [
+      "Sparbrenner"
+     ]
+    }
+   ],
+   "name": "2. Kochzone / Kochbereich",
+   "sortOrder": 2501
+  },
+  {
+   "attributes": [
+    {
+     "name": "Position",
+     "sortOrder": 10,
+     "values": [
+      "hinten rechts"
+     ]
+    },
+    {
+     "name": "Art",
+     "sortOrder": 20,
+     "values": [
+      "Normalbrenner"
+     ]
+    }
+   ],
+   "name": "3. Kochzone / Kochbereich",
+   "sortOrder": 2502
+  },
+  {
+   "attributes": [
+    {
+     "name": "Position",
+     "sortOrder": 10,
+     "values": [
+      "vorne rechts"
+     ]
+    },
+    {
+     "name": "Art",
+     "sortOrder": 20,
+     "values": [
+      "Normalbrenner"
+     ]
+    }
+   ],
+   "name": "4. Kochzone / Kochbereich",
+   "sortOrder": 2503
+  },
+  {
+   "attributes": [
+    {
+     "name": "Position",
+     "sortOrder": 10,
+     "values": [
+      "vorne mittig"
+     ]
+    },
+    {
+     "name": "Art",
+     "sortOrder": 20,
+     "values": [
+      "Starkbrenner"
+     ]
+    }
+   ],
+   "name": "5. Kochzone / Kochbereich",
+   "sortOrder": 2504
+  },
+  {
+   "attributes": [
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Bedienung über Knebel",
+     "sortOrder": 60,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Elektrozündung mit Einhandbedienung",
+     "sortOrder": 270,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "QuickStart",
+     "sortOrder": 280,
+     "values": [
+      "TRUE"
+     ]
+    }
+   ],
+   "name": "Bedienkomfort",
+   "sortOrder": 2800
+  },
+  {
+   "attributes": [
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Leicht zu reinigende Glaskeramik",
+     "sortOrder": 10,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Geschirrspülertaugliche Topfträger",
+     "sortOrder": 30,
+     "values": [
+      "TRUE"
+     ]
+    }
+   ],
+   "name": "Pflegekomfort",
+   "sortOrder": 4000
+  },
+  {
+   "attributes": [
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Heißanzeige",
+     "sortOrder": 70,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Betriebsanzeige",
+     "sortOrder": 80,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "GasStop & ReStart",
+     "sortOrder": 100,
+     "values": [
+      "TRUE"
+     ]
+    }
+   ],
+   "name": "Sicherheit",
+   "sortOrder": 6100
+  },
+  {
+   "attributes": [
+    {
+     "name": "Abmessungen (H x B x T) in mm",
+     "sortOrder": 6,
+     "values": [
+      "53 x 942 x 526"
+     ]
+    },
+    {
+     "name": "Abmessungen (B x T) in mm",
+     "sortOrder": 7,
+     "values": [
+      "942 x 53 x 526"
+     ]
+    },
+    {
+     "name": "Abmessungen in mm (Breite)",
+     "sortOrder": 10,
+     "values": [
+      "942"
+     ]
+    },
+    {
+     "name": "Abmessungen in mm (Höhe)",
+     "sortOrder": 20,
+     "values": [
+      "53"
+     ]
+    },
+    {
+     "name": "Abmessungen in mm (Tiefe)",
+     "sortOrder": 30,
+     "values": [
+      "526"
+     ]
+    },
+    {
+     "name": "Ausschnittmaße (B x T) bei aufliegendem Einbau in mm",
+     "sortOrder": 31,
+     "values": [
+      "916 mm x 500 mm"
+     ]
+    },
+    {
+     "name": "Einbauhöhe mit Anschlusskasten in mm",
+     "sortOrder": 40,
+     "values": [
+      "78"
+     ]
+    },
+    {
+     "name": "Ausschnittmaße in mm (Breite) bei aufliegendem Einbau",
+     "sortOrder": 50,
+     "values": [
+      "916 mm"
+     ]
+    },
+    {
+     "name": "Ausschnittmaße in mm (Tiefe) bei aufliegendem Einbau",
+     "sortOrder": 80,
+     "values": [
+      "500 mm"
+     ]
+    },
+    {
+     "name": "Gewicht in kg",
+     "sortOrder": 190,
+     "values": [
+      "22"
+     ]
+    },
+    {
+     "name": "Position des Gasanschlusses",
+     "sortOrder": 211,
+     "values": [
+      "Hinten rechts"
+     ]
+    },
+    {
+     "name": "Spannung in V",
+     "sortOrder": 220,
+     "values": [
+      "220 - 240"
+     ]
+    },
+    {
+     "name": "Frequenz in Hz",
+     "sortOrder": 230,
+     "values": [
+      "50 - 60"
+     ]
+    },
+    {
+     "name": "Länge der elektrischen Zuleitung in m",
+     "sortOrder": 240,
+     "values": [
+      "2"
+     ]
+    }
+   ],
+   "name": "Technische Daten",
+   "sortOrder": 6400
+  },
+  {
+   "attributes": [
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Anschlusskabel",
+     "sortOrder": 30,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Düsensatz für Flüssiggas",
+     "sortOrder": 60,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Wok-Ring",
+     "sortOrder": 70,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Kleintassenring",
+     "sortOrder": 80,
+     "values": [
+      "TRUE"
+     ]
+    }
+   ],
+   "name": "Mitgeliefertes Zubehör",
+   "sortOrder": 6600
+  }
+ ],
+ "documentGroups": [
+  {
+   "code": "OPERATING_INSTRUCTIONS",
+   "documents": [
+    {
+     "description": "EU - Konformitätserklärung",
+     "media": {
+      "altText": "EU Konformitätserklärung",
+      "mimeType": "application/pdf",
+      "url": "https://media.miele.com/downloads/e2/aa/00_70A8A51285B71FE1A2E973FCC016E2AA.pdf"
+     },
+     "name": "PDF"
+    },
+    {
+     "description": "Gebrauchsanweisung/Montageanweisung",
+     "media": {
+      "altText": "Gebrauchsanweisung/Montageanweisung",
+      "mimeType": "application/pdf",
+      "url": "https://media.miele.com/downloads/0d/be/04_96106053F20B1EDC9F9D75480BAE0DBE.pdf"
+     },
+     "name": "PDF"
+    },
+    {
+     "description": "Produktblatt",
+     "media": {
+      "altText": "Produktdatenblatt",
+      "mimeType": "application/pdf",
+      "url": "https://media.miele.com/downloads/e-/de/FS_10933860_DED_DE-de-DE.pdf"
+     },
+     "name": "PDF"
+    },
+    {
+     "description": "Garantiebedingungen",
+     "media": {
+      "altText": "Garantiebedingungen",
+      "mimeType": "application/pdf",
+      "url": "https://media.miele.com/downloads/47/33/16_C7F1282806E91FD0A8D4A4AD14174733.pdf"
+     },
+     "name": "PDF"
+    }
+   ],
+   "name": "Gebrauchsanweisung & Montage",
+   "sortOrder": 1
+  },
+  {
+   "code": "CAD_DATA",
+   "documents": [
+    {
+     "description": "dwg",
+     "media": {
+      "altText": "3D Daten im Dateiformat DWG",
+      "mimeType": "application/zip",
+      "url": "https://media.miele.com/downloads/4e/09/01_F6154D09FD0B1EEC8288643D7A3C4E09.zip"
+     },
+     "name": "ZIP"
+    },
+    {
+     "description": "fbx",
+     "media": {
+      "altText": "3D Daten im Dateiformat FBX",
+      "mimeType": "application/zip",
+      "url": "https://media.miele.com/downloads/4e/09/01_F6154D09FD0B1EEC8288643F0C4E4E09.zip"
+     },
+     "name": "ZIP"
+    },
+    {
+     "description": "ifc",
+     "media": {
+      "altText": "3D Daten im Dateiformat IFC",
+      "mimeType": "application/zip",
+      "url": "https://media.miele.com/downloads/0e/09/01_F6154D09FD0B1EEC8288643F77CD0E09.zip"
+     },
+     "name": "ZIP"
+    },
+    {
+     "description": "rfa",
+     "media": {
+      "altText": "3D Daten im Dateiformat RFA",
+      "mimeType": "application/zip",
+      "url": "https://media.miele.com/downloads/4e/09/01_F6154D09FD0B1EEC828864402A524E09.zip"
+     },
+     "name": "ZIP"
+    },
+    {
+     "description": "rvt",
+     "media": {
+      "altText": "3D Daten im Dateiformat RVT",
+      "mimeType": "application/zip",
+      "url": "https://media.miele.com/downloads/ce/09/01_F6154D09FD0B1EEC82886440DAB7CE09.zip"
+     },
+     "name": "ZIP"
+    }
+   ],
+   "name": "CAD/BIM-Daten",
+   "sortOrder": 3
+  },
+  {
+   "code": "ENERGY",
+   "documents": [
+    {
+     "description": "EU - Datenblatt",
+     "media": {
+      "altText": "EU Datenblatt PDF",
+      "mimeType": "application/pdf",
+      "url": "https://media.miele.com/downloads/91/ac/04_C7F12828E6E31FE0BC8CDC6BB25D91AC.pdf"
+     },
+     "name": "PDF"
+    }
+   ],
+   "name": "ECO Informationen",
+   "sortOrder": 6
+  },
+  {
+   "code": "INSTALLATION_DRAWINGS",
+   "documents": [
+    {
+     "description": "1. vorn, 2. Einbau-Höhe, 3. Netzanschlusskasten mit Netzanschlussleitung L = 2000 mmm, 4. Gasanschluss R 1/2\" - ISO 7-1 (DIN EN 10226), 5. Elektronikgehäuse - maximale Einbauhöhe 78 mm",
+     "descriptionTitle": "KM 3054-1 G (Skizze)",
+     "media": {
+      "altText": "Einbauskizze",
+      "mimeType": "application/postscript",
+      "url": "https://media.miele.com/dam/de5e58d7-e9d9-4938-9f75-b3c600a9932f/20000085158_HighresDigitalRGB.png"
+     },
+     "name": "POSTSCRIPT"
+    }
+   ],
+   "name": "Installationszeichnungen",
+   "sortOrder": 8
+  }
+ ],
+ "primaryProductImage": {
+  "altText": "Sachaufnahme",
+  "format": "cart",
+  "url": "https://media.miele.com/dam/5eada643-6fdb-474c-86d2-b3c600a9a0bc/20000084693_HighresDigitalRGB.png"
+ },
+ "images": [
+  {
+   "akamaiImageType": "PRIMARY",
+   "altText": "Sachaufnahme",
+   "format": "cart",
+   "galleryIndex": 0,
+   "imageType": "PRIMARY",
+   "url": "https://media.miele.com/dam/5eada643-6fdb-474c-86d2-b3c600a9a0bc/20000084693_HighresDigitalRGB.png"
+  },
+  {
+   "akamaiImageType": "FACIA",
+   "altText": "Abbildung der Blende, Sachaufnahme",
+   "format": "cart",
+   "galleryIndex": 0,
+   "imageType": "GALLERY",
+   "url": "https://media.miele.com/dam/de45cd2f-0839-4582-8017-b3c600a9a0b6/20000084694_HighresDigitalRGB.png"
+  }
+ ],
+ "connectedAppliance": false,
+ "productTypeCode": "APPLIANCE",
+ "appliance": true,
+ "euDataSheet": {
+  "altText": "EU Datenblatt PDF",
+  "description": "EU - Datenblatt",
+  "mimeType": "application/pdf",
+  "url": "https://media.miele.com/downloads/91/ac/04_C7F12828E6E31FE0BC8CDC6BB25D91AC.pdf"
+ },
+ "marketingClass": "PLATINUM",
+ "productSlug": "gaskochfeld-km-3054-1"
+}

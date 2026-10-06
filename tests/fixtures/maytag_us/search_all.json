@@ -1,0 +1,1512 @@
+{
+"products": [
+{
+"code": "MOED6030LZ",
+"name": "30-inch Double Wall Oven with Air Fry and Basket - 10 cu. ft.",
+"brand": "Maytag",
+"url": "/kitchen/cooking/wall-ovens/double-oven/p.30-inch-double-wall-oven-with-air-fry-and-basket-10-cu.-ft.moed6030lz.html",
+"price": {
+"value": 2299.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Cooking|Wall-Ovens|Double-Oven"
+},
+"isMemberPrice": false
+},
+{
+"code": "MOES6027LZ",
+"name": "27-inch Single Wall Oven with Air Fry and Basket - 4.3 cu. ft.",
+"brand": "Maytag",
+"url": "/kitchen/cooking/wall-ovens/single-oven/p.27-inch-single-wall-oven-with-air-fry-and-basket-4.3-cu.-ft.moes6027lz.html",
+"price": {
+"value": 2199.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Cooking|Wall-Ovens|Single-Oven"
+},
+"isMemberPrice": false
+},
+{
+"code": "MFES8030RZ",
+"name": "30-Inch Wide Electric Range With Grill Mode - 5.3 cu. ft.",
+"brand": "Maytag",
+"url": "/kitchen/ranges/electric/p.30-inch-wide-electric-range-with-grill-mode-5.3-cu.-ft.mfes8030rz.html",
+"price": {
+"value": 1269.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Ranges|Electric"
+},
+"isMemberPrice": false
+},
+{
+"code": "MFES7030SZ",
+"name": "30-Inch Wide Electric Range With Grill Mode and No Preheat Air Fry - 5.3 cu. ft.",
+"brand": "Maytag",
+"url": "/kitchen/cooking/ranges/electric/p.30-inch-wide-electric-range-with-grill-mode-and-no-preheat-air-fry-5.3-cu.-ft.mfes7030sz.html",
+"price": {
+"value": 899.99
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Cooking|Ranges|Electric"
+},
+"isMemberPrice": false
+},
+{
+"code": "MGC9536DS",
+"name": "36-inch Wide Gas Cooktop with DuraGuard™ Protective Finish",
+"brand": "Maytag",
+"url": "/kitchen/cooking/cooktops/gas/p.36-inch-wide-gas-cooktop-with-duraguard-protective-finish.mgc9536ds.html",
+"price": {
+"value": 899.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Cooking|Cooktops|Gas"
+},
+"isMemberPrice": false
+},
+{
+"code": "WVI75UC6DS",
+"name": "36\" Modern Glass Island Mount Range Hood",
+"brand": "Whirlpool",
+"url": "/kitchen/cooking/hoods/canopy/p.36-modern-glass-island-mount-range-hood.wvi75uc6ds.html",
+"price": {
+"value": 1178.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Cooking|Hoods|Canopy"
+},
+"isMemberPrice": false
+},
+{
+"code": "MGC7430DS",
+"name": "30-inch Wide Gas Cooktop with Power™ Burner",
+"brand": "Maytag",
+"url": "/kitchen/cooking/cooktops/4-burner/p.30-inch-wide-gas-cooktop-with-power-burner.mgc7430ds.html",
+"price": {
+"value": 799.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Cooking|Cooktops|4-Burner"
+},
+"isMemberPrice": false
+},
+{
+"code": "MGC7536DS",
+"name": "36-inch Wide Gas Cooktop with Power™ Burner",
+"brand": "Maytag",
+"url": "/kitchen/cooking/cooktops/5-burner/p.36-inch-wide-gas-cooktop-with-power-burner.mgc7536ds.html",
+"price": {
+"value": 999.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Cooking|Cooktops|5-Burner"
+},
+"isMemberPrice": false
+},
+{
+"code": "UXD8636DYS",
+"name": "36\" Retractable Downdraft System with Interior Blower Motor",
+"brand": "Unbranded",
+"url": "/kitchen/cooking/hoods/downdraft/p.36-retractable-downdraft-system-with-interior-blower-motor.uxd8636dys.html",
+"price": {
+"value": 1331.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Cooking|Hoods|Downdraft"
+},
+"isMemberPrice": false
+},
+{
+"code": "MET8800FZ",
+"name": "30-Inch Wide Double Oven Electric Range With True Convection - 6.7 Cu. Ft.",
+"brand": "Maytag",
+"url": "/kitchen/cooking/ranges/double-oven-freestanding/p.30-inch-wide-double-oven-electric-range-with-true-convection-6.7-cu.-ft.met8800fz.html",
+"price": {
+"value": 1529.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Cooking|Ranges|Double-Oven-Freestanding"
+},
+"isMemberPrice": false
+},
+{
+"code": "MER4800PZ",
+"name": "Maytag® 30-Inch Wide Freestanding Electric Range with Steam Clean - 5.3 cu. ft.",
+"brand": "Maytag",
+"url": "/kitchen-suite/p.maytag-30-inch-wide-freestanding-electric-range-with-steam-clean-5.3-cu.-ft.mer4800pz.html",
+"price": {
+"value": 899.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen-Suite"
+},
+"isMemberPrice": false
+},
+{
+"code": "MGS8800PZ",
+"name": "Gas Slide-In Range - 5.8 cu. ft.",
+"brand": "Maytag",
+"url": "/kitchen/cooking/ranges/gas/p.gas-slide-in-range-5.8-cu.-ft.mgs8800pz.html",
+"price": {
+"value": 849.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Cooking|Ranges|Gas"
+},
+"isMemberPrice": false
+},
+{
+"code": "MOED6027LZ",
+"name": "27-inch Double Wall Oven with Air Fry and Basket - 8.6 cu. ft.",
+"brand": "Maytag",
+"url": "/kitchen/cooking/wall-ovens/double-oven/p.27-inch-double-wall-oven-with-air-fry-and-basket-8.6-cu.-ft.moed6027lz.html",
+"price": {
+"value": 2899.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Cooking|Wall-Ovens|Double-Oven"
+},
+"isMemberPrice": false
+},
+{
+"code": "MFGS6030RZ",
+"name": "30-Inch Wide Gas Range With No Preheat Air Fry and Air Baking - 5.0 cu. ft.",
+"brand": "Maytag",
+"url": "/kitchen/cooking/ranges/gas/p.30-inch-wide-gas-range-with-no-preheat-air-fry-and-air-baking-5.0-cu.-ft.mfgs6030rz.html",
+"price": {
+"value": 1099.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Cooking|Ranges|Gas"
+},
+"isMemberPrice": false
+},
+{
+"code": "MFES6030RZ",
+"name": "30-Inch Wide Electric Range With No Preheat Air Fry and Air Baking - 5.3 cu. ft.",
+"brand": "Maytag",
+"url": "/kitchen/ranges/electric/p.30-inch-wide-electric-range-with-no-preheat-air-fry-and-air-baking-5.3-cu.-ft.mfes6030rz.html",
+"price": {
+"value": 999.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Ranges|Electric"
+},
+"isMemberPrice": false
+},
+{
+"code": "MFGS4030RS",
+"name": "30-Inch Wide Gas Range With Steam Clean - 5.0 cu. ft.",
+"brand": "Maytag",
+"url": "/kitchen/ranges/gas/p.30-inch-wide-gas-range-with-steam-clean-5.0-cu.-ft.mfgs4030rs.html",
+"price": {
+"value": 949.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Ranges|Gas"
+},
+"isMemberPrice": false
+},
+{
+"code": "MFES4030RS",
+"name": "30-Inch Wide Electric Range With Steam Clean - 5.3 cu. ft.",
+"brand": "Maytag",
+"url": "/kitchen/ranges/electric/p.30-inch-wide-electric-range-with-steam-clean-5.3-cu.-ft.mfes4030rs.html",
+"price": {
+"value": 829.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Ranges|Electric"
+},
+"isMemberPrice": false
+},
+{
+"code": "MFGS7030SZ",
+"name": "30-Inch Wide Freestanding Gas Range with Grill Mode and No Preheat Air Fry - 5.0 Cu. Ft.",
+"brand": "Maytag",
+"url": "/kitchen/ranges/gas/p.30-inch-wide-freestanding-gas-range-with-grill-mode-and-no-preheat-air-fry-5.0-cu.-ft.mfgs7030sz.html",
+"price": {
+"value": 1299.99
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Ranges|Gas"
+},
+"isMemberPrice": false
+},
+{
+"code": "UXD8630DYS",
+"name": "30\" Retractable Downdraft System with Interior Blower Motor",
+"brand": "Unbranded",
+"url": "/kitchen/cooking/hoods/downdraft/p.30-retractable-downdraft-system-with-interior-blower-motor.uxd8630dys.html",
+"price": {
+"value": 1241.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Cooking|Hoods|Downdraft"
+},
+"isMemberPrice": false
+},
+{
+"code": "UXT3030ADB",
+"name": "30\" Range Hood with the FIT System",
+"brand": "Unbranded",
+"url": "/kitchen/cooking/hoods/under-cabinet/p.30-range-hood-with-the-fit-system.uxt3030adb.html",
+"price": {
+"value": 152.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Cooking|Hoods|Under-Cabinet"
+},
+"isMemberPrice": false
+},
+{
+"code": "MEC8836HS",
+"name": "36-Inch Electric Cooktop with Reversible Grill and Griddle",
+"brand": "Maytag",
+"url": "/kitchen/cooking/cooktops/5-burner/p.36-inch-electric-cooktop-with-reversible-grill-and-griddle.mec8836hs.html",
+"price": {
+"value": 999.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Cooking|Cooktops|5-Burner"
+},
+"isMemberPrice": false
+},
+{
+"code": "MOED4030TZ",
+"name": "30-Inch Double Wall Oven with EvenAir™ True Convection System - 10.0 Cu. Ft.",
+"brand": "Maytag",
+"url": "/kitchen/cooking/wall-ovens/double-oven/p.30-inch-double-wall-oven-with-evenair-true-convection-system-10.0-cu.-ft.moed4030tz.html",
+"price": {
+"value": 2599.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Cooking|Wall-Ovens|Double-Oven"
+},
+"isMemberPrice": false
+},
+{
+"code": "UVL5430JSS",
+"name": "30\" 400 CFM Motor Class Custom Hood Liner",
+"brand": "Unbranded",
+"url": "/kitchen/cooking/hoods/liners-and-blowers/p.30-400-cfm-motor-class-custom-hood-liner.uvl5430jss.html",
+"price": {
+"value": 764.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Cooking|Hoods|Liners-&-Blowers"
+},
+"isMemberPrice": false
+},
+{
+"code": "MEC8830HS",
+"name": "30-Inch Electric Cooktop with Reversible Grill and Griddle",
+"brand": "Maytag",
+"url": "/kitchen/cooking/cooktops/4-burner/p.30-inch-electric-cooktop-with-reversible-grill-and-griddle.mec8830hs.html",
+"price": {
+"value": 899.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Cooking|Cooktops|4-Burner"
+},
+"isMemberPrice": false
+},
+{
+"code": "MCIT8030SB",
+"name": "30-Inch Wide Induction Cooktop with Power Boost",
+"brand": "Maytag",
+"url": "/kitchen/cooktops/induction-cooktops/p.30-inch-wide-induction-cooktop-with-power-boost.mcit8030sb.html",
+"price": {
+"value": 1199.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Cooktops|Induction-Cooktops"
+},
+"isMemberPrice": false
+},
+{
+"code": "MOEC4030TZ",
+"name": "30-Inch Wall Oven Microwave Combo with EvenAir™ True Convection System - 6.4 Cu. Ft.",
+"brand": "Maytag",
+"url": "/kitchen/wall-ovens/microwave-oven-combo/p.30-inch-wall-oven-microwave-combo-with-evenair-true-convection-system-6.4-cu.-ft.moec4030tz.html",
+"price": {
+"value": 2800.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Wall-Ovens|Microwave-Oven-Combo"
+},
+"isMemberPrice": false
+},
+{
+"code": "MOES4030TZ",
+"name": "30-Inch Single Wall Oven with EvenAir™ True Convection System - 5.0 Cu. Ft.",
+"brand": "Maytag",
+"url": "/kitchen/cooking/wall-ovens/single-oven/p.30-inch-single-wall-oven-with-evenair-true-convection-system-5.0-cu.-ft.moes4030tz.html",
+"price": {
+"value": 1300.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Cooking|Wall-Ovens|Single-Oven"
+},
+"isMemberPrice": false
+},
+{
+"code": "MBF1958FEZ",
+"name": "30-Inch Wide Bottom Mount Refrigerator - 19 Cu. Ft.",
+"brand": "Maytag",
+"url": "/kitchen/refrigeration/refrigerators/bottom-freezer/p.30-inch-wide-bottom-mount-refrigerator-19-cu.-ft.mbf1958fez.html",
+"price": {
+"value": 1688.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Refrigeration|Refrigerators|Bottom-Freezer"
+},
+"isMemberPrice": false
+},
+{
+"code": "UXT2030ADW",
+"name": "30\" Range Hood with the FIT System",
+"brand": "Unbranded",
+"url": "/kitchen/cooking/hoods/under-cabinet/p.30-range-hood-with-the-fit-system.uxt2030adw.html",
+"price": {
+"value": 152.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Cooking|Hoods|Under-Cabinet"
+},
+"isMemberPrice": false
+},
+{
+"code": "MFT2772HEZ",
+"name": "36-Inch Wide French Door Refrigerator - 27 Cu. Ft.",
+"brand": "Maytag",
+"url": "/kitchen/refrigeration/refrigerators/french-door/p.36-inch-wide-french-door-refrigerator-27-cu.-ft.mft2772hez.html",
+"price": {
+"value": 2399.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Refrigeration|Refrigerators|French-Door"
+},
+"isMemberPrice": false
+},
+{
+"code": "MDB4949SKZ",
+"name": "24” Front Control Dishwasher with Dual Power Filtration and PowerBlast® Cycle - 50 dBA",
+"brand": "Maytag",
+"url": "/kitchen/dishwashers-and-compactors/dishwashers/front-control-dishwashers/p.24”-front-control-dishwasher-with-dual-power-filtration-and-powerblast-cycle-50-dba.mdb4949skz.html",
+"price": {
+"value": 599.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Dishwashers-and-Compactors|Dishwashers|Front-Control-Dishwashers"
+},
+"isMemberPrice": false
+},
+{
+"code": "MMMS4230PZ",
+"name": "Over-The-Range Microwave with Non-Stick Interior Coating - 1.7 Cu. Ft.",
+"brand": "Maytag",
+"url": "/kitchen/cooking/microwaves/over-the-range/p.over-the-range-microwave-with-non-stick-interior-coating-1.7-cu.-ft.mmms4230pz.html",
+"price": {
+"value": 289.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Cooking|Microwaves|Over-the-Range"
+},
+"isMemberPrice": false
+},
+{
+"code": "MDTS4224PZ",
+"name": "Top Control Hybrid Tub Dishwasher with Enhanced Wash and Heated Dry with Fan",
+"brand": "Maytag",
+"url": "/kitchen-suite/p.top-control-hybrid-tub-dishwasher-with-enhanced-wash-and-heated-dry-with-fan.mdts4224pz.html",
+"price": {
+"value": 639.2
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen-Suite"
+},
+"isMemberPrice": false
+},
+{
+"code": "MDPS7024SZ",
+"name": "24\" Top Control Dishwasher with PowerBlast® Cycle and PowerDry",
+"brand": "Maytag",
+"url": "/kitchen/dishwashers/top-control-dishwashers/p.24-top-control-dishwasher-with-powerblast-cycle-and-powerdry.mdps7024sz.html",
+"price": {
+"value": 899.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Dishwashers|Top-Control-Dishwashers"
+},
+"isMemberPrice": false
+},
+{
+"code": "MMV4207JW",
+"name": "Over-the-Range Microwave with Dual Crisp feature - 1.9 cu. ft.",
+"brand": "Maytag",
+"url": "/kitchen/cooking/microwaves/over-the-range/p.over-the-range-microwave-with-dual-crisp-feature-1.9-cu.-ft.mmv4207jw.html",
+"price": {
+"value": 608.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Cooking|Microwaves|Over-the-Range"
+},
+"isMemberPrice": false
+},
+{
+"code": "MGD6230HC",
+"name": "Smart Top Load Gas Dryer with Extra Power - 7.4 cu. ft.",
+"brand": "Maytag",
+"url": "/washers-and-dryers/dryers/gas/p.smart-top-load-gas-dryer-with-extra-power-7.4-cu.-ft.mgd6230hc.html",
+"price": {
+"value": 999.0
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Dryers|Gas"
+},
+"isMemberPrice": false
+},
+{
+"code": "MED6200KW",
+"name": "Top Load Electric Dryer with Moisture Sensing - 7.0 cu. ft.",
+"brand": "Maytag",
+"url": "/washers-and-dryers/dryers/matches-top-load-washers/p.top-load-electric-dryer-with-moisture-sensing-7.0-cu.-ft.med6200kw.html",
+"price": {
+"value": 599.99
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Dryers|Matches-Top-Load-Washers"
+},
+"isMemberPrice": false
+},
+{
+"code": "MGD6200KW",
+"name": "Top Load Gas Dryer with Moisture Sensing - 7.0 cu. ft",
+"brand": "Maytag",
+"url": "/washers-and-dryers/dryers/matches-top-load-washers/p.top-load-gas-dryer-with-moisture-sensing-7.0-cu.-ft.mgd6200kw.html",
+"price": {
+"value": 699.99
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Dryers|Matches-Top-Load-Washers"
+},
+"isMemberPrice": false
+},
+{
+"code": "MGD6630HW",
+"name": "Front Load Gas Dryer with Extra Power and Quick Dry Cycle - 7.3 cu. ft.",
+"brand": "Maytag",
+"url": "/washers-and-dryers/dryers/matches-front-load-washers/p.front-load-gas-dryer-with-extra-power-and-quick-dry-cycle-7.3-cu.-ft.mgd6630hw.html",
+"price": {
+"value": 979.0
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Dryers|Matches-Front-Load-Washers"
+},
+"isMemberPrice": false
+},
+{
+"code": "MVW5435PW",
+"name": "Top Load Washer with Extra Power - 4.7 cu. ft.",
+"brand": "Maytag",
+"url": "/washers-and-dryers/washers/top-load-washers/p.top-load-washer-with-extra-power-4.7-cu.-ft.mvw5435pw.html",
+"price": {
+"value": 719.0
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Washers|Top-Load-Washers"
+},
+"isMemberPrice": false
+},
+{
+"code": "MSC21C6MFZ",
+"name": "36- Inch Wide Counter Depth Side-by-Side Refrigerator- 21 Cu. Ft.",
+"brand": "Maytag",
+"url": "/kitchen/refrigeration/refrigerators/side-by-side/p.36-inch-wide-counter-depth-side-by-side-refrigerator-21-cu.-ft.msc21c6mfz.html",
+"price": {
+"value": 1679.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Refrigeration|Refrigerators|Side-by-Side"
+},
+"isMemberPrice": false
+},
+{
+"code": "MHW5630HC",
+"name": "Front Load Washer with Extra Power and 12-Hr Fresh Spin™ option - 4.5 cu. ft.",
+"brand": "Maytag",
+"url": "/washers-and-dryers/washers/front-load-washers/p.front-load-washer-with-extra-power-and-12-hr-fresh-spin-option-4.5-cu.-ft.mhw5630hc.html",
+"price": {
+"value": 849.0
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Washers|Front-Load-Washers"
+},
+"isMemberPrice": false
+},
+{
+"code": "MGD8630HW",
+"name": "Smart Front Load Gas Dryer with Extra Power and Advanced Moisture Sensing Plus - 7.3 cu. ft.",
+"brand": "Maytag",
+"url": "/washers-and-dryers/dryers/gas/p.smart-front-load-gas-dryer-with-extra-power-and-advanced-moisture-sensing-plus-7.3-cu.-ft.mgd8630hw.html",
+"price": {
+"value": 1199.0
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Dryers|Gas"
+},
+"isMemberPrice": false
+},
+{
+"code": "MHW6630HC",
+"name": "Front Load Washer with Extra Power and 16-Hr Fresh Hold® option - 4.8 cu. ft.",
+"brand": "Maytag",
+"url": "/washers-and-dryers/washers/front-load-washers/p.front-load-washer-with-extra-power-and-16-hr-fresh-hold-option-4.8-cu.-ft.mhw6630hc.html",
+"price": {
+"value": 879.0
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Washers|Front-Load-Washers"
+},
+"isMemberPrice": false
+},
+{
+"code": "MRSF6636RZ",
+"name": "36-inch Wide Full-Depth Side-by-Side Refrigerator with Arctic Blue Interior - 28.7 Cu. Ft.",
+"brand": "Maytag",
+"url": "/kitchen/refrigeration/refrigerators/side-by-side/p.36-inch-wide-full-depth-side-by-side-refrigerator-with-arctic-blue-interior-28.7-cu.-ft.mrsf6636rz.html",
+"price": {
+"value": 2149.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Refrigeration|Refrigerators|Side-by-Side"
+},
+"isMemberPrice": false
+},
+{
+"code": "MGD6205RR",
+"name": "7.4 Cu. Ft. Top Load Gas Dryer with Extra Power and Advanced Moisture Sensing",
+"brand": "Maytag",
+"url": "/washers-and-dryers/dryers/gas/p.7.4-cu.-ft.-top-load-gas-dryer-with-extra-power-and-advanced-moisture-sensing.mgd6205rr.html",
+"price": {
+"value": 949.0
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Dryers|Gas"
+},
+"isMemberPrice": false
+},
+{
+"code": "MRFF5336TZ",
+"name": "Maytag® 30 Cu. Ft. XL Capacity French Door Bottom Mount Refrigerator with In-Door-Ice® Dispensing System",
+"brand": "Maytag",
+"url": "/kitchen/refrigeration/refrigerators/french-door/p.maytag-30-cu.-ft.-xl-capacity-french-door-bottom-mount-refrigerator-with-in-door-ice-dispensing-system.mrff5336tz.html",
+"price": {
+"value": 2199.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Refrigeration|Refrigerators|French-Door"
+},
+"isMemberPrice": false
+},
+{
+"code": "MED6630HC",
+"name": "Front Load Electric Dryer with Extra Power and Quick Dry Cycle - 7.3 cu. ft.",
+"brand": "Maytag",
+"url": "/washers-and-dryers/dryers/matches-front-load-washers/p.front-load-electric-dryer-with-extra-power-and-quick-dry-cycle-7.3-cu.-ft.med6630hc.html",
+"price": {
+"value": 879.0
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Dryers|Matches-Front-Load-Washers"
+},
+"isMemberPrice": false
+},
+{
+"code": "MED5630HW",
+"name": "Front Load Electric Dryer with Extra Power and Quick Dry cycle - 7.3 cu. ft.",
+"brand": "Maytag",
+"url": "/d2c-focus/p.front-load-electric-dryer-with-extra-power-and-quick-dry-cycle-7.3-cu.-ft.med5630hw.html",
+"price": {
+"value": 779.0
+},
+"primaryCategory": {
+"pipedCategory": "D2C-Focus"
+},
+"isMemberPrice": false
+},
+{
+"code": "MGD7230HC",
+"name": "Smart Top Load Gas Dryer with Extra Power - 7.4 cu. ft.",
+"brand": "Maytag",
+"url": "/washers-and-dryers/dryers/gas/p.smart-top-load-gas-dryer-with-extra-power-7.4-cu.-ft.mgd7230hc.html",
+"price": {
+"value": 509.0
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Dryers|Gas"
+},
+"isMemberPrice": false
+},
+{
+"code": "MSS25N4MKZ",
+"name": "36-Inch Wide Side-by-Side Refrigerator - 25 Cu. Ft.",
+"brand": "Maytag",
+"url": "/kitchen/refrigeration/refrigerators/side-by-side/p.36-inch-wide-side-by-side-refrigerator-25-cu.-ft.mss25n4mkz.html",
+"price": {
+"value": 1429.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Refrigeration|Refrigerators|Side-by-Side"
+},
+"isMemberPrice": false
+},
+{
+"code": "MGD4500MW",
+"name": "Top Load Gas Wrinkle Prevent Dryer - 7.0 cu. ft.",
+"brand": "Maytag",
+"url": "/washers-and-dryers/dryers/gas/p.top-load-gas-wrinkle-prevent-dryer-7.0-cu.-ft.mgd4500mw.html",
+"price": {
+"value": 669.0
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Dryers|Gas"
+},
+"isMemberPrice": false
+},
+{
+"code": "MGD5430MW",
+"name": "Top Load Gas Dryer with Steam-Enhanced Cycles - 7.0 cu. ft.",
+"brand": "Maytag",
+"url": "/washers-and-dryers/dryers/gas/p.top-load-gas-dryer-with-steam-enhanced-cycles-7.0-cu.-ft.mgd5430mw.html",
+"price": {
+"value": 409.0
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Dryers|Gas"
+},
+"isMemberPrice": false
+},
+{
+"code": "MGD6500MW",
+"name": "Pet Pro Top Load Gas Dryer - 7.0 cu. ft.",
+"brand": "Maytag",
+"url": "/washers-and-dryers/dryers/gas/p.pet-pro-top-load-gas-dryer-7.0-cu.-ft.mgd6500mw.html",
+"price": {
+"value": 409.0
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Dryers|Gas"
+},
+"isMemberPrice": false
+},
+{
+"code": "MVWP586GW",
+"name": "Commercial-Grade Residential Agitator Washer - 3.5 cu. ft.",
+"brand": "Maytag",
+"url": "/washers-and-dryers/washers/top-load-washers/p.commercial-grade-residential-agitator-washer-3.5-cu.-ft.mvwp586gw.html",
+"price": {
+"value": 1097.0
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Washers|Top-Load-Washers"
+},
+"isMemberPrice": false
+},
+{
+"code": "MMMF8030PZ",
+"name": "Flush Mount Over-the-Range Toaster Oven Combination - 1.1 Cu. Ft.",
+"brand": "Maytag",
+"url": "/kitchen/microwaves/over-the-range/p.flush-mount-over-the-range-toaster-oven-combination-1.1-cu.-ft.mmmf8030pz.html",
+"price": {
+"value": 899.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Microwaves|Over-the-Range"
+},
+"isMemberPrice": false
+},
+{
+"code": "MED7020RF",
+"name": "Smart Pet Pro Front Load Electric Dryer - 7.4 CU. FT.",
+"brand": "Maytag",
+"url": "/washers-and-dryers/dryers/electric/p.smart-pet-pro-front-load-electric-dryer-7.4-cu.-ft.med7020rf.html",
+"price": {
+"value": 949.0
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Dryers|Electric"
+},
+"isMemberPrice": false
+},
+{
+"code": "MRSC6636RZ",
+"name": "36-inch Wide Counter-Depth Side-by-Side Refrigerator with Arctic Blue Interior - 20.8 Cu. Ft.",
+"brand": "Maytag",
+"url": "/kitchen/refrigeration/refrigerators/side-by-side/p.36-inch-wide-counter-depth-side-by-side-refrigerator-with-arctic-blue-interior-20.8-cu.-ft.mrsc6636rz.html",
+"price": {
+"value": 2149.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Refrigeration|Refrigerators|Side-by-Side"
+},
+"isMemberPrice": false
+},
+{
+"code": "MED4005SW",
+"name": "Top Load Electric Wrinkle Prevent Dryer - 7.0 cu. ft.",
+"brand": "Maytag",
+"url": "/washers-and-dryers/dryers/electric/p.top-load-electric-wrinkle-prevent-dryer-7.0-cu.-ft.med4005sw.html",
+"price": {
+"value": 559.0
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Dryers|Electric"
+},
+"isMemberPrice": false
+},
+{
+"code": "MGD5605RW",
+"name": "7.0 Cu Ft. Load Gas Dryer with Extra Power and Pet Pro Option",
+"brand": "Maytag",
+"url": "/washers-and-dryers/dryers/matches-top-load-washers/p.7.0-cu-ft.-load-gas-dryer-with-extra-power-and-pet-pro-option.mgd5605rw.html",
+"price": {
+"value": 829.0
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Dryers|Matches-Top-Load-Washers"
+},
+"isMemberPrice": false
+},
+{
+"code": "MTW5605RU",
+"name": "4.7 Cu Ft. Top Load Agitator Washer with Extra Power and Pet Pro Option",
+"brand": "Maytag",
+"url": "/washers-and-dryers/washers/top-load-washers/p.4.7-cu-ft.-top-load-agitator-washer-with-extra-power-and-pet-pro-option.mtw5605ru.html",
+"price": {
+"value": 829.0
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Washers|Top-Load-Washers"
+},
+"isMemberPrice": false
+},
+{
+"code": "MGD7205RW",
+"name": "7.4 Cu. Ft. Pet Pro Top Load Gas Dryer with Extra Power and Sanitize Cycle",
+"brand": "Maytag",
+"url": "/washers-and-dryers/dryers/matches-top-load-washers/p.7.4-cu.-ft.-pet-pro-top-load-gas-dryer-with-extra-power-and-sanitize-cycle.mgd7205rw.html",
+"price": {
+"value": 999.0
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Dryers|Matches-Top-Load-Washers"
+},
+"isMemberPrice": false
+},
+{
+"code": "MTW5600RW",
+"name": "4.8 Cu Ft. Top Load Impeller Washer with Extra Power and Pet Pro Option",
+"brand": "Maytag",
+"url": "/washers-and-dryers/washers/top-load-washers/p.4.8-cu-ft.-top-load-impeller-washer-with-extra-power-and-pet-pro-option.mtw5600rw.html",
+"price": {
+"value": 779.0
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Washers|Top-Load-Washers"
+},
+"isMemberPrice": false
+},
+{
+"code": "MGD7405RR",
+"name": "7.4 cu. ft. Smart Top Load Dryer with Pet Pro Option",
+"brand": "Maytag",
+"url": "/washers-and-dryers/dryers/gas/p.7.4-cu.-ft.-smart-top-load-dryer-with-pet-pro-option.mgd7405rr.html",
+"price": {
+"value": 999.0
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Dryers|Gas"
+},
+"isMemberPrice": false
+},
+{
+"code": "MED6205RR",
+"name": "7.4 Cu. Ft. Top Load Electric Dryer with Extra Power and Advanced Moisture Sensing",
+"brand": "Maytag",
+"url": "/washers-and-dryers/dryers/electric/p.7.4-cu.-ft.-top-load-electric-dryer-with-extra-power-and-advanced-moisture-sensing.med6205rr.html",
+"price": {
+"value": 849.0
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Dryers|Electric"
+},
+"isMemberPrice": false
+},
+{
+"code": "MED5605RW",
+"name": "7.0 Cu Ft. Load Electric Dryer with Extra Power and Pet Pro Option",
+"brand": "Maytag",
+"url": "/washers-and-dryers/dryers/electric/p.7.0-cu-ft.-load-electric-dryer-with-extra-power-and-pet-pro-option.med5605rw.html",
+"price": {
+"value": 729.0
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Dryers|Electric"
+},
+"isMemberPrice": false
+},
+{
+"code": "MTW7405RR",
+"name": "5.2 cu. ft. Smart Pet Pro Top Load Washer",
+"brand": "Maytag",
+"url": "/washers-and-dryers/washers/top-load-washers/p.5.2-cu.-ft.-smart-pet-pro-top-load-washer.mtw7405rr.html",
+"price": {
+"value": 899.0
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Washers|Top-Load-Washers"
+},
+"isMemberPrice": false
+},
+{
+"code": "MTW4200SW",
+"name": "4.3 Cu. Ft. Capacity Top Load Washer",
+"brand": "Maytag",
+"url": "/washers-and-dryers/washers/top-load-washers/p.4.3-cu.-ft.-capacity-top-load-washer.mtw4200sw.html",
+"price": {
+"value": 569.0
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Washers|Top-Load-Washers"
+},
+"isMemberPrice": false
+},
+{
+"code": "MED7205RR",
+"name": "7.4 Cu. Ft. Pet Pro Top Load Electric Dryer with Extra Power and Sanitize Cycle",
+"brand": "Maytag",
+"url": "/washers-and-dryers/dryers/matches-top-load-washers/p.7.4-cu.-ft.-pet-pro-top-load-electric-dryer-with-extra-power-and-sanitize-cycle.med7205rr.html",
+"price": {
+"value": 1129.0
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Dryers|Matches-Top-Load-Washers"
+},
+"isMemberPrice": false
+},
+{
+"code": "MTW4205SW",
+"name": "4.2 Cu. Ft. Capacity Top Load Washer",
+"brand": "Maytag",
+"url": "/washers-and-dryers/washers/top-load-washers/p.4.2-cu.-ft.-capacity-top-load-washer.mtw4205sw.html",
+"price": {
+"value": 569.0
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Washers|Top-Load-Washers"
+},
+"isMemberPrice": false
+},
+{
+"code": "MRMF5436TZ",
+"name": "Maytag® 29 Cu. Ft. XL Capacity French Door Bottom Mount Refrigerator with In-Door-Ice® Dispensing System",
+"brand": "Maytag",
+"url": "/kitchen/refrigeration/refrigerators/french-door/p.maytag-29-cu.-ft.-xl-capacity-french-door-bottom-mount-refrigerator-with-in-door-ice-dispensing-system.mrmf5436tz.html",
+"price": {
+"value": 2599.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Refrigeration|Refrigerators|French-Door"
+},
+"isMemberPrice": false
+},
+{
+"code": "MRFF4336TZ",
+"name": "Maytag® 31 Cu. Ft. XL Capacity French Door Bottom Mount Refrigerator with Ice + Water",
+"brand": "Maytag",
+"url": "/kitchen/refrigeration/refrigerators/french-door/p.maytag-31-cu.-ft.-xl-capacity-french-door-bottom-mount-refrigerator-with-ice-+-water.mrff4336tz.html",
+"price": {
+"value": 1999.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Refrigeration|Refrigerators|French-Door"
+},
+"isMemberPrice": false
+},
+{
+"code": "MTW3805TW",
+"name": "Maytag® 4.0 Cu. Ft. Top Load Washer with Extra Power Cycle",
+"brand": "Maytag",
+"url": "/washers-and-dryers/washers/top-load-washers/p.maytag-4.0-cu.-ft.-top-load-washer-with-extra-power-cycle.mtw3805tw.html",
+"price": {
+"value": 579.0
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Washers|Top-Load-Washers"
+},
+"isMemberPrice": false
+},
+{
+"code": "MGD5630HW",
+"name": "Front Load Gas Dryer with Extra Power and Quick Dry cycle - 7.3 cu. ft.",
+"brand": "Maytag",
+"url": "/washers-and-dryers/stackable-laundry/p.front-load-gas-dryer-with-extra-power-and-quick-dry-cycle-7.3-cu.-ft.mgd5630hw.html",
+"price": {
+"value": 879.0
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Stackable-Laundry"
+},
+"isMemberPrice": false
+},
+{
+"code": "MED8630HW",
+"name": "Smart Front Load Electric Dryer with Extra Power and Advanced Moisture Sensing Plus - 7.3 cu. ft.",
+"brand": "Maytag",
+"url": "/washers-and-dryers/dryers/electric/p.smart-front-load-electric-dryer-with-extra-power-and-advanced-moisture-sensing-plus-7.3-cu.-ft.med8630hw.html",
+"price": {
+"value": 1099.0
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Dryers|Electric"
+},
+"isMemberPrice": false
+},
+{
+"code": "MSS25C4MGB",
+"name": "36-Inch Wide Side-by-Side Refrigerator with Exterior Ice and Water Dispenser - 25 Cu. Ft.",
+"brand": "Maytag",
+"url": "/kitchen/refrigeration/refrigerators/side-by-side/p.36-inch-wide-side-by-side-refrigerator-with-exterior-ice-and-water-dispenser-25-cu.-ft.mss25c4mgb.html",
+"price": {
+"value": 1643.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Refrigeration|Refrigerators|Side-by-Side"
+},
+"isMemberPrice": false
+},
+{
+"code": "MTW7205RR",
+"name": "5.2 Cu. Ft. Pet Pro Top Load Agitator Washer with Extra Power and Sanitize Cycle with Oxi",
+"brand": "Maytag",
+"url": "/washers-and-dryers/washers/top-load-washers/p.5.2-cu.-ft.-pet-pro-top-load-agitator-washer-with-extra-power-and-sanitize-cycle-with-oxi.mtw7205rr.html",
+"price": {
+"value": 1129.0
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Washers|Top-Load-Washers"
+},
+"isMemberPrice": false
+},
+{
+"code": "MVW6200KW",
+"name": "Top Load Washer with Deep Fill - 4.8 cu. ft.",
+"brand": "Maytag",
+"url": "/washers-and-dryers/washers/top-load-washers/p.top-load-washer-with-deep-fill-4.8-cu.-ft.mvw6200kw.html",
+"price": {
+"value": 599.99
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Washers|Top-Load-Washers"
+},
+"isMemberPrice": false
+},
+{
+"code": "MVW4505MW",
+"name": "Top Load Washer with Deep Fill - 4.5 cu. ft.",
+"brand": "Maytag",
+"url": "/washers-and-dryers/washers/top-load-washers/p.top-load-washer-with-deep-fill-4.5-cu.-ft.mvw4505mw.html",
+"price": {
+"value": 719.0
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Washers|Top-Load-Washers"
+},
+"isMemberPrice": false
+},
+{
+"code": "MMMF6030PZ",
+"name": "Over-the-Range Flush Built-In Microwave - 1.1 Cu. Ft.",
+"brand": "Maytag",
+"url": "/kitchen/microwaves/over-the-range/p.over-the-range-flush-built-in-microwave-1.1-cu.-ft.mmmf6030pz.html",
+"price": {
+"value": 539.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Microwaves|Over-the-Range"
+},
+"isMemberPrice": false
+},
+{
+"code": "MGD7020RF",
+"name": "Smart Pet Pro Front Load Gas Dryer - 7.4 CU. FT.",
+"brand": "Maytag",
+"url": "/washers-and-dryers/dryers/gas/p.smart-pet-pro-front-load-gas-dryer-7.4-cu.-ft.mgd7020rf.html",
+"price": {
+"value": 1049.0
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Dryers|Gas"
+},
+"isMemberPrice": false
+},
+{
+"code": "MFW7020RW",
+"name": "Smart Pet Pro Front Load Washer - 5.0 CU. FT.",
+"brand": "Maytag",
+"url": "/washers-and-dryers/washers/front-load-washers/p.smart-pet-pro-front-load-washer-5.0-cu.-ft.mfw7020rw.html",
+"price": {
+"value": 949.0
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Washers|Front-Load-Washers"
+},
+"isMemberPrice": false
+},
+{
+"code": "MDFS3924RZ",
+"name": "Front Control Dishwasher with PowerBlast® cycle and Heated Dry",
+"brand": "Maytag",
+"url": "/kitchen/dishwashers/front-control-dishwashers/p.front-control-dishwasher-with-powerblast-cycle-and-heated-dry.mdfs3924rz.html",
+"price": {
+"value": 579.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Dishwashers|Front-Control-Dishwashers"
+},
+"isMemberPrice": false
+},
+{
+"code": "MHW8630HW",
+"name": "Smart Front Load Washer with Extra Power and 24-Hr Fresh Hold® option - 5.0 cu. ft.",
+"brand": "Maytag",
+"url": "/washers-and-dryers/stackable-laundry/p.smart-front-load-washer-with-extra-power-and-24-hr-fresh-hold-option-5.0-cu.-ft.mhw8630hw.html",
+"price": {
+"value": 1099.0
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Stackable-Laundry"
+},
+"isMemberPrice": false
+},
+{
+"code": "MTW7200RR",
+"name": "5.3 Cu. Ft. Pet Pro Top Load Impeller Washer with Extra Power and Sanitize Cycle with Oxi",
+"brand": "Maytag",
+"url": "/washers-and-dryers/washers/top-load-washers/p.5.3-cu.-ft.-pet-pro-top-load-impeller-washer-with-extra-power-and-sanitize-cycle-with-oxi.mtw7200rr.html",
+"price": {
+"value": 1129.0
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Washers|Top-Load-Washers"
+},
+"isMemberPrice": false
+},
+{
+"code": "MTW6205RW",
+"name": "5.2 Cu. Ft. Top Load Agitator Washer with Extra Power and Smart Appliance",
+"brand": "Maytag",
+"url": "/washers-and-dryers/washers/top-load-washers/p.5.2-cu.-ft.-top-load-agitator-washer-with-extra-power-and-smart-appliance.mtw6205rw.html",
+"price": {
+"value": 799.0
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Washers|Top-Load-Washers"
+},
+"isMemberPrice": false
+},
+{
+"code": "MTW6200RR",
+"name": "5.3 Cu. Ft. Top Load Impeller Washer with Extra Power and Smart Appliance",
+"brand": "Maytag",
+"url": "/washers-and-dryers/washers/top-load-washers/p.5.3-cu.-ft.-top-load-impeller-washer-with-extra-power-and-smart-appliance.mtw6200rr.html",
+"price": {
+"value": 849.0
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Washers|Top-Load-Washers"
+},
+"isMemberPrice": false
+},
+{
+"code": "MTW5205TW",
+"name": "4.7 Cu. Ft. Top Load Agitator Washer with Extra Power Cycle",
+"brand": "Maytag",
+"url": "/washers-and-dryers/washers/top-load-washers/p.4.7-cu.-ft.-top-load-agitator-washer-with-extra-power-cycle.mtw5205tw.html",
+"price": {
+"value": 649.0
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Washers|Top-Load-Washers"
+},
+"isMemberPrice": false
+},
+{
+"code": "MCIT8036SB",
+"name": "36-Inch Wide Induction Cooktop with Power Boost",
+"brand": "Maytag",
+"url": "/kitchen/cooktops/induction-cooktops/p.36-inch-wide-induction-cooktop-with-power-boost.mcit8036sb.html",
+"price": {
+"value": 1299.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Cooktops|Induction-Cooktops"
+},
+"isMemberPrice": false
+},
+{
+"code": "UVL6036JSS",
+"name": "36\" 585 or 1170 CFM Motor Class Custom Hood Liner",
+"brand": "Unbranded",
+"url": "/kitchen/hoods/liners-and-blowers/p.36-585-or-1170-cfm-motor-class-custom-hood-liner.uvl6036jss.html",
+"price": {
+"value": 1124.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Hoods|Liners-&-Blowers"
+},
+"isMemberPrice": false
+},
+{
+"code": "MEDP586KW",
+"name": "Commercial-Grade Residential Electric Dryer - 7.4 cu. ft.",
+"brand": "Maytag",
+"url": "/washers-and-dryers/dryers/matches-front-load-washers/p.commercial-grade-residential-electric-dryer-7.4-cu.-ft.medp586kw.html",
+"price": {
+"value": 1097.0
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Dryers|Matches-Front-Load-Washers"
+},
+"isMemberPrice": false
+},
+{
+"code": "MOEC6030LZ",
+"name": "30-inch Wall Oven Microwave Combo with Air Fry and Basket - 6.4 cu. ft.",
+"brand": "Maytag",
+"url": "/kitchen/cooking/wall-ovens/microwave-oven-combo/p.30-inch-wall-oven-microwave-combo-with-air-fry-and-basket-6.4-cu.-ft.moec6030lz.html",
+"price": {
+"value": 2699.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Cooking|Wall-Ovens|Microwave-Oven-Combo"
+},
+"isMemberPrice": false
+},
+{
+"code": "MGT8800FZ",
+"name": "30-Inch Wide Double Oven Gas Range With True Convection - 6.0 Cu. Ft.",
+"brand": "Maytag",
+"url": "/kitchen/cooking/ranges/double-oven-freestanding/p.30-inch-wide-double-oven-gas-range-with-true-convection-6.0-cu.-ft.mgt8800fz.html",
+"price": {
+"value": 1699.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Cooking|Ranges|Double-Oven-Freestanding"
+},
+"isMemberPrice": false
+},
+{
+"code": "MOES6030LZ",
+"name": "30-inch Single Wall Oven with Air Fry and Basket - 5.0 cu. ft.",
+"brand": "Maytag",
+"url": "/kitchen/cooking/wall-ovens/single-oven/p.30-inch-single-wall-oven-with-air-fry-and-basket-5.0-cu.-ft.moes6030lz.html",
+"price": {
+"value": 1399.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Cooking|Wall-Ovens|Single-Oven"
+},
+"isMemberPrice": false
+},
+{
+"code": "MFGS8030RZ",
+"name": "30-Inch Wide Gas Range With Grill Mode - 5.0 cu. ft.",
+"brand": "Maytag",
+"url": "/kitchen/ranges/gas/p.30-inch-wide-gas-range-with-grill-mode-5.0-cu.-ft.mfgs8030rz.html",
+"price": {
+"value": 1349.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Ranges|Gas"
+},
+"isMemberPrice": false
+},
+{
+"code": "MSGS7030SZ",
+"name": "30-Inch Wide Slide-In Gas Range with Grill Mode and No Preheat Air Fry - 5.0 Cu. Ft.",
+"brand": "Maytag",
+"url": "/kitchen/cooking/ranges/gas/p.30-inch-wide-slide-in-gas-range-with-grill-mode-and-no-preheat-air-fry-5.0-cu.-ft.msgs7030sz.html",
+"price": {
+"value": 1421.6
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Cooking|Ranges|Gas"
+},
+"isMemberPrice": false
+},
+{
+"code": "MSES7030SZ",
+"name": "30-Inch Wide Slide-In Electric Range with Grill Mode and No Preheat Air Fry - 5.3 Cu. Ft.",
+"brand": "Maytag",
+"url": "/kitchen/cooking/ranges/electric/p.30-inch-wide-slide-in-electric-range-with-grill-mode-and-no-preheat-air-fry-5.3-cu.-ft.mses7030sz.html",
+"price": {
+"value": 1332.8
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Cooking|Ranges|Electric"
+},
+"isMemberPrice": false
+},
+{
+"code": "MRTX5119SB",
+"name": "30-Inch Wide Top-Freezer Refrigerator with Garage Mode—19 Cu. Ft.",
+"brand": "Maytag",
+"url": "/kitchen/refrigeration/refrigerators/top-freezer/p.30-inch-wide-top-freezer-refrigerator-with-garage-mode-19-cu.-ft.mrtx5119sb.html",
+"price": {
+"value": 809.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Refrigeration|Refrigerators|Top-Freezer"
+},
+"isMemberPrice": false
+},
+{
+"code": "MMV5227JZ",
+"name": "Over-the-Range Microwave with Dual Crisp feature - 1.9 cu. ft.",
+"brand": "Maytag",
+"url": "/kitchen/cooking/microwaves/over-the-range/p.over-the-range-microwave-with-dual-crisp-feature-1.9-cu.-ft.mmv5227jz.html",
+"price": {
+"value": 610.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Cooking|Microwaves|Over-the-Range"
+},
+"isMemberPrice": false
+},
+{
+"code": "MDPS6124RZ",
+"name": "Third Rack Dishwasher with Rapid Sani Cycle",
+"brand": "Maytag",
+"url": "/kitchen/dishwashers-and-compactors/dishwashers/top-control-dishwashers/p.third-rack-dishwasher-with-rapid-sani-cycle.mdps6124rz.html",
+"price": {
+"value": 899.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Dishwashers-and-Compactors|Dishwashers|Top-Control-Dishwashers"
+},
+"isMemberPrice": false
+},
+{
+"code": "MFF2055FRZ",
+"name": "30-Inch Wide French Door Refrigerator - 20 Cu. Ft.",
+"brand": "Maytag",
+"url": "/kitchen/refrigeration/refrigerators/french-door/p.30-inch-wide-french-door-refrigerator-20-cu.-ft.mff2055frz.html",
+"price": {
+"value": 1899.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Refrigeration|Refrigerators|French-Door"
+},
+"isMemberPrice": false
+},
+{
+"code": "MDTS7024SZ",
+"name": "24\" Top Control Dishwasher with PowerBlast® Cycle and PowerDry",
+"brand": "Maytag",
+"url": "/kitchen/dishwashers/top-control-dishwashers/p.24-top-control-dishwasher-with-powerblast-cycle-and-powerdry.mdts7024sz.html",
+"price": {
+"value": 899.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Dishwashers|Top-Control-Dishwashers"
+},
+"isMemberPrice": false
+},
+{
+"code": "RMED4500MW",
+"name": "Refurbished Top Load Electric Wrinkle Prevent Dryer - 7.0 cu. ft",
+"brand": "Maytag",
+"url": "/washers-and-dryers/dryers/electric/p.refurbished-top-load-electric-wrinkle-prevent-dryer-7.0-cu.-ft.rmed4500mw.html",
+"price": {
+"value": 379.0
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Dryers|Electric"
+},
+"isMemberPrice": false
+},
+{
+"code": "MRSF4036PZ",
+"name": "36-Inch Wide Side-by-Side Refrigerator - 25 Cu. Ft.",
+"brand": "Maytag",
+"url": "/kitchen/refrigerators/side-by-side/p.36-inch-wide-side-by-side-refrigerator-25-cu.-ft.mrsf4036pz.html",
+"price": {
+"value": 1599.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Refrigerators|Side-by-Side"
+},
+"isMemberPrice": false
+},
+{
+"code": "MZCC4316TG",
+"name": "Maytag® 16 Cu. Ft. Garage Ready Chest Freezer with Freezer-to-Fridge Convertibility",
+"brand": "Maytag",
+"url": "/kitchen/freezers/chest/p.maytag-16-cu.-ft.-garage-ready-chest-freezer-with-freezer-to-fridge-convertibility.mzcc4316tg.html",
+"price": {
+"value": 649.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Freezers|Chest"
+},
+"isMemberPrice": false
+},
+{
+"code": "MZF34X18FW",
+"name": "18 cu. ft. Frost Free Upright Freezer with LED Lighting",
+"brand": "Maytag",
+"url": "/kitchen/refrigeration/freezers/upright/p.18-cu.-ft.-frost-free-upright-freezer-with-led-lighting.mzf34x18fw.html",
+"price": {
+"value": 769.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Refrigeration|Freezers|Upright"
+},
+"isMemberPrice": false
+},
+{
+"code": "MZF34X16DW",
+"name": "16 cu. ft. Frost Free Upright Freezer with FastFreeze Option",
+"brand": "Maytag",
+"url": "/kitchen/refrigeration/freezers/upright/p.16-cu.-ft.-frost-free-upright-freezer-with-fastfreeze-option.mzf34x16dw.html",
+"price": {
+"value": 719.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Refrigeration|Freezers|Upright"
+},
+"isMemberPrice": false
+},
+{
+"code": "MZF34X20DW",
+"name": "Frost Free Upright Freezer with LED Lighting - 20 Cu. Ft.",
+"brand": "Maytag",
+"url": "/kitchen/refrigeration/freezers/upright/p.frost-free-upright-freezer-with-led-lighting-20-cu.-ft.mzf34x20dw.html",
+"price": {
+"value": 869.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Refrigeration|Freezers|Upright"
+},
+"isMemberPrice": false
+},
+{
+"code": "MFW2055FRZ",
+"name": "30-Inch Wide French Door Refrigerator with Exterior Water Dispenser- 20 Cu. Ft.",
+"brand": "Maytag",
+"url": "/kitchen/refrigeration/refrigerators/french-door/p.30-inch-wide-french-door-refrigerator-with-exterior-water-dispenser-20-cu.-ft.mfw2055frz.html",
+"price": {
+"value": 1865.6
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Refrigeration|Refrigerators|French-Door"
+},
+"isMemberPrice": false
+},
+{
+"code": "MGD5030MW",
+"name": "Top Load Gas Dryer with Extra Power - 7.0 cu. ft.",
+"brand": "Maytag",
+"url": "/washers-and-dryers/dryers/gas/p.top-load-gas-dryer-with-extra-power-7.0-cu.-ft.mgd5030mw.html",
+"price": {
+"value": 759.0
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Dryers|Gas"
+},
+"isMemberPrice": false
+},
+{
+"code": "MGD4005SW",
+"name": "Top Load Gas Wrinkle Prevent Dryer - 7.0 cu. ft.",
+"brand": "Maytag",
+"url": "/washers-and-dryers/dryers/gas/p.top-load-gas-wrinkle-prevent-dryer-7.0-cu.-ft.mgd4005sw.html",
+"price": {
+"value": 659.0
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Dryers|Gas"
+},
+"isMemberPrice": false
+},
+{
+"code": "MVW4005SW",
+"name": "Top Load Washer with Deep Fill - 3.8 cu. ft.",
+"brand": "Maytag",
+"url": "/washers-and-dryers/washers/top-load-washers/p.top-load-washer-with-deep-fill-3.8-cu.-ft.mvw4005sw.html",
+"price": {
+"value": 559.0
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Washers|Top-Load-Washers"
+},
+"isMemberPrice": false
+},
+{
+"code": "MED7405RR",
+"name": "7.4 cu. ft. Smart Top Load Dryer with Pet Pro Option",
+"brand": "Maytag",
+"url": "/washers-and-dryers/dryers/matches-top-load-washers/p.7.4-cu.-ft.-smart-top-load-dryer-with-pet-pro-option.med7405rr.html",
+"price": {
+"value": 899.0
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Dryers|Matches-Top-Load-Washers"
+},
+"isMemberPrice": false
+},
+{
+"code": "MRTX5121TW",
+"name": "33-Inch Wide Top-Freezer Refrigerator with Garage Mode—21 Cu. Ft.",
+"brand": "Maytag",
+"url": "/kitchen/refrigeration/refrigerators/top-freezer/p.33-inch-wide-top-freezer-refrigerator-with-garage-mode-21-cu.-ft.mrtx5121tw.html",
+"price": {
+"value": 869.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Refrigeration|Refrigerators|Top-Freezer"
+},
+"isMemberPrice": false
+},
+{
+"code": "MRTX7621TZ",
+"name": "33-Inch Wide Top-Freezer Refrigerator with Factory-Installed Ice Maker—21 Cu. Ft.",
+"brand": "Maytag",
+"url": "/kitchen/refrigeration/refrigerators/top-freezer/p.33-inch-wide-top-freezer-refrigerator-with-factory-installed-ice-maker-21-cu.-ft.mrtx7621tz.html",
+"price": {
+"value": 1149.0
+},
+"primaryCategory": {
+"pipedCategory": "Kitchen|Refrigeration|Refrigerators|Top-Freezer"
+},
+"isMemberPrice": false
+},
+{
+"code": "MGDP586KW",
+"name": "Commercial-Grade Residential Gas Dryer - 7.4 cu. ft.",
+"brand": "Maytag",
+"url": "/washers-and-dryers/dryers/matches-front-load-washers/p.commercial-grade-residential-gas-dryer-7.4-cu.-ft.mgdp586kw.html",
+"price": {
+"value": 1187.0
+},
+"primaryCategory": {
+"pipedCategory": "Washers-and-Dryers|Dryers|Matches-Front-Load-Washers"
+},
+"isMemberPrice": false
+}
+]
+}

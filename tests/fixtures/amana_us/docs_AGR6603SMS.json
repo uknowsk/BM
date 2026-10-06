@@ -1,0 +1,70 @@
+{
+"documents": [
+{
+"doc_type": [
+"instruction-sheet"
+],
+"language": [
+"fr_ca",
+"en_us",
+"en_ca"
+],
+"asseturl": "/content/dam/global/documents/202604/instruction-sheet-w11427480-reva.pdf"
+},
+{
+"doc_type": [
+"reference-sheet"
+],
+"language": [
+"en_ca",
+"en_us",
+"fr_ca"
+],
+"asseturl": "/content/dam/global/documents/202312/quick-start-guide-w11676929-revA.pdf"
+},
+{
+"doc_type": [
+"warranty"
+],
+"language": [
+"en_ca",
+"en_us",
+"fr_ca"
+],
+"asseturl": "/content/dam/global/documents/202302/warranty-w11655304-revA.pdf"
+},
+{
+"doc_type": [
+"owners-manual"
+],
+"language": [
+"en_ca",
+"en_us",
+"fr_ca"
+],
+"asseturl": "/content/dam/global/documents/202203/owners-manual-w11450808-revC.pdf"
+},
+{
+"doc_type": [
+"dimension-guide"
+],
+"language": [
+"en_ca",
+"en_us",
+"fr_ca"
+],
+"asseturl": "/content/dam/global/documents/202007/dimension-guide-w11404111-reva.pdf"
+},
+{
+"doc_type": [
+"control-guide"
+],
+"language": [
+"en_ca",
+"en_us",
+"fr_ca"
+],
+"asseturl": "/content/dam/global/documents/202109/control-guide-w11427480-reva.pdf"
+}
+]
+}

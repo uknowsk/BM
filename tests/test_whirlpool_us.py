@@ -23,7 +23,7 @@ def _rec(m):
 
 def test_supported_set():
     assert "built_in" not in wp.SUPPORTED_SUBCATEGORIES and "scr" not in wp.SUPPORTED_SUBCATEGORIES
-    assert {"french_door", "top_load", "dryer", "laundry_center", "sco", "gas_oven", "radiant", "electric_oven",
+    assert {"french_door", "top_load", "dryer", "laundry_center", "sco", "gas_oven", "gas_cooktop", "radiant", "electric_oven",
             "otr", "induction"} <= wp.SUPPORTED_SUBCATEGORIES
 
 
@@ -60,6 +60,7 @@ def test_cooktop_induction_vs_radiant():
     rad = {c.model_number for c in wp.parse_search(data, "radiant")}
     assert {"WCI55US0JB", "WCIT6030SB"} <= ind and not ind & rad
     assert {"WCE97US0KS", "WCC31430AW", "RCS2012RS"} <= rad and "WCGK5036PS" not in rad  # coil + ceramic electric; gas out
+    assert "WCGK5036PS" in {c.model_number for c in wp.parse_search(data, "gas_cooktop")}
 
 
 def _cooking_subs(listing_files):
@@ -81,6 +82,7 @@ def test_cooking_overlap_ranges_ovens_microwaves():
     assert {"WFGS5030RS", "WGG745S0FS", "WSGS7530RV"} <= got["gas_oven"]  # gas ranges
     assert {"WFES5030RW", "WGE745C0FS", "WSES7530RV"} <= got["radiant"] and "WFES5030RW" not in got["gas_oven"]
     assert "WCE97US0KS" in got["radiant"] and "WCGK5036PS" not in got["radiant"]  # electric cooktop still radiant
+    assert "WCGK5036PS" in got["gas_cooktop"] and not got["gas_cooktop"] & got["gas_oven"]
     assert {"WCI55US0JB", "WCIT6030SB"} <= got["induction"]
     everything = [m for v in got.values() for m in v]
     assert len(everything) == len(set(everything))  # no model under two subs
@@ -98,7 +100,8 @@ def test_classify_range_and_oven_rules():
     assert c(mk("Kitchen|Cooking|Ranges|Slide-In", "30-inch Dual Fuel Range")) == ("cooking", "gas_oven")
     assert c(mk("Kitchen|Cooking|Ranges|Electric", "30-inch Electric Range")) == ("cooking", "radiant")
     assert c(mk("Kitchen|Cooking|Ranges|Electric", "30-inch Induction Range")) == ("cooking", "induction")
-    assert c(mk("Kitchen|Cooking|Cooktops|Gas", "30-inch Gas Cooktop")) == ("cooking", None)
+    assert c(mk("Kitchen|Cooking|Cooktops|Gas", "30-inch Gas Cooktop")) == ("cooking", "gas_cooktop")
+    assert c(mk("Kitchen|Cooking|Cooktops|Electric", "30-inch Electric Cooktop")) == ("cooking", "radiant")
 
 
 def test_washer_excludes_laundry_centers_and_refurbs():

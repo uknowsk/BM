@@ -1,0 +1,929 @@
+{
+ "name": "H 2465 B ACTIVE",
+ "alternativeName": "H 2465 B ACTIVE Obsidianschwarz",
+ "code": "000000000012428770",
+ "formattedCode": "12428770",
+ "designTypeName": "Backofen",
+ "dataLayer": {
+  "brand": "Miele Ovens Ovens <lt/>= 60 cm",
+  "category": "APPLIANCE/MDA/Ovens/Ovens <lt/>= 60 cm",
+  "deliveryDays": "3",
+  "name": "H2465B  D  OBSW 230/50 ACTIVE",
+  "priceWithoutTax": "739.000000"
+ },
+ "price": {
+  "currencyIso": "EUR",
+  "formattedValue": "739,00 €",
+  "priceType": "BUY",
+  "value": 739
+ },
+ "salesPrice": {
+  "currencyIso": "EUR",
+  "formattedValue": "739,00 €",
+  "priceType": "BUY",
+  "value": 739
+ },
+ "pdpUrl": "https://www.miele.de/product/12428770/backofen-h-2465-b-active-obsidianschwarz",
+ "shortPositioningText": "im modernen Design mit Vernetzung und PerfectClean zum günstigen Einstiegspreis.",
+ "techspecs": [
+  {
+   "attributes": [
+    {
+     "name": "Modellbezeichnung",
+     "sortOrder": 10,
+     "values": [
+      "H 2465 B ACTIVE"
+     ]
+    },
+    {
+     "name": "Materialnummer Hersteller",
+     "sortOrder": 20,
+     "values": [
+      "12428770"
+     ]
+    },
+    {
+     "name": "EAN-Nummer",
+     "sortOrder": 30,
+     "values": [
+      "4002516762096"
+     ]
+    },
+    {
+     "featureValueCode": "lov_ZZMKTGRP_F",
+     "name": "Marketingklasse",
+     "sortOrder": 40,
+     "values": [
+      "Silver"
+     ]
+    }
+   ],
+   "name": "Allgemeine Informationen",
+   "sortOrder": 10
+  },
+  {
+   "attributes": [
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Einbau-Backofen",
+     "sortOrder": 30,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "lov_PD_101131_126",
+     "name": "Gerätefarbe",
+     "sortOrder": 220,
+     "values": [
+      "Obsidianschwarz"
+     ]
+    }
+   ],
+   "name": "Bauform und Design",
+   "sortOrder": 301
+  },
+  {
+   "attributes": [
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Schnellaufheizen",
+     "sortOrder": 70,
+     "values": [
+      "TRUE"
+     ]
+    }
+   ],
+   "name": "Genussvorteile",
+   "sortOrder": 760
+  },
+  {
+   "attributes": [
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Heißluft plus",
+     "sortOrder": 10,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Ober-/Unterhitze",
+     "sortOrder": 40,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "AirFry",
+     "sortOrder": 310,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Intensivbacken",
+     "sortOrder": 340,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Umluftgrill",
+     "sortOrder": 360,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Grill",
+     "sortOrder": 370,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Grillbetriebsarten",
+     "sortOrder": 390,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Unterhitze",
+     "sortOrder": 410,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Automatikprogramme",
+     "sortOrder": 500,
+     "values": [
+      "TRUE"
+     ]
+    }
+   ],
+   "name": "Betriebsarten",
+   "sortOrder": 800
+  },
+  {
+   "attributes": [
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Vernetzung mit Miele@home",
+     "sortOrder": 10,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "lov_c_PP_116410_11",
+     "name": "Display",
+     "sortOrder": 20,
+     "values": [
+      "EasyControl Plus"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "MultiLingua",
+     "sortOrder": 170,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Zeitfunktionen",
+     "sortOrder": 320,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Tageszeitanzeige",
+     "sortOrder": 330,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Kurzzeitwecker",
+     "sortOrder": 360,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Programmierung Garzeitanfang",
+     "sortOrder": 370,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Programmierung Garzeitende",
+     "sortOrder": 380,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Programmierung Garzeitdauer",
+     "sortOrder": 390,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Ist-Temperaturanzeige",
+     "sortOrder": 400,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Soll-Temperaturanzeige",
+     "sortOrder": 410,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Signalton bei Erreichen der Solltemperatur",
+     "sortOrder": 420,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Vorschlagstemperatur",
+     "sortOrder": 440,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Individuelle Einstellungen",
+     "sortOrder": 510,
+     "values": [
+      "TRUE"
+     ]
+    }
+   ],
+   "name": "Bedienkomfort",
+   "sortOrder": 2800
+  },
+  {
+   "attributes": [
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Rezepte",
+     "sortOrder": 40,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "RemoteUpdate",
+     "sortOrder": 60,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Sprachsteuerung Alexa",
+     "sortOrder": 70,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Sprachsteuerung Google",
+     "sortOrder": 71,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Push-Nachrichten",
+     "sortOrder": 80,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Smart Home Integration",
+     "sortOrder": 100,
+     "values": [
+      "TRUE"
+     ]
+    }
+   ],
+   "footnote": {
+    "code": "CO_22727118",
+    "contentObjectType": "PATENT_INFORMATION",
+    "images": [],
+    "longText": [
+     {
+      "text": "Zusätzliches digitales Angebot der Miele & Cie. KG. Abhängig von Modell und Land kann der Funktionsumfang variieren. Erforderlich ist Ihr Einverständnis zu den Allgemeinen Geschäftsbedingungen und Datenschutzhinweisen für digitale Produkte und Dienste von Miele in der Miele App. Miele behält sich das Recht vor, die digitalen Angebote jederzeit zu ändern oder einzustellen.",
+      "type": "text"
+     }
+    ],
+    "name": [],
+    "shortText": [],
+    "subTitleText": [],
+    "titleText": []
+   },
+   "name": "Smart Extras",
+   "sortOrder": 2801
+  },
+  {
+   "attributes": [
+    {
+     "name": "Energieeffizienzklasse (A+++ - D)",
+     "sortOrder": 10,
+     "values": [
+      "A+"
+     ]
+    },
+    {
+     "name": "Leistungsaufnahme im Aus-Zustand in W",
+     "sortOrder": 40,
+     "values": [
+      "0.3"
+     ]
+    },
+    {
+     "name": "Leistungsaufnahme im Stand-by Modus in W",
+     "sortOrder": 50,
+     "values": [
+      "0.8"
+     ]
+    },
+    {
+     "name": "Leistungsaufnahme im vernetzten Bereitschaftsbetrieb in W",
+     "sortOrder": 60,
+     "values": [
+      "2"
+     ]
+    },
+    {
+     "name": "Zeitdauer bis automatisches Schalten in Bereitschaftsbetrieb in min",
+     "sortOrder": 70,
+     "values": [
+      "20"
+     ]
+    },
+    {
+     "name": "Zeitdauer bis automatisches Schalten in vernetzten Bereitschaftsbetrieb in min",
+     "sortOrder": 80,
+     "values": [
+      "20"
+     ]
+    },
+    {
+     "name": "Zeitdauer bis automatisches Schalten in Aus-Zustand in min",
+     "sortOrder": 90,
+     "values": [
+      "20"
+     ]
+    }
+   ],
+   "name": "Effizienz",
+   "sortOrder": 3900
+  },
+  {
+   "attributes": [
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Garraum mit PerfectClean und katalytischer Rückwand",
+     "sortOrder": 20,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "CleanGlass Tür",
+     "sortOrder": 220,
+     "values": [
+      "TRUE"
+     ]
+    }
+   ],
+   "name": "Pflegekomfort",
+   "sortOrder": 4000
+  },
+  {
+   "attributes": [
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Gerätekühlsystem mit kühler Front",
+     "sortOrder": 10,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Sicherheitsausschaltung",
+     "sortOrder": 20,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Inbetriebnahmesperre",
+     "sortOrder": 30,
+     "values": [
+      "TRUE"
+     ]
+    }
+   ],
+   "name": "Sicherheit",
+   "sortOrder": 6100
+  },
+  {
+   "attributes": [
+    {
+     "name": "Garraumvolumen in l",
+     "sortOrder": 40,
+     "values": [
+      "76"
+     ]
+    },
+    {
+     "name": "Anzahl der Einschubebenen",
+     "sortOrder": 50,
+     "values": [
+      "5"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Kennzeichnung der Einschubebenen",
+     "sortOrder": 60,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "lov_PB_100207_5",
+     "name": "Türanschlag",
+     "sortOrder": 70,
+     "values": [
+      "unten"
+     ]
+    },
+    {
+     "name": "Garraumbeleuchtung",
+     "sortOrder": 80,
+     "values": [
+      "1 Halogen-Spot"
+     ]
+    },
+    {
+     "name": "Temperaturen in °C",
+     "sortOrder": 115,
+     "values": [
+      "30–300"
+     ]
+    },
+    {
+     "name": "Nischenmaße (B x H x T) in mm",
+     "sortOrder": 231,
+     "values": [
+      "560-568 x 590-595 x 550"
+     ]
+    },
+    {
+     "name": "Nischenbreite min. in mm",
+     "sortOrder": 239,
+     "values": [
+      "560"
+     ]
+    },
+    {
+     "name": "Nischenbreite max. in mm",
+     "sortOrder": 240,
+     "values": [
+      "568"
+     ]
+    },
+    {
+     "name": "Nischenhöhe min. in mm",
+     "sortOrder": 250,
+     "values": [
+      "590"
+     ]
+    },
+    {
+     "name": "Nischenhöhe max. in mm",
+     "sortOrder": 260,
+     "values": [
+      "595"
+     ]
+    },
+    {
+     "name": "Nischentiefe in mm",
+     "sortOrder": 270,
+     "values": [
+      "550"
+     ]
+    },
+    {
+     "name": "Gerätemaße (B x H x T) in mm",
+     "sortOrder": 275,
+     "values": [
+      "595 x 596 x 568"
+     ]
+    },
+    {
+     "name": "Gewicht in kg",
+     "sortOrder": 293,
+     "values": [
+      "42"
+     ]
+    },
+    {
+     "name": "Gesamtanschlusswert in kW",
+     "sortOrder": 330,
+     "values": [
+      "3.500"
+     ]
+    },
+    {
+     "name": "Spannung in V",
+     "sortOrder": 340,
+     "values": [
+      "220 - 240"
+     ]
+    },
+    {
+     "name": "Frequenz in Hz",
+     "sortOrder": 370,
+     "values": [
+      "50"
+     ]
+    },
+    {
+     "name": "Absicherung in A",
+     "sortOrder": 380,
+     "values": [
+      "16"
+     ]
+    },
+    {
+     "name": "Phasenanzahl",
+     "sortOrder": 390,
+     "values": [
+      "1"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Anschlusskabel mit Netzstecker",
+     "sortOrder": 410,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "name": "Länge der elektrischen Zuleitung in m",
+     "sortOrder": 420,
+     "values": [
+      "1.50"
+     ]
+    },
+    {
+     "name": "Leuchtmittel tauschen",
+     "sortOrder": 450,
+     "values": [
+      "Kunde"
+     ]
+    }
+   ],
+   "name": "Technische Daten",
+   "sortOrder": 6400
+  },
+  {
+   "attributes": [
+    {
+     "name": "Universalblech mit PerfectClean HUBB 71",
+     "sortOrder": 30,
+     "values": [
+      "1"
+     ]
+    },
+    {
+     "name": "Back- und Bratrost",
+     "sortOrder": 40,
+     "values": [
+      "1"
+     ]
+    },
+    {
+     "name": "Herausnehmbare Aufnahmegitter (Paar)",
+     "sortOrder": 110,
+     "values": [
+      "1"
+     ]
+    }
+   ],
+   "name": "Mitgeliefertes Zubehör",
+   "sortOrder": 6600
+  }
+ ],
+ "documentGroups": [
+  {
+   "code": "OPERATING_INSTRUCTIONS",
+   "documents": [
+    {
+     "description": "EU - Konformitätserklärung",
+     "media": {
+      "altText": "EU Konformitätserklärung",
+      "mimeType": "application/pdf",
+      "url": "https://media.miele.com/downloads/1a/26/00_7CED8D23BC481FE1A3FBF48C26191A26.pdf"
+     },
+     "name": "PDF"
+    },
+    {
+     "description": "EU - Konformitätserklärung",
+     "media": {
+      "altText": "EU Konformitätserklärung",
+      "mimeType": "application/pdf",
+      "url": "https://media.miele.com/downloads/23/0e/03_70A8A51285B71FE1A3DF563D8F04230E.pdf"
+     },
+     "name": "PDF"
+    },
+    {
+     "description": "Gebrauchsanweisung/Montageanweisung",
+     "media": {
+      "altText": "Gebrauchsanweisung/Montageanweisung",
+      "mimeType": "application/pdf",
+      "url": "https://media.miele.com/downloads/45/a0/00_C7F1282801EE1FD0A7F00B31E6A045A0.pdf"
+     },
+     "name": "PDF"
+    },
+    {
+     "description": "Produktblatt",
+     "media": {
+      "altText": "Produktdatenblatt",
+      "mimeType": "application/pdf",
+      "url": "https://media.miele.com/downloads/e-/de/FS_12428770_DED_DE-de-DE.pdf"
+     },
+     "name": "PDF"
+    },
+    {
+     "description": "Kurzgebrauchsanweisung",
+     "media": {
+      "altText": "Kurz-Gebrauchsanweisung",
+      "mimeType": "application/pdf",
+      "url": "https://media.miele.com/downloads/91/2a/00_C7F12828B5831EEE9BB630B17714912A.pdf"
+     },
+     "name": "PDF"
+    },
+    {
+     "description": "Garantiebedingungen",
+     "media": {
+      "altText": "Garantiebedingungen",
+      "mimeType": "application/pdf",
+      "url": "https://media.miele.com/downloads/47/33/16_C7F1282806E91FD0A8D4A4AD14174733.pdf"
+     },
+     "name": "PDF"
+    }
+   ],
+   "name": "Gebrauchsanweisung & Montage",
+   "sortOrder": 1
+  },
+  {
+   "code": "CAD_DATA",
+   "documents": [
+    {
+     "description": "dwg",
+     "media": {
+      "altText": "3D Daten im Dateiformat DWG",
+      "mimeType": "application/zip",
+      "url": "https://media.miele.com/downloads/45/61/02_70A8A51285B71FE1AC81881F77804561.zip"
+     },
+     "name": "ZIP"
+    },
+    {
+     "description": "fbx",
+     "media": {
+      "altText": "3D Daten im Dateiformat FBX",
+      "mimeType": "application/zip",
+      "url": "https://media.miele.com/downloads/a5/61/02_70A8A51285B71FE1AC81881F7780A561.zip"
+     },
+     "name": "ZIP"
+    },
+    {
+     "description": "ifc",
+     "media": {
+      "altText": "3D Daten im Dateiformat IFC",
+      "mimeType": "application/zip",
+      "url": "https://media.miele.com/downloads/05/61/02_70A8A51285B71FE1AC81881F77810561.zip"
+     },
+     "name": "ZIP"
+    },
+    {
+     "description": "rfa",
+     "media": {
+      "altText": "3D Daten im Dateiformat RFA",
+      "mimeType": "application/zip",
+      "url": "https://media.miele.com/downloads/65/61/02_70A8A51285B71FE1AC81881F77816561.zip"
+     },
+     "name": "ZIP"
+    },
+    {
+     "description": "rvt",
+     "media": {
+      "altText": "3D Daten im Dateiformat RVT",
+      "mimeType": "application/zip",
+      "url": "https://media.miele.com/downloads/c5/61/02_70A8A51285B71FE1AC81881F7781C561.zip"
+     },
+     "name": "ZIP"
+    }
+   ],
+   "name": "CAD/BIM-Daten",
+   "sortOrder": 3
+  },
+  {
+   "code": "ENERGY",
+   "documents": [
+    {
+     "description": "Energielabel",
+     "media": {
+      "altText": "Energielabel PDF",
+      "mimeType": "application/pdf",
+      "url": "https://media.miele.com/downloads/58/c3/01_C7F1383829E31FD0A2EF4BBDDD6058C3.pdf"
+     },
+     "name": "PDF"
+    },
+    {
+     "description": "Energielabel",
+     "media": {
+      "altText": "Energielabel PNG",
+      "mimeType": "image/png",
+      "url": "https://media.miele.com/downloads/d8/c8/01_C7F138384E211FD0A2EF4C0EE1A8D8C8.png"
+     },
+     "name": "PNG"
+    },
+    {
+     "description": "EU - Datenblatt",
+     "media": {
+      "altText": "EU Datenblatt PDF",
+      "mimeType": "application/pdf",
+      "url": "https://media.miele.com/downloads/c4/4e/03_C7F12828EB561EEEB89ED4E580DFC44E.pdf"
+     },
+     "name": "PDF"
+    },
+    {
+     "description": "Energielabel-Icon",
+     "descriptionTitle": "Pfeil Energielabel A+",
+     "media": {
+      "altText": "Onlinelabel Image, Energielabel",
+      "mimeType": "application/pdf",
+      "url": "https://media.miele.com/dam/95196625-8a86-4922-b8b7-b3c5007b817c/20000115128_HighresDigitalRGB.png"
+     },
+     "name": "PDF"
+    }
+   ],
+   "name": "ECO Informationen",
+   "sortOrder": 6
+  },
+  {
+   "code": "INSTALLATION_DRAWINGS",
+   "documents": [
+    {
+     "description": "1) Netzanschlussleitung, L=1500 mm, 2) In diesem Bereich kein Anschluss, 3) Lüftungsausschnitt min. 150 cm²",
+     "descriptionTitle": "Installation H7000 XL, Skizze",
+     "media": {
+      "altText": "Einbauskizze",
+      "mimeType": "application/postscript",
+      "url": "https://media.miele.com/dam/b794019a-fde5-46f9-a14c-b45d00763d64/20000153706_HighresDigitalRGB.png"
+     },
+     "name": "POSTSCRIPT"
+    },
+    {
+     "description": "22 mm - Glas, 23,3 mm - Edelstahl",
+     "descriptionTitle": "Seitenansicht H7000 XL, Skizze",
+     "media": {
+      "altText": "Einbauskizze",
+      "mimeType": "application/postscript",
+      "url": "https://media.miele.com/dam/60f90388-9c9c-438c-aa2f-b45d0076455e/20000153712_HighresDigitalRGB.png"
+     },
+     "name": "POSTSCRIPT"
+    },
+    {
+     "description": "Einbau H7000 XL, Skizze",
+     "descriptionTitle": "Einbau H7000 XL, Skizze",
+     "media": {
+      "altText": "Einbauskizze",
+      "mimeType": "application/postscript",
+      "url": "https://media.miele.com/dam/fb2fdbb7-bbd8-487c-942c-b45d00764ae4/20000153718_HighresDigitalRGB.png"
+     },
+     "name": "POSTSCRIPT"
+    },
+    {
+     "description": "Wenn der Backofen unter einem Kochfeld eingebaut werden soll, beachten Sie die Hinweise zum Einbau des Kochfeldes sowie die Einbauhöhe des Kochfeldes.",
+     "descriptionTitle": "Einbau H7000 XL Unterbau, Skizze",
+     "media": {
+      "altText": "Einbauskizze",
+      "mimeType": "application/postscript",
+      "url": "https://media.miele.com/dam/bfb185c8-e72e-4aa6-930c-b45d00765097/20000153722_HighresDigitalRGB.png"
+     },
+     "name": "POSTSCRIPT"
+    },
+    {
+     "description": "22 mm - Glas, 23,3 mm - Edelstahl",
+     "descriptionTitle": "Seitenansicht H7000 XL Unterbau, Skizze",
+     "media": {
+      "altText": "Einbauskizze",
+      "mimeType": "application/postscript",
+      "url": "https://media.miele.com/dam/9c49cce9-e497-45b5-9192-b48601081642/20000169784_HighresDigitalRGB.png"
+     },
+     "name": "POSTSCRIPT"
+    },
+    {
+     "description": "EU, 1) 399,6 mm, 2) 360 mm, 3) 45 mm, 4) 31,8 mm, 5) 32,5 mm, , EX, 1) 399.6 mm, 2) 360 mm, 3) 45 mm , 4) 31.8 mm, 5) 32.5 mm",
+     "descriptionTitle": "H2465B, H2465BP, H2466B, H2466BP, H2467B, H2467BP, H2468B, H2468BP, H2469B, H2469BP - Skizze, Griffe",
+     "media": {
+      "altText": "Einbauskizze, Logo",
+      "mimeType": "application/postscript",
+      "url": "https://media.miele.com/dam/fea806a5-ff73-4ce2-915e-b3ba01131212/20000186776_HighresDigitalRGB.png"
+     },
+     "name": "POSTSCRIPT"
+    }
+   ],
+   "name": "Installationszeichnungen",
+   "sortOrder": 8
+  }
+ ],
+ "primaryProductImage": {
+  "altText": "Sachaufnahme",
+  "format": "cart",
+  "url": "https://media.miele.com/dam/af19375f-1319-4f72-90d0-b3ba0173af02/20000199861_HighresDigitalRGB.png"
+ },
+ "images": [
+  {
+   "akamaiImageType": "PRIMARY",
+   "altText": "Sachaufnahme",
+   "format": "cart",
+   "galleryIndex": 0,
+   "imageType": "PRIMARY",
+   "url": "https://media.miele.com/dam/af19375f-1319-4f72-90d0-b3ba0173af02/20000199861_HighresDigitalRGB.png"
+  },
+  {
+   "akamaiImageType": "FACIA",
+   "altText": "Abbildung der Blende",
+   "format": "cart",
+   "galleryIndex": 0,
+   "imageType": "GALLERY",
+   "url": "https://media.miele.com/dam/6a418f03-7770-49e9-849d-b3ba01746ece/20000200027_HighresDigitalRGB.png"
+  }
+ ],
+ "connectedAppliance": true,
+ "productTypeCode": "APPLIANCE",
+ "appliance": true,
+ "euDataSheet": {
+  "altText": "EU Datenblatt PDF",
+  "description": "EU - Datenblatt",
+  "mimeType": "application/pdf",
+  "url": "https://media.miele.com/downloads/c4/4e/03_C7F12828EB561EEEB89ED4E580DFC44E.pdf"
+ },
+ "energyLabel": {
+  "altText": "Energielabel PNG",
+  "description": "Energielabel",
+  "mimeType": "image/png",
+  "url": "https://media.miele.com/downloads/d8/c8/01_C7F138384E211FD0A2EF4C0EE1A8D8C8.png"
+ },
+ "marketingClass": "SILVER",
+ "productSlug": "backofen-h-2465-b-active-obsidianschwarz"
+}

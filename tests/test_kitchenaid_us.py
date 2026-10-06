@@ -215,7 +215,7 @@ def test_main_image_url_rules():
 def test_supported_subcategories_and_unsupported_raises():
     assert ka.SUPPORTED_SUBCATEGORIES == set(ka.SUB_RULES)
     assert not ka.SUPPORTED_SUBCATEGORIES & {"top_load", "front_load", "dryer", "laundry_center", "top_freezer", "scr"}
-    assert {"sco", "gas_oven", "radiant", "induction", "electric_oven", "microwave", "otr"} <= ka.SUPPORTED_SUBCATEGORIES
+    assert {"sco", "gas_oven", "gas_cooktop", "radiant", "induction", "electric_oven", "microwave", "otr"} <= ka.SUPPORTED_SUBCATEGORIES
     assert all(catalog.major_of(s) == ka.SUB_RULES[s].major for s in ka.SUPPORTED_SUBCATEGORIES)
     for bad in ("front_load", "dryer", "scr", "top_freezer", "refrigerator"):
         try:
@@ -240,7 +240,7 @@ def test_discover_by_sub_classification():
     assert "KRSF536RPS" in got["side_by_side"] and "KRFF436SBE" in got["french_door"] and "KRMF706EBS" in got["french_door"]
     assert "KRBR130SPS" in got["bottom_freezer"] and "KURR124SSB" in got["compact"] and "KUCT524SSB" in got["compact"]
     everything = set().union(*[set(v) for v in got.values()])
-    for excluded in ("KUIX315SPS", "KUWR524SBE", "KUBR524SPS", "KCGK330SSS"):  # ice maker, wine, beverage, gas cooktop
+    for excluded in ("KUIX315SPS", "KUWR524SBE", "KUBR524SPS"):  # ice maker, wine, beverage
         assert excluded not in everything, excluded
     assert "KMMF730PPS" in got["otr"] and "KMMF730PPS" not in got["electric_oven"]  # OTR oven listed under wall ovens
     assert "KMMS130RPS" in got["otr"] and "KMCS324SSS" in got["microwave"] and "KMCS324SSS" not in got["otr"]
@@ -252,8 +252,10 @@ def test_discover_by_sub_classification():
     assert "KOED430RSS" in got["electric_oven"]  # listed under combination-wall-ovens but is a double oven
     assert "KFES530SPS" in got["radiant"] and "KFED500ESS" in got["radiant"] and "KSES530SPS" in got["radiant"]
     assert "KFGS530SPS" not in got["radiant"] and "KFIS930SSS" not in got["radiant"]
-    assert "KCES550HBL" in got["radiant"] and "KCIT736SSS" not in got["radiant"] and "KCGK330SSS" not in everything
-    cooking = [set(got[s]) for s in ("otr", "sco", "microwave", "induction", "gas_oven", "radiant", "electric_oven")]
+    assert "KCES550HBL" in got["radiant"] and "KCIT736SSS" not in got["radiant"] and "KCGK330SSS" not in got["radiant"]
+    assert {"KCGK330SSS", "KCGD506GSS", "KCGC506JSS", "KCGG536PBL"} <= set(got["gas_cooktop"])  # cooktops + rangetops
+    assert not set(got["gas_cooktop"]) & set(got["gas_oven"])
+    cooking = [set(got[s]) for s in ("otr", "sco", "microwave", "induction", "gas_cooktop", "gas_oven", "radiant", "electric_oven")]
     assert sum(map(len, cooking)) == len(set().union(*cooking))  # no model under two sub keys
 
 
@@ -270,7 +272,11 @@ def test_infer_subcategory_from_url_and_name():
     assert f(base + "refrigeration/x/p.a.html", "42-Inch Built-In French Door Refrigerator") == "built_in"
     assert f(base + "hoods-and-vents/x/p.a.html", "Multifunction Over-the-Range Oven") == "otr"
     assert f(base + "cooktops/x/p.a.html", "36-inch Induction Downdraft Cooktop") == "induction"
-    assert f(base + "cooktops/x/p.a.html", "36 in. Gas Cooktop") is None
+    assert f(base + "cooktops/x/p.a.html", "36 in. Gas Cooktop") == "gas_cooktop"
+    assert f(base + "cooktops/x/p.a.html", "36'' 6-Burner Commercial-Style Gas Rangetop") == "gas_cooktop"
+    assert f(base + "ranges/x/p.a.html", "36'' Commercial-Style Gas Rangetop") == "gas_cooktop"  # filed under /ranges/
+    assert f(base + "ranges/x/p.a.html", "36-Inch Gas Range with Cooktop") == "gas_oven"  # has an oven
+    assert f(base + "cooktops/x/p.a.html", "30-inch Electric Cooktop") == "radiant"
     assert f(base + "dishwashers/x/p.a.html", "Dishwasher") is None
     assert f(base + "wall-ovens/x/p.a.html", "30-inch Smart Electric Combo Wall Oven") == "sco"
     assert f(base + "wall-ovens/x/p.a.html", "30-inch Electric Double Wall Oven") == "electric_oven"

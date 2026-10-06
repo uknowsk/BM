@@ -1,0 +1,155 @@
+{
+ "pagination": {
+  "currentPage": 0,
+  "pageSize": 3,
+  "sort": "relevance",
+  "totalPages": 4,
+  "totalResults": 10
+ },
+ "products": [
+  {
+   "bundleAvailable": false,
+   "categoryFallBack": {
+    "categoryFallBackCode": "kitchen/cooking/microwaves/microwave-oven",
+    "categoryFallBackENName": "Microwave Oven",
+    "categoryFallBackName": "Microwave Oven"
+   },
+   "code": "947608850",
+   "d2cExclusiveFlag": false,
+   "d2cSellable": true,
+   "description": "OB6SM171DB",
+   "displayLowestPriceMesssage": false,
+   "displayToolTipForLowestPrice": false,
+   "flashPromoDR": false,
+   "hideShowPncFlag": false,
+   "isServiceable": false,
+   "kit": false,
+   "lowestPricePeriod": 0,
+   "minCTFError": false,
+   "modelId": "OB6SM171DB",
+   "nakedProduct": false,
+   "name": "6000 Integrated Microwave 17L",
+   "offerPrice": {
+    "currencyIso": "GBP",
+    "formattedValue": "£399.99",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 399.99
+   },
+   "price": {
+    "currencyIso": "GBP",
+    "formattedValue": "£429.99",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 429.99
+   },
+   "productURL": "https://www.aeg.co.uk/kitchen/cooking/microwaves/microwave-oven/ob6sm171db/",
+   "rrp": {
+    "currencyIso": "GBP",
+    "formattedValue": "£429.99",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 429.99
+   },
+   "rts": false,
+   "smallAppliance": false,
+   "suggestedDiscount": 0
+  },
+  {
+   "bundleAvailable": false,
+   "categoryFallBack": {
+    "categoryFallBackCode": "kitchen/cooking/ovens/compact-oven",
+    "categoryFallBackENName": "Compact oven",
+    "categoryFallBackName": "Compact oven"
+   },
+   "code": "944005251",
+   "d2cExclusiveFlag": false,
+   "d2cSellable": true,
+   "description": "OK6NK40K",
+   "displayLowestPriceMesssage": false,
+   "displayToolTipForLowestPrice": false,
+   "flashPromoDR": false,
+   "hideShowPncFlag": false,
+   "isServiceable": false,
+   "kit": false,
+   "lowestPricePeriod": 0,
+   "minCTFError": false,
+   "modelId": "OK6NK40K",
+   "nakedProduct": false,
+   "name": "6000 CombiQuick Microwave and Built-in Oven",
+   "offerPrice": {
+    "currencyIso": "GBP",
+    "formattedValue": "£649.99",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 649.99
+   },
+   "price": {
+    "currencyIso": "GBP",
+    "formattedValue": "£699.99",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 699.99
+   },
+   "productURL": "https://www.aeg.co.uk/kitchen/cooking/microwaves/microwave-oven/ok6nk40k/",
+   "rrp": {
+    "currencyIso": "GBP",
+    "formattedValue": "£699.99",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 699.99
+   },
+   "rts": false,
+   "smallAppliance": false,
+   "suggestedDiscount": 0
+  },
+  {
+   "bundleAvailable": false,
+   "categoryFallBack": {
+    "categoryFallBackCode": "kitchen/cooking/microwaves/microwave-oven",
+    "categoryFallBackENName": "Microwave Oven",
+    "categoryFallBackName": "Microwave Oven"
+   },
+   "code": "947608852",
+   "d2cExclusiveFlag": false,
+   "d2cSellable": true,
+   "description": "OB6SM261UB",
+   "displayLowestPriceMesssage": false,
+   "displayToolTipForLowestPrice": false,
+   "flashPromoDR": false,
+   "hideShowPncFlag": false,
+   "isServiceable": false,
+   "kit": false,
+   "lowestPricePeriod": 0,
+   "minCTFError": false,
+   "modelId": "OB6SM261UB",
+   "nakedProduct": false,
+   "name": "6000 Integrated Microwave 26L",
+   "offerPrice": {
+    "currencyIso": "GBP",
+    "formattedValue": "£429.99",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 429.99
+   },
+   "price": {
+    "currencyIso": "GBP",
+    "formattedValue": "£469.99",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 469.99
+   },
+   "productURL": "https://www.aeg.co.uk/kitchen/cooking/microwaves/microwave-oven/ob6sm261ub/",
+   "rrp": {
+    "currencyIso": "GBP",
+    "formattedValue": "£469.99",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 469.99
+   },
+   "rts": false,
+   "smallAppliance": false,
+   "suggestedDiscount": 0
+  }
+ ]
+}

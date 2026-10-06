@@ -1,0 +1,155 @@
+{
+ "pagination": {
+  "currentPage": 0,
+  "pageSize": 3,
+  "sort": "relevance",
+  "totalPages": 6,
+  "totalResults": 16
+ },
+ "products": [
+  {
+   "bundleAvailable": false,
+   "categoryFallBack": {
+    "categoryFallBackCode": "kitchen/cooking/hobs/gas-hob",
+    "categoryFallBackENName": "Gas hob",
+    "categoryFallBackName": "Gas hob"
+   },
+   "code": "949641061",
+   "d2cExclusiveFlag": false,
+   "d2cSellable": true,
+   "description": "HGE64200SM",
+   "displayLowestPriceMesssage": false,
+   "displayToolTipForLowestPrice": false,
+   "flashPromoDR": false,
+   "hideShowPncFlag": false,
+   "isServiceable": false,
+   "kit": false,
+   "lowestPricePeriod": 0,
+   "minCTFError": false,
+   "modelId": "HGE64200SM",
+   "nakedProduct": false,
+   "name": "3000 Slim line Gas Hob 60cm",
+   "offerPrice": {
+    "currencyIso": "GBP",
+    "formattedValue": "£189.99",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 189.99
+   },
+   "price": {
+    "currencyIso": "GBP",
+    "formattedValue": "£249.99",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 249.99
+   },
+   "productURL": "https://www.aeg.co.uk/kitchen/cooking/hobs/gas-hob/hge64200sm/",
+   "rrp": {
+    "currencyIso": "GBP",
+    "formattedValue": "£249.99",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 249.99
+   },
+   "rts": false,
+   "smallAppliance": false,
+   "suggestedDiscount": 0
+  },
+  {
+   "bundleAvailable": false,
+   "categoryFallBack": {
+    "categoryFallBackCode": "kitchen/cooking/hobs/gas-hob",
+    "categoryFallBackENName": "Gas hob",
+    "categoryFallBackName": "Gas hob"
+   },
+   "code": "949751011",
+   "d2cExclusiveFlag": false,
+   "d2cSellable": true,
+   "description": "HKB95820NB",
+   "displayLowestPriceMesssage": false,
+   "displayToolTipForLowestPrice": false,
+   "flashPromoDR": false,
+   "hideShowPncFlag": false,
+   "isServiceable": false,
+   "kit": false,
+   "lowestPricePeriod": 0,
+   "minCTFError": false,
+   "modelId": "HKB95820NB",
+   "nakedProduct": false,
+   "name": "6000 Gas On Glass Hob 90cm",
+   "offerPrice": {
+    "currencyIso": "GBP",
+    "formattedValue": "£609.99",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 609.99
+   },
+   "price": {
+    "currencyIso": "GBP",
+    "formattedValue": "£649.99",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 649.99
+   },
+   "productURL": "https://www.aeg.co.uk/kitchen/cooking/hobs/gas-hob/hkb95820nb/",
+   "rrp": {
+    "currencyIso": "GBP",
+    "formattedValue": "£649.99",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 649.99
+   },
+   "rts": false,
+   "smallAppliance": false,
+   "suggestedDiscount": 0
+  },
+  {
+   "bundleAvailable": false,
+   "categoryFallBack": {
+    "categoryFallBackCode": "kitchen/cooking/hobs/gas-hob",
+    "categoryFallBackENName": "Gas hob",
+    "categoryFallBackName": "Gas hob"
+   },
+   "code": "949631020",
+   "d2cExclusiveFlag": false,
+   "d2cSellable": true,
+   "description": "HKB75820NB",
+   "displayLowestPriceMesssage": false,
+   "displayToolTipForLowestPrice": false,
+   "flashPromoDR": false,
+   "hideShowPncFlag": false,
+   "isServiceable": false,
+   "kit": false,
+   "lowestPricePeriod": 0,
+   "minCTFError": false,
+   "modelId": "HKB75820NB",
+   "nakedProduct": false,
+   "name": "6000 Gas On Glass Hob 75cm",
+   "offerPrice": {
+    "currencyIso": "GBP",
+    "formattedValue": "£499.99",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 499.99
+   },
+   "price": {
+    "currencyIso": "GBP",
+    "formattedValue": "£589.99",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 589.99
+   },
+   "productURL": "https://www.aeg.co.uk/kitchen/cooking/hobs/gas-hob/hkb75820nb/",
+   "rrp": {
+    "currencyIso": "GBP",
+    "formattedValue": "£589.99",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 589.99
+   },
+   "rts": false,
+   "smallAppliance": false,
+   "suggestedDiscount": 0
+  }
+ ]
+}

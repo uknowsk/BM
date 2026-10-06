@@ -55,13 +55,33 @@ DOWNLOAD_HOST_ALLOW = (
     "samsung.com", "samsungcdn.com", "lg.com", "lge.com", "kitchenaid.com", "whirlpool.com",
     "whirlpoolcorp.com", "bsh-group.com", "bosch-home.com", "geappliances.com", "salsify.com",
     "lge.co.kr",  # Korea: www.lge.co.kr pages/PDFs and static.lge.co.kr product images (not covered by lge.com)
+    # Brand expansion (6 -> 30): the sites of the new brands' adapters (server.BRAND_DOMAINS/EXTRA_DOMAINS mirror this;
+    # a host an adapter still needs, e.g. its asset CDN, is reported by that adapter's agent and added here).
+    "maytag.com", "jennair.com", "amana.com", "thermador.com", "gaggenau.com", "gaggenau.de", "siemens-home.de",
+    "frigidaire.com", "electrolux.com", "electroluxappliances.com", "electrolux.de", "electrolux.co.uk", "electrolux.fr",
+    "aeg.com", "aeg.de", "aeg.co.uk", "aeg.fr", "cafeappliances.com", "monogram.com", "haierappliances.com", "haier.com",
+    "haier-europe.com", "fisherpaykel.com", "fisherpaykel.co.uk", "fisherpaykel.de", "vikingrange.com",
+    "vikingrange.co.uk", "subzero-wolf.com", "subzero.com", "wolfappliance.com", "miele.com", "miele.de", "miele.co.uk",
+    "miele.fr", "smeg.com", "smegusa.com", "smeg.de", "smeg.co.uk", "smeg.fr", "liebherr.com", "liebherr-home.com",
+    "bertazzoni.com", "bertazzoni.co.uk", "dedietrich.com", "dedietrich-electromenager.fr", "beko.com",
+    "bekoappliances.com", "beko.co.uk", "beko.de", "hisense-usa.com", "hisense.com", "hisense.co.uk", "hisense.de",
+    "panasonic.com", "panasonic.co.uk", "panasonic.de",
+    # Asset/PDF hosts the adapters reported (exact hosts only: bynder.com / adobeaemcloud.com / windows.net are shared
+    # platforms, so only the brands' own tenants are listed).
+    "middleby-cdn.com",  # Viking images + PDFs
+    "doc.smeg.it", "assets.4flow.cloud",  # Smeg manuals / product images
+    "frigidaire.bynder.com", "electrolux.bynder.com", "support.electroluxgroup.eu",  # Frigidaire/Electrolux/AEG assets
 )
 # Product images: the PDF hosts plus the CDNs the adapters actually emit image URLs from (seen in fixtures/adapters):
 # bigcommerce.com (GE hero images, cdn11.bigcommerce.com) and scene7.com (Adobe Scene7, used by Whirlpool-family
 # sites). samsung.com covers image-us/images.samsung.com, lge.com covers gscs-b2c.lge.com, bsh-group.com covers
 # media3.bsh-group.com, salsify.com covers images.salsify.com. Korea (verified on the live sites): Samsung KR serves
 # images from images.samsung.com (samsung.com); LG KR from static.lge.co.kr (lge.co.kr). cloudinary.com is deliberately NOT listed (not needed).
-IMAGE_HOST_ALLOW = DOWNLOAD_HOST_ALLOW + ("bigcommerce.com", "scene7.com")
+IMAGE_HOST_ALLOW = DOWNLOAD_HOST_ALLOW + (
+    "bigcommerce.com", "scene7.com",
+    "static.wixstatic.com",  # Hisense product images
+    "delivery-p28264-e87620.adobeaemcloud.com",  # Wolf product images (images only, Wolf has no PDFs)
+)
 MAX_REDIRECTS = 5
 _REDIRECT_CODES = (301, 302, 303, 307, 308)
 

@@ -1,0 +1,71 @@
+{
+ "pagination": {
+  "currentPage": 0,
+  "pageSize": 2,
+  "sort": "relevance",
+  "totalPages": 8,
+  "totalResults": 16
+ },
+ "products": [
+  {
+   "code": "GCWS3070A-A1",
+   "name": "30\" Single Electric Wall Oven with Stone-Baked Pizza, Includes Free Air Fry Tray",
+   "url": "/c//p/GCWS3070AF-A1",
+   "categoryUrl": "/kitchen/wall-ovens/single-wall-ovens",
+   "price": {
+    "bestValue": false,
+    "currencyIso": "USD",
+    "formattedValue": "$1,699.00",
+    "priceType": "BUY",
+    "value": 1699
+   },
+   "colorVariants": [
+    {
+     "code": "GCWS3070AF-A1",
+     "color": "Stainless Steel",
+     "width": "29 7/8\"",
+     "height": "28\"",
+     "depth": "27 3/5\"",
+     "price": {
+      "bestValue": false,
+      "currencyIso": "USD",
+      "formattedValue": "$1,699.00",
+      "priceType": "BUY",
+      "value": 1699
+     }
+    }
+   ],
+   "brand": "Frigidaire Gallery"
+  },
+  {
+   "code": "PCWS3080A",
+   "name": "30\" Single Wall Oven with No Preheat + Air Fry",
+   "url": "/c//p/PCWS3080AF",
+   "categoryUrl": "/kitchen/wall-ovens/single-wall-ovens",
+   "price": {
+    "bestValue": false,
+    "currencyIso": "USD",
+    "formattedValue": "$2,199.00",
+    "priceType": "BUY",
+    "value": 2199
+   },
+   "colorVariants": [
+    {
+     "code": "PCWS3080AF",
+     "color": "Stainless Steel",
+     "width": "29 7/8\"",
+     "height": "28\"",
+     "depth": "27 3/5\"",
+     "price": {
+      "bestValue": false,
+      "currencyIso": "USD",
+      "formattedValue": "$2,199.00",
+      "priceType": "BUY",
+      "value": 2199
+     }
+    }
+   ],
+   "brand": "Frigidaire Professional"
+  }
+ ]
+}

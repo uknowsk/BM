@@ -60,7 +60,7 @@ def _pdp(name, url="https://www.lge.co.kr/x"):
 def test_constants_and_registry():
     assert (lg_kr.BRAND, lg_kr.COUNTRY, lg_kr.REGION, lg_kr.CURRENCY) == ("LG", "kr", "kr", "KRW")
     assert lg_kr.SUPPORTED_SUBCATEGORIES <= set(catalog.sub_keys())
-    for sub in ("scr", "otr", "gas_oven", "electric_oven", "bottom_freezer"):  # none sold on lge.co.kr
+    for sub in ("scr", "otr", "gas_oven", "gas_cooktop", "electric_oven", "bottom_freezer"):  # none sold on lge.co.kr
         assert sub not in lg_kr.SUPPORTED_SUBCATEGORIES, sub
     assert {"french_door", "side_by_side", "top_freezer", "built_in", "compact", "top_load", "front_load", "dryer",
             "laundry_center", "microwave", "sco", "induction", "radiant"} == lg_kr.SUPPORTED_SUBCATEGORIES

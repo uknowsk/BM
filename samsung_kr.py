@@ -111,7 +111,8 @@ _FRIDGE, _LAUNDRY, _COOK, _INDUCTION = "36010000", "100043932", "36030000", "360
 
 # sub key -> (major, [goodsList dispClsfNo codes]). Edit the mapping here only.
 # NOT offered by Samsung KR (verified live 2026-10: the cooking list 36030000 holds only induction cooktops, Qooker /
-# compact / built-in ovens, microwaves and one hood; no gas range, no radiant/highlight range): otr, gas_oven, radiant.
+# compact / built-in ovens, microwaves and one hood; no gas range / gas cooktop (re-checked 2026-10-06: no 가스 product in the list, no gas category in the consumer sitemap), no
+# radiant/highlight range): otr, gas_oven, gas_cooktop, radiant.
 # ASSUMPTIONS: built_in = built-in fridges (빌트인/셰프컬렉션/model BR*) + Bespoke
 # 1-door 키친핏 fridge/freezer columns (fridge-only; freezer-only units are skipped); compact = one-door fridges
 # up to 200 L; laundry_center = washtower (원바디) and all-in-one washer-dryer combo (콤보, 건조 겸용);
@@ -134,7 +135,7 @@ SUB_SOURCES: dict[str, tuple[str, list[str]]] = {
     "induction": ("cooking", [_INDUCTION, _COOK]),
 }
 SUPPORTED_SUBCATEGORIES = set(SUB_SOURCES)
-UNSUPPORTED_SUBCATEGORIES = {"otr", "gas_oven", "radiant"}
+UNSUPPORTED_SUBCATEGORIES = {"otr", "gas_oven", "gas_cooktop", "radiant"}
 
 _LISTING_PAGE = {"refrigerator": "refrigerators/all-refrigerators/", "washer": "washers-and-dryers/all-washers-and-dryers/",
                  "cooking": "cooking-appliances/all-cooking-appliances/"}

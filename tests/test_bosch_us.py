@@ -59,7 +59,7 @@ def test_main_image_and_noise_rules():
 def test_supported_subcategories_only_real_ones():
     assert b.SUPPORTED_SUBCATEGORIES == set(b.SUB_SOURCES)
     assert not {"side_by_side", "top_freezer", "compact", "top_load", "laundry_center", "scr"} & b.SUPPORTED_SUBCATEGORIES
-    assert {"sco", "gas_oven", "radiant", "induction", "electric_oven", "microwave", "otr"} <= b.SUPPORTED_SUBCATEGORIES
+    assert {"sco", "gas_oven", "gas_cooktop", "radiant", "induction", "electric_oven", "microwave", "otr"} <= b.SUPPORTED_SUBCATEGORIES
 
 
 def test_discover_rejects_unknown_sub():
@@ -265,6 +265,8 @@ def test_cooking_sub_keys_are_exclusive_and_match_scrape_rule():
                 got[it["productCode"]] = sub
                 assert b.classify_cooking(it["urlPath"], " ".join(it["productName"])) == sub  # scrape's rule
     want = {"HGS8657UC": "gas_oven", "HDS5057U": "gas_oven", "HGI8056UC": "gas_oven",
+            "NGM5059UC": "gas_cooktop", "NGM8659UC": "gas_cooktop", "NGM5453UC": "gas_cooktop",
+            "RGM8658UC": "gas_cooktop",  # gas cooktops + a rangetop (no oven)
             "HIS5057U": "induction", "HEF3050MU": "radiant", "HEI8056U": "radiant",
             "HBLP752UC": "sco", "HBL8753UC": "sco", "HMC80252UC": "sco", "HMC54151UC": "sco",  # combination / speed ovens
             "HBLP651UC": "electric_oven", "HBL8454UC": "electric_oven",
@@ -282,6 +284,8 @@ def test_classify_cooking_rules():
     assert c(p + "microwaves/built-in-microwaves/X", "Built-In Microwave Oven") == "microwave"
     assert c(p + "ranges/gas-ranges/X", "Gas Slide-in Range") == "gas_oven"
     assert c(p + "ranges/dual-fuel-ranges/X", "Dual Fuel Range") == "gas_oven"
+    assert c(p + "gas-cooktops/gas-36-inch-cooktops/X", "Gas Cooktop 36''") == "gas_cooktop"
+    assert c(p + "gas-cooktops/gas-36-inch-cooktops/X", "800 Series Gas Rangetop") == "gas_cooktop"
     assert c(p + "ranges/electric-slide-in-ranges/X", "Electric Slide-in Range") == "radiant"
     assert c(p + "ranges/induction-ranges/X", "Induction Range") == "induction"
     assert c(p + "induction-electric-cooktops/electric-cooktops/X", "Electric Cooktop") == "radiant"

@@ -1,0 +1,928 @@
+{
+ "name": "KM 7361 FL",
+ "alternativeName": "KM 7361 FL",
+ "code": "000000000012315510",
+ "formattedCode": "12315510",
+ "designTypeName": "Herdunabhängiges Induktionskochfeld",
+ "dataLayer": {
+  "brand": "Miele Hobs Induction hobs independent",
+  "category": "APPLIANCE/MDA/Hobs/Induction hobs independent",
+  "deliveryDays": "5",
+  "name": "KM7361 FL  D  230/50",
+  "priceWithoutTax": "999.000000"
+ },
+ "price": {
+  "currencyIso": "EUR",
+  "formattedValue": "999,00 €",
+  "priceType": "BUY",
+  "value": 999
+ },
+ "salesPrice": {
+  "currencyIso": "EUR",
+  "formattedValue": "999,00 €",
+  "priceType": "BUY",
+  "value": 999
+ },
+ "pdpUrl": "https://www.miele.de/product/12315510/herdunabhangiges-induktionskochfeld-km-7361-fl",
+ "shortPositioningText": "620 mm | 4 Einzelkochzonen",
+ "techspecs": [
+  {
+   "attributes": [
+    {
+     "name": "Modellbezeichnung",
+     "sortOrder": 10,
+     "values": [
+      "KM 7361 FL"
+     ]
+    },
+    {
+     "name": "Materialnummer Hersteller",
+     "sortOrder": 20,
+     "values": [
+      "12315510"
+     ]
+    },
+    {
+     "name": "EAN-Nummer",
+     "sortOrder": 30,
+     "values": [
+      "4002516711971"
+     ]
+    },
+    {
+     "featureValueCode": "lov_ZZMKTGRP_F",
+     "name": "Marketingklasse",
+     "sortOrder": 40,
+     "values": [
+      "Silver"
+     ]
+    }
+   ],
+   "name": "Allgemeine Informationen",
+   "sortOrder": 10
+  },
+  {
+   "attributes": [
+    {
+     "featureValueCode": "lov_c_PP_118140_4",
+     "name": "Beheizungsart",
+     "sortOrder": 10,
+     "values": [
+      "Induktion"
+     ]
+    }
+   ],
+   "name": "Beheizungsart",
+   "sortOrder": 200
+  },
+  {
+   "attributes": [
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Unabhängig vom Herd",
+     "sortOrder": 20,
+     "values": [
+      "TRUE"
+     ]
+    }
+   ],
+   "name": "Bauform",
+   "sortOrder": 300
+  },
+  {
+   "attributes": [
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Elegante Glaskeramikoberfläche",
+     "sortOrder": 19,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "name": "Farbe der Glaskeramik",
+     "sortOrder": 20,
+     "values": [
+      "Schwarz"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Flächenbündiger Einbau",
+     "sortOrder": 81,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Aufliegender Einbau",
+     "sortOrder": 91,
+     "values": [
+      "TRUE"
+     ]
+    }
+   ],
+   "name": "Design",
+   "sortOrder": 900
+  },
+  {
+   "attributes": [
+    {
+     "name": "Anzahl der Kochzonen",
+     "sortOrder": 10,
+     "values": [
+      "4"
+     ]
+    },
+    {
+     "name": "Anzahl der Kochbereiche",
+     "sortOrder": 20,
+     "values": [
+      "0"
+     ]
+    },
+    {
+     "name": "Maximale Anzahl Kochgeschirre",
+     "sortOrder": 30,
+     "values": [
+      "4"
+     ]
+    }
+   ],
+   "name": "Kochzonenausstattung",
+   "sortOrder": 2300
+  },
+  {
+   "attributes": [
+    {
+     "name": "Position",
+     "sortOrder": 10,
+     "values": [
+      "vorne links"
+     ]
+    },
+    {
+     "featureValueCode": "lov_PD_100377_3",
+     "name": "Art",
+     "sortOrder": 20,
+     "values": [
+      "Vario-Kochzone"
+     ]
+    },
+    {
+     "name": "Größe in mm",
+     "sortOrder": 30,
+     "values": [
+      "Ø 110-220"
+     ]
+    },
+    {
+     "name": "Max. Leistung in W",
+     "sortOrder": 40,
+     "values": [
+      "2300"
+     ]
+    },
+    {
+     "name": "Max. Booster-Leistung in W",
+     "sortOrder": 50,
+     "values": [
+      "3000"
+     ]
+    }
+   ],
+   "name": "1. Kochzone / Kochbereich",
+   "sortOrder": 2500
+  },
+  {
+   "attributes": [
+    {
+     "name": "Position",
+     "sortOrder": 10,
+     "values": [
+      "hinten links"
+     ]
+    },
+    {
+     "name": "Art",
+     "sortOrder": 20,
+     "values": [
+      "Vario-Kochzone"
+     ]
+    },
+    {
+     "name": "Größe in mm",
+     "sortOrder": 30,
+     "values": [
+      "Ø 90-160"
+     ]
+    },
+    {
+     "name": "Max. Leistung in W",
+     "sortOrder": 40,
+     "values": [
+      "1350"
+     ]
+    },
+    {
+     "name": "Max. Booster-Leistung in W",
+     "sortOrder": 50,
+     "values": [
+      "1850"
+     ]
+    }
+   ],
+   "name": "2. Kochzone / Kochbereich",
+   "sortOrder": 2501
+  },
+  {
+   "attributes": [
+    {
+     "name": "Position",
+     "sortOrder": 10,
+     "values": [
+      "hinten rechts"
+     ]
+    },
+    {
+     "name": "Art",
+     "sortOrder": 20,
+     "values": [
+      "Vario-Kochzone"
+     ]
+    },
+    {
+     "name": "Größe in mm",
+     "sortOrder": 30,
+     "values": [
+      "Ø 100-190"
+     ]
+    },
+    {
+     "name": "Max. Leistung in W",
+     "sortOrder": 40,
+     "values": [
+      "1400"
+     ]
+    },
+    {
+     "name": "Max. Booster-Leistung in W",
+     "sortOrder": 50,
+     "values": [
+      "2100"
+     ]
+    }
+   ],
+   "name": "3. Kochzone / Kochbereich",
+   "sortOrder": 2502
+  },
+  {
+   "attributes": [
+    {
+     "name": "Position",
+     "sortOrder": 10,
+     "values": [
+      "vorne rechts"
+     ]
+    },
+    {
+     "name": "Art",
+     "sortOrder": 20,
+     "values": [
+      "Vario-Kochzone"
+     ]
+    },
+    {
+     "name": "Größe in mm",
+     "sortOrder": 30,
+     "values": [
+      "Ø 100-190"
+     ]
+    },
+    {
+     "name": "Max. Leistung in W",
+     "sortOrder": 40,
+     "values": [
+      "1400"
+     ]
+    },
+    {
+     "name": "Max. Booster-Leistung in W",
+     "sortOrder": 50,
+     "values": [
+      "2100"
+     ]
+    }
+   ],
+   "name": "4. Kochzone / Kochbereich",
+   "sortOrder": 2503
+  },
+  {
+   "attributes": [
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Vernetzung mit Miele@home",
+     "sortOrder": 10,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Automatikfunktion Con@ctivity",
+     "sortOrder": 20,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "name": "Bedienung über Sensortasten",
+     "sortOrder": 24,
+     "values": [
+      "ComfortSelect"
+     ]
+    },
+    {
+     "name": "Anzeigefarbe",
+     "sortOrder": 100,
+     "values": [
+      "Gelb"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Topf- und Topfgrößenerkennung",
+     "sortOrder": 120,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Permanente Topferkennung",
+     "sortOrder": 130,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Stop&Go-Funktion",
+     "sortOrder": 150,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Recall-Funktion",
+     "sortOrder": 160,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Kurzzeitwecker",
+     "sortOrder": 180,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Abschaltautomatik",
+     "sortOrder": 200,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Ankochautomatik",
+     "sortOrder": 210,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Warmhalten",
+     "sortOrder": 220,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Individuelle Einstellmöglichkeiten (z.B. Signaltöne)",
+     "sortOrder": 250,
+     "values": [
+      "TRUE"
+     ]
+    }
+   ],
+   "name": "Bedienkomfort",
+   "sortOrder": 2800
+  },
+  {
+   "attributes": [
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Rezepte",
+     "sortOrder": 30,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Push-Nachrichten",
+     "sortOrder": 40,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Smart Home Integration",
+     "sortOrder": 50,
+     "values": [
+      "TRUE"
+     ]
+    }
+   ],
+   "footnote": {
+    "code": "CO_22727118",
+    "contentObjectType": "PATENT_INFORMATION",
+    "images": [],
+    "longText": [
+     {
+      "text": "Zusätzliches digitales Angebot der Miele & Cie. KG. Abhängig von Modell und Land kann der Funktionsumfang variieren. Erforderlich ist Ihr Einverständnis zu den Allgemeinen Geschäftsbedingungen und Datenschutzhinweisen für digitale Produkte und Dienste von Miele in der Miele App. Miele behält sich das Recht vor, die digitalen Angebote jederzeit zu ändern oder einzustellen.",
+      "type": "text"
+     }
+    ],
+    "name": [],
+    "shortText": [],
+    "subTitleText": [],
+    "titleText": []
+   },
+   "name": "Smart Extras",
+   "sortOrder": 2801
+  },
+  {
+   "attributes": [
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Restwärmenutzung",
+     "sortOrder": 10,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "name": "Leistungsaufnahme im Aus-Zustand in W",
+     "sortOrder": 20,
+     "values": [
+      "0.5"
+     ]
+    },
+    {
+     "name": "Leistungsaufnahme im Stand-by Modus in W",
+     "sortOrder": 30,
+     "values": [
+      "0.8"
+     ]
+    },
+    {
+     "name": "Leistungsaufnahme im vernetzten Bereitschaftsbetrieb in W",
+     "sortOrder": 40,
+     "values": [
+      "2"
+     ]
+    },
+    {
+     "name": "Zeitdauer bis automatisches Schalten in Aus-Zustand in min",
+     "sortOrder": 50,
+     "values": [
+      "10"
+     ]
+    },
+    {
+     "name": "Zeitdauer bis automatisches Schalten in Bereitschaftsbetrieb in min",
+     "sortOrder": 60,
+     "values": [
+      "10"
+     ]
+    },
+    {
+     "name": "Zeitdauer bis automatisches Schalten in vernetzten Bereitschaftsbetrieb in min",
+     "sortOrder": 70,
+     "values": [
+      "10"
+     ]
+    }
+   ],
+   "name": "Effizienz",
+   "sortOrder": 3900
+  },
+  {
+   "attributes": [
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Leicht zu reinigende Glaskeramik",
+     "sortOrder": 10,
+     "values": [
+      "TRUE"
+     ]
+    }
+   ],
+   "name": "Pflegekomfort",
+   "sortOrder": 4000
+  },
+  {
+   "attributes": [
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Sicherheitsausschaltung",
+     "sortOrder": 10,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Verriegelungsfunktion",
+     "sortOrder": 20,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Inbetriebnahmesperre",
+     "sortOrder": 30,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Integriertes Kühlgebläse",
+     "sortOrder": 40,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Überhitzungsschutz",
+     "sortOrder": 50,
+     "values": [
+      "TRUE"
+     ]
+    },
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Restwärmeanzeige",
+     "sortOrder": 60,
+     "values": [
+      "TRUE"
+     ]
+    }
+   ],
+   "name": "Sicherheit",
+   "sortOrder": 6100
+  },
+  {
+   "attributes": [
+    {
+     "name": "Abmessungen (H x B x T) in mm",
+     "sortOrder": 6,
+     "values": [
+      "53 x 620 x 520"
+     ]
+    },
+    {
+     "name": "Abmessungen in mm (Breite)",
+     "sortOrder": 10,
+     "values": [
+      "620"
+     ]
+    },
+    {
+     "name": "Abmessungen in mm (Höhe)",
+     "sortOrder": 20,
+     "values": [
+      "53"
+     ]
+    },
+    {
+     "name": "Abmessungen in mm (Tiefe)",
+     "sortOrder": 30,
+     "values": [
+      "520"
+     ]
+    },
+    {
+     "name": "Ausschnittmaße (B x T) bei aufliegendem Einbau in mm",
+     "sortOrder": 31,
+     "values": [
+      "560 mm - 600 mm x 490 mm - 500 mm"
+     ]
+    },
+    {
+     "name": "Ausschnittmaße (B x T) bei flächenbündigem Einbau in mm",
+     "sortOrder": 32,
+     "values": [
+      "600/624 x 500/524"
+     ]
+    },
+    {
+     "name": "Einbauhöhe mit Anschlusskasten in mm",
+     "sortOrder": 40,
+     "values": [
+      "53"
+     ]
+    },
+    {
+     "name": "Ausschnittmaße in mm (Breite) bei aufliegendem Einbau",
+     "sortOrder": 50,
+     "values": [
+      "560 mm - 600 mm"
+     ]
+    },
+    {
+     "name": "Ausschnittmaße in mm (Tiefe) bei aufliegendem Einbau",
+     "sortOrder": 80,
+     "values": [
+      "490 mm - 500 mm"
+     ]
+    },
+    {
+     "name": "Inneres Ausschnittmaß in mm (Breite) bei flächenbündigem Einbau",
+     "sortOrder": 110,
+     "values": [
+      "600"
+     ]
+    },
+    {
+     "name": "Inneres Ausschnittmaß in mm (Tiefe) bei flächenbündigem Einbau",
+     "sortOrder": 140,
+     "values": [
+      "500"
+     ]
+    },
+    {
+     "name": "Äußeres Ausschnittmaß in mm (Breite) bei flächenbündigem Einbau",
+     "sortOrder": 170,
+     "values": [
+      "624"
+     ]
+    },
+    {
+     "name": "Äußeres Ausschnittmaß in mm (Tiefe) bei flächenbündigem Einbau",
+     "sortOrder": 180,
+     "values": [
+      "524"
+     ]
+    },
+    {
+     "name": "Gewicht in kg",
+     "sortOrder": 190,
+     "values": [
+      "10"
+     ]
+    },
+    {
+     "name": "Gesamtanschlusswert in kW",
+     "sortOrder": 200,
+     "values": [
+      "7.300"
+     ]
+    },
+    {
+     "name": "Spannung in V",
+     "sortOrder": 220,
+     "values": [
+      "230"
+     ]
+    },
+    {
+     "name": "Frequenz in Hz",
+     "sortOrder": 230,
+     "values": [
+      "50 - 60"
+     ]
+    },
+    {
+     "name": "Länge der elektrischen Zuleitung in m",
+     "sortOrder": 240,
+     "values": [
+      "1.4"
+     ]
+    }
+   ],
+   "name": "Technische Daten",
+   "sortOrder": 6400
+  },
+  {
+   "attributes": [
+    {
+     "featureValueCode": "LOV_CONVERTER_LOGICAL_1",
+     "name": "Anschlusskabel",
+     "sortOrder": 30,
+     "values": [
+      "TRUE"
+     ]
+    }
+   ],
+   "name": "Mitgeliefertes Zubehör",
+   "sortOrder": 6600
+  }
+ ],
+ "documentGroups": [
+  {
+   "code": "OPERATING_INSTRUCTIONS",
+   "documents": [
+    {
+     "description": "EU - Konformitätserklärung",
+     "media": {
+      "altText": "EU Konformitätserklärung",
+      "mimeType": "application/pdf",
+      "url": "https://media.miele.com/downloads/9b/68/00_6045BD182B051FE1A2E8A8B3FCE79B68.pdf"
+     },
+     "name": "PDF"
+    },
+    {
+     "description": "EU - Konformitätserklärung",
+     "media": {
+      "altText": "EU Konformitätserklärung",
+      "mimeType": "application/pdf",
+      "url": "https://media.miele.com/downloads/5d/44/02_C7F13838DE361EDF90D5A03C1A525D44.pdf"
+     },
+     "name": "PDF"
+    },
+    {
+     "description": "Gebrauchsanweisung/Montageanweisung",
+     "media": {
+      "altText": "Gebrauchsanweisung/Montageanweisung",
+      "mimeType": "application/pdf",
+      "url": "https://media.miele.com/downloads/0d/ca/07_C7F128280BCE1FE0BB8C584E06890DCA.pdf"
+     },
+     "name": "PDF"
+    },
+    {
+     "description": "Produktblatt",
+     "media": {
+      "altText": "Produktdatenblatt",
+      "mimeType": "application/pdf",
+      "url": "https://media.miele.com/downloads/e-/de/FS_12315510_DED_DE-de-DE.pdf"
+     },
+     "name": "PDF"
+    },
+    {
+     "description": "Garantiebedingungen",
+     "media": {
+      "altText": "Garantiebedingungen",
+      "mimeType": "application/pdf",
+      "url": "https://media.miele.com/downloads/47/33/16_C7F1282806E91FD0A8D4A4AD14174733.pdf"
+     },
+     "name": "PDF"
+    }
+   ],
+   "name": "Gebrauchsanweisung & Montage",
+   "sortOrder": 1
+  },
+  {
+   "code": "CAD_DATA",
+   "documents": [
+    {
+     "description": "dwg",
+     "media": {
+      "altText": "3D Daten im Dateiformat DWG",
+      "mimeType": "application/zip",
+      "url": "https://media.miele.com/downloads/e5/5a/02_70A8A51285B71FE1AC8071FB5FCBE55A.zip"
+     },
+     "name": "ZIP"
+    },
+    {
+     "description": "fbx",
+     "media": {
+      "altText": "3D Daten im Dateiformat FBX",
+      "mimeType": "application/zip",
+      "url": "https://media.miele.com/downloads/45/5a/02_70A8A51285B71FE1AC8071FB5FCC455A.zip"
+     },
+     "name": "ZIP"
+    },
+    {
+     "description": "ifc",
+     "media": {
+      "altText": "3D Daten im Dateiformat IFC",
+      "mimeType": "application/zip",
+      "url": "https://media.miele.com/downloads/a5/5a/02_70A8A51285B71FE1AC8071FB5FCCA55A.zip"
+     },
+     "name": "ZIP"
+    },
+    {
+     "description": "rfa",
+     "media": {
+      "altText": "3D Daten im Dateiformat RFA",
+      "mimeType": "application/zip",
+      "url": "https://media.miele.com/downloads/05/5a/02_70A8A51285B71FE1AC8071FB5FCD055A.zip"
+     },
+     "name": "ZIP"
+    },
+    {
+     "description": "rvt",
+     "media": {
+      "altText": "3D Daten im Dateiformat RVT",
+      "mimeType": "application/zip",
+      "url": "https://media.miele.com/downloads/65/5a/02_70A8A51285B71FE1AC8071FB5FCD655A.zip"
+     },
+     "name": "ZIP"
+    }
+   ],
+   "name": "CAD/BIM-Daten",
+   "sortOrder": 3
+  },
+  {
+   "code": "ENERGY",
+   "documents": [
+    {
+     "description": "EU - Datenblatt",
+     "media": {
+      "altText": "EU Datenblatt PDF",
+      "mimeType": "application/pdf",
+      "url": "https://media.miele.com/downloads/4a/54/06_C7F138387DFE1FE090D16D08A5C64A54.pdf"
+     },
+     "name": "PDF"
+    }
+   ],
+   "name": "ECO Informationen",
+   "sortOrder": 6
+  },
+  {
+   "code": "INSTALLATION_DRAWINGS",
+   "documents": [
+    {
+     "description": "1) vorn, 2) Netzanschlusskasten, Die Netzanschlussleitung (L = 1440 mm) ist lose beigelegt",
+     "descriptionTitle": "KM7360FL, KM7361FL aufliegend, (*Fußnote) Skizze",
+     "media": {
+      "altText": "Einbauskizze",
+      "mimeType": "application/postscript",
+      "url": "https://media.miele.com/dam/5c238653-1a5b-4d21-9a1c-b3ba015aaba1/20000196668_HighresDigitalRGB.png"
+     },
+     "name": "POSTSCRIPT"
+    },
+    {
+     "description": "1) vorn, 2) Netzanschlusskasten, Die Netzanschlussleitung (L = 1440 mm) ist lose beigelegt, 3) Stufenfräsung Naturstein-Arbeitsplatte, 4) Holzleiste 12 mm (kein mitgeliefertes Zubehör)",
+     "descriptionTitle": "KM7360FL, KM7361FL flächenbündig, (*Fußnote) Skizze",
+     "media": {
+      "altText": "Einbauskizze",
+      "mimeType": "application/postscript",
+      "url": "https://media.miele.com/dam/d292f4a5-345c-4bb2-b599-b3ba015aa6fe/20000196670_HighresDigitalRGB.png"
+     },
+     "name": "POSTSCRIPT"
+    }
+   ],
+   "name": "Installationszeichnungen",
+   "sortOrder": 8
+  }
+ ],
+ "primaryProductImage": {
+  "altText": "Sachaufnahme",
+  "format": "cart",
+  "url": "https://media.miele.com/dam/3e40a376-2adc-4b47-9126-b3ba0130c45f/20000190530_HighresDigitalRGB.png"
+ },
+ "images": [
+  {
+   "akamaiImageType": "PRIMARY",
+   "altText": "Sachaufnahme",
+   "format": "cart",
+   "galleryIndex": 0,
+   "imageType": "PRIMARY",
+   "url": "https://media.miele.com/dam/3e40a376-2adc-4b47-9126-b3ba0130c45f/20000190530_HighresDigitalRGB.png"
+  },
+  {
+   "akamaiImageType": "FACTUAL",
+   "altText": "Sachaufnahme",
+   "format": "cart",
+   "galleryIndex": 0,
+   "imageType": "GALLERY",
+   "url": "https://media.miele.com/dam/26a7a7b6-1af8-46df-8347-b41a01000c18/20000202319_HighresDigitalRGB.png"
+  }
+ ],
+ "connectedAppliance": true,
+ "productTypeCode": "APPLIANCE",
+ "appliance": true,
+ "euDataSheet": {
+  "altText": "EU Datenblatt PDF",
+  "description": "EU - Datenblatt",
+  "mimeType": "application/pdf",
+  "url": "https://media.miele.com/downloads/4a/54/06_C7F138387DFE1FE090D16D08A5C64A54.pdf"
+ },
+ "marketingClass": "SILVER",
+ "productSlug": "herdunabhangiges-induktionskochfeld-km-7361-fl"
+}

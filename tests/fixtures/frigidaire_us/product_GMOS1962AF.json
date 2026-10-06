@@ -1,0 +1,1025 @@
+{
+ "code": "GMOS1962AF",
+ "name": "1.9 Cu. Ft. Over-The-Range Microwave",
+ "color": "Stainless Steel",
+ "price": {
+  "bestValue": false,
+  "currencyIso": "USD",
+  "formattedValue": "$399.00",
+  "priceType": "BUY",
+  "value": 399
+ },
+ "categories": [
+  {
+   "code": "M_FoodPreparation_Microwaves_OverTheRange",
+   "name": "Over-The-Range Microwave"
+  },
+  {
+   "code": "Most-Popular-Products",
+   "name": "Most Popular"
+  },
+  {
+   "code": "CC_Majors_BestSellers",
+   "name": "Best Sellers"
+  },
+  {
+   "code": "Promo_FRG_DOW2",
+   "name": "Deal of the Week"
+  },
+  {
+   "code": "CC_Majors_FSUSNav_BestSellers",
+   "name": "Best Sellers"
+  }
+ ],
+ "classifications": [
+  {
+   "code": "HDR_Cooking_Controls",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_clock",
+     "comparable": true,
+     "description": "Basics,PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Clock",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cookopt_power",
+     "comparable": true,
+     "description": "Basics,PL Product,PCT",
+     "featureValues": [
+      {
+       "value": "1000 Watts"
+      }
+     ],
+     "name": "Cooking Power",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cookopt_deftime",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Defrost Time",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cookopt_defweight",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Defrost Weight",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cookopt_numpowlev",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "10"
+      }
+     ],
+     "name": "Number of Power Levels",
+     "range": false
+    }
+   ],
+   "name": "Cooking Controls"
+  },
+  {
+   "code": "HDR_CertificationsApprovals",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_CertificationsApprovals.api_2ca_cul",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "cUL Listed",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_CertificationsApprovals.api_2ca_ul",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "UL Listed",
+     "range": false
+    }
+   ],
+   "name": "Certifications and Approvals"
+  },
+  {
+   "code": "HDR_DimensionsandVolume",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_customerheight",
+     "comparable": true,
+     "description": "PL Product,AHAM,Height,PCT",
+     "featureValues": [
+      {
+       "value": "16 3/8\""
+      }
+     ],
+     "name": "Height",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_customerwidth",
+     "comparable": true,
+     "description": "PL Product,AHAM,Width,PCT",
+     "featureValues": [
+      {
+       "value": "29 7/8\""
+      }
+     ],
+     "name": "Width",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_customerdepth",
+     "comparable": true,
+     "description": "PL Product,AHAM,Depth,PCT",
+     "featureValues": [
+      {
+       "value": "15 3/4\""
+      }
+     ],
+     "name": "Depth",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_height",
+     "comparable": true,
+     "description": "Basics,PL Product,Key",
+     "featureValues": [
+      {
+       "value": "16 3/8\""
+      }
+     ],
+     "name": "Height",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_width",
+     "comparable": true,
+     "description": "Basics,PL Product,Key",
+     "featureValues": [
+      {
+       "value": "29 7/8\""
+      }
+     ],
+     "name": "Width",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_depth",
+     "comparable": true,
+     "description": "Basics,PL Product,Key",
+     "featureValues": [
+      {
+       "value": "15 3/4\""
+      }
+     ],
+     "name": "Depth",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_depth90",
+     "comparable": true,
+     "description": "Basics,PL Product,Key",
+     "featureValues": [
+      {
+       "value": "44 3/8\""
+      }
+     ],
+     "name": "Depth With Door 90° Open",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_microintheight",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "9 1/8\""
+      }
+     ],
+     "name": "Microwave Interior Height",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_microintwidth",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "19 13/16\""
+      }
+     ],
+     "name": "Microwave Interior Width",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_microintdepth",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "13 3/4\""
+      }
+     ],
+     "name": "Microwave Interior Depth",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_microcap",
+     "comparable": true,
+     "description": "Basics,PL Product,AHAM,PCT",
+     "featureValues": [
+      {
+       "value": "1.9 Cu. Ft."
+      }
+     ],
+     "name": "Microwave Capacity",
+     "range": false
+    }
+   ],
+   "name": "Dimensions and Volume"
+  },
+  {
+   "code": "HDR_ElectricalSpecifications",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_ElectricalSpecifications.api_2es_amps",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "13.5 Amps"
+      }
+     ],
+     "name": "Amps @ 120 Volts",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_ElectricalSpecifications.api_2es_connectedload",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "1.55 kW"
+      }
+     ],
+     "name": "Connected Load @ 120V",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_ElectricalSpecifications.api_2es_voltrating",
+     "comparable": true,
+     "description": "PL Product,AHAM",
+     "featureValues": [
+      {
+       "value": "120 V"
+      }
+     ],
+     "name": "Voltage Rating",
+     "range": false
+    }
+   ],
+   "name": "Electrical Specifications"
+  },
+  {
+   "code": "HDR_Exterior",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Exterior.api_2finish_doorswing",
+     "comparable": true,
+     "description": "Basics,PL Product,PCT",
+     "featureValues": [
+      {
+       "value": "Side-Swing Door"
+      }
+     ],
+     "name": "Door Swing",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Exterior.api_2finish_dooropening",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Zero Clearance Door Opening",
+     "range": false
+    }
+   ],
+   "name": "Exterior"
+  },
+  {
+   "code": "HDR_GeneralSpecifications",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_GeneralSpecifications.api_2gen_prodweight",
+     "comparable": true,
+     "description": "PL Product,AHAM",
+     "featureValues": [
+      {
+       "value": "54 lbs"
+      }
+     ],
+     "name": "Product Weight",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_GeneralSpecifications.api_gen_prop_65",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Prop 65 Label",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_GeneralSpecifications.api_2gen_warlabor",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "1 Year"
+      }
+     ],
+     "name": "Warranty - Labor",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_GeneralSpecifications.api_2gen_warparts",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "1 Year"
+      }
+     ],
+     "name": "Warranty - Parts",
+     "range": false
+    }
+   ],
+   "name": "General Specifications"
+  },
+  {
+   "code": "HDR_Light_System",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Light_System.api_2light_type",
+     "comparable": true,
+     "description": "Basics,PL Product,PCT",
+     "featureValues": [
+      {
+       "value": "LED Strip"
+      }
+     ],
+     "name": "Lighting Type",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Light_System.api_2light_number",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "2"
+      }
+     ],
+     "name": "Number of Lights",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Light_System.api_2light_numsettings",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "2"
+      }
+     ],
+     "name": "Number of Light Settings",
+     "range": false
+    }
+   ],
+   "name": "Surface Light System"
+  },
+  {
+   "code": "HDR _Internal_Specifications",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR _Internal_Specifications.api_2intspec_color",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "White"
+      }
+     ],
+     "name": "Interior Color",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR _Internal_Specifications.api_2intspec_lightquantity",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "1"
+      }
+     ],
+     "name": "Interior Light Quantity",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR _Internal_Specifications.api_2intspec_lighttype",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "LED Strip"
+      }
+     ],
+     "name": "Interior Light Type",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR _Internal_Specifications.api_2intspec_lightwatt",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "1.2 Watts"
+      }
+     ],
+     "name": "Interior Light Wattage",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR _Internal_Specifications.api_2intspec_turntablediam",
+     "comparable": true,
+     "description": "Basics,PL Product,PCT",
+     "featureValues": [
+      {
+       "value": "13 5/8\""
+      }
+     ],
+     "name": "Turntable Diameter",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR _Internal_Specifications.api_2intspec_turntablemat",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Glass"
+      }
+     ],
+     "name": "Turntable Material",
+     "range": false
+    }
+   ],
+   "name": "Internal Specifications"
+  },
+  {
+   "code": "HDR_MicrowaveOvenControls",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_MicrowaveOvenControls.api_2cookopt_auto",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Auto Cook",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_MicrowaveOvenControls.api_2oto_softmelt",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Melt / Soften",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_MicrowaveOvenControls.api_2oto_popcorn",
+     "comparable": true,
+     "description": "Basics,PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Popcorn",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_MicrowaveOvenControls.api_2oto_potato",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Potato",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_MicrowaveOvenControls.api_2cookopt_reheat",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Reheat",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_MicrowaveOvenControls.api_2cookopt_sensorcook",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Sensor Cooking",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_MicrowaveOvenControls.api_2oto_veggies",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Veggies",
+     "range": false
+    }
+   ],
+   "name": "Microwave Cooking"
+  },
+  {
+   "code": "HDR_Microwave_Control_Features",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Microwave_Control_Features.api_2oto_10sec",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "+ 10 Seconds",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Microwave_Control_Features.api_2oto_30sec",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "+ 30 Seconds",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Microwave_Control_Features.api_2oto_quickstart",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Quick Start",
+     "range": false
+    }
+   ],
+   "name": "Microwave Control Features"
+  },
+  {
+   "code": "HDR_VentilationLightSystem",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_VentilationLightSystem.api_2vent_fanspeeds",
+     "comparable": true,
+     "description": "Basics,PL Product,PCT",
+     "featureValues": [
+      {
+       "value": "3"
+      }
+     ],
+     "name": "Exhaust Fan Speeds",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_VentilationLightSystem.api_2vent_maxcfm",
+     "comparable": true,
+     "description": "Basics,PL Product,AHAM,PCT",
+     "featureValues": [
+      {
+       "value": "400 CFM"
+      }
+     ],
+     "name": "Maximum Air Flow Capacity",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_VentilationLightSystem.api_2vent_mincfm",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "105 CFM"
+      }
+     ],
+     "name": "Minimum Air Flow Capacity",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_VentilationLightSystem.api_2vent_greaseincluded",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Grease Filter Included",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_VentilationLightSystem.api_2vent_greasefilternumber",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "2"
+      }
+     ],
+     "name": "Grease Filter Quantity",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_VentilationLightSystem.api_2vent_greasedish",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Grease Filter Dishwasher Safe",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_VentilationLightSystem.api_2vent_removgreasefilter",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Removable Grease Filter",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_VentilationLightSystem.api_2vent_filterincluded",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Charcoal Filter Included",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_VentilationLightSystem.api_2vent_ductedvent",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Ducted Vent",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_VentilationLightSystem.api_2vent_ductless",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Ductless Vent",
+     "range": false
+    }
+   ],
+   "name": "Ventilation System"
+  },
+  {
+   "code": "HDR_Display",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Display.api_2dis_interfacecolor",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "White"
+      }
+     ],
+     "name": "Display Interface Color",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Display.api_2dis_type",
+     "comparable": true,
+     "description": "Basics,PL Product,AHAM,PCT",
+     "featureValues": [
+      {
+       "value": "Capacitive Touch"
+      }
+     ],
+     "name": "Display Type",
+     "range": false
+    }
+   ],
+   "name": "Display"
+  },
+  {
+   "code": "HDR_Microwave_Additional_Settings",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Microwave_Additional_Settings.api_2additionalsettings_childlock",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Child Lock",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Microwave_Additional_Settings.api_2additionalsettings_clockdisplay",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Clock Display On / Off",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Microwave_Additional_Settings.api_2additionalsettings_clocksettings",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Clock Settings",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Microwave_Additional_Settings.api_2additionalsettings_demo",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Demo On / Off",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Microwave_Additional_Settings.api_2additionalsettings_turntable",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Setting Turntable On / Off",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Microwave_Additional_Settings.api_2additionalsettings_weight",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Setting Weight  Lb / Kg",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Microwave_Additional_Settings.api_2additionalsettings_cookinglight",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Surface Cooking Light",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Microwave_Additional_Settings.api_2additionalsettings_timer",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Timer On / Off",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Microwave_Additional_Settings.api_2additionalsettings_ventfan",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Vent Fan",
+     "range": false
+    }
+   ],
+   "name": "Additional Settings"
+  }
+ ],
+ "plpImage": "https://frigidaire.bynder.com/transform/00634511-c1f5-4c2d-96da-1c84d0884d57/GMOS1962AF-HOV-psd",
+ "categoryUrl": "/kitchen/microwaves/over-the-range-microwave",
+ "baseProduct": "GMOS1962A",
+ "url": "/c//p/GMOS1962AF",
+ "msrpUSD": 629,
+ "images": [
+  {
+   "altText": "",
+   "code": "GMOS1962AF_459735",
+   "description": "Image with Copy",
+   "displayOrder": "2",
+   "imageType": "GALLERY",
+   "url": "https://frigidaire.bynder.com/transform/e9035bcb-a98e-4461-979d-cd67ebaa8b2c/F_PDP-FoodPrepCstar-psd"
+  },
+  {
+   "altText": "",
+   "code": "GMOS1962AF_464047",
+   "description": "Product - Dimensions",
+   "displayOrder": "5",
+   "imageType": "GALLERY",
+   "url": "https://frigidaire.bynder.com/transform/fbcc486d-5080-4ae1-9f14-76faac686449/GMOS1962AF-DIM-psd"
+  },
+  {
+   "altText": "",
+   "code": "GMOS1962AF_461878",
+   "description": "Product - Open / Empty",
+   "displayOrder": "25",
+   "imageType": "GALLERY",
+   "url": "https://frigidaire.bynder.com/transform/3adefeae-aeee-406d-a7cb-ef2cf371667d/GMOS1962AF-OE-psd"
+  }
+ ],
+ "ownerManuals": [
+  {
+   "altText": "Right to Repair",
+   "downloadUrl": "https://frigidaire.bynder.com/asset/bcec97fa-7adc-4c1c-aec6-4f5b72d6ccb6/Right_To_Repair_Frigidaire_en-pdf.pdf",
+   "language": "en",
+   "mime": "application/pdf"
+  },
+  {
+   "altText": "Droit à la réparation",
+   "downloadUrl": "https://frigidaire.bynder.com/asset/f882b190-9e6a-4ca1-b0ef-27ca2d0ba6d9/Right_To_Repair_Frigidaire_fr-pdf.pdf",
+   "language": "fr",
+   "mime": "application/pdf"
+  },
+  {
+   "altText": "Product Specifications Sheet",
+   "downloadUrl": "https://frigidaire.bynder.com/asset/fb73f70a-205d-441d-bbfb-f30c78f661b5/GMOS1962A_EN-pdf.pdf",
+   "language": "en",
+   "mime": "application/pdf"
+  },
+  {
+   "altText": "Feuille de spécifications du produit",
+   "downloadUrl": "https://frigidaire.bynder.com/asset/2c9dfb95-d5a7-4aa6-b824-d286b778b1c6/GMOS1962A_FR-pdf.pdf",
+   "language": "fr",
+   "mime": "application/pdf"
+  },
+  {
+   "altText": "Complete Owner's Guide",
+   "downloadUrl": "https://frigidaire.bynder.com/asset/8219d57a-4fc1-4d16-9f46-c330afe56560/A06823437en-pdf.pdf",
+   "language": "en",
+   "mime": "application/pdf"
+  },
+  {
+   "altText": "Guide d'utilisation complet",
+   "downloadUrl": "https://frigidaire.bynder.com/asset/63917906-7ad5-4338-aa22-f869788ddbb8/A06823437fr-pdf.pdf",
+   "language": "fr",
+   "mime": "application/pdf"
+  },
+  {
+   "altText": "Propietario completa Guía",
+   "downloadUrl": "https://frigidaire.bynder.com/asset/83b1a8fa-26bb-44d0-af2e-34ed60bd15b7/A06823437sp-pdf.pdf",
+   "language": "sp",
+   "mime": "application/pdf"
+  },
+  {
+   "altText": "Installation Instructions",
+   "downloadUrl": "https://frigidaire.bynder.com/asset/f75f0799-6d0c-4853-ac81-a4f430c948ab/A06823438-pdf.pdf",
+   "language": "en,fr,sp",
+   "mime": "application/pdf"
+  },
+  {
+   "altText": "Canadian Product Specifications Sheet",
+   "downloadUrl": "https://frigidaire.bynder.com/asset/8aeb3323-a179-45f9-bbdc-055ad3c2c4e8/GMOS1962A_CA-pdf.pdf",
+   "language": "en",
+   "mime": "application/pdf"
+  }
+ ],
+ "productFeatures": [
+  {
+   "title": "Sensor Cook"
+  },
+  {
+   "title": "PureAir® Filter is included"
+  },
+  {
+   "title": "Push-to-Open PureAir® Filter Door"
+  },
+  {
+   "title": "Powerful Three Speed Ventilation Fan"
+  },
+  {
+   "title": "Effortless Clean™ Interior"
+  },
+  {
+   "title": "Bright LED Lighting"
+  }
+ ]
+}

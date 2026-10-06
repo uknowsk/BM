@@ -16,12 +16,12 @@ def test_tree_keys_and_labels():
     assert list(t["refrigerator"]["children"]) == ["french_door", "side_by_side", "top_freezer",
                                                    "bottom_freezer", "built_in", "compact"]
     assert list(t["washer"]["children"]) == ["top_load", "front_load", "dryer", "laundry_center"]
-    assert list(t["cooking"]["children"]) == ["microwave", "sco", "otr", "gas_oven", "electric_oven",
-                                              "induction", "radiant"]
+    assert list(t["cooking"]["children"]) == ["microwave", "sco", "otr", "gas_oven", "gas_cooktop",
+                                              "electric_oven", "induction", "radiant"]
     assert t["cooking"]["children"]["sco"] == catalog.SCO_LABEL_KO == "SCO (스피드쿡 오븐)"  # defined in one place
     assert not hasattr(catalog, "SCR_LABEL_KO") and "scr" not in t["cooking"]["children"]
     keys = catalog.sub_keys()
-    assert len(keys) == len(set(keys)) == 17
+    assert len(keys) == len(set(keys)) == 18
 
 
 def test_lookups():
@@ -113,9 +113,10 @@ def test_candidate_region_defaults_and_attrs():
 def test_adapter_registry_by_country_and_auto_discovery():
     import tempfile
     assert catalog.module_name("Samsung") == "samsung_us" and catalog.module_name("Samsung", "us") == "samsung_us"
-    # Hermetic: uses Germany ('de'), for which no real adapter exists, so adding kr/eu adapters never breaks this.
+    # Hermetic: uses Samsung in Germany ('de'), for which no real adapter exists; other brands' real EU adapters
+    # (miele_de, siemens_de ...) may exist, so only Samsung's entry is asserted.
     assert catalog.module_name("Samsung", "de") is None and catalog.module_name("Nope", "de") is None
-    assert catalog.supported("Samsung", "de") == set() and catalog.region_support("eu") == {}
+    assert catalog.supported("Samsung", "de") == set() and "Samsung" not in catalog.region_support("eu")
     assert "Samsung" in catalog.region_support("na")
     with tempfile.TemporaryDirectory() as d:
         Path(d, "samsung_de.py").write_text(
@@ -128,7 +129,7 @@ def test_adapter_registry_by_country_and_auto_discovery():
             assert catalog.module_name("Samsung", "de") == "samsung_de"
             assert catalog.supported("Samsung", "de") == {"french_door"}  # unknown sub keys dropped
             assert catalog.supported("LG", "de") == set()  # lg_de does not exist
-            assert catalog.region_support("eu") == {"Samsung": {"french_door"}}
+            assert catalog.region_support("eu")["Samsung"] == {"french_door"}
         finally:
             sys.path.remove(d)
             sys.modules.pop("samsung_de", None)

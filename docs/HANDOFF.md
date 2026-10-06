@@ -52,6 +52,13 @@ Gauge: 경쟁사 가전 제품 스펙·POD·모드를 수집해 비교하는 로
 3. 실제 서버로 새 비교 패널(핵심/전체 토글, 원문 툴팁)을 검색-수집 흐름에서 눈으로 확인 (스크린샷 도구가 불안정해 아직 못 함).
 4. 가정 확인 필요: 복합 연료 레인지=가스오븐, 라디언트=인덕션/가스 제외 모든 전기 레인지, Samsung KR 콤팩트 오븐(NQ50)=SCO, GE 오버더레인지 Advantium=SCO.
 
+## 브랜드 확장 진행 상황 (2026-10-06, 워크트리 claude/suspicious-swanson-8f4490, 미커밋)
+- 계획/결정: `docs/BRAND_EXPANSION.md`, 피드백: `docs/TODO.md`. 사용자 지시: 제품 검색 등은 우선 **조리기기만** 진행(냉장고·세탁기 어댑터는 후순위, TODO로).
+- 단계 0 완료: `gas_cooktop` 소분류(US 어댑터 6개 지원, 한국 2개 미지원), 필터 정리, 브랜드 30개 메타/그룹 UI/검색 상한 120, `i18n.py`+de/fr 용어집, 유럽 가격·에너지 등급 파서. 테스트 27개 통과. `filters._WIDTH_RE`에 `''`, `″` 추가(30인치 0건 보고 대응).
+- 단계 1 완료(조리기기만): 신규 어댑터 `<slug>_<cc>.py` 28개(+공용 `_electrolux_common.py`, `_subzerowolf_common.py`; maytag/jennair/amana, thermador/gaggenau us·de/siemens_de, frigidaire/electrolux us·de/aeg de·uk, cafe/monogram/haier/fisherpaykel, viking/wolf/bertazzoni/smeg, miele_de, beko us·uk/hisense/panasonic). 미지원: Sub-Zero(냉장고 전용), Liebherr(냉장고 전용, `liebherr_de.py`는 SUPPORTED 비어 있음), De Dietrich(사이트 다운). 활성 브랜드 27/30.
+- 단계 2 완료: 허용 호스트 반영(`common.py`, 정확한 호스트만), 전체 테스트 51개 통과, 비밀 정보 검사 이상 없음, 브랜드 x 국가 33개 조합 end-to-end(검색 1건 -> 수집) 전부 성공(워크트리 서버 8799). 유럽 전용 브랜드(Miele, Siemens, AEG)는 `/api/brands?region=eu`에서만 활성(설계). 사용자 서버(8765)는 아직 이전 코드: 메인 체크아웃에 브랜치를 병합한 뒤 재시작해야 반영됨.
+- 남은 일: 메인 병합 + 8765 재시작(사용자 확인), 후속 과제는 `docs/TODO.md` F절(약관 확인, 냉장고·세탁기 확장 등).
+
 ## 알려진 한계
 - 필터 대부분은 이름에서 추정한 값 또는 상세 수집된 제품에만 정확함.
 - 한국어 번역·모드 추출은 로컬 LLM 속도에 좌우됨 (제품당 수 분).

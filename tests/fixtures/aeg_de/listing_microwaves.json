@@ -1,0 +1,155 @@
+{
+ "pagination": {
+  "currentPage": 0,
+  "pageSize": 3,
+  "sort": "relevance",
+  "totalPages": 2,
+  "totalResults": 4
+ },
+ "products": [
+  {
+   "bundleAvailable": false,
+   "categoryFallBack": {
+    "categoryFallBackCode": "kitchen/cooking/microwaves/microwave-oven",
+    "categoryFallBackENName": "Microwave Oven",
+    "categoryFallBackName": "Mikrowellen"
+   },
+   "code": "947608857",
+   "d2cExclusiveFlag": false,
+   "d2cSellable": true,
+   "description": "Einbau-Mikrowelle / 37.1 x 59.4 cm / Schwarz",
+   "displayLowestPriceMesssage": false,
+   "displayToolTipForLowestPrice": false,
+   "flashPromoDR": false,
+   "hideShowPncFlag": false,
+   "isServiceable": false,
+   "kit": false,
+   "lowestPricePeriod": 0,
+   "minCTFError": false,
+   "modelId": "TB6SM171DB",
+   "nakedProduct": false,
+   "name": "60cm Einbau-Mikrowelle / Touch-Bedienung",
+   "offerPrice": {
+    "currencyIso": "EUR",
+    "formattedValue": "€ 557",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 557
+   },
+   "price": {
+    "currencyIso": "EUR",
+    "formattedValue": "€ 659",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 659
+   },
+   "productURL": "https://www.aeg.de/kitchen/cooking/compact-built-in-range/built-in-microwaves/tb6sm171db/",
+   "rrp": {
+    "currencyIso": "EUR",
+    "formattedValue": "€ 1.199",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 1199
+   },
+   "rts": false,
+   "smallAppliance": false,
+   "suggestedDiscount": 0
+  },
+  {
+   "bundleAvailable": false,
+   "categoryFallBack": {
+    "categoryFallBackCode": "kitchen/cooking/microwaves/microwave-oven",
+    "categoryFallBackENName": "Microwave Oven",
+    "categoryFallBackName": "Mikrowellen"
+   },
+   "code": "947607508",
+   "d2cExclusiveFlag": false,
+   "d2cSellable": true,
+   "description": "Freistehende Mikrowelle / 29.0 x 49.5 cm  /Schwarz",
+   "displayLowestPriceMesssage": false,
+   "displayToolTipForLowestPrice": false,
+   "flashPromoDR": false,
+   "hideShowPncFlag": false,
+   "isServiceable": false,
+   "kit": false,
+   "lowestPricePeriod": 0,
+   "minCTFError": false,
+   "modelId": "MFB295DB",
+   "nakedProduct": false,
+   "name": "Freistehende Mikrowelle / Grill / Touch-Bedienung",
+   "offerPrice": {
+    "currencyIso": "EUR",
+    "formattedValue": "€ 149",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 149
+   },
+   "price": {
+    "currencyIso": "EUR",
+    "formattedValue": "€ 219",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 219
+   },
+   "productURL": "https://www.aeg.de/kitchen/cooking/compact-built-in-range/built-in-microwaves/mfb295db/",
+   "rrp": {
+    "currencyIso": "EUR",
+    "formattedValue": "€ 299",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 299
+   },
+   "rts": false,
+   "smallAppliance": false,
+   "suggestedDiscount": 0
+  },
+  {
+   "bundleAvailable": false,
+   "categoryFallBack": {
+    "categoryFallBackCode": "kitchen/cooking/microwaves/microwave-oven",
+    "categoryFallBackENName": "Microwave Oven",
+    "categoryFallBackName": "Mikrowellen"
+   },
+   "code": "947607510",
+   "d2cExclusiveFlag": false,
+   "d2cSellable": true,
+   "description": "Freistehende Mikrowelle / 28.0 x 46.9 cm / Schwarz",
+   "displayLowestPriceMesssage": false,
+   "displayToolTipForLowestPrice": false,
+   "flashPromoDR": false,
+   "hideShowPncFlag": false,
+   "isServiceable": false,
+   "kit": false,
+   "lowestPricePeriod": 0,
+   "minCTFError": false,
+   "modelId": "MFB252DB",
+   "nakedProduct": false,
+   "name": "Freistehende Mikrowelle / Grill",
+   "offerPrice": {
+    "currencyIso": "EUR",
+    "formattedValue": "€ 199",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 199
+   },
+   "price": {
+    "currencyIso": "EUR",
+    "formattedValue": "€ 199",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 199
+   },
+   "productURL": "https://www.aeg.de/kitchen/cooking/compact-built-in-range/built-in-microwaves/mfb252db/",
+   "rrp": {
+    "currencyIso": "EUR",
+    "formattedValue": "€ 419",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 419
+   },
+   "rts": false,
+   "smallAppliance": false,
+   "suggestedDiscount": 0
+  }
+ ]
+}

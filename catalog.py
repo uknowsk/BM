@@ -16,6 +16,9 @@ and may expose:
 import importlib
 import importlib.util
 import logging
+import re
+import sys
+import unicodedata
 from typing import Any, Optional
 
 from pydantic import BaseModel
@@ -34,7 +37,7 @@ CATEGORY_TREE: dict[str, dict] = {
         "top_load": "전자동/탑로더", "front_load": "드럼", "dryer": "건조기", "laundry_center": "트윈/스택·워시타워"}},
     "cooking": {"label_ko": "조리기기", "children": {
         "microwave": "전자레인지", "sco": SCO_LABEL_KO, "otr": "OTR 오버더레인지", "gas_oven": "가스오븐",
-        "electric_oven": "전기오븐", "induction": "인덕션", "radiant": "라디언트"}},
+        "gas_cooktop": "가스 쿡탑", "electric_oven": "전기오븐", "induction": "인덕션", "radiant": "라디언트"}},
 }
 
 # What the three original fridge-only adapters support (they predate SUPPORTED_SUBCATEGORIES).
@@ -76,8 +79,10 @@ COUNTRIES: dict[str, dict] = {
     "nz": {"region": "oc", "currency": "NZD", "lang": "en", "voltage": "230V/50Hz", "units": "metric"},
 }
 
-# Adapter registry. ADAPTERS maps a brand to its US module (country 'us'). Adapters for other countries are modules
-# named '<brand lower-case>_<country>' (samsung_kr, lg_kr, samsung_de ...), auto-discovered by importlib when present.
+# Adapter registry. ADAPTERS maps a brand to its US module (country 'us'); only the six original brands are listed
+# here (service.load_config adds the brands.yaml modules). Adapters for other countries -- and the US adapter of every
+# newer brand -- are modules named '<module slug>_<country>' (see brand_slug), auto-discovered by importlib when the
+# file exists. A brand whose module file does not exist yet is simply "not ready" (server note '준비 중').
 ADAPTERS = {
     "Samsung": "samsung_us",
     "LG": "lg_us",
@@ -86,6 +91,72 @@ ADAPTERS = {
     "Whirlpool": "whirlpool_us",
     "Bosch": "bosch_us",
 }
+
+# Countries an adapter may exist for (module '<slug>_<cc>'); the order is the display order of /api/brands 'countries'.
+ADAPTER_COUNTRIES = ("us", "kr", "de", "uk", "fr")
+
+# Brand groups (계열 묶음) in display order. The value is the group label shown in the brand picker.
+GROUPS = ("Samsung·LG", "Whirlpool Corp.", "BSH", "Electrolux", "Haier·GE", "프리미엄", "글로벌")
+
+# Brand metadata registry, in display order: name -> {group, countries}. 'countries' lists the candidate markets
+# (where the brand sells appliances; informational, from docs/BRAND_EXPANSION.md). What is actually usable is decided by
+# whether the adapter module file exists (supported / countries_with_adapter), never by this list.
+BRAND_META: dict[str, dict] = {
+    "Samsung": {"group": "Samsung·LG", "countries": ["us", "kr"]},
+    "LG": {"group": "Samsung·LG", "countries": ["us", "kr"]},
+    "KitchenAid": {"group": "Whirlpool Corp.", "countries": ["us"]},
+    "GE": {"group": "Haier·GE", "countries": ["us"]},
+    "Whirlpool": {"group": "Whirlpool Corp.", "countries": ["us"]},
+    "Bosch": {"group": "BSH", "countries": ["us", "de", "uk", "fr"]},
+    "Maytag": {"group": "Whirlpool Corp.", "countries": ["us"]},
+    "JennAir": {"group": "Whirlpool Corp.", "countries": ["us"]},
+    "Amana": {"group": "Whirlpool Corp.", "countries": ["us"]},
+    "Thermador": {"group": "BSH", "countries": ["us"]},
+    "Gaggenau": {"group": "BSH", "countries": ["us", "de"]},
+    "Siemens": {"group": "BSH", "countries": ["de"]},
+    "Frigidaire": {"group": "Electrolux", "countries": ["us"]},
+    "Electrolux": {"group": "Electrolux", "countries": ["us", "de", "uk"]},
+    "AEG": {"group": "Electrolux", "countries": ["de", "uk"]},
+    "Café": {"group": "Haier·GE", "countries": ["us"]},
+    "Monogram": {"group": "Haier·GE", "countries": ["us"]},
+    "Haier": {"group": "Haier·GE", "countries": ["us"]},
+    "Fisher & Paykel": {"group": "Haier·GE", "countries": ["us", "uk"]},
+    "Viking": {"group": "프리미엄", "countries": ["us"]},
+    "Sub-Zero": {"group": "프리미엄", "countries": ["us"]},
+    "Wolf": {"group": "프리미엄", "countries": ["us"]},
+    "Miele": {"group": "프리미엄", "countries": ["us", "de", "uk", "fr"]},
+    "Smeg": {"group": "프리미엄", "countries": ["us", "de", "uk", "fr"]},
+    "Liebherr": {"group": "프리미엄", "countries": ["us", "de", "uk", "fr"]},
+    "Bertazzoni": {"group": "프리미엄", "countries": ["us", "uk"]},
+    "De Dietrich": {"group": "프리미엄", "countries": ["fr"]},
+    "Beko": {"group": "글로벌", "countries": ["us", "uk", "de"]},
+    "Hisense": {"group": "글로벌", "countries": ["us", "uk", "de"]},
+    "Panasonic": {"group": "글로벌", "countries": ["us", "uk", "de"]},
+}
+
+
+def brand_slug(brand: str) -> str:
+    """Module-name stem of a brand: accents folded, lower-case, everything but letters/digits removed.
+    'Café' -> 'cafe', 'Fisher & Paykel' -> 'fisherpaykel', 'Sub-Zero' -> 'subzero', 'De Dietrich' -> 'dedietrich'."""
+    folded = unicodedata.normalize("NFKD", brand).encode("ascii", "ignore").decode("ascii")
+    return re.sub(r"[^a-z0-9]", "", folded.lower())
+
+
+def all_brands() -> list[str]:
+    """Registry brands in display order, then any extra brand registered only in ADAPTERS (tests, local additions)."""
+    return list(BRAND_META) + [b for b in ADAPTERS if b not in BRAND_META]
+
+
+def brand_group(brand: str) -> Optional[str]:
+    meta = BRAND_META.get(brand)
+    return meta["group"] if meta else None
+
+
+def brand_countries(brand: str) -> list[str]:
+    """Candidate markets of a brand (not necessarily implemented); [] for an unknown brand."""
+    meta = BRAND_META.get(brand)
+    return list(meta["countries"]) if meta else []
+
 
 # Free-text aliases accepted by normalize_major (ProductRecord.category historically held "Refrigerator").
 _MAJOR_ALIASES = {
@@ -179,17 +250,26 @@ def currency_of(country: str) -> str:
     return COUNTRIES.get(country, {}).get("currency", "USD")
 
 
-def module_name(brand: str, country: str = DEFAULT_COUNTRY) -> Optional[str]:
-    """Adapter module name for (brand, country), or None when no such module exists (nothing is imported)."""
-    if country == DEFAULT_COUNTRY:
-        return ADAPTERS.get(brand)
-    if country not in COUNTRIES or brand not in ADAPTERS:
-        return None
-    name = f"{brand.lower()}_{country}"
+def _module_exists(name: str) -> bool:
     try:
-        return name if importlib.util.find_spec(name) is not None else None
-    except (ImportError, ValueError):
+        return importlib.util.find_spec(name) is not None
+    except (ImportError, ValueError):  # ValueError: a module in sys.modules without __spec__
+        return name in sys.modules
+
+
+def module_name(brand: str, country: str = DEFAULT_COUNTRY) -> Optional[str]:
+    """Adapter module name for (brand, country), or None when the brand/country is unknown or no such module file
+    exists (nothing is imported). The rule is '<brand_slug>_<country>'; a brand registered in ADAPTERS keeps its
+    explicit US module name."""
+    if brand not in BRAND_META and brand not in ADAPTERS:
         return None
+    if country == DEFAULT_COUNTRY and brand in ADAPTERS:
+        name = ADAPTERS[brand]
+    elif country in COUNTRIES:
+        name = f"{brand_slug(brand)}_{country}"
+    else:
+        return None
+    return name if _module_exists(name) else None
 
 
 def adapter(brand: str, country: str = DEFAULT_COUNTRY):
@@ -218,10 +298,15 @@ def supported(brand: str, country: str = DEFAULT_COUNTRY) -> set[str]:
         return set()
 
 
+def countries_with_adapter(brand: str) -> list[str]:
+    """Countries (ADAPTER_COUNTRIES order) for which a usable adapter module exists for the brand."""
+    return [cc for cc in ADAPTER_COUNTRIES if supported(brand, cc)]
+
+
 def region_support(region: str) -> dict[str, set[str]]:
     """brand -> sub keys supported in at least one country of the region (brands with none are omitted)."""
     out: dict[str, set[str]] = {}
-    for brand in ADAPTERS:
+    for brand in all_brands():
         subs: set[str] = set()
         for country in REGIONS[region]["countries"]:
             subs |= supported(brand, country)

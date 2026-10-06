@@ -51,10 +51,39 @@ def test_brands_and_categories():
     cats = {c["key"]: c for c in client.get("/api/categories").json()}
     assert list(cats) == ["refrigerator", "washer", "cooking"] and cats["washer"]["label_ko"] == "세탁기"
     kids = {c["key"]: c for m in cats.values() for c in m["children"]}
-    assert len(kids) == 17 and kids["induction"]["label_ko"] == "인덕션"
+    assert len(kids) == len(server.catalog.sub_keys()) == 18 and "gas_cooktop" in kids and kids["induction"]["label_ko"] == "인덕션"
     assert "Samsung" in kids["induction"]["brands"] and "KitchenAid" not in kids["front_load"]["brands"]
     assert kids["compact"]["enabled"] and kids["compact"]["brands"] == ["Whirlpool", "Bosch"]
     assert all(c["enabled"] == bool(c["brands"]) for c in kids.values()) and cats["cooking"]["enabled"]
+
+
+def test_brands_registry_30_with_group_and_countries():
+    brands = client.get("/api/brands").json()
+    names = [b["name"] for b in brands]
+    assert len(names) == len(set(names)) == 30 and names[:6] == ["Samsung", "LG", "KitchenAid", "GE", "Whirlpool", "Bosch"]
+    by = {b["name"]: b for b in brands}
+    assert all(b["group"] for b in brands)
+    assert by["Maytag"]["group"] == "Whirlpool Corp." and by["Café"]["group"] == "Haier·GE" and by["Miele"]["group"] == "프리미엄"
+    assert by["Samsung"]["countries"] == ["us"] and by["Bosch"]["enabled"]  # mock: only the US adapters exist
+    for n in ("Maytag", "Fisher & Paykel", "De Dietrich", "Panasonic"):  # new brands: no adapter file yet, no error
+        assert not by[n]["enabled"] and by[n]["note"] == "준비 중" and by[n]["countries"] == [] and by[n]["categories"] == []
+    r = client.post("/api/search", json={"brands": ["Maytag"], "category": "refrigerator"})
+    assert r.status_code == 422
+    assert server.MAX_SEARCH_COMBOS == 120 and server.MAX_BRANDS == 30
+    for name, dom in server.BRAND_DOMAINS.items():  # every brand has a host allowed for its own https site
+        assert server.host_allowed(name, f"https://www.{dom}/x"), name
+        assert not server.host_allowed(name, f"http://www.{dom}/x") and not server.host_allowed(name, "https://evil.example/x")
+
+
+def test_search_cap_uses_max_combos():
+    old = server.MAX_SEARCH_COMBOS
+    server.MAX_SEARCH_COMBOS = 3
+    try:
+        r = client.post("/api/search", json={"brands": ["Samsung", "LG"], "subcategories": ["french_door", "side_by_side"]})
+        assert r.status_code == 422 and "3" in r.json()["detail"]
+    finally:
+        server.MAX_SEARCH_COMBOS = old
+    assert len(set(client.get("/api/brands").json()[0]["countries"])) >= 1
 
 
 def test_search_auto_bands():

@@ -1,0 +1,107 @@
+{
+ "pagination": {
+  "currentPage": 0,
+  "pageSize": 50,
+  "sort": "relevance",
+  "totalPages": 1,
+  "totalResults": 35
+ },
+ "products": [
+  {
+   "bundleAvailable": false,
+   "categoryFallBack": {
+    "categoryFallBackCode": "kitchen/cooking/ovens/oven",
+    "categoryFallBackENName": "Oven",
+    "categoryFallBackName": "Einbaubacköfen, -herde und -dampfbacköfen"
+   },
+   "code": "944068463",
+   "d2cExclusiveFlag": false,
+   "d2cSellable": true,
+   "description": "Multifunktionsbackofen mit Pyrolyse  / 59 x 56 cm / Schwarz / A+",
+   "displayLowestPriceMesssage": false,
+   "displayToolTipForLowestPrice": false,
+   "flashPromoDR": false,
+   "hideShowPncFlag": false,
+   "isServiceable": false,
+   "kit": false,
+   "lowestPricePeriod": 0,
+   "minCTFError": false,
+   "modelId": "BPE53516AB",
+   "nakedProduct": false,
+   "name": "SurroundCook Multifunktionsbackofen Einbaubackofen / Pyrolytische Selbstreinigung / Schwarz",
+   "offerPrice": {
+    "currencyIso": "EUR",
+    "formattedValue": "€ 400",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 400
+   },
+   "price": {
+    "currencyIso": "EUR",
+    "formattedValue": "€ 519",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 519
+   },
+   "productURL": "https://www.aeg.de/kitchen/cooking/ovens/oven/bpe53516ab/",
+   "rrp": {
+    "currencyIso": "EUR",
+    "formattedValue": "€ 999",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 999
+   },
+   "rts": false,
+   "smallAppliance": false,
+   "suggestedDiscount": 0
+  },
+  {
+   "bundleAvailable": false,
+   "categoryFallBack": {
+    "categoryFallBackCode": "kitchen/cooking/ovens/oven",
+    "categoryFallBackENName": "Oven",
+    "categoryFallBackName": "Einbaubacköfen, -herde und -dampfbacköfen"
+   },
+   "code": "944035165",
+   "d2cExclusiveFlag": false,
+   "d2cSellable": true,
+   "description": "Multifunktionsbackofen mit Dampf / 59 x 56 cm / Schwarz / A++",
+   "displayLowestPriceMesssage": false,
+   "displayToolTipForLowestPrice": false,
+   "flashPromoDR": false,
+   "hideShowPncFlag": false,
+   "isServiceable": false,
+   "kit": false,
+   "lowestPricePeriod": 0,
+   "minCTFError": false,
+   "modelId": "V8SBP731AB",
+   "nakedProduct": false,
+   "name": "8000 MealAssist mit SteamPro / Einbaubackofen / WLAN-fähig / Dampfreinigung / Schwarz",
+   "offerPrice": {
+    "currencyIso": "EUR",
+    "formattedValue": "€ 1.299",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 1299
+   },
+   "price": {
+    "currencyIso": "EUR",
+    "formattedValue": "€ 1.669",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 1669
+   },
+   "productURL": "https://www.aeg.de/kitchen/cooking/ovens/oven/v8sbp731ab/",
+   "rrp": {
+    "currencyIso": "EUR",
+    "formattedValue": "€ 3.099",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 3099
+   },
+   "rts": false,
+   "smallAppliance": false,
+   "suggestedDiscount": 0
+  }
+ ]
+}

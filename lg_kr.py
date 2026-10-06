@@ -19,7 +19,8 @@ Fetching: plain HTTP first; FRIDGE_BROWSER_MODE = auto (HTTP, then headless, the
   | headless | visible (browser only). Geo: no geo-redirect observed from the dev network; /<cat>/<model> redirects
   (301/302) to /product/<cat>/<model>?modelId=..., which is followed hop by hop with a host check.
 Korean -> English comes from ko_en (imported lazily). Not offered by LG KR online (checked against the whole
-  sitemap + llms.txt, and the category slugs gas-ranges / gas-oven-ranges / ranges 404): otr, gas_oven, electric_oven
+  sitemap + llms.txt, and the category slugs gas-ranges / gas-oven-ranges / ranges 404; re-checked 2026-10-06: gas-range / gas-cooktop / gas-stove
+  return an empty category, the product sitemap has no gas range or cooktop): otr, gas_oven, gas_cooktop, electric_oven
   (no over-the-range hoods, gas ranges or plain wall ovens; the only ovens are 광파오븐 = sco).
 """
 import html as _html
@@ -141,7 +142,7 @@ SUB_SOURCES: dict[str, tuple[str, ...]] = {
     "induction": ("electric-ranges",), "radiant": ("electric-ranges",),
 }
 SUPPORTED_SUBCATEGORIES = set(SUB_SOURCES)
-# Not offered by LG KR: otr (over-the-range), gas_oven (no gas range), electric_oven (no plain wall oven; the
+# Not offered by LG KR: otr (over-the-range), gas_oven (no gas range), gas_cooktop (no gas cooktop / 가스레인지), electric_oven (no plain wall oven; the
 # 광파오븐 microwave+light-wave ovens are sco) and bottom_freezer (every
 # 상냉장/하냉동 model is 3- or 4-door = French-door layout; classify() still returns bottom_freezer for a 2-door one).
 

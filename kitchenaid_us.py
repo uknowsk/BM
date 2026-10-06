@@ -195,6 +195,14 @@ _INDUCTION = re.compile(r"induction")
 # sco (Speed Cook Oven): oven with a built-in microwave / speed-cook function (combo wall ovens, speed / more-in-one ovens)
 _SCO = re.compile(r"combo wall oven|combination (wall )?oven|combo oven|speed oven|more-in-one")
 _GAS_RANGE = re.compile(r"(?<![a-z])gas(?![a-z])|dual fuel")  # gas burners (dual fuel = gas cooktop + electric oven)
+_GAS_TOP_NAME = re.compile(r"cooktop|rangetop")
+_HAS_OVEN = re.compile(r"\brange\b|\boven")
+
+
+def _is_gas_cooktop(n: str) -> bool:
+    return bool(_GAS_RANGE.search(n) and _GAS_TOP_NAME.search(n) and not _HAS_OVEN.search(n))
+
+
 _NOT_FRIDGE = re.compile(r"wine|beverage")  # wine cellars / beverage centers are not refrigerators
 
 
@@ -220,7 +228,9 @@ SUB_RULES: dict[str, _Rule] = {
     "sco": _Rule("cooking", ("wall-ovens", "microwaves"), lambda n: not _OTR.search(n) and bool(_SCO.search(n))),
     "microwave": _Rule("cooking", ("microwaves",), lambda n: not _OTR.search(n) and not _SCO.search(n)),
     "induction": _Rule("cooking", ("ranges", "cooktops"), lambda n: bool(_INDUCTION.search(n))),
-    # ASSUMPTION: gas_oven = gas and dual-fuel RANGES (KitchenAid sells no gas wall oven); gas cooktops/rangetops are no oven.
+    # ASSUMPTION: gas_cooktop = oven-less gas cooktops and commercial-style rangetops (before gas_oven so a rangetop
+    # filed under /ranges/ is not taken for a range); gas_oven = gas and dual-fuel RANGES (KitchenAid sells no gas wall oven).
+    "gas_cooktop": _Rule("cooking", ("cooktops", "ranges"), lambda n: _is_gas_cooktop(n)),
     "gas_oven": _Rule("cooking", ("ranges",), lambda n: bool(_GAS_RANGE.search(n))),
     # ASSUMPTION: radiant = electric ranges and electric/radiant cooktops (induction excluded by its earlier rule).
     "radiant": _Rule("cooking", ("ranges", "cooktops"),
@@ -248,7 +258,7 @@ def _family(url: str, name: str) -> str | None:
     n = (name or "").lower()
     for fam, pat in (("refrigeration", r"refrigerator"), ("microwaves", r"microwave|over[- ]the[- ]range"),
                      ("wall-ovens", r"wall oven|combination oven|single oven|double oven"),
-                     ("cooktops", r"cooktop|rangetop"), ("ranges", r"range")):
+                     ("cooktops", r"cooktop|rangetop"), ("ranges", r"\brange\b")):
         if re.search(pat, n):
             return fam
     return None

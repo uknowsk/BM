@@ -1,0 +1,13 @@
+{
+ "public": {
+  "default": {
+   "commerce-endpoint": "https://www.subzero-wolf.com/szg-api/cs-graphql",
+   "headers": {
+    "cs": {
+     "x-api-key": "TEST-KEY",
+     "Magento-Store-Code": "main"
+    }
+   }
+  }
+ }
+}

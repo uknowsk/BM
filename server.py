@@ -62,13 +62,34 @@ XLSX_MIME = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
 
 # brand -> allowed registrable domain (https URLs must be on it or a subdomain of it)
 BRAND_DOMAINS = {"Samsung": "samsung.com", "LG": "lg.com", "KitchenAid": "kitchenaid.com",
-                 "GE": "geappliances.com", "Whirlpool": "whirlpool.com", "Bosch": "bosch-home.com"}
-# Extra registrable domains per brand for regional sites (added together with the region's adapter).
-EXTRA_DOMAINS = {"LG": {"lge.co.kr"}}
+                 "GE": "geappliances.com", "Whirlpool": "whirlpool.com", "Bosch": "bosch-home.com",
+                 "Maytag": "maytag.com", "JennAir": "jennair.com", "Amana": "amana.com", "Thermador": "thermador.com",
+                 "Gaggenau": "gaggenau.com", "Siemens": "siemens-home.bsh-group.com", "Frigidaire": "frigidaire.com",
+                 "Electrolux": "electrolux.com", "AEG": "aeg.com", "Café": "cafeappliances.com",
+                 "Monogram": "monogram.com", "Haier": "haierappliances.com", "Fisher & Paykel": "fisherpaykel.com",
+                 "Viking": "vikingrange.com", "Sub-Zero": "subzero-wolf.com", "Wolf": "subzero-wolf.com",
+                 "Miele": "miele.com", "Smeg": "smeg.com", "Liebherr": "liebherr.com", "Bertazzoni": "bertazzoni.com",
+                 "De Dietrich": "dedietrich-electromenager.fr", "Beko": "beko.com", "Hisense": "hisense-usa.com",
+                 "Panasonic": "panasonic.com"}
+# Extra registrable domains per brand for regional sites (added together with the region's adapter). The new brands'
+# national sites are listed up front; the brand's adapter agent reports any host that is still missing.
+EXTRA_DOMAINS = {"LG": {"lge.co.kr"},
+                 "Gaggenau": {"gaggenau.de"},
+                 "Siemens": {"siemens-home.de", "siemens-home.bsh-group.com"},
+                 "Electrolux": {"electroluxappliances.com", "electrolux.de",
+                                                                 "electrolux.co.uk", "electrolux.fr"},
+                 "AEG": {"aeg.de", "aeg.co.uk", "aeg.fr"}, "Haier": {"haier.com", "haier-europe.com"},
+                 "Fisher & Paykel": {"fisherpaykel.co.uk", "fisherpaykel.de"},
+                 "Viking": {"vikingrange.co.uk"}, "Sub-Zero": {"subzero.com"}, "Wolf": {"wolfappliance.com"},
+                 "Miele": {"miele.de", "miele.co.uk", "miele.fr"},
+                 "Smeg": {"smegusa.com", "smeg.de", "smeg.co.uk", "smeg.fr"},
+                 "Liebherr": {"liebherr-home.com", "home.liebherr.com"},
+                 "Bertazzoni": {"bertazzoni.co.uk"}, "De Dietrich": {"dedietrich.com"},
+                 "Beko": {"bekoappliances.com", "beko.co.uk", "beko.de"},
+                 "Hisense": {"hisense.com", "hisense.co.uk", "hisense.de"}, "Panasonic": {"panasonic.co.uk", "panasonic.de"}}
 MAX_REGIONS = 4
-# Shown in the UI but not runnable yet
-COMING_SOON_BRANDS = ["Miele", "AEG"]
-MAX_SEARCH_COMBOS = 48  # brand x country x sub-group listings per search job
+MAX_BRANDS = 30  # brands per search request (the full registry)
+MAX_SEARCH_COMBOS = 120  # brand x country x sub-group listings per search job (run one after another, with progress)
 BROWSER_MODES = {"auto": "1", "headless": "1", "visible": "0"}
 
 
@@ -122,12 +143,12 @@ _MOCK_MODES = [
 _WASHER_SUBS = set(catalog.sub_keys("washer"))
 _FRIDGE5 = set(catalog.sub_keys("refrigerator")) - {"compact"}
 _MOCK_SUPPORT = {  # sub keys each mock brand "supports" (gaps exercise the 'unsupported' paths)
-    "Samsung": _FRIDGE5 | _WASHER_SUBS | {"microwave", "sco", "otr", "gas_oven", "electric_oven", "induction"},
-    "LG": _FRIDGE5 | _WASHER_SUBS | {"microwave", "sco", "otr", "gas_oven", "electric_oven", "induction"},
-    "KitchenAid": _FRIDGE5 | {"sco", "otr", "gas_oven", "electric_oven", "induction", "radiant"},
+    "Samsung": _FRIDGE5 | _WASHER_SUBS | {"microwave", "sco", "otr", "gas_oven", "gas_cooktop", "electric_oven", "induction"},
+    "LG": _FRIDGE5 | _WASHER_SUBS | {"microwave", "sco", "otr", "gas_oven", "gas_cooktop", "electric_oven", "induction"},
+    "KitchenAid": _FRIDGE5 | {"sco", "otr", "gas_oven", "gas_cooktop", "electric_oven", "induction", "radiant"},
     "GE": _FRIDGE5 | _WASHER_SUBS | set(catalog.sub_keys("cooking")),
-    "Whirlpool": _FRIDGE5 | {"compact"} | _WASHER_SUBS | {"microwave", "otr", "gas_oven", "electric_oven", "radiant", "sco"},
-    "Bosch": _FRIDGE5 | {"compact", "front_load", "dryer", "gas_oven", "electric_oven", "induction", "radiant", "microwave"},
+    "Whirlpool": _FRIDGE5 | {"compact"} | _WASHER_SUBS | {"microwave", "otr", "gas_oven", "gas_cooktop", "electric_oven", "radiant", "sco"},
+    "Bosch": _FRIDGE5 | {"compact", "front_load", "dryer", "gas_oven", "gas_cooktop", "electric_oven", "induction", "radiant", "microwave"},
 }
 _MOCK_EXTRA = {
     "washer": lambda r: {"Capacity (cu ft)": f"{r.uniform(3.8, 5.8):.1f}", "Spin speed (rpm)": str(r.choice([1100, 1200, 1300, 1400])),
@@ -287,7 +308,7 @@ class _MockAdapter:
                 fridge_temp_range_f="34-44 F", freezer_temp_range_f="-6 to 8 F", pod_features=rnd.sample(_POD_POOL, 5))
         else:
             kind = "washer" if major == "washer" else sub if sub in ("microwave", "otr", "sco") else (
-                "cooktop" if sub in ("induction", "radiant") else "oven")
+                "cooktop" if sub in ("induction", "radiant", "gas_cooktop") else "oven")
             prod = ProductRecord(
                 **common, width_in=round(rnd.uniform(24, 36), 1), height_in=round(rnd.uniform(17, 47), 1),
                 depth_in=round(rnd.uniform(24, 30), 1), weight_lb=round(rnd.uniform(60, 280)),
@@ -457,7 +478,9 @@ def _set_browser_env(mode: str) -> None:
     os.environ["FRIDGE_HEADLESS"] = BROWSER_MODES[mode]
     os.environ["FRIDGE_BROWSER_MODE"] = mode
     if changed:  # adapters may cache which headless flag worked; that is stale under a new mode
-        for name in set(catalog.ADAPTERS.values()):
+        loaded = set(catalog.ADAPTERS.values()) | {f"{catalog.brand_slug(b)}_{cc}" for b in catalog.all_brands()
+                                                   for cc in catalog.ADAPTER_COUNTRIES}
+        for name in loaded:  # only adapters already imported (sys.modules); nothing is imported here
             reset = getattr(sys.modules.get(name), "reset_browser_mode", None)
             if callable(reset):
                 reset()
@@ -731,7 +754,7 @@ def _store():
 
 # ------------------------------------------------------------------ API models + validation
 class SearchReq(BaseModel):
-    brands: list[str] = Field(min_length=1, max_length=8)
+    brands: list[str] = Field(min_length=1, max_length=MAX_BRANDS)
     subcategories: Optional[list[str]] = Field(None, max_length=32)
     category: Optional[str] = None  # legacy: a major key (all sub keys) or a sub key
     limit: int = Field(30, ge=5, le=100)
@@ -791,6 +814,11 @@ def _brand_support(region: str = catalog.DEFAULT_REGION) -> dict[str, set[str]]:
         if subs:
             out[name] = subs
     return out
+
+
+def _brand_countries(name: str) -> list[str]:
+    """Countries with a usable adapter for the brand (module file present and importable); [] while '준비 중'."""
+    return catalog.countries_with_adapter(name)
 
 
 def _regions_support(regions: list[str]) -> dict[str, set[str]]:
@@ -880,17 +908,15 @@ def api_brands(region: Optional[str] = Query(None, max_length=64)):
     regions = _parse_regions(region, require_enabled=False)
     support = _regions_support(regions)
     where = {r: _brand_support(r) for r in catalog.REGIONS}
-    out, seen = [], set()
+    out = []
     for b in _config()["brands"]:
         name = b["name"]
-        seen.add(name)
         subs = support.get(name, set())
-        note = "" if subs else ("어댑터 미설치" if name in BRAND_DOMAINS else "준비 중")
+        note = "" if subs else "준비 중"
         out.append({"name": name, "enabled": bool(subs), "note": note, "categories": _ordered(subs),
                     "majors": [m for m in catalog.major_keys() if subs & set(catalog.sub_keys(m))],
-                    "regions": [r for r in catalog.REGIONS if name in where[r]]})
-    out += [{"name": n, "enabled": False, "note": "준비 중", "categories": [], "majors": [], "regions": []}
-            for n in COMING_SOON_BRANDS if n not in seen]
+                    "regions": [r for r in catalog.REGIONS if name in where[r]],
+                    "group": catalog.brand_group(name), "countries": _brand_countries(name)})
     return out
 
 
@@ -935,7 +961,7 @@ def api_filters(subcategory: str = Query(max_length=64), region: Optional[str] =
 @app.get("/api/meta")
 def api_meta():
     return {"mock": is_mock(), "max_selected": service.MAX_COLLECT, "max_collect": service.MAX_COLLECT,
-            "delay_s": service.POLITE_DELAY_S}
+            "delay_s": service.POLITE_DELAY_S, "max_search_combos": MAX_SEARCH_COMBOS, "max_brands": MAX_BRANDS}
 
 
 def _resolve_subcategories(req: SearchReq) -> list[str]:

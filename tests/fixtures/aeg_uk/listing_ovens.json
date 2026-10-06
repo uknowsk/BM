@@ -1,0 +1,203 @@
+{
+ "pagination": {
+  "currentPage": 0,
+  "pageSize": 50,
+  "sort": "relevance",
+  "totalPages": 1,
+  "totalResults": 34
+ },
+ "products": [
+  {
+   "bundleAvailable": false,
+   "categoryFallBack": {
+    "categoryFallBackCode": "kitchen/cooking/ovens/oven",
+    "categoryFallBackENName": "Oven",
+    "categoryFallBackName": "Oven"
+   },
+   "code": "949496388",
+   "d2cExclusiveFlag": false,
+   "d2cSellable": true,
+   "description": "BEX335011B",
+   "displayLowestPriceMesssage": false,
+   "displayToolTipForLowestPrice": false,
+   "flashPromoDR": false,
+   "hideShowPncFlag": false,
+   "isServiceable": false,
+   "kit": false,
+   "lowestPricePeriod": 0,
+   "minCTFError": false,
+   "modelId": "BEX335011B",
+   "nakedProduct": false,
+   "name": "3000 SurroundCook Aqua Clean Built-in Oven",
+   "offerPrice": {
+    "currencyIso": "GBP",
+    "formattedValue": "£329.99",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 329.99
+   },
+   "price": {
+    "currencyIso": "GBP",
+    "formattedValue": "£379.99",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 379.99
+   },
+   "productURL": "https://www.aeg.co.uk/kitchen/cooking/ovens/oven/bex335011b/",
+   "rrp": {
+    "currencyIso": "GBP",
+    "formattedValue": "£379.99",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 379.99
+   },
+   "rts": false,
+   "smallAppliance": false,
+   "suggestedDiscount": 0
+  },
+  {
+   "bundleAvailable": false,
+   "categoryFallBack": {
+    "categoryFallBackCode": "kitchen/cooking/ovens/pyrolytic-oven",
+    "categoryFallBackENName": "Pyrolytic oven",
+    "categoryFallBackName": "Pyrolytic oven"
+   },
+   "code": "949498304",
+   "d2cExclusiveFlag": false,
+   "d2cSellable": true,
+   "description": "BPX535061B",
+   "displayLowestPriceMesssage": false,
+   "displayToolTipForLowestPrice": false,
+   "flashPromoDR": false,
+   "hideShowPncFlag": false,
+   "isServiceable": false,
+   "kit": false,
+   "lowestPricePeriod": 0,
+   "minCTFError": false,
+   "modelId": "BPX535061B",
+   "nakedProduct": false,
+   "name": "3000 SurroundCook Pyrolytic Self Clean Built-in Oven",
+   "offerPrice": {
+    "currencyIso": "GBP",
+    "formattedValue": "£449.99",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 449.99
+   },
+   "price": {
+    "currencyIso": "GBP",
+    "formattedValue": "£499.99",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 499.99
+   },
+   "productURL": "https://www.aeg.co.uk/kitchen/cooking/ovens/oven/bpx535061b/",
+   "rrp": {
+    "currencyIso": "GBP",
+    "formattedValue": "£499.99",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 499.99
+   },
+   "rts": false,
+   "smallAppliance": false,
+   "suggestedDiscount": 0
+  },
+  {
+   "bundleAvailable": false,
+   "categoryFallBack": {
+    "categoryFallBackCode": "kitchen/cooking/ovens/compact-oven",
+    "categoryFallBackENName": "Compact oven",
+    "categoryFallBackName": "Compact oven"
+   },
+   "code": "944005251",
+   "d2cExclusiveFlag": false,
+   "d2cSellable": true,
+   "description": "OK6NK40K",
+   "displayLowestPriceMesssage": false,
+   "displayToolTipForLowestPrice": false,
+   "flashPromoDR": false,
+   "hideShowPncFlag": false,
+   "isServiceable": false,
+   "kit": false,
+   "lowestPricePeriod": 0,
+   "minCTFError": false,
+   "modelId": "OK6NK40K",
+   "nakedProduct": false,
+   "name": "6000 CombiQuick Microwave and Built-in Oven",
+   "offerPrice": {
+    "currencyIso": "GBP",
+    "formattedValue": "£649.99",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 649.99
+   },
+   "price": {
+    "currencyIso": "GBP",
+    "formattedValue": "£699.99",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 699.99
+   },
+   "productURL": "https://www.aeg.co.uk/kitchen/cooking/microwaves/microwave-oven/ok6nk40k/",
+   "rrp": {
+    "currencyIso": "GBP",
+    "formattedValue": "£699.99",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 699.99
+   },
+   "rts": false,
+   "smallAppliance": false,
+   "suggestedDiscount": 0
+  },
+  {
+   "bundleAvailable": false,
+   "categoryFallBack": {
+    "categoryFallBackCode": "kitchen/cooking/ovens/oven",
+    "categoryFallBackENName": "Oven",
+    "categoryFallBackName": "Oven"
+   },
+   "code": "944005252",
+   "d2cExclusiveFlag": false,
+   "d2cSellable": true,
+   "description": "OK6NK40M",
+   "displayLowestPriceMesssage": false,
+   "displayToolTipForLowestPrice": false,
+   "flashPromoDR": false,
+   "hideShowPncFlag": false,
+   "isServiceable": false,
+   "kit": false,
+   "lowestPricePeriod": 0,
+   "minCTFError": false,
+   "modelId": "OK6NK40M",
+   "nakedProduct": false,
+   "name": "6000 CombiQuick Microwave and Built-in Oven",
+   "offerPrice": {
+    "currencyIso": "GBP",
+    "formattedValue": "£699.99",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 699.99
+   },
+   "price": {
+    "currencyIso": "GBP",
+    "formattedValue": "£699.99",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 699.99
+   },
+   "productURL": "https://www.aeg.co.uk/kitchen/cooking/microwaves/microwave-oven/ok6nk40m/",
+   "rrp": {
+    "currencyIso": "GBP",
+    "formattedValue": "£699.99",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 699.99
+   },
+   "rts": false,
+   "smallAppliance": false,
+   "suggestedDiscount": 0
+  }
+ ]
+}

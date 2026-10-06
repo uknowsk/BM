@@ -71,7 +71,7 @@ ALL_ITEMS = (_list("goodslist_refrigerators.json") + _list("goodslist_laundry.js
 def test_constants_and_supported_subcategories():
     assert (sk.COUNTRY, sk.REGION, sk.CURRENCY, sk.BRAND) == ("kr", "kr", "KRW", "Samsung")
     assert sk.SUPPORTED_SUBCATEGORIES <= set(catalog.sub_keys())
-    assert not sk.SUPPORTED_SUBCATEGORIES & {"scr", "otr", "gas_oven", "radiant"}  # none sold on samsung.com/sec
+    assert not sk.SUPPORTED_SUBCATEGORIES & {"scr", "otr", "gas_oven", "gas_cooktop", "radiant"}  # none sold on samsung.com/sec
     assert {"sco", "electric_oven", "microwave", "induction"} <= sk.SUPPORTED_SUBCATEGORIES
     for sub, (major, codes) in sk.SUB_SOURCES.items():
         assert catalog.major_of(sub) == major and codes
@@ -229,7 +229,7 @@ def test_discover_per_sub_with_fake_net():
             got = sk.discover(sub, limit=30)
             assert got, sub
             assert all(c.url.startswith("https://www.samsung.com/sec/") and c.region == "kr" for c in got)
-        for bad in ("scr", "otr", "gas_oven", "radiant", "nope"):
+        for bad in ("scr", "otr", "gas_oven", "gas_cooktop", "radiant", "nope"):
             try:
                 sk.discover(bad)
             except ValueError:

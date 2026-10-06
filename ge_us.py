@@ -114,6 +114,8 @@ SUB_SOURCES: dict[str, tuple[str, list]] = {
     # gas_oven = gas and dual-fuel RANGES (GE sells no gas wall oven); a Double Oven Range is gas or electric by its fuel.
     "gas_oven": ("cooking", [(_RNG + "Gas Ranges", None), (_RNG + "Dual Fuel Ranges", None),
                              (_RNG + "Double Oven Ranges", _is_gas)]),
+    # gas_cooktop = oven-less gas cooktops and rangetops (the site files rangetops under Gas Cooktops).
+    "gas_cooktop": ("cooking", [(_CT + "Gas Cooktops", None)]),
     # radiant = electric (non-induction) ranges and electric cooktops.
     "radiant": ("cooking", [(_RNG + "Electric Ranges", _not_induction), (_RNG + "Double Oven Ranges", _not_gas),
                             (_CT + "Electric Cooktops", _not_induction)]),

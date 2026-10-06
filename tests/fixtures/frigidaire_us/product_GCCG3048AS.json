@@ -1,0 +1,627 @@
+{
+ "code": "GCCG3048AS",
+ "name": "30\" Gas Cooktop",
+ "color": "Stainless Steel",
+ "price": {
+  "bestValue": false,
+  "currencyIso": "USD",
+  "formattedValue": "$769.00",
+  "priceType": "BUY",
+  "value": 769
+ },
+ "categories": [
+  {
+   "code": "M_FoodPreparation_Cooktops_Gas",
+   "name": "Gas Cooktops"
+  },
+  {
+   "code": "CC_Majors_BestSellers",
+   "name": "Best Sellers"
+  },
+  {
+   "code": "Promo_FRG_DOW2",
+   "name": "Deal of the Week"
+  }
+ ],
+ "classifications": [
+  {
+   "code": "HDR_CertificationsApprovals",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_CertificationsApprovals.api_cert_adacompliant",
+     "comparable": true,
+     "description": "PL Product,AHAM",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "ADA Compliant",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_CertificationsApprovals.api_cert_csacertified",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "CSA Listed",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_CertificationsApprovals.api_2ca_ul",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "UL Listed",
+     "range": false
+    }
+   ],
+   "name": "Certifications and Approvals"
+  },
+  {
+   "code": "HDR_Cooktop",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooktop.api_2cooktop_surfacetype",
+     "comparable": true,
+     "description": "Basics,PL Product,PCT",
+     "featureValues": [
+      {
+       "value": "Gas"
+      }
+     ],
+     "name": "Cooking Surface Type",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooktop.api_2cooktop_gratematerial",
+     "comparable": true,
+     "description": "Basics,PL Product,PCT",
+     "featureValues": [
+      {
+       "value": "Cast Iron"
+      }
+     ],
+     "name": "Grate Material",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooktop.api_2cooktop_gratequantity",
+     "comparable": true,
+     "description": "Basics,PL Product,PCT",
+     "featureValues": [
+      {
+       "value": "3"
+      }
+     ],
+     "name": "Grate Quantity",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooktop.api_2cooktop_gratestyle",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Continuous"
+      }
+     ],
+     "name": "Grate Style",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooktop.api_2cooktop_totalburners",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "5"
+      }
+     ],
+     "name": "Total Number of Burners",
+     "range": false
+    }
+   ],
+   "name": "Cooktop"
+  },
+  {
+   "code": "HDR_Cooktop_Performance",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooktop_Performance.api_2cooktopperf_rfrontbtu",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "12000 BTU"
+      }
+     ],
+     "name": "Right Front Element Burner",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooktop_Performance.api_2cooktopperf_rrearbtu",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "5000 BTU"
+      }
+     ],
+     "name": "Right Rear Element Burner",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooktop_Performance.api_2cooktopperf_lfrontbtu",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "9500 BTU"
+      }
+     ],
+     "name": "Left Front Element Burner",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooktop_Performance.api_2cooktopperf_lrearbtu",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "7500 BTU"
+      }
+     ],
+     "name": "Left Rear Element Burner",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooktop_Performance.api_2cooktopperf_cenfrontbtu",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "18000 BTU"
+      }
+     ],
+     "name": "Center Front Element Burner",
+     "range": false
+    }
+   ],
+   "name": "Cooktop Performance"
+  },
+  {
+   "code": "HDR_DimensionsandVolume",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_customerheight",
+     "comparable": true,
+     "description": "PL Product,AHAM,Height,PCT",
+     "featureValues": [
+      {
+       "value": "2 7/16\""
+      }
+     ],
+     "name": "Height",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_customerwidth",
+     "comparable": true,
+     "description": "PL Product,AHAM,Width,PCT",
+     "featureValues": [
+      {
+       "value": "30\""
+      }
+     ],
+     "name": "Width",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_customerdepth",
+     "comparable": true,
+     "description": "PL Product,AHAM,Depth,PCT",
+     "featureValues": [
+      {
+       "value": "21\""
+      }
+     ],
+     "name": "Depth",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_height",
+     "comparable": true,
+     "description": "Basics,PL Product,Key",
+     "featureValues": [
+      {
+       "value": "2 7/16\""
+      }
+     ],
+     "name": "Height",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_width",
+     "comparable": true,
+     "description": "Basics,PL Product,Key",
+     "featureValues": [
+      {
+       "value": "30\""
+      }
+     ],
+     "name": "Width",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_depth",
+     "comparable": true,
+     "description": "Basics,PL Product,Key",
+     "featureValues": [
+      {
+       "value": "21\""
+      }
+     ],
+     "name": "Depth",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_coheight",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "7 1/2\""
+      }
+     ],
+     "name": "Cutout Height",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_mincowidth",
+     "comparable": true,
+     "description": "PL Product,Key",
+     "featureValues": [
+      {
+       "value": "27 1/4\""
+      }
+     ],
+     "name": "Minimum Cutout Width",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_mincodepth",
+     "comparable": true,
+     "description": "PL Product,Key",
+     "featureValues": [
+      {
+       "value": "19\""
+      }
+     ],
+     "name": "Minimum Cutout Depth",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_maxcowidth",
+     "comparable": true,
+     "description": "PL Product,Key",
+     "featureValues": [
+      {
+       "value": "29 5/16\""
+      }
+     ],
+     "name": "Maximum Cutout Width",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_maxcodepth",
+     "comparable": true,
+     "description": "PL Product,Key",
+     "featureValues": [
+      {
+       "value": "20\""
+      }
+     ],
+     "name": "Maximum Cutout Depth",
+     "range": false
+    }
+   ],
+   "name": "Dimensions and Volume"
+  },
+  {
+   "code": "HDR_ElectricalSpecifications",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_ElectricalSpecifications.api_2es_mincir",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "5 Amps"
+      }
+     ],
+     "name": "Minimum Circuit Required",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_ElectricalSpecifications.api_2es_voltrating",
+     "comparable": true,
+     "description": "PL Product,AHAM",
+     "featureValues": [
+      {
+       "value": "120 V"
+      }
+     ],
+     "name": "Voltage Rating",
+     "range": false
+    }
+   ],
+   "name": "Electrical Specifications"
+  },
+  {
+   "code": "HDR_InstallationType",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_InstallationType.api_2install_gasloc",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Top Right"
+      }
+     ],
+     "name": "Gas Supply Connection Location",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_InstallationType.api_2install_overwo",
+     "comparable": true,
+     "description": "Basics,PL Product,PCT",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Installed Over a Wall Oven",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_InstallationType.api_2install_lpconvkit",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "LP Conversion Kit Included",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_InstallationType.api_2es_cordincluded",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Power Cord Included",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_InstallationType.api_2install_powerloc",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Top Right"
+      }
+     ],
+     "name": "Power Supply Connection Location",
+     "range": false
+    }
+   ],
+   "name": "Installation"
+  },
+  {
+   "code": "HDR_Exterior",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Exterior.api_2ext_backlitknobs",
+     "comparable": true,
+     "description": "PL Item",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Backlit Knobs",
+     "range": false
+    }
+   ],
+   "name": "Exterior"
+  },
+  {
+   "code": "HDR_GeneralSpecifications",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_GeneralSpecifications.api_gen_fitpromise",
+     "comparable": true,
+     "description": "Basics,PL Product,PCT",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Frigidaire Fit Promise",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_GeneralSpecifications.api_2gen_prodweight",
+     "comparable": true,
+     "description": "PL Product,AHAM",
+     "featureValues": [
+      {
+       "value": "43 lbs"
+      }
+     ],
+     "name": "Product Weight",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_GeneralSpecifications.api_gen_prop_65",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Prop 65 Label",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_GeneralSpecifications.api_2gen_warlabor",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "1 Year"
+      }
+     ],
+     "name": "Warranty - Labor",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_GeneralSpecifications.api_2gen_warparts",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "1 Year"
+      }
+     ],
+     "name": "Warranty - Parts",
+     "range": false
+    }
+   ],
+   "name": "General Specifications"
+  }
+ ],
+ "plpImage": "https://frigidaire.bynder.com/transform/9cf426e8-24a5-423c-9e17-5b56441e332a/GCCG3048AS-HOV-psd",
+ "categoryUrl": "/kitchen/cooktops/gas-cooktops",
+ "baseProduct": "GCCG3048A",
+ "url": "/c//p/GCCG3048AS",
+ "msrpUSD": 1399,
+ "images": [
+  {
+   "altText": "",
+   "code": "GCCG3048AS_459735",
+   "description": "Image with Copy",
+   "displayOrder": "2",
+   "imageType": "GALLERY",
+   "url": "https://frigidaire.bynder.com/transform/e9035bcb-a98e-4461-979d-cd67ebaa8b2c/F_PDP-FoodPrepCstar-psd"
+  },
+  {
+   "altText": "",
+   "code": "GCCG3048AS_461726",
+   "description": "Product - Dimensions",
+   "displayOrder": "5",
+   "imageType": "GALLERY",
+   "url": "https://frigidaire.bynder.com/transform/f2f83669-fa2d-4e0c-b033-5b0618610449/GCCG3048AS-DIM-psd"
+  },
+  {
+   "altText": "",
+   "code": "GCCG3048AS_440217",
+   "description": "Image with Copy",
+   "displayOrder": "7",
+   "imageType": "GALLERY",
+   "url": "https://frigidaire.bynder.com/transform/57986af5-cc56-40fb-b91e-39a3c27d3f8a/Fit-Promise-Cooktop-psd"
+  }
+ ],
+ "ownerManuals": [
+  {
+   "altText": "Right to Repair",
+   "downloadUrl": "https://frigidaire.bynder.com/asset/bcec97fa-7adc-4c1c-aec6-4f5b72d6ccb6/Right_To_Repair_Frigidaire_en-pdf.pdf",
+   "language": "en",
+   "mime": "application/pdf"
+  },
+  {
+   "altText": "Droit à la réparation",
+   "downloadUrl": "https://frigidaire.bynder.com/asset/f882b190-9e6a-4ca1-b0ef-27ca2d0ba6d9/Right_To_Repair_Frigidaire_fr-pdf.pdf",
+   "language": "fr",
+   "mime": "application/pdf"
+  },
+  {
+   "altText": "Feuille de spécifications du produit",
+   "downloadUrl": "https://frigidaire.bynder.com/asset/eb05c0e8-29b5-4b22-99bc-a99e2c4e45a6/GCCG3048A_FR-pdf.pdf",
+   "language": "fr",
+   "mime": "application/pdf"
+  },
+  {
+   "altText": "Product Specifications Sheet",
+   "downloadUrl": "https://frigidaire.bynder.com/asset/b3e2d37d-6a04-485c-9da4-67c696a77fd0/GCCG3048A_EN-pdf.pdf",
+   "language": "en",
+   "mime": "application/pdf"
+  },
+  {
+   "altText": "Complete Owner's Guide",
+   "downloadUrl": "https://frigidaire.bynder.com/asset/324bcad1-c7ae-415b-a756-27924818501d/A01704507en-pdf.pdf",
+   "language": "en",
+   "mime": "application/pdf"
+  },
+  {
+   "altText": "Guide d'utilisation complet",
+   "downloadUrl": "https://frigidaire.bynder.com/asset/15f32685-4891-494b-b74d-d74d7c21123b/A01704507fr-pdf.pdf",
+   "language": "fr",
+   "mime": "application/pdf"
+  },
+  {
+   "altText": "Installation Instructions",
+   "downloadUrl": "https://frigidaire.bynder.com/asset/3652798b-6142-4b58-a0b1-8e9d16289898/A01705110-pdf.pdf",
+   "language": "en,fr,sp",
+   "mime": "application/pdf"
+  },
+  {
+   "altText": "Approved Built-In Appliance Combinations",
+   "downloadUrl": "https://frigidaire.bynder.com/asset/7ae8de8f-ce5d-4168-aac5-421bd7f33ba1/A22383401-pdf.pdf",
+   "language": "en,fr,sp",
+   "mime": "application/pdf"
+  },
+  {
+   "altText": "Canadian Product Specifications Sheet",
+   "downloadUrl": "https://frigidaire.bynder.com/asset/32cea27b-a385-4fe4-8e62-abeed478e60c/GCCG3048A_CA-pdf.pdf",
+   "language": "en",
+   "mime": "application/pdf"
+  }
+ ],
+ "productFeatures": [
+  {
+   "title": "PowerPlus® Burner "
+  },
+  {
+   "title": "Backlit LED Knobs"
+  },
+  {
+   "title": "Five Burner Cooktop"
+  },
+  {
+   "title": "Low Simmer Burner"
+  },
+  {
+   "title": "Dishwasher Safe Burner Caps"
+  },
+  {
+   "title": "Continuous Edge-to-Edge Grates"
+  }
+ ]
+}

@@ -1,0 +1,114 @@
+{
+"documents": [
+{
+"doc_type": [
+"installers-floor-damage-guide"
+],
+"language": [
+"en_ca",
+"en_us",
+"fr_ca"
+],
+"asseturl": "/content/dam/global/documents/201809/instruction-sheet-w11266642-revA.pdf"
+},
+{
+"doc_type": [
+"installation-instructions"
+],
+"language": [
+"en_ca",
+"en_us",
+"fr_ca"
+],
+"asseturl": "/content/dam/global/documents/202202/installation-instructions-w11508888-revb.pdf"
+},
+{
+"doc_type": [
+"instruction-sheet"
+],
+"language": [
+"en_ca",
+"en_us",
+"fr_ca"
+],
+"asseturl": "/content/dam/global/documents/202509/instruction-sheet-w11508888-revb.pdf"
+},
+{
+"doc_type": [
+"quick-start-guide"
+],
+"language": [
+"en_ca",
+"en_us",
+"fr_ca"
+],
+"asseturl": "/content/dam/global/documents/202003/reference-sheet-w11188827-revb.pdf"
+},
+{
+"doc_type": [
+"dimension-guide"
+],
+"language": [
+"en_ca",
+"en_us",
+"fr_ca"
+],
+"asseturl": "/content/dam/global/documents/202204/dimension-guide-w11358023-revD.pdf"
+},
+{
+"doc_type": [
+"temp-probe-guide"
+],
+"language": [
+"en_ca",
+"en_us",
+"fr_ca"
+],
+"asseturl": "/content/dam/global/documents/202108/temp-probe-guide-w11508911-reva.pdf"
+},
+{
+"doc_type": [
+"warranty"
+],
+"language": [
+"en_ca",
+"en_us",
+"fr_ca"
+],
+"asseturl": "/content/dam/global/documents/202303/warranty-w11562446-revA.pdf"
+},
+{
+"doc_type": [
+"owners-manual"
+],
+"language": [
+"en_ca",
+"en_us",
+"fr_ca"
+],
+"asseturl": "/content/dam/global/documents/202307/owners-manual-w11508896-revB.pdf"
+},
+{
+"doc_type": [
+"reference-sheet"
+],
+"language": [
+"en_ca",
+"en_us",
+"fr_ca"
+],
+"asseturl": "/content/dam/global/documents/202003/reference-sheet-w11177312-revd.pdf"
+},
+{
+"doc_type": [
+"internet-connectivity-guide"
+],
+"language": [
+"en_ca",
+"en_us",
+"fr_ca"
+],
+"asseturl": "/content/dam/global/documents/201910/internet-connectivity-guide-w11184746-reva.pdf"
+}
+]
+}

@@ -44,6 +44,31 @@ def test_fmt_dual():
             pass
 
 
+def test_parse_eu_number():
+    n = units.parse_eu_number
+    assert n("1.299,00 €") == 1299.0 and n("1 299,00 €") == 1299.0 and n("1 299,00 €") == 1299.0
+    assert n("1 299,00 €") == 1299.0 and n("EUR 2.499,-") == 2499.0 and n("ab 899,00 €") == 899.0
+    assert n("12,5 kg") == 12.5 and n("0,99") == 0.99 and n("1.234.567,89") == 1234567.89
+    assert n("1.299") == 1299.0 and n("1.5") == 1.5 and n("1299") == 1299.0 and n("1,299.50") == 1299.5
+    assert n("1'299,00") == 1299.0 and n(5) == 5.0 and n(2.5) == 2.5
+    assert n("") is None and n("abc") is None and n(None) is None and n(True) is None
+
+
+def test_eu_energy_class():
+    c = units.eu_energy_class
+    assert c("E") == "EU class E" and c(" b ") == "EU class B" and c("A+++") == "EU class A+++"
+    assert c("Energieeffizienzklasse C") == "EU class C" and c("Klasse E") == "EU class E"
+    assert c("classe énergétique F") == "EU class F" and c("Energy class: D (scale A to G)") == "EU class D"
+    assert c("A good fridge") is None and c("H") is None and c("") is None and c(None) is None
+
+
+def test_parse_kwh_per_year():
+    k = units.parse_kwh_per_year
+    assert k("123 kWh/Jahr") == 123.0 and k("1.234,5 kWh/Jahr") == 1234.5 and k("95 kWh/annum") == 95.0
+    assert k("157 kWh/an") == 157.0 and k("55 kWh per year") == 55.0 and k("180 kWh/a") == 180.0
+    assert k("60 kWh/100 cycles") is None and k("12 kWh/month") is None and k(None) is None
+
+
 if __name__ == "__main__":
     fns = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
     for fn in fns:

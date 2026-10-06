@@ -1,0 +1,155 @@
+{
+ "pagination": {
+  "currentPage": 0,
+  "pageSize": 3,
+  "sort": "relevance",
+  "totalPages": 9,
+  "totalResults": 26
+ },
+ "products": [
+  {
+   "bundleAvailable": false,
+   "categoryFallBack": {
+    "categoryFallBackCode": "kitchen/cooking/hobs/induction-hob",
+    "categoryFallBackENName": "Induction hob",
+    "categoryFallBackName": "Induction hob"
+   },
+   "code": "949598548",
+   "d2cExclusiveFlag": false,
+   "d2cSellable": true,
+   "description": "TO64IB00FZ",
+   "displayLowestPriceMesssage": false,
+   "displayToolTipForLowestPrice": false,
+   "flashPromoDR": false,
+   "hideShowPncFlag": false,
+   "isServiceable": false,
+   "kit": false,
+   "lowestPricePeriod": 0,
+   "minCTFError": false,
+   "modelId": "TO64IB00FZ",
+   "nakedProduct": false,
+   "name": "6000 Bridge SaphirMatt® Induction Hob 60cm",
+   "offerPrice": {
+    "currencyIso": "GBP",
+    "formattedValue": "£549.99",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 549.99
+   },
+   "price": {
+    "currencyIso": "GBP",
+    "formattedValue": "£599.99",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 599.99
+   },
+   "productURL": "https://www.aeg.co.uk/kitchen/cooking/hobs/induction-hob/to64ib00fz/",
+   "rrp": {
+    "currencyIso": "GBP",
+    "formattedValue": "£599.99",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 599.99
+   },
+   "rts": false,
+   "smallAppliance": false,
+   "suggestedDiscount": 0
+  },
+  {
+   "bundleAvailable": false,
+   "categoryFallBack": {
+    "categoryFallBackCode": "kitchen/cooking/hobs/induction-hob",
+    "categoryFallBackENName": "Induction hob",
+    "categoryFallBackName": "Induction hob"
+   },
+   "code": "949493042",
+   "d2cExclusiveFlag": false,
+   "d2cSellable": true,
+   "description": "TN64IA00FB",
+   "displayLowestPriceMesssage": false,
+   "displayToolTipForLowestPrice": false,
+   "flashPromoDR": false,
+   "hideShowPncFlag": false,
+   "isServiceable": false,
+   "kit": false,
+   "lowestPricePeriod": 0,
+   "minCTFError": false,
+   "modelId": "TN64IA00FB",
+   "nakedProduct": false,
+   "name": "5000 Induction Hob 60cm",
+   "offerPrice": {
+    "currencyIso": "GBP",
+    "formattedValue": "£299.99",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 299.99
+   },
+   "price": {
+    "currencyIso": "GBP",
+    "formattedValue": "£399.99",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 399.99
+   },
+   "productURL": "https://www.aeg.co.uk/kitchen/cooking/hobs/induction-hob/tn64ia00fb/",
+   "rrp": {
+    "currencyIso": "GBP",
+    "formattedValue": "£399.99",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 399.99
+   },
+   "rts": false,
+   "smallAppliance": false,
+   "suggestedDiscount": 0
+  },
+  {
+   "bundleAvailable": false,
+   "categoryFallBack": {
+    "categoryFallBackCode": "kitchen/cooking/hobs/induction-hob",
+    "categoryFallBackENName": "Induction hob",
+    "categoryFallBackName": "Induction hob"
+   },
+   "code": "949598196",
+   "d2cExclusiveFlag": false,
+   "d2cSellable": true,
+   "description": "IKX84443CB",
+   "displayLowestPriceMesssage": false,
+   "displayToolTipForLowestPrice": false,
+   "flashPromoDR": false,
+   "hideShowPncFlag": false,
+   "isServiceable": false,
+   "kit": false,
+   "lowestPricePeriod": 0,
+   "minCTFError": false,
+   "modelId": "IKX84443CB",
+   "nakedProduct": false,
+   "name": "6000 Bridge Induction Hob 80cm",
+   "offerPrice": {
+    "currencyIso": "GBP",
+    "formattedValue": "£499.99",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 499.99
+   },
+   "price": {
+    "currencyIso": "GBP",
+    "formattedValue": "£599.99",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 599.99
+   },
+   "productURL": "https://www.aeg.co.uk/kitchen/cooking/hobs/induction-hob/ikx84443cb/",
+   "rrp": {
+    "currencyIso": "GBP",
+    "formattedValue": "£599.99",
+    "isRange": false,
+    "priceType": "BUY",
+    "value": 599.99
+   },
+   "rts": false,
+   "smallAppliance": false,
+   "suggestedDiscount": 0
+  }
+ ]
+}

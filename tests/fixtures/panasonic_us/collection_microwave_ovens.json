@@ -1,0 +1,340 @@
+{
+"products": [
+{
+"title": "1.0 cu.ft. Japanese Microwave with the Genius® Sensor 2.0 + Inverter Technology, 1200W - NN-SF57RM",
+"handle": "1-cu-ft-japanese-microwave-with-genuis-sensor-2-0-inverter-technology-12000w-nn-sf57rm",
+"product_type": "Microwaves",
+"variants": [
+{
+"sku": "NN-SF57RM",
+"price": "359.99",
+"available": true
+}
+]
+},
+{
+"title": "HomeCHEF® Connect 4-in-1 Multi-oven, 1.2 cu. ft., 1000W",
+"handle": "home-chef-connect-4-in-1-multi-oven",
+"product_type": "Microwaves",
+"variants": [
+{
+"sku": "NN-CV88QS",
+"price": "458.04",
+"available": true
+}
+]
+},
+{
+"title": "2.2 cu.ft. Countertop Cyclonic Wave Inverter Microwave Oven, 1250W - NN-SE985S",
+"handle": "2-2-cu-ft-countertop-cyclonic-wave-inverter-microwave-oven-1250w-nn-se985s",
+"product_type": "Microwaves",
+"variants": [
+{
+"sku": "NN-SE985S",
+"price": "544.95",
+"available": true
+}
+]
+},
+{
+"title": "2.2 cu.ft. Countertop Cyclonic Wave Inverter Microwave Oven, 1250W - NN-SD975S",
+"handle": "2-2-cu-ft-countertop-cyclonic-wave-inverter-microwave-oven-1250w-nn-sd975s",
+"product_type": "Microwaves",
+"variants": [
+{
+"sku": "NN-SD975S",
+"price": "474.95",
+"available": true
+}
+]
+},
+{
+"title": "2.2 cu.ft. Cyclonic Wave Inverter Microwave, 1250W - NN-SN98JS",
+"handle": "1250w-nn-sn98js-cyclonic-inverter",
+"product_type": "Microwaves",
+"variants": [
+{
+"sku": "NN-SN98JS",
+"price": "349.95",
+"available": false
+}
+]
+},
+{
+"title": "2.2 cu.ft. Countertop Cyclonic Wave Inverter Microwave Oven, 1250W - NN-SN97JS",
+"handle": "2-2-cu-ft-countertop-cyclonic-wave-inverter-microwave-oven-1250w-nn-sn97js",
+"product_type": "Microwaves",
+"variants": [
+{
+"sku": "NN-SN97JS",
+"price": "294.95",
+"available": false
+}
+]
+},
+{
+"title": "2.2 Cu. Ft. Inverter Microwave 1250W NN-SN95HS",
+"handle": "2-2-cu-ft-inverter-microwave-1250w-nn-sn95hs",
+"product_type": "Microwaves",
+"variants": [
+{
+"sku": "NN-SN95HSATH",
+"price": "419.95",
+"available": true
+}
+]
+},
+{
+"title": "1.6 cu.ft Cyclonic Wave Inverter Microwave Oven, 1250W - NN-SD77PS",
+"handle": "nn-sd77ps-1-6cft-inverter-microwave-oven",
+"product_type": "Microwaves",
+"variants": [
+{
+"sku": "NN-SD77PS",
+"price": "429.95",
+"available": true
+}
+]
+},
+{
+"title": "1.6 cu. ft. Cyclonic Wave Inverter Microwave Oven, 1250W - NN-SN74P",
+"handle": "nn-sn74pw-1-6cft-inverter-microwave-oven",
+"product_type": "Microwaves",
+"variants": [
+{
+"sku": "NN-SN74PW",
+"price": "334.95",
+"available": true
+}
+]
+},
+{
+"title": "1.6 cu.ft. Countertop Cyclonic Wave Inverter Microwave Oven, 1250W - NN-SE785S",
+"handle": "1-6-cu-ft-countertop-cyclonic-wave-inverter-microwave-oven-1250w-nn-se785s",
+"product_type": "Microwaves",
+"variants": [
+{
+"sku": "NN-SE785S",
+"price": "479.95",
+"available": true
+}
+]
+},
+{
+"title": "1.6 cu.ft. Countertop Cyclonic Wave Inverter Microwave Oven, 1250W - NN-SD78LS",
+"handle": "1-6-cu-ft-countertop-cyclonic-wave-inverter-microwave-oven-1250w-nn-sd78ls",
+"product_type": "Microwaves",
+"variants": [
+{
+"sku": "NN-SD78LS",
+"price": "399.95",
+"available": true
+}
+]
+},
+{
+"title": "1.6 cu.ft. Countertop Cyclonic Wave Inverter Microwave Oven, 1250W -NN-SN76LS",
+"handle": "1-6-cu-ft-cyclonic-wave-inverter-countertop-microwave-oven-1250w-nn-sn76ls",
+"product_type": "Microwaves",
+"variants": [
+{
+"sku": "NN-SN76LS",
+"price": "329.95",
+"available": false
+}
+]
+},
+{
+"title": "1.6 cu.ft. Countertop Cyclonic Wave Inverter Microwave Oven, 1250W -NN-SN75L",
+"handle": "1-6-cu-ft-cyclonic-wave-inverter-microwave-1250w-nn-sn75l",
+"product_type": "Microwaves",
+"variants": [
+{
+"sku": "NN-SN75LB",
+"price": "344.95",
+"available": true
+}
+]
+},
+{
+"title": "1.3 cu. ft. Countertop Inverter Microwave Oven, 1100W - NN-SU676S",
+"handle": "1-3-cu-ft-countertop-microwave-oven-with-genius-sensor-inverter-technology-1100w-nnsu676s",
+"product_type": "Microwaves",
+"variants": [
+{
+"sku": "NN-SU676S",
+"price": "244.95",
+"available": true
+}
+]
+},
+{
+"title": "1.3 Cu. Ft. HomeMADE Countertop Inverter Microwave Multi-Oven with Convection Air Frying Great for Pizza - NN-CD66NS",
+"handle": "1-3-cu-ft-countertop-inverter-microwave-multi-oven-with-air-fryer",
+"product_type": "Microwaves",
+"variants": [
+{
+"sku": "NN-CD66NS",
+"price": "369.95",
+"available": false
+}
+]
+},
+{
+"title": "1.3 Cu. Ft. HomeMADE Countertop Microwave Multi-Oven with Convection Air Frying + Great for Pizza - NN-CD65NS",
+"handle": "nn-cd65ns-1-3cft-non-inverter-microwave-oven-with-air-fryer",
+"product_type": "Microwaves",
+"variants": [
+{
+"sku": "NN-CD65NS",
+"price": "294.95",
+"available": true
+}
+]
+},
+{
+"title": "1.3 cu. ft. Countertop Microwave Oven, 1100W - NN-SU696S",
+"handle": "1-3-cu-ft-countertop-microwave-oven-1100w-nn-su696s",
+"product_type": "Microwaves",
+"variants": [
+{
+"sku": "NN-SU696S",
+"price": "134.95",
+"available": true
+}
+]
+},
+{
+"title": "1.3 cu. ft. Microwave, 1100W - NN-SU656",
+"handle": "1-3-cu-ft-microwave-1100w-nn-su656",
+"product_type": "Microwaves",
+"variants": [
+{
+"sku": "NN-SU656B",
+"price": "224.95",
+"available": false
+}
+]
+},
+{
+"title": "1.2 Cu. Ft. Countertop Inverter Microwave Oven 1250W - NN-SN65QSD",
+"handle": "1-2-cu-ft-countertop-inverter-microwave-oven-1250w-nn-sn65qsd",
+"product_type": "Microwaves",
+"variants": [
+{
+"sku": "NN-SN65QSD",
+"price": "299.95",
+"available": false
+}
+]
+},
+{
+"title": "1.2 cu. ft. Countertop Genius Sensor Microwave Oven, 1200W - NN-SN66KB",
+"handle": "1-2-cu-ft-countertop-genius-sensor-microwave-oven-1200w-nn-sn66kb",
+"product_type": "Microwaves",
+"variants": [
+{
+"sku": "NN-SN66KB",
+"price": "309.95",
+"available": true
+}
+]
+},
+{
+"title": "1.2 cu. ft. Countertop Inverter Microwave Oven, 1200W - NN-SN68KS",
+"handle": "1-2-cu-ft-countertop-inverter-microwave-oven-1200w-nn-sn68ks",
+"product_type": "Microwaves",
+"variants": [
+{
+"sku": "NN-SN68KS",
+"price": "299.95",
+"available": true
+}
+]
+},
+{
+"title": "1.2 cu. ft. Countertop Inverter Microwave Oven, 1200W - NN-SN686SR",
+"handle": "1-2-cu-ft-countertop-inverter-microwave-oven-1200w-nn-sn686sr",
+"product_type": "Microwaves",
+"variants": [
+{
+"sku": "NN-SN686SR",
+"price": "294.95",
+"available": true
+}
+]
+},
+{
+"title": "1.2 cu.ft. Countertop Inverter Microwave Oven, 1200W - NN-SN65K",
+"handle": "1-2-cu-ft-countertop-microwave-oven-inverter-nn-sn65kb",
+"product_type": "Microwaves",
+"variants": [
+{
+"sku": "NN-SN65KB",
+"price": "191.95",
+"available": true
+}
+]
+},
+{
+"title": "1.2 cu. ft. Countertop Inverter Microwave Oven 1250W - NN-SN68QB",
+"handle": "1-2-cu-ft-countertop-inverter-microwave-oven-1250w-nn-sn68qb",
+"product_type": "Microwaves",
+"variants": [
+{
+"sku": "NN-SN68QB",
+"price": "169.95",
+"available": false
+}
+]
+},
+{
+"title": "0.9 cu.ft. Compact Microwave Oven, 900W - NN-SB438S",
+"handle": "0-9-cu-ft-compact-microwave-oven-900w-nn-sb438s",
+"product_type": "Microwaves",
+"variants": [
+{
+"sku": "NN-SB438S",
+"price": "149.95",
+"available": false
+}
+]
+},
+{
+"title": "0.9 cu.ft. Countertop Microwave Oven, 1000W - NN-SD47QS",
+"handle": "0-9-cu-ft-countertop-microwave-oven-1000w-nn-sd47qs",
+"product_type": "Microwaves",
+"variants": [
+{
+"sku": "NN-SD47QS",
+"price": "239.95",
+"available": false
+}
+]
+},
+{
+"title": "1.2 Cu. Ft. Inverter Microwave 1250W - NN-SN65QW",
+"handle": "1-2-cu-ft-inverter-microwave-1250w-nn-sn65qw",
+"product_type": "Microwaves",
+"variants": [
+{
+"sku": "NN-SN65QW",
+"price": "279.95",
+"available": true
+}
+]
+},
+{
+"title": "1.2 Cu. Ft. Inverter Microwave 1250W - NN-SN68QS",
+"handle": "1-2-cu-ft-inverter-microwave-1250w-nn-sn68qs",
+"product_type": "Microwaves",
+"variants": [
+{
+"sku": "NN-SN68QS",
+"price": "299.95",
+"available": true
+}
+]
+}
+]
+}

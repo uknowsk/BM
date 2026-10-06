@@ -1,0 +1,1739 @@
+{
+ "code": "ECWM3012AS",
+ "name": "30\" Wall Oven and Microwave Combination",
+ "color": "Stainless Steel",
+ "price": {
+  "bestValue": false,
+  "currencyIso": "USD",
+  "formattedValue": "$3,999.00",
+  "priceType": "BUY",
+  "value": 3999
+ },
+ "categories": [
+  {
+   "code": "M_FoodPreparation_WallOvens_MicrowaveCombination",
+   "name": "Microwave Combination Ovens"
+  },
+  {
+   "code": "Promo_ELX_FlashSale",
+   "name": "Flash Sale"
+  }
+ ],
+ "classifications": [
+  {
+   "code": "HDR_Controls",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Controls.api_2cont_lock",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Control Lock",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Controls.api_2cont_sabbath",
+     "comparable": true,
+     "description": "PL Product,AHAM,Key,PCT",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Sabbath Mode",
+     "range": false
+    }
+   ],
+   "name": "Controls"
+  },
+  {
+   "code": "HDR_Cooking_Controls",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_air_fry",
+     "comparable": true,
+     "description": "Basics,PL Product,AHAM,PCT",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Air Fry",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_airsous",
+     "comparable": true,
+     "description": "PL Product,AHAM",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Air Sous Vide",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_bake",
+     "comparable": true,
+     "description": "Basics,PL Product,PCT",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Bake",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_baketime",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Bake Time",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_breadproof",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Bread Proof",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_broil",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Broil",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_cancel",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Cancel",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_childlockcook",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Child Lock",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_clearoff",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Clear Off",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_clock",
+     "comparable": true,
+     "description": "Basics,PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Clock",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_convbake",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Convection Bake",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_convroast",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Convection Roast",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_cooktime",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Cook Time",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_dehydrate",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Dehydrate",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_delayclean",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Delay Clean",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_delaystart",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Delay Start",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_fastpreheat",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Fast Preheat",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_keepwarm",
+     "comparable": true,
+     "description": "Basics,PL Product,PCT",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Keep Warm",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_kitchentimer",
+     "comparable": true,
+     "description": "Basics,PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Kitchen Timer",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_light",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Light",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_favorite",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "My Favorite",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_off",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Off",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_ovenlight",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Oven Light",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_perfectturkey",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Perfect Turkey",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_preheat",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Preheat",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_probe",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Probe",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_selfclean",
+     "comparable": true,
+     "description": "Basics,PL Product,AHAM,PCT",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Self Clean",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_setclock",
+     "comparable": true,
+     "description": "Basics,PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Set Clock",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_slowcook",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Slow Cook",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_start",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Start",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_starttime",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Start Time",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_steambake",
+     "comparable": true,
+     "description": "PL Product,AHAM",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Steam Bake",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_steamclean",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Steam Clean",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_steamroast",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Steam Roast",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_stop",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Stop",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_tempdisplay",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Temperature Display",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_timedbake",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Timed Bake",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_timeronoff",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Timer On / Off",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls.api_2cont_userpref",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "User Preferences",
+     "range": false
+    }
+   ],
+   "name": "Cooking Controls"
+  },
+  {
+   "code": "HDR_Cooking_Controls_Function",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls_Function.api_2cont_conbakeoresave",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Change between Continuous Bake Setting or 12-Hour Energy Saving Feature",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls_Function.api_2cont_delayedbake",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Delayed Bake",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls_Function.api_2cont_fahorcel",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Program Fahrenheit or Celsius",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls_Function.api_2cont_silentconpan",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Silent Control Panel",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Cooking_Controls_Function.api_2cont_timedcooking",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Timed Cooking",
+     "range": false
+    }
+   ],
+   "name": "Cooking Controls Function"
+  },
+  {
+   "code": "HDR_CertificationsApprovals",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_CertificationsApprovals.api_cert_adacompliant",
+     "comparable": true,
+     "description": "PL Product,AHAM",
+     "featureValues": [
+      {
+       "value": "No"
+      }
+     ],
+     "name": "ADA Compliant",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_CertificationsApprovals.api_cert_csacertified",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "CSA Listed",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_CertificationsApprovals.api_2ca_rohs",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "RoHS",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_CertificationsApprovals.api_cert_sabbathmodecertified",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Star-K Certification",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_CertificationsApprovals.api_2ca_ul",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "UL Listed",
+     "range": false
+    }
+   ],
+   "name": "Certifications and Approvals"
+  },
+  {
+   "code": "HDR_DimensionsandVolume",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_customerheight",
+     "comparable": true,
+     "description": "PL Product,AHAM,Height,PCT",
+     "featureValues": [
+      {
+       "value": "41 9/16\""
+      }
+     ],
+     "name": "Height",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_customerwidth",
+     "comparable": true,
+     "description": "PL Product,AHAM,Width,PCT",
+     "featureValues": [
+      {
+       "value": "28 7/8\""
+      }
+     ],
+     "name": "Width",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_customerdepth",
+     "comparable": true,
+     "description": "PL Product,AHAM,Depth,PCT",
+     "featureValues": [
+      {
+       "value": "27 3/5\""
+      }
+     ],
+     "name": "Depth",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_height",
+     "comparable": true,
+     "description": "Basics,PL Product,Key",
+     "featureValues": [
+      {
+       "value": "41 9/16\""
+      }
+     ],
+     "name": "Height",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_width",
+     "comparable": true,
+     "description": "Basics,PL Product,Key",
+     "featureValues": [
+      {
+       "value": "28 7/8\""
+      }
+     ],
+     "name": "Width",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_depth",
+     "comparable": true,
+     "description": "Basics,PL Product,Key",
+     "featureValues": [
+      {
+       "value": "25 3/16\""
+      }
+     ],
+     "name": "Depth",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_depth90",
+     "comparable": true,
+     "description": "Basics,PL Product,Key",
+     "featureValues": [
+      {
+       "value": "47 3/16\""
+      }
+     ],
+     "name": "Depth With Door 90° Open",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_depthhandle",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "27 3/5\""
+      }
+     ],
+     "name": "Depth With Handle",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_codepth",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "23 5/8\""
+      }
+     ],
+     "name": "Cutout Depth",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_ovenintheight",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "18 1/8\""
+      }
+     ],
+     "name": "Oven Interior Height",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_ovenintwidth",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "25 3/16\""
+      }
+     ],
+     "name": "Oven Interior Width",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_ovenintdepth",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "19 7/8\""
+      }
+     ],
+     "name": "Oven Interior Depth",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_microintheight",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "9 5/16\""
+      }
+     ],
+     "name": "Microwave Interior Height",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_microintwidth",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "18 7/8\""
+      }
+     ],
+     "name": "Microwave Interior Width",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_mincoheight",
+     "comparable": true,
+     "description": "PL Product,Key",
+     "featureValues": [
+      {
+       "value": "40 5/8\""
+      }
+     ],
+     "name": "Minimum Cutout Height",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_microintdepth",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "16 1/8\""
+      }
+     ],
+     "name": "Microwave Interior Depth",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_mincowidth",
+     "comparable": true,
+     "description": "PL Product,Key",
+     "featureValues": [
+      {
+       "value": "28 1/2\""
+      }
+     ],
+     "name": "Minimum Cutout Width",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_maxcoheight",
+     "comparable": true,
+     "description": "PL Product,Key",
+     "featureValues": [
+      {
+       "value": "41 1/2\""
+      }
+     ],
+     "name": "Maximum Cutout Height",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_maxcowidth",
+     "comparable": true,
+     "description": "PL Product,Key",
+     "featureValues": [
+      {
+       "value": "29\""
+      }
+     ],
+     "name": "Maximum Cutout Width",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_microcap",
+     "comparable": true,
+     "description": "Basics,PL Product,AHAM,PCT",
+     "featureValues": [
+      {
+       "value": "1.7 Cu. Ft."
+      }
+     ],
+     "name": "Microwave Capacity",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_DimensionsandVolume.api_2dimvol_ovencap",
+     "comparable": true,
+     "description": "Basics,PL Product,PLP,PCT",
+     "featureValues": [
+      {
+       "value": "5.3 Cu. Ft."
+      }
+     ],
+     "name": "Oven Capacity",
+     "range": false
+    }
+   ],
+   "name": "Dimensions and Volume"
+  },
+  {
+   "code": "HDR_ElectricalSpecifications",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_ElectricalSpecifications.api_2es_amps240",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "40 Amps"
+      }
+     ],
+     "name": "Amps @ 240 Volts",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_ElectricalSpecifications.api_2es_connectedload240",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "8.3 kW"
+      }
+     ],
+     "name": "Connected Load @ 240V",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_ElectricalSpecifications.api_2es_mincir",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "40 Amps"
+      }
+     ],
+     "name": "Minimum Circuit Required",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_ElectricalSpecifications.api_2es_voltrating",
+     "comparable": true,
+     "description": "PL Product,AHAM",
+     "featureValues": [
+      {
+       "value": "240 V"
+      }
+     ],
+     "name": "Voltage Rating",
+     "range": false
+    }
+   ],
+   "name": "Electrical Specifications"
+  },
+  {
+   "code": "HDR_GeneralSpecifications",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_GeneralSpecifications.api_2gen_prodweight",
+     "comparable": true,
+     "description": "PL Product,AHAM",
+     "featureValues": [
+      {
+       "value": "245 lbs"
+      }
+     ],
+     "name": "Product Weight",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_GeneralSpecifications.api_gen_prop_65",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Prop 65 Label",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_GeneralSpecifications.api_2gen_warlabor",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "1 Year"
+      }
+     ],
+     "name": "Warranty - Labor",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_GeneralSpecifications.api_2gen_warparts",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "1 Year"
+      }
+     ],
+     "name": "Warranty - Parts",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_GeneralSpecifications.api_gen_ab1200",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Information available at electrolux.com/en/ab1200"
+      }
+     ],
+     "name": "AB-1200",
+     "range": false
+    }
+   ],
+   "name": "General Specifications"
+  },
+  {
+   "code": "HDR_InstallationType",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_InstallationType.api_2install_powerloc",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Top Left"
+      }
+     ],
+     "name": "Power Supply Connection Location",
+     "range": false
+    }
+   ],
+   "name": "Installation"
+  },
+  {
+   "code": "HDR _Internal_Specifications",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR _Internal_Specifications.api_2intspec_rack",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Rack",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR _Internal_Specifications.api_2intspec_turntablediam",
+     "comparable": true,
+     "description": "Basics,PL Product,PCT",
+     "featureValues": [
+      {
+       "value": "14\""
+      }
+     ],
+     "name": "Turntable Diameter",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR _Internal_Specifications.api_2intspec_turntablemat",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Glass"
+      }
+     ],
+     "name": "Turntable Material",
+     "range": false
+    }
+   ],
+   "name": "Internal Specifications"
+  },
+  {
+   "code": "HDR_MicrowaveOvenControls",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_MicrowaveOvenControls.api_2cookopt_microwavepower",
+     "comparable": true,
+     "description": "Basics,PL Product,PCT",
+     "featureValues": [
+      {
+       "value": "1000 Watts"
+      }
+     ],
+     "name": "Microwave Cooking Power",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_MicrowaveOvenControls.api_2oto_bacon",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Bacon",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_MicrowaveOvenControls.api_2oto_beverage",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Beverage",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_MicrowaveOvenControls.api_2oto_defrost",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Defrost",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_MicrowaveOvenControls.api_2oto_softmelt",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Melt / Soften",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_MicrowaveOvenControls.api_2oto_popcorn",
+     "comparable": true,
+     "description": "Basics,PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Popcorn",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_MicrowaveOvenControls.api_2cookopt_reheat",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Reheat",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_MicrowaveOvenControls.api_2oto_rice",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Rice",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_MicrowaveOvenControls.api_2cookopt_topgrill",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Top Grill Mode",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_MicrowaveOvenControls.api_2oto_veggies",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Veggies",
+     "range": false
+    }
+   ],
+   "name": "Microwave Cooking"
+  },
+  {
+   "code": "HDR_Oven_1",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Oven_1.api_2oven_bakewatts",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "2500 Watts"
+      }
+     ],
+     "name": "Bake Element",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Oven_1.api_2oven_bakepass",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "8"
+      }
+     ],
+     "name": "Bake Element Pass",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Oven_1.api_2oven_baketype",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Hidden"
+      }
+     ],
+     "name": "Bake Element Type",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Oven_1.api_2oven_broilwatts",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "4000 Watts"
+      }
+     ],
+     "name": "Broil Element",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Oven_1.api_2oven_broilpass",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "6"
+      }
+     ],
+     "name": "Broil Element Pass",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Oven_1.api_2oven_broilsystem",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Broil System",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Oven_1.api_2oven_cleaningsystem",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Cleaning System",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Oven_1.api_2oven_convection",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Convection",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Oven_1.api_2oven_convectionwatts",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "3800 Watts"
+      }
+     ],
+     "name": "Convection Element",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Oven_1.api_2oven_convectiontype",
+     "comparable": true,
+     "description": "Basics,PL Product,PCT",
+     "featureValues": [
+      {
+       "value": "Total"
+      }
+     ],
+     "name": "Convection Type",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Oven_1.api_2oven_convectionfans",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "1"
+      }
+     ],
+     "name": "Number of Convection Fans",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Oven_1.api_2oven_numrackpos",
+     "comparable": true,
+     "description": "Basics,PL Product",
+     "featureValues": [
+      {
+       "value": "6"
+      }
+     ],
+     "name": "Number of Rack Positions",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Oven_1.api_2oven_intcolor",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Midnight Black"
+      }
+     ],
+     "name": "Oven Interior Color",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Oven_1.api_2oven_lightquant",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "2"
+      }
+     ],
+     "name": "Oven Light Quantity",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Oven_1.api_2oven_lighttype",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Halogen"
+      }
+     ],
+     "name": "Oven Light Type",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Oven_1.api_2oven_lightwatts",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "40 Watts"
+      }
+     ],
+     "name": "Oven Light Watts",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Oven_1.api_2oven_rackpostype",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Embossed"
+      }
+     ],
+     "name": "Rack Position Type",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Oven_1.api_2oven_rack1",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Handle Bull Nose"
+      }
+     ],
+     "name": "Rack Type 1",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Oven_1.api_2oven_numrack1",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "1"
+      }
+     ],
+     "name": "Rack Type 1 Quantity",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Oven_1.api_2oven_rack2",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Glide"
+      }
+     ],
+     "name": "Rack Type 2",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Oven_1.api_2oven_numrack2",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "1"
+      }
+     ],
+     "name": "Rack Type 2 Quantity",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Oven_1.api_2oven_rack3",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Air Fry Tray"
+      }
+     ],
+     "name": "Rack Type 3",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Oven_1.api_2oven_numrack3",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "1"
+      }
+     ],
+     "name": "Rack Type 3 Quantity",
+     "range": false
+    }
+   ],
+   "name": "Oven"
+  },
+  {
+   "code": "HDR_Microwave_Control_Features",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Microwave_Control_Features.api_2oto_30sec",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes - One Touch"
+      }
+     ],
+     "name": "+ 30 Seconds",
+     "range": false
+    }
+   ],
+   "name": "Microwave Control Features"
+  },
+  {
+   "code": "HDR_Display",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Display.api_2dis_interfacecolor",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "White"
+      }
+     ],
+     "name": "Display Interface Color",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Display.api_2dis_lightcolor",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "White"
+      }
+     ],
+     "name": "Display Light Color",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Display.api_2dis_type",
+     "comparable": true,
+     "description": "Basics,PL Product,AHAM,PCT",
+     "featureValues": [
+      {
+       "value": "Capacitive Touch"
+      }
+     ],
+     "name": "Display Type",
+     "range": false
+    }
+   ],
+   "name": "Display"
+  },
+  {
+   "code": "HDR_Convection_Cooking",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Convection_Cooking.api_2oto_ccbake",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "Convection Cooking - Bake",
+     "range": false
+    },
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Convection_Cooking.api_2oto_convelement",
+     "comparable": true,
+     "description": "PL Product",
+     "featureValues": [
+      {
+       "value": "1650 Watts"
+      }
+     ],
+     "name": "Convection Element",
+     "range": false
+    }
+   ],
+   "name": "Convection Cooking"
+  },
+  {
+   "code": "HDR_Home_Automation",
+   "features": [
+    {
+     "code": "eluxClassificationCatalog/1.0/HDR_Home_Automation.api_hau_wifienabled",
+     "comparable": true,
+     "description": "PL Product,AHAM",
+     "featureValues": [
+      {
+       "value": "Yes"
+      }
+     ],
+     "name": "﻿﻿Wi-Fi Enabled",
+     "range": false
+    }
+   ],
+   "name": "Connectivity"
+  }
+ ],
+ "plpImage": "https://frigidaire.bynder.com/transform/9ea25c8f-0613-4792-bc3c-9ca736b52379/ECWM3012AS-HOV-psd",
+ "categoryUrl": "/kitchen/wall-ovens/microwave-combination-ovens",
+ "baseProduct": "ECWM3012A",
+ "url": "/c//p/ECWM3012AS",
+ "msrpUSD": 5099,
+ "images": [
+  {
+   "altText": "",
+   "code": "ECWM3012AS_183648",
+   "description": "Product - Dimensions",
+   "displayOrder": "5",
+   "imageType": "GALLERY",
+   "url": "https://na2.electroluxmedia.com/XL/Electrolux/Electrolux%20Assets/Images/Product%20Photography/ECWM3012AS-DIM.jpg"
+  },
+  {
+   "altText": "",
+   "code": "ECWM3012AS_457428",
+   "description": "Product - Dimensions",
+   "displayOrder": "5",
+   "imageType": "GALLERY",
+   "url": "https://frigidaire.bynder.com/transform/178b42ed-ded2-46ad-aa8f-5aef142ca3c8/ECWM3012AS-DIM-psd"
+  },
+  {
+   "altText": "",
+   "code": "ECWM3012AS_90036",
+   "description": "Product - Open / Loaded",
+   "displayOrder": "20",
+   "imageType": "GALLERY",
+   "url": "https://na2.electroluxmedia.com/XL/Electrolux/Electrolux%20Assets/Images/Product%20Photography/ECWM3012AS-OL.jpg"
+  }
+ ],
+ "ownerManuals": [
+  {
+   "altText": "Right to Repair",
+   "downloadUrl": "https://frigidaire.bynder.com/asset/0b8539fe-9136-4c1b-a700-a57044e492c9/Right_To_Repair_Electrolux_en-pdf.pdf",
+   "language": "en",
+   "mime": "application/pdf"
+  },
+  {
+   "altText": "Droit à la réparation",
+   "downloadUrl": "https://frigidaire.bynder.com/asset/65c52bb5-16a1-476e-b188-5b215bcccd99/Right_To_Repair_Electrolux_fr-pdf.pdf",
+   "language": "fr",
+   "mime": "application/pdf"
+  },
+  {
+   "altText": "Product Specifications Sheet",
+   "downloadUrl": "https://frigidaire.bynder.com/m/5b4e63363fd8aa0a/original/ECWM3012A_EN-pdf.pdf",
+   "language": "en",
+   "mime": "application/pdf"
+  },
+  {
+   "altText": "Feuille de spécifications du produit",
+   "downloadUrl": "https://frigidaire.bynder.com/m/62597eb98a825e7e/original/ECWM3012A_FR-pdf.pdf",
+   "language": "fr",
+   "mime": "application/pdf"
+  },
+  {
+   "altText": "Complete Owner's Guide",
+   "downloadUrl": "https://frigidaire.bynder.com/m/145691a630d81a45/original/807574613en-pdf.pdf",
+   "language": "en",
+   "mime": "application/pdf"
+  },
+  {
+   "altText": "Guide d'utilisation complet",
+   "downloadUrl": "https://frigidaire.bynder.com/m/39f687ac4e8e6c4a/original/807574613fr-pdf.pdf",
+   "language": "fr",
+   "mime": "application/pdf"
+  },
+  {
+   "altText": "Quick Start Guide",
+   "downloadUrl": "https://frigidaire.bynder.com/m/14df3b80cae5be74/original/A20415716-pdf.pdf",
+   "language": "en",
+   "mime": "application/pdf"
+  },
+  {
+   "altText": "Guide de démarrage rapide",
+   "downloadUrl": "https://frigidaire.bynder.com/m/227922025f00520d/original/A20415717-pdf.pdf",
+   "language": "fr",
+   "mime": "application/pdf"
+  },
+  {
+   "altText": "Installation Instructions",
+   "downloadUrl": "https://frigidaire.bynder.com/m/6388c940520f882/original/807611007-pdf.pdf",
+   "language": "en,fr,sp",
+   "mime": "application/pdf"
+  },
+  {
+   "altText": "Connected Card",
+   "downloadUrl": "https://frigidaire.bynder.com/m/6cfadcaba07dd761/original/A19023903-pdf.pdf",
+   "language": "en",
+   "mime": "application/pdf"
+  },
+  {
+   "altText": "Carte connectée",
+   "downloadUrl": "https://frigidaire.bynder.com/m/1789f411c08b3c89/original/A19023904-pdf.pdf",
+   "language": "fr",
+   "mime": "application/pdf"
+  },
+  {
+   "altText": "Canadian Product Specifications Sheet",
+   "downloadUrl": "https://frigidaire.bynder.com/m/4cba6aad2b38913d/original/ECWM3012A_CA-pdf.pdf",
+   "language": "en",
+   "mime": "application/pdf"
+  }
+ ],
+ "productFeatures": [
+  {
+   "title": "Air Sous Vide Technology"
+  },
+  {
+   "title": "Steam Bake & Steam Roast"
+  },
+  {
+   "title": "Built-In Air Fry"
+  },
+  {
+   "title": "Electrolux Connect Technology"
+  },
+  {
+   "title": "Advanced Convection"
+  },
+  {
+   "title": "Full-Color Touch Controls"
+  }
+ ]
+}

@@ -267,7 +267,7 @@ def test_supported_subcategories_and_codes():
     import catalog
     assert s.SUPPORTED_SUBCATEGORIES == {"french_door", "side_by_side", "top_freezer", "top_load", "front_load",
                                          "dryer", "laundry_center", "microwave", "otr", "sco", "gas_oven",
-                                         "electric_oven", "induction", "radiant"}
+                                         "gas_cooktop", "electric_oven", "induction", "radiant"}
     assert s.SUPPORTED_SUBCATEGORIES <= set(catalog.sub_keys())
     assert all(catalog.major_of(sub) == major for sub, (major, _) in s.SUB_SOURCES.items())
 
@@ -275,7 +275,7 @@ def test_supported_subcategories_and_codes():
 def test_search_classification_counts_per_sub_key():
     assert _search_counts("fridge") == {"french_door": 28, "side_by_side": 6, "top_freezer": 4}  # 2 upright freezers dropped
     assert _search_counts("laundry") == {"top_load": 7, "front_load": 7, "dryer": 15, "laundry_center": 4}  # 6 F- packages dropped
-    assert _search_counts("cooking") == {"sco": 3, "gas_oven": 8, "electric_oven": 6, "induction": 7, "radiant": 10}  # hoods, gas cooktops dropped
+    assert _search_counts("cooking") == {"sco": 3, "gas_oven": 8, "gas_cooktop": 3, "electric_oven": 6, "induction": 7, "radiant": 10}  # hoods dropped
     assert _search_counts("microwave") == {"microwave": 1, "otr": 9}
 
 
@@ -289,6 +289,7 @@ def test_cooking_fixture_has_no_model_under_two_subs():
     assert not by_sub["sco"] & by_sub["electric_oven"]
     assert "NSG90H60SRAA" in by_sub["gas_oven"] and "NX60A6711SSAA" in by_sub["gas_oven"]
     assert "NSE80H63XRAA" in by_sub["radiant"] and "NZ30K7570RSAA" in by_sub["radiant"]  # electric range + cooktop
+    assert {"NA30N6555TSAA", "NA30R5310FSAA"} <= by_sub["gas_cooktop"] and not by_sub["gas_cooktop"] & by_sub["gas_oven"]
     assert "NSE80H63XRAA" not in by_sub["gas_oven"] and "NSI6DG9550SRAA" in by_sub["induction"]
 
 
@@ -317,7 +318,8 @@ def test_classify_edge_cases():
     assert s.classify("cooking-appliances/wall-ovens", "Microwave Combination Wall Oven", "") == "sco"
     assert s.classify("cooking-appliances/wall-ovens", "Double Wall Oven", "08080102") == "electric_oven"
     assert s.classify("cooking-appliances/ranges", "Slide-in Induction Range", "08080204") == "induction"
-    assert s.classify("cooking-appliances/cooktops", "Gas Cooktop", "08080301") is None
+    assert s.classify("cooking-appliances/cooktops", "Gas Cooktop", "08080301") == "gas_cooktop"
+    assert s.classify("cooking-appliances/cooktops", "Gas Cooktop 30in", "") == "gas_cooktop"  # by name
     assert s.classify("cooking-appliances/range-hoods", "Hood", "08080401") is None
     assert s.classify("refrigerators/one-door", "Upright", "") is None
     assert s.classify("dishwashers/built-in", "Dishwasher") is None

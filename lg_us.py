@@ -106,8 +106,10 @@ SUB_RULES: dict[str, _Rule] = {
     "microwave": _Rule("cooking", ("microwaves",), none_codes=("over_the_range",)),
     "otr": _Rule("cooking", ("over_the_range",)),
     "induction": _Rule("cooking", ("ranges_induction", "cooktop_induction")),
-    # ASSUMPTION: gas_oven = gas and dual-fuel ranges (LG sells no gas wall oven); gas cooktops are not ovens.
+    # ASSUMPTION: gas_oven = gas and dual-fuel ranges (LG sells no gas wall oven); gas_cooktop = oven-less gas
+    # cooktops (category code cooktops_gas).
     "gas_oven": _Rule("cooking", ("ranges",), none_codes=("ranges_induction",), title=_GAS_TITLE),
+    "gas_cooktop": _Rule("cooking", ("cooktops_gas",)),
     # ASSUMPTION: radiant = electric ranges (every non-gas, non-induction range) + electric cooktops.
     "radiant": _Rule("cooking", ("ranges", "cooktops_electric"), none_codes=("ranges_induction", "cooktop_induction"),
                      not_title=_GAS_TITLE),
