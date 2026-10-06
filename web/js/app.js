@@ -136,7 +136,7 @@ function showStage(name, scroll = true) {
 function loadCatalog(brands, cats) {
   S.legacy = false;
   S.brands = brands.map((b) => ({ name: b.name, enabled: !!b.enabled, note: b.note || '', cats: Array.isArray(b.categories) ? new Set(b.categories.map(keyOf)) : null,
-    group: b.group || '', countries: Array.isArray(b.countries) ? b.countries : [] }));
+    group: b.group || '', countries: Array.isArray(b.countries) ? b.countries : [], delay: Number(b.delay_s) || 0 }));
   S.cats = cats.map((c) => {
     let kids = (c.children || c.subcategories || []).map((k) => ({ key: keyOf(k), label_ko: typeof k === 'string' ? k : (k.label_ko || k.label || keyOf(k)) }));
     if (!kids.length) { S.legacy = true; kids = [{ key: c.key, label_ko: c.label_ko }]; }   // older server: the major itself is the only "sub-category"
@@ -292,6 +292,7 @@ function updateSummary() {
   sum.replaceChildren(...(!S.selBrands.size ? ['브랜드를 하나 이상 선택하세요.'] : !S.selMajors.size ? ['제품군을 선택하세요.'] : !p.subs.length ? ['소분류를 하나 이상 선택하세요.']
     : !p.brands.length ? ['선택한 소분류를 지원하는 브랜드가 없습니다.'] : [el('b', {}, brandsLabel(p.brands)), ` · ${perMajor.join(' · ')} · ${band}`]));
   const lines = p.lines.slice(), est = p.brands.length && p.subs.length ? comboEstimate(p) : 0;
+  p.brands.filter((b) => b.delay).forEach((b) => lines.push(`${b.name}: 사이트 정책(robots.txt)으로 요청 간격이 ${b.delay}초라 조회가 오래 걸립니다 (검색은 소분류 1개당 약 10~50초, 제품 수집은 1개당 약 15초 더 걸립니다). 검색은 브랜드·소분류 순서대로 진행되므로 전체 시간도 그만큼 늘어납니다.`));
   if (est > S.maxCombos) lines.push(`선택한 조합이 약 ${est}개로 한 번에 검색할 수 있는 ${S.maxCombos}개를 넘을 수 있습니다. 브랜드나 소분류를 줄이세요.`);
   const note = $('#combo-note'); note.hidden = !lines.length;
   note.replaceChildren(icon(I.warn, 'glyph'), el('span', {}, lines.map((l, i) => [i ? el('br') : null, l])));
@@ -1103,7 +1104,7 @@ function renderBrandPop() {
         onchange: (e) => { e.target.checked ? S.selBrands.add(b.name) : S.selBrands.delete(b.name); onSelectionChange(true); } }),
       el('span', { class: 'bn' }, b.name),
       b.countries.length ? el('span', { class: 'cc', title: '어댑터가 있는 국가' }, b.countries.map((c) => c.toUpperCase()).join(' ')) : null,
-      why ? el('small', {}, why) : null));
+      why ? el('small', {}, why) : (b.delay ? el('small', { class: 'slow', title: b.note }, `요청 간격 ${b.delay}초 · 느림`) : null)));
   };
   const groups = brandGroups().map((g, gi) => {
     const list = S.brands.filter((b) => (b.group || '기타') === g), rdy = list.filter(brandOk), on = rdy.length > 0 && rdy.every((b) => S.selBrands.has(b.name));

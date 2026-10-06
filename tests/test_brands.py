@@ -94,6 +94,18 @@ def test_existing_six_keep_explicit_us_modules():
     assert set(catalog.region_support("na")) >= {"Samsung", "LG", "KitchenAid", "GE", "Whirlpool", "Bosch"}
 
 
+def test_slow_adapters_are_announced_with_their_delay():
+    # Viking's robots.txt Crawl-delay (10 s) is declared by the adapter and surfaces for the UI warning;
+    # brands without a long delay report None (no warning).
+    assert catalog.request_delay("Viking") == 10.0
+    assert catalog.request_delay("Samsung") is None and catalog.request_delay("De Dietrich") is None
+    import server
+    by_name = {b["name"]: b for b in server.api_brands(region="na")}
+    assert by_name["Viking"]["delay_s"] == 10.0 and "10" in by_name["Viking"]["note"]
+    assert by_name["Samsung"]["delay_s"] is None and by_name["Samsung"]["note"] == ""
+    assert by_name["De Dietrich"]["note"] == "준비 중" and by_name["De Dietrich"]["delay_s"] is None
+
+
 if __name__ == "__main__":
     for name, fn in list(globals().items()):
         if name.startswith("test_"):

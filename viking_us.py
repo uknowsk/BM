@@ -31,6 +31,7 @@ PAGE_HOSTS = ("vikingrange.com",)
 IMAGE_HOSTS = ("middleby-cdn.com", "vikingrange.com")
 DOC_HOSTS = ("middleby-cdn.com", "vikingrange.com")
 DELAY_S = 10.0  # robots.txt Crawl-delay
+REQUEST_DELAY_S = DELAY_S  # published to the UI (catalog.request_delay) so users are told searches are slow
 MAX_REDIRECTS = 5
 
 SUB_SOURCES: dict[str, tuple[str, ...]] = {

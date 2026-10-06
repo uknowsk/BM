@@ -158,6 +158,23 @@ def brand_countries(brand: str) -> list[str]:
     return list(meta["countries"]) if meta else []
 
 
+SLOW_DELAY_S = 5.0  # adapters declaring REQUEST_DELAY_S at or above this are announced to the user as slow
+
+
+def request_delay(brand: str) -> Optional[float]:
+    """Longest per-request wait (seconds) a brand's adapters declare via REQUEST_DELAY_S (e.g. a robots.txt
+    Crawl-delay) when it is slow enough to tell the user about (>= SLOW_DELAY_S); None otherwise."""
+    longest = 0.0
+    for country in countries_with_adapter(brand):
+        try:
+            delay = getattr(adapter(brand, country), "REQUEST_DELAY_S", None)
+        except Exception:  # noqa: BLE001 - a broken module simply declares nothing
+            continue
+        if isinstance(delay, (int, float)):
+            longest = max(longest, float(delay))
+    return longest if longest >= SLOW_DELAY_S else None
+
+
 # Free-text aliases accepted by normalize_major (ProductRecord.category historically held "Refrigerator").
 _MAJOR_ALIASES = {
     "refrigerator": ("refrigerator", "refrigerators", "fridge"),

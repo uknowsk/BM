@@ -47,7 +47,7 @@
 - [ ] 중 | De Dietrich(프랑스): dedietrich-electromenager.fr·de-dietrich.com 둘 다 Cloudflare 522, 모회사 Brandt 청산 보도. 미지원. 나중에 사이트가 살아나면 재확인.
 - [ ] 중 | Miele DE: 레인지(Herd)는 열원 구분이 필요해 미분류, 스팀 전용기는 제외. 번역은 로컬 LLM이 꺼져 있으면 일부 독일어 원문이 남음. Siemens/Gaggenau DE도 같음(스크랩 1건 약 275초, LLM 사용 시).
 - [ ] 중 | Hisense US: 상품 페이지에 스펙표가 없고 가격이 플레이스홀더라 스펙 1항목·가격 None. Panasonic US: 스펙표 클라이언트 렌더라 9항목. 필요하면 헤드리스 렌더링으로 보강.
-- [ ] 중 | Smeg/Bertazzoni/Wolf/Gaggenau는 가격 비공개(None) → 가격 밴드 "미확인". Viking은 discover 가격 없음(scrape에서만), robots Crawl-delay 10 때문에 목록이 느림.
+- [ ] 중 | Smeg/Bertazzoni/Wolf/Gaggenau는 가격 비공개(None) → 가격 밴드 "미확인". Viking은 discover 가격 없음(scrape에서만). Viking은 robots Crawl-delay 10초를 지켜 느림(실측: 소분류 8개 목록 전부 약 150초, 제품 1개 수집 약 14초). 어댑터가 `REQUEST_DELAY_S`를 선언하면 `/api/brands`의 `delay_s`/`note`와 화면(브랜드 행 "요청 간격 10초 · 느림", 검색 요약 경고)에 사전 안내가 뜬다(5초 이상, `catalog.SLOW_DELAY_S`). 다른 어댑터가 느려지면 같은 상수만 선언하면 됨. User-Agent는 아직 일반 브라우저 값(`common.UA`): 앱을 밝히는 UA로 바꿀지는 사용자 결정 대기.
 - [ ] 하 | 문서 폴더명: `common.download_pdf`가 브랜드명을 정규화해서 Café는 `downloads/caf_/`, Fisher & Paykel은 `fisher___paykel/`. Gaggenau US/DE가 같은 모델이면 파일명이 겹쳐 덮어쓸 수 있음(현재는 모델이 달라 미발생).
 - [ ] 하 | Beko UK 설명서 PDF는 `bekoplc.blob.core.windows.net`이 허용 목록에 없어 제외(Azure 호스트라 열지 않기로 함). 필요하면 이 호스트 하나만 추가.
 - [ ] 하 | 가스 쿡탑: BTU 필터는 미추가, `convection` 필터는 쿡탑에서도 보임(인덕션·라디언트와 동일).

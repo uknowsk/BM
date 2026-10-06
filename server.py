@@ -912,8 +912,9 @@ def api_brands(region: Optional[str] = Query(None, max_length=64)):
     for b in _config()["brands"]:
         name = b["name"]
         subs = support.get(name, set())
-        note = "" if subs else "준비 중"
-        out.append({"name": name, "enabled": bool(subs), "note": note, "categories": _ordered(subs),
+        delay = catalog.request_delay(name) if subs else None
+        note = "준비 중" if not subs else (f"사이트 정책상 요청 간격 {delay:g}초 - 조회가 오래 걸립니다" if delay else "")
+        out.append({"name": name, "enabled": bool(subs), "note": note, "delay_s": delay, "categories": _ordered(subs),
                     "majors": [m for m in catalog.major_keys() if subs & set(catalog.sub_keys(m))],
                     "regions": [r for r in catalog.REGIONS if name in where[r]],
                     "group": catalog.brand_group(name), "countries": _brand_countries(name)})
