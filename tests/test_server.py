@@ -33,6 +33,10 @@ def wait(job_id, timeout=60):
     raise AssertionError("job timeout")
 
 
+TIERS = ("t1", "t2", "t3", "t4", "t5")
+TIER_NAMES = ["보급", "중저가", "중가", "중고가", "프리미엄"]
+
+
 def run_search(**kw):
     body = {"brands": ["Samsung", "LG", "KitchenAid"], "category": "refrigerator", "limit": 30,
             "band_mode": "auto", "thresholds": None, **kw}
@@ -90,19 +94,34 @@ def test_search_auto_bands():
     j = run_search()
     assert j["status"] == "done", j
     bands = j["result"]["bands"]
-    assert set(bands) == {"budget", "mid", "premium", "unknown"}
+    assert set(bands) == {*TIERS, "unknown"}
+    assert j["result"]["labels"] == dict(zip(TIERS, TIER_NAMES), unknown="Price unknown")
     assert sum(len(v) for v in bands.values()) == 28
-    assert len(bands["unknown"]) == 1 and len(j["result"]["thresholds"]) == 2
-    top = max(c["price_usd"] for c in bands["budget"])
-    assert top <= min(c["price_usd"] for c in bands["premium"])
+    assert len(bands["unknown"]) == 1 and len(j["result"]["thresholds"]) == 4
+    assert j["result"]["thresholds"] == sorted(j["result"]["thresholds"])
+    for lo, hi in zip(TIERS, TIERS[1:]):  # tiers are ordered by price; a price equal to a cut sits in the higher tier
+        if bands[lo] and bands[hi]:
+            assert max(c["price_usd"] for c in bands[lo]) <= min(c["price_usd"] for c in bands[hi])
+    for i, k in enumerate(TIERS):
+        assert all((i == 0 or c["price_usd"] >= j["result"]["thresholds"][i - 1]) and (i == 4 or c["price_usd"] < j["result"]["thresholds"][i])
+                   for c in bands[k]), k
 
 
 def test_search_custom_and_validation():
-    j = run_search(band_mode="custom", thresholds=[1000, 2500], brands=["LG"])
-    assert j["status"] == "done" and j["result"]["thresholds"] == [1000, 2500]
-    assert all(c["price_usd"] < 1000 for c in j["result"]["bands"]["budget"])
-    bad = {"brands": ["LG"], "category": "refrigerator", "limit": 30, "band_mode": "custom", "thresholds": [3000, 100]}
+    j = run_search(band_mode="custom", thresholds=[500, 1000, 1500, 2500], brands=["LG"])
+    assert j["status"] == "done" and j["result"]["thresholds"] == [500, 1000, 1500, 2500]
+    assert j["result"]["labels"] == {"t1": "< $500", "t2": "$500 - $1,000", "t3": "$1,000 - $1,500", "t4": "$1,500 - $2,500",
+                                      "t5": ">= $2,500", "unknown": "Price unknown"}
+    b = j["result"]["bands"]
+    assert all(c["price_usd"] < 500 for c in b["t1"]) and all(c["price_usd"] >= 2500 for c in b["t5"])
+    assert all(1000 <= c["price_usd"] < 1500 for c in b["t3"])
+    bad = {"brands": ["LG"], "category": "refrigerator", "limit": 30, "band_mode": "custom", "thresholds": [3000, 100, 50, 10]}
     assert client.post("/api/search", json=bad).status_code == 422
+    for t in (None, [], [1000, 2500], [100, 200, 300], [100, 200, 300, 400, 500], [100, 200, 200, 300], [-1, 100, 200, 300],
+              [100, 200, 300, 1_000_001], [300, 200, 100, 50]):  # count != 4, equal / descending, negative, over the cap
+        assert client.post("/api/search", json={**bad, "thresholds": t}).status_code == 422, t
+    ok = client.post("/api/search", json={**bad, "thresholds": [0, 100, 200, 1_000_000]})  # limits themselves are valid
+    assert ok.status_code == 200 and wait(ok.json()["job_id"])["status"] == "done"
     assert client.post("/api/search", json={**bad, "band_mode": "auto", "brands": ["Miele"]}).status_code == 422
     assert client.post("/api/search", json={**bad, "band_mode": "auto", "category": "vacuum"}).status_code == 422
     for subs in (["nope"], ["washer"], [""]):  # unknown key / a major key given as a sub key
@@ -122,12 +141,13 @@ def test_search_groups_per_major_with_independent_bands():
     assert "Samsung: 라디언트 미지원" in log and "KitchenAid: 전자동" not in log
     assert "KitchenAid: 드럼 미지원" in log
     for g in res["groups"]:
-        assert set(g["bands"]) == {"budget", "mid", "premium", "unknown"} and g["label_ko"]
+        assert set(g["bands"]) == {*TIERS, "unknown"} and g["label_ko"] and set(g["labels"]) == set(g["bands"])
         allc = [c for k in g["bands"] for c in g["bands"][k]]
         assert allc and all(c["category"] == g["category"] and c["subcategory"] for c in allc)
         priced = [c["price_usd"] for c in allc if c["price_usd"] is not None]
-        if g["thresholds"]:  # terciles computed from THIS group's prices only
-            assert min(priced) <= g["thresholds"][0] <= g["thresholds"][1] <= max(priced)
+        if g["thresholds"]:  # quintiles computed from THIS group's prices only
+            assert g["thresholds"] == sorted(g["thresholds"]) and len(g["thresholds"]) <= 4
+            assert all(min(priced) <= t <= max(priced) for t in g["thresholds"])
     washer = res["groups"][1]
     assert {c["subcategory"] for k in washer["bands"] for c in washer["bands"][k]} <= {"front_load", "dryer"}
     assert all(c["brand"] == "Samsung" for k in washer["bands"] for c in washer["bands"][k])  # KitchenAid unsupported
@@ -137,7 +157,7 @@ def test_search_groups_per_major_with_independent_bands():
 def test_search_single_major_keeps_legacy_bands_and_groups():
     j = run_search(brands=["LG"], category=None, subcategories=["front_load"])
     res = j["result"]
-    assert len(res["groups"]) == 1 and res["bands"] == res["groups"][0]["bands"] and len(res["thresholds"]) == 2
+    assert len(res["groups"]) == 1 and res["bands"] == res["groups"][0]["bands"] and len(res["thresholds"]) in (1, 2, 3, 4)
 
 
 def test_search_cap_on_combos():
@@ -151,7 +171,7 @@ def catalog_sub_keys():
 
 
 def _pick(bands, brand, idx=0):
-    pool = [c for k in ("budget", "mid", "premium") for c in bands[k] if c["brand"] == brand and c["model_number"] != "LRFOS3016S"]
+    pool = [c for k in TIERS for c in bands[k] if c["brand"] == brand and c["model_number"] != "LRFOS3016S"]
     return pool[idx]
 
 
@@ -184,7 +204,7 @@ def test_collect_multi_model_per_brand_and_major_with_groups():
     j = run_search(brands=["Samsung", "LG"], category=None, subcategories=["french_door", "front_load", "induction"])
     picks = {}
     for g in j["result"]["groups"]:
-        for k in ("budget", "mid", "premium"):
+        for k in TIERS:
             for c in g["bands"][k]:
                 if c["model_number"] != "LRFOS3016S":
                     picks.setdefault((c["brand"], g["category"]), c)
@@ -552,16 +572,34 @@ def test_finish_never_overwrites_terminal_or_stale():
     assert not k.finish("done", result={"a": 1}) and k.status == "queued" and k.result is None
 
 
-def test_preset_search_with_few_priced_items_has_fewer_bands():
+def _search_prices(prices, **kw):
     C = server.Candidate
     cands = [C(brand="LG", model_number=f"P{i}", name="n", url=f"https://www.lg.com/us/p{i}/", price_usd=p)
-             for i, p in enumerate((500.0, 900.0))]
+             for i, p in enumerate(prices)]
     with _patched_adapter(_Adapter(discover=lambda c, l: cands)):
-        j = run_search(brands=["LG"], subcategories=["french_door"], category=None)
+        j = run_search(brands=["LG"], subcategories=["french_door"], category=None, **kw)
     assert j["status"] == "done", j
-    g = j["result"]["groups"][0]
-    assert [len(g["bands"][k]) for k in ("budget", "mid", "premium")] == [1, 0, 1]
-    assert g["thresholds"] == [900.0, 900.0]
+    return j["result"]["groups"][0]
+
+
+def test_preset_search_with_few_priced_items_has_fewer_bands():
+    g = _search_prices((500.0, 900.0))  # 2 priced -> 2 tiers, 1 cut; only t1, t2 filled
+    assert [len(g["bands"][k]) for k in TIERS] == [1, 1, 0, 0, 0]
+    assert g["thresholds"] == [700.0] and g["labels"]["t1"] == "1/2단계" and g["labels"]["t2"] == "2/2단계"
+    assert g["labels"]["t3"] == "중가" and g["labels"]["unknown"] == "Price unknown"
+    g = _search_prices((500.0, 600.0, 700.0, 800.0))  # 4 priced -> 4 tiers
+    assert [len(g["bands"][k]) for k in TIERS] == [1, 1, 1, 1, 0] and len(g["thresholds"]) == 3
+    g = _search_prices((500.0, None))  # a lone priced item: no cuts, it is t1
+    assert [len(g["bands"][k]) for k in TIERS] == [1, 0, 0, 0, 0] and len(g["bands"]["unknown"]) == 1 and g["thresholds"] is None
+    g = _search_prices((None, None))
+    assert sum(len(g["bands"][k]) for k in TIERS) == 0 and len(g["bands"]["unknown"]) == 2 and g["thresholds"] is None
+
+
+def test_preset_search_five_or_more_priced_items_fill_all_tiers_and_ties_go_up():
+    g = _search_prices((100.0, 200.0, 300.0, 400.0, 500.0, 600.0, None))
+    assert g["thresholds"] == [200.0, 300.0, 400.0, 500.0]
+    assert [[c["price_usd"] for c in g["bands"][k]] for k in TIERS] == [[100.0], [200.0], [300.0], [400.0], [500.0, 600.0]]
+    assert g["labels"] == dict(zip(TIERS, TIER_NAMES), unknown="Price unknown")
 
 
 def test_preset_thresholds_computed_once_by_service():
@@ -602,7 +640,7 @@ def test_img_endpoint_serves_only_files_under_downloads_images():
 
 def test_collect_results_carry_image_src_and_features():
     j = run_search(brands=["GE"], category=None, subcategories=["electric_oven"])
-    cand = next(c for k in ("budget", "mid", "premium") for c in j["result"]["groups"][0]["bands"][k])
+    cand = next(c for k in TIERS for c in j["result"]["groups"][0]["bands"][k])
     jid = client.post("/api/collect", json={"urls": [cand]}).json()["job_id"]
     j = wait(jid)
     assert j["status"] == "done", j
@@ -810,6 +848,89 @@ def test_match_and_launches_endpoints_on_a_seeded_history():
             assert client.get("/api/launches", params={"sub": "electric_oven", "window": 0}).status_code == 422
         finally:
             server._STORE, server._SEEN_READY = prev
+
+
+def test_schedule_endpoints_validate_run_conflict_and_delete():
+    from catalog import Candidate
+    from store import Store
+    prev = (server._STORE, os.environ.get("FRIDGE_MOCK"), server.service.search, os.environ.get("FRIDGE_BROWSER_MODE"),
+            os.environ.get("FRIDGE_HEADLESS"))
+    calls = []
+
+    def fake_search(brands, subs, limit, store=None, use_cache=True, countries=None):
+        calls.append((tuple(brands), use_cache, os.environ.get("FRIDGE_BROWSER_MODE")))
+        found = [Candidate(brand=brands[0], model_number=f"{brands[0][:2]}{i}", name="Oven", url=f"https://x.test/{brands[0]}/{i}",
+                           price_usd=1000.0 + i, category="cooking", subcategory=subs[0], country="us") for i in range(3)]
+        store.record_seen(found, limit=limit)
+        return found, [(brands[0], "ok", "3 candidates")]
+
+    with tempfile.TemporaryDirectory() as d:
+        server._STORE = Store(Path(d) / "sch.db")
+        server.service.search = fake_search
+        os.environ["FRIDGE_MOCK"] = "0"
+        try:
+            body = {"name": "주간 오븐", "brands": ["Samsung", "LG"], "subcategories": ["electric_oven"], "regions": ["na"],
+                    "limit": 30, "interval_h": 24}
+            r = client.post("/api/schedules", json=body)
+            assert r.status_code == 200, r.text
+            sch = r.json()
+            assert sch["enabled"] and sch["combos"] == 2 and sch["running"] is False and sch["last_run"] is None
+            assert client.get("/api/schedules").json()["schedules"][0]["id"] == sch["id"]
+            assert client.get("/api/schedules").json()["limits"]["min_interval_h"] == 6.0
+            for bad in ({**body, "name": ""}, {**body, "brands": ["Nope"]}, {**body, "subcategories": ["nope"]},
+                        {**body, "interval_h": 1}, {**body, "limit": 1}, {**body, "regions": ["zz"]},
+                        {**body, "brands": ["Amana"], "subcategories": ["sco"]}):
+                assert client.post("/api/schedules", json=bad).status_code == 422, bad
+            assert client.post("/api/schedules/zzzz/run").status_code == 404
+            assert client.post("/api/schedules/000000000000/delete").status_code == 404
+            # a busy job slot (the user's own search) refuses a scheduled run
+            blocker = server.Job("search")
+            blocker.status = "running"
+            server.JOBS[blocker.id] = blocker
+            assert client.post(f"/api/schedules/{sch['id']}/run").status_code == 409
+            server.JOBS.pop(blocker.id)
+            job_id = client.post(f"/api/schedules/{sch['id']}/run").json()["job_id"]
+            done = wait(job_id)
+            assert done["status"] == "done" and done["result"]["summary"]["status"] == "ok"
+            assert done["result"]["summary"]["candidates"] == 6 and all(c[1] is False and c[2] == "headless" for c in calls)
+            after = client.get("/api/schedules").json()["schedules"][0]
+            assert after["last_status"] == "ok" and after["next_run"] > after["last_run"] and after["last_summary"]["brands"] == 2
+            # due logic: a disabled schedule never starts, an enabled and overdue one does
+            assert client.post(f"/api/schedules/{sch['id']}/toggle", json={"enabled": False}).json()["enabled"] is False
+            server._store().update_schedule(sch["id"], next_run="2000-01-01T00:00:00")
+            n = len(calls)
+            server._scheduler_tick()
+            assert len(calls) == n
+            client.post(f"/api/schedules/{sch['id']}/toggle", json={"enabled": True})
+            server._scheduler_tick()
+            end = time.time() + 20
+            while len(calls) < n + 2 and time.time() < end:
+                time.sleep(0.05)
+            assert len(calls) == n + 2
+            assert client.post(f"/api/schedules/{sch['id']}/delete").json() == {"ok": True}
+            assert client.get("/api/schedules").json()["schedules"] == []
+        finally:
+            time.sleep(0.3)
+            server._STORE, server.service.search = prev[0], prev[2]
+            for key, old in (("FRIDGE_MOCK", prev[1]), ("FRIDGE_BROWSER_MODE", prev[3]), ("FRIDGE_HEADLESS", prev[4])):
+                if old is None:
+                    os.environ.pop(key, None)
+                else:
+                    os.environ[key] = old
+
+
+def test_schedule_run_is_refused_in_mock_mode():
+    from store import Store
+    prev = server._STORE
+    with tempfile.TemporaryDirectory() as d:
+        server._STORE = Store(Path(d) / "mock.db")  # never touch the real cache in a test
+        try:
+            r = client.post("/api/schedules", json={"name": "x", "brands": ["Samsung"], "subcategories": ["electric_oven"]})
+            assert r.status_code == 200, r.text  # creating is fine in mock mode (it is only stored)...
+            assert client.post(f"/api/schedules/{r.json()['id']}/run").status_code == 422  # ...a real re-search is not run
+            assert server._runner_enabled() is False
+        finally:
+            server._STORE = prev
 
 
 def test_match_page_is_served():

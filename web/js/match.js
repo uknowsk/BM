@@ -221,6 +221,84 @@
     finally { go.disabled = false; out.setAttribute('aria-busy', 'false'); }
   });
 
+  /* ---------- scheduled re-search ---------- */
+  const STATUS_KO = { ok: '정상', partial: '일부 실패', failed: '실패', cancelled: '취소됨' };
+  const everyKo = (h) => ({ 12: '12시간마다', 24: '매일', 72: '3일마다', 168: '매주', 336: '2주마다', 720: '매월' }[h] || `${h}시간마다`);
+  const whenKo = (iso) => {
+    const d = iso ? new Date(iso) : null;
+    return d && !Number.isNaN(+d) ? d.toLocaleString('ko-KR', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' }) : '—';
+  };
+  let schedTimer = 0;
+
+  function schedCard(s) {
+    const c = s.config, sum = s.last_summary;
+    const status = s.running ? el('span', { class: 'tag new' }, '실행 중')
+      : !s.enabled ? el('span', { class: 'tag dim' }, '중지됨')
+        : s.last_status ? el('span', { class: 'tag' + (s.last_status === 'ok' ? ' good' : s.last_status === 'failed' ? '' : ' dim') }, STATUS_KO[s.last_status] || s.last_status)
+          : el('span', { class: 'tag dim' }, '곧 실행');
+    const result = sum
+      ? `후보 ${sum.candidates}개 · 새로 발견 ${sum.new_discoveries}개 · ${sum.duration_s}초${sum.brands_failed.length ? ` · 실패: ${sum.brands_failed.join(', ')}` : ''}`
+      : '아직 실행 기록이 없습니다';
+    const act = async (path, label, body) => {
+      try { await api(`/api/schedules/${s.id}/${path}`, body || {}); toast(label); } catch (e) { toast(e.message); }
+      loadSchedules();
+    };
+    return el('div', { class: 'scard' },
+      el('div', { class: 'scard-h' }, el('b', {}, s.name), status),
+      el('p', { class: 'smeta' }, `${c.brands.length}개 브랜드 · 소분류 ${c.subcategories.length}개 · ${c.regions.join('/')} · 조합 ${s.combos}개 · ${everyKo(s.interval_h)} · 브랜드당 ${c.limit}개`),
+      el('p', { class: 'smeta' }, `마지막 실행 ${whenKo(s.last_run)} → 다음 ${s.enabled ? whenKo(s.next_run) : '—'}`),
+      el('p', { class: 'smeta' }, result, sum && sum.log && sum.log.length ? el('span', { class: 'slog', title: sum.log.join('\n') }, ' (자세히)') : null),
+      el('div', { class: 'sact' },
+        el('button', { class: 'btn ghost', type: 'button', disabled: s.running, onclick: () => act('run', '재검색을 시작했습니다') }, '지금 실행'),
+        el('button', { class: 'btn ghost', type: 'button', onclick: () => act('toggle', s.enabled ? '예약을 중지했습니다' : '예약을 다시 켰습니다', { enabled: !s.enabled }) }, s.enabled ? '중지' : '다시 켜기'),
+        el('button', { class: 'btn ghost', type: 'button', onclick: () => { if (confirm(`'${s.name}' 예약을 삭제할까요?`)) act('delete', '삭제했습니다'); } }, '삭제')));
+  }
+
+  async function loadSchedules() {
+    clearTimeout(schedTimer);
+    try {
+      const d = await api('/api/schedules');
+      $('#sched-off').hidden = d.runner;
+      $('#sched-sub').textContent = d.schedules.length ? `${d.schedules.length}/${d.limits.max_schedules}개 예약` : '아직 예약이 없습니다';
+      $('#sched-list').replaceChildren(...(d.schedules.length ? d.schedules.map(schedCard)
+        : [el('p', { class: 'v2-empty' }, '예약이 없습니다. 아래 “새 예약 만들기”에서 브랜드와 소분류를 고르면 정해진 간격으로 새 모델을 찾아 이력에 쌓습니다.')]));
+      if (d.schedules.some((s) => s.running)) schedTimer = setTimeout(loadSchedules, 5000);
+    } catch { $('#sched-list').replaceChildren(el('p', { class: 'v2-empty' }, '예약 목록을 불러오지 못했습니다.')); }
+  }
+
+  const checked = (sel) => [...document.querySelectorAll(sel + ' input:checked')].map((i) => i.value);
+  function schedEstimate() {
+    const n = checked('#s-brands').length, m = checked('#s-subs').length, r = checked('#s-regions').length;
+    $('#s-est').textContent = n && m && r ? `브랜드 ${n}개 × 소분류 ${m}개 × 시장 ${r}개 = 최대 ${n * m * r}개 조합을 한 번에 순서대로 검색합니다. 지원하지 않는 조합은 건너뜁니다.` : '';
+  }
+
+  async function buildSchedForm() {
+    try {
+      const brands = await api('/api/brands?region=na,kr,eu');
+      $('#s-brands').replaceChildren(...brands.filter((b) => b.enabled).map((b) => el('label', {}, el('input', { type: 'checkbox', value: b.name }), b.name,
+        b.delay_s ? el('small', { title: b.note }, ' 느림') : null)));
+    } catch { /* the list stays empty; creating is refused by the server anyway */ }
+    $('#s-subs').replaceChildren(...[...$('#sub').options].map((o) => el('label', {}, el('input', { type: 'checkbox', value: o.value }), o.textContent)));
+    schedEstimate();
+  }
+
+  $('#sched-form').addEventListener('change', schedEstimate);
+  $('#s-brands-all').addEventListener('click', () => { document.querySelectorAll('#s-brands input').forEach((i) => { i.checked = true; }); schedEstimate(); });
+  $('#s-brands-none').addEventListener('click', () => { document.querySelectorAll('#s-brands input').forEach((i) => { i.checked = false; }); schedEstimate(); });
+  $('#sched-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const err = $('#s-err');
+    err.hidden = true;
+    try {
+      await api('/api/schedules', { name: $('#s-name').value.trim(), brands: checked('#s-brands'), subcategories: checked('#s-subs'),
+        regions: checked('#s-regions'), limit: +$('#s-limit').value, interval_h: +$('#s-interval').value });
+      $('#s-name').value = '';
+      $('#sched-new').open = false;
+      toast('예약을 만들었습니다. 곧 첫 검색이 시작됩니다.');
+      loadSchedules();
+    } catch (ex) { err.textContent = ex.message; err.hidden = false; }
+  });
+
   /* ---------- init ---------- */
   restore(); bandV(); curV(); ['price', 'spec', 'recency', 'response'].forEach(wV);
   $('#band').addEventListener('input', bandV);
@@ -229,5 +307,5 @@
   $('#sub').addEventListener('change', radarSoon);
   $('#window').addEventListener('change', loadRadar);
   $('#form').addEventListener('change', save);
-  loadSubs().then(() => { bandV(); curV(); loadRadar(); }).catch(() => toast('제품군을 불러오지 못했습니다. 서버가 켜져 있는지 확인하세요.'));
+  loadSubs().then(() => { bandV(); curV(); loadRadar(); buildSchedForm(); loadSchedules(); }).catch(() => toast('제품군을 불러오지 못했습니다. 서버가 켜져 있는지 확인하세요.'));
 })();

@@ -114,10 +114,10 @@ def main() -> None:
     # 3. price band
     st.subheader("2. 가격대 분류")
     band_mode = st.radio("분류 방식", ["preset", "custom"], horizontal=True,
-                         format_func=lambda m: "프리셋 (Budget / Mid / Premium, 3분위)" if m == "preset" else "직접 입력 (USD 경계값)")
+                         format_func=lambda m: "프리셋 (보급 ~ 프리미엄, 5단계)" if m == "preset" else "직접 입력 (USD 경계값)")
     thresholds: list[float] = []
     if band_mode == "custom":
-        raw = st.text_input("경계값 (쉼표로 구분, 예: 1500, 2500)", "1500, 2500")
+        raw = st.text_input("경계값 (쉼표로 구분, 예: 1000, 1500, 2000, 3000)", "1000, 1500, 2000, 3000")
         try:
             thresholds = [float(x) for x in raw.replace("$", "").split(",") if x.strip()]
         except ValueError:

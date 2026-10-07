@@ -128,16 +128,20 @@
       <div class="step-h"><span class="num">04</span><h2>가격대</h2><p>후보를 나누는 기준</p></div>
       <div class="step-b">
         <div class="seg" role="radiogroup" aria-label="가격대 분류 방식" id="bandmode">
-          <label><input type="radio" name="bandmode" value="auto" checked><span>자동 3분위<small>Budget · Mid · Premium</small></span></label>
-          <label><input type="radio" name="bandmode" value="custom"><span>직접 입력<small>경계 가격 2개 (USD)</small></span></label>
+          <label><input type="radio" name="bandmode" value="auto" checked><span>자동 5단계<small>보급 · 중저가 · 중가 · 중고가 · 프리미엄</small></span></label>
+          <label><input type="radio" name="bandmode" value="custom"><span>직접 입력<small>경계 가격 4개 (USD)</small></span></label>
         </div>
         <div class="thr" id="thr" hidden>
-          <label class="field"><span>Budget / Mid 경계</span><span class="money"><i>$</i><input id="thr-lo" type="number" inputmode="numeric" min="0" step="50" value="1500"></span></label>
+          <label class="field"><span>보급 / 중저가 경계</span><span class="money"><i>$</i><input id="thr-1" type="number" inputmode="numeric" min="0" step="50" value="1000"></span></label>
           <span class="thr-arrow" aria-hidden="true">→</span>
-          <label class="field"><span>Mid / Premium 경계</span><span class="money"><i>$</i><input id="thr-hi" type="number" inputmode="numeric" min="0" step="50" value="2500"></span></label>
+          <label class="field"><span>중저가 / 중가 경계</span><span class="money"><i>$</i><input id="thr-2" type="number" inputmode="numeric" min="0" step="50" value="1500"></span></label>
+          <span class="thr-arrow" aria-hidden="true">→</span>
+          <label class="field"><span>중가 / 중고가 경계</span><span class="money"><i>$</i><input id="thr-3" type="number" inputmode="numeric" min="0" step="50" value="2000"></span></label>
+          <span class="thr-arrow" aria-hidden="true">→</span>
+          <label class="field"><span>중고가 / 프리미엄 경계</span><span class="money"><i>$</i><input id="thr-4" type="number" inputmode="numeric" min="0" step="50" value="3000"></span></label>
           <p class="err" id="thr-err" role="alert" hidden></p>
         </div>
-        <p class="hint" id="band-hint">검색 결과의 가격 분포를 3등분해 자동으로 나눕니다. 가격을 확인할 수 없는 제품은 <b>가격 미확인</b> 밴드에 따로 모입니다.</p>
+        <p class="hint" id="band-hint">검색 결과의 가격 분포를 5단계로 자동으로 나눕니다. 가격을 확인할 수 없는 제품은 <b>가격 미확인</b> 밴드에 따로 모입니다.</p>
         <label class="field inline"><span>브랜드당 후보 수</span>
           <select id="limit"><option>10</option><option>20</option><option selected>30</option><option>50</option></select>
         </label>

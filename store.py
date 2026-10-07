@@ -33,6 +33,9 @@ CREATE TABLE IF NOT EXISTS seen_models(
     baseline INTEGER);
 CREATE TABLE IF NOT EXISTS seen_groups(
     brand TEXT, country TEXT, sub TEXT, complete_at TEXT, PRIMARY KEY(brand, country, sub));
+CREATE TABLE IF NOT EXISTS schedules(
+    id TEXT PRIMARY KEY, name TEXT, config_json TEXT, interval_h REAL, enabled INTEGER, created_at TEXT,
+    last_run TEXT, next_run TEXT, last_status TEXT, last_summary_json TEXT);
 """
 
 
@@ -258,3 +261,58 @@ class Store:
             with closing(self._conn()) as conn:
                 added += conn.execute("SELECT COUNT(*) FROM seen_models").fetchone()[0] - before
         return added
+
+    def count_new_discoveries(self) -> int:
+        """Models first seen after their group had a complete baseline (what a scheduled re-search is looking for)."""
+        with closing(self._conn()) as conn:
+            return conn.execute("SELECT COUNT(*) FROM seen_models WHERE baseline=0").fetchone()[0]
+
+    # scheduled re-searches (server-driven, see scheduler.py)
+    _SCHEDULE_COLS = ("id", "name", "config_json", "interval_h", "enabled", "created_at", "last_run", "next_run",
+                      "last_status", "last_summary_json")
+
+    @classmethod
+    def _schedule_row(cls, r) -> dict:
+        d = dict(zip(cls._SCHEDULE_COLS, r))
+        d["config"] = json.loads(d.pop("config_json") or "{}")
+        summary = d.pop("last_summary_json")
+        d["last_summary"] = json.loads(summary) if summary else None
+        d["enabled"] = bool(d["enabled"])
+        return d
+
+    def create_schedule(self, schedule_id: str, name: str, config: dict, interval_h: float, next_run: str,
+                        now: Optional[datetime] = None) -> dict:
+        created = (now or datetime.now()).isoformat(timespec="seconds")
+        with closing(self._conn()) as conn, conn:
+            conn.execute("INSERT INTO schedules(id, name, config_json, interval_h, enabled, created_at, next_run)"
+                         " VALUES(?,?,?,?,1,?,?)",
+                         (schedule_id, name, json.dumps(config, ensure_ascii=False), interval_h, created, next_run))
+        return self.get_schedule(schedule_id)
+
+    def get_schedule(self, schedule_id: str) -> Optional[dict]:
+        with closing(self._conn()) as conn:
+            row = conn.execute(f"SELECT {', '.join(self._SCHEDULE_COLS)} FROM schedules WHERE id=?", (schedule_id,)).fetchone()
+        return self._schedule_row(row) if row else None
+
+    def list_schedules(self) -> list[dict]:
+        with closing(self._conn()) as conn:
+            rows = conn.execute(f"SELECT {', '.join(self._SCHEDULE_COLS)} FROM schedules ORDER BY created_at, id").fetchall()
+        return [self._schedule_row(r) for r in rows]
+
+    def update_schedule(self, schedule_id: str, **fields) -> None:
+        """Set enabled / last_run / next_run / last_status / last_summary (dict) on a schedule."""
+        cols = {"enabled": lambda v: int(bool(v)), "last_run": str, "next_run": str, "last_status": str,
+                "last_summary": lambda v: json.dumps(v, ensure_ascii=False)}
+        sets, args = [], []
+        for key, val in fields.items():
+            if key not in cols:
+                raise ValueError(f"cannot update {key!r}")
+            sets.append("last_summary_json=?" if key == "last_summary" else f"{key}=?")
+            args.append(cols[key](val))
+        if sets:
+            with closing(self._conn()) as conn, conn:
+                conn.execute(f"UPDATE schedules SET {', '.join(sets)} WHERE id=?", (*args, schedule_id))
+
+    def delete_schedule(self, schedule_id: str) -> bool:
+        with closing(self._conn()) as conn, conn:
+            return conn.execute("DELETE FROM schedules WHERE id=?", (schedule_id,)).rowcount > 0

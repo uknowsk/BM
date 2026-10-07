@@ -80,5 +80,28 @@ table.rank .pr small { display: block; color: var(--ink-3); }
 .trow .d { font-variant-numeric: tabular-nums; text-align: right; color: var(--ink-2); }
 .trow .d.up { color: var(--good); }
 .trow.low { opacity: .6; }
+.mt-sched { margin-top: 40px; }
+.sched-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; margin: 14px 0; }
+.scard { border: 1px solid var(--rule); border-radius: var(--r); background: var(--surface); padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; }
+.scard-h { display: flex; justify-content: space-between; align-items: center; gap: 8px; font-size: 14px; }
+.scard-h .tag { margin: 0; }
+.smeta { margin: 0; font-size: 12.5px; color: var(--ink-2); }
+.slog { color: var(--accent-ink); cursor: help; border-bottom: 1px dotted var(--accent); }
+.sact { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+.sact .btn { min-height: 36px; padding: 0 14px; font-size: 13px; }
+.sched-new { border: 1px solid var(--rule); border-radius: var(--r); background: var(--surface); padding: 12px 16px; }
+.sched-new summary { cursor: pointer; font-weight: 500; min-height: 32px; display: flex; align-items: center; }
+.sched-form { display: flex; flex-direction: column; gap: 14px; margin-top: 12px; max-width: 760px; }
+.sched-form fieldset { border: 1px solid var(--rule); border-radius: var(--r); padding: 10px 14px 12px; display: flex; flex-direction: column; gap: 8px; }
+.sched-form legend { font: 500 12px/1 var(--mono); color: var(--accent-ink); padding: 0 6px; }
+.sched-form legend small { color: var(--ink-3); font: 400 11.5px/1 var(--font); margin-left: 6px; }
+.sched-form .checks { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 13px; color: var(--ink-2); }
+.sched-form .checks label { display: inline-flex; align-items: center; gap: 6px; min-height: 30px; cursor: pointer; }
+.sched-form .checks small { color: var(--ink-3); }
+.sched-form .mini { display: flex; gap: 12px; }
+.sched-form .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; max-width: 420px; }
+.sched-form input[type=text], .sched-form select { min-height: 40px; padding: 0 10px; border: 1px solid var(--rule-strong); border-radius: var(--r); background: var(--bg); color: var(--ink); font: inherit; width: 100%; }
+.sched-form .err { color: var(--bad); font-size: 13px; margin: 0; }
+.sched-form .hint { margin: 0; }
 .legend { font-size: 12px; color: var(--ink-3); display: flex; gap: 14px; margin-top: 6px; }
 .legend i { display: inline-block; width: 10px; height: 7px; border-radius: 3px; margin-right: 5px; vertical-align: middle; }

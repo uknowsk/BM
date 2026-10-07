@@ -11,6 +11,7 @@ import yaml
 import catalog
 import common
 import features
+import match
 from catalog import Candidate
 from store import Store
 
@@ -18,7 +19,8 @@ logger = logging.getLogger(__name__)
 ROOT = Path(__file__).parent
 OUTPUT_DIR = ROOT / "output"
 UNKNOWN_BAND = "Price unknown"
-PRESET_BANDS = ("Budget", "Mid", "Premium")
+PRESET_BANDS = tuple(match.TIER_LABELS)  # 보급 / 중저가 / 중가 / 중고가 / 프리미엄 (5 tiers, same as the competitor match)
+N_BANDS = len(PRESET_BANDS)
 MAX_SELECTED = 10  # default per-band pre-selection cap (UI helper)
 # Overall safety cap on ONE collect job (several models per brand are allowed). Raise it here; the API reads it.
 MAX_COLLECT = 12
@@ -160,22 +162,28 @@ def _price(c: Candidate) -> Optional[float]:
 
 
 def preset_thresholds(candidates: list[Candidate]) -> Optional[list[float]]:
-    """Tercile cut prices [t1, t2] of the priced candidates (the single source of truth for 'preset' bands).
-    Fewer than 3 priced items cannot fill three bands: 2 items -> [high, high] (Budget + Premium, Mid empty);
-    1 item -> None (that item is Mid); 0 -> None."""
-    priced = sorted(p for p in map(_price, candidates) if p is not None)
-    n = len(priced)
-    if n >= 3:
-        return [priced[n // 3], priced[2 * n // 3]]
-    return [priced[1], priced[1]] if n == 2 else None
+    """Quintile cut prices (4 values, match.price_tiers) of the priced candidates: the single source of truth for
+    'preset' bands. A price equal to a cut belongs to the higher tier. Fewer than 5 priced items give fewer tiers
+    (n priced -> n tiers, n-1 cuts: only t1..tn are filled, the rest stay empty); 0 or 1 priced item -> None
+    (a lone item is simply t1)."""
+    edges = match.price_tiers([p for p in map(_price, candidates) if p is not None], N_BANDS)
+    return edges or None
+
+
+def _preset_names(n_cuts: int) -> list[str]:
+    """Band names for `n_cuts` cuts: always 5 slots; with fewer than 4 cuts the used tiers are named 'i/n단계'
+    (match.tier_label) and the unused trailing slots keep their default names (they stay empty)."""
+    n = n_cuts + 1
+    used = [match.tier_label(i, n) for i in range(n)] if 1 < n < N_BANDS else list(PRESET_BANDS[:n])
+    return used + list(PRESET_BANDS[n:])
 
 
 def classify_bands(candidates: list[Candidate], mode: str = "preset",
                    thresholds: Optional[list[float]] = None, currency: str = "USD") -> dict[str, list[Candidate]]:
     """Group candidates into price bands.
-    'preset': Budget/Mid/Premium by terciles of discovered prices (see preset_thresholds; `thresholds`, when
-    given as two cuts, are used instead of recomputing; with <3 priced items some bands stay empty).
-    'custom': ascending thresholds t1<t2<..: '< t1', 't1 - t2', ..., '>= tn'.
+    'preset': 5 tiers (보급 .. 프리미엄) by quintiles of discovered prices (see preset_thresholds; `thresholds`, when
+    given, are used instead of recomputing; with <5 priced items only the first tiers are filled).
+    'custom': ascending thresholds t1<t2<..: '< t1', 't1 - t2', ..., '>= tn' (the API passes 4 -> 5 bands).
     No-price candidates go to 'Price unknown' (last; omitted when empty). Prices are USD (price_usd) or, when that
     is absent, the local price; `currency` only changes the custom-band labels ('$' for USD, else 'KRW ' ...)."""
     sym = "$" if currency == "USD" else f"{currency} "
@@ -187,8 +195,8 @@ def classify_bands(candidates: list[Candidate], mode: str = "preset",
         else:
             names = ["All prices"]
     else:
-        cuts = list(thresholds) if thresholds and len(thresholds) == 2 else preset_thresholds(candidates)
-        names = list(PRESET_BANDS)
+        cuts = list(thresholds) if thresholds else (preset_thresholds(candidates) or [])
+        names = _preset_names(len(cuts))
     bands: dict[str, list[Candidate]] = {name: [] for name in names}
     unknown = []
     for c in candidates:
@@ -196,7 +204,7 @@ def classify_bands(candidates: list[Candidate], mode: str = "preset",
         if price is None:
             unknown.append(c)
             continue
-        idx = sum(1 for t in cuts if price >= t) if cuts else 1  # no cuts (a lone priced item): Mid
+        idx = match.tier_of(price, cuts) if cuts else 0  # no cuts (a lone priced item): the first tier
         bands[names[min(idx, len(names) - 1)]].append(c)
     for lst in bands.values():
         lst.sort(key=_price)

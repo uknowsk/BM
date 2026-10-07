@@ -115,6 +115,45 @@
     </header>
     <div id="radar-body"></div>
   </section>
+
+  <section class="mt-sched" id="sched" aria-labelledby="h-sched">
+    <header class="sec-h">
+      <span class="num">S</span>
+      <div><h2 id="h-sched">자동 재검색</h2><p id="sched-sub"></p></div>
+    </header>
+    <p class="hint">신제품은 같은 소분류를 시간을 두고 다시 검색해야 찾을 수 있습니다. 서버가 켜져 있는 동안 정한 간격으로 선택한 브랜드·소분류를 다시 검색해 새로 올라온 모델을 이력에 쌓습니다. 사이트 부담을 줄이려고 최소 간격은 6시간이고, 브라우저 창이 뜨지 않는 숨김 모드로만 실행하며, 직접 검색·수집 중에는 끝날 때까지 기다립니다. 서버가 꺼져 있던 동안 지난 예약은 다음에 켤 때 곧바로 실행됩니다.</p>
+    <p class="banner" id="sched-off" hidden>이 서버는 자동 실행이 꺼져 있습니다(샘플 데이터 모드이거나 FRIDGE_SCHEDULER=0). 예약은 저장만 되고 실행되지 않습니다.</p>
+    <div class="sched-list" id="sched-list" aria-live="polite"></div>
+    <details class="sched-new" id="sched-new">
+      <summary>새 예약 만들기</summary>
+      <form class="sched-form" id="sched-form" autocomplete="off">
+        <label class="field"><span>이름</span><input id="s-name" type="text" maxlength="60" placeholder="예: 북미 조리기기 주간"></label>
+        <fieldset><legend>브랜드 <small>사용 가능한 브랜드만 표시</small></legend>
+          <div class="checks" id="s-brands"></div>
+          <div class="mini"><button class="link-btn" type="button" id="s-brands-all">전체 선택</button><button class="link-btn" type="button" id="s-brands-none">전체 해제</button></div>
+        </fieldset>
+        <fieldset><legend>소분류</legend><div class="checks" id="s-subs"></div></fieldset>
+        <fieldset><legend>시장</legend>
+          <div class="checks" id="s-regions">
+            <label><input type="checkbox" name="s-region" value="na" checked>북미</label>
+            <label><input type="checkbox" name="s-region" value="kr">한국</label>
+            <label><input type="checkbox" name="s-region" value="eu">유럽</label>
+          </div>
+        </fieldset>
+        <div class="row2">
+          <label class="field"><span>재검색 간격</span>
+            <select id="s-interval"><option value="12">12시간마다</option><option value="24">매일</option><option value="72">3일마다</option><option value="168" selected>매주</option><option value="336">2주마다</option><option value="720">매월</option></select>
+          </label>
+          <label class="field"><span>브랜드당 후보 수</span>
+            <select id="s-limit"><option>30</option><option selected>50</option><option>100</option></select>
+          </label>
+        </div>
+        <p class="hint" id="s-est"></p>
+        <p class="err" id="s-err" role="alert" hidden></p>
+        <button class="btn primary" type="submit">예약 만들기</button>
+      </form>
+    </details>
+  </section>
 </main>
 
 <footer class="foot wrap">

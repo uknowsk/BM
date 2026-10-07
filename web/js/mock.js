@@ -103,11 +103,16 @@ function searchResult(req) {
     for (const b of req.brands) for (const [k] of m.children) if (wanted.has(k) && SUPPORT[b] && SUPPORT[b].includes(k)) for (const rg of (req.regions || ['na'])) if (REGIONS.find((x) => x.key === rg && x.enabled && x.brands.includes(b))) cands.push(...candidatesFor(b, k, rg));
     if (!cands.length && !m.children.some(([k]) => wanted.has(k))) continue;
     const priced = cands.map((c) => c.price_usd).filter((p) => p != null).sort((a, b) => a - b), n = priced.length;
-    const thr = req.band_mode === 'custom' ? [...req.thresholds].sort((a, b) => a - b) : (n ? [priced[Math.floor(n / 3)], priced[Math.floor(2 * n / 3)]] : null);
-    const bands = { budget: [], mid: [], premium: [], unknown: [] };
-    cands.forEach((c) => { (c.price_usd == null ? bands.unknown : !thr ? bands.mid : c.price_usd < thr[0] ? bands.budget : c.price_usd < thr[1] ? bands.mid : bands.premium).push(c); });
+    /* same rule as the server: inclusive quantiles over min(5, n) tiers, a price equal to a cut goes to the higher tier */
+    const q = Math.min(5, n), autoThr = q < 2 ? null : Array.from({ length: q - 1 }, (_, k) => { const pos = ((n - 1) * (k + 1)) / q, i = Math.floor(pos); return priced[i] + (priced[Math.min(i + 1, n - 1)] - priced[i]) * (pos - i); });
+    const thr = req.band_mode === 'custom' ? [...req.thresholds].sort((a, b) => a - b) : autoThr;
+    const keys = ['t1', 't2', 't3', 't4', 't5'], bands = { t1: [], t2: [], t3: [], t4: [], t5: [], unknown: [] };
+    cands.forEach((c) => { bands[c.price_usd == null ? 'unknown' : keys[thr ? thr.filter((t) => c.price_usd >= t).length : 0]].push(c); });
     Object.values(bands).forEach((l) => l.sort((a, b) => (a.price_usd ?? 1e9) - (b.price_usd ?? 1e9)));
-    groups.push({ category: m.key, label_ko: m.label_ko, bands, thresholds: thr, total: cands.length });
+    const names = ['보급', '중저가', '중가', '중고가', '프리미엄'], usd = (x) => '$' + Math.round(x).toLocaleString('en-US');
+    const labels = { unknown: '가격 미확인' };
+    keys.forEach((k, i) => { labels[k] = req.band_mode === 'custom' ? (i === 0 ? `< ${usd(thr[0])}` : i === 4 ? `>= ${usd(thr[3])}` : `${usd(thr[i - 1])} - ${usd(thr[i])}`) : (thr && thr.length < 4 && i <= thr.length ? `${i + 1}/${thr.length + 1}단계` : names[i]); });
+    groups.push({ category: m.key, label_ko: m.label_ko, bands, labels, thresholds: thr, total: cands.length });
   }
   return { groups, failed_brands: [], total: groups.reduce((s, g) => s + g.total, 0) };
 }

@@ -33,6 +33,7 @@ import catalog  # noqa: E402
 import compare_model  # noqa: E402
 import filters  # noqa: E402
 import match  # noqa: E402
+import scheduler  # noqa: E402
 import service  # noqa: E402
 from catalog import Candidate  # noqa: E402
 from schema import DocumentRecord, ModeRecord, ProductRecord  # noqa: E402
@@ -539,9 +540,10 @@ def _band_payload(cands: list[Candidate], band_mode: str, thresholds, currency: 
     """Bands for one group; `thresholds` (computed once by _group_thresholds) are what classify_bands applies."""
     bands = service.classify_bands(cands, "custom" if band_mode == "custom" else "preset", thresholds, currency)
     named = [n for n in bands if n != service.UNKNOWN_BAND]
-    out = {"budget": [], "mid": [], "premium": [], "unknown": []}
-    labels = {"budget": "Budget", "mid": "Mid", "premium": "Premium", "unknown": service.UNKNOWN_BAND}
-    for key, name in zip(("budget", "mid", "premium"), named):
+    keys = tuple(f"t{i + 1}" for i in range(service.N_BANDS))
+    out = {**{k: [] for k in keys}, "unknown": []}
+    labels = {**dict(zip(keys, service.PRESET_BANDS)), "unknown": service.UNKNOWN_BAND}
+    for key, name in zip(keys, named):
         out[key] = [c.model_dump() for c in bands[name]]
         labels[key] = name
     out["unknown"] = [c.model_dump() for c in bands.get(service.UNKNOWN_BAND, [])]
@@ -551,7 +553,7 @@ def _band_payload(cands: list[Candidate], band_mode: str, thresholds, currency: 
 def _group_thresholds(cands: list[Candidate], req: "SearchReq"):
     if req.band_mode == "custom":
         return sorted(req.thresholds)
-    return service.preset_thresholds(cands)  # terciles per major category: computed once, reused for bands + display
+    return service.preset_thresholds(cands)  # quintiles per major category: computed once, reused for bands + display
 
 
 def _countries(regions: list[str]) -> list[str]:
@@ -996,8 +998,9 @@ def api_search(req: SearchReq):
         raise _bad("band_mode must be auto or custom")
     if req.band_mode == "custom":
         t = req.thresholds
-        if not t or len(t) != 2 or not (0 <= t[0] < t[1] <= 1_000_000):
-            raise _bad("경계값은 0 이상, 낮은 값 < 높은 값 형태의 숫자 2개여야 합니다.")
+        if (not t or len(t) != service.N_BANDS - 1 or not 0 <= t[0] or t[-1] > 1_000_000
+                or any(a >= b for a, b in zip(t, t[1:]))):
+            raise _bad("경계값은 0 이상, 오름차순(낮은 값 < 높은 값)의 숫자 4개여야 합니다.")
     _check_browser_mode(req.browser_mode)
     req.brands = list(dict.fromkeys(req.brands))
     plan = _search_plan(req)
@@ -1156,6 +1159,156 @@ def web_match():
     if not (WEB_DIR / "match.html").is_file():
         raise HTTPException(404, "not found")
     return FileResponse(WEB_DIR / "match.html", media_type="text/html")
+
+
+# ------------------------------------------------------------------ scheduled re-search (see scheduler.py)
+SCHEDULE_ID_RE = re.compile(r"[0-9a-f]{12}")
+_TICKER = None
+
+
+class ScheduleReq(BaseModel):
+    name: str = Field(max_length=60)
+    brands: list[str] = Field(min_length=1, max_length=MAX_BRANDS)
+    subcategories: list[str] = Field(min_length=1, max_length=32)
+    regions: list[str] = Field(default_factory=lambda: [catalog.DEFAULT_REGION], max_length=8)
+    limit: int = Field(30, ge=scheduler.LIMIT_MIN, le=scheduler.LIMIT_MAX)
+    interval_h: float = Field(scheduler.DEFAULT_INTERVAL_H, ge=scheduler.MIN_INTERVAL_H, le=scheduler.MAX_INTERVAL_H)
+
+
+class ScheduleToggle(BaseModel):
+    enabled: bool
+
+
+def _runner_enabled() -> bool:
+    return not is_mock() and os.environ.get("FRIDGE_SCHEDULER") != "0"
+
+
+def _schedule_json(row: dict) -> dict:
+    running = any(getattr(j, "schedule_id", None) == row["id"] and _busy(j) for j in JOBS.values())
+    cfg = row["config"]
+    combos = len(scheduler.plan(cfg.get("brands", []), cfg.get("subcategories", []), cfg.get("regions", [])))
+    return {**row, "running": running, "combos": combos}
+
+
+def _find_schedule(schedule_id: str) -> dict:
+    row = _store().get_schedule(schedule_id) if SCHEDULE_ID_RE.fullmatch(schedule_id) else None
+    if row is None:
+        raise HTTPException(404, "schedule not found")
+    return row
+
+
+def _start_schedule(schedule_id: str) -> Job:
+    """A scheduled run is an ordinary Job (kind 'schedule'): it takes the single job slot (409 while a user's search
+    or collect runs), shows progress and can be cancelled like any other job."""
+    if is_mock():
+        raise _bad("샘플 데이터 모드에서는 실제 재검색을 실행하지 않습니다.")
+    _find_schedule(schedule_id)
+    job = Job("schedule")
+    job.schedule_id = schedule_id
+    _register(job)
+    _start(job, _run_schedule, schedule_id)
+    return job
+
+
+def _run_schedule(job: Job, schedule_id: str) -> None:
+    store, row = _store(), None
+    try:
+        row = store.get_schedule(schedule_id)
+        if row is None:
+            job.finish("error", error="LookupError")
+            return
+        _set_browser_env("headless")  # unattended run: never pops up a browser window (blocked sites just fail)
+        job.mark_running()
+        job.add_log(f"예약 '{row['name']}' 재검색 시작")
+
+        def progress(done: int, total: int, msg: str) -> None:
+            with job.lock:
+                job.last_progress = time.time()
+                job.done, job.total, job.current = done, total, _scrub(msg)
+            job.add_log(msg)
+
+        summary = scheduler.run(row["config"], store, service.search, progress, job.cancel)
+        if job.stale:
+            return
+        finished = datetime.now()
+        store.update_schedule(schedule_id, last_run=finished.isoformat(timespec="seconds"),
+                              next_run=scheduler.schedule_next(finished, row["interval_h"]),
+                              last_status=summary["status"], last_summary=summary)
+        job.finish("cancelled" if summary["cancelled"] else "done", result={"schedule": schedule_id, "summary": summary})
+    except Exception as exc:  # noqa: BLE001 - surface to UI
+        logger.exception("schedule job %s failed", job.id)
+        if row is not None:  # postpone, so a broken schedule does not retry every minute
+            try:
+                now = datetime.now()
+                store.update_schedule(schedule_id, last_run=now.isoformat(timespec="seconds"),
+                                      next_run=scheduler.schedule_next(now, row["interval_h"]), last_status="failed")
+            except Exception:  # noqa: BLE001
+                logger.exception("could not record the failed schedule run")
+        job.add_log(f"오류: {_public_error(exc)}")
+        job.finish("error", error=_public_error(exc))
+
+
+def _scheduler_tick() -> None:
+    """Start the first due schedule; if the job slot is busy (a user is searching) try again at the next tick."""
+    now = datetime.now()
+    for row in _store().list_schedules():
+        if scheduler.is_due(row, now):
+            try:
+                _start_schedule(row["id"])
+            except HTTPException:
+                pass
+            return
+
+
+@app.on_event("startup")
+def _start_scheduler() -> None:
+    global _TICKER
+    if _runner_enabled() and _TICKER is None:
+        _TICKER = scheduler.Ticker(_scheduler_tick)
+        _TICKER.start()
+
+
+@app.get("/api/schedules")
+def api_schedules():
+    return {"schedules": [_schedule_json(r) for r in _store().list_schedules()], "runner": _runner_enabled(),
+            "limits": {"max_schedules": scheduler.MAX_SCHEDULES, "min_interval_h": scheduler.MIN_INTERVAL_H,
+                       "max_interval_h": scheduler.MAX_INTERVAL_H, "default_interval_h": scheduler.DEFAULT_INTERVAL_H,
+                       "limit_min": scheduler.LIMIT_MIN, "limit_max": scheduler.LIMIT_MAX,
+                       "max_combos": scheduler.MAX_COMBOS}}
+
+
+@app.post("/api/schedules")
+def api_schedule_create(req: ScheduleReq):
+    store = _store()
+    if len(store.list_schedules()) >= scheduler.MAX_SCHEDULES:
+        raise _bad(f"예약은 최대 {scheduler.MAX_SCHEDULES}개까지 만들 수 있습니다. 쓰지 않는 예약을 삭제하세요.")
+    try:
+        cfg = scheduler.normalize(req.model_dump(), set(enabled_brand_names()))
+    except ValueError as exc:
+        raise _bad(str(exc)) from None
+    row = store.create_schedule(uuid.uuid4().hex[:12], cfg["name"],
+                                {k: cfg[k] for k in ("brands", "subcategories", "regions", "limit")}, cfg["interval_h"],
+                                datetime.now().isoformat(timespec="seconds"))  # first run: at the next tick
+    return _schedule_json(row)
+
+
+@app.post("/api/schedules/{schedule_id}/toggle")
+def api_schedule_toggle(schedule_id: str, req: ScheduleToggle):
+    _find_schedule(schedule_id)
+    _store().update_schedule(schedule_id, enabled=req.enabled)
+    return _schedule_json(_find_schedule(schedule_id))
+
+
+@app.post("/api/schedules/{schedule_id}/run")
+def api_schedule_run(schedule_id: str):
+    return {"job_id": _start_schedule(schedule_id).id}
+
+
+@app.post("/api/schedules/{schedule_id}/delete")
+def api_schedule_delete(schedule_id: str):
+    _find_schedule(schedule_id)
+    _store().delete_schedule(schedule_id)
+    return {"ok": True}
 
 
 def _job(job_id: str) -> Job:

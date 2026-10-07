@@ -53,34 +53,44 @@ def _cands(prices):
             for i, p in enumerate(prices)]
 
 
-def test_preset_terciles_and_unknown():
+def _by_band(bands):
+    return [[c.price_usd for c in bands[n]] for n in bands if n != service.UNKNOWN_BAND]
+
+
+def test_preset_five_tiers_and_unknown():
+    assert service.PRESET_BANDS == ("보급", "중저가", "중가", "중고가", "프리미엄")
     bands = service.classify_bands(_cands([100, 200, 300, 400, 500, 600, None]), "preset")
-    assert list(bands) == ["Budget", "Mid", "Premium", service.UNKNOWN_BAND]
-    assert [c.price_usd for c in bands["Budget"]] == [100, 200]
-    assert [c.price_usd for c in bands["Mid"]] == [300, 400]
-    assert [c.price_usd for c in bands["Premium"]] == [500, 600]
+    assert list(bands) == [*service.PRESET_BANDS, service.UNKNOWN_BAND]
+    assert service.preset_thresholds(_cands([100, 200, 300, 400, 500, 600])) == [200, 300, 400, 500]
+    assert _by_band(bands) == [[100], [200], [300], [400], [500, 600]]  # a price equal to a cut goes up
     assert len(bands[service.UNKNOWN_BAND]) == 1
 
 
 def test_preset_edge_cases():
     assert service.classify_bands([], "preset") == {b: [] for b in service.PRESET_BANDS}
     bands = service.classify_bands(_cands([None, None]), "preset")
-    assert len(bands[service.UNKNOWN_BAND]) == 2 and "Budget" in bands
+    assert len(bands[service.UNKNOWN_BAND]) == 2 and "보급" in bands
+
+
+def test_preset_ties_on_a_cut_go_to_the_higher_tier():
+    prices = [100, 100, 100, 100, 100, 100, 100, 100, 500, 900]
+    th = service.preset_thresholds(_cands(prices))
+    assert th == [100, 100, 100, 180.0]  # quintile cuts may repeat: lower tiers are then empty
+    assert _by_band(service.classify_bands(_cands(prices), "preset")) == [[], [], [], [100] * 8, [500, 900]]
 
 
 def test_custom_thresholds():
-    bands = service.classify_bands(_cands([500, 1000, 1500, 3000, None]), "custom", [1000, 2000])
-    assert list(bands) == ["< $1,000", "$1,000 - $2,000", ">= $2,000", service.UNKNOWN_BAND]
-    assert [c.price_usd for c in bands["< $1,000"]] == [500]
-    assert [c.price_usd for c in bands["$1,000 - $2,000"]] == [1000, 1500]  # boundary goes up
-    assert [c.price_usd for c in bands[">= $2,000"]] == [3000]
+    bands = service.classify_bands(_cands([500, 1000, 1500, 3000, 9000, None]), "custom", [1000, 2000, 3000, 5000])
+    assert list(bands) == ["< $1,000", "$1,000 - $2,000", "$2,000 - $3,000", "$3,000 - $5,000", ">= $5,000", service.UNKNOWN_BAND]
+    assert _by_band(bands) == [[500], [1000, 1500], [], [3000], [9000]]  # boundary goes up
     assert service.classify_bands(_cands([1, None]), "custom", [])["All prices"][0].price_usd == 1
 
 
 def test_default_selection_caps():
     bands = service.classify_bands(_cands(list(range(100, 1900, 100))), "preset")
-    assert len(service.default_selection(bands, 2)) == 6
-    assert len(service.default_selection(bands, 10)) == service.MAX_SELECTED
+    assert len(service.default_selection(bands, 2)) == 10  # 5 bands x 2
+    assert len(service.default_selection(bands, 3)) == service.MAX_SELECTED  # 15 -> capped
+    assert len(service.default_selection(bands, 1)) == 5
 
 
 def test_search_isolates_brand_failure_and_caches():
@@ -327,16 +337,23 @@ def test_collect_user_selected_sub_is_authoritative(caplog=None):
     assert not records and products[0].category == "Refrigerator"
 
 
-def test_preset_bands_with_fewer_than_three_priced_items():
+def test_preset_bands_with_fewer_than_five_priced_items():
+    """n priced (2 <= n < 5) -> n tiers ('i/n단계'), only the first n slots filled; 0 or 1 priced -> no cuts, a lone item is t1."""
     assert service.preset_thresholds(_cands([None])) is None and service.preset_thresholds([]) is None
-    assert service.preset_thresholds(_cands([100, 200, 300])) == [200, 300]
+    assert service.preset_thresholds(_cands([500, None])) is None
     b1 = service.classify_bands(_cands([500, None]), "preset")
-    assert [len(b1[n]) for n in service.PRESET_BANDS] == [0, 1, 0] and len(b1[service.UNKNOWN_BAND]) == 1
+    assert list(b1) == list(service.PRESET_BANDS) + [service.UNKNOWN_BAND]
+    assert _by_band(b1) == [[500], [], [], [], []] and len(b1[service.UNKNOWN_BAND]) == 1
+    assert service.preset_thresholds(_cands([900, 500])) == [700.0]
     b2 = service.classify_bands(_cands([900, 500]), "preset")
-    assert [[c.price_usd for c in b2[n]] for n in service.PRESET_BANDS] == [[500], [], [900]]
-    assert service.preset_thresholds(_cands([900, 500])) == [900, 900]
+    assert list(b2)[:2] == ["1/2단계", "2/2단계"] and list(b2)[2:5] == list(service.PRESET_BANDS[2:])
+    assert _by_band(b2) == [[500], [900], [], [], []]
+    assert len(service.preset_thresholds(_cands([100, 200, 300]))) == 2
+    b3 = service.classify_bands(_cands([300, 100, 200]), "preset")
+    assert list(b3)[:3] == ["1/3단계", "2/3단계", "3/3단계"] and _by_band(b3) == [[100], [200], [300], [], []]
+    assert _by_band(service.classify_bands(_cands([100, 200, 300, 400]), "preset")) == [[100], [200], [300], [400], []]
     given = service.classify_bands(_cands([100, 200, 300]), "preset", [150, 250])  # supplied cuts are honoured
-    assert [[c.price_usd for c in given[n]] for n in service.PRESET_BANDS] == [[100], [200], [300]]
+    assert _by_band(given) == [[100], [200], [300], [], []]
 
 
 class FlagAdapter:
@@ -494,11 +511,12 @@ def test_search_country_without_adapter_is_skipped_with_log():
 def test_bands_use_local_price_when_no_usd_price():
     cs = [Candidate(brand="B", model_number=f"M{i}", name="n", url=f"u{i}", region="kr", country="kr", currency="KRW",
                     price_local=p) for i, p in enumerate([1e6, 2e6, 3e6, 4e6, 5e6, 6e6, None])]
-    assert service.preset_thresholds(cs) == [3e6, 5e6]
+    assert service.preset_thresholds(cs) == [2e6, 3e6, 4e6, 5e6]
     bands = service.classify_bands(cs, "preset")
-    assert [c.price_local for c in bands["Budget"]] == [1e6, 2e6] and len(bands[service.UNKNOWN_BAND]) == 1
-    custom = service.classify_bands(cs, "custom", [2.5e6, 4.5e6], currency="KRW")
-    assert list(custom)[0].startswith("< KRW ") and len(custom["< KRW 2,500,000"]) == 2
+    assert [c.price_local for c in bands["보급"]] == [1e6] and len(bands[service.UNKNOWN_BAND]) == 1
+    custom = service.classify_bands(cs, "custom", [1.5e6, 2.5e6, 4.5e6, 5.5e6], currency="KRW")
+    assert list(custom)[0].startswith("< KRW ") and len(custom["< KRW 1,500,000"]) == 1
+    assert len(custom["KRW 2,500,000 - KRW 4,500,000"]) == 2
 
 
 def test_collect_uses_country_adapter_and_stamps_product_region():

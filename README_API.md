@@ -54,19 +54,23 @@ exists (`importlib.util.find_spec`); other countries are auto-discovered, nothin
 e.g. `cafe_us.py`, `fisherpaykel_uk.py`, `dedietrich_fr.py`, `siemens_de.py`.
 
 ## POST /api/search -> {"job_id"}
-`{"brands":["Samsung","GE"],"subcategories":["front_load","induction"],"limit":30,"band_mode":"auto|custom","thresholds":[lo,hi]}`
+`{"brands":["Samsung","GE"],"subcategories":["front_load","induction"],"limit":30,"band_mode":"auto|custom","thresholds":[t1,t2,t3,t4]}` (`thresholds` only for `custom`: exactly 4 ascending, strictly increasing prices >= 0, <= 1,000,000, else 422)
 Legacy `{"category":"refrigerator"}` still works (major = all sub keys the brand supports; a sub key also accepted).
 Unsupported combos are skipped with a log line (`Samsung: 라디언트 미지원`). 422: unknown brand/sub, no supported combo.
 `brands` takes up to 30 names. Cap: at most `MAX_SEARCH_COMBOS` = **120** (brand x country x sub-group) listings per search (422 above that; was 48);
 they run one after another with per-combo progress. `GET /api/meta` reports `max_search_combos` and `max_brands`.
 Job result (`GET /api/jobs/{id}` when done):
 ```
-{"groups":[{"category":"washer","label_ko":"세탁기","bands":{"budget":[Candidate],"mid":[],"premium":[],"unknown":[]},
-            "labels":{...},"thresholds":[lo,hi],"total":12}],
+{"groups":[{"category":"washer","label_ko":"세탁기","bands":{"t1":[Candidate],"t2":[],"t3":[],"t4":[],"t5":[],"unknown":[]},
+            "labels":{"t1":"보급","t2":"중저가","t3":"중가","t4":"중고가","t5":"프리미엄","unknown":"Price unknown"},
+            "thresholds":[c1,c2,c3,c4],"total":12}],
  "bands":<group bands or null>, "labels":..., "thresholds":..., "total":N, "failed_brands":[]}
 ```
-Bands/terciles are computed per major category (`service.preset_thresholds`, once; with fewer than 3 priced items: 2 -> Budget + Premium,
-Mid empty, thresholds `[high, high]`; 1 -> that item is Mid, thresholds `null`); top-level `bands/labels/thresholds` are populated only when a single
+`auto`: 5 tiers (same as the competitor match) from the quintile cut prices `thresholds` (`match.price_tiers`; a price equal to a cut goes to the
+higher tier), computed per major category x region (`service.preset_thresholds`, once). With fewer than 5 priced items only n tiers are used
+(n priced -> n tiers, n-1 cuts, `t1..tn` filled, the rest empty, `labels` of the used tiers are `"1/3단계"` ...; 0 or 1 priced -> `thresholds` `null`,
+a lone item is `t1`). `custom`: the 4 given prices make 5 bands and `labels` are the price ranges (`"< $1,000"`, `"$1,000 - $1,500"`, ..., `">= $3,000"`).
+Items without a price go to `unknown`. Top-level `bands/labels/thresholds` are populated only when a single
 major was searched (else `null`). Candidate: `{brand,model_number,name,url,price_usd,category,subcategory}`.
 Progress items: `{label:"Samsung 드럼",brand,subcategory,status}`.
 
@@ -210,6 +214,22 @@ not ranked when a target price is given (counted in `price_unknown`).
 ### GET /api/launches?sub=&country=us&window=12
 New models per brand with their evidence (`release_date` | `site_new` | `first_seen`) and a feature trend (share of new vs existing models with
 Wi-Fi/convection/air fry/steam/ENERGY STAR, `delta_pts`, `low_sample`), `median_price`, `basis_counts`, `distrusted_new_flags`, `note`.
+
+## Scheduled re-search (`scheduler.py`, section "자동 재검색" on `/match`)
+Re-lists chosen brands x subs x markets at a fixed interval so new launches reach the discovery history (new models only show up
+after a repeat search). Runs inside the server (needs it running; schedules that came due while it was off start shortly after the next
+start); a run is an ordinary job of kind `schedule` in the single job slot, so it never runs beside a user's own search/collect (409
+for the user while it runs; the ticker simply retries a minute later), uses a hidden browser only (no windows), bypasses the 1-day
+candidate cache and shows progress/cancel like other jobs. Min interval 6 h, max 10 schedules, max 400 listings per run.
+`FRIDGE_SCHEDULER=0` or `FRIDGE_MOCK=1` turn the runner off (schedules are only stored).
+- `GET /api/schedules` -> `{"schedules":[{id,name,config:{brands,subcategories,regions,limit},interval_h,enabled,created_at,last_run,
+  next_run,last_status(ok|partial|failed|cancelled),last_summary:{status,started,finished,duration_s,brands,brands_failed[],candidates,
+  new_discoveries,cancelled,log[]},running,combos}],"runner":bool,"limits":{max_schedules,min_interval_h,max_interval_h,default_interval_h,
+  limit_min,limit_max,max_combos}}`
+- `POST /api/schedules` `{"name","brands":[..],"subcategories":[..],"regions":["na"],"limit":30,"interval_h":168}` -> the schedule (first
+  run at the next tick); 422 with a Korean message for unknown brand/sub/region, interval < 6 h, no supported combination, too many combos.
+- `POST /api/schedules/{id}/toggle` `{"enabled":bool}`, `POST /api/schedules/{id}/run` -> `{"job_id"}` (409 while another job runs; 422 in
+  mock mode), `POST /api/schedules/{id}/delete`. Unknown id -> 404. All mutations are POST (same-origin guard).
 
 ### Units (`units.py`)
 `cuft_to_l/l_to_cuft`, `in_to_mm/mm_to_in`, `lb_to_kg/kg_to_lb`, `f_to_c/c_to_f`, `fmt_dual(value, kind, primary)` ->

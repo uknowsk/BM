@@ -5,10 +5,10 @@
 const SECONDS_PER_PRODUCT = 25;      // honest rough estimate: page load + polite delay + PDFs
 const SECONDS_PER_MODES = 150;       // local LLM mode extraction, per product
 const MODES_CATEGORY = 'refrigerator'; // operating-mode extraction exists for refrigerators only
+const TIERS = ['보급', '중저가', '중가', '중고가', '프리미엄'];   // same 5 tiers as the competitor match
+const N_THR = TIERS.length - 1;                                    // custom mode: 4 boundary prices
 const BANDS = [
-  { key: 'budget',  title: 'Budget',  ko: '저가',  color: 'var(--b-budget)' },
-  { key: 'mid',     title: 'Mid',     ko: '중간',  color: 'var(--b-mid)' },
-  { key: 'premium', title: 'Premium', ko: '고가',  color: 'var(--b-premium)' },
+  ...TIERS.map((title, i) => ({ key: `t${i + 1}`, title, ko: '', color: `var(--b-t${i + 1})` })),
   { key: 'unknown', title: '가격 미확인', ko: '', color: 'var(--b-unknown)' },
 ];
 
@@ -274,19 +274,20 @@ function comboEstimate(p) {
   return p.brands.reduce((n, b) => n + p.subs.filter((s) => supports(b, s)).length * Math.max(1, b.countries.filter((c) => S.regions.has(CC_REGION[c])).length), 0);
 }
 const brandsLabel = (list) => (list.length > 6 ? `${list.slice(0, 5).map((b) => b.name).join(' · ')} 외 ${list.length - 5}개` : list.map((b) => b.name).join(' · '));
-function thresholds() { return [parseFloat($('#thr-lo').value), parseFloat($('#thr-hi').value)]; }
+const THR_IDS = Array.from({ length: N_THR }, (_, i) => `#thr-${i + 1}`);
+function thresholds() { return THR_IDS.map((s) => parseFloat($(s).value)); }
 function thresholdError() {
   if (S.bandMode !== 'custom') return '';
-  const [lo, hi] = thresholds();
-  if (!Number.isFinite(lo) || !Number.isFinite(hi)) return '두 경계 가격을 모두 숫자로 입력하세요.';
-  if (lo < 0 || hi > 1e6) return '0 이상, 1,000,000 이하의 값을 입력하세요.';
-  if (lo >= hi) return '앞의 경계가 뒤의 경계보다 작아야 합니다.';
+  const t = thresholds();
+  if (!t.every(Number.isFinite)) return `경계 가격 ${N_THR}개를 모두 숫자로 입력하세요.`;
+  if (t[0] < 0 || t[N_THR - 1] > 1e6) return '0 이상, 1,000,000 이하의 값을 입력하세요.';
+  if (t.some((x, i) => i && t[i - 1] >= x)) return '경계 가격은 앞에서 뒤로 갈수록 커야 합니다 (같은 값 불가).';
   return '';
 }
 function updateSummary() {
   const err = thresholdError(), p = plan();
   $('#thr-err').hidden = !err; $('#thr-err').textContent = err;
-  const band = S.bandMode === 'auto' ? '자동 3분위' : (err ? '경계 가격 확인 필요' : `${usd(thresholds()[0])} / ${usd(thresholds()[1])} 기준`);
+  const band = S.bandMode === 'auto' ? '자동 5단계' : (err ? '경계 가격 확인 필요' : `${thresholds().map(usd).join(' / ')} 기준`);
   const perMajor = S.cats.filter((c) => S.selMajors.has(c.key)).map((c) => `${c.label_ko} ${c.children.filter((k) => S.selSubs.has(k.key)).length}`).filter((t) => !/ 0$/.test(t));
   const sum = $('#search-summary');
   sum.replaceChildren(...(!S.selBrands.size ? ['브랜드를 하나 이상 선택하세요.'] : !S.selMajors.size ? ['제품군을 선택하세요.'] : !p.subs.length ? ['소분류를 하나 이상 선택하세요.']
@@ -299,13 +300,13 @@ function updateSummary() {
   $('#go-search').disabled = !p.brands.length || !p.subs.length || !!err || S.running;
   if (S.v2) syncShell();
   $('#band-hint').replaceChildren(...(S.bandMode === 'auto'
-    ? ['제품군마다 검색 결과의 가격 분포를 3등분해 자동으로 나눕니다. 가격을 확인할 수 없는 제품은 ', el('b', {}, '가격 미확인'), ' 밴드에 따로 모입니다.']
-    : [`입력한 경계 가격으로 나눕니다. ${err ? '' : `${usd(thresholds()[0])} 미만은 Budget, ${usd(thresholds()[1])} 이상은 Premium. `}같은 경계가 모든 제품군에 적용되므로 제품군별 가격 차이가 크면 자동 분류를 권장합니다.`]));
+    ? ['제품군마다 검색 결과의 가격 분포를 5단계(보급 · 중저가 · 중가 · 중고가 · 프리미엄)로 자동으로 나눕니다. 후보가 5개 미만이면 더 적은 단계로 나뉩니다. 가격을 확인할 수 없는 제품은 ', el('b', {}, '가격 미확인'), ' 밴드에 따로 모입니다.']
+    : [`입력한 경계 가격 4개로 5단계로 나눕니다. ${err ? '' : `${usd(thresholds()[0])} 미만은 ${TIERS[0]}, ${usd(thresholds()[N_THR - 1])} 이상은 ${TIERS[N_THR]}. `}같은 경계가 모든 제품군에 적용되므로 제품군별 가격 차이가 크면 자동 분류를 권장합니다.`]));
 }
 document.querySelectorAll('input[name="bandmode"]').forEach((r) => r.addEventListener('change', () => {
   S.bandMode = r.value; $('#thr').hidden = r.value !== 'custom'; updateSummary(); saveSel();
 }));
-['#thr-lo', '#thr-hi'].forEach((s) => $(s).addEventListener('input', () => { updateSummary(); saveSel(); }));
+THR_IDS.forEach((s) => $(s).addEventListener('input', () => { updateSummary(); saveSel(); }));
 $('#limit').addEventListener('change', saveSel);
 
 function saveSel() {
@@ -318,14 +319,14 @@ function applySel(r, keepUnset) {
   S.selSubs = new Set((r.subs || []).filter((s) => S.subs.has(s)));
   S.selMajors = new Set([...(r.majors || []), ...[...S.selSubs].map((s) => S.subs.get(s).major)].filter((m) => S.cats.some((c) => c.key === m)));
   if (r.band_mode === 'auto' || r.band_mode === 'custom') S.bandMode = r.band_mode;
-  if (Array.isArray(r.thr)) { $('#thr-lo').value = r.thr[0]; $('#thr-hi').value = r.thr[1]; }
+  if (Array.isArray(r.thr) && r.thr.length === N_THR) THR_IDS.forEach((s, i) => { $(s).value = r.thr[i]; });  // older 2-boundary entries are ignored
   if (r.limit && [...$('#limit').options].some((o) => +o.value === +r.limit)) $('#limit').value = String(r.limit);
   document.querySelector(`input[name="bandmode"][value="${S.bandMode}"]`).checked = true; $('#thr').hidden = S.bandMode !== 'custom';
   if (!keepUnset) prune();
 }
 
 /* ---------- recent searches ---------- */
-function recentLabel(r) { return `${r.brands.join(' · ')} · 소분류 ${r.subs.length}개 · ${r.band_mode === 'auto' ? '자동' : `${usd(r.thr[0])}/${usd(r.thr[1])}`}`; }
+function recentLabel(r) { return `${r.brands.join(' · ')} · 소분류 ${r.subs.length}개 · ${r.band_mode === 'auto' ? '자동' : `${(r.thr || []).map(usd).join('/')}`}`; }
 function renderRecent() {
   const list = lsGet(LS + 'recent', []).filter((r) => Array.isArray(r.subs) && Array.isArray(r.brands));
   $('#recent').hidden = !list.length;
@@ -379,7 +380,7 @@ async function runSearch() {
     setBusy(false);
     if (j.status === 'cancelled') return searchError('검색을 취소했습니다.', true);
     if (j.status === 'error') return searchError(j.error || '검색 중 오류가 발생했습니다.');
-    S.searched = names; S.searchKey = searchKey(); S.result = j.result; S.result.logs = j.log; S.groups = normGroups(j.result); renderCandidates(); if (S.v2) { updateStale(); renderFilters(); }
+    S.searched = names; S.searchKey = searchKey(); S.resultMode = req.band_mode; S.result = j.result; S.result.logs = j.log; S.groups = normGroups(j.result); renderCandidates(); if (S.v2) { updateStale(); renderFilters(); }
   } catch (e) { setBusy(false); searchError(e.message); }
 }
 function searchError(msg, soft) {
@@ -391,23 +392,29 @@ function searchError(msg, soft) {
 }
 /* response: {groups:[{category,label_ko,bands,thresholds}]}; legacy {bands,thresholds} becomes one group */
 function normGroups(r) {
-  const mk = (cat, label, bands, thr) => {
-    const g = { category: cat, label_ko: label || catLabel(cat), thresholds: Array.isArray(thr) ? thr : null, bands: {} };
+  const mk = (cat, label, bands, thr, labels) => {
+    const g = { category: cat, label_ko: label || catLabel(cat), thresholds: Array.isArray(thr) ? thr : null, labels: labels || {}, custom: S.resultMode === 'custom', bands: {} };
     BANDS.forEach((b) => { g.bands[b.key] = ((bands || {})[b.key] || []).map((c) => ({ ...c, category: c.category || cat, band: b.key })); });
     return g;
   };
-  if (r.groups && r.groups.length) return r.groups.map((g) => mk(g.category, g.label_ko, g.bands, g.thresholds));
-  if (r.bands) return [mk([...S.selMajors][0] || 'refrigerator', '', r.bands, r.thresholds)];
+  if (r.groups && r.groups.length) return r.groups.map((g) => mk(g.category, g.label_ko, g.bands, g.thresholds, g.labels));
+  if (r.bands) return [mk([...S.selMajors][0] || 'refrigerator', '', r.bands, r.thresholds, r.labels)];
   return [];
 }
 
 /* ---------- candidates: one section per major category ---------- */
 const gCands = (g) => BANDS.flatMap((b) => g.bands[b.key]);
 const allCands = () => S.groups.flatMap(gCands);
+/* price range of tier i from the cut prices: < t1, t1 – t2, ..., ≥ tn (empty for tiers past the last cut) */
 function bandRange(key, thr) {
-  if (!thr) return '';
-  const [lo, hi] = thr;
-  return { budget: `< ${usd(lo)}`, mid: `${usd(lo)} – ${usd(hi)}`, premium: `≥ ${usd(hi)}`, unknown: '' }[key];
+  const i = BANDS.findIndex((b) => b.key === key);
+  if (!thr || !thr.length || key === 'unknown' || i > thr.length) return '';
+  return i === 0 ? `< ${usd(thr[0])}` : i === thr.length ? `≥ ${usd(thr[i - 1])}` : `${usd(thr[i - 1])} – ${usd(thr[i])}`;
+}
+/* with fewer than 5 priced candidates the server fills only the first tiers: hide the unused (empty) ones in auto mode */
+function tierUnused(g, key) {
+  const i = BANDS.findIndex((b) => b.key === key);
+  return !g.custom && key !== 'unknown' && i > (g.thresholds ? g.thresholds.length : 0) && !g.bands[key].length;
 }
 function renderCandidates() {
   const r = S.result, total = allCands().length, multi = S.groups.length > 1;
@@ -437,15 +444,16 @@ function groupSection(g, multi) {
     el('div', { class: 'cat-h' }, icon(I[cat] || I.box, 'tile-i'), el('h3', { id: 'ch-' + cat }, g.label_ko), el('span', { class: 'count', 'data-gcount': cat }, `${n}개 후보`)),
     el('div', { class: 'strip', 'data-strip': cat }));
   if (!n) sec.append(el('p', { class: 'empty-band' }, '이 제품군에서 선택한 브랜드·소분류의 후보를 찾지 못했습니다.'));
-  else BANDS.forEach((b) => sec.append(bandSection(g, b)));
+  else BANDS.filter((b) => !tierUnused(g, b.key)).forEach((b) => sec.append(bandSection(g, b)));
   return sec;
 }
 function bandSection(g, b) {
   const list = g.bands[b.key], id = `bh-${g.category}-${b.key}`;
   const sec = el('section', { class: 'band', 'data-band': b.key, 'aria-labelledby': id });
-  const range = bandRange(b.key, g.thresholds);
+  const range = g.custom && b.key !== 'unknown' && g.labels[b.key] ? g.labels[b.key] : bandRange(b.key, g.thresholds);
+  const title = !g.custom && g.labels[b.key] ? g.labels[b.key] : b.title;  // auto: server tier name ('2/3단계' when <5 priced)
   sec.append(el('div', { class: 'band-h' },
-    el('h4', { id, style: `--c:${b.color}` }, el('i'), b.title, b.ko ? el('span', { class: 'count' }, b.ko) : null),
+    el('h4', { id, style: `--c:${b.color}` }, el('i'), title, b.ko ? el('span', { class: 'count' }, b.ko) : null),
     range ? el('span', { class: 'range' }, range) : null,
     el('span', { class: 'count', 'data-count': b.key }, `${list.length}개`),
     el('div', { class: 'band-acts' },

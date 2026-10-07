@@ -54,9 +54,12 @@
 - [ ] 하 | Café/Haier는 평문 requests에 Cloudflare 챌린지(403): headless 브라우저로만 접근(챌린지 우회 아님, 통과 못 하면 실패 처리). Frigidaire/Electrolux US는 Akamai로 headless 실패 → 창 표시(visible) 폴백.
 
 ## G. 경쟁 모델 선별 후속 (2026-10-07, 설계 `docs/MATCHING_DESIGN.md`, 화면 `/match`)
+- [x] 상 | **주기적 재검색 구현됨**(`scheduler.py`, `/match`의 '자동 재검색': 예약 생성·지금 실행·중지·삭제, 최소 6시간, 숨김 브라우저만, 후보 캐시 우회, 직접 작업 중 대기, 서버 꺼진 동안 밀린 예약은 켤 때 실행). 아래는 그 배경 설명.
+- [ ] 중 | 좁은 화면(390px)에서 검색 화면에 가로 스크롤이 생김(scrollWidth 480): 5단계 직접 입력칸 줄바꿈 때문일 수 있음, 원인 미확인.
+- [ ] 하 | 서버를 재시작하면 진행 중이던 예약 실행은 사라지고 다음 예약 시각에 다시 실행됨(재시작 직후 이어서 하는 기능은 없음).
 - [ ] 상 | **신제품 판단은 시간이 지나야 쌓인다.** 출시일을 공개하는 사이트가 거의 없어(LG KR `modelReleaseDate`, GE/Café/Haier 최초 유통일뿐) 앱의 최초 발견 시점에 의존한다. 처음 조회한 모델은 기준선이라 신제품이 아니다. 같은 소분류를 며칠~몇 주 간격으로 다시 검색해야 하므로 주기적 재검색(예약/배치) 기능이 필요.
 - [ ] 상 | **사이트 '최신순 정렬'을 최근성 근사로 사용**(목록 순서=최신순 순위): Samsung US `sort=newest`(확인), LG US Coveo `sortCriteria="@ec_creation_date descending"`(확인), LG KR 본문 `sortType="sort_new"`(확인), GE Searchspring `sort.product_first_distribution_date=desc`(미확인), OCC(Whirlpool/KitchenAid/Maytag 계열) 쿼리의 `relevance` 자리를 `newestProduct`로(미확인), Beko UK `?sort=age`(확인), Siemens DE `ONLINE_DATE` 정렬(파라미터 미확정), Samsung KR `sortType=20`(미확인). Bosch US/AEG/Miele/Electrolux/Frigidaire/Viking/Bertazzoni/Smeg는 최신순 없음.
-- [ ] 중 | **검색 화면의 3분위(Budget/Mid/Premium)를 5단계로 바꿀지 확인.** 지금은 선별 기능(`/match`)만 5단계 + 근접도 점수. 검색 결과 밴드는 그대로.
+- [x] 중 | **검색 화면의 3분위(Budget/Mid/Premium)를 5단계로 바꿀지 확인.** 완료: 검색 결과 밴드도 5단계(`t1`..`t5` + `unknown`, `match.price_tiers` 재사용), 직접 입력은 경계 가격 4개.
 - [ ] 중 | 평점·리뷰 수 미제공 브랜드: Thermador, Gaggenau, Monogram, Viking, Wolf, Smeg, Bertazzoni, Hisense, Panasonic, Fisher & Paykel(Bazaarvoice 위젯이 클라이언트 렌더). Panasonic의 Bazaarvoice는 passkey가 필요한 제3자 호출이라 쓰지 않았다(허용할지 결정 필요). electrolux_de 목록 평점 필드는 있으나 값이 전부 0. Frigidaire/Electrolux US는 평점·NEW 필드 양성값을 라이브로 못 봄(OCC 표준명 가정).
 - [ ] 중 | NEW 표시 양성 사례를 못 본 어댑터: Viking, Hisense, Smeg, Wolf(`news_to_date`), Frigidaire/Electrolux, Thermador/Gaggenau/Bosch/Siemens(`isNewProduct`). 코드는 있으나 라이브 검증 불가. Bertazzoni는 레인지 26개 전부 NEW라 엔진이 자동 무시(`distrusted_new_flags`).
 - [ ] 중 | 선별 결과 Excel 출력, '수집된 제품을 기준 모델로 선택'하는 입력 방식은 미구현(이번에는 스펙·가격 직접 입력만).
