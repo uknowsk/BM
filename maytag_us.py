@@ -26,10 +26,11 @@ from urllib.parse import quote, urljoin, urlparse
 from playwright.sync_api import Error as PlaywrightError, TimeoutError as PlaywrightTimeoutError, sync_playwright
 
 import common
+import catalog
 from catalog import Candidate
 from schema import DocumentRecord, ProductRecord, RawSpec
 
-PAGE_SIZE = 100
+PAGE_SIZE = 50  # 100 with the newestProduct sort makes Maytag's server answer an HTML error page (verified 2026-10-09)
 DELAY_S = 1.0
 MAX_PDFS = 5
 DOCS_URL = ("/services/search/contents.json?notincludeEmptyLang=false&query=%3Aformat%3Aapplication%2Fpdf"
@@ -353,7 +354,8 @@ def site_parse_search(site: Site, data: dict, sub_key: str) -> list[Candidate]:
 
 
 def _search_path(site: Site, code: str | None, page_no: int) -> str:
-    query = f":relevance:category:{code}:showMajorProductsOnly:true" if code else ":relevance:showMajorProductsOnly:true"
+    sort = "newestProduct"  # the site's own newest-first sort
+    query = f":{sort}:category:{code}:showMajorProductsOnly:true" if code else f":{sort}:showMajorProductsOnly:true"
     return (f"{site.occ}/products/search/singlesource?query={quote(query, safe='')}&pageSize={PAGE_SIZE}"
             f"&fields=OPT&lang=en_US&currentPage={page_no}&isBundle=false")
 
@@ -379,7 +381,9 @@ def site_discover(site: Site, subcategory: str, limit: int = 30) -> list[Candida
                 page_no += 1
             if len(found) >= limit:
                 break
-    return list(found.values())[:limit]
+    out = list(found.values())[:limit]
+    # a sub spread over several site categories has no single order, so no rank there
+    return catalog.stamp_newest_order(out) if len(site.codes[subcategory]) == 1 else out
 
 
 # ---------------------------------------------------------------- scrape

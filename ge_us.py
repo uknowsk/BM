@@ -196,7 +196,8 @@ def parse_search(data: dict, sub: str) -> list[tuple[Candidate, dict]]:
 def _search_page(path: str, page_no: int) -> dict:
     params = {"siteId": SS_SITE, "resultsFormat": "native", "resultsPerPage": PAGE_SIZE, "page": page_no,
               "bgfilter.categories_hierarchy": path, "bgfilter.is_part": "false",
-              "bgfilter.is_obsolete": "false", "bgfilter.availability": "available"}
+              "bgfilter.is_obsolete": "false", "bgfilter.availability": "available",
+              "sort.product_first_distribution_date": "desc"}  # the site's own "Newest" option (verified 2026-10-09)
     r = requests.get(SS_URL, params=params, headers={"User-Agent": common.UA}, timeout=30, allow_redirects=False)
     if 300 <= r.status_code < 400:
         raise GEPageError(f"unexpected Searchspring redirect (HTTP {r.status_code})")
@@ -231,7 +232,9 @@ def discover(subcategory: str, limit: int = 30) -> list[Candidate]:
     if other:
         print(f"ge_us: discover({subcategory}): skipped {other} listed product(s) classified under another sub key",
               file=sys.stderr)
-    return list(found.values())[:limit]
+    out = list(found.values())[:limit]
+    # a sub spread over several site categories has no single order, so no rank there
+    return catalog.stamp_newest_order(out) if len(SUB_SOURCES[subcategory][1]) == 1 else out
 
 
 # ---------------------------------------------------------------- page loading

@@ -79,6 +79,30 @@ def test_recency_basis_order_and_first_seen_baseline_rule():
     assert base["basis"] == "unknown" and base["score"] is None  # first look = baseline, never "new"
 
 
+def test_site_order_is_the_weakest_basis_and_needs_a_real_list():
+    def at(rank, of=20, **extra):
+        return match.recency({"attrs": {"newest_rank": rank, "newest_of": of, **extra}}, NOW)
+    top, mid, last = at(1), at(12), at(20)
+    assert top["basis"] == "site_order" and top["months"] is None and "1/20" in top["evidence"]
+    assert top["score"] > mid["score"] > last["score"] and top["score"] < 1.0  # never as strong as a real date / site NEW
+    assert at(3, release_date="2020")["basis"] == "release_date" and at(3, is_new=True)["basis"] == "site_new"
+    assert match.recency({"attrs": {"newest_rank": 1, "newest_of": 4}}, NOW)["basis"] == "unknown"  # list too short to rank
+    assert match.recency({"attrs": {"newest_rank": 30, "newest_of": 20}}, NOW)["basis"] == "unknown"  # inconsistent values
+    assert match.recency({"attrs": {"newest_rank": 1, "newest_of": 20}, "baseline": 0, "first_seen": "2026-08-01T00:00:00"},
+                         NOW)["basis"] == "first_seen"
+    assert not match.is_launch({"attrs": {"newest_rank": 1, "newest_of": 20}}, NOW)  # a rank alone never makes a "launch"
+
+
+def test_stamp_newest_order_records_position_in_the_given_order():
+    import catalog
+    cands = [Candidate(brand="X", model_number=f"M{i}", name=f"n{i}", url=f"https://x.test/{i}", attrs={"wifi": True},
+                       attrs_src={"wifi": "name"}) for i in range(3)]
+    out = catalog.stamp_newest_order(cands)
+    assert [(c.attrs["newest_rank"], c.attrs["newest_of"]) for c in out] == [(1, 3), (2, 3), (3, 3)]
+    assert out[0].attrs["wifi"] is True and out[0].attrs_src["newest_rank"] == "listing" and out[0].attrs_src["wifi"] == "name"
+    assert Candidate(brand="X", model_number="Z", name="z", url="https://x.test/z").attrs == {}  # no shared default dict
+
+
 # ------------------------------------------------------------------ consumer response
 def test_response_is_bayesian_few_reviews_cannot_beat_many():
     prior = 4.2

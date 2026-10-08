@@ -44,7 +44,10 @@ LISTING = "/cozinha/microondas"
 DELAY_S = 1.0
 MAX_PAGES = 3
 MAX_REDIRECTS = 5
-SUPPORTED_SUBCATEGORIES = {"microwave", "sco"}
+SELLS = {"microwave", "sco"}  # what the store sells; the adapter itself is switched off (see below)
+# User decision 2026-10-09: Panasonic BR is NOT supported (the official site is bot-walled; the separate store was declined).
+# Keep this empty to stay off; set it to SELLS to turn the adapter back on.
+SUPPORTED_SUBCATEGORIES: set[str] = set()
 _SLUG_URL = re.compile(r"^/[a-z0-9][a-z0-9-]{4,200}/p$")
 _MODEL = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]{2,39}$")
 
@@ -258,7 +261,7 @@ def listing_page(page: int) -> list[dict]:
 
 
 def discover(subcategory: str, limit: int = 30) -> list[Candidate]:
-    if subcategory not in SUPPORTED_SUBCATEGORIES:
+    if subcategory not in SELLS:
         raise ValueError(f"unsupported subcategory {subcategory!r} for Panasonic BR")
     found: dict[str, Candidate] = {}
     seen: set[str] = set()

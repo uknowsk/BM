@@ -202,6 +202,17 @@ class Candidate(BaseModel):
     attrs_src: dict[str, str] = {}  # attr key -> "listing" | "name" | "detail"
 
 
+def stamp_newest_order(cands: list["Candidate"]) -> list["Candidate"]:
+    """For adapters whose listing request is sorted NEWEST FIRST by the site: record each candidate's position as
+    attrs `newest_rank` (1 = newest) and `newest_of` (length of this list). match.recency uses it as the weakest
+    recency evidence. Call it on the final list, in site order, ONLY when the site really sorts newest first."""
+    total = len(cands)
+    for i, c in enumerate(cands, 1):
+        c.attrs = {**c.attrs, "newest_rank": i, "newest_of": total}
+        c.attrs_src = {**c.attrs_src, "newest_rank": "listing", "newest_of": "listing"}
+    return cands
+
+
 # ------------------------------------------------------------------ tree helpers
 def major_keys() -> list[str]:
     return list(CATEGORY_TREE)

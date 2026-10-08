@@ -227,7 +227,7 @@ def test_supported_subcategories_and_unsupported_raises():
 
 def test_search_url_uses_category_code():
     u = ka._search_url("MajorAppliancesRanges", 2)
-    assert "query=%3Arelevance%3Acategory%3AMajorAppliancesRanges%3AshowMajorProductsOnly%3Atrue" in u and "currentPage=2" in u
+    assert "query=%3AnewestProduct%3Acategory%3AMajorAppliancesRanges%3AshowMajorProductsOnly%3Atrue" in u and "currentPage=2" in u
 
 
 def test_discover_by_sub_classification():

@@ -12,10 +12,9 @@ Data sources (public JSON / HTML the pages themselves load; plain requests work,
   scrape:   GET the PDP (spec table is server-rendered: .pdd32-product-spec__item sections with title / desc pairs,
             schema.org Product JSON-LD with name, sku, image, user-manual links on org.downloadcenter.samsung.com)
             + GET searchapi.../product/card/detail/global?modelList=<code> for the price block, rating and pvi type.
-Price rule: the PDP shows "R$ 10.999,00 a vista (5% de desconto) ou R$ 11.577,89 em 18x sem juros". The regular price
-(`afterTaxPrice`, the installment price without the cash discount) is stored as price_local; the a-vista price, the struck-
-through "Preco original" and the 5% rule are recorded in extra_specs. No card/PIX/cash discount price is ever used, and no
-currency conversion is done.
+Price rule (user decision 2026-10-09): the PDP shows "R$ 10.999,00 a vista (5% de desconto) ou R$ 11.577,89 em 18x sem juros".
+The a-vista cash price (`price`) is stored as price_local; the 18x installment price (`afterTaxPrice`) and the struck-through
+"Preco original" are recorded in extra_specs. No PIX/card-specific price is used, and no currency conversion is done.
 Rating / review count come from the finder (`ratings`, `reviewCount`) only when the site publishes them. Samsung BR exposes
 no NEW badge and no release date, so is_new / release_date are never set.
 Translation: labels/values are Portuguese; extra_specs are English via translate_many() (built-in cooking vocabulary first,
@@ -587,13 +586,18 @@ def _net() -> Net:
 def _price_from_model(m: dict) -> dict:
     """Prices of one finder / card model dict. `regular` = the price WITHOUT the a-vista (cash) discount: `afterTaxPrice`
     (what the PDP shows as 'ou R$ X em 18x sem juros'); `cash` = the headline `price` (a vista, 5% off); `original` = the
-    struck-through 'Preco original' (rrpPriceDisplay). Only `regular` is stored as the product price."""
+    struck-through 'Preco original' (rrpPriceDisplay). stored_price() picks what is saved as the product price (cash)."""
     cash = pos_float(m.get("price"))
     regular = pos_float(m.get("afterTaxPrice"))
     if regular is None or (cash is not None and regular < cash):
         regular = cash
     original = pt_number(m.get("rrpPriceDisplay")) if m.get("rrpPriceDisplay") else None
     return {"regular": regular, "cash": cash, "original": pos_float(original)}
+
+
+def stored_price(prices: dict) -> float | None:
+    """The price saved as price_local: the a-vista (cash) price, or the regular price when the site shows no cash price."""
+    return prices["cash"] if prices["cash"] is not None else prices["regular"]
 
 
 def _signals(m: dict) -> dict:
@@ -648,7 +652,7 @@ def _candidate(m: dict, sub: str) -> Candidate | None:
     attrs = _listing_attrs(sub, name, m)
     return Candidate(brand=BRAND, model_number=code, name=name, url=url, price_usd=None, category="cooking",
                      subcategory=sub, region=REGION, country=COUNTRY, currency=CURRENCY,
-                     price_local=_price_from_model(m)["regular"], attrs=attrs,
+                     price_local=stored_price(_price_from_model(m)), attrs=attrs,
                      attrs_src={k: "listing" if k in ("rating", "review_count", "width_in", "burners") else "name"
                                 for k in attrs})
 
@@ -857,14 +861,14 @@ def build_record(url: str, ld: dict, rows, card: dict, manuals: list[dict]) -> t
             std[key] = fmt(round(units.in_to_mm(val)))
     if weight_kg:
         std["Weight (kg)"] = fmt(weight_kg)
-    if prices["regular"]:
-        std["List price (BRL)"] = fmt(prices["regular"])
-    if prices["cash"] and prices["regular"] and prices["cash"] < prices["regular"]:
-        std["Cash price excluded (BRL)"] = fmt(prices["cash"])
+    if prices["cash"]:
+        std["Cash price (BRL)"] = fmt(prices["cash"])
+    if prices["regular"] and prices["regular"] != prices["cash"]:
+        std["Installment price excluded (BRL)"] = fmt(prices["regular"])
     if prices["original"] and prices["original"] != prices["regular"]:
         std["Struck-through original price (BRL)"] = fmt(prices["original"])
-    std["Price basis"] = ("samsung.com/br regular price (installment price without the a-vista cash discount); "
-                          "excludes cash/PIX/card discount prices")
+    std["Price basis"] = ("samsung.com/br a-vista cash price (5% off the 18x installment price); "
+                          "the installment price is listed separately")
     std["Source language"] = "pt-BR (labels/values translated; originals in RawSpec)"
 
     docs = []
@@ -874,7 +878,7 @@ def build_record(url: str, ld: dict, rows, card: dict, manuals: list[dict]) -> t
     return ProductRecord(
         brand=BRAND, model_number=model, product_name=name, product_url=url, category="cooking", subcategory=sub,
         finish_color=english_finish, region=REGION, country=COUNTRY, currency=CURRENCY, price_usd=None,
-        price_local=prices["regular"],
+        price_local=stored_price(prices),
         capacity_total_cuft=round(units.l_to_cuft(oven_l), 2) if oven_l and sub != "gas_cooktop" else None,
         width_in=w, height_in=h, depth_in=d,
         weight_lb=None if not weight_kg else round(units.kg_to_lb(weight_kg), 1),

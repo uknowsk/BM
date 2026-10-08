@@ -391,7 +391,7 @@ def _category_id(f: _Fetcher, slug: str) -> str:
 
 
 def _model_body(page: int, filters: Optional[list] = None) -> dict:
-    return {"sortType": "sort_pick", "mltpModelFilterFlag": "", "tomorrowDeliveryFilterFlag": "",
+    return {"sortType": "sort_new", "mltpModelFilterFlag": "", "tomorrowDeliveryFilterFlag": "",
             "spaceModelFilterFlag": "", "upApplianceFilterFlag": "", "highEfficiencyFilterFlag": "",
             "empFilterType": "", "lineupId": "", "subCategoryId": "", "carePromotionBadgeFilterList": [],
             "subCategoryFilterList": [], "colorFilterList": [], "tagFilterList": [], "brandFilterList": [],
@@ -583,7 +583,9 @@ def discover(subcategory: str, limit: int = 30) -> list[Candidate]:
     finally:
         f.close()
     print(f"lg_kr: discover({subcategory}): kept {min(len(found), limit)}", file=sys.stderr)
-    return list(found.values())[:limit]
+    out = list(found.values())[:limit]
+    # sort_new = the site's newest-first order; a sub spread over two categories has no single order, so no rank there
+    return catalog.stamp_newest_order(out) if len(SUB_SOURCES[subcategory]) == 1 else out
 
 
 # ---------------------------------------------------------------- PDP parsing

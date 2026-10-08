@@ -215,8 +215,8 @@ def test_dest_path_sanitised_and_contained():
 
 def test_search_path():
     u = mt._search_path(mt.SITE, None, 1)
-    assert u.startswith("/ws/v2/maytag-us/products/search/singlesource?query=%3Arelevance%3AshowMajorProductsOnly%3Atrue")
-    assert "currentPage=1" in u and "pageSize=100" in u
+    assert u.startswith("/ws/v2/maytag-us/products/search/singlesource?query=%3AnewestProduct%3AshowMajorProductsOnly%3Atrue")
+    assert "currentPage=1" in u and "pageSize=50" in u and "newestProduct" in u
     assert "category%3AKitchenCooking" in mt._search_path(mt.SITE, "KitchenCooking", 0)
 
 

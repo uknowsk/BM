@@ -216,7 +216,7 @@ def _search_page(code: str, start: int) -> dict:
         return hit[1]
     data = {"clientCode": "b2c", "clientName": "scom_pf", "firstSearchYN": str(start == 0).lower(),
             "countryCode": "us", "storeID": "us", "startIndex": start, "requestCount": PAGE_SIZE,
-            "category_code": code, "filters": "[]", "sort": "recommended"}
+            "category_code": code, "filters": "[]", "sort": "newest"}
     r = requests.post(SEARCH_URL, data=data, timeout=30,
                       headers={**HEADERS, "Origin": BASE, "Referer": BASE + "/"})
     r.raise_for_status()
@@ -245,7 +245,7 @@ def discover(subcategory: str, limit: int = 30) -> list[Candidate]:
     print(f"samsung_us: discover({subcategory}): kept {min(len(seen), limit)}, unclassified {stats.get('unclassified', 0)}, "
           f"other sub keys {stats.get('other', 0)}, off-domain {stats.get('off_domain', 0)}, "
           f"invalid {stats.get('invalid', 0)}", file=sys.stderr)
-    return list(seen.values())[:limit]
+    return catalog.stamp_newest_order(list(seen.values())[:limit])  # the finder is requested with sort=newest
 
 
 # ---------------------------------------------------------------- page loading

@@ -156,7 +156,7 @@ def _age_score(months: float) -> float:
 
 
 def recency(row: dict, now: Optional[datetime] = None) -> dict:
-    """{score|None, basis, months|None, evidence}. basis: release_date | site_new | first_seen | unknown."""
+    """{score|None, basis, months|None, evidence}. basis: release_date | site_new | first_seen | site_order | unknown."""
     now = now or datetime.now()
     attrs = row.get("attrs") or {}
     released = _parse_date(attrs["release_date"]) if attrs.get("release_date") else None
@@ -175,6 +175,12 @@ def recency(row: dict, now: Optional[datetime] = None) -> dict:
         if days is not None:
             return {"score": 0.9 if days <= 180 else 0.6 if days <= 365 else 0.4, "basis": "first_seen",
                     "months": round(days / 30.44, 1), "evidence": f"앱이 {row['first_seen'][:10]}에 처음 발견"}
+    rank, of = attrs.get("newest_rank"), attrs.get("newest_of")
+    if isinstance(rank, int) and isinstance(of, int) and of >= 5 and 1 <= rank <= of:
+        pct = (rank - 1) / of  # position in the site's newest-first listing: a rough, relative hint only
+        return {"score": 0.7 if pct < 0.25 else 0.55 if pct < 0.5 else 0.4 if pct < 0.75 else 0.3,
+                "basis": "site_order", "months": None,
+                "evidence": f"사이트 최신순 정렬 {rank}/{of}번째 (추정)"}
     return {"score": None, "basis": "unknown", "months": None, "evidence": "출시 시점 미확인"}
 
 

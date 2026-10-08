@@ -23,6 +23,7 @@ from urllib.parse import urljoin, urlparse
 from playwright.sync_api import Error as PlaywrightError, TimeoutError as PlaywrightTimeoutError, sync_playwright
 
 import common
+import catalog
 from catalog import Candidate
 from maytag_us import occ_signals  # same OCC platform; shared rating/review extraction
 from schema import DocumentRecord, ProductRecord, RawSpec
@@ -31,7 +32,7 @@ BRAND = "KitchenAid"
 BASE = "https://www.kitchenaid.com"
 LISTING_PAGE = BASE + "/major-appliances/refrigeration/refrigerators.html"
 OCC = "/ws/v2/kitchenAid-us"
-SEARCH_Q = ":relevance:category:{cat}:showMajorProductsOnly:true"
+SEARCH_Q = ":newestProduct:category:{cat}:showMajorProductsOnly:true"  # the site's own newest-first sort
 SPEC_URL = ("/content/kitchenaid/en_us/products/majors/jcr:content/root/main/productTray/pdpTray/"
             "checkDimensions/par-section/specificationspdpv5.model.{m}.json")
 DOCS_URL = ("/services/search/contents.json?notincludeEmptyLang=false&query=%3Aformat%3Aapplication%2Fpdf"
@@ -342,7 +343,9 @@ def discover(subcategory: str, limit: int = 30) -> list[Candidate]:
                 page_no += 1
             if len(found) >= limit:
                 break
-    return list(found.values())[:limit]
+    out = list(found.values())[:limit]
+    # a sub spread over several site categories has no single order, so no rank there
+    return catalog.stamp_newest_order(out) if len(rule.segments) == 1 else out
 
 
 # ---------------------------------------------------------------- scrape

@@ -193,6 +193,9 @@ listings; rows never expire). First sight of a (brand, country, sub) group is a 
 COMPLETE listing (shorter than `limit`) count as new discoveries (`baseline=0`), so a larger `limit` never makes old models look new.
 Standard signal keys (candidate `attrs` and `ProductRecord`; absent = unknown): `rating` (0-5), `review_count`, `is_new` (site flag only),
 `release_date` ('YYYY-MM-DD'|'YYYY-MM'|'YYYY'), `release_src` (`site` | `distribution` (manufacturer first distribution date, GE/Cafe) | `doc` | `sitemap`).
+Adapters that request the site's own newest-first sort also stamp `newest_rank` (1 = newest) and `newest_of` (length of that listing) with
+`catalog.stamp_newest_order(cands)` (only when the sub maps to a single site category). `match.recency` uses them last (`basis: "site_order"`,
+needs `newest_of >= 5`, never counts as a launch). Samsung BR stores the a-vista cash price as `price_local`; Panasonic BR is switched off.
 
 ### POST /api/match
 ```

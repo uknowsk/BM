@@ -123,7 +123,7 @@ def test_price_parsing_helpers():
     assert sb.pt_number("R$ 1.299,00") == 1299.0 and sb.pt_number("R$10.999,00") == 10999.0
     assert sb.pt_number("12,7 kW") == 12.7 and sb.pt_number("3.300 W") == 3300.0 and sb.pt_number("37,5 kg") == 37.5
     assert sb.pt_number("sem número") is None and sb.pt_number(None) is None
-    # regular price = installment price without the a-vista discount, never the cash price
+    # stored price = the a-vista cash price (user decision 2026-10-09); regular = the 18x installment price
     m = {"price": "10999", "afterTaxPrice": "11577.89", "rrpPriceDisplay": "R$11.577,89"}
     p = sb._price_from_model(m)
     assert p == {"regular": 11577.89, "cash": 10999.0, "original": 11577.89}
@@ -131,6 +131,8 @@ def test_price_parsing_helpers():
     assert sb._price_from_model(m2)["regular"] == 13683.16 and sb._price_from_model(m2)["original"] == 14999.0
     assert sb._price_from_model({"price": "4749"})["regular"] == 4749.0  # no installment figure: the one price
     assert sb._price_from_model({})["regular"] is None
+    assert sb.stored_price(p) == 10999.0 and sb.stored_price(sb._price_from_model({"price": "4749"})) == 4749.0
+    assert sb.stored_price(sb._price_from_model({})) is None
 
 
 # ------------------------------------------------------------------ discover
@@ -156,12 +158,12 @@ def test_parse_finder_by_sub():
 def test_candidate_prices_attrs_and_signals():
     by_model = {c.model_number: c for c in sb.parse_finder(_json("finder_cooking.json"))}
     top = by_model["NSG90H60SRAZ"]
-    assert top.price_local == 11577.89  # regular price, not the 10.999,00 a-vista price
+    assert top.price_local == 10999.0  # a-vista cash price, not the 11.577,89 18x price
     assert top.attrs["fuel"] == "gas" and top.attrs["burners"] == 5 and top.attrs["wifi"] is True
     assert top.attrs["air_fry"] is True and "rating" not in top.attrs and "review_count" not in top.attrs  # none published
     assert "is_new" not in top.attrs and "release_date" not in top.attrs
     oven = by_model["NV7B4420XAKBZ"]
-    assert oven.price_local == 4998.95 and oven.attrs["rating"] == 3.95 and oven.attrs["review_count"] == 85
+    assert oven.price_local == 4749.0 and oven.attrs["rating"] == 3.95 and oven.attrs["review_count"] == 85
     assert oven.attrs["capacity_total_cuft"] == 2.68 == oven.attrs["oven_capacity_cuft"]  # 76 L
     assert oven.attrs["width_in"] == 23.4 and oven.attrs["fuel"] == "electric"
     cooktop = by_model["NA30N6555TSAZ"]
@@ -255,7 +257,7 @@ def test_build_record_gas_range():
         rec, docs = _build(PDP_URL, "pdp_range_nsg90h.html", _json("card_nsg90h.json"))
     assert (rec.brand, rec.model_number, rec.category, rec.subcategory) == ("Samsung", "NSG90H60SRAZ", "cooking", "gas_oven")
     assert (rec.region, rec.country, rec.currency, rec.price_usd) == ("sa", "br", "BRL", None)
-    assert rec.price_local == 11577.89
+    assert rec.price_local == 10999.0
     assert rec.capacity_total_cuft == 6.0  # 170 L
     assert (rec.width_in, rec.height_in, rec.depth_in) == (30.0, 36.0, 28.4)
     assert rec.weight_lb == 197.1 and rec.voltage_v == "127" and rec.frequency_hz == 60.0
@@ -268,8 +270,8 @@ def test_build_record_gas_range():
     assert ex["Oven capacity (L)"] == "170" and ex["Oven capacity (cu ft)"] == "6"
     assert ex["Burners/elements"] == "5" and ex["Fuel"] == "gas" and ex["Weight (kg)"] == "89.4"
     assert ex["Width (mm)"] == "761" and ex["Depth (mm)"] == "721"
-    assert ex["List price (BRL)"] == "11577.89" and ex["Cash price excluded (BRL)"] == "10999"
-    assert "excludes" in ex["Price basis"] and ex["Accessories > Air fry basket"] == "Yes (1)"
+    assert ex["Cash price (BRL)"] == "10999" and ex["Installment price excluded (BRL)"] == "11577.89"
+    assert "cash price" in ex["Price basis"] and ex["Accessories > Air fry basket"] == "Yes (1)"
     assert "Air fry" in rec.pod_features and "Built-in Wi-Fi" in rec.pod_features
     assert [t for t, _ in docs] == ["Manual", "Manual EN"] and "BPT" in docs[0][1]
 
@@ -344,7 +346,7 @@ def test_scrape_returns_product_documents_and_raw_specs():
                               local_path=f"downloads/samsung/{model}_{doc_type}.pdf", sha256="0" * 64, size_bytes=10)
     with _offline(), patched(sb, _net=lambda: net, download_pdf=fake_download, MIN_DELAY_S=0.0):
         product, docs, raw = sb.scrape(PDP_URL)
-    assert product.model_number == "NSG90H60SRAZ" and product.price_local == 11577.89
+    assert product.model_number == "NSG90H60SRAZ" and product.price_local == 10999.0
     assert [d.doc_type for d in docs] == ["Manual", "Manual EN"] and pdfs[0][:2] == ("Samsung", "NSG90H60SRAZ")
     assert len(raw) == 69 and all(r.source == "web" and r.model_number == "NSG90H60SRAZ" for r in raw)
     originals = {(r.section, r.key): r.value for r in raw}

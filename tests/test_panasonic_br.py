@@ -24,7 +24,8 @@ def _parse(model):
 
 def test_constants_and_supported():
     assert (s.COUNTRY, s.REGION, s.CURRENCY, s.BRAND) == ("br", "sa", "BRL", "Panasonic")
-    assert s.SUPPORTED_SUBCATEGORIES == {"microwave", "sco"} and s.SUPPORTED_SUBCATEGORIES <= set(catalog.sub_keys("cooking"))
+    assert s.SELLS == {"microwave", "sco"} and s.SELLS <= set(catalog.sub_keys("cooking"))
+    assert s.SUPPORTED_SUBCATEGORIES == set() and not catalog.supported("Panasonic", "br")  # switched off by user decision
     for sub in ("french_door", "otr", "induction", "gas_cooktop"):
         try:
             s.discover(sub)

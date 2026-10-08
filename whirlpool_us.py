@@ -19,6 +19,7 @@ from urllib.parse import quote, urljoin, urlparse
 from playwright.sync_api import Error as PlaywrightError, TimeoutError as PlaywrightTimeoutError, sync_playwright
 
 import common
+import catalog
 from catalog import Candidate
 from maytag_us import occ_signals  # same OCC platform; shared rating/review extraction
 from schema import DocumentRecord, ProductRecord, RawSpec
@@ -318,7 +319,7 @@ def parse_search(data: dict, sub_key: str) -> list[Candidate]:
 
 
 def _search_path(code: str, page_no: int) -> str:
-    q = quote(f":relevance:category:{code}:showMajorProductsOnly:true", safe="")
+    q = quote(f":newestProduct:category:{code}:showMajorProductsOnly:true", safe="")  # the site's own newest-first sort
     return f"{OCC}/products/search/singlesource?query={q}&pageSize={PAGE_SIZE}&fields=OPT&lang=en_US&currentPage={page_no}&isBundle=false"
 
 
@@ -340,7 +341,9 @@ def discover(subcategory: str, limit: int = 30) -> list[Candidate]:
                 page_no += 1
                 if len(found) < limit and page_no < total_pages:
                     time.sleep(DELAY_S)
-    return list(found.values())[:limit]
+    out = list(found.values())[:limit]
+    # a sub spread over several site categories has no single order, so no rank there
+    return catalog.stamp_newest_order(out) if len(sub.codes) == 1 else out
 
 
 # ---------------------------------------------------------------- scrape

@@ -21,7 +21,7 @@ import requests
 
 import common
 import units
-from catalog import Candidate
+from catalog import Candidate, stamp_newest_order
 from schema import DocumentRecord, ProductRecord, RawSpec
 
 BRAND = "Beko"
@@ -220,7 +220,7 @@ def discover(subcategory: str, limit: int = 30) -> list[Candidate]:
         for path in SUB_SOURCES[subcategory]:
             seen = 0
             for page in range(1, MAX_PAGES + 1):
-                html_page = f.get(f"{BASE}/{path}" + (f"?page={page}" if page > 1 else ""))
+                html_page = f.get(f"{BASE}/{path}?sort=age" + (f"&page={page}" if page > 1 else ""))  # sort=age: newest first
                 items, total = parse_listing(html_page)
                 new_paths = parse_new_urls(html_page)
                 seen += len(items)
@@ -234,7 +234,9 @@ def discover(subcategory: str, limit: int = 30) -> list[Candidate]:
                 break
     finally:
         f.close()
-    return list(found.values())[:limit]
+    out = list(found.values())[:limit]
+    # a sub spread over several site categories has no single order, so no rank there
+    return stamp_newest_order(out) if len(SUB_SOURCES[subcategory]) == 1 else out
 
 
 # ---------------------------------------------------------------- scrape

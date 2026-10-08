@@ -168,7 +168,8 @@ def parse_search(site: Site, data: dict, sub: str) -> list[tuple[Candidate, dict
 def _search_page(site: Site, path: str, page_no: int) -> dict:
     params = {"siteId": site.ss_site, "resultsFormat": "native", "resultsPerPage": PAGE_SIZE, "page": page_no,
               "bgfilter.categories_hierarchy": path, "bgfilter.is_part": "false",
-              "bgfilter.is_obsolete": "false", "bgfilter.availability": "available"}
+              "bgfilter.is_obsolete": "false", "bgfilter.availability": "available",
+              "sort.ss_newest_sort": "desc"}  # the site's own "Newest" option (no date in the answer to cross-check the order)
     url = f"https://{site.ss_site}.{SS_HOST}/api/search/search.json"
     r = requests.get(url, params=params, headers={"User-Agent": common.UA}, timeout=30, allow_redirects=False)
     if 300 <= r.status_code < 400:
@@ -203,7 +204,9 @@ def discover_site(site: Site, subcategory: str, limit: int = 30) -> list[Candida
             break
     if other:
         print(f"{site.brand}: discover({subcategory}): skipped {other} listed product(s) classified elsewhere", file=sys.stderr)
-    return list(found.values())[:limit]
+    out = list(found.values())[:limit]
+    # a sub spread over several site categories has no single order, so no rank there
+    return catalog.stamp_newest_order(out) if len(site.sub_sources[subcategory][1]) == 1 else out
 
 
 def discover(subcategory: str, limit: int = 30) -> list[Candidate]:

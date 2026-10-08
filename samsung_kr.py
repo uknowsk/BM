@@ -351,7 +351,7 @@ class _Net:
 
 # ---------------------------------------------------------------- discover
 def _goods_list_url(code: str, page: int) -> str:
-    return (f"{GOODS_LIST_URL}?searchFilter=&dispClsfNo={code}&sortType=10&page={page}&rows={ROWS}&ehcacheYn=Y"
+    return (f"{GOODS_LIST_URL}?searchFilter=&dispClsfNo={code}&sortType=20&page={page}&rows={ROWS}&ehcacheYn=Y"
             "&soldOutExceptYn=N&pfFasterUseYn=Y&secApp=false&secIos=false&aiscCtgYn=N&tcPlantCode=&onlyAiscGoods=N")
 
 
@@ -492,7 +492,10 @@ def discover(subcategory: str, limit: int = 30) -> list[Candidate]:
         for code in codes:
             for c in parse_goods_list(_goods_list(net, code), subcategory, stats):
                 seen.setdefault(c.model_number, c)
-    ranked = sorted(seen.values(), key=lambda c: c.price_local is None)  # on-sale first, stable otherwise
+    site_order = list(seen.values())  # sortType=20 = registration date, newest first (verified 2026-10-09)
+    if len(codes) == 1:  # several category codes have no single order, so no rank there
+        catalog.stamp_newest_order(site_order)  # before the on-sale reorder below
+    ranked = sorted(site_order, key=lambda c: c.price_local is None)  # on-sale first, stable otherwise
     print(f"samsung_kr: discover({subcategory}): {len(ranked)} found, returning {min(len(ranked), limit)}; skipped "
           f"unclassified {stats.get('unclassified', 0)}, other sub keys {stats.get('other', 0)}, bundles "
           f"{stats.get('bundle', 0)}, off-domain {stats.get('off_domain', 0)}, invalid {stats.get('invalid', 0)}",

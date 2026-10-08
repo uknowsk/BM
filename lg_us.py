@@ -23,7 +23,7 @@ from urllib.parse import urlparse
 import requests
 from playwright.sync_api import TimeoutError as PlaywrightTimeoutError, sync_playwright
 
-from catalog import Candidate
+from catalog import Candidate, stamp_newest_order
 from common import ROOT, UA, download_pdf, launch_browser, looks_blocked, num, pdf_text
 from schema import DocumentRecord, ProductRecord, RawSpec
 
@@ -216,7 +216,7 @@ def discover(subcategory: str, limit: int = 30) -> list[Candidate]:
         raise LGPageError("getAccessToken returned no token")
     body = {
         "locale": "en-US", "context": {"organization": "OBS"},
-        "searchHub": "LG.com - Commerce - PDS - Listing", "sortCriteria": "relevancy",
+        "searchHub": "LG.com - Commerce - PDS - Listing", "sortCriteria": "@ec_creation_date descending",
         "cq": _cq(SUB_RULES[subcategory]),
         "fieldsToInclude": ["ec_model_display_name", "ec_user_friendly_name", "ec_final_price",
                             "clickableuri", "ec_group_id", "ec_category_code", "ec_s_rating", "ec_default_product_tag"],
@@ -243,7 +243,7 @@ def discover(subcategory: str, limit: int = 30) -> list[Candidate]:
           f"kept {min(len(found), limit)}, dropped {stats.get('dropped', 0)} by category/title filters"
           + ("" if exhausted or len(found) >= limit else " (STOPPED at the page cap; results incomplete)"),
           file=sys.stderr)
-    return list(found.values())[:limit]
+    return stamp_newest_order(list(found.values())[:limit])  # Coveo is queried newest first (ec_creation_date)
 
 
 # ---------------------------------------------------------------- page loading
