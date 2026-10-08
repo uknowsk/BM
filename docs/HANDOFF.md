@@ -69,6 +69,14 @@ Gauge: 경쟁사 가전 제품 스펙·POD·모드를 수집해 비교하는 로
 - 시장 `sa`(남미)는 어댑터가 하나라도 있으면 자동 활성화(원래는 '준비 중'). 브라질 어댑터 8개(조리기기만): `samsung_br`, `lg_br`, `electrolux_br`, `brastemp_br`, `consul_br`(공유 `_whirlpool_br_common.py`, VTEX), `smeg_br`, `miele_br`, `panasonic_br`. 새 브랜드 Brastemp, Consul(총 32개). 번역 `i18n.get('pt')`, 단위 `units.br_energy_class/parse_kwh_per_month`, 국가 `catalog.ADAPTER_COUNTRIES`에 br. 허용 호스트는 `common.py`(정확한 호스트만).
 - 검증: 전체 테스트 61개 통과, 브랜드별 end-to-end(검색 1건 → 수집) 8/8 성공. 후속은 `docs/TODO.md` H절(가격 해석 확인, 약관, 미지원 브랜드 등).
 
+## 다음 대화 시작 안내 (2026-10-09)
+- **현재 상태**: 메인 = 원격 `main` = 브랜치 `claude/suspicious-swanson-8f4490` = `690b822`. 사용자 서버(8765)는 메인 폴더에서 `python server.py`로 떠 있음(Claude 앱이 재시작되면 꺼짐: 다시 켜야 함. 로그는 `server.log`/`server.err`, `.gitignore` 대상). 기능: 30→32 브랜드, 가스 쿡탑, 조리기기 어댑터(미국·한국·독일·영국·브라질), 경쟁 모델 선별(`/match`), 5단계 가격, 주기적 재검색, 남미(브라질).
+- **사용자 답변 대기**: (1) Samsung BR 가격 기준(현재 18회 무이자 가격, 현금가는 extra_specs) (2) Panasonic BR을 별도 공식 스토어 소스로 쓰는 것 수용 여부 (3) 이용약관 확인(TODO F·H절) (4) User-Agent를 앱을 밝히는 값으로 바꿀지(지금은 일반 브라우저 값 `common.UA`).
+- **사용자가 할 일**: `/match` 맨 아래에서 첫 자동 재검색 예약 만들기(만들면 약 1분 안에 실제 사이트 검색이 시작되고 그 결과가 신제품 판단의 기준선이 됨).
+- **후속 후보**(상세는 `docs/TODO.md`): 냉장고·세탁기 어댑터 확장(Sub-Zero/Liebherr 포함), 선별 결과 Excel 출력과 '수집된 제품을 기준 모델로' 입력, 사이트별 '최신순 정렬'을 최근성 근사로 활용(G절), 좁은 화면(390px) 가로 스크롤, FastAPI `on_event` 사용 중단 경고를 lifespan으로, 남미 나머지 국가(스페인어), 서버 자동 시작(윈도우 시작 시).
+- **작업 방식 메모**: 워크트리에서 개발 → 전체 테스트(`$env:FRIDGE_I18N_LLM=0` 후 `tests\test_*.py`를 하나씩, 61개 모두 통과가 기준) → 커밋(attribution 줄 없이) → 메인에서 `git merge --ff-only <브랜치>` → `git push origin main` → 8765 재시작. 사용자 서버(8765)를 건드리기 전 반드시 사용자 요청 확인. 시험 서버는 `FRIDGE_PORT=8799 FRIDGE_SCHEDULER=0`(예약이 실제 사이트로 나가지 않게)로. GateGuard 훅이 새 파일·편집·삭제·서버 종료 전에 사실(importer, 영향 함수, 데이터 구조, 사용자 지시 원문)을 요구함. 브랜드별 end-to-end 확인 스크립트는 세션 임시 폴더에 있었음(없으면 `/api/search` → `/api/collect`로 브랜드별 1건 수집하는 짧은 스크립트를 다시 작성).
+- **규칙 재확인**: 크롤링은 robots.txt/약관 존중, 요청 간격 1초 이상(어댑터가 `REQUEST_DELAY_S` 선언 시 그대로, Viking 10초), 차단은 우회 금지·미지원 보고, 쿠키 배너는 거절 먼저, 비밀/캐시/다운로드 커밋 금지, 파이썬은 heredoc 금지(Write/Edit만).
+
 ## 알려진 한계
 - 필터 대부분은 이름에서 추정한 값 또는 상세 수집된 제품에만 정확함.
 - 한국어 번역·모드 추출은 로컬 LLM 속도에 좌우됨 (제품당 수 분).
