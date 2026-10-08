@@ -1,6 +1,6 @@
 """Source-language -> English translation of appliance spec labels/values for the non-English adapters.
 
-One generic Translator per language code (ko, de, fr): curated glossary (data/glossary_<lang>.json) first, then a
+One generic Translator per language code (ko, de, fr, pt = Brazilian Portuguese): curated glossary (data/glossary_<lang>.json) first, then a
 disk cache (data/<lang>_cache.json), then ONE batched call per <=40 unknown strings to the local LLM (llm.chat_json).
 When the LLM is off or unreachable the result is deterministic: glossary + regex rules only, and anything unknown is
 returned unchanged (never invented, nothing cached).
@@ -39,7 +39,7 @@ _HERE = Path(__file__).resolve().parent
 DATA_DIR = _HERE / "data"
 LLM_BATCH = 40          # unknown strings per LLM call
 LLM_MAX_CHARS = 200     # longer strings are never sent (and replies longer than 4x are rejected)
-LANGUAGES = {"ko": "Korean", "de": "German", "fr": "French"}
+LANGUAGES = {"ko": "Korean", "de": "German", "fr": "French", "pt": "Brazilian Portuguese"}
 
 _TAGS = re.compile(r"<[^>]*>")
 _WS = re.compile(r"\s+")
@@ -48,11 +48,11 @@ _PAREN_RE = re.compile(r"^(.*?)\s*\(([^()]*)\)\s*$")
 _COUNT_RE = re.compile(r"^(\d[\d.,]*)\s*([^\d\s].*)$")
 # numbers / dimensions / units only: nothing to translate ('595 x 1.850 x 688 mm', '230 V', '1.200 W', '45 dB(A)')
 _UNITS = ("mm", "cm", "m", "kg", "g", "l", "w", "kw", "v", "hz", "db", "db(a)", "a", "ma", "bar", "rpm", "min", "h", "s",
-          "kwh", "kwh/a", "kwh/jahr", "kwh/an", "btu", "cm2", "m2", "m3", "°c", "°", "%", "€", "eur", "£", "gbp", "$",
+          "kwh", "kwh/a", "kwh/jahr", "kwh/an", "kwh/mes", "kwh/mês", "kwh/ano", "r$", "brl", "btu", "cm2", "m2", "m3", "°c", "°", "%", "€", "eur", "£", "gbp", "$",
           "chf", "l/min", "u/min", "tr/min", "kwh/100", "k", "lm", "ppm", "cfm")
 _NUMERIC_RE = re.compile(
     r"^[\d\s.,×x*/:+\-–−~±()°%€£$]*(?:\s*(?:" + "|".join(re.escape(u) for u in sorted(_UNITS, key=len, reverse=True))
-    + r")(?![a-zäöüéèêàç]))*[\d\s.,×x*/:+\-–−~±()°%€£$]*$", re.I)
+    + r")(?![a-zäöüéèêàçãõíóúâô]))*[\d\s.,×x*/:+\-–−~±()°%€£$]*$", re.I)
 
 
 def clean(s) -> str:
@@ -290,7 +290,7 @@ _REG_LOCK = threading.Lock()
 
 
 def get(lang: str) -> Translator:
-    """The shared Translator of a language code ('ko', 'de', 'fr'); ValueError for any other code."""
+    """The shared Translator of a language code ('ko', 'de', 'fr', 'pt'); ValueError for any other code."""
     if lang not in LANGUAGES:
         raise ValueError(f"unsupported language {lang!r} (supported: {', '.join(LANGUAGES)})")
     with _REG_LOCK:

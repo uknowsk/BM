@@ -1,5 +1,5 @@
 """Plain-assert tests (pytest-compatible). Run: python tests/test_brands.py
-Brand registry of the 6 -> 30 expansion: metadata, module-name rule, 'ready only when the module file exists'."""
+Brand registry of the 6 -> 32 expansion: metadata, module-name rule, 'ready only when the module file exists'."""
 import importlib
 import sys
 import tempfile
@@ -12,11 +12,11 @@ import service
 
 NEW_24 = ["Maytag", "JennAir", "Amana", "Thermador", "Gaggenau", "Siemens", "Frigidaire", "Electrolux", "AEG", "Café",
           "Monogram", "Haier", "Fisher & Paykel", "Viking", "Sub-Zero", "Wolf", "Miele", "Smeg", "Liebherr",
-          "Bertazzoni", "De Dietrich", "Beko", "Hisense", "Panasonic"]
+          "Bertazzoni", "De Dietrich", "Beko", "Hisense", "Panasonic", "Brastemp", "Consul"]
 
 
-def test_registry_has_30_brands_in_known_groups():
-    assert len(catalog.BRAND_META) == 30 and list(catalog.BRAND_META)[:6] == [
+def test_registry_has_32_brands_in_known_groups():
+    assert len(catalog.BRAND_META) == 32 and list(catalog.BRAND_META)[:6] == [
         "Samsung", "LG", "KitchenAid", "GE", "Whirlpool", "Bosch"]
     assert list(catalog.BRAND_META)[6:] == NEW_24
     for name, meta in catalog.BRAND_META.items():
@@ -24,7 +24,12 @@ def test_registry_has_30_brands_in_known_groups():
         assert meta["countries"] and all(c in catalog.ADAPTER_COUNTRIES for c in meta["countries"]), name
     assert catalog.brand_group("Maytag") == "Whirlpool Corp." and catalog.brand_group("Siemens") == "BSH"
     assert catalog.brand_group("nope") is None and catalog.brand_countries("De Dietrich") == ["fr"]
-    assert catalog.ADAPTER_COUNTRIES == ("us", "kr", "de", "uk", "fr")
+    assert catalog.ADAPTER_COUNTRIES == ("us", "kr", "de", "uk", "fr", "br")
+    assert catalog.brand_countries("Brastemp") == ["br"] and catalog.brand_countries("Consul") == ["br"]
+    assert catalog.brand_group("Brastemp") == catalog.brand_group("Consul") == "Whirlpool Corp."
+    assert catalog.brand_slug("Brastemp") == "brastemp" and catalog.brand_slug("Consul") == "consul"
+    for b in ("Samsung", "LG", "Electrolux", "Bosch", "Whirlpool", "Hisense", "Panasonic", "Haier", "Smeg", "Miele"):
+        assert "br" in catalog.brand_countries(b), b
 
 
 def test_brand_slug_rule():
@@ -33,7 +38,7 @@ def test_brand_slug_rule():
     for brand, slug in cases.items():
         assert catalog.brand_slug(brand) == slug, brand
     slugs = [catalog.brand_slug(b) for b in catalog.BRAND_META]
-    assert len(set(slugs)) == 30 and all(s.isascii() and s.isalnum() and s == s.lower() for s in slugs)
+    assert len(set(slugs)) == 32and all(s.isascii() and s.isalnum() and s == s.lower() for s in slugs)
 
 
 def test_yaml_lists_all_brands_with_rule_based_modules():
@@ -86,6 +91,25 @@ def test_new_brand_module_is_found_when_the_file_exists():
                 catalog.BRAND_META.pop(brand)
             importlib.invalidate_caches()
     assert catalog.module_name("Zéta & Co") is None
+
+
+def test_south_america_enables_with_any_br_adapter():
+    # A throw-away consul_br module (temp dir on sys.path, never in the repo) makes 'sa' active in /api/regions.
+    import server
+    with tempfile.TemporaryDirectory() as d:
+        Path(d, "consul_br.py").write_text("SUPPORTED_SUBCATEGORIES = {'gas_cooktop'}" + chr(10), encoding="utf-8")
+        sys.path.insert(0, d)
+        try:
+            importlib.invalidate_caches()
+            assert catalog.module_name("Consul", "br") == "consul_br" and catalog.countries_with_adapter("Consul") == ["br"]
+            assert catalog.region_support("sa") == {"Consul": {"gas_cooktop"}} or "Consul" in catalog.region_support("sa")
+            sa = {r["key"]: r for r in server.api_regions()}["sa"]
+            assert sa["enabled"] and sa["note"] == "" and "Consul" in sa["brands"] and sa["enabled_countries"] == ["br"]
+            assert sa["currency"] == "BRL" and sa["countries"][0] == "br"
+        finally:
+            sys.path.remove(d)
+            sys.modules.pop("consul_br", None)
+            importlib.invalidate_caches()
 
 
 def test_existing_six_keep_explicit_us_modules():

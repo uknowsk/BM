@@ -15,7 +15,7 @@
     for (const kid of kids.flat()) if (kid != null && kid !== false) n.append(kid.nodeType ? kid : document.createTextNode(String(kid)));
     return n;
   };
-  const CUR = { us: 'USD', kr: 'KRW', de: 'EUR', uk: 'GBP' };
+  const CUR = { us: 'USD', kr: 'KRW', de: 'EUR', uk: 'GBP', br: 'BRL' };
   const FEAT_KO = { wifi: 'Wi-Fi', convection: '컨벡션', air_fry: '에어프라이', steam: '스팀', energy_star: 'ENERGY STAR' };
   const BASIS_KO = { release_date: '출시일', site_new: '사이트 NEW', first_seen: '최초 발견', unknown: '출시 시점 미확인' };
   const COMP_KO = { price: '가격', spec: '스펙', recency: '최근성', response: '호응' };

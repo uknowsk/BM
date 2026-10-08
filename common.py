@@ -66,6 +66,16 @@ DOWNLOAD_HOST_ALLOW = (
     "bertazzoni.com", "bertazzoni.co.uk", "dedietrich.com", "dedietrich-electromenager.fr", "beko.com",
     "bekoappliances.com", "beko.co.uk", "beko.de", "hisense-usa.com", "hisense.com", "hisense.co.uk", "hisense.de",
     "panasonic.com", "panasonic.co.uk", "panasonic.de",
+    # Brazil (br): national sites of the Brazilian adapters (samsung.com / lg.com / panasonic.com are listed above)
+    "electrolux.com.br", "brastemp.com.br", "consul.com.br", "whirlpool.com.br", "bosch-home.com.br",
+    "hisense.com.br", "haier.com.br", "smeg.com.br", "miele.com.br",
+    # Brazil asset/PDF hosts reported by the adapters (exact hosts only; shared CDNs such as cloudfront.net, s3.amazonaws.com
+    # and static.tradesquash.com stay closed, so manuals hosted there are skipped)
+    "brastemp.vteximg.com.br", "consul.vteximg.com.br", "electrolux.vteximg.com.br", "whirlpool.vteximg.com.br",
+    "electrolux.vtexcrm.com.br", "electrolux-medialibrary.com", "www.electrolux-ui.com",  # Brastemp/Consul/Electrolux BR
+    "smegbrasil.com.br", "smegbrasil.cdn.magazord.com.br",  # Smeg BR
+    "loja.panasonic.com.br", "panasonic.vtexassets.com", "panasonic.vteximg.com.br", "panasonic-br.zendesk.com",  # Panasonic BR
+    "shop.mielebrasil.com.br",  # Miele BR (its image CDN host is added to IMAGE_HOST_ALLOW only)
     # Asset/PDF hosts the adapters reported (exact hosts only: bynder.com / adobeaemcloud.com / windows.net are shared
     # platforms, so only the brands' own tenants are listed).
     "middleby-cdn.com",  # Viking images + PDFs
@@ -81,6 +91,7 @@ IMAGE_HOST_ALLOW = DOWNLOAD_HOST_ALLOW + (
     "bigcommerce.com", "scene7.com",
     "static.wixstatic.com",  # Hisense product images
     "delivery-p28264-e87620.adobeaemcloud.com",  # Wolf product images (images only, Wolf has no PDFs)
+    "d21v6iwzex1yc.cloudfront.net",  # Miele BR product images (this CloudFront distribution only)
 )
 MAX_REDIRECTS = 5
 _REDIRECT_CODES = (301, 302, 303, 307, 308)

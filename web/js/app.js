@@ -269,7 +269,7 @@ function plan() {
   return { subs, brands, lines };
 }
 /* brand x country x sub-category listings a search would run (an estimate; the server enforces MAX_SEARCH_COMBOS) */
-const CC_REGION = { us: 'na', ca: 'na', kr: 'kr', de: 'eu', uk: 'eu', fr: 'eu' };
+const CC_REGION = { us: 'na', ca: 'na', kr: 'kr', de: 'eu', uk: 'eu', fr: 'eu', br: 'sa' };
 function comboEstimate(p) {
   return p.brands.reduce((n, b) => n + p.subs.filter((s) => supports(b, s)).length * Math.max(1, b.countries.filter((c) => S.regions.has(CC_REGION[c])).length), 0);
 }

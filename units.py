@@ -141,3 +141,35 @@ def parse_kwh_per_year(text) -> Optional[float]:
         return None
     m = _KWH_YEAR_RE.search(str(text))
     return parse_eu_number(m.group(1)) if m else None
+
+
+# ------------------------------------------------------------------ Brazil (pt-BR)
+# Prices: parse_eu_number already reads 'R$ 1.299,00', 'R$1.299', '1.299,90' (comma = decimal, dot = thousands).
+# Procel/INMETRO labels (A..E) are their own scale: stored as the text 'BR class X', never merged with ENERGY STAR / EU.
+_BR_CLASS_CTX_RE = re.compile(
+    r"(?:classe|classifica[cç][aã]o|categoria|n[ií]vel|selo\s+procel|procel|etiqueta|efici[eê]ncia\s+energ[eé]tica)"
+    r"(?:\s+de\s+efici[eê]ncia\s+energ[eé]tica|\s+energ[eé]tica)?\W{0,4}([A-E])(?![A-Za-z])", re.I)
+_BR_CLASS_BARE_RE = re.compile(r"\s*([A-E])\s*", re.I)
+
+
+def br_energy_class(text) -> Optional[str]:
+    """Brazilian Procel/INMETRO energy class as 'BR class A' .. 'BR class E', else None. Accepts 'A', 'Selo Procel A',
+    'Classe de eficiência energética: B', 'Classificação C'. A bare letter must be the whole string."""
+    if text is None or isinstance(text, bool):
+        return None
+    s = str(text).strip()
+    m = _BR_CLASS_CTX_RE.search(s) or _BR_CLASS_BARE_RE.fullmatch(s)
+    return f"BR class {m.group(1).upper()}" if m else None
+
+
+_KWH_MONTH_RE = re.compile(
+    r"(-?\d[\d.    ']*(?:,\d+)?|\d+(?:\.\d+)?)\s*kWh\s*(?:/|por|per)\s*(?:m[eê]s|month|mo\b)", re.I)
+
+
+def parse_kwh_per_month(text) -> Optional[float]:
+    """Monthly energy figure 'kWh/mês' | 'kWh por mês' | 'kWh/month' -> float kWh per month ('42,5 kWh/mês' -> 42.5).
+    Annual consumption is this x 12. None for other bases (kWh/ano, kWh/ciclo)."""
+    if text is None or isinstance(text, bool):
+        return None
+    m = _KWH_MONTH_RE.search(str(text))
+    return parse_eu_number(m.group(1)) if m else None

@@ -33,7 +33,7 @@ def fresh(lang, llm=None):
 
 
 def test_glossaries_are_large_and_english_only():
-    for lang, floor in (("de", 300), ("fr", 300)):
+    for lang, floor in (("de", 300), ("fr", 300), ("pt", 300)):
         t = i18n.get(lang)
         sizes = t.glossary_sizes()
         assert sizes["labels"] >= floor and sizes["values"] >= 100 and sizes["counters"] >= 20, (lang, sizes)
@@ -41,7 +41,31 @@ def test_glossaries_are_large_and_english_only():
         for sect in ("labels", "values", "counters"):
             for k, v in raw[sect].items():
                 assert isinstance(v, str) and v.strip() and "\n" not in v, (lang, k)
-                assert not any(c in v for c in "äöüßéèêàçôîûœ"), (lang, k, v)  # translations are English
+                assert not any(c in v for c in "äöüßéèêàçôîûœãõíóúâ"), (lang, k, v)  # translations are English
+    sizes = i18n.get("pt").glossary_sizes()
+    assert sum(sizes.values()) >= 400, sizes
+
+
+def test_portuguese_labels_and_values_without_llm():
+    t = fresh("pt")
+    for src, en in (("Largura", "Width"), ("Altura", "Height"), ("Profundidade", "Depth"), ("Capacidade (L)", "Capacity (L)"),
+                    ("Potência", "Power"), ("Tensão (V)", "Voltage (V)"), ("Peso", "Weight"), ("Cor", "Color"),
+                    ("Acabamento", "Finish"), ("Fogão", "Range"), ("Cooktop", "Cooktop"), ("Forno", "Oven"),
+                    ("Micro-ondas", "Microwave"), ("Bocas", "Burners"), ("Mesa de vidro", "Glass cooktop"),
+                    ("Indução", "Induction"), ("Acendimento automático", "Automatic ignition"), ("Trempe", "Pan support"),
+                    ("Grill", "Grill"), ("Timer", "Timer"), ("Garantia", "Warranty"), ("Código do produto", "Product code"),
+                    ("Modelo", "Model"), ("EAN", "EAN"), ("tensao", "Voltage"), ("  POTENCIA: ", "Power"),
+                    ("Classe de eficiência energética", "Energy efficiency class"),
+                    ("Selo Procel", "Procel label"), ("Consumo de energia (kWh/mês)", "Energy consumption (kWh/month)")):
+        assert t.translate_key(src) == en, src
+    assert t.translate_key("Largura (mm)") == "Width (mm)" and t.translate_key("Capacidade total (litros)") == "Total capacity (L)"
+    assert t.translate_value("Aço inox") == "Stainless steel" and t.translate_value("Inox, preto") == "Stainless steel, Black"
+    assert t.translate_value("Sim") == "Yes" and t.translate_value("Não") == "No" and t.translate_value("Bivolt") == "Dual voltage"
+    assert t.translate_value("5 bocas") == "5 burners" and t.translate_value("73 litros") == "73 L"
+    assert t.translate_value("Gás / elétrico") == "Gas / Electric"
+    for s in ("127 V", "1.200 W", "R$ 1.299,00", "42,5 kWh/mês", "595 x 850 x 688 mm", "A"):
+        assert t.translate_value(s) == s, s
+    assert t.translate_many(["Largura", "Altura"], "label") == ["Width", "Height"]
 
 
 def test_german_labels_and_values_without_llm():
@@ -116,8 +140,10 @@ def test_scripted_language_reply_rejected_by_untranslated_hook():
 
 
 def test_registry_and_validation():
-    assert set(i18n.LANGUAGES) == {"ko", "de", "fr"} and i18n.get("de") is i18n.get("de")
+    assert set(i18n.LANGUAGES) == {"ko", "de", "fr", "pt"} and i18n.get("de") is i18n.get("de")
     assert i18n.get("de").cache_path.name == "de_cache.json" and i18n.get("fr").glossary_path.name == "glossary_fr.json"
+    assert i18n.get("pt").cache_path.name == "pt_cache.json" and i18n.get("pt").glossary_path.name == "glossary_pt.json"
+    assert i18n.translate_key("pt", "Largura") == "Width"
     try:
         i18n.get("xx")
         raise AssertionError("expected ValueError")

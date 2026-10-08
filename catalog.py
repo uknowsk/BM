@@ -93,7 +93,7 @@ ADAPTERS = {
 }
 
 # Countries an adapter may exist for (module '<slug>_<cc>'); the order is the display order of /api/brands 'countries'.
-ADAPTER_COUNTRIES = ("us", "kr", "de", "uk", "fr")
+ADAPTER_COUNTRIES = ("us", "kr", "de", "uk", "fr", "br")
 
 # Brand groups (계열 묶음) in display order. The value is the group label shown in the brand picker.
 GROUPS = ("Samsung·LG", "Whirlpool Corp.", "BSH", "Electrolux", "Haier·GE", "프리미엄", "글로벌")
@@ -102,12 +102,12 @@ GROUPS = ("Samsung·LG", "Whirlpool Corp.", "BSH", "Electrolux", "Haier·GE", "�
 # (where the brand sells appliances; informational, from docs/BRAND_EXPANSION.md). What is actually usable is decided by
 # whether the adapter module file exists (supported / countries_with_adapter), never by this list.
 BRAND_META: dict[str, dict] = {
-    "Samsung": {"group": "Samsung·LG", "countries": ["us", "kr"]},
-    "LG": {"group": "Samsung·LG", "countries": ["us", "kr"]},
+    "Samsung": {"group": "Samsung·LG", "countries": ["us", "kr", "br"]},
+    "LG": {"group": "Samsung·LG", "countries": ["us", "kr", "br"]},
     "KitchenAid": {"group": "Whirlpool Corp.", "countries": ["us"]},
     "GE": {"group": "Haier·GE", "countries": ["us"]},
-    "Whirlpool": {"group": "Whirlpool Corp.", "countries": ["us"]},
-    "Bosch": {"group": "BSH", "countries": ["us", "de", "uk", "fr"]},
+    "Whirlpool": {"group": "Whirlpool Corp.", "countries": ["us", "br"]},
+    "Bosch": {"group": "BSH", "countries": ["us", "de", "uk", "fr", "br"]},
     "Maytag": {"group": "Whirlpool Corp.", "countries": ["us"]},
     "JennAir": {"group": "Whirlpool Corp.", "countries": ["us"]},
     "Amana": {"group": "Whirlpool Corp.", "countries": ["us"]},
@@ -115,23 +115,25 @@ BRAND_META: dict[str, dict] = {
     "Gaggenau": {"group": "BSH", "countries": ["us", "de"]},
     "Siemens": {"group": "BSH", "countries": ["de"]},
     "Frigidaire": {"group": "Electrolux", "countries": ["us"]},
-    "Electrolux": {"group": "Electrolux", "countries": ["us", "de", "uk"]},
+    "Electrolux": {"group": "Electrolux", "countries": ["us", "de", "uk", "br"]},
     "AEG": {"group": "Electrolux", "countries": ["de", "uk"]},
     "Café": {"group": "Haier·GE", "countries": ["us"]},
     "Monogram": {"group": "Haier·GE", "countries": ["us"]},
-    "Haier": {"group": "Haier·GE", "countries": ["us"]},
+    "Haier": {"group": "Haier·GE", "countries": ["us", "br"]},
     "Fisher & Paykel": {"group": "Haier·GE", "countries": ["us", "uk"]},
     "Viking": {"group": "프리미엄", "countries": ["us"]},
     "Sub-Zero": {"group": "프리미엄", "countries": ["us"]},
     "Wolf": {"group": "프리미엄", "countries": ["us"]},
-    "Miele": {"group": "프리미엄", "countries": ["us", "de", "uk", "fr"]},
-    "Smeg": {"group": "프리미엄", "countries": ["us", "de", "uk", "fr"]},
+    "Miele": {"group": "프리미엄", "countries": ["us", "de", "uk", "fr", "br"]},
+    "Smeg": {"group": "프리미엄", "countries": ["us", "de", "uk", "fr", "br"]},
     "Liebherr": {"group": "프리미엄", "countries": ["us", "de", "uk", "fr"]},
     "Bertazzoni": {"group": "프리미엄", "countries": ["us", "uk"]},
     "De Dietrich": {"group": "프리미엄", "countries": ["fr"]},
     "Beko": {"group": "글로벌", "countries": ["us", "uk", "de"]},
-    "Hisense": {"group": "글로벌", "countries": ["us", "uk", "de"]},
-    "Panasonic": {"group": "글로벌", "countries": ["us", "uk", "de"]},
+    "Hisense": {"group": "글로벌", "countries": ["us", "uk", "de", "br"]},
+    "Panasonic": {"group": "글로벌", "countries": ["us", "uk", "de", "br"]},
+    "Brastemp": {"group": "Whirlpool Corp.", "countries": ["br"]},  # Brazilian local brands of Whirlpool Corp.
+    "Consul": {"group": "Whirlpool Corp.", "countries": ["br"]},
 }
 
 

@@ -1,0 +1,208 @@
+{
+ "response": {
+  "statusCode": 200,
+  "statusMessage": "OK",
+  "siteCode": "br",
+  "resultData": {
+   "productList": [
+    {
+     "familyRecord": "1",
+     "familyId": "602208",
+     "modelCount": "1",
+     "fmyMarketingName": "Fogão de Piso a Gás Série 90 5 bocas | Design Inox | WiFi | Air Fry Max | 127V",
+     "fmyEngName": "NSG90H30_NSG90H60SRAX Air Fry Max and Pro-Style Design 6.0 cu.ft.",
+     "categorySubTypeCode": "08080200",
+     "categorySubTypeEngName": "Ranges",
+     "categorySubTypeName": "Ranges",
+     "simplePdYN": "N",
+     "oldProductYN": "N",
+     "productGroupId": "nsg90h30nsg90h60srax",
+     "optionPriceUse": "N",
+     "iaCtaDisplay": "Y",
+     "wtbOnlineDispFuncUseYN": "N",
+     "wtbDispFuncUseYN": "Y",
+     "filterParamText": null,
+     "thirdPASeller": null,
+     "isRecommended": null,
+     "thirdPartyPrdYN": "N",
+     "primaryOptionHighlightYN": "N",
+     "commonChargerSpec": null,
+     "chipOptions": [
+      {
+       "fmyChipType": "COLOR",
+       "optionTypeSeq": "1",
+       "optionTypeCode": "CM001",
+       "optionTypeName": "Color",
+       "optionTypeLocalName": "Cor",
+       "optionList": [
+        {
+         "optionCode": "#c0c0c0",
+         "optionName": "silver",
+         "optionLocalName": "Inox",
+         "multiColorYN": "N",
+         "multiColorList": null
+        }
+       ]
+      }
+     ],
+     "awardList": [],
+     "quickLooks": [],
+     "localBenefitList": [
+      {
+       "localBenefitText": "Acumule pontos com Samsung Rewards",
+       "localBenefitImgAltText": "Acumule pontos com Samsung Rewards",
+       "localBenefitIconType": "event"
+      }
+     ],
+     "modelList": [
+      {
+       "commonChargerSpec": null,
+       "repairabilityIndexPdfUrl": null,
+       "repairabilityIndex": null,
+       "durabilityIndexUse": "N",
+       "durabilityIndex": null,
+       "durabilityIndexPdfUrl": null,
+       "thirdPartyPrdYN": "N",
+       "thirdPartyInfo": null,
+       "specCompareYN": "Y",
+       "displayNameInfo": {
+        "displayNameType": "T2",
+        "displayNameList": [
+         {
+          "name": "Product Name",
+          "value": "Fogão de Piso a Gás Série 90"
+         },
+         {
+          "name": "Key Feature",
+          "value": "| 5 bocas | Design Inox | WiFi | Air Fry Max |"
+         },
+         {
+          "name": "Capacity",
+          "value": "127 V"
+         }
+        ]
+       },
+       "modelCode": "NSG90H60SRAZ",
+       "modelName": "NSG90H60SRAZ",
+       "displayName": "Fogão de Piso a Gás Série 90 | 5 bocas | Design Inox | WiFi | Air Fry Max | 127 V",
+       "marketingpdpYN": "N",
+       "thumbUrl": "//images.samsung.com/is/image/samsung/p6pim/br/nsg90h60sraz/gallery/br-nsg90h30-nsg90h60srax-nsg90h60sraz-thumb-554086249",
+       "thumbUrlAlt": "Fogão de Piso a Gás Série 90 com 5 bocas Design Inox WiFi e AirFry Max 127V Front Silver ",
+       "largeUrl": "//images.samsung.com/is/image/samsung/p6pim/br/nsg90h60sraz/gallery/br-nsg90h30-nsg90h60srax-nsg90h60sraz-554060733",
+       "galleryImage": [
+        "//images.samsung.com/is/image/samsung/p6pim/br/nsg90h60sraz/gallery/br-nsg90h30-nsg90h60srax-nsg90h60sraz-thumb-554031181",
+        "//images.samsung.com/is/image/samsung/p6pim/br/nsg90h60sraz/gallery/br-nsg90h30-nsg90h60srax-nsg90h60sraz-thumb-554031182",
+        "//images.samsung.com/is/image/samsung/p6pim/br/nsg90h60sraz/gallery/br-nsg90h30-nsg90h60srax-nsg90h60sraz-thumb-554060741",
+        "//images.samsung.com/is/image/samsung/p6pim/br/nsg90h60sraz/gallery/br-nsg90h30-nsg90h60srax-nsg90h60sraz-thumb-554031187",
+        "//images.samsung.com/is/image/samsung/p6pim/br/nsg90h60sraz/gallery/br-nsg90h30-nsg90h60srax-nsg90h60sraz-thumb-554031184",
+        "//images.samsung.com/is/image/samsung/p6pim/br/nsg90h60sraz/gallery/br-nsg90h30-nsg90h60srax-nsg90h60sraz-thumb-554031183"
+       ],
+       "galleryImageAlt": [
+        "Fogão de Piso a Gás Série 90 com 5 bocas Design Inox WiFi e AirFry Max 127V L-Perspective Silver ",
+        "Fogão de Piso a Gás Série 90 com 5 bocas Design Inox WiFi e AirFry Max 127V Front-Open Silver ",
+        "Fogão de Piso a Gás Série 90 com 5 bocas Design Inox WiFi e AirFry Max 127V R-Perspective-Open Silver ",
+        "Fogão de Piso a Gás Série 90 com 5 bocas Design Inox WiFi e AirFry Max 127V Detail2 Silver ",
+        "Fogão de Piso a Gás Série 90 com 5 bocas Design Inox WiFi e AirFry Max 127V Top Silver ",
+        "Fogão de Piso a Gás Série 90 com 5 bocas Design Inox WiFi e AirFry Max 127V Detail1 Silver "
+       ],
+       "galleryImageLarge": [
+        "//images.samsung.com/is/image/samsung/p6pim/br/nsg90h60sraz/gallery/br-nsg90h30-nsg90h60srax-nsg90h60sraz-554031173",
+        "//images.samsung.com/is/image/samsung/p6pim/br/nsg90h60sraz/gallery/br-nsg90h30-nsg90h60srax-nsg90h60sraz-554031174",
+        "//images.samsung.com/is/image/samsung/p6pim/br/nsg90h60sraz/gallery/br-nsg90h30-nsg90h60srax-nsg90h60sraz-554060739",
+        "//images.samsung.com/is/image/samsung/p6pim/br/nsg90h60sraz/gallery/br-nsg90h30-nsg90h60srax-nsg90h60sraz-554031179",
+        "//images.samsung.com/is/image/samsung/p6pim/br/nsg90h60sraz/gallery/br-nsg90h30-nsg90h60srax-nsg90h60sraz-554031176",
+        "//images.samsung.com/is/image/samsung/p6pim/br/nsg90h60sraz/gallery/br-nsg90h30-nsg90h60srax-nsg90h60sraz-554031175"
+       ],
+       "pdpUrl": "/br/cooking-appliances/ranges/nsg90h-30-nsg90h60srax-nsg90h60sraz/",
+       "originPdpUrl": "/br/cooking-appliances/ranges/nsg90h-30-nsg90h60srax-nsg90h60sraz/",
+       "configuratorUrl": null,
+       "ratings": null,
+       "reviewCount": null,
+       "reviewUrl": "/br/cooking-appliances/ranges/nsg90h-30-nsg90h60srax-nsg90h60sraz/#reviews",
+       "energyLabelGrade": null,
+       "newEnergyLabel": null,
+       "energyLabelClass1": null,
+       "energyLabelClass2": null,
+       "energyFileUrl": null,
+       "ficheFileUrl": null,
+       "selected": "Y",
+       "fmyChipList": [
+        {
+         "fmyChipType": "COLOR",
+         "optionTypeSeq": "1",
+         "optionTypeCode": "CM001",
+         "fmyChipCode": "#c0c0c0",
+         "fmyChipName": "Silver",
+         "fmyChipLocalName": "Inox",
+         "multiColorYN": "N",
+         "multiColorList": null
+        }
+       ],
+       "ctaType": "whereToBuy",
+       "ctaLink": null,
+       "ctaTitle": null,
+       "wtbUseFlag": "N",
+       "stockStatusText": "inStock",
+       "marketingMessage": [
+        " "
+       ],
+       "salesText": null,
+       "uspDescription": [
+        " "
+       ],
+       "priceDisplay": "R$10.999,00",
+       "afterTaxPrice": "11577.89",
+       "afterTaxPriceDisplay": "R$11.577,89",
+       "tradeInPriceText": null,
+       "priceCurrency": "BRL",
+       "price": "10999",
+       "promotionPrice": null,
+       "formattedPriceSave": "R$578,89 off / (-5%)",
+       "financingMessage": null,
+       "leasingMessage": null,
+       "leasingInfos": null,
+       "monthlyPriceInfo": {
+        "paymentMode": "creditCardPaymentGroup",
+        "leasingUpfront": "0",
+        "leasingMonthly": "643.21",
+        "leasingMonths": "18",
+        "interest": null
+       },
+       "merchandisingText": null,
+       "topFlags": null,
+       "nationalFlags": null,
+       "optionPriceText": "",
+       "keySummary": null,
+       "pviTypeName": "Oven",
+       "pviSubtypeName": "Gas Range",
+       "bespokeCtaUse": "N",
+       "bespokeCtaLink": null,
+       "ctaLocalText": null,
+       "ctaEngText": null,
+       "configuratorUseYn": "N",
+       "pf360IconUse": "N",
+       "shopCtaUrl": null,
+       "uspText": null,
+       "vd3PAMarketingMessage": null,
+       "rrpPriceDisplay": "R$11.577,89",
+       "lowestWasPrice": null,
+       "lowestWasPriceDisplay": null,
+       "isFreeDeliveryCost": "N",
+       "skuId": "15078",
+       "warrantyText": null,
+       "packageYN": "N",
+       "pkgChildModelList": null,
+       "keySpec": null
+      }
+     ],
+     "pick": null,
+     "useReviewYN": "N",
+     "reviewNotUsePeriod": {
+      "reviewStartDt": null,
+      "reviewEndDt": "202610091000Z"
+     }
+    }
+   ]
+  }
+ }
+}

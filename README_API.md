@@ -1,4 +1,4 @@
-# Gauge API (product groups x 30 brands)
+# Gauge API (product groups x 32 brands)
 
 Local only (127.0.0.1:8765). POST needs `Origin: http://127.0.0.1:8765` (unchanged). `FRIDGE_MOCK=1` serves fake data.
 
@@ -23,11 +23,11 @@ gas_cooktop, electric_oven, induction, radiant). Korean labels live in the same 
 
 ## GET /api/brands
 `[{"name":"Samsung","enabled":true,"note":"","categories":["french_door",...],"majors":["refrigerator","washer"],"group":"Samsung·LG","countries":["us","kr"]}, ...]`
-30 brands in display order (`brands.yaml` / `catalog.BRAND_META`): Samsung, LG, KitchenAid, GE, Whirlpool, Bosch, then the 24 new ones
+32 brands in display order (`brands.yaml` / `catalog.BRAND_META`): Samsung, LG, KitchenAid, GE, Whirlpool, Bosch, then the 26 new ones
 (Maytag, JennAir, Amana, Thermador, Gaggenau, Siemens, Frigidaire, Electrolux, AEG, Café, Monogram, Haier, Fisher & Paykel, Viking, Sub-Zero,
-Wolf, Miele, Smeg, Liebherr, Bertazzoni, De Dietrich, Beko, Hisense, Panasonic).
+Wolf, Miele, Smeg, Liebherr, Bertazzoni, De Dietrich, Beko, Hisense, Panasonic, Brastemp, Consul).
 - `group` = brand family for the picker: `Samsung·LG`, `Whirlpool Corp.`, `BSH`, `Electrolux`, `Haier·GE`, `프리미엄`, `글로벌`.
-- `countries` = countries (order us, kr, de, uk, fr) for which an adapter module actually exists and imports; `[]` while the brand has none.
+- `countries` = countries (order us, kr, de, uk, fr, br) for which an adapter module actually exists and imports; `[]` while the brand has none.
 - A brand is `enabled` only if at least one adapter module exists, imports and (for `?region=`) sells there. A brand whose module file does not
   exist yet is not an error: `enabled:false, note:"준비 중", categories:[], countries:[]`. Selecting it in `POST /api/search` -> 422.
 
@@ -50,6 +50,7 @@ exists (`importlib.util.find_spec`); other countries are auto-discovered, nothin
 | Café | `cafe` | | Hisense | `hisense` |
 | Monogram | `monogram` | | Panasonic | `panasonic` |
 | Haier | `haier` | | Fisher & Paykel | `fisherpaykel` |
+| Brastemp | `brastemp` | | Consul | `consul` |
 
 e.g. `cafe_us.py`, `fisherpaykel_uk.py`, `dedietrich_fr.py`, `siemens_de.py`.
 
@@ -57,7 +58,7 @@ e.g. `cafe_us.py`, `fisherpaykel_uk.py`, `dedietrich_fr.py`, `siemens_de.py`.
 `{"brands":["Samsung","GE"],"subcategories":["front_load","induction"],"limit":30,"band_mode":"auto|custom","thresholds":[t1,t2,t3,t4]}` (`thresholds` only for `custom`: exactly 4 ascending, strictly increasing prices >= 0, <= 1,000,000, else 422)
 Legacy `{"category":"refrigerator"}` still works (major = all sub keys the brand supports; a sub key also accepted).
 Unsupported combos are skipped with a log line (`Samsung: 라디언트 미지원`). 422: unknown brand/sub, no supported combo.
-`brands` takes up to 30 names. Cap: at most `MAX_SEARCH_COMBOS` = **120** (brand x country x sub-group) listings per search (422 above that; was 48);
+`brands` takes up to 32 names. Cap: at most `MAX_SEARCH_COMBOS` = **120** (brand x country x sub-group) listings per search (422 above that; was 48);
 they run one after another with per-combo progress. `GET /api/meta` reports `max_search_combos` and `max_brands`.
 Job result (`GET /api/jobs/{id}` when done):
 ```

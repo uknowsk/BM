@@ -61,6 +61,10 @@ brands:
     module: hisense_us
   - name: Panasonic
     module: panasonic_us
+  - name: Brastemp
+    module: brastemp_us
+  - name: Consul
+    module: consul_us
 
 # Legacy flat list (used by the Streamlit app.py only). The API's two-level tree lives in catalog.CATEGORY_TREE.
 # Product groups. Only enabled ones can be searched; others show as "coming soon".

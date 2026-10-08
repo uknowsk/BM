@@ -72,25 +72,27 @@ BRAND_DOMAINS = {"Samsung": "samsung.com", "LG": "lg.com", "KitchenAid": "kitche
                  "Viking": "vikingrange.com", "Sub-Zero": "subzero-wolf.com", "Wolf": "subzero-wolf.com",
                  "Miele": "miele.com", "Smeg": "smeg.com", "Liebherr": "liebherr.com", "Bertazzoni": "bertazzoni.com",
                  "De Dietrich": "dedietrich-electromenager.fr", "Beko": "beko.com", "Hisense": "hisense-usa.com",
-                 "Panasonic": "panasonic.com"}
+                 "Panasonic": "panasonic.com", "Brastemp": "brastemp.com.br", "Consul": "consul.com.br"}
 # Extra registrable domains per brand for regional sites (added together with the region's adapter). The new brands'
 # national sites are listed up front; the brand's adapter agent reports any host that is still missing.
 EXTRA_DOMAINS = {"LG": {"lge.co.kr"},
+                 "Whirlpool": {"whirlpool.com.br"}, "Bosch": {"bosch-home.com.br"},
                  "Gaggenau": {"gaggenau.de"},
                  "Siemens": {"siemens-home.de", "siemens-home.bsh-group.com"},
                  "Electrolux": {"electroluxappliances.com", "electrolux.de",
-                                                                 "electrolux.co.uk", "electrolux.fr"},
-                 "AEG": {"aeg.de", "aeg.co.uk", "aeg.fr"}, "Haier": {"haier.com", "haier-europe.com"},
+                                                                 "electrolux.co.uk", "electrolux.fr", "electrolux.com.br"},
+                 "AEG": {"aeg.de", "aeg.co.uk", "aeg.fr"}, "Haier": {"haier.com", "haier-europe.com", "haier.com.br"},
                  "Fisher & Paykel": {"fisherpaykel.co.uk", "fisherpaykel.de"},
                  "Viking": {"vikingrange.co.uk"}, "Sub-Zero": {"subzero.com"}, "Wolf": {"wolfappliance.com"},
-                 "Miele": {"miele.de", "miele.co.uk", "miele.fr"},
-                 "Smeg": {"smegusa.com", "smeg.de", "smeg.co.uk", "smeg.fr"},
+                 "Miele": {"miele.de", "miele.co.uk", "miele.fr", "miele.com.br", "mielebrasil.com.br"},
+                 "Smeg": {"smegusa.com", "smeg.de", "smeg.co.uk", "smeg.fr", "smeg.com.br", "smegbrasil.com.br"},
                  "Liebherr": {"liebherr-home.com", "home.liebherr.com"},
                  "Bertazzoni": {"bertazzoni.co.uk"}, "De Dietrich": {"dedietrich.com"},
                  "Beko": {"bekoappliances.com", "beko.co.uk", "beko.de"},
-                 "Hisense": {"hisense.com", "hisense.co.uk", "hisense.de"}, "Panasonic": {"panasonic.co.uk", "panasonic.de"}}
+                 "Hisense": {"hisense.com", "hisense.co.uk", "hisense.de", "hisense.com.br"},
+                 "Panasonic": {"panasonic.co.uk", "panasonic.de", "loja.panasonic.com.br"}}
 MAX_REGIONS = 4
-MAX_BRANDS = 30  # brands per search request (the full registry)
+MAX_BRANDS = 32 # brands per search request (the full registry)
 MAX_SEARCH_COMBOS = 120  # brand x country x sub-group listings per search job (run one after another, with progress)
 BROWSER_MODES = {"auto": "1", "headless": "1", "visible": "0"}
 

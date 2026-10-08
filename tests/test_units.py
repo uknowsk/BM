@@ -69,6 +69,29 @@ def test_parse_kwh_per_year():
     assert k("60 kWh/100 cycles") is None and k("12 kWh/month") is None and k(None) is None
 
 
+def test_brazil_prices():
+    n = units.parse_eu_number
+    assert n("R$ 1.299,00") == 1299.0 and n("R$1.299") == 1299.0 and n("1.299,90") == 1299.9
+    assert n("R$ 3.499,90") == 3499.9 and n("R$ 899,00") == 899.0 and n("ou 12x de R$ 108,25") == 12.0
+
+
+def test_br_energy_class():
+    c = units.br_energy_class
+    assert c("A") == "BR class A" and c(" b ") == "BR class B" and c("Selo Procel A") == "BR class A"
+    assert c("Classe de eficiência energética: B") == "BR class B" and c("Classificação C") == "BR class C"
+    assert c("Categoria D") == "BR class D" and c("Nível E") == "BR class E"
+    assert c("A good fridge") is None and c("F") is None and c("") is None and c(None) is None and c(True) is None
+
+
+def test_parse_kwh_per_month():
+    k = units.parse_kwh_per_month
+    assert k("42,5 kWh/mês") == 42.5 and k("30 kWh/mes") == 30.0 and k("1.234,5 kWh por mês") == 1234.5
+    assert k("55 kWh/month") == 55.0 and k("12 kWh/month") * 12 == 144.0
+    assert k("123 kWh/ano") is None and k("60 kWh/ciclo") is None and k(None) is None
+    # capacity: litres -> cu ft uses the existing conversion
+    assert close(units.l_to_cuft(480), 16.95, 1e-2)
+
+
 if __name__ == "__main__":
     fns = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
     for fn in fns:

@@ -1,0 +1,911 @@
+[
+ {
+  "productId": "2003540",
+  "productName": "Micro-ondas de Embutir Electrolux 34L cor Inox Experience com Painel Inteligente (ME3BC)",
+  "brand": "Electrolux",
+  "brandId": 2000000,
+  "linkText": "micro-ondas-de-embutir-electrolux-34l-experience-me3bc",
+  "productReference": "ME3BC",
+  "productReferenceCode": "ME3BC",
+  "categoryId": "1000561",
+  "productTitle": "Micro-ondas de Embutir 34L Inox Experience",
+  "metaTagDescription": "Micro-ondas 34L de embutir com design moderno e funções práticas para sua cozinha. Aproveite e compre online com facilidade e segurança!",
+  "releaseDate": "2022-03-31T00:00:00Z",
+  "categories": [
+   "/Eletrodomésticos/Micro-ondas/Micro-ondas de embutir/",
+   "/Eletrodomésticos/Micro-ondas/",
+   "/Eletrodomésticos/"
+  ],
+  "categoriesIds": [
+   "/1000102/1000107/1000561/",
+   "/1000102/1000107/",
+   "/1000102/"
+  ],
+  "link": "https://loja.electrolux.com.br/micro-ondas-de-embutir-electrolux-34l-experience-me3bc/p",
+  "Manual do produto": [
+   "https://electrolux.vtexcrm.com.br/DynamicForm/GetFile?dataEntityInstanceId=MN-9c73dc44-a9c3-4005-995d-8c22eada8a10&fileName=G0033097_IM.raw.pdf"
+  ],
+  "Guia de Instalação": [
+   "https://electrolux.vtexcrm.com.br/DynamicForm/GetFile?dataEntityInstanceId=MN-60d59cc2-b3dc-4f71-83ba-5a8924c8f095&fileName=G0034390_IG_MWO_BIAUD_ELUX_PTG_REV005_DIG_260810L-583x1238.raw.pdf"
+  ],
+  "Guia rápido": [
+   "https://api.electrolux-medialibrary.com/asset/6a81745f-5eb0-4f95-a7b0-30616b4cd55f/E4RM3Q/99561921-d664-4a24-b334-12428be6fe34/ORIGINAL/99561921-d664-4a24-b334-12428be6fe34.pdf"
+  ],
+  "Apoio ao Cliente": [
+   "Manual do produto",
+   "Guia de Instalação",
+   "Guia rápido"
+  ],
+  "Descongelamento": [
+   "Sim"
+  ],
+  "Relógio": [
+   "Sim"
+  ],
+  "Trava de segurança": [
+   "Sim"
+  ],
+  "Grill": [
+   "Não"
+  ],
+  "Tira odor": [
+   "Sim"
+  ],
+  "Manter aquecido": [
+   "Sim"
+  ],
+  "Este Produto inclui": [
+   "Descongelamento",
+   "Relógio",
+   "Trava de segurança",
+   "Grill",
+   "Tira odor",
+   "Manter aquecido"
+  ],
+  "Instalação gratuita": [
+   "Sim (1ª instalação)"
+  ],
+  "Frequência": [
+   "60 Hz"
+  ],
+  "Altura do produto": [
+   "38,9 cm"
+  ],
+  "Profundidade do produto": [
+   "44,1 cm"
+  ],
+  "Largura do produto embalado": [
+   "62,5 cm"
+  ],
+  "Origem": [
+   "Nacional"
+  ],
+  "Origem Anymarket": [
+   "4 – Nacional: Cuja produção tenha sido feita em conformidade com os processos produtivos básicos de"
+  ],
+  "Modelo": [
+   "ME3BC"
+  ],
+  "Largura do produto": [
+   "59,5 cm"
+  ],
+  "Altura do produto embalado": [
+   "42,5 cm"
+  ],
+  "Peso do produto embalado": [
+   "16,7 Kg"
+  ],
+  "NCM/NBM": [
+   "8516.50.00"
+  ],
+  "Classificação energética": [
+   "A"
+  ],
+  "Acabamento interno": [
+   "Branco (pintado)"
+  ],
+  "Peso do produto": [
+   "16,2 Kg"
+  ],
+  "Profundidade do produto embalado": [
+   "47,4 cm"
+  ],
+  "Código comercial": [
+   "10347DBA185"
+  ],
+  "EAN-13": [
+   "7909569410165"
+  ],
+  "Capacidade total": [
+   "34L"
+  ],
+  "Potência": [
+   "1400W"
+  ],
+  "Cor da porta": [
+   "Cinza/Preto"
+  ],
+  "Cor": [
+   "Cinza"
+  ],
+  "Profundidade do produto (sem puxador)": [
+   "39,3 cm"
+  ],
+  "Altura Interna minima do nicho": [
+   "37 cm"
+  ],
+  "Altura interna máxima do nicho": [
+   "38 cm"
+  ],
+  "Largura interna mínima do nicho": [
+   "57 cm"
+  ],
+  "Largura interna máxima do nicho": [
+   "58 cm"
+  ],
+  "Lagura para produto alinhado com nicho": [
+   "60 cm"
+  ],
+  "Diâmetro do prato": [
+   "25,4 cm"
+  ],
+  "Profundidade mínima do nicho": [
+   "45,5 cm"
+  ],
+  "Altura para produto alinhado com nicho": [
+   "39,5 cm"
+  ],
+  "Tipo de painel": [
+   "Digital"
+  ],
+  "Tipo de instalação": [
+   "De embutir"
+  ],
+  "Especificações técnicas": [
+   "Instalação gratuita",
+   "Frequência",
+   "Altura do produto",
+   "Profundidade do produto",
+   "Largura do produto embalado",
+   "Origem",
+   "Origem Anymarket",
+   "Modelo",
+   "Largura do produto",
+   "Altura do produto embalado",
+   "Peso do produto embalado",
+   "NCM/NBM",
+   "Classificação energética",
+   "Acabamento interno",
+   "Peso do produto",
+   "Profundidade do produto embalado",
+   "Código comercial",
+   "EAN-13",
+   "Capacidade total",
+   "Potência",
+   "Cor da porta",
+   "Cor",
+   "Profundidade do produto (sem puxador)",
+   "Altura Interna minima do nicho",
+   "Altura interna máxima do nicho",
+   "Largura interna mínima do nicho",
+   "Largura interna máxima do nicho",
+   "Lagura para produto alinhado com nicho",
+   "Diâmetro do prato",
+   "Profundidade mínima do nicho",
+   "Altura para produto alinhado com nicho",
+   "Tipo de painel",
+   "Tipo de instalação"
+  ],
+  "Capacidade - Micro-ondas": [
+   "28-34 litros"
+  ],
+  "Cores": [
+   "Cor inox"
+  ],
+  "Diferenciais": [
+   "Descongelamento",
+   "Manter aquecido",
+   "Painel inteligente",
+   "Receitas pré-programadas",
+   "Tira odor"
+  ],
+  "Altura": [
+   "30-39 cm"
+  ],
+  "Largura": [
+   "50-59 cm"
+  ],
+  "Profundidade": [
+   "40-49 cm"
+  ],
+  "Potências": [
+   "1400-1650W"
+  ],
+  "Filtros": [
+   "Capacidade - Micro-ondas",
+   "Cores",
+   "Diferenciais",
+   "Altura",
+   "Largura",
+   "Profundidade",
+   "Potências",
+   "Classificação energética"
+  ],
+  "meli_title": [
+   "Micro-ondas de Embutir Electrolux 34l Experience ME3BC"
+  ],
+  "Marca": [
+   "Electrolux"
+  ],
+  "Atributos Mercado Livre": [
+   "Capacidade total",
+   "meli_title",
+   "Marca"
+  ],
+  "allSpecifications": [
+   "Manual do produto",
+   "Guia de Instalação",
+   "Guia rápido",
+   "Descongelamento",
+   "Relógio",
+   "Trava de segurança",
+   "Grill",
+   "Tira odor",
+   "Manter aquecido",
+   "Instalação gratuita",
+   "Frequência",
+   "Altura do produto",
+   "Profundidade do produto",
+   "Largura do produto embalado",
+   "Origem",
+   "Origem Anymarket",
+   "Modelo",
+   "Largura do produto",
+   "Altura do produto embalado",
+   "Peso do produto embalado",
+   "NCM/NBM",
+   "Classificação energética",
+   "Acabamento interno",
+   "Peso do produto",
+   "Profundidade do produto embalado",
+   "Código comercial",
+   "EAN-13",
+   "Capacidade total",
+   "Potência",
+   "Cor da porta",
+   "Cor",
+   "Profundidade do produto (sem puxador)",
+   "Altura Interna minima do nicho",
+   "Altura interna máxima do nicho",
+   "Largura interna mínima do nicho",
+   "Largura interna máxima do nicho",
+   "Lagura para produto alinhado com nicho",
+   "Diâmetro do prato",
+   "Profundidade mínima do nicho",
+   "Altura para produto alinhado com nicho",
+   "Tipo de painel",
+   "Tipo de instalação",
+   "Capacidade - Micro-ondas",
+   "Cores",
+   "Diferenciais",
+   "Altura",
+   "Largura",
+   "Profundidade",
+   "Potências",
+   "meli_title",
+   "Marca"
+  ],
+  "allSpecificationsGroups": [
+   "Apoio ao Cliente",
+   "Este Produto inclui",
+   "Especificações técnicas",
+   "Filtros",
+   "Atributos Mercado Livre"
+  ],
+  "description": "Prepare suas refeições de forma rápida e prática com o Micro-ondas de Embutir Electrolux 34L Experience (ME3BC). Compacto por fora e espaçoso por dentro, este produto possui 34 litros de capacidade e ",
+  "items": [
+   {
+    "itemId": "310119198",
+    "name": "127V",
+    "nameComplete": "Micro-ondas de Embutir Electrolux 34L cor Inox Experience com Painel Inteligente (ME3BC) 127V",
+    "complementName": "",
+    "ean": "7909569410165",
+    "measurementUnit": "un",
+    "unitMultiplier": 1.0,
+    "modalType": null,
+    "isKit": false,
+    "images": [
+     {
+      "imageUrl": "https://electrolux.vteximg.com.br/arquivos/ids/296097/Microwave_ME3BC_Front_Close_Electrolux-principal.jpg?v=639232771183330000",
+      "imageLabel": ""
+     }
+    ],
+    "Voltagem": [
+     "127V"
+    ],
+    "variations": [
+     "Voltagem"
+    ],
+    "attachments": [
+     {
+      "id": 1,
+      "name": "garantia-estendida",
+      "required": false,
+      "domainValues": "[{\"FieldName\":\"garantia-estendida\",\"MaxCaracters\":\"500\",\"DomainValues\":\"\"}]"
+     },
+     {
+      "id": 7,
+      "name": "Instalação-Gratuita",
+      "required": false,
+      "domainValues": "[{\"FieldName\":\"Instalação-Gratuita\",\"MaxCaracters\":\"500\",\"DomainValues\":\"\"}]"
+     }
+    ],
+    "sellers": [
+     {
+      "sellerId": "1",
+      "sellerName": "Electrolux",
+      "commertialOffer": {
+       "Price": 1799.0,
+       "ListPrice": 3149.0,
+       "PriceWithoutDiscount": 1799.0,
+       "AvailableQuantity": 99999,
+       "IsAvailable": true,
+       "Installments": [
+        {
+         "Name": "Visa à vista",
+         "NumberOfInstallments": 1,
+         "Value": 1799.0
+        },
+        {
+         "Name": "Pix à vista",
+         "NumberOfInstallments": 1,
+         "Value": 1799.0
+        }
+       ]
+      }
+     }
+    ],
+    "estimatedDateArrival": null
+   }
+  ],
+  "skuSpecifications": [
+   {
+    "field": {
+     "id": 5,
+     "name": "Voltagem",
+     "isActive": true,
+     "position": 2,
+     "type": "Radio"
+    },
+    "values": [
+     {
+      "id": "385",
+      "name": "127V",
+      "position": 7
+     },
+     {
+      "id": "379",
+      "name": "220V",
+      "position": 17
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "productId": "2003545",
+  "productName": "Micro-ondas Electrolux 23L cor Inox Efficient com Descongelamento Assistido (ME23S)",
+  "brand": "Electrolux",
+  "brandId": 2000000,
+  "linkText": "micro-ondas-electrolux-prata-23l-efficient-me23s",
+  "productReference": "ME23S",
+  "productReferenceCode": "ME23S",
+  "categoryId": "1000562",
+  "productTitle": "Micro-ondas 23L Inox Efficient",
+  "metaTagDescription": "Micro-ondas 23L prata com funções eficientes para seu dia a dia. Cozinhe rápido e com qualidade. Compre agora e facilite sua rotina!",
+  "releaseDate": "2022-03-31T00:00:00Z",
+  "categories": [
+   "/Eletrodomésticos/Micro-ondas/Micro-ondas de bancada/",
+   "/Eletrodomésticos/Micro-ondas/",
+   "/Eletrodomésticos/",
+   "/Eletrodomésticos/Micro-ondas/Micro-ondas 20 litros/",
+   "/Eletrodomésticos/Micro-ondas/Micro-ondas inox/",
+   "/Eletrodomésticos/Micro-ondas/Micro-ondas 23 litros/"
+  ],
+  "categoriesIds": [
+   "/1000102/1000107/1000562/",
+   "/1000102/1000107/",
+   "/1000102/",
+   "/1000102/1000107/1000554/",
+   "/1000102/1000107/1000581/",
+   "/1000102/1000107/1000854/"
+  ],
+  "link": "https://loja.electrolux.com.br/micro-ondas-electrolux-prata-23l-efficient-me23s/p",
+  "Manual do produto": [
+   "https://api.electrolux-medialibrary.com/asset/f3ce8385-c4bb-48cc-9a9c-3fffdf6a2540/E4RM3Q/24112868UI/PDF/24112868UI.pdf"
+  ],
+  "Guia rápido": [
+   "https://api.electrolux-medialibrary.com/asset/a488e213-ab7a-435c-84bf-deac75c6c196/E4RM3Q/22a8f619-aee3-4a92-aec1-45e420906d17/ORIGINAL/22a8f619-aee3-4a92-aec1-45e420906d17.pdf"
+  ],
+  "Apoio ao Cliente": [
+   "Manual do produto",
+   "Guia rápido"
+  ],
+  "Descongelamento": [
+   "Sim"
+  ],
+  "Relógio": [
+   "Sim"
+  ],
+  "Trava de segurança": [
+   "Sim"
+  ],
+  "Tira odor": [
+   "Sim"
+  ],
+  "Manter aquecido": [
+   "Sim"
+  ],
+  "Tecla descongelar": [
+   "Sim"
+  ],
+  "Função desidratar": [
+   "Sim"
+  ],
+  "Função cozinhar rápido": [
+   "Sim"
+  ],
+  "Função cozinhar delicado": [
+   "Sim"
+  ],
+  "Opções de menu": [
+   "Menu receitas"
+  ],
+  "Este Produto inclui": [
+   "Descongelamento",
+   "Relógio",
+   "Trava de segurança",
+   "Tira odor",
+   "Manter aquecido",
+   "Tecla descongelar",
+   "Função desidratar",
+   "Função cozinhar rápido",
+   "Função cozinhar delicado",
+   "Opções de menu"
+  ],
+  "Instalação gratuita": [
+   "Não se aplica"
+  ],
+  "Frequência": [
+   "60Hz"
+  ],
+  "Altura do produto": [
+   "29 cm"
+  ],
+  "Profundidade do produto": [
+   "35,2 cm"
+  ],
+  "Largura do produto embalado": [
+   "49,4 cm"
+  ],
+  "Origem": [
+   "Nacional"
+  ],
+  "Origem Anymarket": [
+   "4 – Nacional: Cuja produção tenha sido feita em conformidade com os processos produtivos básicos de"
+  ],
+  "Largura do produto": [
+   "46,1 cm"
+  ],
+  "Altura do produto embalado": [
+   "31,3 cm"
+  ],
+  "Peso do produto embalado": [
+   "11,5 Kg"
+  ],
+  "NCM/NBM": [
+   "8516.50.00"
+  ],
+  "Classificação energética": [
+   "A"
+  ],
+  "Peso do produto": [
+   "11,5 Kg"
+  ],
+  "Profundidade do produto embalado": [
+   "38,2 cm"
+  ],
+  "Código comercial": [
+   "10237PBA186"
+  ],
+  "EAN-13": [
+   "7909569 41030 1"
+  ],
+  "Capacidade total": [
+   "23L"
+  ],
+  "Potência": [
+   "1100W"
+  ],
+  "Cor da porta": [
+   "Cinza/Preto"
+  ],
+  "Cor": [
+   "Cinza"
+  ],
+  "Diâmetro do prato": [
+   "27,0 cm"
+  ],
+  "Tipo de painel": [
+   "Digital"
+  ],
+  "Tipo de instalação": [
+   "De bancada"
+  ],
+  "Especificações técnicas": [
+   "Instalação gratuita",
+   "Frequência",
+   "Altura do produto",
+   "Profundidade do produto",
+   "Largura do produto embalado",
+   "Origem",
+   "Origem Anymarket",
+   "Largura do produto",
+   "Altura do produto embalado",
+   "Peso do produto embalado",
+   "NCM/NBM",
+   "Classificação energética",
+   "Peso do produto",
+   "Profundidade do produto embalado",
+   "Código comercial",
+   "EAN-13",
+   "Capacidade total",
+   "Potência",
+   "Cor da porta",
+   "Cor",
+   "Diâmetro do prato",
+   "Tipo de painel",
+   "Tipo de instalação"
+  ],
+  "Capacidade - Micro-ondas": [
+   "23-27 litros"
+  ],
+  "Cores": [
+   "Cor inox"
+  ],
+  "Diferenciais": [
+   "Descongelamento",
+   "Manter aquecido",
+   "Painel inteligente",
+   "Receitas pré-programadas",
+   "Tira odor"
+  ],
+  "Altura": [
+   "20-29 cm"
+  ],
+  "Largura": [
+   "40-49 cm"
+  ],
+  "Profundidade": [
+   "30-39 cm"
+  ],
+  "Potências": [
+   "900-1300W"
+  ],
+  "Filtros": [
+   "Capacidade - Micro-ondas",
+   "Cores",
+   "Diferenciais",
+   "Altura",
+   "Largura",
+   "Profundidade",
+   "Potências",
+   "Classificação energética"
+  ],
+  "meli_title": [
+   "Micro-ondas Electrolux Prata 23L Efficient ME23S"
+  ],
+  "Marca": [
+   "Electrolux"
+  ],
+  "Não vendemos para CNPJ": [
+   "Sim"
+  ],
+  "Atributos Mercado Livre": [
+   "Capacidade total",
+   "meli_title",
+   "Marca",
+   "Não vendemos para CNPJ"
+  ],
+  "allSpecifications": [
+   "Manual do produto",
+   "Guia rápido",
+   "Descongelamento",
+   "Relógio",
+   "Trava de segurança",
+   "Tira odor",
+   "Manter aquecido",
+   "Tecla descongelar",
+   "Função desidratar",
+   "Função cozinhar rápido",
+   "Função cozinhar delicado",
+   "Opções de menu",
+   "Instalação gratuita",
+   "Frequência",
+   "Altura do produto",
+   "Profundidade do produto",
+   "Largura do produto embalado",
+   "Origem",
+   "Origem Anymarket",
+   "Largura do produto",
+   "Altura do produto embalado",
+   "Peso do produto embalado",
+   "NCM/NBM",
+   "Classificação energética",
+   "Peso do produto",
+   "Profundidade do produto embalado",
+   "Código comercial",
+   "EAN-13",
+   "Capacidade total",
+   "Potência",
+   "Cor da porta",
+   "Cor",
+   "Diâmetro do prato",
+   "Tipo de painel",
+   "Tipo de instalação",
+   "Capacidade - Micro-ondas",
+   "Cores",
+   "Diferenciais",
+   "Altura",
+   "Largura",
+   "Profundidade",
+   "Potências",
+   "meli_title",
+   "Marca",
+   "Não vendemos para CNPJ"
+  ],
+  "allSpecificationsGroups": [
+   "Apoio ao Cliente",
+   "Este Produto inclui",
+   "Especificações técnicas",
+   "Filtros",
+   "Atributos Mercado Livre"
+  ],
+  "description": "O Micro-ondas Electrolux Prata 23L Efficient (ME23S) é pensado para facilitar sua rotina na cozinha. Com ele, você economiza tempo no preparo de suas receitas graças a sua potência de 1100W.\n\nEle cont",
+  "items": [
+   {
+    "itemId": "310119208",
+    "name": "127V",
+    "nameComplete": "Micro-ondas Electrolux 23L cor Inox Efficient com Descongelamento Assistido (ME23S) 127V",
+    "complementName": "",
+    "ean": "7909569410301",
+    "measurementUnit": "un",
+    "unitMultiplier": 1.0,
+    "modalType": null,
+    "isKit": false,
+    "images": [
+     {
+      "imageUrl": "https://electrolux.vteximg.com.br/arquivos/ids/220996/Untitled-drawing---2022-07-27T153914.935.jpg?v=637945439626130000",
+      "imageLabel": ""
+     }
+    ],
+    "Voltagem": [
+     "127V"
+    ],
+    "variations": [
+     "Voltagem"
+    ],
+    "attachments": [
+     {
+      "id": 1,
+      "name": "garantia-estendida",
+      "required": false,
+      "domainValues": "[{\"FieldName\":\"garantia-estendida\",\"MaxCaracters\":\"500\",\"DomainValues\":\"\"}]"
+     }
+    ],
+    "sellers": [
+     {
+      "sellerId": "1",
+      "sellerName": "Electrolux",
+      "commertialOffer": {
+       "Price": 649.0,
+       "ListPrice": 789.0,
+       "PriceWithoutDiscount": 649.0,
+       "AvailableQuantity": 99999,
+       "IsAvailable": true,
+       "Installments": [
+        {
+         "Name": "Visa à vista",
+         "NumberOfInstallments": 1,
+         "Value": 649.0
+        },
+        {
+         "Name": "Pix à vista",
+         "NumberOfInstallments": 1,
+         "Value": 649.0
+        }
+       ]
+      }
+     }
+    ],
+    "estimatedDateArrival": null
+   }
+  ],
+  "skuSpecifications": [
+   {
+    "field": {
+     "id": 5,
+     "name": "Voltagem",
+     "isActive": true,
+     "position": 2,
+     "type": "Radio"
+    },
+    "values": [
+     {
+      "id": "385",
+      "name": "127V",
+      "position": 7
+     },
+     {
+      "id": "379",
+      "name": "220V",
+      "position": 17
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "productId": "2003583",
+  "productName": "Torre de Cocção com Micro-ondas de Embutir 34l Experience + Forno de Embutir Elétrico 80L Experience com FoodSensor Electrolux (ME3BP+OE8EF)",
+  "brand": "Electrolux",
+  "brandId": 2000000,
+  "linkText": "forno-de-embutir-eletrico-80l-experience-com-foodsensor---micro-ondas-de-embutir-34l-experience-electrolux--oe8ef-me3bp-",
+  "productReference": "OE8EF + ME3BP",
+  "productReferenceCode": "OE8EF + ME3BP",
+  "categoryId": "1000587",
+  "productTitle": "Torre Cocção Micro-ondas 34L + Forno Embutir Elétrico 80L",
+  "metaTagDescription": "Confira a Torre de Cocção com Forno Elétrico 80L com FoodSensor e Microondas 34L Electrolux Experience para cozinhar com precisão e praticidade. Compre já!",
+  "releaseDate": "2022-05-13T00:00:00Z",
+  "categories": [
+   "/Eletrodomésticos/Torre de cocção/",
+   "/Eletrodomésticos/",
+   "/Eletrodomésticos/Micro-ondas/",
+   "/Eletrodomésticos/Fornos/",
+   "/Eletrodomésticos/Micro-ondas/Micro-ondas de embutir/"
+  ],
+  "categoriesIds": [
+   "/1000102/1000587/",
+   "/1000102/",
+   "/1000102/1000107/",
+   "/1000102/1000110/",
+   "/1000102/1000107/1000561/"
+  ],
+  "link": "https://loja.electrolux.com.br/forno-de-embutir-eletrico-80l-experience-com-foodsensor---micro-ondas-de-embutir-34l-experience-electrolux--oe8ef-me3bp-/p",
+  "Manual do produto": [
+   "https://api.electrolux-medialibrary.com/asset/0cf0c993-5825-42be-b5c6-5c2bda3f9207/E4RM3Q/09a36083-6777-49f8-b2da-e526272837b9/ORIGINAL/09a36083-6777-49f8-b2da-e526272837b9.pdf"
+  ],
+  "Apoio ao Cliente": [
+   "Manual do produto"
+  ],
+  "Frequência": [
+   "60Hz"
+  ],
+  "Altura interna": [
+   "ME3BP 24,2 cm / OE8EF 35,2 cm"
+  ],
+  "Largura interna": [
+   "ME3BP 37,7 cm / OE8EF 45 cm"
+  ],
+  "Profundidade interna": [
+   "ME3BP 37,3 cm / OE8EF 44 cm"
+  ],
+  "Modelo": [
+   "OE8EF + ME3BP"
+  ],
+  "Especificações técnicas": [
+   "Frequência",
+   "Altura interna",
+   "Largura interna",
+   "Profundidade interna",
+   "Modelo"
+  ],
+  "Cores": [
+   "Preto"
+  ],
+  "Filtros": [
+   "Cores"
+  ],
+  "Marca": [
+   "Electrolux"
+  ],
+  "Atributos Mercado Livre": [
+   "Marca"
+  ],
+  "allSpecifications": [
+   "Manual do produto",
+   "Frequência",
+   "Altura interna",
+   "Largura interna",
+   "Profundidade interna",
+   "Modelo",
+   "Cores",
+   "Marca"
+  ],
+  "allSpecificationsGroups": [
+   "Apoio ao Cliente",
+   "Especificações técnicas",
+   "Filtros",
+   "Atributos Mercado Livre"
+  ],
+  "description": "Prepare deliciosas refeições com o novo Forno de Embutir Elétrico Electrolux 80L Experience com FoodSensor (OE8EF).\n\nEste forno conta com o FoodSensor, prático termômetro que identifica a temperatura ",
+  "items": [
+   {
+    "itemId": "310119270",
+    "name": "220V",
+    "nameComplete": "Torre de Cocção com Micro-ondas de Embutir 34l Experience + Forno de Embutir Elétrico 80L Experience com FoodSensor Electrolux (ME3BP+OE8EF) 220V",
+    "complementName": "",
+    "ean": "7909569360248+7909569410158",
+    "measurementUnit": "un",
+    "unitMultiplier": 1.0,
+    "modalType": null,
+    "isKit": true,
+    "kitItems": [
+     {
+      "itemId": "310118775",
+      "amount": 1
+     },
+     {
+      "itemId": "310118995",
+      "amount": 1
+     }
+    ],
+    "images": [
+     {
+      "imageUrl": "https://electrolux.vteximg.com.br/arquivos/ids/224999/ME3BP-OE8EF.jpg?v=638201213573130000",
+      "imageLabel": ""
+     }
+    ],
+    "Voltagem": [
+     "220V"
+    ],
+    "variations": [
+     "Voltagem"
+    ],
+    "sellers": [
+     {
+      "sellerId": "1",
+      "sellerName": "Electrolux",
+      "commertialOffer": {
+       "Price": 4049.0,
+       "ListPrice": 6399.0,
+       "PriceWithoutDiscount": 4049.0,
+       "AvailableQuantity": 0,
+       "IsAvailable": false,
+       "Installments": []
+      }
+     }
+    ],
+    "estimatedDateArrival": null
+   }
+  ],
+  "skuSpecifications": [
+   {
+    "field": {
+     "id": 5,
+     "name": "Voltagem",
+     "isActive": true,
+     "position": 2,
+     "type": "Radio"
+    },
+    "values": [
+     {
+      "id": "379",
+      "name": "220V",
+      "position": 17
+     }
+    ]
+   }
+  ]
+ }
+]

@@ -66,6 +66,17 @@
 - [ ] 하 | LG US 목록에는 리뷰 수가 없어 상세 수집 후에만 채워짐. GE/Café 날짜는 `release_src='distribution'`(출시일과 다를 수 있음). Fisher & Paykel `ARRIVING NOV 2026`은 출시 예정이라 신호로 쓰지 않음.
 - [ ] 하 | 이력(`seen_models`)은 만료되지 않고 사라진 모델도 남는다(`last_seen`으로 단종 추정은 가능). 가격 변동 이력은 아직 저장하지 않음.
 
+## H. 브라질(남미) 후속 (2026-10-08, 조리기기만)
+구현: Samsung, LG, Electrolux, Brastemp, Consul, Smeg, Miele, Panasonic (8개). 새 브랜드 Brastemp, Consul(Whirlpool Corp. 브라질 현지, 브랜드 32개). 포르투갈어 용어집 `data/glossary_pt.json`, `units.br_energy_class`(Procel), `units.parse_kwh_per_month`.
+- [ ] 상 | **가격 해석 확인**: Samsung BR은 현금(à vista) 5% 할인가를 빼고 **18회 무이자 가격**을 `price_local`로 저장(현금가·줄 그은 원래가는 `extra_specs`에 따로). LG BR은 Coveo `ec_price`(PIX 5% 할인가 제외). Brastemp/Consul/Electrolux는 현재 판매가만(PIX 제외). 현금가 기준으로 바꾸고 싶으면 알려 주세요.
+- [ ] 상 | **이용약관 미확인**(robots.txt는 확인·준수): Samsung BR, LG BR, Electrolux BR(약관 페이지 못 찾음), Brastemp/Consul(크롤링 금지 문구 못 찾음), Smeg BR, Miele BR, Panasonic BR 스토어.
+- [ ] 중 | 미지원: Bosch BR(도메인 없음/HTTP 401 인증), Hisense BR(TV·냉장고·에어컨만, 조리기기 없음), Haier BR(공식 사이트 없음). LG BR은 현재 판매 중인 조리기기가 전자레인지뿐(오븐·쿡탑은 DISCONTINUED).
+- [ ] 중 | Panasonic BR: 공식 사이트가 봇 방어로 막혀 있어 별도로 공개된 공식 스토어 `loja.panasonic.com.br`(VTEX)를 소스로 사용(우회 아님). 마음에 안 들면 미지원으로 되돌릴 수 있음. 신제품 플래그가 2021년 제품에도 붙어 있음(60% 규칙으로 선별 엔진이 걸러냄).
+- [ ] 중 | Miele BR: 쇼핑몰이 TLS 중간 인증서를 보내지 않아 일반 요청이 실패(검증은 끄지 않음) → 브라우저로 처리해 느림. 제품 페이지에 스펙표 없음(데이터 얇음).
+- [ ] 중 | 날짜: Smeg BR/Panasonic BR/브라질 VTEX(Brastemp·Consul·Electrolux)의 출시일은 스토어 등록일(`release_src='distribution'`/site)이라 정확한 출시일이 아닐 수 있음. LG BR은 연식(`ec_model_year`, YYYY).
+- [ ] 중 | 포르투갈어 용어집은 일반 용어 기준: 실제 사이트 라벨 중 번역 안 되는 값이 보이면 `data/glossary_pt.json`에 추가. Electrolux BR 상세 수집은 평점 대기로 한 건에 6~20초. LG BR 매뉴얼 PDF는 headless가 막혀 못 받음.
+- [ ] 하 | 남미 나머지 국가(아르헨티나, 칠레, 콜롬비아, 멕시코)와 스페인어 번역 계층은 미구현.
+
 ## 참고
 - 인수인계: `docs/HANDOFF.md`, 설계: `docs/DESIGN_FILTERS.md`.
 - 서버 실행: `run_server.bat` 또는 `python server.py` -> http://127.0.0.1:8765

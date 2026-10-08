@@ -65,6 +65,10 @@ Gauge: 경쟁사 가전 제품 스펙·POD·모드를 수집해 비교하는 로
 - 설계 결정: 미확인은 중립 점수(재분배하면 빈 모델이 이김), 가격 없는 모델은 순위 제외, 폭이 허용 오차를 벗어나면 제외, 한 그룹 NEW 표시가 60% 이상이면 무시.
 - 남은 일: `docs/TODO.md` G절(주기적 재검색, 최신순 정렬 활용, 5단계를 검색 화면에도 적용할지 등).
 
+## 브라질(남미) 추가 (2026-10-08)
+- 시장 `sa`(남미)는 어댑터가 하나라도 있으면 자동 활성화(원래는 '준비 중'). 브라질 어댑터 8개(조리기기만): `samsung_br`, `lg_br`, `electrolux_br`, `brastemp_br`, `consul_br`(공유 `_whirlpool_br_common.py`, VTEX), `smeg_br`, `miele_br`, `panasonic_br`. 새 브랜드 Brastemp, Consul(총 32개). 번역 `i18n.get('pt')`, 단위 `units.br_energy_class/parse_kwh_per_month`, 국가 `catalog.ADAPTER_COUNTRIES`에 br. 허용 호스트는 `common.py`(정확한 호스트만).
+- 검증: 전체 테스트 61개 통과, 브랜드별 end-to-end(검색 1건 → 수집) 8/8 성공. 후속은 `docs/TODO.md` H절(가격 해석 확인, 약관, 미지원 브랜드 등).
+
 ## 알려진 한계
 - 필터 대부분은 이름에서 추정한 값 또는 상세 수집된 제품에만 정확함.
 - 한국어 번역·모드 추출은 로컬 LLM 속도에 좌우됨 (제품당 수 분).

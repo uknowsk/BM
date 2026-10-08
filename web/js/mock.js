@@ -23,7 +23,7 @@ const SUPPORT = {
 };
 const DOMAIN = { Samsung: 'samsung.com', LG: 'lg.com', KitchenAid: 'kitchenaid.com', GE: 'geappliances.com', Whirlpool: 'whirlpool.com', Bosch: 'bosch-home.com' };
 const PREFIX = { Samsung: 'RF', LG: 'LR', KitchenAid: 'KR', GE: 'GN', Whirlpool: 'WR', Bosch: 'B36' };
-/* 6 -> 30 brands. [name, group, countries with an adapter, ready, domain, prefix, coverage]; ready=false -> '준비 중' (no adapter file yet).
+/* 6 -> 32 brands. [name, group, countries with an adapter, ready, domain, prefix, coverage]; ready=false -> '준비 중' (no adapter file yet).
    coverage: full = every sub-category, cook = cooking + built-in fridge, fridge = refrigerators, laundry = washers/dryers + cooking */
 const GROUP = { Samsung: 'Samsung·LG', LG: 'Samsung·LG', KitchenAid: 'Whirlpool Corp.', GE: 'Haier·GE', Whirlpool: 'Whirlpool Corp.', Bosch: 'BSH' };
 const COUNTRIES = { Samsung: ['us', 'kr'], LG: ['us', 'kr'], KitchenAid: ['us'], GE: ['us'], Whirlpool: ['us'], Bosch: ['us'] };
@@ -40,6 +40,7 @@ const NEW_BRANDS = [
   ['Liebherr', '프리미엄', ['us'], true, 'liebherr.com', 'LB', 'fridge'], ['Bertazzoni', '프리미엄', [], false, 'bertazzoni.com', 'BZ', 'cook'],
   ['De Dietrich', '프리미엄', [], false, 'dedietrich-electromenager.fr', 'DD', 'cook'], ['Beko', '글로벌', ['us'], true, 'beko.com', 'BK', 'full'],
   ['Hisense', '글로벌', [], false, 'hisense-usa.com', 'HS', 'full'], ['Panasonic', '글로벌', [], false, 'panasonic.com', 'PA', 'cook'],
+  ['Brastemp', 'Whirlpool Corp.', [], false, 'brastemp.com.br', 'BR', 'full'], ['Consul', 'Whirlpool Corp.', [], false, 'consul.com.br', 'CS', 'full'],
 ];
 const COVER = {
   full: () => MAJORS.flatMap((m) => m.children.map(([k]) => k)),
@@ -170,7 +171,7 @@ window.fetch = async (path, opts) => {
   const body = opts && opts.body ? JSON.parse(opts.body) : null;
   if (url === '/api/brands') return json(brands());
   if (url === '/api/categories') return json(categories());
-  if (url === '/api/meta') return json({ mock: true, max_selected: 12, delay_s: 0, max_search_combos: 120, max_brands: 30 });
+  if (url === '/api/meta') return json({ mock: true, max_selected: 12, delay_s: 0, max_search_combos: 120, max_brands: 32});
   if (url === '/api/regions') return json(REGIONS);
   if (url.startsWith('/api/filters')) return json({ groups: FILTERS() });
   if (url === '/api/search' || url === '/api/collect') {

@@ -61,10 +61,10 @@ def test_brands_and_categories():
     assert all(c["enabled"] == bool(c["brands"]) for c in kids.values()) and cats["cooking"]["enabled"]
 
 
-def test_brands_registry_30_with_group_and_countries():
+def test_brands_registry_32_with_group_and_countries():
     brands = client.get("/api/brands").json()
     names = [b["name"] for b in brands]
-    assert len(names) == len(set(names)) == 30 and names[:6] == ["Samsung", "LG", "KitchenAid", "GE", "Whirlpool", "Bosch"]
+    assert len(names) == len(set(names)) == 32 and names[:6] == ["Samsung", "LG", "KitchenAid", "GE", "Whirlpool", "Bosch"]
     by = {b["name"]: b for b in brands}
     assert all(b["group"] for b in brands)
     assert by["Maytag"]["group"] == "Whirlpool Corp." and by["Café"]["group"] == "Haier·GE" and by["Miele"]["group"] == "프리미엄"
@@ -73,7 +73,7 @@ def test_brands_registry_30_with_group_and_countries():
         assert not by[n]["enabled"] and by[n]["note"] == "준비 중" and by[n]["countries"] == [] and by[n]["categories"] == []
     r = client.post("/api/search", json={"brands": ["Maytag"], "category": "refrigerator"})
     assert r.status_code == 422
-    assert server.MAX_SEARCH_COMBOS == 120 and server.MAX_BRANDS == 30
+    assert server.MAX_SEARCH_COMBOS == 120 and server.MAX_BRANDS == 32
     for name, dom in server.BRAND_DOMAINS.items():  # every brand has a host allowed for its own https site
         assert server.host_allowed(name, f"https://www.{dom}/x"), name
         assert not server.host_allowed(name, f"http://www.{dom}/x") and not server.host_allowed(name, "https://evil.example/x")
