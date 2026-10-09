@@ -1130,8 +1130,8 @@ def _data_readiness(pool: list[dict]) -> dict:
             "new_discoveries": sum(1 for r in pool if r.get("baseline") == 0)}
 
 
-@app.post("/api/match")
-def api_match(req: MatchReq):
+def _run_match(req: MatchReq) -> tuple[dict, list[dict], str]:
+    """(ranking incl. data readiness, the history pool, currency) for one match request; 422 on bad input."""
     major, currency = _match_scope(req.sub, req.country)
     weights = req.weights or {}
     if set(weights) - set(match.DEFAULT_WEIGHTS) or any(not 0 <= v <= 100 for v in weights.values()):
@@ -1143,7 +1143,29 @@ def api_match(req: MatchReq):
               "specs": req.specs.model_dump(exclude_none=True)}
     out = match.rank(pool, target, weights=weights, band_pct=req.band_pct, tier_window=req.tier_window, top=req.top)
     out["data"] = _data_readiness([r for r in pool if r["sub"] == req.sub and (r.get("currency") or "USD") == currency])
-    return out
+    return out, pool, currency
+
+
+@app.post("/api/match")
+def api_match(req: MatchReq):
+    return _run_match(req)[0]
+
+
+class MatchExcelReq(MatchReq):
+    window: int = Field(12, ge=1, le=60)  # months that count as "new" in the launch sheets
+
+
+@app.post("/api/match/excel")
+def api_match_excel(req: MatchExcelReq):
+    """The same ranking as /api/match plus the launch radar of the same pool, as one workbook built in memory."""
+    from fastapi import Response
+
+    import match_excel
+    out, pool, currency = _run_match(req)
+    launches = match.launches(pool, window_months=req.window, sub=req.sub, currency=currency)
+    data = match_excel.build(out, launches, out["data"])
+    name = f"gauge_match_{req.sub}_{req.country}_{datetime.now():%Y%m%d_%H%M%S}.xlsx"
+    return Response(data, media_type=XLSX_MIME, headers={"Content-Disposition": f'attachment; filename="{name}"'})
 
 
 @app.get("/api/launches")

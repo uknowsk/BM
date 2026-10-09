@@ -63,7 +63,8 @@
 - [x] 중 | **검색 화면의 3분위(Budget/Mid/Premium)를 5단계로 바꿀지 확인.** 완료: 검색 결과 밴드도 5단계(`t1`..`t5` + `unknown`, `match.price_tiers` 재사용), 직접 입력은 경계 가격 4개.
 - [ ] 중 | 평점·리뷰 수 미제공 브랜드: Thermador, Gaggenau, Monogram, Viking, Wolf, Smeg, Bertazzoni, Hisense, Panasonic, Fisher & Paykel(Bazaarvoice 위젯이 클라이언트 렌더). Panasonic의 Bazaarvoice는 passkey가 필요한 제3자 호출이라 쓰지 않았다(허용할지 결정 필요). electrolux_de 목록 평점 필드는 있으나 값이 전부 0. Frigidaire/Electrolux US는 평점·NEW 필드 양성값을 라이브로 못 봄(OCC 표준명 가정).
 - [ ] 중 | NEW 표시 양성 사례를 못 본 어댑터: Viking, Hisense, Smeg, Wolf(`news_to_date`), Frigidaire/Electrolux, Thermador/Gaggenau/Bosch/Siemens(`isNewProduct`). 코드는 있으나 라이브 검증 불가. Bertazzoni는 레인지 26개 전부 NEW라 엔진이 자동 무시(`distrusted_new_flags`).
-- [ ] 중 | 선별 결과 Excel 출력, '수집된 제품을 기준 모델로 선택'하는 입력 방식은 미구현(이번에는 스펙·가격 직접 입력만).
+- [x] 중 | 선별 결과 Excel 출력 구현(2026-10-09, `match_excel.py`, `POST /api/match/excel`, `/match`의 'Excel로 저장'): 시트 요약/순위/가격 5단계/신제품/신제품 트렌드. 마지막 성공한 검색 조건으로 서버에서 다시 계산(화면과 같은 데이터).
+- [ ] 중 | '수집된 제품을 기준 모델로 선택'하는 입력 방식은 미구현(스펙·가격 직접 입력만).
 - [ ] 하 | LG US 목록에는 리뷰 수가 없어 상세 수집 후에만 채워짐. GE/Café 날짜는 `release_src='distribution'`(출시일과 다를 수 있음). Fisher & Paykel `ARRIVING NOV 2026`은 출시 예정이라 신호로 쓰지 않음.
 - [ ] 하 | 이력(`seen_models`)은 만료되지 않고 사라진 모델도 남는다(`last_seen`으로 단종 추정은 가능). 가격 변동 이력은 아직 저장하지 않음.
 

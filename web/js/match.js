@@ -151,7 +151,32 @@
         el('thead', {}, el('tr', {}, ['#', '모델', '가격 · 단계', '종합 점수', '요소별 점수 (마우스를 올리면 근거)'].map((h) => el('th', { scope: 'col' }, h)))),
         el('tbody', {}, out.results.map((r, i) => rowOf(r, i)))))
       : el('p', { class: 'v2-empty' }, '조건에 맞는 모델이 없습니다. 허용폭이나 단계 범위를 넓히거나, 먼저 해당 소분류를 후보 검색해 이력을 쌓으세요.');
-    $('#out').replaceChildren(readiness(out.data), tierStrip(out), head, rows);
+    const save = out.results.length
+      ? el('p', {}, el('button', { class: 'btn ghost', type: 'button', id: 'xlsx', onclick: downloadExcel }, 'Excel로 저장'),
+        el('span', { class: 'hint' }, ' 순위·요소별 점수와 근거, 가격 5단계, 신제품, 트렌드가 시트별로 들어갑니다.')) : null;
+    $('#out').replaceChildren(...[readiness(out.data), tierStrip(out), head, save, rows].filter(Boolean));
+  }
+
+  /* The workbook is rebuilt on the server from the conditions of the last successful search (what is on screen). */
+  let lastBody = null;
+  async function downloadExcel() {
+    const btn = $('#xlsx');
+    if (!lastBody) return;
+    btn.disabled = true;
+    try {
+      const r = await fetch('/api/match/excel', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...lastBody, window: +$('#window').value }) });
+      if (!r.ok) {
+        const j = await r.json().catch(() => ({}));
+        throw new Error(typeof j.detail === 'string' ? j.detail : 'Excel을 만들지 못했습니다.');
+      }
+      const url = URL.createObjectURL(await r.blob());
+      const a = el('a', { href: url, download: `gauge_match_${lastBody.sub}_${lastBody.country}.xlsx` });
+      document.body.append(a); a.click(); a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 5000);
+      toast('Excel 파일을 저장했습니다.');
+    } catch (ex) { toast(ex.message); }
+    finally { btn.disabled = false; }
   }
 
   /* ---------- launch radar ---------- */
@@ -216,7 +241,7 @@
     if (!b.price) { err.textContent = '목표 가격을 입력하세요. 가격이 없으면 가격 근접도와 단계를 계산할 수 없습니다.'; err.hidden = false; $('#price').focus(); return; }
     if (Object.values(b.weights).every((v) => v === 0)) { err.textContent = '중요도를 하나 이상 올리세요.'; err.hidden = false; return; }
     go.disabled = true; out.setAttribute('aria-busy', 'true'); save();
-    try { renderResult(await api('/api/match', b)); loadRadar(); }
+    try { const res = await api('/api/match', b); lastBody = b; renderResult(res); loadRadar(); }
     catch (ex) { err.textContent = ex.message; err.hidden = false; }
     finally { go.disabled = false; out.setAttribute('aria-busy', 'false'); }
   });

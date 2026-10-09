@@ -215,6 +215,13 @@ response:{score,rating,reviews,adjusted}}}`. Price = continuous proximity `max(0
 neutral value (never 0, never renormalised away); a width outside +-1.5 in of the wanted width excludes the model; models without a price are
 not ranked when a target price is given (counted in `price_unknown`).
 
+### POST /api/match/excel
+Same body as `/api/match` plus optional `window` (1..60 months, default 12, the launch period of the launch sheets). Recomputes the ranking and the
+launch radar from the same pool and answers an `.xlsx` (`Content-Disposition: attachment; filename="gauge_match_<sub>_<cc>_<time>.xlsx"`). Sheets:
+`요약` (target, tier, band, specs, weights, counts, data readiness, caveat), `순위` (one row per ranked model: tier, total, coverage, each component
+score with its evidence, rating/reviews, URL), `가격 5단계`, `신제품` (per brand with evidence), `신제품 트렌드`. Built in memory by `match_excel.build`;
+scraped text is sanitised (formula-looking strings are stored as text). Same 422 / same-origin rules as `/api/match`.
+
 ### GET /api/launches?sub=&country=us&window=12
 New models per brand with their evidence (`release_date` | `site_new` | `first_seen`) and a feature trend (share of new vs existing models with
 Wi-Fi/convection/air fry/steam/ENERGY STAR, `delta_pts`, `low_sample`), `median_price`, `basis_counts`, `distrusted_new_flags`, `note`.

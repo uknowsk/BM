@@ -850,6 +850,44 @@ def test_match_and_launches_endpoints_on_a_seeded_history():
             server._STORE, server._SEEN_READY = prev
 
 
+def test_match_excel_export_has_the_ranking_the_screen_shows():
+    import io
+    from openpyxl import load_workbook
+    from catalog import Candidate
+    from store import Store
+    prev = (server._STORE, server._SEEN_READY)
+    with tempfile.TemporaryDirectory() as d:
+        st = Store(Path(d) / "x.db")
+        cands = [Candidate(brand=b, model_number=f"{b[:2]}{i:02d}", name="=HYPERLINK(\"http://evil.test\")" if (b, i) == ("GE", 0) else f"30 in. Wall Oven {b}{i}",
+                           url=f"https://x.test/{b}/{i}", price_usd=900.0 + 100 * i, category="cooking", subcategory="electric_oven",
+                           attrs={"rating": 4.5, "review_count": 80 + i, "release_date": "2026-03"} if i == 3 else {})
+                 for b in ("GE", "LG") for i in range(8)]
+        st.record_seen(cands, limit=30)
+        server._STORE, server._SEEN_READY = st, True
+        try:
+            body = {"sub": "electric_oven", "price": 1300, "country": "us", "specs": {"width_in": 30, "features": ["wifi"]}, "window": 12}
+            r = client.post("/api/match/excel", json=body)
+            assert r.status_code == 200, r.text
+            assert r.headers["content-type"] == server.XLSX_MIME
+            assert 'attachment; filename="gauge_match_electric_oven_us_' in r.headers["content-disposition"]
+            wb = load_workbook(io.BytesIO(r.content))
+            assert wb.sheetnames == ["요약", "순위", "가격 5단계", "신제품", "신제품 트렌드"]
+            shown = client.post("/api/match", json={k: v for k, v in body.items() if k != "window"}).json()
+            rank = wb["순위"]
+            assert [c.value for c in rank[1]][:3] == ["순위", "브랜드", "모델"]
+            assert rank.max_row - 1 == len(shown["results"]) and rank["C2"].value == shown["results"][0]["model_number"]
+            assert rank["J2"].value == round(shown["results"][0]["total"])
+            summary = {row[0].value: row[1].value for row in wb["요약"].iter_rows(min_row=2)}
+            assert summary["목표 가격"] == 1300 and summary["분석 대상 모델"] == 16
+            assert len(list(wb["가격 5단계"].iter_rows(min_row=2))) == 5
+            assert all(not (c.data_type == "f") for ws in wb for row in ws.iter_rows() for c in row)  # no live formulas
+            assert client.post("/api/match/excel", json={**body, "sub": "nope"}).status_code == 422
+            assert client.post("/api/match/excel", json={**body, "window": 0}).status_code == 422
+            assert TestClient(server.app, base_url=ORIGIN).post("/api/match/excel", json=body).status_code == 403  # same-origin guard
+        finally:
+            server._STORE, server._SEEN_READY = prev
+
+
 def test_schedule_endpoints_validate_run_conflict_and_delete():
     from catalog import Candidate
     from store import Store
